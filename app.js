@@ -187,9 +187,7 @@
 
   function fillLinks(d) {
     var repo = "https://github.com/" + d.owner + "/" + d.repo;
-    var zip = repo + "/archive/refs/heads/package.zip";
     $$("[data-repo]").forEach(function (a) { a.href = repo; });
-    $$("[data-zip]").forEach(function (a) { a.href = zip; });
     var gen = $(".generated"); if (gen) gen.textContent = new Date().toISOString().slice(0, 10);
   }
 
