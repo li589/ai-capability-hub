@@ -1,0 +1,20 @@
+{
+  "name": "GIF搜索",
+  "installedAt": 1785864610319,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053082027064852480",
+  "examples_zh": [
+    "搜索一个表示开心的GIF",
+    "下载一个猫咪搞笑GIF",
+    "找一个适合发在微信群的庆祝GIF"
+  ],
+  "examples_en": [
+    "Search for a happy reaction GIF",
+    "Download a funny cat GIF",
+    "Find a celebration GIF for sharing"
+  ],
+  "description_zh": "搜索和下载 GIF 动图",
+  "description_en": "Search and download GIFs",
+  "iconSource": "letter:auto"
+}

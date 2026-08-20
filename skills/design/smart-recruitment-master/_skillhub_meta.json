@@ -1,0 +1,21 @@
+{
+  "name": "智能招聘大师",
+  "installedAt": 1787227645870,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2076945090145423360",
+  "examples_zh": [
+    "帮我为算法工程师岗位写一份招聘JD",
+    "这批数据分析岗简历帮我筛一下并排个名",
+    "给综合管理岗设计一套笔面试方案"
+  ],
+  "examples_en": [
+    "Write a recruitment JD for an algorithm engineer role",
+    "Screen and rank these data analyst resumes for me",
+    "Design a written test and interview plan for a management position"
+  ],
+  "description_zh": "集团招聘全流程 AI 助手，覆盖 JD 定制、人才画像、简历筛选、笔面试方案设计、成绩统计与流程可视化，帮助企业 HR 高效驱动招聘管理。",
+  "description_en": "An end-to-end AI assistant for enterprise recruitment, covering JD customization, talent profiling, resume screening, written/interview plan design, score analytics and process visualization to help HR teams manage hiring efficiently.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2076945090145423360/6b142e88609a2c9d.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2076945090145423360/6b142e88609a2c9d.svg"
+}

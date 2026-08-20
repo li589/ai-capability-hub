@@ -1,0 +1,20 @@
+{
+  "name": "Impeccable（前端设计工具集）",
+  "installedAt": 1785784684751,
+  "source": "marketplace",
+  "version": "2.0.0",
+  "skillId": "skill_2053082862415904768",
+  "examples_zh": [
+    "帮我设计一个有视觉冲击力的落地页",
+    "这个页面需要适配移动端，帮我做响应式布局",
+    "给这个列表加入入场动效和微交互"
+  ],
+  "examples_en": [
+    "Design a visually striking landing page",
+    "Make this page responsive for mobile devices",
+    "Add entrance animations and micro-interactions to this list"
+  ],
+  "description_zh": "高品质 UI/UX 设计工具集：帮助生成独特、生产级的前端界面，涵盖视觉风格、布局排版、动效交互、质量保障、设计系统等全方位设计能力，避免泛 AI 审美",
+  "description_en": "UI/UX design quality toolkit for creating distinctive, production-grade frontend interfaces with high design standards across visual style, layout, motion, quality assurance, and design systems",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "基金产品信息",
+  "installedAt": 1787227745767,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2083074492865777664",
+  "description_zh": "本Skill基于广发证券权威数据接口构建，支持查询基金完整详情，包含净值、收益率、风险等级、申赎规则、基金经理、基金公司与综合评价，用于基金资料查询与基本面对比。",
+  "description_en": "GF Securities fund detail query tool, supporting comprehensive fund information including NAV, return rate, risk level, subscription/redemption rules, fund manager, fund company, and comprehensive evaluation. Suitable for fund research and fundamental comparison.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_7e51c77a-a71.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_7e51c77a-a71.png"
+}

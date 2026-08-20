@@ -1,0 +1,11 @@
+{
+  "owner": "codenova58",
+  "slug": "postmortems",
+  "displayName": "Postmortems",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774370610073,
+    "commit": "https://github.com/openclaw/skills/commit/e0e16694d191b6dc21ce3cf617d33072d9cbdd33"
+  },
+  "history": []
+}

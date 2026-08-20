@@ -1,0 +1,431 @@
+{
+  "skill_name": "java-code-review",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "service-layer-comprehensive-review",
+      "prompt": "请审查以下Java Service层代码，检查是否符合阿里巴巴Java开发手册规范：\n\n```java\npackage com.example.service;\n\nimport org.springframework.stereotype.Service;\n\n@Service\npublic class UserService {\n    \n    public User getUserById(Long id) {\n        // 查询用户\n        return userRepository.findById(id).orElse(null);\n    }\n    \n    public void saveUser(User user) {\n        userRepository.save(user); // 保存用户\n    }\n}\n```",
+      "expected_output": "审查报告应包含：1) 类缺少Javadoc注释（强制）；2) 方法缺少Javadoc注释（强制）；3) 存在行尾注释（禁止）；4) 缺少依赖注入（推荐构造器注入）；5) 返回实体类而非DTO（强制）；6) 缺少@Transactional注解；7) NPE风险未处理",
+      "files": [],
+      "assertions": [
+        {
+          "name": "检查类注释缺失问题",
+          "type": "contains",
+          "target": "类注释",
+          "expected": true
+        },
+        {
+          "name": "检查方法注释缺失问题",
+          "type": "contains",
+          "target": "方法注释",
+          "expected": true
+        },
+        {
+          "name": "检查行尾注释违规",
+          "type": "contains",
+          "target": "行尾注释",
+          "expected": true
+        },
+        {
+          "name": "检查依赖注入建议",
+          "type": "contains",
+          "target": "依赖注入",
+          "expected": true
+        },
+        {
+          "name": "检查DTO返回规范",
+          "type": "contains",
+          "target": "DTO",
+          "expected": true
+        },
+        {
+          "name": "检查事务管理建议",
+          "type": "contains",
+          "target": "@Transactional",
+          "expected": true
+        },
+        {
+          "name": "包含改进建议代码示例",
+          "type": "contains",
+          "target": "改进后代码",
+          "expected": true
+        },
+        {
+          "name": "包含总体评分",
+          "type": "contains",
+          "target": "评分",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "eval_name": "controller-architecture-violation",
+      "prompt": "检查这个Controller是否符合Spring Boot项目规范和阿里巴巴开发手册：\n\n```java\n@RestController\n@RequestMapping(\"/api/users\")\npublic class userController {\n    \n    @Autowired\n    private UserRepository userRepository;\n    \n    @GetMapping(\"/{id}\")\n    public User getUser(@PathVariable Long id) {\n        return userRepository.findById(id).get();\n    }\n}\n```",
+      "expected_output": "审查报告应包含：1) 类名不符合UpperCamelCase（userController应为UserController，强制）；2) Controller直接操作Repository跨层调用（强制）；3) 缺少异常处理可能抛NoSuchElementException（强制）；4) 返回实体类而非DTO（强制）；5) 缺少类和方法Javadoc注释（强制）；6) 缺少参数校验@Valid",
+      "files": [],
+      "assertions": [
+        {
+          "name": "检查命名规范违规",
+          "type": "contains",
+          "target": "userController",
+          "expected": true
+        },
+        {
+          "name": "检查跨层调用问题",
+          "type": "contains",
+          "target": "跨层",
+          "expected": true
+        },
+        {
+          "name": "检查异常处理缺失",
+          "type": "contains",
+          "target": "异常",
+          "expected": true
+        },
+        {
+          "name": "检查分层架构违规",
+          "type": "contains",
+          "target": "Controller",
+          "expected": true
+        },
+        {
+          "name": "标注严重程度为强制",
+          "type": "contains",
+          "target": "强制",
+          "expected": true
+        },
+        {
+          "name": "提供改进优先级",
+          "type": "contains",
+          "target": "优先级",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "eval_name": "entity-naming-and-annotation-review",
+      "prompt": "审查以下Entity类代码的规范性问题：\n\n```java\n@Entity\n@Table(name = \"t_user\")\npublic class userentity {\n    @id\n    @generatedvalue\n    private Long id;\n    \n    private String userName;\n    \n    @Column(name=\"create_time\")\n    private Date createTime;\n}\n```",
+      "expected_output": "审查报告应包含：1) 类名不符合UpperCamelCase（userentity应改为UserEntity或User）；2) JPA注解大小写错误（@id应为@Id，@generatedvalue应为@GeneratedValue，强制）；3) 缺少类Javadoc注释；4) 缺少字段注释说明用途；5) 建议使用Lombok简化getter/setter；6) 缺少gmtCreate和gmtModified字段（推荐）",
+      "files": [],
+      "assertions": [
+        {
+          "name": "检查类命名违规",
+          "type": "contains",
+          "target": "userentity",
+          "expected": true
+        },
+        {
+          "name": "检查注解大小写错误",
+          "type": "contains",
+          "target": "@Id",
+          "expected": true
+        },
+        {
+          "name": "检查注释缺失问题",
+          "type": "contains",
+          "target": "注释",
+          "expected": true
+        },
+        {
+          "name": "包含详细分析章节",
+          "type": "contains",
+          "target": "详细分析",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "eval_name": "logging-and-transaction-best-practices",
+      "prompt": "请对以下完整的Java代码进行全面审查，生成详细的审查报告：\n\n```java\npackage com.unicom.info.service.impl;\n\nimport org.springframework.stereotype.Service;\nimport lombok.extern.slf4j.Slf4j;\n\n@Slf4j\n@Service\npublic class DataProcessService {\n    \n    public void processData(List<Data> dataList) {\n        for(Data data : dataList) {\n            // 处理每条数据\n            processSingle(data);\n        }\n    }\n    \n    private void processSingle(Data data) {\n        System.out.println(\"Processing: \" + data.getName());\n        data.setStatus(\"PROCESSED\");\n    }\n}\n```",
+      "expected_output": "审查报告应包含：1) 类缺少Javadoc注释（强制）；2) 方法缺少Javadoc注释（强制）；3) 使用System.out.println而非SLF4J日志（强制）；4) 循环中字符串拼接性能问题（强制）；5) 缺少@Transactional事务注解（推荐）；6) 常量PROCESSED应定义为static final（推荐）；7) 缺少空指针检查（data可能为null）",
+      "files": [],
+      "assertions": [
+        {
+          "name": "检查日志框架违规",
+          "type": "contains",
+          "target": "System.out",
+          "expected": true
+        },
+        {
+          "name": "检查事务管理建议",
+          "type": "contains",
+          "target": "@Transactional",
+          "expected": true
+        },
+        {
+          "name": "检查常量定义规范",
+          "type": "contains",
+          "target": "常量",
+          "expected": true
+        },
+        {
+          "name": "包含总体评分",
+          "type": "contains",
+          "target": "评分",
+          "expected": true
+        },
+        {
+          "name": "包含问题汇总表",
+          "type": "contains",
+          "target": "问题汇总",
+          "expected": true
+        },
+        {
+          "name": "包含改进优先级排序",
+          "type": "contains",
+          "target": "高优先级",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "eval_name": "concurrency-threadpool-security-review",
+      "prompt": "审查以下涉及并发和安全的Java代码：\n\n```java\npackage com.example.service;\n\nimport java.util.concurrent.ExecutorService;\nimport java.util.concurrent.Executors;\n\n@Service\npublic class AsyncService {\n    \n    private ExecutorService executor = Executors.newFixedThreadPool(10);\n    \n    private String apiKey = \"sk-123456789abcdef\";\n    \n    public void processAsync(Task task) {\n        executor.submit(() -> {\n            callExternalApi(task.getData(), apiKey);\n        });\n    }\n}\n```",
+      "expected_output": "审查报告应包含：1) 使用Executors创建线程池违反强制规范（应使用ThreadPoolExecutor）；2) 硬编码API密钥严重安全问题（强制）；3) 线程池未指定有意义的线程名称（强制）；4) 缺少异常处理可能导致任务静默失败（推荐）；5) 缺少类和方法Javadoc注释（强制）；6) 线程资源未正确关闭（推荐）",
+      "files": [],
+      "assertions": [
+        {
+          "name": "检查线程池创建违规",
+          "type": "contains",
+          "target": "Executors",
+          "expected": true
+        },
+        {
+          "name": "检查硬编码敏感信息",
+          "type": "contains",
+          "target": "硬编码",
+          "expected": true
+        },
+        {
+          "name": "检查线程命名规范",
+          "type": "contains",
+          "target": "线程名称",
+          "expected": true
+        },
+        {
+          "name": "标注安全规约问题",
+          "type": "contains",
+          "target": "安全",
+          "expected": true
+        },
+        {
+          "name": "提供ThreadPoolExecutor示例",
+          "type": "contains",
+          "target": "ThreadPoolExecutor",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "eval_name": "oop-equals-hashcode-collection-review",
+      "prompt": "审查以下OOP和集合处理的代码规范：\n\n```java\npackage com.example.model;\n\npublic class User {\n    private Long id;\n    private String name;\n    \n    @Override\n    public boolean equals(Object obj) {\n        if (obj == null) return false;\n        User other = (User) obj;\n        return this.id.equals(other.id);\n    }\n    \n    public static void main(String[] args) {\n        List<String> list = new ArrayList<>();\n        list.add(\"a\");\n        list.add(\"b\");\n        List subList = (ArrayList) list.subList(0, 1);\n        \n        Integer a = 127;\n        Integer b = 127;\n        System.out.println(a == b);\n    }\n}\n```",
+      "expected_output": "审查报告应包含：1) 重写equals但未重写hashCode违反强制规范；2) equals中使用this.id.equals()可能抛NPE（应使用Objects.equals）；3) subList强转ArrayList会抛ClassCastException（强制）；4) Integer比较使用==而非equals（强制，仅-128~127缓存范围内有效）；5) 缺少类Javadoc注释；6) main方法不应在业务类中",
+      "files": [],
+      "assertions": [
+        {
+          "name": "检查hashCode缺失问题",
+          "type": "contains",
+          "target": "hashCode",
+          "expected": true
+        },
+        {
+          "name": "检查NPE风险",
+          "type": "contains",
+          "target": "NPE",
+          "expected": true
+        },
+        {
+          "name": "检查subList类型转换问题",
+          "type": "contains",
+          "target": "subList",
+          "expected": true
+        },
+        {
+          "name": "检查Integer比较规范",
+          "type": "contains",
+          "target": "equals",
+          "expected": true
+        },
+        {
+          "name": "包含OOP规约检查章节",
+          "type": "contains",
+          "target": "OOP",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "eval_name": "spring-boot-validation-dto-review",
+      "prompt": "审查以下Spring Boot Controller和DTO的参数校验规范：\n\n```java\n@RestController\n@RequestMapping(\"/api/orders\")\npublic class OrderController {\n    \n    @Autowired\n    private OrderService orderService;\n    \n    @PostMapping\n    public OrderResponse createOrder(@RequestBody CreateOrderRequest request) {\n        return orderService.createOrder(request);\n    }\n}\n\n@Data\npublic class CreateOrderRequest {\n    private String productName;\n    private Integer quantity;\n    private String email;\n}\n```",
+      "expected_output": "审查报告应包含：1) Controller缺少@Valid参数校验（强制）；2) DTO缺少JSR-303校验注解如@NotBlank、@Min等（推荐）；3) Controller缺少类和方法Javadoc注释（强制）；4) 建议使用构造器注入替代@Autowired（推荐）；5) 返回DTO而非Entity（需确认OrderResponse是否为DTO）；6) 缺少统一异常处理@RestControllerAdvice",
+      "files": [],
+      "assertions": [
+        {
+          "name": "检查参数校验缺失",
+          "type": "contains",
+          "target": "@Valid",
+          "expected": true
+        },
+        {
+          "name": "检查DTO校验注解",
+          "type": "contains",
+          "target": "@NotBlank",
+          "expected": true
+        },
+        {
+          "name": "检查依赖注入建议",
+          "type": "contains",
+          "target": "构造器注入",
+          "expected": true
+        },
+        {
+          "name": "包含Spring Boot最佳实践章节",
+          "type": "contains",
+          "target": "Spring Boot",
+          "expected": true
+        },
+        {
+          "name": "提供DTO校验示例代码",
+          "type": "contains",
+          "target": "改进后代码",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "eval_name": "control-flow-switch-loop-review",
+      "prompt": "审查以下控制语句的代码规范：\n\n```java\npublic class OrderProcessor {\n    \n    public String getStatusDescription(int status) {\n        switch (status) {\n            case 1:\n                return \"待支付\";\n            case 2:\n                return \"已支付\";\n            case 3:\n                return \"已发货\";\n            default:\n                return \"未知状态\";\n        }\n    }\n    \n    public String buildMessage(List<String> items) {\n        String message = \"\";\n        for (String item : items) {\n            message += item + \", \";\n        }\n        return message;\n    }\n    \n    public void processIf(boolean condition) {\n        if (condition)\n            doSomething();\n    }\n}\n```",
+      "expected_output": "审查报告应包含：1) switch case缺少break语句（虽然return终止但应明确注释，推荐）；2) 循环中字符串拼接应使用StringBuilder（强制）；3) if语句缺少大括号（强制）；4) 缺少类和方法Javadoc注释（强制）；5) magic number 1/2/3应定义为常量（推荐）；6) 建议使用枚举替代int状态码",
+      "files": [],
+      "assertions": [
+        {
+          "name": "检查switch规范",
+          "type": "contains",
+          "target": "switch",
+          "expected": true
+        },
+        {
+          "name": "检查字符串拼接性能问题",
+          "type": "contains",
+          "target": "StringBuilder",
+          "expected": true
+        },
+        {
+          "name": "检查if大括号规范",
+          "type": "contains",
+          "target": "大括号",
+          "expected": true
+        },
+        {
+          "name": "检查魔法数字问题",
+          "type": "contains",
+          "target": "常量",
+          "expected": true
+        },
+        {
+          "name": "包含控制语句检查章节",
+          "type": "contains",
+          "target": "控制语句",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "eval_name": "exception-handling-npe-prevention",
+      "prompt": "审查以下异常处理和NPE防护的代码：\n\n```java\n@Service\npublic class UserServiceImpl implements UserService {\n    \n    public UserDTO getUserInfo(Long userId) {\n        User user = userRepository.findById(userId).get();\n        String address = user.getAddress().getCity();\n        \n        try {\n            return convertToDTO(user);\n        } catch (Exception e) {\n            return null;\n        } finally {\n            return null;\n        }\n    }\n    \n    public void deleteUser(Long userId) {\n        try {\n            userRepository.deleteById(userId);\n        } catch (Exception e) {\n            e.printStackTrace();\n        }\n    }\n}\n```",
+      "expected_output": "审查报告应包含：1) Optional.get()未检查是否存在抛NoSuchElementException（强制）；2) 级联调用user.getAddress().getCity()易产生NPE（强制）；3) finally块中使用return违反强制规范；4) catch Exception过于宽泛应捕获具体异常（推荐）；5) e.printStackTrace()应使用SLF4J日志（强制）；6) 吞掉异常返回null不利于问题排查（推荐）；7) 缺少类和方法Javadoc注释",
+      "files": [],
+      "assertions": [
+        {
+          "name": "检查Optional使用规范",
+          "type": "contains",
+          "target": "Optional",
+          "expected": true
+        },
+        {
+          "name": "检查级联调用NPE风险",
+          "type": "contains",
+          "target": "级联调用",
+          "expected": true
+        },
+        {
+          "name": "检查finally return违规",
+          "type": "contains",
+          "target": "finally",
+          "expected": true
+        },
+        {
+          "name": "检查异常打印规范",
+          "type": "contains",
+          "target": "printStackTrace",
+          "expected": true
+        },
+        {
+          "name": "包含异常处理检查章节",
+          "type": "contains",
+          "target": "异常处理",
+          "expected": true
+        },
+        {
+          "name": "提供改进后的异常处理代码",
+          "type": "contains",
+          "target": "改进后代码",
+          "expected": true
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "eval_name": "complete-well-written-code-review",
+      "prompt": "请审查以下符合规范的优质代码，识别优点和仍可优化的地方：\n\n```java\n/**\n * 用户服务实现类\n *\n * @author zhangsan\n * @since 2024-01-01\n */\n@Slf4j\n@Service\n@RequiredArgsConstructor\npublic class UserServiceImpl implements UserService {\n    \n    private final UserRepository userRepository;\n    private final UserConverter userConverter;\n    \n    /**\n     * 根据ID查询用户\n     *\n     * @param userId 用户ID\n     * @return 用户DTO，不存在时返回null\n     */\n    @Override\n    @Transactional(readOnly = true)\n    public UserDTO getUserById(Long userId) {\n        if (userId == null) {\n            log.warn(\"查询用户ID为空\");\n            return null;\n        }\n        \n        return userRepository.findById(userId)\n                .map(userConverter::toDTO)\n                .orElse(null);\n    }\n}\n```",
+      "expected_output": "审查报告应包含：1) 代码质量优秀，命名规范、注释完整、架构清晰；2) 使用构造器注入符合最佳实践；3) 使用@Transactional(readOnly=true)优化性能；4) NPE防护到位；5) 使用SLF4J日志且级别合理；6) 可优化点：返回值null应添加更详细说明或使用Optional；7) 可考虑添加参数校验@Valid；8) 评分应在90分以上（优秀）",
+      "files": [],
+      "assertions": [
+        {
+          "name": "识别代码优点",
+          "type": "contains",
+          "target": "优点",
+          "expected": true
+        },
+        {
+          "name": "检查构造器注入认可",
+          "type": "contains",
+          "target": "构造器注入",
+          "expected": true
+        },
+        {
+          "name": "检查只读事务优化",
+          "type": "contains",
+          "target": "readOnly",
+          "expected": true
+        },
+        {
+          "name": "给出高评分",
+          "type": "regex",
+          "target": "(优秀|9[0-9]|100)",
+          "expected": true
+        },
+        {
+          "name": "提出可优化建议",
+          "type": "contains",
+          "target": "优化",
+          "expected": true
+        },
+        {
+          "name": "包含整体评价",
+          "type": "contains",
+          "target": "整体评价",
+          "expected": true
+        }
+      ]
+    }
+  ]
+}

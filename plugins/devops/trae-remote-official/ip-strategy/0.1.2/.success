@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:ip-strategy",
+  "registry": "trae-remote-official",
+  "plugin_name": "ip-strategy",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "4bd2b2a9-d2ce-4198-8836-1b494a05810c",
+  "remote_installed_plugin_id": "NXSL5_UCY34O20",
+  "checksum": "13473f86c305c55c6d962779d11f3a13011812a0624b2f1c3bf4a35d5e1491ce",
+  "file_size": 51025,
+  "installed_at": 1787227202679
+}

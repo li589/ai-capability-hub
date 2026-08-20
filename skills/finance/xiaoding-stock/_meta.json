@@ -1,0 +1,11 @@
+{
+  "owner": "asterisk622",
+  "slug": "xiaoding-stock",
+  "displayName": "Stock (XiaoDing)",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1774249452569,
+    "commit": "https://github.com/openclaw/skills/commit/73851736cab34ea17442deb315b9c434900ff890"
+  },
+  "history": []
+}

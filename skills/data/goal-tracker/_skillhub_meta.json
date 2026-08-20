@@ -1,0 +1,20 @@
+{
+  "name": "goal-tracker（目标追踪）",
+  "installedAt": 1787228589044,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082046839844864",
+  "examples_zh": [
+    "设定一个新目标：30天读完5本书",
+    "记录今天完成了目标里的哪些里程碑",
+    "查看我本月目标的完成进度"
+  ],
+  "examples_en": [
+    "Set a new goal: read 5 books in 30 days",
+    "Log today's milestone completions",
+    "Check my goal completion progress this month"
+  ],
+  "description_zh": "追踪长期目标、里程碑、每日记录与问责系统",
+  "description_en": "Track long-term goals with milestones, daily logging, and accountability",
+  "iconSource": "letter:auto"
+}

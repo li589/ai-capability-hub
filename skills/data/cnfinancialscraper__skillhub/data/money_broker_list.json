@@ -1,0 +1,39 @@
+{
+  "type": "货币经纪公司",
+  "type_name": "货币经纪公司",
+  "count": 6,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-06-26",
+  "institutions": [
+    {
+      "name": "上海国利货币经纪",
+      "code": "SHGL",
+      "type": "货币经纪公司"
+    },
+    {
+      "name": "上海国际货币经纪",
+      "code": "SHGJ",
+      "type": "货币经纪公司"
+    },
+    {
+      "name": "中诚宝捷思货币经纪",
+      "code": "ZCBJS",
+      "type": "货币经纪公司"
+    },
+    {
+      "name": "平安利顺国际货币经纪",
+      "code": "PALS",
+      "type": "货币经纪公司"
+    },
+    {
+      "name": "上田八木货币经纪",
+      "code": "SDBM",
+      "type": "货币经纪公司"
+    },
+    {
+      "name": "汇丰前海货币经纪",
+      "code": "HSBCQH",
+      "type": "货币经纪公司"
+    }
+  ]
+}

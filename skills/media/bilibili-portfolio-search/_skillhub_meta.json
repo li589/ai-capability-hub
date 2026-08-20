@@ -1,0 +1,11 @@
+{
+  "name": "B站搜账号下作品集",
+  "installedAt": 1787228332347,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087460078103085056",
+  "description_zh": "根据UP主UID实时获取其最新视频作品列表，支持游标翻页，按播放量降序排列",
+  "description_en": "Fetch a Bilibili creator's latest videos by UID with cursor-based paging.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_f0129c85-501.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_f0129c85-501.svg"
+}

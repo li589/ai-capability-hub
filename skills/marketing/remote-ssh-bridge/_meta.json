@@ -1,0 +1,11 @@
+{
+  "owner": "highlander89",
+  "slug": "remote-ssh-bridge",
+  "displayName": "remote-ssh-bridge",
+  "latest": {
+    "version": "0.1.3",
+    "publishedAt": 1772185908045,
+    "commit": "https://github.com/openclaw/skills/commit/c7e791605342e1e6c520ab4b6fb19fbc9459f085"
+  },
+  "history": []
+}

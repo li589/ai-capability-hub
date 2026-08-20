@@ -1,0 +1,234 @@
+{
+ "type": "银行理财子公司",
+ "type_name": "银行理财子公司",
+ "count": 45,
+ "data_source": "公开资料整理",
+ "update_time": "2026-08-15",
+ "institutions": [
+  {
+   "name": "上银理财",
+   "code": "",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "中邮理财",
+   "code": "PSBCWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "中银理财",
+   "code": "BOCWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "交银理财",
+   "code": "BCOMWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "交银理财",
+   "code": "BCOMWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "信银理财",
+   "code": "",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "光大理财",
+   "code": "CEBWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "光大理财",
+   "code": "CEBWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "兴银理财",
+   "code": "CIBWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "兴银理财",
+   "code": "CIBWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "农银理财",
+   "code": "ABCWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "农银理财",
+   "code": "ABCWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "北银理财",
+   "code": "BJWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "华夏理财",
+   "code": "HXWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "华夏理财",
+   "code": "HXWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "南银理财",
+   "code": "NJWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "南银理财",
+   "code": "NJWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "宁银理财",
+   "code": "NBWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "工银理财",
+   "code": "ICBCWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "工银理财",
+   "code": "ICBCWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "平安理财",
+   "code": "PAWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "广银理财",
+   "code": "GFWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "建信理财",
+   "code": "CCBWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "德意志理财",
+   "code": "",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "徽银理财",
+   "code": "HSWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "徽银理财",
+   "code": "HSWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "恒丰理财",
+   "code": "",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "招银理财",
+   "code": "CMBWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "施罗德交银理财",
+   "code": "",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "杭银理财",
+   "code": "HZWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "杭银理财",
+   "code": "HZWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "民生理财",
+   "code": "CMBCWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "民生理财",
+   "code": "CMBCWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "汇华理财",
+   "code": "HHWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "汇华理财",
+   "code": "HHWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "法巴农银理财",
+   "code": "",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "浦银理财",
+   "code": "SPDWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "渝农商理财",
+   "code": "",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "渝银理财",
+   "code": "CQWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "渤银理财",
+   "code": "",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "苏银理财",
+   "code": "JSWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "贝莱德建信理财",
+   "code": "",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "青银理财",
+   "code": "QDWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "青银理财",
+   "code": "QDWM",
+   "type": "银行理财子公司"
+  },
+  {
+   "name": "高盛工银理财",
+   "code": "",
+   "type": "银行理财子公司"
+  }
+ ]
+}

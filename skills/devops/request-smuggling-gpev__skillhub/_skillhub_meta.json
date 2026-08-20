@@ -1,0 +1,10 @@
+{
+  "slug": "request-smuggling-gpev",
+  "name": "请求走私",
+  "version": "1.0.0",
+  "installedAt": 1787229019108,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

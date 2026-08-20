@@ -1,0 +1,12 @@
+{
+  "slug": "wechat-cover-studio",
+  "name": "公众号爆款封面工坊",
+  "version": "1.0.0",
+  "installedAt": 1787228880507,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png"
+}

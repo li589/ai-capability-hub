@@ -1,0 +1,11 @@
+{
+  "owner": "chnmasterog",
+  "slug": "itick-stock-quote",
+  "displayName": "itick-stock-quote",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772870334676,
+    "commit": "https://github.com/openclaw/skills/commit/92061b2a9626569063a6f8135d6b8880dd4c04b6"
+  },
+  "history": []
+}

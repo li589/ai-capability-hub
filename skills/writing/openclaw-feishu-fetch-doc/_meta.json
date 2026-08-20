@@ -1,0 +1,11 @@
+{
+  "owner": "chenfa188",
+  "slug": "openclaw-feishu-fetch-doc",
+  "displayName": "OpenClaw飞书获取文档",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774670645896,
+    "commit": "https://github.com/openclaw/skills/commit/e89a0d9030825de5ffcf789190f224c8893afff3"
+  },
+  "history": []
+}

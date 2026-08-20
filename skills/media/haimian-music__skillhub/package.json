@@ -1,0 +1,21 @@
+{
+  "name": "haimian-music",
+  "version": "1.3.2",
+  "description": "海绵音乐官方 AI 音乐生成 Skill，在 AI 助手里完成写歌、歌词成曲、BGM、参考改编、查询和下载。",
+  "type": "module",
+  "main": "./dist/aimv.cjs",
+  "bin": {
+    "aimv": "./bin/aimv.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "runtime-defaults.json",
+    "release-manifest.json",
+    "SKILL.md"
+  ]
+}

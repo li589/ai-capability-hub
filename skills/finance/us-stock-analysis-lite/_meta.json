@@ -1,0 +1,11 @@
+{
+  "owner": "jseale",
+  "slug": "us-stock-analysis-lite",
+  "displayName": "US Stock Analysis Lite",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774974101576,
+    "commit": "https://github.com/openclaw/skills/commit/f97b8c892d97f3a054a767aa6e756b27cb3843b2"
+  },
+  "history": []
+}

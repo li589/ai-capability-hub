@@ -1,0 +1,11 @@
+{
+  "owner": "weiyunbyte",
+  "slug": "self-improving-agent-next",
+  "displayName": "self-improving-agent",
+  "latest": {
+    "version": "2.0.1",
+    "publishedAt": 1772960399989,
+    "commit": "https://github.com/openclaw/skills/commit/5cdce2cbf75dd255db3da37f334fabccf22228da"
+  },
+  "history": []
+}

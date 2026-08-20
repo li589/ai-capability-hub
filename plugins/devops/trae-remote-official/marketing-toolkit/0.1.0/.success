@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:marketing-toolkit",
+  "registry": "trae-remote-official",
+  "plugin_name": "marketing-toolkit",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "a67f6585-e2a1-4c6e-982d-d0d8d645ad84",
+  "remote_installed_plugin_id": "BCUD7GT0-HA--.",
+  "checksum": "3312f43ab94d95b7dd0dde07f87f5ba11bdb073da5e56fd9bdace21ead6b206e",
+  "file_size": 95642,
+  "installed_at": 1787227200836
+}

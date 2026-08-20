@@ -1,0 +1,11 @@
+{
+  "owner": "breckengan",
+  "slug": "find-skill",
+  "displayName": "Find Skill",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772774583348,
+    "commit": "https://github.com/openclaw/skills/commit/2435d196548c66d04bc1970e92969186652039e3"
+  },
+  "history": []
+}

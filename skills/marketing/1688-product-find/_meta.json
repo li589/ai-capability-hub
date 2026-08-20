@@ -1,0 +1,11 @@
+{
+  "owner": "1688aiinfra",
+  "slug": "1688-product-find",
+  "displayName": "1688 Product Find",
+  "latest": {
+    "version": "0.2.0",
+    "publishedAt": 1775702312650,
+    "commit": "https://github.com/openclaw/skills/commit/4f3957668a3ff1ed413bbea5d43314de1b9b6a77"
+  },
+  "history": []
+}

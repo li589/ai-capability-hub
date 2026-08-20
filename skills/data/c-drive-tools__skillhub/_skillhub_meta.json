@@ -1,0 +1,10 @@
+{
+  "slug": "c-drive-tools",
+  "name": "轻C·C盘空间释放专家",
+  "version": "2.0.3",
+  "installedAt": 1787229074049,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

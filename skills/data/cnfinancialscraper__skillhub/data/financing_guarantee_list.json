@@ -1,0 +1,159 @@
+{
+  "type": "融资担保公司",
+  "type_name": "融资担保公司",
+  "count": 30,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-06-26",
+  "institutions": [
+    {
+      "name": "中国投融资担保",
+      "code": "ZTRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "中合中小企业融资担保",
+      "code": "ZHZXQY",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "中债信用增进投资",
+      "code": "ZZXYZJ",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "北京中小企业融资再担保",
+      "code": "BJZXQY",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "上海再担保",
+      "code": "SHZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "深圳市中小企业信用融资担保",
+      "code": "SZZXQY",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "重庆市小微企业融资担保",
+      "code": "CQXWQY",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "江苏省信用再担保",
+      "code": "JSXY",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "浙江省融资再担保",
+      "code": "ZJRZZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "广东省融资再担保",
+      "code": "GDRZZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "安徽省信用担保集团",
+      "code": "AHXY",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "山东省投融资担保集团",
+      "code": "SDTRZ",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "四川省信用再担保",
+      "code": "SCXYZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "河南省中小企业担保",
+      "code": "HNZXQY",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "湖北省融资再担保集团",
+      "code": "HBRZ",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "湖南省融资担保集团",
+      "code": "HNRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "江西省融资担保集团",
+      "code": "JXRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "陕西省信用再担保",
+      "code": "SXXYZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "河北省融资担保基金",
+      "code": "HBRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "福建省融资担保",
+      "code": "FJRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "甘肃省融资担保集团",
+      "code": "GSRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "贵州省融资再担保",
+      "code": "GZRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "云南省融资担保",
+      "code": "YNRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "吉林省信用融资担保",
+      "code": "JLXYZZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "黑龙江省鑫正融资担保",
+      "code": "HLJXZRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "山西省融资再担保",
+      "code": "SXRZZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "内蒙古鼎新融资担保",
+      "code": "NMGDX",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "新疆融资担保",
+      "code": "XJRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "广西融资担保集团",
+      "code": "GXRZDB",
+      "type": "融资担保公司"
+    },
+    {
+      "name": "海南省融资担保基金",
+      "code": "HNRZZDB",
+      "type": "融资担保公司"
+    }
+  ]
+}

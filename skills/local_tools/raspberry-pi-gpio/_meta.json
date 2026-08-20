@@ -1,0 +1,11 @@
+{
+  "owner": "cld1994",
+  "slug": "raspberry-pi-gpio",
+  "displayName": "raspberry-pi-gpio",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773142003342,
+    "commit": "https://github.com/openclaw/skills/commit/fa39599f70e3bd7fad53945e7b23c4dbc211b7bc"
+  },
+  "history": []
+}

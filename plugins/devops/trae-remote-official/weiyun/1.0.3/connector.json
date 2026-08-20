@@ -1,0 +1,9 @@
+{
+  "connectors": {
+    "weiyun": {
+      "type": "remote_mcp",
+      "mcp_server": "weiyun",
+      "auth_policy": "ON_INVOKE"
+    }
+  }
+}

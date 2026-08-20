@@ -1,0 +1,4 @@
+interface:
+  display_name: "DesignKit 电商内容生成"
+  short_description: "通过对话生成商品套图、爆款短视频与定制 AI 模特内容"
+  default_prompt: "使用 $designkit-commerce-creator 根据我的商品素材生成商品套图、爆款视频或定制 AI 模特。"

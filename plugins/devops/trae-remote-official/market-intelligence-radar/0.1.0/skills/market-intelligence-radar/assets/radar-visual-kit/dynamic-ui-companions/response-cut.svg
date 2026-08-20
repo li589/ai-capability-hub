@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+  <title id="t">Response Cut Dynamic UI companion guide</title>
+  <desc id="d">Diagonal response-window measure with one compact exact evidence line.</desc>
+  <rect width="720" height="360" fill="#fff4df"/>
+  <g fill="#1a0e0b"><rect x="40" y="30" width="166" height="12"/><rect x="40" y="56" width="106" height="6"/></g>
+  <path d="M40 92H680V230H520L448 268H40Z" fill="#d93c20"/>
+  <g fill="#fff4df"><rect x="66" y="120" width="300" height="18"/><rect x="66" y="154" width="218" height="18"/><rect x="66" y="202" width="92" height="8"/></g>
+  <path d="M428 126H640L586 180H374Z" fill="#1a0e0b"/>
+  <path d="M592 196L642 146M620 146H642V168" fill="none" stroke="#fff4df" stroke-width="5" stroke-linecap="square"/>
+  <g fill="#1a0e0b"><rect x="40" y="292" width="640" height="2"/><rect x="40" y="312" width="134" height="8"/><rect x="222" y="312" width="168" height="8"/><rect x="438" y="312" width="102" height="8"/><rect x="588" y="312" width="92" height="8"/></g>
+  <rect x="40" y="342" width="640" height="2" fill="#1a0e0b"/>
+</svg>

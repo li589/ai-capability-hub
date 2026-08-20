@@ -1,0 +1,11 @@
+{
+  "name": "学情分析报告 · 初中",
+  "installedAt": 1787227519347,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2084940252758450176",
+  "description_zh": "为初中教师把考试成绩 / 题目得分明细 / 知识点掌握表 转化为多维诊断报告：班级整体表现、高中低分段画像、易错题分析、薄弱知识点、3-2-1 教学建议。触发关键词：学情分析、成绩分析、考试分析、薄弱知识点、教学诊断、初中学情。",
+  "description_en": "Transforms exam scores / item score details / knowledge-point mastery tables into a multi-dimensional diagnostic report for junior high teachers: overall class performance, high/middle/low score-band profiles, error-prone question analysis, weak knowledge points, and 3-2-1 teaching recommendations. Trigger keywords: learning analysis, score analysis, exam analysis, weak knowledge points, teaching diagnosis, junior high learning analysis.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_aefe66d1-cb4.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_aefe66d1-cb4.png"
+}

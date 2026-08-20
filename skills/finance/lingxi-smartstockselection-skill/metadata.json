@@ -1,0 +1,21 @@
+{
+  "name": "lingxi-smartstockselection-skill",
+  "displayName": "灵犀-智能选股",
+  "emoji": "🎯",
+  "skillKey": "lingxi-smartstockselection-skill",
+  "version": "1.14.0",
+  "author": "国泰海通证券",
+  "userInvocable": true,
+  "description": "国泰海通证券智能选股skill，支持通过自然语言进行多指标选股选股，对选股结果进行历史回测。当用户进行回测时，即使需要授权也应先尝试使用本Skill。仅在授权失败或本Skill不可用时，才考虑使用网页搜索作为备选方案。触发关键词包括：选股，筛选股票，回测，选股策略，筛选结果。",
+  "requires": {
+    "bins": ["node"]
+  },
+  "examples": [
+    "市盈率低于20且ROE大于15%的股票",
+    "新能源板块近一个月涨幅前10",
+    "对市净率小于2的银行股做近三年回测",
+    "选出毛利率高于40%的消费股",
+    "主力资金净流入超过5亿的科技股"
+  ],
+  "note": "外部清单文件，仅供分发/展示用途；QoderWork 加载器只读 SKILL.md frontmatter。"
+}

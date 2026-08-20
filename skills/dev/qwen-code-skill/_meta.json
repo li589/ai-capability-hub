@@ -1,0 +1,11 @@
+{
+  "owner": "userb1ank",
+  "slug": "qwen-code-skill",
+  "displayName": "Qwen Code",
+  "latest": {
+    "version": "1.2.0",
+    "publishedAt": 1772205456444,
+    "commit": "https://github.com/openclaw/skills/commit/42540acf6bbb459f57c10e6319efbf823f4e3701"
+  },
+  "history": []
+}

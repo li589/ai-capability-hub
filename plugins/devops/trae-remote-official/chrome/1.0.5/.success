@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:chrome",
+  "registry": "trae-remote-official",
+  "plugin_name": "chrome",
+  "version": "1.0.5",
+  "marketplace_plugin_id": "c2dcb36b-0873-4870-b1c8-02163a3e2eb7",
+  "remote_installed_plugin_id": "9A0.2Q4YP_BG8J",
+  "checksum": "92a343ae26fbe42fddf96bbb4220fbcaf565d4768a17ad6c41cea88f8f22e0b5",
+  "file_size": 5661,
+  "installed_at": 1787227203920
+}

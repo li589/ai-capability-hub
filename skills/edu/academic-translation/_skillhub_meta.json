@@ -1,0 +1,20 @@
+{
+  "name": "学术翻译",
+  "installedAt": 1787228509261,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443470583590912",
+  "examples_zh": [
+    "帮我翻译这篇论文的摘要",
+    "把这段英文论文翻译成中文，保留公式",
+    "中译英这段学术论文，用顶会风格"
+  ],
+  "examples_en": [
+    "Translate this paper abstract into Chinese",
+    "Translate this paragraph preserving all formulas",
+    "Translate this section into English with conference style"
+  ],
+  "description_zh": "学术论文中英互译，三步法（直译→反思→雅化），公式零损伤，顶会术语库，双栏对照输出",
+  "description_en": "Academic paper translation with 3-step refinement (literal → reflective → polished), formula-safe, conference terminology",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "industry-researcher",
+  "version": "0.1.6",
+  "description": "行业深度研究与产业链分析：产出行业全景、竞争格局、可比公司估值表、主题选股清单，组装为研究简报",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "industry-researcher",
+    "internal",
+    "skills",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "industry-researcher",
+    "shortDescription": "行业深度研究与产业链分析：产出行业全景、竞争格局、可比公司估值表、主题选股清单，组装为研究简报",
+    "longDescription": "行业深度研究与产业链分析：产出行业全景、竞争格局、可比公司估值表、主题选股清单，组装为研究简报",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use industry-researcher to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

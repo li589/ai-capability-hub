@@ -1,0 +1,17 @@
+{
+  "owner": "jamesxu81",
+  "slug": "covert-native-language-to-ai-firendly-prompt",
+  "displayName": "Prompt Refiner",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774831341993,
+    "commit": "https://github.com/openclaw/skills/commit/4ca54a37092cea983f74dc5c6d9823e22fa60815"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1774561331641,
+      "commit": "https://github.com/openclaw/skills/commit/fb27cb5a25a06fadb26545ec56f6231405d0f2e6"
+    }
+  ]
+}

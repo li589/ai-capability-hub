@@ -1,0 +1,11 @@
+{
+  "owner": "sharkpicker",
+  "slug": "quant-trading-skills",
+  "displayName": "quant_trading-skills",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774786728355,
+    "commit": "https://github.com/openclaw/skills/commit/c69545297e30ea4785f737da72edac6402d7ecaa"
+  },
+  "history": []
+}

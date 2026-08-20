@@ -1,0 +1,30 @@
+{
+  "client_only_params": [],
+  "description": "获取指定应用下的所有表单",
+  "display_name": "查询表单列表",
+  "domain": "应用与表单",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/app/entry/list",
+  "method": "POST",
+  "name": "jdy_list_forms",
+  "params": {
+    "app_id": {
+      "description": "App ID (应用ID)",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "description": "Page size, 1-100 (default 100)",
+      "required": false,
+      "type": "integer"
+    },
+    "skip": {
+      "description": "Skip count for pagination (default 0)",
+      "required": false,
+      "type": "integer"
+    }
+  },
+  "path_params": [],
+  "required_params": [],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

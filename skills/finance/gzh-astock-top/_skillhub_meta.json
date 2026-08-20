@@ -1,0 +1,11 @@
+{
+  "name": "A股公众号大V",
+  "installedAt": 1787228306802,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084105595916967936",
+  "description_zh": "获取A股领域公众号大V账号30个及账号数据，含最新文章及阅读量",
+  "description_en": "Fetch top 30 A-share WeChat KOL accounts with latest article data and read counts.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_a919e22c-07e.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_a919e22c-07e.svg"
+}

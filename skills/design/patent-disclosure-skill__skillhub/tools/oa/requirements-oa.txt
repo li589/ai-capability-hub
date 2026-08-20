@@ -1,0 +1,13 @@
+# 模式 D · 审查答复 / 案例向量（可选）
+sqlite-vec>=0.1.6
+PyYAML>=6.0
+numpy>=1.24.0
+
+# 本地 embedding（provider=local 时）
+sentence-transformers>=2.2.0
+
+# PDF 文本抽取（审查通知书 / 历史答复）
+pymupdf>=1.24.0
+
+# 线上 openai_compatible / minimax 用标准库 urllib 即可，无需额外包
+# MiniMax：需 MINIMAX_API_KEY + MINIMAX_GROUP_ID（见 config.py --preset minimax）

@@ -1,0 +1,21 @@
+{
+  "name": "金数据表单管理",
+  "installedAt": 1787227610759,
+  "source": "marketplace",
+  "version": "1.8.0",
+  "skillId": "skill_2081640234430820352",
+  "examples_zh": [
+    "帮我在金数据上创建一个活动报名表，需要姓名、手机号、公司、职位字段",
+    "帮我查一下金数据里名为客户满意度调研的表单，把最近一个月提交的数据导出来",
+    "帮我把金数据表单里状态为无效的数据批量删除"
+  ],
+  "examples_en": [
+    "Create an event registration form on Jinshuju with name, phone, company, and title fields",
+    "Export last month's submissions from a Jinshuju form named Customer Satisfaction Survey",
+    "Batch delete invalid entries from a Jinshuju form"
+  ],
+  "description_zh": "通过金数据 MCP 用自然语言管理在线表单：创建/编辑表单与主题、增删改查数据、批量操作、考试测评表单，替代登录后台手动操作。",
+  "description_en": "Manage online forms on Jinshuju via MCP: create/edit forms and themes, CRUD entries, batch operations, exam and evaluation forms.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2081640234430820352/7873c64b17e13a83.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2081640234430820352/7873c64b17e13a83.svg"
+}

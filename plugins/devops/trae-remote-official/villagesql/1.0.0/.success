@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:villagesql",
+  "registry": "trae-remote-official",
+  "plugin_name": "villagesql",
+  "version": "1.0.0",
+  "marketplace_plugin_id": "74f7cd97-54e3-4ec0-a1a5-bef1dc278c4d",
+  "remote_installed_plugin_id": "9FP4ZDQO0317FA",
+  "checksum": "6712519d15838bbff5cc15ee7d11ff252b9a0dccda00c869f5e49203795cf05d",
+  "file_size": 48518,
+  "installed_at": 1787227201480
+}

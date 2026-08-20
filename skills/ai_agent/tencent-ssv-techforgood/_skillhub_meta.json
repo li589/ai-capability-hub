@@ -1,0 +1,21 @@
+{
+  "name": "腾讯技术公益智能助手",
+  "installedAt": 1787228366459,
+  "source": "marketplace",
+  "version": "1.3.13",
+  "skillId": "skill_2053084078135042048",
+  "examples_zh": [
+    "我是一家NGO，想了解腾讯有哪些免费的数字工具",
+    "公益机构如何做数字化转型",
+    "帮我推荐适合社会组织的技术工具"
+  ],
+  "examples_en": [
+    "What free digital tools does Tencent offer for NGOs?",
+    "How can a charity organization start digital transformation?",
+    "Recommend tech tools for social organizations"
+  ],
+  "description_zh": "专注公益机构数字化赋能的智能助手，围绕腾讯技术公益数字工具箱（techforgood.qq.com）为社会组织匹配免费或低成本数字化产品，支持需求诊断、产品推荐、申领指引、数字化实施参考与必要的机构合规边界提示。当用户提到公益机构数字化、社会组织工具选型、技术公益工具箱、公益虾时使用。",
+  "description_en": "Tencent Tech for Good digital assistant for NGO empowerment. Matches nonprofits with free or low-cost digital tools from the Tencent Tech for Good Toolkit (techforgood.qq.com) through interactive needs diagnosis, smart product recommendations, application guidance, and implementation references with compliance reminders.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencent-ssv-techforgood.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencent-ssv-techforgood.png"
+}

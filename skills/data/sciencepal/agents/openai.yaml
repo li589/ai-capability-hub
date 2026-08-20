@@ -1,0 +1,4 @@
+interface:
+  display_name: "sciencepal"
+  short_description: "发起 Agent 任务并下载 sandbox 文件"
+  default_prompt: "Use $sciencepal to create or update a SciencePal SDK script that starts an agent run, polls status, and downloads all sandbox files when the run completes."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "增值税税收优惠匹配"
+  short_description: "基于主体、交易、所属期和有效政策逐项筛选并核验增值税优惠"
+  default_prompt: "使用 $match-vat-incentives 为我的业务匹配可能适用的增值税优惠。"

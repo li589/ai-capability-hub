@@ -1,0 +1,20 @@
+{
+  "name": "蜜度文本校对",
+  "installedAt": 1787227694009,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2074471300311822336",
+  "examples_zh": [
+    "帮我检查一下：十年磨一见",
+    "校对这段从季度报告.docx抽出的文字",
+    "检查这段话的标点符号是否符合GB/T 15834"
+  ],
+  "examples_en": [
+    "Proofread a sentence for typos",
+    "Check text extracted from a quarterly report",
+    "Verify punctuation against the GB/T 15834 standard"
+  ],
+  "description_zh": "智能文本校对，检测错别字、标点符号差错、事实性差错，输出 Markdown 勘误表与 JSON/Excel 下载链接。",
+  "description_en": "Intelligent text proofreading detecting typos, punctuation errors, and factual mistakes with Markdown errata output.",
+  "iconSource": "letter:auto"
+}

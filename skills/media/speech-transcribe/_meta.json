@@ -1,0 +1,11 @@
+{
+  "owner": "ardentillumina",
+  "slug": "speech-transcribe",
+  "displayName": "Speech-to-text, 3x faster than Whisper, remote FREE GPU",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1776210225044,
+    "commit": "https://github.com/openclaw/skills/commit/3de45ac6086a6bb5daa888f197e7b24edf94b7e8"
+  },
+  "history": []
+}

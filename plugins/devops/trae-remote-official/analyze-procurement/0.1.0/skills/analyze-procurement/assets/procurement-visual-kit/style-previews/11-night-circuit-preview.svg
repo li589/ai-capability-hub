@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Night Circuit report direction preview</title>
+  <desc id="desc">An original near-black procurement decision stage with emerald primary fields, cyan linked evidence, one yellow reversal mark, offset modules, and large numbered acts.</desc>
+  <rect width="1600" height="1000" fill="#111315"/>
+  <g font-family="Arial, sans-serif" fill="#F6F7F8">
+    <text x="64" y="66" font-size="16" font-weight="700" letter-spacing="2">DECISION CIRCUIT / 11</text>
+    <text x="1334" y="66" font-size="16">2026 / 07</text>
+    <text x="64" y="184" font-size="76" font-weight="700">SUPPLY CONTINUITY</text>
+    <text x="64" y="260" font-size="44" font-weight="700">BEATS SINGLE-POINT LOWEST COST</text>
+    <text x="1240" y="182" font-size="20" fill="#9FA6AA">Award posture</text>
+    <text x="1240" y="230" font-size="28" font-weight="700">DUAL / 60 : 40</text>
+  </g>
+  <rect x="64" y="326" width="900" height="230" rx="16" fill="#09D47E"/>
+  <g font-family="Arial, sans-serif" fill="#111315">
+    <text x="98" y="374" font-size="16" font-weight="700" letter-spacing="2">PRIMARY DECISION</text>
+    <text x="98" y="458" font-size="30" font-weight="700">LOCK PRIMARY SUPPLY, PRESERVE SWITCHING POWER</text>
+    <text x="98" y="514" font-size="20">Capacity verified · exit support pending</text>
+  </g>
+  <rect x="994" y="326" width="542" height="230" rx="16" fill="#1B1E21" stroke="#3A3F42"/>
+  <g font-family="Arial, sans-serif">
+    <text x="1028" y="374" font-size="16" font-weight="700" fill="#20C7E8">LINKED EVIDENCE</text>
+    <text x="1028" y="456" font-size="64" font-weight="700" fill="#F6F7F8">92 / 100</text>
+    <text x="1028" y="508" font-size="19" fill="#9FA6AA">capability composite</text>
+  </g>
+  <g transform="translate(64 598)" font-family="Arial, sans-serif">
+    <text x="0" y="0" font-size="16" font-weight="700" fill="#9FA6AA" letter-spacing="2">COST × CAPABILITY FRONTIER</text>
+    <rect y="34" width="900" height="286" rx="16" fill="#1B1E21" stroke="#3A3F42"/>
+    <line x1="64" y1="264" x2="836" y2="264" stroke="#9FA6AA" stroke-opacity=".35"/>
+    <line x1="64" y1="72" x2="64" y2="264" stroke="#9FA6AA" stroke-opacity=".35"/>
+    <path d="M132 226L334 190 526 144 742 92" fill="none" stroke="#20C7E8" stroke-width="5"/>
+    <g fill="#20C7E8"><circle cx="132" cy="226" r="9"/><circle cx="334" cy="190" r="9"/><circle cx="526" cy="144" r="9"/></g>
+    <circle cx="742" cy="92" r="16" fill="#09D47E" stroke="#F6F7F8" stroke-width="4"/>
+    <circle cx="608" cy="220" r="12" fill="#F2E923"/>
+    <rect x="934" y="34" width="538" height="132" rx="16" fill="#1B1E21" stroke="#3A3F42"/>
+    <text x="968" y="76" font-size="15" font-weight="700" fill="#F2E923">REVERSAL</text>
+    <text x="968" y="124" font-size="26" font-weight="700" fill="#F6F7F8">P95 latency &gt; 2.4 s</text>
+    <rect x="934" y="188" width="538" height="132" rx="16" fill="#20C7E8"/>
+    <text x="968" y="230" font-size="15" font-weight="700" fill="#111315">NEXT VALIDATION</text>
+    <text x="968" y="278" font-size="26" font-weight="700" fill="#111315">7-day production load test</text>
+  </g>
+</svg>

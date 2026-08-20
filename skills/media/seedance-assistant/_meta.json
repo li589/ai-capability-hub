@@ -1,0 +1,11 @@
+{
+  "owner": "machitao",
+  "slug": "seedance-assistant",
+  "displayName": "Seedance Assistant",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1772013372076,
+    "commit": "https://github.com/openclaw/skills/commit/13150a3b4b2f9de0036f250733ad511aff356e2c"
+  },
+  "history": []
+}

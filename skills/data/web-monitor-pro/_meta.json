@@ -1,0 +1,27 @@
+{
+  "owner": "jakes420",
+  "slug": "web-monitor-pro",
+  "displayName": "Web Monitor",
+  "latest": {
+    "version": "3.5.0",
+    "publishedAt": 1771185838866,
+    "commit": "https://github.com/openclaw/skills/commit/343155231d15c5e50bcc6c3a716fc81e2a4cac06"
+  },
+  "history": [
+    {
+      "version": "3.4.3",
+      "publishedAt": 1771183367906,
+      "commit": "https://github.com/openclaw/skills/commit/b51db86e872941e603f8e367f3c07ef615d0588b"
+    },
+    {
+      "version": "3.1.0",
+      "publishedAt": 1771158244163,
+      "commit": "https://github.com/openclaw/skills/commit/7dc3ac8ee60bf3c0af7b60ecac2fc62f2ecbfe43"
+    },
+    {
+      "version": "1.0.1",
+      "publishedAt": 1771044341223,
+      "commit": "https://github.com/openclaw/skills/commit/9120bc9c2627354228017b4aa4879d97641fe717"
+    }
+  ]
+}

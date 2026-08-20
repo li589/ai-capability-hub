@@ -1,0 +1,17 @@
+{
+  "owner": "harrylabsj",
+  "slug": "dianping",
+  "displayName": "dianping",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1773548892569,
+    "commit": "https://github.com/openclaw/skills/commit/5e2f4be62f4d9b4d1c1b01f93884a6fd139bf0e5"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773477763186,
+      "commit": "https://github.com/openclaw/skills/commit/7bf1193ecb0e9405727d04a7e92988dad807fdb9"
+    }
+  ]
+}

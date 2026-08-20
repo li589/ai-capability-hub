@@ -1,0 +1,11 @@
+{
+  "name": "腾讯自选股·金融搜索",
+  "installedAt": 1787228666253,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089686008607289344",
+  "description_zh": "基于腾讯 FiT 自研金融资讯搜索引擎，面向财经新闻、公司公告、研究报告等专业信源做检索与召回，为其他分析类技能提供及时、权威的信息素材。",
+  "description_en": "Leveraging Tencent FiT’s proprietary financial information search engine, the system performs retrieval and recall across professional sources—such as financial news, corporate announcements, and research reports—to provide timely and authoritative information for other analytical capabilities.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_92d26aa7-e8d.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_92d26aa7-e8d.png"
+}

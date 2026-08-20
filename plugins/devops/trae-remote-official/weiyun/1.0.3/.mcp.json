@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "weiyun": {
+      "url": "https://www.weiyun.com/api/v3/mcpserver",
+      "headers": {
+        "Authorization": "Bearer ${connector.weiyun.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

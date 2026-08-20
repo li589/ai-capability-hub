@@ -1,0 +1,10 @@
+{
+  "name": "税收政策问答",
+  "installedAt": 1787228596568,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089229227185332224",
+  "description_zh": "仅基于国家税务总局和财政部官网，查询并解读中国大陆税收政策。",
+  "description_en": "Researches and explains Chinese mainland tax policies using only official sources from the State Taxation Administration and Ministry of Finance.",
+  "iconSource": "letter:auto"
+}

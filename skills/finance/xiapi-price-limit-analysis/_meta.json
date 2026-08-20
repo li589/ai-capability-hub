@@ -1,0 +1,17 @@
+{
+  "owner": "ksky521",
+  "slug": "xiapi-price-limit-analysis",
+  "displayName": "虾皮A股涨跌停股分析",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1775794084128,
+    "commit": "https://github.com/openclaw/skills/commit/43c0700dfc45fccfb450b5f25a50873fbb26982f"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1775560870626,
+      "commit": "https://github.com/openclaw/skills/commit/eca86f182142febb115600f00bbd8f917df8a303"
+    }
+  ]
+}

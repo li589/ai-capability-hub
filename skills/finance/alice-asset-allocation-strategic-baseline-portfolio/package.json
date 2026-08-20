@@ -1,0 +1,19 @@
+{
+  "name": "alice-asset-allocation-strategic-baseline-portfolio",
+  "version": "1.0.0",
+  "description": "CLI: 调用万得 Alice Agent「资产配置-战略基准组合」技能（A2A SSE），结合风险偏好、投资期限、约束与长期市场数据，制定 3-5 年战略资产配置基准组合，输出大类资产权重、区域目标、指数映射与预期风险收益",
+  "type": "module",
+  "private": true,
+  "files": [
+    "SKILL.md",
+    "AGENT.md",
+    "package.json",
+    "_meta.json",
+    "scripts/"
+  ],
+  "scripts": {},
+  "bin": {
+    "alice-asset-allocation-strategic-baseline-portfolio": "./scripts/cli.mjs",
+    "aasbp": "./scripts/cli.mjs"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "skill-vetter",
+  "installedAt": 1785784648531,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082706530402304",
+  "examples_zh": [
+    "安装这个技能前帮我检查安全性",
+    "审查这个社区技能有没有风险",
+    "检查技能的权限范围是否合理"
+  ],
+  "examples_en": [
+    "Check this skill for security issues before installing",
+    "Review this community skill for risks",
+    "Verify if the skill's permission scope is reasonable"
+  ],
+  "description_zh": "安装前审查技能的安全性",
+  "description_en": "Security-first skill vetting before install",
+  "iconSource": "letter:auto"
+}

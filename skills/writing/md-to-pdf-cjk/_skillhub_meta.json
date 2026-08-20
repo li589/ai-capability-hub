@@ -1,0 +1,20 @@
+{
+  "name": "Markdown转PDF（CJK）",
+  "installedAt": 1787227597264,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082374000742400",
+  "examples_zh": [
+    "把 /tmp/project-report.md 转成 PDF，确保中文标题、日文引用和韩文姓名都能正确显示。",
+    "将这份 Markdown 周报导出为适合发送客户的 PDF，并保留表格、代码块和中文项目符号。",
+    "生成一份 CJK 兼容的 PDF 研究报告，避免中文换行和字体缺失问题。"
+  ],
+  "examples_en": [
+    "Convert /tmp/project-report.md to PDF and ensure Chinese headings, Japanese quotes, and Korean names render correctly.",
+    "Export this Markdown weekly report as a client-ready PDF while preserving tables, code blocks, and Chinese bullet lists.",
+    "Generate a CJK-compatible PDF research report that avoids Chinese line-break issues and missing fonts."
+  ],
+  "description_zh": "Markdown 转 PDF，原生支持中文/日文/韩文排版",
+  "description_en": "Convert Markdown to PDF with native CJK (Chinese/Japanese/Korean) text support",
+  "iconSource": "letter:auto"
+}

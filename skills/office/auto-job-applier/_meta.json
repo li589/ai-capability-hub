@@ -1,0 +1,11 @@
+{
+  "owner": "atharva-badgujar",
+  "slug": "auto-job-applier",
+  "displayName": "Automate Job Application",
+  "latest": {
+    "version": "2.1.0",
+    "publishedAt": 1776189446998,
+    "commit": "https://github.com/openclaw/skills/commit/c5283fcc917aa2e22c89c0d3626ccdc228070789"
+  },
+  "history": []
+}

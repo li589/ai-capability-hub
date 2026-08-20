@@ -1,0 +1,4 @@
+interface:
+  display_name: "世舶科技招投标数据API总概览"
+  short_description: "统一选择和调用招中标、企业画像、拟在建及AI处理等20个接口"
+  default_prompt: "使用 $baobiao-api-overview 为我的招投标数据需求选择并调用正确接口。"

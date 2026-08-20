@@ -1,0 +1,4 @@
+interface:
+  display_name: "漫剧拆分"
+  short_description: "将故事、小说或剧本拆成角色、场景和可生产的连续漫剧分镜"
+  default_prompt: "使用 $comic-drama-breakdown 将这段故事拆成可生产的漫剧剧本、角色、场景和连续分镜。"

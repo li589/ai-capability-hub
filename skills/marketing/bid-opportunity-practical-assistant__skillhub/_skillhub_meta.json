@@ -1,0 +1,12 @@
+{
+  "slug": "bid-opportunity-practical-assistant",
+  "name": "招投标商机实战助手",
+  "version": "1.0.0",
+  "installedAt": 1787228892449,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/629785/15c6ab5c8b7a4e12aed13ce01a13e822.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/629785/15c6ab5c8b7a4e12aed13ce01a13e822.png"
+}

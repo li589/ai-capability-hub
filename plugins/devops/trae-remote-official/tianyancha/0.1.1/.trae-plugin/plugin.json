@@ -1,0 +1,56 @@
+{
+  "name": "tianyancha",
+  "version": "0.1.1",
+  "description": "天眼查 MCP 集成，支持填写 API Key 后通过天眼查企业商业信息服务查询企业工商、风险、知识产权、经营公示等数据。",
+  "i18n": {
+    "display_name": {
+      "en": "Tianyancha",
+      "zh-cn": "天眼查",
+      "ja": "Tianyancha"
+    },
+    "description": {
+      "en": "Tianyancha MCP integration for enterprise business information queries.",
+      "zh-cn": "天眼查 MCP 集成，支持填写 API Key 后查询企业工商、风险、知识产权、经营公示等商业信息。",
+      "ja": "天眼查 MCP 統合。企業工商、リスク、知的財産、経営公告などの商業情報照会に対応。"
+    }
+  },
+  "author": {
+    "name": "Tianyancha",
+    "url": "https://www.tianyancha.com"
+  },
+  "homepage": "https://www.tianyancha.com/ai",
+  "license": "Proprietary",
+  "keywords": [
+    "tianyancha",
+    "tyc",
+    "company",
+    "business-data",
+    "enterprise",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "Tianyancha",
+    "shortDescription": "天眼查企业商业信息 MCP",
+    "longDescription": "填写天眼查 API Key 后，可通过天眼查 MCP 服务查询企业工商、风险合规、知识产权、经营公示、历史信息和董监高等商业数据，运行时会将凭证注入到 `Authorization` 请求头。",
+    "developerName": "Tianyancha",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://www.tianyancha.com/ai",
+    "defaultPrompt": [
+      "查询天眼查企业工商信息",
+      "使用天眼查 MCP 做企业风险排查",
+      "查询企业知识产权和经营公示数据"
+    ],
+    "brandColor": "#1677FF",
+    "logo": "./assets/app-icon.svg",
+    "composerIcon": "./assets/app-icon.svg",
+    "screenshots": []
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "env": {
+    "TYC_API_KEY": "${connector.tianyancha.ACCESS_TOKEN}"
+  }
+}

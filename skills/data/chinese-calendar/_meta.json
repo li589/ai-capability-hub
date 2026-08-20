@@ -1,0 +1,11 @@
+{
+  "owner": "teweitao",
+  "slug": "chinese-calendar",
+  "displayName": "中国日历",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772255674136,
+    "commit": "https://github.com/openclaw/skills/commit/5900286398c45963d9ddcb72b2c595c3ca2cd478"
+  },
+  "history": []
+}

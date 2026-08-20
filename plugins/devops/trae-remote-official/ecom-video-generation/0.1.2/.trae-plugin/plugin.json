@@ -1,0 +1,39 @@
+{
+  "name": "ecom-video-generation",
+  "version": "0.1.2",
+  "displayName": "电商短视频生成",
+  "displayNameEn": "Ecom Video Generation",
+  "description": "电商短视频生成专家：先写脚本、再出视频。适用于带货/种草/宣传短视频的分镜脚本、口播文案、视频prompt编写，以及静图动态化和长视频拆段。内置剪辑vs生成路径判定、7大品类卖点路由、A/B双叙事骨架。",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "电商短视频",
+    "视频脚本生成",
+    "分镜脚本",
+    "带货视频",
+    "视频prompt",
+    "口播文案"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "电商短视频生成",
+    "shortDescription": "为电商短视频打造的脚本与视频生成助手，覆盖带货、种草、宣传全场景，七大品类一键路由。以【场景化音画设计+工业级分镜脚本】为核心，能一次到位生成短视频。",
+    "longDescription": "E-commerce short video generation expert: script first, video next. Supports storyboard scripting, voiceover copywriting, video prompt writing for product promotion videos, as well as static-to-dynamic conversion and long video segmentation. Built-in editing vs. generation path routing, 7-category selling-point templates, and A/B narrative frameworks.",
+    "developerName": "Trae",
+    "category": "内容创作",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use ecom-video-generation to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

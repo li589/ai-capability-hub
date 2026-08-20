@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:gitlab",
+  "registry": "trae-remote-official",
+  "plugin_name": "gitlab",
+  "version": "0.0.0",
+  "marketplace_plugin_id": "fe04d2e2-b147-45a9-8394-42b4feaca75e",
+  "remote_installed_plugin_id": "WHQI43HF_9ZVSV",
+  "checksum": "d90cb98381d4ad0f9221119a406dd6c4247bcb5d1f5245d251e8dece3902ca13",
+  "file_size": 6162,
+  "installed_at": 1787227201189
+}

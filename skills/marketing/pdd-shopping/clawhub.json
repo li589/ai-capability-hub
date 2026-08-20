@@ -1,0 +1,9 @@
+{
+  "name": "pdd-shopping",
+  "version": "2.1.0",
+  "description": "拼多多决策助手 - 帮你判断这单该不该买、要不要拼团、值不值得冒险",
+  "keywords": ["pdd", "pinduoduo", "拼多多", "shopping", "group-buy", "coupon", "refund", "deal", "subsidy"],
+  "author": "harrylabsj",
+  "license": "MIT",
+  "repository": "https://github.com/harrylabsj/pdd-shopping"
+}

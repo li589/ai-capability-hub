@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:qixin-insight-enterprise-info",
+  "registry": "trae-remote-official",
+  "plugin_name": "qixin-insight-enterprise-info",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "e76c43b2-770a-4e6c-9c8f-5f8a92b59a3f",
+  "remote_installed_plugin_id": "L0ZEAQEQBXMG9H",
+  "checksum": "98bec78f1394c333e7792f94c69a1306e7889e5c18a0c2061e3101dcd40d31aa",
+  "file_size": 57062,
+  "installed_at": 1787227201094
+}

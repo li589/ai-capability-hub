@@ -1,0 +1,11 @@
+{
+  "owner": "chengcheng8632",
+  "slug": "tender-bid-generator",
+  "displayName": "Tender Bid Generator",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773643473682,
+    "commit": "https://github.com/openclaw/skills/commit/0fa719554e0a0ca7dbb8180d6382b0aa4bae58eb"
+  },
+  "history": []
+}

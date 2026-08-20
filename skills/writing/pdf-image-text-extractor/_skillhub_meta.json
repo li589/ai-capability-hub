@@ -1,0 +1,11 @@
+{
+  "name": "PDF和图片文字提取",
+  "installedAt": 1785784603345,
+  "source": "marketplace",
+  "version": "1.0.9",
+  "skillId": "skill_2082741997694226432",
+  "description_zh": "从图片或PDF文档中识别并提取文字内容，支持多种图片格式和PDF文件，自动判读文字存在性并输出结构化结果。",
+  "description_en": "Extract text from images and PDF documents. Supports multiple image formats and PDF files, with automatic text detection and structured output.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_b71a8b12-516.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_b71a8b12-516.svg"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "xhs-content-skills",
+  "displayName": "小红书内容创作技能包",
+  "displayNameEn": "Xiaohongshu Content Skills",
+  "version": "1.0.0",
+  "description": "整合选题、写作、封面、标题诊断、合规、去 AI 痕迹、内容评分与发布运营的 9 个小红书内容创作 Skill。",
+  "descriptionEn": "Nine skills for Xiaohongshu topic planning, writing, cover strategy, title review, compliance, humanization, scoring, and publishing operations.",
+  "author": {
+    "name": "尹稚（止戈） / YinZhi（Zhige）"
+  },
+  "license": "MIT",
+  "logo": "./assets/icon.svg",
+  "keywords": [
+    "xiaohongshu",
+    "content-creation",
+    "topic-planning",
+    "copywriting",
+    "compliance",
+    "publishing"
+  ],
+  "skills": "./skills/"
+}

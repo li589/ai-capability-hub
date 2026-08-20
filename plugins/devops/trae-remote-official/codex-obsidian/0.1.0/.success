@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:codex-obsidian",
+  "registry": "trae-remote-official",
+  "plugin_name": "codex-obsidian",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "7adecf3b-5f22-4f71-8ba1-f578a5092e42",
+  "remote_installed_plugin_id": "4Z2RA3OI_S3T1Y",
+  "checksum": "97602c36c0b6432eb335fd41c937ef8a000c75e59858e12bb1972a6e35f45ff6",
+  "file_size": 73948,
+  "installed_at": 1787227202322
+}

@@ -1,0 +1,21 @@
+{
+  "name": "腾讯电子签合同助手",
+  "installedAt": 1785864415217,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2053122558994026496",
+  "examples_zh": [
+    "帮我起草一份租房合同，我是租客，租金 3000块，押二付一，写完后提醒我签合同。",
+    "帮我看看这份买卖合同有没有对我不利的条款，我最担心买到次品无法索赔。",
+    "劳动合同期限 1 年，最多可以约定多长试用期？请给我相关法条原文。"
+  ],
+  "examples_en": [
+    "Draft a software development contract for me",
+    "Review this contract for risks",
+    "What does labor law say about economic compensation?"
+  ],
+  "description_zh": "腾讯电子签合同AI助手——支持合同起草、合同审查、合同对比、法规检索，并可在线发起签署，一站式打通合同全流程闭环。",
+  "description_en": "Tencent E-Sign Contract AI Assistant for drafting, signing, reviewing, comparing contracts and legal research",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2053122558994026496/843b80fa2a19b043.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2053122558994026496/843b80fa2a19b043.png"
+}

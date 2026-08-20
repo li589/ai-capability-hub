@@ -1,0 +1,27 @@
+{
+  "owner": "harrylabsj",
+  "slug": "pdd-shopping",
+  "displayName": "PDD Shopping",
+  "latest": {
+    "version": "2.1.0",
+    "publishedAt": 1774952425456,
+    "commit": "https://github.com/openclaw/skills/commit/f2fb85f838ee760d172e6f9d5e17432d7a900cf2"
+  },
+  "history": [
+    {
+      "version": "2.0.0",
+      "publishedAt": 1773836660638,
+      "commit": "https://github.com/openclaw/skills/commit/a8c712fddfdc00d606b8c5e58254948e31c60654"
+    },
+    {
+      "version": "1.1.1",
+      "publishedAt": 1773560168687,
+      "commit": "https://github.com/openclaw/skills/commit/80d0204ed70ac92314e485b6c92f452fadc9588b"
+    },
+    {
+      "version": "1.1.0",
+      "publishedAt": 1773270167985,
+      "commit": "https://github.com/openclaw/skills/commit/fe90fccb8c75c6eb31b5482b31b992aac57dcd40"
+    }
+  ]
+}

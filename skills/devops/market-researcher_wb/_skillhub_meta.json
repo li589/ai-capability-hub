@@ -1,0 +1,20 @@
+{
+  "name": "市场调研",
+  "installedAt": 1785864376211,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082339107885056",
+  "examples_zh": [
+    "帮我估算国内AI写作工具的市场规模",
+    "分析目标用户的消费行为和痛点",
+    "对比分析竞品的优劣势"
+  ],
+  "examples_en": [
+    "Estimate the market size for AI writing tools in China",
+    "Analyze target user behavior and pain points",
+    "Compare advantages and disadvantages of competitors"
+  ],
+  "description_zh": "市场调研专家，提供市场分析、消费者洞察与机会评估",
+  "description_en": "Market research specialist for analysis, consumer insights, and sizing",
+  "iconSource": "letter:auto"
+}

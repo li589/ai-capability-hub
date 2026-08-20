@@ -1,0 +1,19 @@
+{
+  "name": "ppt-generator",
+  "displayName": "高质量 PPT",
+  "displayNameEn": "PPT Generator",
+  "version": "1.0.0",
+  "description": "根据文档、图片、链接或文字需求，生成精美的单文件 HTML 演示文稿。",
+  "descriptionEn": "Creates polished single-file HTML slide decks from documents, images, links, or written briefs.",
+  "author": {
+    "name": "TRAE"
+  },
+  "logo": "./icon.svg",
+  "keywords": [
+    "ppt",
+    "presentation",
+    "slides",
+    "html"
+  ],
+  "skills": "./skills/"
+}

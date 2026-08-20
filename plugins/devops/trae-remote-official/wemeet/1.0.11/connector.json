@@ -1,0 +1,8 @@
+{
+  "connectors": {
+    "wemeet": {
+      "type": "manual_token",
+      "auth_policy": "ON_INVOKE"
+    }
+  }
+}

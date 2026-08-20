@@ -1,0 +1,11 @@
+{
+  "owner": "g4dr",
+  "slug": "ai-interior-design-visualizer",
+  "displayName": "AI Interior Design Visualizer — Generate Room Concepts & Mood Boards at Scale",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772539211310,
+    "commit": "https://github.com/openclaw/skills/commit/bef5e2e7356c35502c91ca9586f7ddbb79826a46"
+  },
+  "history": []
+}

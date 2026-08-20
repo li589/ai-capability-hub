@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engineering Status — Week 11</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #555770;
+  --color-text-tertiary: #8b8da3;
+  --color-border-tertiary: #e2e4e9;
+  --color-border-secondary: #c8cad0;
+  --color-border-primary: #6e6e80;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Georgia', serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 2px 8px rgba(0,0,0,.08);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,.12);
+  --color-mint-1: #e6fcf5; --color-mint-2: #c3fae8; --color-mint-3: #96f2d7;
+  --color-mint-4: #63e6be; --color-mint-5: #38d9a9; --color-mint-6: #20c997;
+  --color-mint-7: #12b886; --color-mint-8: #0ca678; --color-mint-9: #099268;
+  --color-mint-10: #087f5b;
+  --color-coral-1: #fff5f5; --color-coral-2: #ffe3e3; --color-coral-3: #ffc9c9;
+  --color-coral-4: #ffa8a8; --color-coral-5: #ff8787; --color-coral-6: #ff6b6b;
+  --color-coral-7: #fa5252; --color-coral-8: #f03e3e; --color-coral-9: #e03131;
+  --color-coral-10: #c92a2a;
+  --color-sky-1: #e0f7ff; --color-sky-2: #b8ecff; --color-sky-3: #8adeff;
+  --color-sky-4: #5ccfff; --color-sky-5: #33c0ff; --color-sky-6: #15aaf0;
+  --color-sky-7: #0d94d8; --color-sky-8: #0980be; --color-sky-9: #066ba0;
+  --color-sky-10: #045682;
+  --color-indigo-1: #edf2ff; --color-indigo-2: #dbe4ff; --color-indigo-3: #bac8ff;
+  --color-indigo-4: #91a7ff; --color-indigo-5: #748ffc; --color-indigo-6: #5c7cfa;
+  --color-indigo-7: #4c6ef5; --color-indigo-8: #4263eb; --color-indigo-9: #3b5bdb;
+  --color-indigo-10: #364fc7;
+  --color-amber-1: #fff9db; --color-amber-2: #fff3bf; --color-amber-3: #ffec99;
+  --color-amber-4: #ffe066; --color-amber-5: #ffd43b; --color-amber-6: #fcc419;
+  --color-amber-7: #fab005; --color-amber-8: #f59f00; --color-amber-9: #f08c00;
+  --color-amber-10: #e67700;
+  --color-slate-1: #f8f9fa; --color-slate-2: #f1f3f5; --color-slate-3: #e9ecef;
+  --color-slate-4: #dee2e6; --color-slate-5: #ced4da; --color-slate-6: #adb5bd;
+  --color-slate-7: #868e96; --color-slate-8: #495057; --color-slate-9: #343a40;
+  --color-slate-10: #212529;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-sans); background: var(--color-background-tertiary);
+  color: var(--color-text-primary); line-height: 1.6;
+}
+.panel {
+  max-width: 960px; margin: 24px auto;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg); overflow: hidden;
+}
+.eyebrow {
+  font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; font-weight: 600;
+}
+header {
+  padding: 28px 32px 20px;
+  border-bottom: 1px solid var(--color-border-tertiary);
+}
+header .eyebrow { color: var(--color-sky-8); }
+header h1 { font-size: 24px; margin-top: 6px; }
+header .meta { font-size: 13px; color: var(--color-text-tertiary); margin-top: 2px; }
+.content { padding: 24px 32px 32px; }
+
+/* KPI Cards */
+.kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-bottom: 28px; }
+.kpi {
+  padding: 18px; border-radius: var(--border-radius-lg);
+  border-top: 3px solid var(--color-border-tertiary);
+  background: var(--color-background-secondary);
+}
+.kpi .label { font-size: 11px; font-family: var(--font-mono); text-transform: uppercase;
+  letter-spacing: 1px; color: var(--color-text-tertiary); }
+.kpi .value { font-size: 32px; font-weight: 700; margin: 4px 0 2px; }
+.kpi .delta { font-size: 12px; font-weight: 600; font-family: var(--font-mono); }
+.kpi.up { border-top-color: var(--color-mint-6); }
+.kpi.up .value { color: var(--color-mint-9); }
+.kpi.up .delta { color: var(--color-mint-7); }
+.kpi.down { border-top-color: var(--color-coral-5); }
+.kpi.down .value { color: var(--color-coral-8); }
+.kpi.down .delta { color: var(--color-coral-7); }
+.kpi.neutral .value { color: var(--color-sky-9); }
+.kpi.neutral { border-top-color: var(--color-sky-5); }
+
+/* Shipped Table */
+.section-title { margin-bottom: 12px; }
+.section-title .eyebrow { color: var(--color-indigo-7); }
+table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 28px; }
+th { text-align: left; padding: 10px 12px; background: var(--color-background-secondary);
+  border-bottom: 2px solid var(--color-border-tertiary); font-weight: 600; font-size: 12px;
+  color: var(--color-text-secondary); text-transform: uppercase; letter-spacing: .5px; }
+td { padding: 10px 12px; border-bottom: 1px solid var(--color-border-tertiary); }
+tr:hover td { background: var(--color-background-secondary); }
+.dot {
+  width: 8px; height: 8px; border-radius: 50%; display: inline-block; margin-right: 6px;
+}
+.dot-mint { background: var(--color-mint-6); }
+.dot-amber { background: var(--color-amber-6); }
+.dot-coral { background: var(--color-coral-6); }
+.owner { font-family: var(--font-mono); font-size: 11px; color: var(--color-text-tertiary); }
+
+/* Chart */
+.chart-wrap { margin-bottom: 28px; }
+.chart-wrap svg { display: block; width: 100%; }
+
+/* Carryover */
+.carry-items { display: flex; flex-wrap: wrap; gap: 10px; }
+.carry-card {
+  flex: 1 1 calc(50% - 10px); padding: 14px; border-radius: var(--border-radius-md);
+  background: var(--color-background-secondary);
+  border-left: 3px solid var(--color-slate-4);
+}
+.carry-card .id { font-family: var(--font-mono); font-size: 11px; color: var(--color-text-tertiary); }
+.carry-card .title { font-size: 13px; font-weight: 600; margin: 2px 0; }
+.pill {
+  display: inline-block; padding: 2px 10px; border-radius: 20px;
+  font-size: 11px; font-weight: 600; font-family: var(--font-mono);
+}
+.pill-amber { background: var(--color-amber-1); color: var(--color-amber-10); }
+.pill-coral { background: var(--color-coral-1); color: var(--color-coral-9); }
+.pill-slate { background: var(--color-slate-2); color: var(--color-slate-8); }
+</style>
+</head>
+<body>
+<div class="panel">
+  <header>
+    <div class="eyebrow">Engineering Status</div>
+    <h1>Platform Team — Week 11</h1>
+    <div class="meta">Mar 10 – Mar 14, 2025 · Generated by reporting-bot</div>
+  </header>
+  <div class="content">
+    <!-- KPIs -->
+    <div class="kpis">
+      <div class="kpi up">
+        <div class="label">PRs Merged</div>
+        <div class="value">47</div>
+        <div class="delta">▲ +12 vs last week</div>
+      </div>
+      <div class="kpi up">
+        <div class="label">Deploy Freq</div>
+        <div class="value">3.2<span style="font-size:16px">/day</span></div>
+        <div class="delta">▲ +0.8</div>
+      </div>
+      <div class="kpi down">
+        <div class="label">P50 Review Time</div>
+        <div class="value">18<span style="font-size:16px">h</span></div>
+        <div class="delta">▼ +6h regression</div>
+      </div>
+      <div class="kpi neutral">
+        <div class="label">Open Incidents</div>
+        <div class="value">2</div>
+        <div class="delta">— same</div>
+      </div>
+    </div>
+
+    <!-- Shipped -->
+    <div class="section-title"><div class="eyebrow">Shipped This Week</div></div>
+    <table>
+      <thead>
+        <tr><th>Risk</th><th>Item</th><th>Type</th><th>Owner</th><th>Impact</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><span class="dot dot-mint"></span>Low</td><td>gRPC streaming for model inference</td><td>Feature</td><td class="owner">@chen</td><td>Latency −40%</td></tr>
+        <tr><td><span class="dot dot-mint"></span>Low</td><td>Add retry budget to gateway</td><td>Reliability</td><td class="owner">@liu</td><td>Fewer cascading failures</td></tr>
+        <tr><td><span class="dot dot-amber"></span>Med</td><td>Migrate user store to CockroachDB</td><td>Infra</td><td class="owner">@wang</td><td>Global replication</td></tr>
+        <tr><td><span class="dot dot-mint"></span>Low</td><td>OpenTelemetry tracing rollout</td><td>Observability</td><td class="owner">@zhao</td><td>Full request traces</td></tr>
+        <tr><td><span class="dot dot-coral"></span>High</td><td>Auth token rotation (security patch)</td><td>Security</td><td class="owner">@li</td><td>CVE-2025-1234 fix</td></tr>
+      </tbody>
+    </table>
+
+    <!-- Chart -->
+    <div class="chart-wrap">
+      <div class="section-title"><div class="eyebrow">PRs Merged Per Day</div></div>
+      <svg viewBox="0 0 700 160" height="160">
+        <line x1="50" y1="140" x2="680" y2="140" stroke="var(--color-border-tertiary)" stroke-width="1"/>
+        <g id="bars"></g>
+        <g id="labels" font-family="var(--font-mono)" font-size="10" fill="var(--color-text-tertiary)"></g>
+      </svg>
+    </div>
+
+    <!-- Carryover -->
+    <div class="section-title"><div class="eyebrow" style="color:var(--color-amber-9);">Carryover</div></div>
+    <div class="carry-items">
+      <div class="carry-card" style="border-left-color:var(--color-amber-5);">
+        <div class="id">PLAT-2901</div>
+        <div class="title">Rate limiter config hot-reload</div>
+        <span class="pill pill-amber">In Review</span>
+      </div>
+      <div class="carry-card" style="border-left-color:var(--color-coral-5);">
+        <div class="id">PLAT-2887</div>
+        <div class="title">Fix flaky integration test suite</div>
+        <span class="pill pill-coral">Blocked</span>
+      </div>
+      <div class="carry-card" style="border-left-color:var(--color-slate-5);">
+        <div class="id">PLAT-2845</div>
+        <div class="title">Deprecate legacy REST endpoint v1</div>
+        <span class="pill pill-slate">Slipped</span>
+      </div>
+      <div class="carry-card" style="border-left-color:var(--color-amber-5);">
+        <div class="id">PLAT-2912</div>
+        <div class="title">Dashboard metric aggregation rework</div>
+        <span class="pill pill-amber">In Review</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const data = [
+  { day: 'Mon', val: 8 }, { day: 'Tue', val: 11 }, { day: 'Wed', val: 14 },
+  { day: 'Thu', val: 7 }, { day: 'Fri', val: 7 }
+];
+const maxVal = Math.max(...data.map(d => d.val));
+const barW = 60, gap = 70, startX = 90;
+const barsG = document.getElementById('bars');
+const labelsG = document.getElementById('labels');
+
+data.forEach((d, i) => {
+  const x = startX + i * (barW + gap);
+  const h = (d.val / maxVal) * 110;
+  const y = 140 - h;
+  const isPeak = d.val === maxVal;
+  const color = isPeak ? 'var(--color-indigo-6)' : 'var(--color-sky-5)';
+  barsG.innerHTML += `<rect x="${x}" y="${y}" width="${barW}" height="${h}" rx="4" fill="${color}" opacity=".85">
+    <animate attributeName="height" from="0" to="${h}" dur=".4s" fill="freeze"/>
+    <animate attributeName="y" from="140" to="${y}" dur=".4s" fill="freeze"/>
+  </rect>`;
+  barsG.innerHTML += `<text x="${x + barW/2}" y="${y - 6}" text-anchor="middle" font-size="12" font-weight="600" fill="${isPeak ? 'var(--color-indigo-9)' : 'var(--color-sky-9)'}" font-family="var(--font-mono)">${d.val}</text>`;
+  labelsG.innerHTML += `<text x="${x + barW/2}" y="155" text-anchor="middle">${d.day}</text>`;
+});
+</script>
+</body>
+</html>

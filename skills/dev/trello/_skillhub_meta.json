@@ -1,0 +1,21 @@
+{
+  "name": "trello",
+  "installedAt": 1787228708236,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083277283762176",
+  "examples_zh": [
+    "在Trello看板里新建一张卡片",
+    "把某张卡片移到'进行中'列表",
+    "查看今天到期的所有Trello卡片"
+  ],
+  "examples_en": [
+    "Create a new card on the Trello board",
+    "Move a card to the In Progress list",
+    "Show all Trello cards due today"
+  ],
+  "description_zh": "管理 Trello 看板、列表和卡片",
+  "description_en": "Manage Trello boards, lists, and cards",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/trello.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/trello.png"
+}

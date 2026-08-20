@@ -1,0 +1,11 @@
+{
+  "owner": "davidme6",
+  "slug": "self-improving-v2",
+  "displayName": "Self-Improving v2.0 - Jarvis Edition",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1774011252234,
+    "commit": "https://github.com/openclaw/skills/commit/875c24f7577c1548f05d3b0126d8c1ee344ca661"
+  },
+  "history": []
+}

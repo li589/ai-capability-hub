@@ -1,0 +1,11 @@
+{
+  "name": "跟进效能分析",
+  "installedAt": 1787227783353,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088537250877411328",
+  "description_zh": "基于followUpRecord及可关联的线索、客户和商机分析跟进频次、覆盖和超期风险。适用于用户要求跟进效能分析、生成相关结果或检查执行边界时。",
+  "description_en": "Follow-up Effectiveness Analysis workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_f793cfb5-b56.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_f793cfb5-b56.png"
+}

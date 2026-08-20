@@ -1,0 +1,11 @@
+{
+  "owner": "bluestar-34",
+  "slug": "minimax-image-gen",
+  "displayName": "Minimax Image Gen",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1773807776126,
+    "commit": "https://github.com/openclaw/skills/commit/6a39995427ad71f07319f4f027c740eb0c9cab6d"
+  },
+  "history": []
+}

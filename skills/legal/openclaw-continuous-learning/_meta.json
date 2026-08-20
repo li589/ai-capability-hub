@@ -1,0 +1,11 @@
+{
+  "owner": "adelpro",
+  "slug": "openclaw-continuous-learning",
+  "displayName": "OpenClaw Continuous Learning",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1772011023763,
+    "commit": "https://github.com/openclaw/skills/commit/f6bf8e79f5648a47c999beea986aea100af01d25"
+  },
+  "history": []
+}

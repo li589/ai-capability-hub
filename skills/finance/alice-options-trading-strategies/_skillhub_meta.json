@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-期权交易策略",
+  "installedAt": 1787228655184,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2086742234838487040",
+  "description_zh": "万得 Alice 期权交易策略 CLI：融合波动率信号构建、异动打分、策略推荐与情景汇总，输出五段式期权交易方案，适用于个股期权交易、期权怎么做、给出推荐方案",
+  "description_en": "Trading Skills for Single-Underlying Listed Options. By integrating volatility signal construction, unusual activity scoring, strategy recommendation, and scenario aggregation, it delivers a five-stage options trading solution. Applicable to equity options trading, guide on how to trade options, and actionable recommendation plans",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_45f768d5-34c.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_45f768d5-34c.jpg"
+}

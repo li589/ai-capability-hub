@@ -1,0 +1,6 @@
+{
+  "name": "DBA",
+  "description": "数据库DBA操作技能。支持 MySQL 和 PostgreSQL，基于 Python + pymysql/psycopg2，支持数据查询、增删改、事务控制、表结构查看等 CRUD 操作。",
+  "normalizedName": "dba",
+  "category": "开发"
+}

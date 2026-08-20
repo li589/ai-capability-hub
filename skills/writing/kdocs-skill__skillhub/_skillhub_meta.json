@@ -1,0 +1,12 @@
+{
+  "slug": "kdocs-skill",
+  "name": "kdocs skill",
+  "version": "2.5.29",
+  "installedAt": 1787227479236,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/420051/5214371ab9d44bb28908f19755262ccd.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/420051/5214371ab9d44bb28908f19755262ccd.png"
+}

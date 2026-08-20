@@ -1,0 +1,21 @@
+{
+  "name": "commercial-jingle-maker",
+  "version": "1.3.2",
+  "description": "为品牌、广告、活动和商业内容生成广告歌、品牌歌、宣传歌与声音 logo 方向。",
+  "type": "module",
+  "main": "./dist/aimv.cjs",
+  "bin": {
+    "aimv": "./bin/aimv.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "bin",
+    "dist",
+    "README.md",
+    "runtime-defaults.json",
+    "release-manifest.json",
+    "SKILL.md"
+  ]
+}

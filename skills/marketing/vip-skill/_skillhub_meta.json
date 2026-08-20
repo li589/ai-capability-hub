@@ -1,0 +1,21 @@
+{
+  "name": "唯品会技能集",
+  "installedAt": 1787228459484,
+  "source": "marketplace",
+  "version": "1.0.6",
+  "skillId": "skill_2053083087036616704",
+  "examples_zh": [
+    "帮我在唯品会搜索连衣裙",
+    "查看唯品会有什么促销活动",
+    "用这张图片搜索唯品会同款商品"
+  ],
+  "examples_en": [
+    "Search for dresses on Vipshop",
+    "Show me Vipshop promotions and deals",
+    "Find similar products on Vipshop using this image"
+  ],
+  "description_zh": "唯品会购物助手，整合商品搜索、详情查询、促销活动、图片搜索等一站式购物服务",
+  "description_en": "Vipshop shopping assistant with product search, details, promotions & image search",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/vip-skill.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/vip-skill.svg"
+}

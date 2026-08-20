@@ -1,0 +1,22 @@
+{
+  "title": "夺冠蜂巢 Agent Key",
+  "title_en": "Duoguan Fengchao Agent Key",
+  "description": "Agent Key 仅存储在本机，连接夺冠蜂巢时注入到 MCP Server 环境变量中，不会上传至云端。获取方式：登录夺冠蜂巢 → 设置 → 创建 Agent。",
+  "description_en": "The Agent Key is stored locally only. It is injected into the MCP Server environment when connecting to Duoguan Fengchao, and is never uploaded to the cloud. To obtain: log in to Duoguan Fengchao → Settings → Create Agent.",
+  "docUrl": "https://fc.duoguan.com/agent/mcp",
+  "docLabel": "如何获取 Agent Key？",
+  "docLabel_en": "How to get an Agent Key?",
+  "fields": [
+    {
+      "key": "AGENT_KEY",
+      "label": "Agent Key",
+      "label_en": "Agent Key",
+      "type": "password",
+      "required": true,
+      "placeholder": "ca_live_xxxxxxxxxxxxxxxxxx",
+      "placeholder_en": "ca_live_xxxxxxxxxxxxxxxxxx",
+      "description": "以 ca_live_ 开头的完整凭证字符串。不要使用 Key ID、邀请码或网页登录 Token。",
+      "description_en": "Full credential string starting with ca_live_. Do not use Key ID, invite code, or web login token."
+    }
+  ]
+}

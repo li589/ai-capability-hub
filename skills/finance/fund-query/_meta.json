@@ -1,0 +1,11 @@
+{
+  "owner": "pazzilivo",
+  "slug": "fund-query",
+  "displayName": "场外基金查询",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773151486182,
+    "commit": "https://github.com/openclaw/skills/commit/508a66e8d4f57a6f7e16ff2d676dba88bc4657f6"
+  },
+  "history": []
+}

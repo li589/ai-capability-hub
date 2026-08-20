@@ -1,0 +1,12 @@
+{
+  "slug": "tencentads-management",
+  "name": "腾讯营销投放-广告管理",
+  "version": "0.5.7",
+  "installedAt": 1787228856392,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/60484da4-21ca-4044-b2ff-2b3a1ddcd63f.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/60484da4-21ca-4044-b2ff-2b3a1ddcd63f.png"
+}

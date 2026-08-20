@@ -1,0 +1,11 @@
+{
+  "name": "WGS 结构变异检测与分型",
+  "installedAt": 1787227779752,
+  "source": "marketplace",
+  "version": "1.2.2",
+  "skillId": "skill_2089265025587806208",
+  "description_zh": "DCS Cloud WDL「PanGenie_WGS_SV」(v1.2.0) 流程说明与填参指南：基于泛基因组从 FASTQ 做 WGS 结构变异基因分型、过滤、AnnotSV 注释与 Circos 可视化。用户提到 PanGenie、PanGenie_WGS_SV、WGS SV、结构变异、图泛基因组，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"PanGenie_WGS_SV\" (v1.2.0) parameter guide: pangenome-based WGS structural-variant genotyping from FASTQ, plus filtering, AnnotSV annotation, and Circos visualization. Use when the user mentions PanGenie, PanGenie_WGS_SV, WGS SV, structural variants, graph pangenome, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_209ecac7-744.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_209ecac7-744.png"
+}

@@ -1,0 +1,3 @@
+display_name: "Advanced Alchemy Getting Started"
+short_description: "Bootstrap Advanced Alchemy services."
+default_prompt: "Use the advanced-alchemy-getting-started skill and follow its workflow for this Advanced Alchemy task."

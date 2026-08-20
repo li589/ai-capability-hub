@@ -1,0 +1,11 @@
+{
+  "name": "腾讯云试题批改",
+  "installedAt": 1785864619493,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2059984290577739776",
+  "description_zh": "调用腾讯云试题批改Agent接口，面向K12教育场景，支持整卷/单题端到端批改，包含试卷切题、手写答案识别、正误判定、错误分析和知识点输出。支持深度思考模式和多种图片/PDF格式输入。",
+  "description_en": "Tencent Cloud Question Mark Agent for K12 education. Supports full-paper and single-question grading with handwriting recognition, answer comparison, error analysis, and knowledge point extraction.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984290577739776/59cec72e36ae246c.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984290577739776/59cec72e36ae246c.png"
+}

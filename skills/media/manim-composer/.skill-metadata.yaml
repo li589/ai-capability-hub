@@ -1,0 +1,117 @@
+examples:
+  - id: math-explanation
+    title:
+      zh: 数学概念可视化讲解
+      en: Mathematical Concept Visualization Explanation
+    description:
+      zh: 将抽象数学概念制作成生动的3Blue1Brown风格动画
+      en: Create vivid 3Blue1Brown style animations for abstract mathematical concepts
+    prompt:
+      zh: |-
+        我想制作一个解释傅里叶变换的教育视频。
+
+        核心概念：
+        - 时域和频域的对应关系
+        - 正弦波的叠加原理
+        - 复数平面的旋转表示
+        - 实际应用场景举例
+
+        目标观众：
+        - 大学生和研究生
+        - 对信号处理感兴趣的学习者
+        - 需要直观理解的学习者
+
+        视觉风格要求：
+        1. 3Blue1Brown经典风格
+        2. 流畅的数学可视化
+        3. 清晰的概念转换动画
+        4. 适当的节奏和停顿
+        5. 高质量的图形渲染
+
+        请帮我：
+        1. 设计完整的场景分镜脚本
+        2. 规划数学可视化的表现手法
+        3. 确定关键的"a-ha moment"
+        4. 安排知识点的递进顺序
+        5. 准备详细的实现说明
+      en: |-
+        I want to create an educational video explaining Fourier Transform.
+
+        Core concepts:
+        - Correspondence between time domain and frequency domain
+        - Superposition principle of sine waves
+        - Complex plane rotation representation
+        - Practical application examples
+
+        Target audience:
+        - College students and graduate students
+        - Learners interested in signal processing
+        - Learners needing intuitive understanding
+
+        Visual style requirements:
+        1. Classic 3Blue1Brown style
+        2. Smooth mathematical visualization
+        3. Clear concept transition animations
+        4. Appropriate pacing and pauses
+        5. High-quality graphics rendering
+
+        Please help me:
+        1. Design complete scene storyboard script
+        2. Plan mathematical visualization techniques
+        3. Determine key "a-ha moments"
+        4. Arrange progressive knowledge sequence
+        5. Prepare detailed implementation instructions
+  - id: science-explainer
+    title:
+      zh: 科学现象动画演示
+      en: Scientific Phenomenon Animation Demonstration
+    description:
+      zh: 制作科学原理的动态演示动画
+      en: Create dynamic demonstration animations for scientific principles
+    prompt:
+      zh: |-
+        我需要制作一个解释DNA复制机制的科普动画。
+
+        科学内容：
+        - DNA双螺旋结构
+        - 复制酶的工作原理
+        - 碱基配对规则
+        - 复制叉的形成过程
+        - 前导链和滞后链的区别
+
+        教学目标：
+        1. 让观众直观理解复杂的生物过程
+        2. 突出关键的分子机制
+        3. 展示时间和空间的动态变化
+        4. 解释常见概念误区
+        5. 联系实际应用价值
+
+        请帮我：
+        1. 分解复杂的生物过程为可视步骤
+        2. 设计分子层面的动画表现
+        3. 规划镜头运动和视角切换
+        4. 确定解说词和视觉配合
+        5. 制作技术实现的详细规划
+      en: |-
+        I need to create a科普 animation explaining DNA replication mechanisms.
+
+        Scientific content:
+        - DNA double helix structure
+        - Replication enzyme working principles
+        - Base pairing rules
+        - Replication fork formation process
+        - Differences between leading and lagging strands
+
+        Teaching objectives:
+        1. Help viewers intuitively understand complex biological processes
+        2. Highlight key molecular mechanisms
+        3. Show temporal and spatial dynamic changes
+        4. Explain common conceptual misconceptions
+        5. Connect to practical application value
+
+        Please help me:
+        1. Decompose complex biological processes into visual steps
+        2. Design molecular-level animation representations
+        3. Plan camera movements and perspective switches
+        4. Coordinate narration with visual elements
+        5. Create detailed technical implementation plans

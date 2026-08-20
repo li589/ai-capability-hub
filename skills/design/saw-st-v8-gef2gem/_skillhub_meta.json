@@ -1,0 +1,11 @@
+{
+  "name": "空间转录组 GEF 转 GEM",
+  "installedAt": 1787227782276,
+  "source": "marketplace",
+  "version": "1.2.1",
+  "skillId": "skill_2089265214302117888",
+  "description_zh": "DCS Cloud WDL「SAW-ST-V8-gef2gem」(v1.2.0) 流程说明与填参指南：将 SAW 产出的 GEF 空间表达矩阵转为 GEM 文本矩阵（Square Bin 或 Cellbin）。用户提到 SAW-ST-V8-gef2gem、gef2gem、GEF 转 GEM、空间矩阵格式转换，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"SAW-ST-V8-gef2gem\" (v1.2.0) parameter guide: convert SAW GEF spatial expression matrices to GEM text matrices (Square Bin or Cellbin). Use when the user mentions SAW-ST-V8-gef2gem, gef2gem, GEF-to-GEM, spatial matrix format conversion, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_5a62d11f-3d0.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_5a62d11f-3d0.png"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "liuboacean",
+  "slug": "qclaw-workbuddy-bridge",
+  "displayName": "Qclaw Workbuddy Bridge",
+  "latest": {
+    "version": "1.2.0",
+    "publishedAt": 1776220378509,
+    "commit": "https://github.com/openclaw/skills/commit/81c73e07a842fc4b6594647c6ea595627a1edf0e"
+  },
+  "history": []
+}

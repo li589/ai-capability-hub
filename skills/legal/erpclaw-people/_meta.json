@@ -1,0 +1,22 @@
+{
+  "owner": "mailnike",
+  "slug": "erpclaw-people",
+  "displayName": "Erpclaw People",
+  "latest": {
+    "version": "2.1.0",
+    "publishedAt": 1772907678892,
+    "commit": "https://github.com/openclaw/skills/commit/2e779598e24e80805f99a99262fc7bdc796ad0a1"
+  },
+  "history": [
+    {
+      "version": "2.0.2",
+      "publishedAt": 1772862477159,
+      "commit": "https://github.com/openclaw/skills/commit/3956da70d83ef83feb5698e866c84b93d4953ae8"
+    },
+    {
+      "version": "2.0.1",
+      "publishedAt": 1772855740063,
+      "commit": "https://github.com/openclaw/skills/commit/65b05f1986ab894c8e3d046a9766ae528f7dc412"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "winskill",
+  "name": "Windows 服务器运维工具箱",
+  "version": "3.1.0",
+  "installedAt": 1787229040681,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

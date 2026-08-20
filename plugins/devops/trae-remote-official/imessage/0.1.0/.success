@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:imessage",
+  "registry": "trae-remote-official",
+  "plugin_name": "imessage",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "bf136dff-5b17-4aa6-9e89-7c1709529012",
+  "remote_installed_plugin_id": "D_MY_S1Q7YSQSN",
+  "checksum": "6dc891cf42a539c77a3ce2606b9fb29a8236d2bc91220ef7f7511a625b0e6c4e",
+  "file_size": 36986,
+  "installed_at": 1787227204469
+}

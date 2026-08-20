@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:tdx",
+  "registry": "trae-remote-official",
+  "plugin_name": "tdx",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "b5250da8-ee8c-4b38-bcc2-f441a41a9b55",
+  "remote_installed_plugin_id": "2_FH6.LAA_G-45",
+  "checksum": "a013e8a9bfd6b68fc0fdd3e05e8b8f40d1a9b9b01ca0453662715a38f5fa8275",
+  "file_size": 12388,
+  "installed_at": 1787227204786
+}

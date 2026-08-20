@@ -1,0 +1,23 @@
+
+  {
+    "name": "select-stock",
+    "displayName": "条件选股",
+    "emoji": "🔍",
+    "skillKey": "select-stock",
+    "version": "1.0",
+    "author": "Huatai Securities",
+    "userInvocable": true,
+    "description": "金融标的条件选股。根据自然语言筛选条件查询符合条件的股票/ETF/基金等金融标的。TRIGGER when: 用户想要按条件筛选股票/ETF/基金等金融标的，包括：行业/板块筛选、财务指标筛选、技术指标筛选、行情数据筛选、业绩超预期筛选、组合多条件筛选、主观推荐类。DO NOT TRIGGER when: 个股分析（应使用 financial-analysis 等 Skill）。",
+    "requires": {
+      "bins": ["python3"]
+    },
+    "examples": [
+      "科技板块上周涨幅前10的股票",
+      "有哪些主力净流入超过1亿的",
+      "市盈率低于20且营收同比增长超过30%的股票",
+      "业绩超预期的股票有哪些",
+      "推荐几只好股票"
+    ],
+    "note": "外部清单文件，仅供分发/展示用途；QoderWork 加载器只读 SKILL.md frontmatter。"
+  }
+

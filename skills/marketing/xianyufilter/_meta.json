@@ -1,0 +1,11 @@
+{
+  "owner": "xxxzhuo",
+  "slug": "xianyufilter",
+  "displayName": "闲鱼商品精选助手",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772776393586,
+    "commit": "https://github.com/openclaw/skills/commit/cba5c3568bc6e74f8330ce6f316cbddb82ea13ed"
+  },
+  "history": []
+}

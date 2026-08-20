@@ -1,0 +1,17 @@
+{
+  "owner": "asfamilybank",
+  "slug": "cn-stock-query",
+  "displayName": "Cn Stock Query",
+  "latest": {
+    "version": "1.0.4",
+    "publishedAt": 1773975890176,
+    "commit": "https://github.com/openclaw/skills/commit/e84af2b7704934b54aabf1919a1a7a3ceaf93b8e"
+  },
+  "history": [
+    {
+      "version": "1.0.2",
+      "publishedAt": 1773828028048,
+      "commit": "https://github.com/openclaw/skills/commit/ea23fe97994e18b2f4ef12b85a54893424f4dc9a"
+    }
+  ]
+}

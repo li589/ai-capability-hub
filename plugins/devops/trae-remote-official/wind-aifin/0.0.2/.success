@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:wind-aifin",
+  "registry": "trae-remote-official",
+  "plugin_name": "wind-aifin",
+  "version": "0.0.2",
+  "marketplace_plugin_id": "2e75033c-448b-4c03-b53c-d299dd59a3a7",
+  "remote_installed_plugin_id": "SV3JZK058HKKRW",
+  "checksum": "bb64ee08c2393399574d52576eb7bed4de6d237a5ee8b7273f93cbff8521f2f6",
+  "file_size": 1147059,
+  "installed_at": 1787227205403
+}

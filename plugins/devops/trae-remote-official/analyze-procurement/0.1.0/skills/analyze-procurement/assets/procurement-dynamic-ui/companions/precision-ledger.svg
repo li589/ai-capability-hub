@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Precision Ledger Dynamic UI companion</title>
+  <desc id="desc">Six compact procurement widget composition references for award, price, risk, inventory, logistics, and execution.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#f7f8fa;stroke:#d8dce3}.ink{fill:#172033}.muted{fill:#687083}.rule{stroke:#d8dce3;fill:none}.main{fill:#2856a3}.signal{fill:#c44d32}.main-stroke{stroke:#2856a3;fill:none}.signal-stroke{stroke:#c44d32;fill:none}.label{font:600 11px Arial,sans-serif;letter-spacing:1.2px}.meta{font:400 9px Arial,sans-serif}.num{font:700 18px Arial,sans-serif}.tiny{font:600 8px Arial,sans-serif;letter-spacing:.7px}.dash{stroke-dasharray:4 4}
+    </style>
+    <pattern id="grid" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" class="rule" stroke-width=".6"/></pattern>
+  </defs>
+  <rect class="bg" width="960" height="720"/>
+  <text x="24" y="28" class="ink label">PRECISION LEDGER / DYNAMIC UI COMPOSITION PLATE</text>
+  <text x="936" y="28" text-anchor="end" class="muted meta">SYSTEM MATERIAL FIRST · COMPOSITION ONLY</text>
+
+  <g transform="translate(24 54)">
+    <rect class="panel" width="444" height="190" rx="3"/>
+    <text x="18" y="24" class="ink label">01 · AWARD FRONTIER</text><text x="426" y="24" text-anchor="end" class="muted meta">SCATTER + REGISTER</text>
+    <rect x="18" y="38" width="270" height="130" fill="url(#grid)"/>
+    <path d="M36 146L84 131L128 118L178 92L228 69L270 53" class="main-stroke" stroke-width="2"/>
+    <circle cx="84" cy="131" r="5" class="ink"/><circle cx="128" cy="118" r="5" class="ink"/><circle cx="178" cy="92" r="5" class="ink"/><circle cx="228" cy="69" r="7" class="main"/>
+    <rect x="298" y="42" width="126" height="22" class="main" rx="2"/><text x="361" y="56" text-anchor="middle" fill="#fff" class="tiny">LOCKED / S03</text>
+    <path d="M298 80H424M298 105H424M298 130H424M298 155H424" class="rule"/>
+    <text x="300" y="76" class="muted meta">RANK</text><text x="420" y="76" text-anchor="end" class="ink meta">COST / CAP.</text>
+    <text x="300" y="97" class="ink meta">01 SUPPLIER C</text><text x="420" y="97" text-anchor="end" class="ink meta">8.7 / 92</text>
+    <text x="300" y="122" class="ink meta">02 SUPPLIER A</text><text x="420" y="122" text-anchor="end" class="ink meta">8.3 / 86</text>
+    <text x="300" y="147" class="ink meta">03 SUPPLIER B</text><text x="420" y="147" text-anchor="end" class="ink meta">7.9 / 79</text>
+  </g>
+
+  <g transform="translate(492 54)">
+    <rect class="panel" width="444" height="190" rx="3"/>
+    <text x="18" y="24" class="ink label">02 · PRICE PULSE</text><text x="426" y="24" text-anchor="end" class="muted meta">TREND + DRIVER STRIP</text>
+    <path d="M28 72H416M28 108H416M28 144H416" class="rule"/>
+    <path d="M30 138C76 130 92 98 132 105S194 121 234 81S302 68 340 83S385 58 414 50" class="main-stroke" stroke-width="2.5"/>
+    <circle cx="234" cy="81" r="5" class="main"/><circle cx="414" cy="50" r="5" class="signal"/>
+    <rect x="30" y="154" width="92" height="14" class="main"/><rect x="130" y="154" width="64" height="14" fill="#9fb2d4"/><rect x="202" y="154" width="132" height="14" class="ink"/><rect x="342" y="154" width="72" height="14" class="signal"/>
+    <text x="30" y="184" class="muted meta">INDEX</text><text x="414" y="184" text-anchor="end" class="ink meta">VOLUME · MIX · FX · TERM</text>
+  </g>
+
+  <g transform="translate(24 274)">
+    <rect class="panel" width="444" height="190" rx="3"/>
+    <text x="18" y="24" class="ink label">03 · RISK LENS</text><text x="426" y="24" text-anchor="end" class="muted meta">MATRIX + EVIDENCE</text>
+    <g transform="translate(18 42)">
+      <path d="M0 0H266M0 28H266M0 56H266M0 84H266M0 112H266M0 140H266M66 0V140M116 0V140M166 0V140M216 0V140" class="rule"/>
+      <rect x="118" y="30" width="46" height="24" class="main"/><rect x="218" y="86" width="46" height="24" class="signal"/><rect x="168" y="58" width="46" height="24" fill="#9fb2d4"/>
+      <text x="8" y="18" class="muted meta">GATE</text><text x="76" y="18" class="ink meta">A</text><text x="126" y="18" class="ink meta">B</text><text x="176" y="18" class="ink meta">C</text><text x="226" y="18" class="ink meta">D</text>
+    </g>
+    <path d="M300 48H426M300 76H426M300 104H426M300 132H426M300 160H426" class="rule"/>
+    <text x="300" y="44" class="muted meta">EVIDENCE</text><text x="424" y="44" text-anchor="end" class="muted meta">STATE</text>
+    <text x="302" y="67" class="ink meta">SECURITY</text><text x="424" y="67" text-anchor="end" class="ink meta">OBS</text>
+    <text x="302" y="95" class="ink meta">CAPACITY</text><text x="424" y="95" text-anchor="end" class="main meta">DRV</text>
+    <text x="302" y="123" class="ink meta">RESILIENCE</text><text x="424" y="123" text-anchor="end" class="signal meta">UNK</text>
+  </g>
+
+  <g transform="translate(492 274)">
+    <rect class="panel" width="444" height="190" rx="3"/>
+    <text x="18" y="24" class="ink label">04 · EXCEPTION QUEUE</text><text x="426" y="24" text-anchor="end" class="muted meta">RANK + DATE</text>
+    <path d="M18 48H426M18 84H426M18 120H426M18 156H426" class="rule"/>
+    <circle cx="34" cy="66" r="5" class="signal"/><circle cx="34" cy="102" r="5" class="main"/><circle cx="34" cy="138" r="5" class="ink"/>
+    <text x="50" y="69" class="ink meta">ITEM 014 · COVERAGE</text><text x="300" y="69" class="muted meta">OWNER A</text><text x="422" y="69" text-anchor="end" class="signal meta">02 AUG</text>
+    <text x="50" y="105" class="ink meta">ITEM 022 · DELAY</text><text x="300" y="105" class="muted meta">OWNER B</text><text x="422" y="105" text-anchor="end" class="ink meta">05 AUG</text>
+    <text x="50" y="141" class="ink meta">ITEM 031 · MOQ</text><text x="300" y="141" class="muted meta">OWNER C</text><text x="422" y="141" text-anchor="end" class="ink meta">09 AUG</text>
+    <rect x="18" y="166" width="104" height="12" class="signal"/><rect x="130" y="166" width="156" height="12" class="main"/><rect x="294" y="166" width="128" height="12" class="ink"/>
+  </g>
+
+  <g transform="translate(24 494)">
+    <rect class="panel" width="444" height="190" rx="3"/>
+    <text x="18" y="24" class="ink label">05 · LANDED FLOW</text><text x="426" y="24" text-anchor="end" class="muted meta">ROUTE + COST BUILD</text>
+    <circle cx="46" cy="104" r="14" fill="#fff" stroke="#2856a3" stroke-width="2"/><circle cx="205" cy="70" r="14" fill="#fff" stroke="#172033"/><circle cx="205" cy="138" r="14" fill="#fff" stroke="#172033"/><circle cx="366" cy="104" r="16" class="main"/>
+    <path d="M60 98C112 80 146 70 191 70M60 110C112 126 146 138 191 138M219 70C274 72 306 86 350 100M219 138C274 136 306 122 350 108" class="main-stroke" stroke-width="2"/>
+    <text x="46" y="108" text-anchor="middle" class="ink tiny">SRC</text><text x="205" y="74" text-anchor="middle" class="ink tiny">SEA</text><text x="205" y="142" text-anchor="middle" class="ink tiny">AIR</text><text x="366" y="108" text-anchor="middle" fill="#fff" class="tiny">DC</text>
+    <text x="18" y="174" class="muted meta">BASE 62%</text><text x="144" y="174" class="ink meta">FREIGHT 21%</text><text x="290" y="174" class="signal meta">DUTY 17%</text>
+  </g>
+
+  <g transform="translate(492 494)">
+    <rect class="panel" width="444" height="190" rx="3"/>
+    <text x="18" y="24" class="ink label">06 · EXECUTION TRACK</text><text x="426" y="24" text-anchor="end" class="muted meta">GATE + OWNER</text>
+    <path d="M54 82H390" class="rule" stroke-width="2"/>
+    <circle cx="64" cy="82" r="14" class="main"/><circle cx="176" cy="82" r="14" fill="#fff" stroke="#172033"/><circle cx="288" cy="82" r="14" fill="#fff" stroke="#172033"/><circle cx="400" cy="82" r="14" class="signal"/>
+    <text x="64" y="86" text-anchor="middle" fill="#fff" class="tiny">01</text><text x="176" y="86" text-anchor="middle" class="ink tiny">02</text><text x="288" y="86" text-anchor="middle" class="ink tiny">03</text><text x="400" y="86" text-anchor="middle" fill="#fff" class="tiny">04</text>
+    <text x="64" y="116" text-anchor="middle" class="ink meta">VERIFY</text><text x="176" y="116" text-anchor="middle" class="ink meta">PILOT</text><text x="288" y="116" text-anchor="middle" class="ink meta">AWARD</text><text x="400" y="116" text-anchor="middle" class="signal meta">REVIEW</text>
+    <path d="M18 142H426M18 169H426" class="rule"/>
+    <text x="20" y="160" class="muted meta">OWNER / DATE</text><text x="424" y="160" text-anchor="end" class="ink meta">PROCUREMENT · 14 AUG</text>
+  </g>
+</svg>

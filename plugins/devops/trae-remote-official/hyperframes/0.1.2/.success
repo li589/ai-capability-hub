@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:hyperframes",
+  "registry": "trae-remote-official",
+  "plugin_name": "hyperframes",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "2d93ccaf-b99f-4a48-9e51-5806627818a6",
+  "remote_installed_plugin_id": "H1MK95BIPJE8-V",
+  "checksum": "9ee1553145317160f9175cf889f32fd1689d476d1f3766b2d9c01b0d46b3279a",
+  "file_size": 214937,
+  "installed_at": 1787227201046
+}

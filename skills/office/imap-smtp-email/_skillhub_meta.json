@@ -1,0 +1,21 @@
+{
+  "name": "IMAP/SMTP邮件",
+  "installedAt": 1787227510063,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053082149365157888",
+  "examples_zh": [
+    "用IMAP收取163邮箱的新邮件",
+    "通过SMTP发送一封邮件",
+    "搜索企业邮箱里来自某人的邮件"
+  ],
+  "examples_en": [
+    "Fetch new emails from 163 via IMAP",
+    "Send an email via SMTP",
+    "Search work email for messages from a specific person"
+  ],
+  "description_zh": "通过 IMAP/SMTP 收发邮件，支持多账户和附件",
+  "description_en": "Read and send email via IMAP/SMTP with multi-account and attachment support",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/imap-smtp-email.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/imap-smtp-email.svg"
+}

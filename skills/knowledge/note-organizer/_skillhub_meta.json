@@ -1,0 +1,11 @@
+{
+  "name": "Joplin笔记管理",
+  "installedAt": 1787228322059,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2053082840722964480",
+  "description_zh": "基于 Joplin 的个人笔记管理与知识库工具",
+  "description_en": "Joplin-based personal note manager and knowledge base tool",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/note-organizer.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/note-organizer.png"
+}

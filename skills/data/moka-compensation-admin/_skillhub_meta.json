@@ -1,0 +1,11 @@
+{
+  "name": "Moka 薪酬管理",
+  "installedAt": 1787228598103,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088130978040463360",
+  "description_zh": "面向薪酬负责人与薪酬管理角色的薪酬数据查询（薪酬敏感数据，普通员工账号无相应权限）。使用当前平台提供的 Moka 连接器按场景查询工资单、薪资档案、定调薪、成本分摊与代发、发薪核算与核算预警、社保等薪酬列表，以及薪酬填报活动、活动下任务与在线填报明细。当用户问「工资单发送状态」「入职未定薪的人」「停止发薪名单」「填报活动进展」等薪酬管理问题时使用。",
+  "description_en": "Compensation data queries for compensation owners and payroll admin roles (compensation-sensitive data; regular employee accounts lack the required permissions). Uses the Moka Connector available on the current platform to query payroll lists by scene (payslips, salary archives, salary setting and adjustment, cost apportionment and agent pay, payroll calculation and warnings, social insurance) plus salary submission activities, their tasks, and online submission details. Use it for admin questions like payslip delivery status, employees without salary set after onboarding, stopped-pay lists, or submission activity progress.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_df5e9c76-776.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_df5e9c76-776.png"
+}

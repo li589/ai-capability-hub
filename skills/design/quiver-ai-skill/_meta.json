@@ -1,0 +1,11 @@
+{
+  "owner": "lolieatapple",
+  "slug": "quiver-ai-skill",
+  "displayName": "QuiverAI Skill",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775057072568,
+    "commit": "https://github.com/openclaw/skills/commit/0796f1088bda6fb2df14c12fda4f6b6895ff9714"
+  },
+  "history": []
+}

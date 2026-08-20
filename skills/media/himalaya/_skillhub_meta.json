@@ -1,0 +1,20 @@
+{
+  "name": "Himalaya邮件",
+  "installedAt": 1787227747796,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082087495782400",
+  "examples_zh": [
+    "在终端查看163邮箱的未读邮件",
+    "发一封邮件给同事",
+    "搜索企业邮箱里上周的邮件"
+  ],
+  "examples_en": [
+    "Check unread emails in the terminal",
+    "Send an email to a colleague",
+    "Search last week's emails in my work account"
+  ],
+  "description_zh": "终端邮件管理（收发、搜索、多账户）",
+  "description_en": "Terminal email client with multi-account support",
+  "iconSource": "letter:auto"
+}

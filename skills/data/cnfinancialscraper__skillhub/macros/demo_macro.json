@@ -1,0 +1,9 @@
+{
+  "name": "demo",
+  "steps": [
+    {
+      "action": "goto",
+      "url": "{{u}}"
+    }
+  ]
+}

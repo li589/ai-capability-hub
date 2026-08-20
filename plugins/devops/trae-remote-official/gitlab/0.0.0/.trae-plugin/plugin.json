@@ -1,0 +1,30 @@
+{
+  "name": "gitlab",
+  "version": "0.0.0",
+  "description": "GitLab DevOps platform integration. Manage repositories, merge requests, CI/CD pipelines, issues, and wikis. Full access to GitLab's comprehensive DevOps lifecycle tools.",
+  "author": {
+    "name": "GitLab"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "gitlab"
+  ],
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "Gitlab",
+    "shortDescription": "GitLab DevOps platform integration. Manage repositories, merge requests, CI/CD pipelines, issues, and wikis. Full access to GitLab's comprehensive DevOps lifecycle tools.",
+    "longDescription": "GitLab DevOps platform integration. Manage repositories, merge requests, CI/CD pipelines, issues, and wikis. Full access to GitLab's comprehensive DevOps lifecycle tools.",
+    "developerName": "GitLab",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [],
+    "brandColor": "#4A90D9",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "mike47512",
+  "slug": "tax-declaration",
+  "displayName": "个税申报",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1773761709049,
+    "commit": "https://github.com/openclaw/skills/commit/44ce6565e1bb8493cfc9bf42cb98a9eb306d5291"
+  },
+  "history": []
+}

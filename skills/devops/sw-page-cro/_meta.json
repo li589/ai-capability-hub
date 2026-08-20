@@ -1,0 +1,11 @@
+{
+  "owner": "amdf01-debug",
+  "slug": "sw-page-cro",
+  "displayName": "Page CRO",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774097654027,
+    "commit": "https://github.com/openclaw/skills/commit/1a26019a03eee8bc035766d94dcaa529ee872160"
+  },
+  "history": []
+}

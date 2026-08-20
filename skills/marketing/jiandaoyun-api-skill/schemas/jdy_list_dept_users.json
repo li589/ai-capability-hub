@@ -1,0 +1,26 @@
+{
+  "client_only_params": [],
+  "description": "获取指定部门下的所有成员，支持递归获取子部门成员",
+  "display_name": "获取部门成员",
+  "domain": "通讯录",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/corp/department/user/list",
+  "method": "POST",
+  "name": "jdy_list_dept_users",
+  "params": {
+    "dept_no": {
+      "description": "部门编号（根部门编号为1）",
+      "type": "integer"
+    },
+    "has_child": {
+      "default": false,
+      "description": "是否递归获取子部门成员，默认false",
+      "type": "boolean"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "dept_no"
+  ],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

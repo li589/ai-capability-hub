@@ -1,0 +1,11 @@
+{
+  "owner": "newlux",
+  "slug": "travelchina",
+  "displayName": "Travel China",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773112537365,
+    "commit": "https://github.com/openclaw/skills/commit/54238a3f0456625604c47b398b4b887ea49e5e43"
+  },
+  "history": []
+}

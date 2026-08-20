@@ -1,0 +1,17 @@
+{
+  "owner": "hitlmt",
+  "slug": "ckt-design",
+  "displayName": "创客贴智能海报设计",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1773395496944,
+    "commit": "https://github.com/openclaw/skills/commit/613a4544a64d15f5ef824630f415c0a9c72255b0"
+  },
+  "history": [
+    {
+      "version": "1.0.2",
+      "publishedAt": 1772762723348,
+      "commit": "https://github.com/openclaw/skills/commit/2b2661cdbd1d72a7b704efb1e9de6943aae8fa6d"
+    }
+  ]
+}

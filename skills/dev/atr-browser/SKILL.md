@@ -1,0 +1,255 @@
+---
+name: atr-browser
+description: Control browser, automate browser interactions, navigate to URLs, click on webpages, fill forms, take screenshots, inspect webpages, web scraping with browser, test websites manually, or interact with web pages programmatically using ATR browser server mode. Pairs with the atr-computer skill when a workflow needs the OS desktop too (drag-and-drop from the file manager, system dialogs, native apps).
+allowed-tools: Bash(atr browser:*)
+install_source: official
+install_method: download
+skill_id: official_n8gmRPNP
+enabled_at: 1785348242616
+version: 1.0.0
+name_zh: 浏览器
+---
+
+> **Companion skill — `atr-computer`** controls the OS desktop (mouse, keyboard, screen, windows, app launch, plus an in-process LLM agent via `atr computer ask`). Load both when:
+>
+> - The browser action needs an OS file picker, drag from the file manager, or anything outside the page (e.g. authentication via 1Password desktop app).
+> - You want a single high-level instruction to span web + desktop — `atr computer ask "<instruction>"` can call `atr browser` along the way.
+>
+> Browser daemon listens on port 9333; computer daemon on 9334. Both can run simultaneously.
+
+# ATR Browser Automation Skill
+
+This skill provides browser automation capabilities through ATR's browser server mode. The browser server runs as a daemon process and accepts CLI commands for browser control.
+
+## Architecture
+
+```
+Claude Code --> atr CLI (client) --> ATR Server + Browser
+```
+
+The browser runs in visible (non-headless) mode by default for debugging and verification.
+
+## Getting Started
+
+### Step 1: Check Browser Status and Start if Needed
+
+Before any browser operations, verify the browser server is running:
+
+```bash
+atr browser status
+```
+
+If the server is not running, start it:
+
+```bash
+atr browser start
+```
+
+The server stores state at `~/.atr/browser.state` which allows subsequent commands to discover the endpoint automatically.
+
+### Step 2: Navigate and Interact
+
+Once running, use navigation and interaction commands to control the browser.
+
+## Command Categories
+
+### Lifecycle Commands
+
+| Command | Description |
+|---------|-------------|
+| `atr browser start [--port PORT]` | Start browser daemon (default port: 9333) |
+| `atr browser stop` | Stop browser daemon |
+| `atr browser status` | Check if browser is running |
+
+### Navigation Commands
+
+| Command | Description |
+|---------|-------------|
+| `atr browser navigate <url>` | Navigate to URL |
+| `atr browser back` | Go back in history |
+| `atr browser forward` | Go forward in history |
+| `atr browser reload` | Reload current page |
+
+### Page Management Commands
+
+| Command | Description |
+|---------|-------------|
+| `atr browser new-page [url]` | Open new tab |
+| `atr browser list-pages` | List all tabs |
+| `atr browser select-page <index>` | Switch to tab (0-based) |
+| `atr browser close-page <index>` | Close tab |
+
+### Interaction Commands
+
+| Command | Description |
+|---------|-------------|
+| `atr browser click <target> [--double]` | Click element (use --double for double-click) |
+| `atr browser fill <target> <value>` | Type into input field |
+| `atr browser hover <target>` | Hover over element |
+| `atr browser press-key <key>` | Press keyboard key (e.g., Enter, Tab, Control+A) |
+| `atr browser drag <from> <to>` | Drag element |
+| `atr browser wait <selector> [--timeout] [--visible]` | Wait for element to appear |
+| `atr browser scroll --selector "<sel>" [--y N] [--to-bottom]` | Scroll inside an element |
+| `atr browser download-images "<sel>" [--output-dir] [--fallback-screenshot]` | Download/screenshot images within elements |
+| `atr browser viewport [W H] [--preset mobile\|tablet\|desktop\|wide]` | Get or set viewport size |
+| `atr browser batch [--file F] [--on-error stop\|continue\|retry:N]` | Execute multiple commands from stdin/file |
+
+### Recording Commands
+
+| Command | Description |
+|---------|-------------|
+| `atr browser record [--url URL] [-o FILE]` | Record browser interactions as a behavior test |
+
+### Inspection Commands
+
+| Command | Description |
+|---------|-------------|
+| `atr browser snapshot [--verbose]` | Get page elements with UIDs |
+| `atr browser screenshot --file [--full] [-s SELECTOR]` | Capture screenshot (saves to /tmp/) |
+| `atr browser screenshot --file --selector-all "<sel>"` | Screenshot all matching elements |
+| `atr browser computed-styles "<selector>" [--properties]` | Get computed CSS styles for single element |
+| `atr browser computed-styles --selector-all "<sel>"` | Get computed CSS styles for all matching elements |
+| `atr browser computed-styles-diff "<sel>" --against N` | Compare styles between pages |
+| `atr browser text "<selector>" [--flat\|--links\|--headings]` | Extract text content |
+| `atr browser font-check "<font-family>"` | Check if font is loaded and rendering |
+| `atr browser clean-snapshot "<selector>" [--depth N] [--max-length N]` | Get cleaned DOM subtree (no noise/tracking attrs) |
+| `atr browser computed-styles --selector "h1" --selector "p"` | Batch computed styles for multiple selectors |
+| `atr browser computed-styles-diff --selector "h1" --selector "p" --against 0` | Batch style diff with overall score |
+| `atr browser html` | Get page HTML |
+| `atr browser url` | Get current URL |
+| `atr browser title` | Get page title |
+| `atr browser eval <script>` | Execute JavaScript |
+| `atr browser ask "<question>"` | Ask a question about the current page |
+
+**Screenshot Note:** Use `--file` to save screenshots to `/tmp/` with a timestamped filename (e.g., `/tmp/atr-screenshot-20240105-103045.png`). Add `--full` for full-page screenshots. Use `--selector` / `-s` to screenshot a specific element by CSS selector (e.g., `-s "header"`, `-s "#nav"`, `-s "main > section:nth-child(2)"`). Combine `--selector` with `--full` to capture an element's full scrollable height. Use `--selector-all` to screenshot every matching element as numbered PNGs — elements that fail or timeout are skipped (use `--timeout <ms>` to control per-element timeout, default 30s). Without `--file`, returns base64-encoded image data.
+
+### Debugging Commands
+
+| Command | Description |
+|---------|-------------|
+| `atr browser console [--limit N]` | Get console messages (default: 50) |
+| `atr browser network [--limit N]` | Get network requests (default: 50) |
+| `atr browser errors` | Get failed requests |
+
+## Workflow Pattern
+
+Follow this workflow for browser automation tasks:
+
+1. **Ensure Server Running**
+   ```bash
+   atr browser status || atr browser start
+   ```
+
+2. **Navigate to Target**
+   ```bash
+   atr browser navigate https://example.com
+   ```
+
+3. **Inspect Page Elements**
+   ```bash
+   atr browser snapshot
+   ```
+   This returns elements with unique IDs (UIDs) like `e0`, `e1`, etc.
+
+4. **Interact with Elements**
+   Target elements by:
+   - Text content: `"Sign In"`
+   - UID from snapshot: `e5`
+   - CSS selector: `.submit-button`
+
+5. **Verify Results**
+   ```bash
+   atr browser url
+   atr browser title
+   atr browser screenshot --file
+   ```
+
+6. **Cleanup When Done**
+   ```bash
+   atr browser stop
+   ```
+
+## Asking Questions About a Page
+
+Use `atr browser ask` when you need specific information from a page without flooding your context with raw HTML or snapshot data. A lightweight sub-agent inspects the page using multiple tools and returns a concise text answer.
+
+```bash
+atr browser ask "What is the main heading on this page?"
+atr browser ask "How many items are in the navigation menu?"
+atr browser ask "Is there a login form on this page?"
+```
+
+Prefer `ask` over `html` or `snapshot` when:
+- You need a specific fact, not the full page structure
+- You want to keep your context clean for subsequent reasoning
+- The answer can be expressed as a short text response
+
+## Recording Browser Interactions
+
+Use `atr browser record` to capture user interactions and output a `.test.txt` behavior test file. A floating overlay appears in the browser showing recorded steps in real time.
+
+```bash
+# Record interactions on a page
+atr browser record --url https://example.com -o repro-steps.test.txt
+
+# Record on the already-open page
+atr browser record -o flow.test.txt
+```
+
+Stop recording with Ctrl+C in the terminal or the "Stop" button in the browser overlay.
+
+The recorder captures clicks, form fills, keyboard shortcuts, navigation, scrolling, and select changes. It handles shadow DOM (web components) and generates stable CSS selectors. Password fields are automatically masked.
+
+The output `.test.txt` file can be replayed with `atr run --behavior repro-steps.test.txt`.
+
+## Using JSON Output
+
+Add `--json` flag for structured output when parsing is needed:
+
+```bash
+atr browser snapshot --json
+atr browser list-pages --json
+atr browser network --json
+```
+
+## Element Targeting
+
+The `<target>` parameter in click, fill, hover, and drag commands accepts:
+
+1. **Element UID**: `e0`, `e5` (from snapshot output)
+2. **Visible text**: `"Sign In"`, `"Submit Form"`
+3. **aria-label**: Elements with matching aria-label attribute
+4. **data-testid**: Elements with matching data-testid attribute
+5. **CSS selector**: `#login-button`, `.nav-link`, `header`, `footer`, `nav`, `main > section`, `div.hero`, `li:nth-child(2)`
+
+Best practice: Use `atr browser snapshot` first to see available elements and their UIDs.
+
+## Keyboard Keys
+
+For `press-key` command:
+- Named keys: `Enter`, `Tab`, `Escape`, `Backspace`
+- Modifiers: `Control+a`, `Shift+Tab`, `Alt+Enter`
+- Arrow keys: `ArrowUp`, `ArrowDown`, `ArrowLeft`, `ArrowRight`
+
+## Troubleshooting
+
+**Browser won't start:**
+```bash
+atr browser status
+rm ~/.atr/browser.state  # If stale state
+atr browser start
+```
+
+**Port already in use:**
+```bash
+atr browser start --port 9334
+```
+
+**Element not found:**
+```bash
+atr browser snapshot --verbose --json
+```
+
+## Additional Resources
+
+For complete command reference with all flags, see `references/commands-reference.md`.

@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-事实核验",
+  "installedAt": 1787227721259,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085538687747579904",
+  "description_zh": "万得 Alice 事实核验 CLI：粘贴含金融数据、公司声明或行业事件的文字，逐点验证并生成结构化核查报告，标明哪些准确、哪些有出入、哪些查不到。",
+  "description_en": "Wind Alice Fact Check CLI - verify financial information from external sources by pasting a passage with data, corporate claims, or industry events; get a structured report with point-by-point fact-checking showing what's accurate, off, or unverifiable.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_4eea9b3e-6cc.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_4eea9b3e-6cc.jpg"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "yuanbao-fixer",
+  "name": "元宝插件修复器",
+  "version": "1.0.0",
+  "installedAt": 1787229078688,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/cab3c5ed-3acd-4936-a59b-5f0c5f5dab1b.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/cab3c5ed-3acd-4936-a59b-5f0c5f5dab1b.png"
+}

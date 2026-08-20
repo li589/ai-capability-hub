@@ -1,0 +1,36 @@
+{
+  "client_only_params": [],
+  "description": "在企业通讯录中创建新部门",
+  "display_name": "创建部门",
+  "domain": "通讯录",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/corp/department/create",
+  "method": "POST",
+  "name": "jdy_create_department",
+  "params": {
+    "dept_no": {
+      "default": 0,
+      "description": "自定义部门编号（可选，不填则自动分配）",
+      "type": "integer"
+    },
+    "integrate_id": {
+      "default": "",
+      "description": "集成模式关联ID",
+      "type": "string"
+    },
+    "name": {
+      "description": "部门名称",
+      "type": "string"
+    },
+    "parent_no": {
+      "description": "父部门编号，根部门为1",
+      "type": "integer"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "name",
+    "parent_no"
+  ],
+  "risk": "write",
+  "source": "简道云工具包.zip"
+}

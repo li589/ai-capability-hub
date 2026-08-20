@@ -1,0 +1,21 @@
+{
+  "name": "OpenClaw记忆迁移",
+  "installedAt": 1787228693296,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082530668290048",
+  "examples_zh": [
+    "将我的 OpenClaw 身份资料、长期记忆、已安装技能和 MCP 配置迁移到 WorkBuddy，并列出需要我人工确认的冲突项。",
+    "把 OpenClaw 里的 Bot 配置、频道绑定和定时任务迁移到 WorkBuddy，优先合并已有资产，不要直接覆盖同名配置。",
+    "检查 OpenClaw 到 WorkBuddy 的迁移预览，标出身份信息、记忆条目和技能依赖中无法自动合并的部分。"
+  ],
+  "examples_en": [
+    "Migrate my OpenClaw identity, long-term memories, installed skills, and MCP configs into WorkBuddy, then list conflicts that need manual review.",
+    "Move my OpenClaw bot settings, channel bindings, and cron jobs to WorkBuddy using a merge-first strategy instead of overwriting same-name assets.",
+    "Review the OpenClaw-to-WorkBuddy migration preview and flag identity, memory, and skill dependency items that cannot be merged automatically."
+  ],
+  "description_zh": "将 OpenClaw 资产迁移到 WorkBuddy（身份、记忆、技能、MCP、Bot 配置）",
+  "description_en": "Migrate OpenClaw assets to WorkBuddy (identity, memory, skills, MCP, bot configs)",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/openclaw-assets-to-workbuddy.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/openclaw-assets-to-workbuddy.svg"
+}

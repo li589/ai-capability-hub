@@ -1,0 +1,45 @@
+{
+  "skill_name": "cn-financial-scraper",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "爬取这个页面 https://fund.eastmoney.com/000001.html，提取基金信息",
+      "expected_output": "提取到基金代码、名称、净值、持仓等基本信息",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "解析这份研报文档：./data/sample_report.txt（文本样例；如需 PDF 用户可另行提供）",
+      "expected_output": "能够读取并解析文档，提取财务数据和关键指标",
+      "files": [
+        "./data/sample_report.txt"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "爬取网页后分析000001基金的投资风格和配置建议",
+      "expected_output": "输出投资风格分析（成长/价值/均衡）和配置建议",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "搜索基金000001的最新公告，下载年报PDF",
+      "expected_output": "搜索到公告列表并下载PDF文件",
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "解析这个FOF产品，提取底层基金配置",
+      "expected_output": "返回资产配置比例和底层基金持仓明细",
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "深度分析这份券商研报：./data/sample_report.txt，提取财务指标和章节结构",
+      "expected_output": "输出文档分类（券商研报）、元数据（标题/机构/日期）、章节列表、财务指标（如营收/净利润/EPS等）、风险因素",
+      "files": [
+        "./data/sample_report.txt"
+      ]
+    }
+  ]
+}

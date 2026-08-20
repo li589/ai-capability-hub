@@ -1,0 +1,6 @@
+{
+  "display_name": "Responsiveness Check",
+  "display_name_en": "Responsiveness Check",
+  "description_zh": "多视口响应式检查，定位页面布局断点问题",
+  "description_en": "Check responsive layouts across viewports and identify breakpoint issues"
+}

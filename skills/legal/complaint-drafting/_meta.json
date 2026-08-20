@@ -1,0 +1,11 @@
+{
+  "owner": "xuleff",
+  "slug": "complaint-drafting",
+  "displayName": "complaint drafting",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773914859697,
+    "commit": "https://github.com/openclaw/skills/commit/b9d2e83cda7c5c70878412cf24248a7410a37498"
+  },
+  "history": []
+}

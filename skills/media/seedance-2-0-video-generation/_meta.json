@@ -1,0 +1,11 @@
+{
+  "owner": "liusaikang",
+  "slug": "seedance-2-0-video-generation",
+  "displayName": "For long videos, automatically split the video task, using the last frame of the previous video as the first frame of the current video to maintain video continuity",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1776161107780,
+    "commit": "https://github.com/openclaw/skills/commit/b514f1c2526237dee124e30564441a409cca9550"
+  },
+  "history": []
+}

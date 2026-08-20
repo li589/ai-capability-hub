@@ -1,0 +1,17 @@
+{
+  "owner": "wwumit",
+  "slug": "sum2slides-lite",
+  "displayName": "Sum2Slides Lite",
+  "latest": {
+    "version": "1.1.6",
+    "publishedAt": 1773848069401,
+    "commit": "https://github.com/openclaw/skills/commit/30a8ca8e8ed08323ee60d5c738ed77760234734e"
+  },
+  "history": [
+    {
+      "version": "1.1.3",
+      "publishedAt": 1773802626463,
+      "commit": "https://github.com/openclaw/skills/commit/f012629519c601cf015b44c9bff4eae9ff880322"
+    }
+  ]
+}

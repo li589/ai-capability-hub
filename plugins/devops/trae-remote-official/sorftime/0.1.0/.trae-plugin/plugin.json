@@ -1,0 +1,59 @@
+{
+  "name": "sorftime",
+  "version": "0.1.0",
+  "description": "Sorftime 跨境电商数据 MCP 集成，支持查询亚马逊、TikTok Shop、沃尔玛、Shopee、Temu 和 1688 的产品、市场、关键词、品牌及卖家数据。",
+  "i18n": {
+    "display_name": {
+      "en": "Sorftime",
+      "zh-cn": "Sorftime",
+      "ja": "Sorftime"
+    },
+    "description": {
+      "en": "Cross-border ecommerce data through Sorftime MCP, covering products, markets, keywords, brands, and sellers across Amazon, TikTok Shop, Walmart, Shopee, Temu, and 1688.",
+      "zh-cn": "Sorftime 跨境电商数据 MCP 集成，支持查询亚马逊、TikTok Shop、沃尔玛、Shopee、Temu 和 1688 的产品、市场、关键词、品牌及卖家数据。",
+      "ja": "Sorftime MCP を通じて、Amazon、TikTok Shop、Walmart、Shopee、Temu、1688 の商品、市場、キーワード、ブランド、販売者データを照会できます。"
+    }
+  },
+  "author": {
+    "name": "Sorftime",
+    "url": "https://www.sorftime.com"
+  },
+  "homepage": "https://www.sorftime.com",
+  "license": "Proprietary",
+  "keywords": [
+    "sorftime",
+    "ecommerce",
+    "cross-border",
+    "amazon",
+    "tiktok-shop",
+    "walmart",
+    "shopee",
+    "temu",
+    "1688",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "Sorftime",
+    "shortDescription": "跨境电商平台数据查询",
+    "longDescription": "填写 Sorftime API Key 后，通过 MCP 查询跨境电商平台的产品、市场竞争、趋势、关键词、品牌和卖家数据，覆盖 Amazon、TikTok Shop、Walmart、Shopee、Temu 与 1688 等平台。",
+    "developerName": "Sorftime",
+    "category": "Data & Analytics",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "websiteURL": "https://www.sorftime.com",
+    "defaultPrompt": [
+      "分析一个亚马逊产品的销量和历史趋势",
+      "调研指定类目的市场竞争情况和头部产品",
+      "查询关键词热度、搜索排名和相关竞品",
+      "分析跨境电商品牌或卖家的产品表现"
+    ],
+    "brandColor": "#3D93C3",
+    "logo": "./assets/app-icon.png",
+    "composerIcon": "./assets/app-icon.png",
+    "screenshots": []
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:analyze-procurement",
+  "registry": "trae-remote-official",
+  "plugin_name": "analyze-procurement",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "e7adaf46-6a84-4d3b-8773-d9351d4c7eea",
+  "remote_installed_plugin_id": "54MHU0.5-7EOBH",
+  "checksum": "7ad664e04a2a69bf62f9756aed8fc91a3c62a58cf755fca9d62a0855ab7aa676",
+  "file_size": 159856,
+  "installed_at": 1787227201673
+}

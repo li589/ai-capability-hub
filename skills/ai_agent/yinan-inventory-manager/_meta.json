@@ -1,0 +1,11 @@
+{
+  "owner": "yinanping-cpu",
+  "slug": "yinan-inventory-manager",
+  "displayName": "Inventory Manager",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772877801580,
+    "commit": "https://github.com/openclaw/skills/commit/2dfe99557b8aa6eea3a959e346f05ecf0324eb5e"
+  },
+  "history": []
+}

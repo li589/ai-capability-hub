@@ -1,0 +1,11 @@
+{
+  "owner": "tobewin",
+  "slug": "china-legal-query",
+  "displayName": "China Legal Query",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1774722721262,
+    "commit": "https://github.com/openclaw/skills/commit/a2f78a49c2674c92a71fa608f9a11543c0f85527"
+  },
+  "history": []
+}

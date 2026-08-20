@@ -1,0 +1,21 @@
+{
+  "name": "guizang-PPT-Skill",
+  "installedAt": 1785864589587,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2054901261007781888",
+  "examples_zh": [
+    "帮我做一个杂志风的网页 PPT",
+    "用瑞士国际主义风格做一个产品发布 deck",
+    "帮我做一个横向翻页的 HTML 演讲稿"
+  ],
+  "examples_en": [
+    "Create a magazine-style web PPT for my talk",
+    "Build a Swiss Style product launch deck",
+    "Make a horizontal swipe HTML presentation"
+  ],
+  "description_zh": "歸藏的 PPT Skills，生成高质量网页 PPT、演讲 deck 与多比例封面，内置电子杂志风和瑞士国际主义两套视觉系统。",
+  "description_en": "歸藏's PPT Skills — Generate polished single-file HTML slide decks and cover pages with editorial magazine and Swiss international design systems.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_1a868883-d75.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_1a868883-d75.png"
+}

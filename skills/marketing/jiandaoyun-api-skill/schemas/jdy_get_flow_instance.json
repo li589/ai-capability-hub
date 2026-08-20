@@ -1,0 +1,21 @@
+{
+  "client_only_params": [],
+  "description": "查询指定数据的流程实例信息，包括当前节点、流程状态等",
+  "display_name": "查询流程实例信息",
+  "domain": "流程",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/workflow/instance/get",
+  "method": "POST",
+  "name": "jdy_get_flow_instance",
+  "params": {
+    "instance_id": {
+      "description": "流程实例ID（即数据的data_id）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "instance_id"
+  ],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

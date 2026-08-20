@@ -1,0 +1,36 @@
+{
+  "$schema": "Qoder Quality Suite Configuration",
+  "$description": "Copy relevant settings into your project's .qoder/settings.json or ~/.qoder/settings.json",
+
+  "qualitySuite": {
+    "maxContextFiles": 30,
+    "maxFileReadLines": 200,
+    "enableEvidenceLedger": true,
+    "enableUiAntiAiReview": true,
+    "enableBrowserVerification": true,
+    "enableTokenBudgetReport": false,
+    "preferredDesignSystem": "auto",
+    "forbiddenUiPatterns": [
+      "purple-gradient-hero",
+      "glassmorphism",
+      "glowing-blob",
+      "fake-dashboard",
+      "giant-hero-title",
+      "card-inception",
+      "all-large-radius"
+    ],
+    "requiredVerificationCommands": []
+  },
+
+  "$configNotes": {
+    "maxContextFiles": "Soft limit. Agent can exceed with justification. Default: 30",
+    "maxFileReadLines": "Soft limit per file. Prefer targeted reads. Default: 200",
+    "enableEvidenceLedger": "Track sources of factual claims. Recommended: true",
+    "enableUiAntiAiReview": "Check for AI-generated UI patterns. Recommended: true for web projects",
+    "enableBrowserVerification": "Use browser to verify UI changes. Requires dev server. Default: true",
+    "enableTokenBudgetReport": "Output context usage stats. Useful for debugging. Default: false",
+    "preferredDesignSystem": "auto=detect from project, or: shadcn/ui, antd, mui, custom. Default: auto",
+    "forbiddenUiPatterns": "UI patterns to avoid. Add custom patterns as strings",
+    "requiredVerificationCommands": "Commands to always run, e.g. ['npm run lint', 'npm test']"
+  }
+}

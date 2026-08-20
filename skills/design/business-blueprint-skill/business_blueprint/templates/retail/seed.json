@@ -1,0 +1,35 @@
+{
+  "version": "1.0",
+  "meta": {},
+  "context": {
+    "goals": [],
+    "scope": [],
+    "assumptions": [],
+    "constraints": [],
+    "sourceRefs": [],
+    "clarifyRequests": [],
+    "clarifications": []
+  },
+  "library": {
+    "capabilities": [
+      {
+        "id": "cap-store-ops",
+        "name": "门店运营",
+        "level": 1,
+        "description": "支撑门店日常经营和导购协作。",
+        "ownerActorIds": [],
+        "supportingSystemIds": []
+      }
+    ],
+    "actors": [],
+    "flowSteps": [],
+    "systems": []
+  },
+  "relations": [],
+  "views": [],
+  "editor": {
+    "fieldLocks": {},
+    "theme": "enterprise-default"
+  },
+  "artifacts": {}
+}

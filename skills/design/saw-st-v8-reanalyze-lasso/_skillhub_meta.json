@@ -1,0 +1,11 @@
+{
+  "name": "空间转录组 ROI 二次分析",
+  "installedAt": 1787228527370,
+  "source": "marketplace",
+  "version": "1.2.1",
+  "skillId": "skill_2089265696672251904",
+  "description_zh": "DCS Cloud WDL「SAW-ST-V8-reanalyze-lasso」(v1.2.0) 流程说明与填参指南：按 GeoJSON ROI 从空间 GEF（Bin 或 Cellbin）提取感兴趣区域表达矩阵与掩码图。用户提到 SAW-ST-V8-reanalyze-lasso、lasso、ROI 提取、空间套索二次分析，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"SAW-ST-V8-reanalyze-lasso\" (v1.2.0) parameter guide: extract ROI expression matrices and mask images from spatial GEF (Bin or Cellbin) using GeoJSON ROIs. Use when the user mentions SAW-ST-V8-reanalyze-lasso, lasso, ROI extraction, spatial lasso reanalysis, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_09b41acb-b81.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_09b41acb-b81.png"
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "browser-auto",
+  "name": "浏览器自动化助手",
+  "version": "1.0.0",
+  "installedAt": 1787229106838,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

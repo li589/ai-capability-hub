@@ -1,0 +1,22 @@
+{
+  "owner": "c5huracan",
+  "slug": "mcp-finder",
+  "displayName": "Mcp Finder",
+  "latest": {
+    "version": "0.2.4",
+    "publishedAt": 1773199506600,
+    "commit": "https://github.com/openclaw/skills/commit/171c9bac632847cacb471159e30de49d8a0284b3"
+  },
+  "history": [
+    {
+      "version": "0.2.3",
+      "publishedAt": 1773199065229,
+      "commit": "https://github.com/openclaw/skills/commit/20c878b10275849b58893b3ff17d6b4312c84159"
+    },
+    {
+      "version": "0.2.0",
+      "publishedAt": 1772838390984,
+      "commit": "https://github.com/openclaw/skills/commit/9b2a2a3c5f1b3d21a930b316f8b7300a44484fd0"
+    }
+  ]
+}

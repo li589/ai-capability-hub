@@ -1,0 +1,11 @@
+{
+  "owner": "peand-rover",
+  "slug": "ai-video-jobs-remote",
+  "displayName": "Ai Video Jobs Remote",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1776037272966,
+    "commit": "https://github.com/openclaw/skills/commit/f294ff479efc601871454547f43dd460d055ee4a"
+  },
+  "history": []
+}

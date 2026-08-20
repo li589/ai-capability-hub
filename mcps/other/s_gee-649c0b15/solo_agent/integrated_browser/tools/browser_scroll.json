@@ -1,0 +1,44 @@
+{
+  "name": "browser_scroll",
+  "description": "Scroll the page or a specific element. Use this to bring elements into view, scroll to content, or navigate long pages. Can scroll in any direction by specifying delta values or using directional shortcuts.\n",
+  "arguments": {
+    "properties": {
+      "amount": {
+        "description": "Amount to scroll in pixels when using direction. Defaults to 300.",
+        "type": "number"
+      },
+      "deltaX": {
+        "description": "Horizontal scroll amount in pixels. Positive scrolls right, negative scrolls left.",
+        "type": "number"
+      },
+      "deltaY": {
+        "description": "Vertical scroll amount in pixels. Positive scrolls down, negative scrolls up.",
+        "type": "number"
+      },
+      "direction": {
+        "description": "Direction to scroll. Shorthand for setting deltaX/deltaY.",
+        "enum": [
+          "up",
+          "down",
+          "left",
+          "right"
+        ],
+        "type": "string"
+      },
+      "ref": {
+        "description": "Element reference to scroll into view, or to scroll within (for scrollable containers)",
+        "type": "string"
+      },
+      "scrollIntoView": {
+        "description": "If true and ref is provided, scrolls the element into view instead of scrolling within it. Defaults to true when ref is provided without delta values.",
+        "type": "boolean"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

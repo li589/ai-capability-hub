@@ -1,0 +1,181 @@
+# drawio-skill（已归档）
+
+> **本项目已归档。** Claude Code 本身就能生成 draw.io XML，专门的 skill 意义不大。替代方案见下方 [替代方案](#替代方案)。
+
+[English](README.md)
+
+## 替代方案
+
+不需要安装这个 skill，只需在你的 `CLAUDE.md`（全局或项目级）中加几行：
+
+```markdown
+## Draw.io
+- Export: `/Applications/draw.io.app/Contents/MacOS/draw.io -x -f png -s 2 input.drawio`
+- Default style: rounded=1, spacing=15, edge routing orthogonal
+```
+
+就这样。Claude Code 已经掌握 draw.io XML 语法、布局原则和图表设计，不需要额外的 skill。
+
+---
+
+*以下为原始 README，仅供参考。*
+
+---
+
+## 功能说明
+
+- 根据自然语言描述生成 `.drawio` XML 文件
+- 使用 draw.io 桌面版原生 CLI 将图表导出为 PNG、SVG、PDF 或 JPG
+- 支持多页图表和分层分组
+- 迭代设计：预览、获取反馈、反复优化直到图表满意为止
+- 当图表有助于解释复杂系统时自动触发
+
+## 支持的图表类型
+
+- **架构图**：微服务架构、云架构（AWS/GCP/Azure）、网络拓扑、部署架构
+- **流程图**：业务流程、工作流、决策树、状态机
+- **UML**：类图、序列图、用例图
+- **数据图**：ER 图、数据流图（DFD）
+- **其他**：组织架构图、思维导图、线框图
+
+## 工作流程
+
+![工作流程](assets/workflow-cn.png)
+
+## 依赖项
+
+| 工具 | 用途 |
+|------|------|
+| `draw.io` 桌面应用 | 原生 CLI，用于将 `.drawio` 导出为 PNG/SVG/PDF |
+
+无需浏览器自动化或 Node.js 依赖。
+
+## 安装
+
+### macOS
+
+```bash
+# 推荐方式 — Homebrew
+brew install --cask drawio
+
+# 验证安装
+draw.io --version
+```
+
+### Windows
+
+从以下地址下载安装包：https://github.com/jgraph/drawio-desktop/releases
+
+```powershell
+# 验证安装
+"C:\Program Files\draw.io\draw.io.exe" --version
+```
+
+### Linux
+
+从以下地址下载 `.deb` 或 `.rpm` 包：https://github.com/jgraph/drawio-desktop/releases
+
+```bash
+# 无头导出（Linux 服务器无显示器时必须）
+sudo apt install xvfb  # Debian/Ubuntu
+xvfb-run -a draw.io --version
+```
+
+### 平台说明
+
+| 平台 | 额外步骤 |
+|------|----------|
+| **macOS** | Homebrew 安装后无需额外操作 |
+| **Windows** | 如不在 PATH 中，使用完整路径 |
+| **Linux** | 无头导出时命令前加 `xvfb-run -a` |
+
+## 使用方式
+
+直接描述你想要的图表：
+
+```
+画一个微服务电商架构图，包含 Mobile/Web/Admin 客户端，API Gateway，
+Auth/User/Order/Product/Payment 微服务，Kafka 消息队列，Notification 服务，
+以及各自独立的数据库
+```
+
+Claude 会自动生成 `.drawio` 文件并导出为 PNG。
+
+## 示例
+
+**提示词：**
+> 画一个微服务电商架构图，包含 Mobile/Web/Admin 客户端，API Gateway（含认证+限流+路由），
+> Auth/User/Order/Product/Payment 微服务，Kafka 消息队列，Notification 服务，
+> User DB / Order DB / Product DB / Redis Cache / Stripe API
+
+**输出效果：**
+
+![微服务架构图](assets/microservices-example.png)
+
+## 拓扑示例
+
+本 skill 支持多种图表拓扑，线条路由清晰 —— 不会穿越无关的形状。
+
+### 星形拓扑（7 个节点）
+
+中央消息代理 + 6 个微服务辐射排列。连线从不同方向进入 Kafka，零交叉。
+
+![星形拓扑](assets/demo-star-cn.png)
+
+### 分层流程（10 个节点，4 层）
+
+电商架构，含 2 条交叉连线：订单→商品（同层水平）和 认证→Redis（对角线，经路由走廊绕行）。所有线条路由清晰。
+
+![分层流程](assets/demo-layered-cn.png)
+
+### 环形 / 循环（8 个节点）
+
+CI/CD 流水线，包含闭合回路和 2 个分支。线条沿矩形外围流动，不穿越内部区域。
+
+![环形循环](assets/demo-ring-cn.png)
+
+## 文件说明
+
+- `SKILL.md` — **唯一必需的文件**，Claude Code 加载的 skill 指令。
+- `README.md` — 英文说明
+- `README_CN.md` — 本文件（中文）
+- `assets/` — 示例图表和工作流图片
+
+> **提示：** 仅 `SKILL.md` 是 skill 运行所必需的。`assets/`、`README.md` 和 `README_CN.md` 仅为文档用途，可以安全删除以节省空间。
+
+> 所有示例图表均由 Claude Code 配合 Claude Opus 4.6 模型生成。
+
+## 开源协议
+
+MIT
+
+## 支持作者
+
+如果这个 skill 对你有帮助，欢迎支持作者：
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Agents365-ai/images_payment/main/qrcode/wechat-pay.png" width="180" alt="微信支付">
+      <br>
+      <b>微信支付</b>
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Agents365-ai/images_payment/main/qrcode/alipay.png" width="180" alt="支付宝">
+      <br>
+      <b>支付宝</b>
+    </td>
+    <td align="center">
+      <img src="https://raw.githubusercontent.com/Agents365-ai/images_payment/main/qrcode/buymeacoffee.png" width="180" alt="Buy Me a Coffee">
+      <br>
+      <b>Buy Me a Coffee</b>
+    </td>
+  </tr>
+</table>
+
+## 作者
+
+**Agents365-ai**
+
+- Bilibili: https://space.bilibili.com/441831884
+- GitHub: https://github.com/Agents365-ai

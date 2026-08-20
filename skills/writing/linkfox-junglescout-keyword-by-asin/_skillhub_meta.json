@@ -1,0 +1,11 @@
+{
+  "name": "Jungle Scout-ASIN反查关键词",
+  "installedAt": 1787227766491,
+  "source": "marketplace",
+  "version": "1.0.8",
+  "skillId": "skill_2088178151361646592",
+  "description_zh": "Jungle Scout根据ASIN反查关键词，输入最多10个ASIN获取其在亚马逊搜索结果中出现的所有关键词及搜索量、竞争度、PPC竞价等数据，覆盖10个站点。当用户提到ASIN反查关键词、反查词、ASIN关键词挖掘、竞品关键词、ASIN流量词、反向ASIN查询、ASIN搜索词、关键词拓展、ASIN词库、竞品流量分析、reverse ASIN lookup, keyword by ASIN, ASIN keyword mining, competitor keywords, ASIN traffic keywords, reverse keyword lookup, ASIN search terms, keyword expansion时触发此技能。即使用户未明确提及\"Jungle Scout\"或\"反查\"，只要其需求涉及通过ASIN查找相关关键词或分析竞品关键词，也应触发此技能。",
+  "description_en": "Use Jungle Scout to reverse-check Amazon keywords based on ASIN and obtain the traffic words, search volume, competition and PPC bidding data of competing products, and support batch queries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/7d39b70a-0853-4952-87fa-c3a08e086673/avatar/skill/au_62232036-b7d.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/7d39b70a-0853-4952-87fa-c3a08e086673/avatar/skill/au_62232036-b7d.png"
+}

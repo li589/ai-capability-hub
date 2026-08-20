@@ -1,0 +1,11 @@
+{
+  "name": "腾讯自选股·市场早晚报",
+  "installedAt": 1787228668256,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089686634037825536",
+  "description_zh": "开盘前自动汇总隔夜外围市场表现与今日关注要点，收盘后复盘当日大盘涨跌、板块异动与资金流向，帮用户在几分钟内建立对市场全貌的认知，不必自己满屏翻消息。",
+  "description_en": "Before the market opens, it automatically summarizes overnight performance in global markets and key points to watch for the day; after the close, it reviews market movements, notable sector activity, and capital flows. This enables users to grasp the overall market picture in just a few minutes, eliminating the need to manually sift through a screen full of news.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_a293f490-fcb.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_a293f490-fcb.png"
+}

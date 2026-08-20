@@ -1,0 +1,10 @@
+{
+  "name": "鼎华eMES 产品助手-语音智能报工助手",
+  "installedAt": 1787228548099,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089991869901348864",
+  "description_zh": "MES 语音报工：工人说产品+工序+数量，AI 匹配派工清单后自动判断开工/报工，替代手工录入。",
+  "description_en": "MES voice work reporting: workers speak product + operation + quantity; AI matches the dispatch list and auto-completes start/report actions.",
+  "iconSource": "letter:auto"
+}

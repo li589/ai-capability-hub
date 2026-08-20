@@ -1,0 +1,17 @@
+{
+  "owner": "ktsslytop",
+  "slug": "videowei-copywriter",
+  "displayName": "视频号带货文案生成器",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773842837032,
+    "commit": "https://github.com/openclaw/skills/commit/9a3bd7d1b9677d854351759575159d23ceecbb16"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773811173507,
+      "commit": "https://github.com/openclaw/skills/commit/c87f56a5a1fac3f5af0ff65146efa1920e78a073"
+    }
+  ]
+}

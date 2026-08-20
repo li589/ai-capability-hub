@@ -1,0 +1,21 @@
+{
+  "name": "腾讯校园招聘",
+  "installedAt": 1787228502914,
+  "source": "marketplace",
+  "version": "1.0.7",
+  "skillId": "skill_2054903442024890368",
+  "examples_zh": [
+    "腾讯秋招什么时候开始？怎么投递？",
+    "帮我优化这份简历，目标是腾讯后台开发岗",
+    "模拟一下腾讯技术面试，我是计算机专业应届生"
+  ],
+  "examples_en": [
+    "When does Tencent fall campus recruiting start?",
+    "Help me optimize my resume for a Tencent backend role",
+    "Simulate a Tencent technical interview for a CS graduate"
+  ],
+  "description_zh": "腾讯校招流程引导、岗位推荐、简历优化与面试辅导助手",
+  "description_en": "Tencent campus recruiting assistant for job search, resume optimization and interview preparation.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_67f49a03-302.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_67f49a03-302.svg"
+}

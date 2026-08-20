@@ -1,0 +1,11 @@
+{
+  "name": "公众号订阅追踪",
+  "installedAt": 1787227568348,
+  "source": "marketplace",
+  "version": "1.0.4",
+  "skillId": "skill_2082737839252508672",
+  "description_zh": "每天 6 点自动推送订阅的公众号文章，支持竞对监控、分类管理、HTML 日报导出",
+  "description_en": "Daily auto-push of subscribed WeChat official account articles at 6 AM, with competitor monitoring, category management, and HTML report generation.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_5a9b6e3e-e9a.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_5a9b6e3e-e9a.svg"
+}

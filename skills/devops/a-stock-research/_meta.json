@@ -1,0 +1,11 @@
+{
+  "owner": "gk-lucky",
+  "slug": "a-stock-research",
+  "displayName": "A Stock Research",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774960066861,
+    "commit": "https://github.com/openclaw/skills/commit/e2af7f7c94b7fb7da7731a22ce73b35d751bdf79"
+  },
+  "history": []
+}

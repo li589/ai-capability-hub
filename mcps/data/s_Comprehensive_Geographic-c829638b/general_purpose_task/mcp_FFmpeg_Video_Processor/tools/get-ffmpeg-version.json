@@ -1,0 +1,9 @@
+{
+  "name": "get-ffmpeg-version",
+  "description": "Get the version of FFmpeg installed on the system",
+  "arguments": {
+    "type": "object",
+    "properties": {},
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

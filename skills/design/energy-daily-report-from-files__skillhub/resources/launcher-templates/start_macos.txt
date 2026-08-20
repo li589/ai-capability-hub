@@ -1,0 +1,13 @@
+#!/bin/bash
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+"$SCRIPT_DIR/start_macos.sh"
+STATUS=$?
+
+if [ "$STATUS" -ne 0 ]; then
+  echo
+  echo "[错误] 程序启动失败，退出代码：$STATUS"
+  echo "请检查 Python 版本、requirements.txt 和 logs 目录。"
+  echo
+  read -r -p "按回车键关闭窗口..."
+fi
+exit "$STATUS"

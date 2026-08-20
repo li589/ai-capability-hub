@@ -1,0 +1,21 @@
+{
+  "name": "WPS 文档云转换",
+  "installedAt": 1787227546651,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2077303877706661888",
+  "examples_zh": [
+    "帮我把这份PDF文件转换成Word文档",
+    "将多个PDF文件合并成一个PDF，并按页数拆分",
+    "把这份Word文档转换为PDF并设置密码加密保护"
+  ],
+  "examples_en": [
+    "Convert this PDF file to a Word document",
+    "Merge multiple PDF files into one and split by page count",
+    "Convert this Word document to PDF with password encryption"
+  ],
+  "description_zh": "WPS Office 官方提供的PDF转Word、PDF转PPT、PDF转Excel、PDF转CAD、PDF转图片、PDF转HTML、PDF拆分、PDF合并、PDF加密、PDF解密、PDF压缩、删除PDF页、插入PDF页、Word转PDF、Excel转PDF、PPT转PDF、图片转PDF、CAD转PDF、CAD转图片、等多格式文本转换工具。",
+  "description_en": "WPS Office provides official tools for converting PDF to Word, PDF to PPT, PDF to Excel, PDF to CAD, PDF to image, PDF to HTML, PDF splitting, PDF merging, PDF encryption, PDF decryption, PDF compression, deleting PDF pages, inserting PDF pages, Word to PDF, Excel to PDF, PPT to PDF, image to PDF, CAD to PDF, CAD to image, and many other text conversion tools.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077303877706661888/5d0f5279b1867033.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077303877706661888/5d0f5279b1867033.svg"
+}

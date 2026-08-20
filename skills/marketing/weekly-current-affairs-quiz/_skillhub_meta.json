@@ -1,0 +1,10 @@
+{
+  "name": "每周时政题",
+  "installedAt": 1787227731483,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2087182331309985792",
+  "description_zh": "梳理近期时政热点并生成公考单选题（热点卡片+答题+报告）。",
+  "description_en": "Summarize recent current affairs into civil-service quiz HTML with hot-topic cards and practice questions.",
+  "iconSource": "letter:auto"
+}

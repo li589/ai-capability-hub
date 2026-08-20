@@ -1,0 +1,21 @@
+{
+  "name": "麦当劳助手",
+  "installedAt": 1787228416219,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2059489557404721152",
+  "examples_zh": [
+    "帮我点个麦当劳外卖",
+    "查一下附近麦当劳有什么优惠券",
+    "帮我搭配一份500大卡以内的套餐"
+  ],
+  "examples_en": [
+    "Order McDonalds delivery for me",
+    "Check available McDonalds coupons nearby",
+    "Help me build a meal under 500 calories"
+  ],
+  "description_zh": "支持麦当劳点餐下单、菜单与门店查询、优惠券领取和比价、订单状态跟踪，并可提供营养成分/热量搭配建议、活动咨询、积分查询与兑换。",
+  "description_en": "McDonalds China Ordering Assistant for menu browsing, coupon management, order placement, nutrition info, and loyalty points redemption via MCP Server.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059489557404721152/e13bfd306b994791.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059489557404721152/e13bfd306b994791.svg"
+}

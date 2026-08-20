@@ -1,0 +1,65 @@
+{
+  "skill_name": "yescan-scan-qoder",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "这张考试试卷拍得不太清楚，帮我增强一下变成高清的电子版文档，结果原样透出不要修改。图片文件链接是 https://img.alicdn.com/imgextra/i2/O1CN01lhtpBG1y3aTTBkpGl_!!6000000006523-0-tps-1310-1718.jpg",
+      "expected_output": "调用 exam-enhance 场景对考试试卷进行增强处理，返回 JSON 格式的结果，包含优化后的图片",
+      "expectations": [
+        "使用了 exam-enhance 场景",
+        "执行了 scan.py 脚本",
+        "命令中包含 --scene exam-enhance 参数"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "这张图片太模糊了，帮我增强一下画质，让内容更清晰，结果原样透出不要修改。图片文件链接是 https://img.alicdn.com/imgextra/i3/O1CN014ZDZOc26rz323ZYLI_!!6000000007716-0-tps-600-769.jpg",
+      "expected_output": "调用 image-hd-enhance 场景对图片进行画质增强处理，返回 JSON 格式的结果",
+      "expectations": [
+        "使用了 image-hd-enhance 场景",
+        "执行了 scan.py 脚本",
+        "命令中包含 --scene image-hd-enhance 参数"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "这张发票照片有点模糊，帮我优化一下让字迹更清晰，结果原样透出不要修改。图片文件链接是 https://img.alicdn.com/imgextra/i4/O1CN01GwV9n31GeNG8fZN4q_!!6000000000647-0-tps-2400-3200.jpg",
+      "expected_output": "调用 certificate-enhance 场景对发票图片进行证件票据增强处理，返回 JSON 格式的结果",
+      "expectations": [
+        "使用了 certificate-enhance 场景",
+        "执行了 scan.py 脚本",
+        "命令中包含 --scene certificate-enhance 参数"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "把这张试卷上的手写答案去掉，还原成空白的卷子，结果原样透出不要修改。图片文件链接是 https://img.alicdn.com/imgextra/i3/O1CN01TXOx3g1HiKIERzV6G_!!6000000000791-0-tps-2598-3464.jpg",
+      "expected_output": "调用 remove-handwriting 场景去除手写笔迹，返回 JSON 格式的结果，包含处理后的图片",
+      "expectations": [
+        "使用了 remove-handwriting 场景",
+        "执行了 scan.py 脚本",
+        "命令中包含 --scene remove-handwriting 参数"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "优化一下这张文档图片，结果原样透出不要修改。图片文件链接是 https://img.alicdn.com/imgextra/i4/O1CN01Aoyfqn1uybNkEleX9_!!6000000006106-0-tps-673-997.jpg",
+      "expected_output": "用户意图不明确，使用 scan-document 兜底场景进行通用文档扫描处理，返回 JSON 格式的结果",
+      "expectations": [
+        "使用了 scan-document 场景（兜底场景）",
+        "执行了 scan.py 脚本",
+        "命令中包含 --scene scan-document 参数"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "帮我把这份合同整理一下，让文字更清晰画面更整洁，结果原样透出不要修改。图片文件链接是 https://img.alicdn.com/imgextra/i1/O1CN01akAtl61q0MpUAzwQL_!!6000000005433-0-tps-3000-4000.jpg",
+      "expected_output": "调用 scan-contract 场景对合同图片进行扫描整理处理，返回 JSON 格式的结果，包含优化后的图片",
+      "expectations": [
+        "使用了 scan-contract 场景",
+        "执行了 scan.py 脚本",
+        "命令中包含 --scene scan-contract 参数"
+      ]
+    }
+  ]
+}

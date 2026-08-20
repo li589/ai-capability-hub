@@ -1,0 +1,4 @@
+interface:
+  display_name: "税收政策问答"
+  short_description: "中国大陆税收政策官方检索、条件核验与结构化问答助手"
+  default_prompt: "使用 $tax-policy-qa 查询并解读一项中国大陆税收政策。"

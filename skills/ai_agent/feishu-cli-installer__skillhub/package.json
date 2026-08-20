@@ -1,0 +1,18 @@
+{
+  "name": "feishu-cli-installer",
+  "version": "1.0.0",
+  "description": "飞书CLI一键安装助手，自动完成环境检测、安装、配置、授权全流程",
+  "author": "贾维斯 - 阿里",
+  "license": "MIT",
+  "keywords": [
+    "feishu",
+    "lark",
+    "cli",
+    "installer",
+    "automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larksuite/cli"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "client_only_params": [],
+  "description": "按范围查询企业审计日志明细（支持条件筛选和游标分页）",
+  "display_name": "获取审计日志明细",
+  "domain": "用量与审计",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/audit_log/list",
+  "method": "POST",
+  "name": "jdy_list_audit_logs",
+  "params": {
+    "cursor": {
+      "description": "分页游标。首次查询不传；下一页使用上次响应中的 cursor 值。",
+      "required": false,
+      "type": "string"
+    },
+    "domain": {
+      "description": "日志范围。可选值：login（登录日志）、platform（平台管理日志）、app_builder（应用搭建日志）、kms（知识库管理日志）。",
+      "required": true,
+      "type": "string"
+    },
+    "event_types": {
+      "description": "事件类型列表。不传表示查询当前 domain 下的全部事件类型。可先调用 jdy_get_audit_log_domains 获取可用事件类型。",
+      "items": {
+        "type": "string"
+      },
+      "required": false,
+      "type": "array"
+    },
+    "filters": {
+      "description": "过滤条件。支持 actor_ids（操作人 ID 列表）。app_builder 范围还支持 app_ids 和 entry_ids。",
+      "required": false,
+      "type": "object"
+    },
+    "limit": {
+      "description": "单次返回条数，默认 200，最大 200。",
+      "required": false,
+      "type": "integer"
+    },
+    "time_range": {
+      "description": "查询时间范围，包含 start 和 end 字段，UTC 时间格式（如 2026-04-01T00:00:00.000Z）。跨度不能超过 31 天。",
+      "required": true,
+      "type": "object"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "domain",
+    "time_range"
+  ],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

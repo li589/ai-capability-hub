@@ -1,0 +1,14 @@
+{
+  "connectors": {
+    "pkulaw": {
+      "type": "remote_mcp",
+      "mcp_server": "pkulaw",
+      "auth_policy": "ON_INVOKE"
+    },
+    "qichacha": {
+      "type": "remote_mcp",
+      "mcp_server": "qichacha",
+      "auth_policy": "ON_INVOKE"
+    }
+  }
+}

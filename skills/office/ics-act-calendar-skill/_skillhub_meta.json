@@ -1,0 +1,11 @@
+{
+  "name": "兴业证券智达平台活动日历查询",
+  "installedAt": 1787228659749,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2089241482910519296",
+  "description_zh": "便捷查询兴业证券智达平台指定日期范围内的活动日历安排，自动汇总会议、路演、培训等各类信息。",
+  "description_en": "Easily query activity calendar schedules on the Xingye Securities Zhida Platform within a specified date range, automatically aggregating various types of information such as meetings, roadshows, and training sessions.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/99a20eef-d080-4f5d-80b3-2c2bdc8d1164/avatar/skill/au_2efca768-fff.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/99a20eef-d080-4f5d-80b3-2c2bdc8d1164/avatar/skill/au_2efca768-fff.jpg"
+}

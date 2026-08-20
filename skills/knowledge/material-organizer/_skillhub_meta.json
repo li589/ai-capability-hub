@@ -1,0 +1,20 @@
+{
+  "name": "资料整理",
+  "installedAt": 1787228507412,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443411890987008",
+  "examples_zh": [
+    "帮我把这些收藏链接整理成研究笔记",
+    "批量读取这几个PDF，提取核心内容整理成文档",
+    "帮我整理下载目录，按主题分类归档"
+  ],
+  "examples_en": [
+    "Organize these bookmarked links into research notes",
+    "Batch-read these PDFs and extract key content into a document",
+    "Clean up my downloads folder and sort files by topic"
+  ],
+  "description_zh": "批量导入链接/PDF/笔记/截图，自动提炼要点、按主题分类归档、生成结构化研究笔记",
+  "description_en": "Batch-import links, PDFs, notes & screenshots to auto-extract key points, classify by topic, and generate structured notes",
+  "iconSource": "letter:auto"
+}

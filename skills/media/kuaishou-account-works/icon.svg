@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="ksaw-bg" x1="0" y1="0" x2="32" y2="32">
+      <stop offset="0%" stop-color="#FF4906"/>
+      <stop offset="100%" stop-color="#E03A00"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#ksaw-bg)"/>
+  <!-- 账号头像（头 + 肩） -->
+  <circle cx="16" cy="8.6" r="3.8" fill="#ffffff"/>
+  <path d="M9.4 21.2 C9.4 16.9 12.4 14.9 16 14.9 C19.6 14.9 22.6 16.9 22.6 21.2 Z" fill="#ffffff"/>
+  <!-- 作品缩略图网格 -->
+  <rect x="5" y="23.6" width="6.4" height="5" rx="1.4" fill="#ffffff" opacity="0.85"/>
+  <rect x="12.8" y="23.6" width="6.4" height="5" rx="1.4" fill="#ffffff" opacity="0.85"/>
+  <rect x="20.6" y="23.6" width="6.4" height="5" rx="1.4" fill="#ffffff" opacity="0.85"/>
+</svg>

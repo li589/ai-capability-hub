@@ -1,0 +1,11 @@
+{
+  "owner": "cccpan",
+  "slug": "chinese-sensitive-words",
+  "displayName": "Chinese Sensitive Words",
+  "latest": {
+    "version": "1.0.5",
+    "publishedAt": 1773906313649,
+    "commit": "https://github.com/openclaw/skills/commit/31b1d3e9c90b1aa57788413a6c74ff553a0c51ed"
+  },
+  "history": []
+}

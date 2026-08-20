@@ -1,0 +1,11 @@
+{
+  "name": "YouTube 提文案",
+  "installedAt": 1787227649586,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084834352295301120",
+  "description_zh": "输入YouTube链接一键提取视频文字稿，支持自动翻译中文",
+  "description_en": "Extract video transcripts from YouTube links with auto-translation",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_677b2257-013.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_677b2257-013.svg"
+}

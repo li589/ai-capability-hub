@@ -1,0 +1,20 @@
+{
+  "name": "蜜度拼音校对",
+  "installedAt": 1787228499188,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2074470893817290752",
+  "examples_zh": [
+    "帮我校对一下这段带拼音的课文",
+    "我有一份8000字的稿子要拼音校对",
+    "校对这段拼音：hěnjiǔyǐqián 很久以前"
+  ],
+  "examples_en": [
+    "Proofread this pinyin-annotated text",
+    "Pinyin-check an 8000-character manuscript",
+    "Verify pinyin for alternating pinyin-Han lines"
+  ],
+  "description_zh": "智能拼音校对工具，自动识别「拼音行+汉字行」交替格式并组装后送入校对，生成勘误表与多格式下载链接。",
+  "description_en": "Intelligent pinyin proofreading with auto-detection of pinyin-Han alternating format, generating errata tables.",
+  "iconSource": "letter:auto"
+}

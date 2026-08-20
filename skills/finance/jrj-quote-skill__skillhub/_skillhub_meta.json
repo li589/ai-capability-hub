@@ -1,0 +1,12 @@
+{
+  "slug": "jrj-quote-skill",
+  "name": "金融界A股行情数据",
+  "version": "1.0.1",
+  "installedAt": 1787228851817,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c5e5faab-b8e1-489d-a489-8b56ffc52c07.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c5e5faab-b8e1-489d-a489-8b56ffc52c07.png"
+}

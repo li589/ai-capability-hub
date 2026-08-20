@@ -1,0 +1,44 @@
+{
+  "schema_version": "preview-1.0",
+  "target": "workbuddy",
+  "target_display_name": "WORKBUDDY",
+  "status": "ready",
+  "platform_import_format": "workbuddy-skill-package",
+  "execution": {
+    "mode": "direct-mcp",
+    "server": "bazhuayu",
+    "endpoint": "https://mcp.bazhuayu.com",
+    "credential": "由客户在平台安全配置中提供 API Key",
+    "creates_cloud_tasks": true,
+    "quota_notice_zh": "免费版与个人版通过 MCP 调用每周最多 2000 条；团队版不限条数。"
+  },
+  "capability_catalog": "../../capability-catalog.json",
+  "skill_body_policy": "generated-package-copy-from-single-source",
+  "skills": [
+    {
+      "name": "amazon-keyword-collector",
+      "entry": "../../subskills/amazon-keyword-collector/SKILL.md",
+      "capability": "orchestrate"
+    },
+    {
+      "name": "amazon-product-list",
+      "entry": "../../subskills/amazon-product-list/SKILL.md",
+      "capability": "list"
+    },
+    {
+      "name": "amazon-product-details",
+      "entry": "../../subskills/amazon-product-details/SKILL.md",
+      "capability": "details"
+    },
+    {
+      "name": "amazon-product-reviews",
+      "entry": "../../subskills/amazon-product-reviews/SKILL.md",
+      "capability": "reviews"
+    },
+    {
+      "name": "amazon-csv-export",
+      "entry": "../../subskills/amazon-csv-export/SKILL.md",
+      "capability": "export"
+    }
+  ]
+}

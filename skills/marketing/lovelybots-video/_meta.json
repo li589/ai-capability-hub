@@ -1,0 +1,17 @@
+{
+  "owner": "georgegally",
+  "slug": "lovelybots-video",
+  "displayName": "LovelyBots",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774843651755,
+    "commit": "https://github.com/openclaw/skills/commit/28fef6ca5e1a571f0dd72a89129bee0ed520b7af"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1774430542824,
+      "commit": "https://github.com/openclaw/skills/commit/985531f932ec6d83c67a337464da687d0923f768"
+    }
+  ]
+}

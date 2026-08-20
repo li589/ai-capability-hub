@@ -1,0 +1,152 @@
+{
+  "name": "wecom",
+  "version": "1.1.2",
+  "description": "企业微信官方 CLI 工具，覆盖消息、邮件、文档、待办、日程、会议、微盘、通讯录等业务功能。支持机器人主动通知、新建与读取文档、文档搜索、新建与管理日程、预约与获取会议信息、新建与跟进待办、上传与获取微盘文件、发送与获取邮件、获取通讯录成员信息，以提升企业办公效率。",
+  "i18n": {
+    "display_name": {
+      "en": "WeCom",
+      "zh-cn": "企业微信",
+      "ja": "WeCom"
+    },
+    "description": {
+      "en": "WeCom official CLI tool covering messaging, email, documents, todos, schedules, meetings, drive, contacts and more. Supports bot proactive notifications, document creation/reading/search, schedule management, meeting booking/info retrieval, todo creation/tracking, drive file upload/download, email sending/receiving, and contact member lookup to boost enterprise office productivity.",
+      "zh-cn": "企业微信官方 CLI 工具，覆盖消息、邮件、文档、待办、日程、会议、微盘、通讯录等业务功能。支持机器人主动通知、新建与读取文档、文档搜索、新建与管理日程、预约与获取会议信息、新建与跟进待办、上传与获取微盘文件、发送与获取邮件、获取通讯录成员信息，以提升企业办公效率。",
+      "ja": "WeCom公式CLIツール。メッセージ、メール、ドキュメント、Todo、スケジュール、会議、ドライブ、連絡先などの業務機能を網羅。ボットによるプッシュ通知、ドキュメントの作成・読み取り・検索、スケジュールの作成・管理、会議の予約・情報取得、Todoの作成・フォロー、ドライブファイルのアップロード・取得、メールの送受信、連絡先メンバー情報の取得をサポートし、企業のオフィス生産性を向上させます。"
+    }
+  },
+  "author": {
+    "name": "WeCom",
+    "url": "https://work.weixin.qq.com"
+  },
+  "homepage": "https://github.com/WecomTeam/wecom-cli",
+  "repository": "https://github.com/WecomTeam/wecom-cli",
+  "license": "MIT",
+  "keywords": [
+    "wecom",
+    "wechat-work",
+    "enterprise-wechat",
+    "messaging",
+    "contacts",
+    "email",
+    "meeting",
+    "schedule",
+    "todo",
+    "document",
+    "spreadsheet",
+    "smartsheet",
+    "smartpage",
+    "drive",
+    "disk"
+  ],
+  "binaries": [
+    {
+      "name": "wecom-cli",
+      "path": "bin/wecom-cli",
+      "required": true,
+      "executable": true,
+      "platforms": {
+        "darwin-arm64": {
+          "sha256": "48a257f0b46b638170d3c2628c79019a6a1d0d8b689c9fc3afb4d53caec44236",
+          "file_size": 3488041,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/wecom-cli/1.1.0/darwin-arm64-1786972469164559140.zip"
+            },
+            {
+              "source_group": "sg",
+              "url": "https://p16-market-sg.ibyteimg.com/tos-alisg-i-qmhakdvxf5-sg/binaries/wecom-cli/1.1.0/darwin-arm64-1786973834358351784.zip"
+            }
+          ]
+        },
+        "darwin-x64": {
+          "sha256": "241b9ef8bfd65293caa243bbec7a05fd702c4f70f17274ff9ad55049027bb740",
+          "file_size": 3816662,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/wecom-cli/1.1.0/darwin-x64-1786972540060573227.zip"
+            },
+            {
+              "source_group": "sg",
+              "url": "https://p16-market-sg.ibyteimg.com/tos-alisg-i-qmhakdvxf5-sg/binaries/wecom-cli/1.1.0/darwin-x64-1786973818669580977.zip"
+            }
+          ]
+        },
+        "win32-x64": {
+          "sha256": "f77cee1d19e0be42430e05495314b41fbfe80ba19faabf24e787a18896f97e2b",
+          "file_size": 4229161,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/wecom-cli/1.1.0/win32-x64-1786973328984336195.zip"
+            },
+            {
+              "source_group": "sg",
+              "url": "https://p16-market-sg.ibyteimg.com/tos-alisg-i-qmhakdvxf5-sg/binaries/wecom-cli/1.1.0/win32-x64-1786973813856212579.zip"
+            }
+          ]
+        },
+        "linux-x64": {
+          "sha256": "9d81d40f176fdb092608dca66814834d269c81d43c6c73c32ed92e9c30e94956",
+          "file_size": 4918332,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/wecom-cli/1.1.0/linux-x64-1786972530416083976.zip"
+            },
+            {
+              "source_group": "sg",
+              "url": "https://p16-market-sg.ibyteimg.com/tos-alisg-i-qmhakdvxf5-sg/binaries/wecom-cli/1.1.0/linux-x64-1786973824005300853.zip"
+            }
+          ]
+        },
+        "linux-arm64": {
+          "sha256": "e2d17a3cd6ad718f1dfb0bb0e7e9487d6b7f2d41c99ff0db609a3ec940cd433d",
+          "file_size": 4671440,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/wecom-cli/1.1.0/linux-arm64-1786972503014657157.zip"
+            },
+            {
+              "source_group": "sg",
+              "url": "https://p16-market-sg.ibyteimg.com/tos-alisg-i-qmhakdvxf5-sg/binaries/wecom-cli/1.1.0/linux-arm64-1786973829055087038.zip"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "env": {
+    "WECOM_ACCESS_TOKEN": "${connector.wecom.ACCESS_TOKEN}",
+    "WECOM_BOT_ID": "${connector.wecom.metadata.bot_id}",
+    "WECOM_SECRET": "${connector.wecom.metadata.secret}"
+  },
+  "skills": "./skills/",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "WeCom",
+    "shortDescription": "企业微信官方CLI：消息、邮件、文档、待办、日程、会议、微盘、通讯录",
+    "longDescription": "企业微信官方 CLI 工具，覆盖消息、邮件、文档、待办、日程、会议、微盘、通讯录等业务功能。支持机器人主动通知、新建与读取文档、文档搜索、新建与管理日程、预约与获取会议信息、新建与跟进待办、上传与获取微盘文件、发送与获取邮件、获取通讯录成员信息，以提升企业办公效率。",
+    "developerName": "WeCom",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://work.weixin.qq.com",
+    "privacyPolicyURL": "https://work.weixin.qq.com/nl/privacypolicy",
+    "termsOfServiceURL": "https://work.weixin.qq.com/nl/service",
+    "defaultPrompt": [
+      "通过企业微信给同事发送消息",
+      "查看我最近的企业微信聊天记录",
+      "帮我创建一个企业微信会议"
+    ],
+    "brandColor": "#2BAD13",
+    "composerIcon": "./assets/app-icon.svg",
+    "logo": "./assets/app-icon.svg",
+    "screenshots": []
+  }
+}

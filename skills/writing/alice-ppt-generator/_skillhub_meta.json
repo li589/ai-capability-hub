@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-幻灯片",
+  "installedAt": 1787227757934,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2086742383467618304",
+  "description_zh": "万得 Alice 幻灯片（PPT 生成）CLI：根据主题与结构化内容自动生成专业 PPT 报告，支持标题页、目录、章节页、图文排版与结论总结，适用于投资与金融汇报、商业与管理汇报、产品与市场展示、培训与教育课件等场景。",
+  "description_en": "Use this skill for gated PPTX delivery when the user needs a finance-grade or business-grade deck with multi-stage confirmation, structured quality gates, artifact-driven recovery, or controlled incremental revision. Use it for formal PPT generation and delivery workflows, not lightweight one-off PPT reading.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_21afe664-abc.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_21afe664-abc.jpg"
+}

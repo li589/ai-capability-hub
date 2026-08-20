@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:browser",
+  "registry": "trae-remote-official",
+  "plugin_name": "browser",
+  "version": "1.0.3",
+  "marketplace_plugin_id": "1adce287-4e0c-4108-beff-39717341217b",
+  "remote_installed_plugin_id": "builtin:trae-remote-official:browser",
+  "checksum": "f18792cff58338fa15abd4e4603b342a9edf4d529b92b326bd4bafc65adbb04a",
+  "file_size": 5982,
+  "installed_at": 1787227200619
+}

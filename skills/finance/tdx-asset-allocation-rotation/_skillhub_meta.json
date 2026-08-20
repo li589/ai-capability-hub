@@ -1,0 +1,10 @@
+{
+  "name": "配置轮动",
+  "installedAt": 1787228642454,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2085676000918839296",
+  "description_zh": "基于宏观象限给出股/债/商品/现金/海外大类战略配置比例，并以\"景气 + 估值 + 资金\"三维打分输出行业超配/标配/低配轮动信号。补齐资产配置与行业轮动维度。",
+  "description_en": "Provide strategic allocation ratios across asset classes (equities / bonds / commodities / cash / overseas) based on macroeconomic regimes, and output sector overweight / neutral / underweight rotation signals using a three-dimension scoring model (prosperity + valuation + capital flow). Covers both top-down asset allocation and sector rotation.",
+  "iconSource": "letter:auto"
+}

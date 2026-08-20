@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class="card"><h1>业务模块</h1>{% if objects %}<div class="grid">{% for o in objects %}<a class="module" href="{{ url_for('business.list_records',key=o.key) }}"><b>{{o.label}}</b><span>{{o.fields|length}} 个字段</span></a>{% endfor %}</div>{% else %}<p>当前项目尚未生成业务对象。</p>{% endif %}</section>{% endblock %}

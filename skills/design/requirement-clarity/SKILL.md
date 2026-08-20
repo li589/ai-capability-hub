@@ -1,0 +1,22 @@
+---
+name: requirement-clarity
+description: 从模糊自然语言中梳理清晰需求。Main从用户获取需求时使用，下游Agent从Main获取任务指派时使用。
+install_source: official
+install_method: download
+skill_id: official_5GSxllno
+enabled_at: 1787232257179
+version: 1.0.0
+name_zh: 需求梳理协议
+---
+
+## 需求梳理协议
+
+### 当你是Main（从用户获取需求时）
+1. 复述你理解的核心问题（一句话）
+2. 存在歧义时提问："你是想问A还是B？"
+3. 确认后输出结构化任务描述：核心问题、需验证的声明列表、需搜索的信息类型、期望输出格式
+
+### 当你是下游Agent（从Main获取任务指派时）
+1. 先确认自己理解了什么
+2. 不清晰时向Main请求澄清（通过 sessions_send 回复）
+3. 确认理解一致后才开始执行

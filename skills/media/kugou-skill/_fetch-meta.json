@@ -1,0 +1,9 @@
+{
+  "skill_name": "kugou-skill",
+  "upload_type": "new",
+  "source_type": "git",
+  "git_url": "https://www.npmjs.com/package/@kg-ai/kugou-skill",
+  "distribution": "npm",
+  "npm_package": "@kg-ai/kugou-skill",
+  "note": "通过 npm 全局包 @kg-ai/kugou-skill 分发的 CLI 型 skill；npm 包页面为公开可回溯来源标识（该包 registry 未登记 git repository 字段）"
+}

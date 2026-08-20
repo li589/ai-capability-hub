@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Precision Ledger support kit</title>
+  <desc id="desc">Original cobalt ledger markers, ruled pattern, decision field, and chart marks.</desc>
+  <defs>
+    <pattern id="route-pattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M0 23.5H24M23.5 0V24" stroke="#172033" stroke-opacity=".14"/>
+    </pattern>
+    <g id="route-marker"><circle cx="5" cy="5" r="5" fill="#2856A3"/><path d="M14 5h18" stroke="#172033" stroke-width="2"/></g>
+    <g id="route-chart-mark"><rect width="10" height="30" fill="#2856A3"/><rect x="14" y="12" width="10" height="18" fill="#2856A3" opacity=".45"/><circle cx="36" cy="8" r="5" fill="#C44D32"/></g>
+  </defs>
+  <rect width="320" height="180" fill="#FFFFFF"/>
+  <rect x="16" y="16" width="136" height="72" fill="url(#route-pattern)"/>
+  <rect id="route-focus-field" x="168" y="16" width="136" height="72" fill="#172033"/>
+  <path d="M184 68h68" stroke="#FFFFFF" stroke-width="5"/><circle cx="278" cy="52" r="10" fill="#C44D32"/>
+  <g transform="translate(16 112)"><use href="#route-marker"/></g>
+  <g transform="translate(238 118)"><use href="#route-chart-mark"/></g>
+</svg>

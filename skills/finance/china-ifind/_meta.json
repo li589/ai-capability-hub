@@ -1,0 +1,11 @@
+{
+  "owner": "sinabs",
+  "slug": "china-ifind",
+  "displayName": "China iFinD Skill(同花顺Skill)",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1773110815309,
+    "commit": "https://github.com/openclaw/skills/commit/d3151d350cda5fed0a14a72110bc4a3cc4db4bcd"
+  },
+  "history": []
+}

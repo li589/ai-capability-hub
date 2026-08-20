@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d">
+  <title id="t">Verdict Sheet layout guide</title>
+  <desc id="d">Open editorial verdict, full-width exhibit, compact signal strip, and source ledger.</desc>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <g fill="#111412">
+    <rect x="64" y="54" width="170" height="12"/><rect x="64" y="116" width="650" height="46"/>
+    <rect x="64" y="178" width="500" height="18"/><rect x="844" y="116" width="370" height="80"/>
+  </g>
+  <rect x="64" y="252" width="1150" height="230" rx="2" fill="#dfff3f"/>
+  <g fill="#111412">
+    <rect x="92" y="280" width="350" height="20"/><rect x="92" y="330" width="1060" height="2"/>
+    <rect x="92" y="370" width="980" height="14"/><rect x="92" y="408" width="780" height="14"/>
+  </g>
+  <g fill="#e5e6df"><rect x="64" y="520" width="270" height="92"/><rect x="354" y="520" width="270" height="92"/><rect x="644" y="520" width="270" height="92"/><rect x="934" y="520" width="280" height="92"/></g>
+  <g fill="#111412"><rect x="64" y="654" width="1150" height="2"/><rect x="64" y="676" width="460" height="10"/></g>
+</svg>

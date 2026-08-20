@@ -1,0 +1,11 @@
+{
+  "owner": "luongkim20222022-crypto",
+  "slug": "logistics-advisor-skill",
+  "displayName": "物流与关税优化师",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775295087523,
+    "commit": "https://github.com/openclaw/skills/commit/bdcbe719b86be6395c20effb7ef6f92bb9ad8b6a"
+  },
+  "history": []
+}

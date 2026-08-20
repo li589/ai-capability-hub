@@ -1,0 +1,11 @@
+{
+  "name": "腾讯云表格识别 OCR",
+  "installedAt": 1787227743547,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2059984354862452736",
+  "description_zh": "调用腾讯云表格识别v3接口，支持常规表格、无线表格、多表格、嵌套表格和旋转表格的识别。返回每个单元格的文字内容，支持导出为Excel文件。适用于各类复杂表格图片/PDF的结构化提取。",
+  "description_en": "Tencent Cloud RecognizeTableAccurateOCR API for table recognition. Supports bordered, borderless, nested, multi-table, and rotated table images/PDFs with Excel export capability.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984354862452736/e5ddb6a40b0003ec.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984354862452736/e5ddb6a40b0003ec.png"
+}

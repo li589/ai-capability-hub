@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "pkulaw": {
+      "type": "http",
+      "url": "https://apim-gateway.pkulaw.com/mcp-law-agg/1.0.0/mcp",
+      "timeout": 60,
+      "headers": {
+        "Authorization": "Bearer ${connector.pkulaw.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

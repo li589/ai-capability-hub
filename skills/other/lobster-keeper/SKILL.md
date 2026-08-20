@@ -1,0 +1,47 @@
+---
+name: lobster-keeper
+description: 自动执行日常维护：状态检查、自我复盘、记忆流动、任务记录。基于龙虾饲养员的六条经验。
+version: 1.0.0
+author: 你的名字
+tags:
+  - 维护
+  - 记忆
+  - 复盘
+  - 自动化
+trigger:
+  keywords:
+    - 运行龙虾管家
+    - 日常维护
+    - 自我进化
+install_source: official
+install_method: download
+skill_id: official_2hm6z7C2
+enabled_at: 1787232003033
+name_zh: 龙虾管家
+---
+
+# 🦞 龙虾管家技能说明书
+
+当你被调用时，请按以下步骤执行日常维护任务。每一步都可以调用内置工具（如 `read`, `write`, `exec`, `list_skills` 等）来完成。
+
+## 📋 准备工作
+- 确认当前工作区路径（可通过环境变量 `WORKSPACE` 或默认 `~/.openclaw/workspace` 获取）。
+- 确保你有读写工作区内文件的权限。
+
+## 🔍 步骤1：检查自身状态
+**目标**：查明当前智能体的状态、工作进度和可用技能。
+
+1. **读取核心文件**：
+   - 使用 `read` 工具读取 `IDENTITY.md`、`SOUL.md`、`USER.md`，了解基本设定。
+   - 读取 `MEMORY.md` 和今天的日志文件（`memory/YYYY-MM-DD.md`），了解近期活动和长期记忆。
+2. **检查技能可用性**：
+   - 调用 `list_skills` 工具获取当前已安装的技能列表（名称+描述）。
+   - 对比 `TOOLS.md` 中定义的技能，确保没有缺失。
+3. **生成状态摘要**：
+   - 将以上信息整理成一份简短的状态报告，格式如下：
+     ```markdown
+     ## 状态报告 (YYYY-MM-DD HH:MM)
+     - 核心身份：[从IDENTITY/SOUL中提取的关键词]
+     - 今日已处理任务：[从今日日志中统计]
+     - 可用技能数量：[技能数量]
+     - 待办事项：[从MEMORY.md中查找未完成的任务]

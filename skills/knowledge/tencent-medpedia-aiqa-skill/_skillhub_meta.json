@@ -1,0 +1,21 @@
+{
+  "name": "腾讯医典知识库问答",
+  "installedAt": 1787227581754,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2076988185622831104",
+  "examples_zh": [
+    "高血压平时要注意什么",
+    "布洛芬的用法用量和禁忌是什么",
+    "儿童发烧到多少度需要就医"
+  ],
+  "examples_en": [
+    "What should I pay attention to with high blood pressure?",
+    "What are the dosage and contraindications of ibuprofen?",
+    "At what temperature should a child with fever see a doctor?"
+  ],
+  "description_zh": "检索腾讯医典官方科普知识库，在严格\"只引用、不编造\"的约束下整合归纳，输出结构清晰、句句可溯源的健康答案。",
+  "description_en": "Query Tencent Medpedia's official knowledge base to answer health questions, every point traceable.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2076988185622831104/47177e29aafa40d0.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2076988185622831104/47177e29aafa40d0.png"
+}

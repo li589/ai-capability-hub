@@ -1,0 +1,11 @@
+{
+  "name": "抖音涨粉账号推荐",
+  "installedAt": 1787227691841,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2085649490493906944",
+  "description_zh": "查询抖音各赛道涨粉日/周/月榜排行，含粉丝增量、涨粉率与三维深度分析",
+  "description_en": "Query Douyin follower growth daily/weekly/monthly rankings across 27 categories",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_e00db177-cde.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_e00db177-cde.svg"
+}

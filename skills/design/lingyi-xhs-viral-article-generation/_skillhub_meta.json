@@ -1,0 +1,10 @@
+{
+  "name": "小红书爆款图文生成",
+  "installedAt": 1787228555664,
+  "source": "marketplace",
+  "version": "0.2.0",
+  "skillId": "skill_2088578250240638976",
+  "description_zh": "【零一数科·出品】小红书爆款图文生成（付费版）。写不出抓人的种草文、憋标题憋正文半天发不出去？给它产品/话题和几条卖点，选好平台、种草结构和品牌调性，几分钟出一版可直接发布的种草图文方案：钩子标题 + 能种草的正文文案，还能顺手出 AI 生图方案和提示词。支持小红书、公众号等平台，可选上传参考图让生成更贴你的实拍。把「写种草」从自己憋变成按几下就有底稿。触发词：小红书种草、公众号种草、种草文案、种草图文生成、AI种草。需要 python3 和技能目录下 config.json 中的 LY_API_KEY。",
+  "description_en": "[Lingyi Tech] viral-article-generation. Struggling to write seeding copy that actually converts, or stuck on headlines and body for hours? Give it your product/topic and a few selling points, pick the platform, seeding structure, and brand tone — get a ready-to-publish seeding article plan in minutes: a hook title plus body copy that sells, with an optional AI image plan and prompts on the side. Supports Xiaohongshu, WeChat Official Accounts, and more; upload reference images (up to 3) to make the output match your real product shots. Turn writing seeding posts from a painful grind into a few clicks to a solid draft. Triggers: 小红书种草, 公众号种草, 种草文案, 种草图文生成, AI种草. Requires python3 and LY_API_KEY in skill config.json.",
+  "iconSource": "letter:auto"
+}

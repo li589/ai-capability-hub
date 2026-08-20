@@ -1,0 +1,12 @@
+{
+  "slug": "official-project",
+  "name": "政采与工程招标项目提前发现助手",
+  "version": "1.0.2",
+  "installedAt": 1787228766576,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png"
+}

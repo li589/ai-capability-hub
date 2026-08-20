@@ -1,0 +1,20 @@
+{
+  "name": "富途OpenD安装",
+  "installedAt": 1787228661642,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082632709165056",
+  "examples_zh": [
+    "在我的 macOS 电脑上安装富途 OpenD，并升级 Python futu-api SDK 到最新版本。",
+    "检查当前 Linux 服务器是否已安装 Futu OpenD；如果版本过旧，请下载并替换为最新版。",
+    "帮我配置 Windows 的富途开发环境，安装 OpenD 后验证 futu-api 能成功连接。"
+  ],
+  "examples_en": [
+    "Install Futu OpenD on my macOS machine and upgrade the Python futu-api SDK to the latest version.",
+    "Check whether Futu OpenD is installed on this Linux server; if it is outdated, download and replace it with the latest version.",
+    "Set up the Futu development environment on Windows, install OpenD, and verify that futu-api can connect successfully."
+  ],
+  "description_zh": "富途 OpenD 一键安装与 SDK 升级（Win/Mac/Linux）",
+  "description_en": "Futu OpenD one-click install and Python SDK upgrade (Win/Mac/Linux)",
+  "iconSource": "letter:auto"
+}

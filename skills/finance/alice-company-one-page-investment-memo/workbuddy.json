@@ -1,0 +1,6 @@
+{
+  "display_name": "公司一页纸",
+  "display_name_en": "Company One-Page Investment Memo",
+  "description_zh": "万得 Alice 公司一页纸 CLI：为上市公司生成结构化一页纸投资报告，涵盖公司速览、投资逻辑、催化剂、财务估值、风险评估与操作建议，支持 A 股、港股、美股等全球市场。",
+  "description_en": "Wind Alice Company One-Page Investment Memo CLI — generates structured one-page investment reports for listed companies across global markets (A-shares, HK, US, etc.), covering company overview, investment thesis, catalysts & tracking metrics, financial & valuation analysis, risk assessment, and actionable recommendations."
+}

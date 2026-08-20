@@ -1,0 +1,10 @@
+{
+  "name": "投资日历",
+  "installedAt": 1787227651287,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084562649004244992",
+  "description_zh": "查财经事件时间，分析事件影响，支持全球 20+ 国家、单月 400+ 条事件，并提供 FOMC/非农/CPI 等重大事件的市场影响手册辅助决策。",
+  "description_en": "Track economic events and analyze their market impact. Covering 20+ countries​ with over 400 events per month, the platform provides decision-making support through expert guides on high-impact releases—including FOMC announcements, Non-Farm Payrolls (NFP), and CPI data.",
+  "iconSource": "letter:auto"
+}

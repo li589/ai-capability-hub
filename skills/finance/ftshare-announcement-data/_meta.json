@@ -1,0 +1,17 @@
+{
+  "owner": "shawn92",
+  "slug": "ftshare-announcement-data",
+  "displayName": "Skills of A-share announcement data released by ft.tech.",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773747152880,
+    "commit": "https://github.com/openclaw/skills/commit/dfa4554d447a9eaa2a8a0a9cf75bb8e14535ee53"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773332522778,
+      "commit": "https://github.com/openclaw/skills/commit/cbaa7d750ea28f62eacfbe15063c55d59723e6cd"
+    }
+  ]
+}

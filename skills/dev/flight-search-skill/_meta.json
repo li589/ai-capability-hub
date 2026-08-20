@@ -1,0 +1,11 @@
+{
+  "owner": "marcorabelo",
+  "slug": "flight-search-skill",
+  "displayName": "Flight Search",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1772501561557,
+    "commit": "https://github.com/openclaw/skills/commit/c70f4020803c93e8f26b9be38c660f3e217ba8bf"
+  },
+  "history": []
+}

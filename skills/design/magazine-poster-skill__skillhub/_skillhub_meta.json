@@ -1,0 +1,11 @@
+{
+  "slug": "magazine-poster-skill",
+  "name": "海报生成器",
+  "version": "1.0.0",
+  "installedAt": 1787228909625,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "browser_type",
+  "description": "Type text into editable element\n",
+  "arguments": {
+    "properties": {
+      "clear": {
+        "description": "Whether to clear existing content before typing. Use this to replace the current value instead of appending to it. Defaults to false.",
+        "type": "boolean"
+      },
+      "element": {
+        "description": "Human-readable element description used to obtain permission to interact with the element",
+        "type": "string"
+      },
+      "ref": {
+        "description": "Exact target element reference from the page snapshot",
+        "type": "string"
+      },
+      "slowly": {
+        "description": "Whether to type one character at a time. Useful for triggering key handlers in the page. By default entire text is filled in at once.",
+        "type": "boolean"
+      },
+      "submit": {
+        "description": "Whether to submit entered text (press Enter after)",
+        "type": "boolean"
+      },
+      "text": {
+        "description": "Text to type into the element",
+        "type": "string"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "element",
+      "ref",
+      "text"
+    ],
+    "type": "object"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "value-investing-suite",
+  "displayName": "价值投资研究套件",
+  "version": "1.0.0",
+  "description": "A value-investing research toolkit based on the methodologies of Buffett, Munger, Duan Yongping, and Li Lu. Covers deep company research, earnings reading, industry screening, portfolio management, and thinking tools, with bundled Python tools for exact financial calculation and report auditing. Ported from the open-source AI Berkshire project (xbtlin/ai-berkshire).",
+  "descriptionZh": "基于巴菲特、芒格、段永平、李录四大师方法论的价值投资研究套件。覆盖公司深度研究、财报精读、行业筛选、持仓管理与思维工具，内置精确金融计算与报告审计的 Python 工具。移植自开源项目 AI Berkshire（xbtlin/ai-berkshire）。",
+  "author": {
+    "name": "AI Berkshire (xbtlin)",
+    "url": "https://github.com/xbtlin/ai-berkshire"
+  },
+  "category": "finance",
+  "tags": [
+    "value-investing",
+    "equity-research",
+    "buffett",
+    "portfolio",
+    "earnings",
+    "investment"
+  ],
+  "skills": [
+    "./skills/四大师投研",
+    "./skills/投研团队",
+    "./skills/管理层研究",
+    "./skills/财报精读",
+    "./skills/行业研究",
+    "./skills/行业漏斗筛选",
+    "./skills/去劣筛选",
+    "./skills/买入Checklist",
+    "./skills/组合复盘",
+    "./skills/论文追踪",
+    "./skills/论文漂移检测",
+    "./skills/新闻脉搏",
+    "./skills/段永平问答",
+    "./skills/财务数据规范"
+  ],
+  "qoderMarket": {
+    "source": "apphub",
+    "extensionType": "plugin",
+    "pluginId": "1317601f-be84-463b-a207-de8bf7d74e3a",
+    "version": "1.0.0",
+    "contentUpdatedAt": 1786519279395,
+    "installedAt": 1787230737957
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "client_only_params": [],
+  "description": "获取 API Key 授权范围内的所有应用",
+  "display_name": "查询应用列表",
+  "domain": "应用与表单",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/app/list",
+  "method": "POST",
+  "name": "jdy_list_apps",
+  "params": {
+    "limit": {
+      "default": 100,
+      "description": "Number of apps per page, 1-100 (default 100)",
+      "type": "integer"
+    },
+    "skip": {
+      "default": 0,
+      "description": "Number of apps to skip for pagination (default 0)",
+      "type": "integer"
+    }
+  },
+  "path_params": [],
+  "required_params": [],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

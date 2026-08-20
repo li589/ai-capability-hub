@@ -1,0 +1,20 @@
+{
+  "name": "cli-anything-hub",
+  "installedAt": 1785784814567,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053081466713624576",
+  "examples_zh": [
+    "在 CLI Anything 目录里找适合 AI 智能体调用的图片生成或设计类 CLI 工具。",
+    "帮我发现可以提升命令行工作流效率的 agent-native 生产力 CLI，并说明安装方式。",
+    "为一个需要调用多种 AI 平台的智能体，推荐可集成的 CLI 工具组合。"
+  ],
+  "examples_en": [
+    "Find agent-native CLI tools in the CLI Anything catalog for image generation or design workflows.",
+    "Discover productivity CLIs that improve command-line workflows for agents and explain how to install them.",
+    "Recommend a set of CLI tools for an agent that needs to integrate with multiple AI platforms."
+  ],
+  "description_zh": "发现并安装面向 AI 智能体的 CLI 工具市场（创意、生产力、AI 平台等）",
+  "description_en": "Discover & install agent-native CLIs for creative, productivity & AI tools",
+  "iconSource": "letter:auto"
+}

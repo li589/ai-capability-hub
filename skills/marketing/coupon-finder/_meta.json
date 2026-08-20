@@ -1,0 +1,17 @@
+{
+  "owner": "ayue-oss",
+  "slug": "coupon-finder",
+  "displayName": "优惠券查询·场景快取",
+  "latest": {
+    "version": "1.0.5",
+    "publishedAt": 1773412409624,
+    "commit": "https://github.com/openclaw/skills/commit/d13459e35b636034557ad776e2884da33f82a41b"
+  },
+  "history": [
+    {
+      "version": "1.0.2",
+      "publishedAt": 1773400849093,
+      "commit": "https://github.com/openclaw/skills/commit/19f90da1a70ef316b50dcdd5b83deae9e2c4562d"
+    }
+  ]
+}

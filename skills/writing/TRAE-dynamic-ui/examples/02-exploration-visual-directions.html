@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Empty State Design Directions</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #9ca3af;
+  --color-border-tertiary: #e5e7eb;
+  --color-border-secondary: #d1d5db;
+  --color-border-primary: #9ca3af;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --color-sky-1: #f0f9ff; --color-sky-2: #e0f2fe; --color-sky-3: #bae6fd;
+  --color-sky-4: #7dd3fc; --color-sky-5: #38bdf8; --color-sky-6: #0ea5e9;
+  --color-sky-7: #0284c7; --color-sky-8: #0369a1; --color-sky-9: #075985;
+  --color-sky-10: #0c4a6e;
+  --color-mint-1: #ecfdf5; --color-mint-2: #d1fae5; --color-mint-3: #a7f3d0;
+  --color-mint-4: #6ee7b7; --color-mint-5: #34d399; --color-mint-6: #10b981;
+  --color-mint-7: #059669; --color-mint-8: #047857; --color-mint-9: #065f46;
+  --color-mint-10: #064e3b;
+  --color-violet-1: #f5f3ff; --color-violet-2: #ede9fe; --color-violet-3: #ddd6fe;
+  --color-violet-4: #c4b5fd; --color-violet-5: #a78bfa; --color-violet-6: #8b5cf6;
+  --color-violet-7: #7c3aed; --color-violet-8: #6d28d9; --color-violet-9: #5b21b6;
+  --color-violet-10: #4c1d95;
+  --color-amber-1: #fffbeb; --color-amber-2: #fef3c7; --color-amber-3: #fde68a;
+  --color-amber-4: #fcd34d; --color-amber-5: #fbbf24; --color-amber-6: #f59e0b;
+  --color-amber-7: #d97706; --color-amber-8: #b45309; --color-amber-9: #92400e;
+  --color-amber-10: #78350f;
+  --color-slate-1: #f8fafc; --color-slate-2: #f1f5f9; --color-slate-3: #e2e8f0;
+  --color-slate-4: #cbd5e1; --color-slate-5: #94a3b8; --color-slate-6: #64748b;
+  --color-slate-7: #475569; --color-slate-8: #334155; --color-slate-9: #1e293b;
+  --color-slate-10: #0f172a;
+  --color-coral-1: #fff5f5; --color-coral-2: #fee2e2; --color-coral-3: #fecaca;
+  --color-coral-4: #fca5a5; --color-coral-5: #f87171; --color-coral-6: #ef4444;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+  padding: 32px;
+  line-height: 1.6;
+}
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--color-violet-7);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.header { margin-bottom: 24px; }
+.header h1 { font-size: 22px; font-weight: 700; }
+.header p { color: var(--color-text-secondary); font-size: 14px; margin-top: 4px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+.card {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.15s;
+  position: relative;
+  border: 2px solid transparent;
+}
+.card:hover { box-shadow: var(--shadow-lg); transform: translateY(-2px); }
+.card.selected { border-color: var(--color-violet-5); }
+.card-left-accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+.card-left-accent.sky { background: var(--color-sky-5); }
+.card-left-accent.mint { background: var(--color-mint-5); }
+.card-left-accent.violet { background: var(--color-violet-5); }
+.card-left-accent.amber { background: var(--color-amber-5); }
+.card-inner { padding: 20px 20px 20px 24px; }
+.card-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+.card-name { font-size: 15px; font-weight: 700; }
+.badge {
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: var(--color-violet-5);
+  color: white;
+  font-size: 14px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+.card.selected .badge { display: flex; }
+.preview {
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border-tertiary);
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  overflow: hidden;
+  position: relative;
+}
+/* Minimal */
+.preview-minimal {
+  background: var(--color-background-secondary);
+}
+.preview-minimal .pm-icon {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--color-sky-2);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 10px;
+}
+.preview-minimal .pm-icon svg { width: 20px; height: 20px; color: var(--color-sky-7); }
+.preview-minimal .pm-text { font-size: 13px; color: var(--color-text-secondary); }
+.preview-minimal .pm-btn {
+  margin-top: 8px;
+  padding: 5px 16px;
+  border-radius: 6px;
+  background: var(--color-sky-6);
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  border: none;
+}
+/* Illustrated */
+.preview-illustrated { background: var(--color-mint-1); }
+.preview-illustrated .pi-art {
+  display: flex; gap: 6px; margin-bottom: 10px;
+}
+.preview-illustrated .pi-art span {
+  display: block; border-radius: 6px;
+}
+.preview-illustrated .pi-art .bar1 { width: 30px; height: 48px; background: var(--color-mint-3); }
+.preview-illustrated .pi-art .bar2 { width: 30px; height: 64px; background: var(--color-mint-4); }
+.preview-illustrated .pi-art .bar3 { width: 30px; height: 36px; background: var(--color-mint-2); }
+.preview-illustrated .pi-art .circle { width: 28px; height: 28px; border-radius: 50%; background: var(--color-mint-5); align-self: flex-end; }
+.preview-illustrated .pi-text { font-size: 13px; color: var(--color-mint-9); font-weight: 500; }
+/* Playful */
+.preview-playful { background: var(--color-violet-1); }
+.preview-playful .pp-emoji { font-size: 42px; margin-bottom: 6px; }
+.preview-playful .pp-heading { font-size: 14px; font-weight: 700; color: var(--color-violet-9); }
+.preview-playful .pp-sub { font-size: 11px; color: var(--color-violet-6); margin-top: 2px; }
+/* Instructional */
+.preview-instructional { background: var(--color-amber-1); padding: 16px; align-items: flex-start; }
+.preview-instructional .pi-steps { width: 100%; }
+.step-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 0;
+}
+.step-num {
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: var(--color-amber-5);
+  color: var(--color-amber-10);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.step-label { font-size: 12px; color: var(--color-amber-9); }
+.step-row .step-arrow { color: var(--color-amber-4); font-size: 10px; margin-left: auto; }
+
+.card-desc { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+.card-tag {
+  display: inline-block;
+  margin-top: 10px;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+.tag-sky { background: var(--color-sky-1); color: var(--color-sky-8); }
+.tag-mint { background: var(--color-mint-1); color: var(--color-mint-8); }
+.tag-violet { background: var(--color-violet-1); color: var(--color-violet-8); }
+.tag-amber { background: var(--color-amber-1); color: var(--color-amber-8); }
+
+.footer {
+  text-align: center;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  padding: 8px;
+}
+.footer strong { color: var(--color-violet-7); }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="eyebrow">Exploration · Visual Directions</div>
+  <h1>Empty State Design Options</h1>
+  <p>Four treatment directions for the "No deployments yet" empty state in the dashboard. Click to select your preferred direction.</p>
+</div>
+
+<div class="grid">
+  <!-- Minimal -->
+  <div class="card" data-direction="minimal" onclick="selectCard(this)">
+    <div class="card-left-accent sky"></div>
+    <div class="card-inner">
+      <div class="card-head">
+        <span class="card-name">A · Minimal</span>
+        <span class="badge">✓</span>
+      </div>
+      <div class="preview preview-minimal">
+        <div class="pm-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+        </div>
+        <span class="pm-text">No deployments yet</span>
+        <button class="pm-btn">Deploy now</button>
+      </div>
+      <p class="card-desc">Clean icon + single CTA. Least visual weight — ideal for power users who already know the product.</p>
+      <span class="card-tag tag-sky">LOW FRICTION</span>
+    </div>
+  </div>
+
+  <!-- Illustrated -->
+  <div class="card" data-direction="illustrated" onclick="selectCard(this)">
+    <div class="card-left-accent mint"></div>
+    <div class="card-inner">
+      <div class="card-head">
+        <span class="card-name">B · Illustrated</span>
+        <span class="badge">✓</span>
+      </div>
+      <div class="preview preview-illustrated">
+        <div class="pi-art">
+          <span class="bar1"></span>
+          <span class="bar2"></span>
+          <span class="bar3"></span>
+          <span class="circle"></span>
+        </div>
+        <span class="pi-text">Your pipeline is ready to go</span>
+      </div>
+      <p class="card-desc">Abstract shapes hint at data flowing through a pipeline. Warm and approachable without being childish.</p>
+      <span class="card-tag tag-mint">BRAND-ALIGNED</span>
+    </div>
+  </div>
+
+  <!-- Playful -->
+  <div class="card" data-direction="playful" onclick="selectCard(this)">
+    <div class="card-left-accent violet"></div>
+    <div class="card-inner">
+      <div class="card-head">
+        <span class="card-name">C · Playful</span>
+        <span class="badge">✓</span>
+      </div>
+      <div class="preview preview-playful">
+        <div class="pp-emoji">🚀</div>
+        <div class="pp-heading">Ready for liftoff!</div>
+        <div class="pp-sub">Create your first deployment to get started</div>
+      </div>
+      <p class="card-desc">Emoji-forward with a personality-driven headline. Great for onboarding, can feel unserious for enterprise.</p>
+      <span class="card-tag tag-violet">HIGH ENGAGEMENT</span>
+    </div>
+  </div>
+
+  <!-- Instructional -->
+  <div class="card" data-direction="instructional" onclick="selectCard(this)">
+    <div class="card-left-accent amber"></div>
+    <div class="card-inner">
+      <div class="card-head">
+        <span class="card-name">D · Instructional</span>
+        <span class="badge">✓</span>
+      </div>
+      <div class="preview preview-instructional">
+        <div class="pi-steps">
+          <div class="step-row"><span class="step-num">1</span><span class="step-label">Connect your repository</span><span class="step-arrow">→</span></div>
+          <div class="step-row"><span class="step-num">2</span><span class="step-label">Configure build settings</span><span class="step-arrow">→</span></div>
+          <div class="step-row"><span class="step-num">3</span><span class="step-label">Deploy to production</span></div>
+        </div>
+      </div>
+      <p class="card-desc">Step-by-step guide embedded directly. Best for complex onboarding flows where users need hand-holding.</p>
+      <span class="card-tag tag-amber">GUIDED FLOW</span>
+    </div>
+  </div>
+</div>
+
+<div class="footer">Click a card to select · <strong id="count">0</strong> of 4 selected</div>
+
+<script>
+function selectCard(el) {
+  el.classList.toggle('selected');
+  const count = document.querySelectorAll('.card.selected').length;
+  document.getElementById('count').textContent = count;
+}
+</script>
+
+</body>
+</html>

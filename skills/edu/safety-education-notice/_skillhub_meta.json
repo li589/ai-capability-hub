@@ -1,0 +1,11 @@
+{
+  "name": "安全教育通知",
+  "installedAt": 1787227525972,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084941256872050688",
+  "description_zh": "为教师生成主题明确、风险点清楚、家校行动具体的安全教育通知，覆盖教育部七大类（交通/消防/卫生/防溺/反欺凌/网络/灾害）+ 节假日告家长书；严格引用官方口径（六不一会、四不要、三不一多等）。触发关键词：安全教育通知、防溺水通知、防火通知、交通安全通知、防欺凌通知、防诈骗通知、假期安全告家长书。",
+  "description_en": "Generates safety-education notices with clear themes, explicit risk points, and concrete home-school actions for teachers, covering the Ministry of Education's seven categories (traffic / fire / hygiene / drowning prevention / anti-bullying / cyber / disaster) plus holiday letters to parents; strictly cites official wording (e.g., \"six no's and one can\", \"four don'ts\", \"three no's and one more\"). Trigger keywords: safety education notice, drowning-prevention notice, fire-prevention notice, traffic-safety notice, anti-bullying notice, anti-fraud notice, holiday safety letter to parents.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_bb1dee52-7bf.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_bb1dee52-7bf.png"
+}

@@ -1,0 +1,38 @@
+{
+  "name": "brand-guardian",
+  "version": "0.1.1",
+  "description": "品牌策略与治理插件，提供品牌定位、命名与信息体系、品牌声音、渠道文案、视觉方向、品牌焕新和一致性治理能力",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "brand-guardian",
+    "brand-strategy",
+    "brand-governance",
+    "brand-positioning",
+    "brand-voice",
+    "internal",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "品牌搭建",
+    "shortDescription": "品牌策略与治理插件，覆盖定位、表达、焕新与一致性管理",
+    "longDescription": "从业务目标和用户认知出发，完成品牌定位、命名与口号、信息架构、品牌声音、渠道文案、视觉方向、品牌焕新、一致性治理与品牌保护，并转化为可评审或执行的交付物。",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use brand-guardian to complete this brand task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

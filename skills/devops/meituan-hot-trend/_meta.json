@@ -1,0 +1,11 @@
+{
+  "owner": "codekungfu",
+  "slug": "meituan-hot-trend",
+  "displayName": "Meituan",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1773654358939,
+    "commit": "https://github.com/openclaw/skills/commit/51e10d1160045c56c0b9df785a1f04979e4a5fa3"
+  },
+  "history": []
+}

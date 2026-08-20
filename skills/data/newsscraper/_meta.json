@@ -1,0 +1,11 @@
+{
+  "owner": "13923870749",
+  "slug": "newsscraper",
+  "displayName": "news_scraper",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774087165122,
+    "commit": "https://github.com/openclaw/skills/commit/6be6de2919def5093f7c00c5731b0516c440007e"
+  },
+  "history": []
+}

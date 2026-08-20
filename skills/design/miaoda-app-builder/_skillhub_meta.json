@@ -1,0 +1,11 @@
+{
+  "name": "应用开发（秒哒）",
+  "installedAt": 1787227549599,
+  "source": "marketplace",
+  "version": "1.0.21",
+  "skillId": "skill_2085022243025625088",
+  "description_zh": "通过自然语言对话在秒哒平台创建、生成、修改和部署网站、Web应用、安卓App、iOS App、数据看板、SaaS产品、内部工具、互动网页、微信小程序及游戏等全栈产品。",
+  "description_en": "Create, modify, generate, and deploy websites, web apps, Android apps, iOS apps, dashboards, SaaS products, internal tools, interactive web pages, Weixin mini program, games on the Miaoda platform using natural-language instructions.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/495eb061-7a75-450f-ae28-9fa975693d69/avatar/skill/au_43d69f3a-710.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/495eb061-7a75-450f-ae28-9fa975693d69/avatar/skill/au_43d69f3a-710.png"
+}

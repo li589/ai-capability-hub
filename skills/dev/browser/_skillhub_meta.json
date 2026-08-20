@@ -1,0 +1,20 @@
+{
+  "name": "Browser (Puppeteer)",
+  "installedAt": 1785784669605,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081406314844160",
+  "examples_zh": [
+    "用 Puppeteer 渲染这个前端路由页面，等待 JavaScript 加载完成后提取正文纯文本，去掉导航栏和页脚。",
+    "读取一个需要客户端渲染的文档页面，把最终 DOM 中的标题、段落和代码块内容整理成 Markdown。",
+    "打开指定的单页应用链接，等待异步数据请求完成，再返回用户可见的页面文本用于摘要。"
+  ],
+  "examples_en": [
+    "Render this client-routed page with Puppeteer, wait for JavaScript to finish loading, and extract clean body text without the nav or footer.",
+    "Read a documentation page that requires client-side rendering and convert the final DOM's headings, paragraphs, and code blocks into Markdown.",
+    "Open the specified single-page app link, wait for async data requests to complete, and return the visible page text for summarization."
+  ],
+  "description_zh": "Puppeteer 无头浏览器，渲染 JS 页面并提取纯文本",
+  "description_en": "Puppeteer headless browser: render JS pages & extract clean text",
+  "iconSource": "letter:auto"
+}

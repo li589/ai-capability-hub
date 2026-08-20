@@ -1,0 +1,24 @@
+{
+  "author": "Github",
+  "author_icon": "https://static.marvis.qq.com/wupload/skill-author-icons/1778639349473_GitHub.png",
+  "description": "|",
+  "detail_describe": "支持音频和视频文件转写为文字\n自动从视频中提取音轨进行识别\n支持单文件、批量两种模式\n覆盖 30 种语言和 22 种中文方言自动识别\n输出 txt/json 转写文档并自动归档",
+  "display_description": "基于本地AI大模型零成本语音转文字(仅限英特尔AIPC平台)",
+  "display_name": "本地语音转文字",
+  "download_count": 4,
+  "download_url": "https://down.marvis.qq.com/wupload2/skill-packages/1779112330593_local-asr.zip",
+  "icon": "https://static.marvis.qq.com/wupload/skill-icons/1779112318830_01_Local-ASR.png?imageMogr2/thumbnail/224x/format/webp",
+  "id": 356,
+  "is_downloaded": false,
+  "name": "local-asr",
+  "scope": [
+    "main"
+  ],
+  "type": "英特尔用户专区",
+  "use_cases": [
+    "把桌面上的音频[请填入音频文件名称，如“会议录音.mp3”]转换成文字",
+    "帮我把电脑里的视频文件[请填入视频文件名称，如“讲座.mp4”]里的音频转换成文字",
+    "帮我把文件夹[请填入文件夹名称，如“历史课件”]里所有的音频转换成文字"
+  ],
+  "version": "1.0.3"
+}

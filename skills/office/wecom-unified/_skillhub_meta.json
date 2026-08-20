@@ -1,0 +1,16 @@
+{
+  "name": "企业微信套件",
+  "installedAt": 1787227455652,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2053083151135014912",
+  "examples_zh": [
+    "帮我整理下最新一周AI资讯，通过企业微信消息发送给我自己",
+    "根据最近一周我与客户沟通的企业微信邮件和会议，生成给客户的演示文稿",
+    "根据产品文档内容，生成一份总结摘要的PDF，文档链接是https://doc.weixin.qq.com/XXXXXX"
+  ],
+  "description_zh": "企业微信官方 CLI 套件，覆盖消息、邮件、文档、待办、日程、会议、微盘、通讯录等业务功能。支持机器人主动通知、新建与读取文档、文档搜索、新建与管理日程、预约与获取会议信息、新建与跟进待办、上传与获取微盘文件、发送与获取邮件、获取通讯录成员信息，以提升企业办公效率",
+  "description_en": "WeCom CLI suite covering docs, messages, calendars, meetings, todos, and contacts. For organizations with 10+ members: create and read docs, smart sheets, and smart docs. For individuals and small teams (10 or fewer): read/write docs, send/receive direct and group messages, manage calendars, meetings, and todos, and look up contacts.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wecom-unified.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wecom-unified.svg"
+}

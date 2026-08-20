@@ -1,0 +1,23 @@
+{
+  "name": "xunpanyun-crm-runtime",
+  "version": "1.3.0",
+  "description": "询盘云CRM统一授权与API运行能力",
+  "author": {
+    "name": "询盘云",
+    "email": "dengpeng@xhlmarketing.com"
+  },
+  "skills": [
+    "./"
+  ],
+  "defaultEnabled": true,
+  "userConfig": {
+    "xunpanyun_client_id": {
+      "description": "请输入询盘云OpenAPI client_id",
+      "sensitive": true
+    },
+    "xunpanyun_client_secret": {
+      "description": "请输入询盘云OpenAPI client_secret",
+      "sensitive": true
+    }
+  }
+}

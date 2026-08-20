@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:xhs-content-skills",
+  "registry": "trae-remote-official",
+  "plugin_name": "xhs-content-skills",
+  "version": "1.0.0",
+  "marketplace_plugin_id": "b56af63b-09eb-48f7-8ac0-49f8f3becdd8",
+  "remote_installed_plugin_id": "8JS.B28DXIQE36",
+  "checksum": "446d2d40d5c228cd82bbb9c79b0c94695cc7cbfe40de03106c98503eb2b7131b",
+  "file_size": 25518,
+  "installed_at": 1787227203321
+}

@@ -1,0 +1,20 @@
+{
+  "name": "习惯打卡",
+  "installedAt": 1787228588851,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082074731966464",
+  "examples_zh": [
+    "打卡今天的跑步习惯",
+    "查看我的习惯连续打卡天数",
+    "新增一个每天冥想10分钟的习惯"
+  ],
+  "examples_en": [
+    "Check in for my running habit today",
+    "View my habit streak count",
+    "Add a new daily 10-minute meditation habit"
+  ],
+  "description_zh": "通过打卡、连续记录和可视化培养良好习惯",
+  "description_en": "Build habits with streaks, reminders, and progress visualization",
+  "iconSource": "letter:auto"
+}

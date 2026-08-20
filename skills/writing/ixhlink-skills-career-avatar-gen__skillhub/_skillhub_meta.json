@@ -1,0 +1,13 @@
+{
+  "slug": "ixhlink-skills-career-avatar-gen",
+  "name": "职业头像生成",
+  "version": "1.0.0",
+  "installedAt": 1787228948206,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/9bcddb03-161b-42cd-bf2e-cf0159d85bd7.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/9bcddb03-161b-42cd-bf2e-cf0159d85bd7.png"
+}

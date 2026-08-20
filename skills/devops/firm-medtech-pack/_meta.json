@@ -1,0 +1,11 @@
+{
+  "owner": "romainsantoli-web",
+  "slug": "firm-medtech-pack",
+  "displayName": "Firm Medtech Pack",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772323892994,
+    "commit": "https://github.com/openclaw/skills/commit/e4e12b0915cf90091cc5c4fa7ac261cfba88e85f"
+  },
+  "history": []
+}

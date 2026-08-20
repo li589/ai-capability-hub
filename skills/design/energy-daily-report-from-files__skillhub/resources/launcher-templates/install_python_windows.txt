@@ -1,0 +1,56 @@
+param(
+    [string]$ProjectDir = (Get-Location).Path
+)
+
+$ErrorActionPreference = "Stop"
+$runtimeConfig = Join-Path $ProjectDir "config\python-runtime.json"
+$cacheDir = Join-Path $ProjectDir ".runtime-cache"
+
+function Stop-WithMessage {
+    param([string]$Code, [string]$Message, [string]$Suggestion)
+    Write-Host "[$Code] $Message`r`n处理建议：$Suggestion"
+    exit 2
+}
+
+if (-not (Test-Path -LiteralPath $runtimeConfig)) {
+    Stop-WithMessage "PYTHON_RUNTIME_CONFIG_MISSING" "缺少 Python 运行时配置。" "重新解压完整系统 ZIP。"
+}
+
+try {
+    $config = Get-Content -LiteralPath $runtimeConfig -Raw -Encoding UTF8 | ConvertFrom-Json
+    $fileName = [string]$config.windows.installer_file
+    $expectedSha256 = [string]$config.windows.sha256
+    $publisher = [string]$config.windows.publisher
+} catch {
+    Stop-WithMessage "PYTHON_RUNTIME_CONFIG_INVALID" "Python 运行时配置无法读取。" "重新生成完整系统 ZIP。"
+}
+
+if ([IO.Path]::GetFileName($fileName) -ne $fileName -or -not $fileName.EndsWith(".exe")) {
+    Stop-WithMessage "PYTHON_INSTALLER_NAME_INVALID" "安装包文件名不安全。" "仅填写不含目录的官方 EXE 文件名。"
+}
+if ($expectedSha256 -notmatch "^[A-Fa-f0-9]{64}$") {
+    Stop-WithMessage "PYTHON_INSTALLER_HASH_MISSING" "安装包 SHA-256 未固定。" "由管理员从官方发布信息核对并填写哈希。"
+}
+if ($publisher -ne "Python Software Foundation") {
+    Stop-WithMessage "PYTHON_INSTALLER_PUBLISHER_INVALID" "安装包发布者配置不正确。" "发布者必须是 Python Software Foundation。"
+}
+
+$installer = Join-Path $cacheDir $fileName
+if (-not (Test-Path -LiteralPath $installer -PathType Leaf)) {
+    Stop-WithMessage "PYTHON_INSTALLER_NOT_PROVIDED" "未发现经过批准的 Python 安装包。" "请由 IT 管理员从 Python 官方渠道获取文件，核对版本后放入 .runtime-cache。此脚本不会联网下载。"
+}
+
+$actualSha256 = (Get-FileHash -LiteralPath $installer -Algorithm SHA256).Hash
+if ($actualSha256 -ne $expectedSha256) {
+    Stop-WithMessage "PYTHON_INSTALLER_HASH_MISMATCH" "Python 安装包哈希不匹配，已停止。" "不要运行该文件；联系 IT 管理员重新获取。"
+}
+
+$signature = Get-AuthenticodeSignature -LiteralPath $installer
+if ($signature.Status -ne "Valid" -or $signature.SignerCertificate.Subject -notmatch "Python Software Foundation") {
+    Stop-WithMessage "PYTHON_INSTALLER_SIGNATURE_INVALID" "Python 安装包签名或发布者不正确，已停止。" "不要运行该文件；联系 IT 管理员。"
+}
+
+Write-Host "[PYTHON_INSTALLER_VERIFIED] 安装包哈希和数字签名验证通过。"
+Write-Host "安全策略：本脚本不会下载、启动安装器或申请管理员权限。"
+Write-Host "下一步：请由用户或 IT 管理员手动检查并运行：$installer"
+exit 0

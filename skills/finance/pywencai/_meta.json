@@ -1,0 +1,27 @@
+{
+  "owner": "coderwpf",
+  "slug": "pywencai",
+  "displayName": "pywencai",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1774260473354,
+    "commit": "https://github.com/openclaw/skills/commit/169888367ec97ab6969f6048a8e0a01e008155d7"
+  },
+  "history": [
+    {
+      "version": "1.0.2",
+      "publishedAt": 1773643738929,
+      "commit": "https://github.com/openclaw/skills/commit/794f401f553ea8630d388249221af9a0a7eb1de7"
+    },
+    {
+      "version": "1.0.1",
+      "publishedAt": 1773364882164,
+      "commit": "https://github.com/openclaw/skills/commit/99ab5db1ac96f35565f9aac8f35d926bc546ab09"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773220936193,
+      "commit": "https://github.com/openclaw/skills/commit/b50f47bb98ad63a47ba1b83e9dc9d8799dad7685"
+    }
+  ]
+}

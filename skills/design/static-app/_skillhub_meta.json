@@ -1,0 +1,21 @@
+{
+  "name": "Static App",
+  "installedAt": 1787228400396,
+  "source": "marketplace",
+  "version": "1.0.4",
+  "skillId": "skill_2054902203391512576",
+  "examples_zh": [
+    "把这个静态网站部署到 Static.app",
+    "上传 dist 目录并生成线上链接",
+    "更新我在 Static.app 上的站点"
+  ],
+  "examples_en": [
+    "Deploy this static website to Static.app",
+    "Upload the dist folder and create a live link",
+    "Update my site hosted on Static.app"
+  ],
+  "description_zh": "将静态网站或前端构建产物部署到 Static.app",
+  "description_en": "Deploy static websites and frontend builds to Static.app hosting",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_e19c6e25-730.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_e19c6e25-730.png"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "chrome",
+  "version": "1.0.5",
+  "description": "AI-driven external Chrome browser automation via TRAE Chrome Extension.",
+  "author": {
+    "name": "TRAE"
+  },
+  "license": "MIT",
+  "keywords": ["chrome", "external", "browser", "automation", "extension"],
+  "i18n": {
+    "display_name": {
+      "en": "Browser Control",
+      "zh-cn": "浏览器控制",
+      "ja": "Browser Control"
+    },
+    "description": {
+      "en": "Connect to your Google Chrome, Doubao Browser, or Edge browser to automate your local browser.",
+      "zh-cn": "连接你的 Google Chrome、豆包浏览器、Edge 浏览器，自动操作本地浏览器。",
+      "ja": "Google Chrome、豆包ブラウザ、Edgeブラウザに接続し、ローカルブラウザを自動操作します。"
+    }
+  },
+  "interface": {
+    "displayName": "浏览器控制",
+    "developerName": "TRAE",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive"],
+    "composerIcon": "./assets/chrome-icon.svg",
+    "logo": "./assets/chrome-icon.svg",
+    "brandColor": "#4285F4"
+  }
+}

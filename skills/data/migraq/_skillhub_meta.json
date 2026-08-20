@@ -1,0 +1,21 @@
+{
+  "name": "MigraQ",
+  "installedAt": 1787227615245,
+  "source": "marketplace",
+  "version": "1.1.6",
+  "skillId": "skill_2053082390782152704",
+  "examples_zh": [
+    "阿里云50台ECS如何迁移到腾讯云",
+    "扫描阿里云资源清单",
+    "帮我做迁移TCO成本分析"
+  ],
+  "examples_en": [
+    "How to migrate 50 Alibaba Cloud ECS to Tencent Cloud",
+    "Scan Alibaba Cloud resource inventory",
+    "Perform a migration TCO cost analysis"
+  ],
+  "description_zh": "腾讯云迁移服务专家，支持跨云资源扫描、选型推荐、TCO 分析与迁移方案规划",
+  "description_en": "Tencent Cloud Migration expert with cross-cloud resource scanning, spec matching, TCO analysis, and migration planning",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/migraq.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/migraq.svg"
+}

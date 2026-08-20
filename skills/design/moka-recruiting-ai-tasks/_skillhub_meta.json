@@ -1,0 +1,11 @@
+{
+  "name": "Moka 招聘专家模式",
+  "installedAt": 1787228552408,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088128430419578880",
+  "description_zh": "面向招聘负责人与用人团队的智能任务工作流。使用当前平台提供的 Moka 连接器发起人才搜索、面试记录分析或面试官表现评估，并持续查询进度直到取得最终结果；也负责在用户明确确认后取消运行中的任务。当用户提出自然语言人才寻访、跨多场面试的分析、面试官质量评估，或追问这些异步任务的进度与结果时使用。",
+  "description_en": "AI task workflow for recruiting owners and hiring teams. Launches talent sourcing, interview analysis, or interviewer evaluation tasks through the Moka Connector available on the current platform, keeps polling progress until the final result, and cancels a running task only after the user explicitly confirms. Use it for natural-language talent sourcing, cross-interview analysis, interviewer quality evaluation, or follow-ups on the progress and results of these asynchronous tasks.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_4b67d968-083.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_4b67d968-083.png"
+}

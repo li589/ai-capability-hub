@@ -1,0 +1,55 @@
+# 敏感数据检测模式
+# 每行一个正则表达式模式
+
+# API密钥类
+api[_-]?key
+api[_-]?secret
+secret[_-]?key
+access[_-]?key
+access[_-]?token
+
+# 认证令牌类
+auth[_-]?token
+bearer[_-]?token
+session[_-]?token
+refresh[_-]?token
+
+# 云服务凭证类
+aws[_-]?access[_-]?key
+aws[_-]?secret[_-]?key
+azure[_-]?client[_-]?secret
+gcp[_-]?service[_-]?account
+
+# 数据库连接类
+password
+passwd
+pwd
+connection[_-]?string
+database[_-]?url
+
+# SSH/私钥类
+private[_-]?key
+ssh[_-]?key
+rsa[_-]?key
+-----BEGIN[^-]+PRIVATE[^-]+-----
+
+# 加密相关
+encryption[_-]?key
+crypto[_-]?key
+signing[_-]?key
+
+# 支付/金融类
+stripe[_-]?key
+payment[_-]?secret
+card[_-]?number
+cvv
+
+# 通用密钥模式
+key[_-]?id
+credential
+secret
+token
+
+# Skeleton/明文密钥格式
+sk_[a-zA-Z0-9]{20,}
+ak_[a-zA-Z0-9]{20,}

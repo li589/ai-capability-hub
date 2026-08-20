@@ -1,0 +1,11 @@
+{
+  "name": "商机建档更新",
+  "installedAt": 1787228539527,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088538077194551296",
+  "description_zh": "通过objFieldData新增或更新opportunity，执行字段发现、查重、dry-run、确认、写入和同步回查。适用于用户要求商机建档更新、生成相关结果或检查执行边界时。",
+  "description_en": "Opportunity Record Upsert workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_908f4875-6bf.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_908f4875-6bf.png"
+}

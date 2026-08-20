@@ -1,0 +1,11 @@
+{
+  "name": "公众号黑马账号推荐",
+  "installedAt": 1785864626033,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084106510001508352",
+  "description_zh": "按日期查看公众号阅读增长率TOP榜，每个作者展示最高阅读文章，链接直达原文",
+  "description_en": "View daily WeChat account reading growth rate rankings, with top articles linked.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_480cae1c-2f3.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_480cae1c-2f3.svg"
+}

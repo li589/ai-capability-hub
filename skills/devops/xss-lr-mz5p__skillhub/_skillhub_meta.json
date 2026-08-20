@@ -1,0 +1,10 @@
+{
+  "slug": "xss-lr-mz5p",
+  "name": "XSS跨站脚本",
+  "version": "1.0.0",
+  "installedAt": 1787229006438,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

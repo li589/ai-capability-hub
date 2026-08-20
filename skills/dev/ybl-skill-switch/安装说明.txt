@@ -1,0 +1,12 @@
+ybl-skill-switch（技能开关）
+v1.4.2 | 应变力出品
+
+安装方法：
+1. 打开 WorkBuddy，找到「添加技能」按钮
+2. 上传本压缩包（或把 ybl-skill-switch 文件夹拖进去）
+3. 开新对话即可使用
+
+用法：
+- "启用 deep-research"
+- "禁用 1,3"（先查看列表获取编号）
+- "@ybl-skill-switch 查看启用的/禁用的某类 skill"（显式调用最稳）

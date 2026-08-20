@@ -1,0 +1,10 @@
+{
+  "slug": "claude-red-evl8",
+  "name": "攻击安全技能库",
+  "version": "1.0.0",
+  "installedAt": 1787229015629,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

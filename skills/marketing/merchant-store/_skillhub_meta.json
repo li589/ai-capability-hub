@@ -1,0 +1,10 @@
+{
+  "name": "商户与门店查询",
+  "installedAt": 1787228469607,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087080985104273408",
+  "description_zh": "查询可访问商户、门店组织节点、店铺经营概览和待办事项，帮助快速了解当前店铺状态。",
+  "description_en": "Search accessible merchants, store organization nodes, business overviews, and to-do items to quickly understand the current store status.",
+  "iconSource": "letter:auto"
+}

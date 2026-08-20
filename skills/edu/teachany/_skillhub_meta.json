@@ -1,0 +1,10 @@
+{
+  "name": "TeachAny",
+  "installedAt": 1785784758283,
+  "source": "marketplace",
+  "version": "7.21.0",
+  "skillId": "skill_2057443869508038656",
+  "description_zh": "K12 互动课件开发技能：用于制作或优化学科课件、教学动画、AI 学伴、TTS、知识图谱、PBL 学习路径与 TeachAny 发布。",
+  "description_en": "Create K-12 interactive lesson pages, animations, AI tutor, TTS, knowledge graphs & PBL paths for TeachAny",
+  "iconSource": "letter:auto"
+}

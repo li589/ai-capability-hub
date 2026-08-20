@@ -1,0 +1,11 @@
+{
+  "owner": "nexscope",
+  "slug": "amazon-private-label",
+  "displayName": "Amazon Private Label",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775718611427,
+    "commit": "https://github.com/openclaw/skills/commit/e1cb265cc4f1c84b8a4e852901b148d03571ce9a"
+  },
+  "history": []
+}

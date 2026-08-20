@@ -1,0 +1,20 @@
+{
+  "name": "Product Showcase Site",
+  "installedAt": 1787228349799,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2057443506973028352",
+  "examples_zh": [
+    "帮我把这个应用做成一个产品展示网站",
+    "根据这个已上线产品生成功能介绍和使用流程页面",
+    "给这个 Web App 做一个可部署的 showcase site"
+  ],
+  "examples_en": [
+    "Turn this web app into a product showcase website",
+    "Generate feature and how-it-works pages for this launched product",
+    "Create a deployable showcase site for this web app"
+  ],
+  "description_zh": "为已有应用生成可部署的多页产品展示站",
+  "description_en": "Generate deployable product showcase sites for existing web apps",
+  "iconSource": "letter:auto"
+}

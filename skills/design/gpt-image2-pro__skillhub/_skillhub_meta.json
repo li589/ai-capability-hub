@@ -1,0 +1,12 @@
+{
+  "slug": "gpt-image2-pro",
+  "name": "GPT - image2",
+  "version": "1.0.8",
+  "installedAt": 1787228810395,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a00e31c7-8d6a-4e65-84fc-16a177f95674.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a00e31c7-8d6a-4e65-84fc-16a177f95674.png"
+}

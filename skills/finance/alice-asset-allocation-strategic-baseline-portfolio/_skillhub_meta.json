@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-资产配置（战略基准组合）",
+  "installedAt": 1787228654800,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2086630689173680128",
+  "description_zh": "万得 Alice 资产配置-战略基准组合 CLI：结合风险偏好、投资期限、约束与长期市场数据，制定 3-5 年战略资产配置基准组合，输出大类资产权重、区域目标、指数映射与预期风险收益。",
+  "description_en": "Use when building a 3-5 year strategic asset allocation baseline from risk profile, horizon, constraints, and long-term market data, producing asset-class weights, regional targets, index mapping, and expected risk/return for downstream sector rotation, TAA, portfolio construction, and rebalancing.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_005a194c-9ee.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_005a194c-9ee.jpg"
+}

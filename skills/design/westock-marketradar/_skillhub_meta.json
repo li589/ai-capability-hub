@@ -1,0 +1,11 @@
+{
+  "name": "腾讯自选股·市场雷达",
+  "installedAt": 1787228666932,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089686335767195648",
+  "description_zh": "帮你看清一只股票背后\"谁在买、有没有雷\"。它会汇总主力资金、龙虎榜、北向资金、筹码等数据看资金动向，同时扫描解禁、质押、增发等临近的风险事件。想知道股票有没有大资金进出、近期会不会有利空时问它。",
+  "description_en": "It helps you see clearly \"who is buying\" and spot potential \"landmines\" behind a stock. It aggregates data—such as institutional capital flows, \"Dragon and Tiger List\" (top trading seat) data, Northbound capital, and shareholding distribution—to track capital movements, while simultaneously scanning for imminent risk events like share lock-up expirations, share pledges, and additional share issuances. Ask it whenever you want to know if significant capital is entering or exiting a stock, or if there are potential negative catalysts on the horizon.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_2dce012c-771.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_2dce012c-771.png"
+}

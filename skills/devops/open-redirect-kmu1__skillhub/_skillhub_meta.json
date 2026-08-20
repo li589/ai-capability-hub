@@ -1,0 +1,10 @@
+{
+  "slug": "open-redirect-kmu1",
+  "name": "开放重定向",
+  "version": "1.0.0",
+  "installedAt": 1787229019844,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "Linkfox Tiktok选品与带货视频",
+  "installedAt": 1787227618340,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2077728643686735872",
+  "description_zh": "TikTok 选品与带货视频一站式 AI 工具集，整合 3 类工具、10 项子能力：EchoTik（16 区域市场新品排行、商品搜索、商品详情、带货视频、视频下载）、FastMoss（全球热销榜与商品搜索，日周月多维筛选）、TikTok 官方 API（视频号 OAuth 授权与令牌、可购物视频预检/发布/状态/达人档案/大文件上传/可带货商品查询）。覆盖选品、爆品趋势、销量/GMV/达人带货与带货视频分析及可购物视频发布链路。当用户需 TikTok 选品、爆品/新品排行、商品或带货视频分析、视频号授权与可购物视频发布时触发。参数见 references/，脚本见 scripts/。",
+  "description_en": "One-stop TikTok product-selection and shoppable-video AI toolkit with 10 sub-capabilities across 3 tool families — EchoTik (new-product ranking, product search, product detail, promotional-video query, video download URL across 16 regional markets), FastMoss (global top-selling rankings and product search with day/week/month and category/sales/commission/creator filters), and the TikTok official shoppable-video API (creator OAuth authorization & token, video pre-check/publish/status, creator profile, chunked upload, sellable-product query). Covers TikTok Shop product research, bestseller/new-product trends, sales/GMV/influencer analysis, promotional-video performance & download, and the official shoppable-video publishing chain. Triggered when the user needs TikTok product selection, bestseller/new-product rankings, product or video analysis, or video-account authorization and shoppable-video publishing. Params per sub-capability in references/, scripts in scripts/.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077728643686735872/be14a6f84fe1b2bd.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077728643686735872/be14a6f84fe1b2bd.png"
+}

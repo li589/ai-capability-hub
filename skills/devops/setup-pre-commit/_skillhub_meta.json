@@ -1,0 +1,20 @@
+{
+  "name": "setup-pre-commit",
+  "installedAt": 1787228696276,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443365205553152",
+  "examples_zh": [
+    "帮我配置 pre-commit hooks",
+    "项目里加一下 Husky",
+    "设置提交前自动格式化和类型检查"
+  ],
+  "examples_en": [
+    "set up pre-commit hooks",
+    "add Husky to this project",
+    "configure lint-staged with Prettier"
+  ],
+  "description_zh": "为 JS/TS 项目配置 Husky pre-commit hooks（lint-staged + Prettier + 类型检查 + 测试）",
+  "description_en": "Set up Husky pre-commit hooks with lint-staged, Prettier, type checking, and tests",
+  "iconSource": "letter:auto"
+}

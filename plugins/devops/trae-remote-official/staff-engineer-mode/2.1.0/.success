@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:staff-engineer-mode",
+  "registry": "trae-remote-official",
+  "plugin_name": "staff-engineer-mode",
+  "version": "2.1.0",
+  "marketplace_plugin_id": "203f9c14-4bb4-4f58-9909-d8086eeb9c0e",
+  "remote_installed_plugin_id": "R1YM5MLB.B07GQ",
+  "checksum": "3e1246d297c8318e6c098d01fe2994f51fcf6d836b17cdb4e571d8d353ef86df",
+  "file_size": 424874,
+  "installed_at": 1787227205301
+}

@@ -1,0 +1,21 @@
+{
+  "name": "airbnb",
+  "installedAt": 1787228458832,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053079213369135104",
+  "examples_zh": [
+    "帮我找 7 月 12 日到 7 月 15 日巴黎 Marais 区适合 2 人入住的 Airbnb，按评分和总价比较。",
+    "搜索东京涩谷附近带厨房、评分 4.8 以上、每晚 180 美元以内的 Airbnb 房源。",
+    "查找纽约布鲁克林 3 晚可住 4 人的 Airbnb，给我价格、评分和预订链接。"
+  ],
+  "examples_en": [
+    "Find Airbnb listings in Paris Le Marais for two guests from July 12 to July 15, comparing ratings and total price.",
+    "Search Airbnb stays near Shibuya, Tokyo with a kitchen, rating above 4.8, and under $180 per night.",
+    "Look for Brooklyn Airbnb options for four guests over three nights with prices, ratings, and booking links."
+  ],
+  "description_zh": "搜索 Airbnb 房源，含价格、评分和预订链接，无需 API Key",
+  "description_en": "Search Airbnb listings with prices, ratings and direct booking links",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/airbnb.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/airbnb.svg"
+}

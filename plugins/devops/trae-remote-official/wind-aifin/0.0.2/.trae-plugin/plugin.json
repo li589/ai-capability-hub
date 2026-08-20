@@ -1,0 +1,66 @@
+{
+  "name": "wind-aifin",
+  "version": "0.0.2",
+  "description": "Wind AIFin Market 万得金融数据能力插件，通过 MCP 协议提供 A 股、港股、美股、基金、债券、宏观经济、行业板块、指数及衍生品等专业金融数据查询服务。",
+  "i18n": {
+    "display_name": {
+      "en": "Wind AIFin Market",
+      "zh-cn": "万得金融数据",
+      "zh-tw": "萬得金融數據",
+      "ja": "Wind AIFin マーケット"
+    },
+    "description": {
+      "en": "Wind AIFin Market plugin providing professional financial data queries via MCP, covering A-shares, HK stocks, US stocks, funds, bonds, macro indicators, industry sectors, indices, and derivatives.",
+      "zh-cn": "万得 AIFin Market 金融数据能力插件，通过 MCP 协议提供 A 股、港股、美股、基金、债券、宏观经济、行业板块、指数及衍生品等专业金融数据查询服务。",
+      "zh-tw": "萬得 AIFin Market 金融數據能力插件，透過 MCP 協議提供 A 股、港股、美股、基金、債券、宏觀經濟、行業板塊、指數及衍生品等專業金融數據查詢服務。",
+      "ja": "Wind AIFin Market 金融データプラグイン。MCP プロトコルを通じて A 株、香港株、米国株、ファンド、債券、マクロ経済指標、業界セクター、指数、デリバティブなどの金融データクエリを提供します。"
+    }
+  },
+  "author": {
+    "name": "Wind Information Co., Ltd.",
+    "url": "https://aifinmarket.wind.com.cn"
+  },
+  "homepage": "https://aifinmarket.wind.com.cn",
+  "repository": "https://github.com/Wind-Information-Co-Ltd/wind-skills",
+  "license": "Proprietary",
+  "keywords": [
+    "wind",
+    "aifin",
+    "finance",
+    "stock",
+    "fund",
+    "bond",
+    "macro",
+    "index",
+    "market-data",
+    "mcp",
+    "a-share",
+    "financial-data"
+  ],
+  "skills": "./skills/",
+  "connector": "./connector.json",
+  "env": {
+    "WIND_API_KEY": "${connector.wind-aifin.ACCESS_TOKEN}"
+  },
+  "interface": {
+    "displayName": "Wind AIFin Market",
+    "shortDescription": "Professional financial data via Wind MCP",
+    "longDescription": "Wind AIFin Market plugin provides professional financial data query capabilities via MCP protocol. Covers A-shares, HK stocks, US stocks, funds, bonds, macro indicators, industry sectors, indices, and derivatives. Supports real-time quotes, historical data, financial statements, and intelligent query routing.",
+    "developerName": "Wind Information Co., Ltd.",
+    "category": "Finance",
+    "capabilities": ["Interactive", "Read"],
+    "websiteURL": "https://aifinmarket.wind.com.cn",
+    "privacyPolicyURL": "https://aifinmarket.wind.com.cn/privacy",
+    "termsOfServiceURL": "https://aifinmarket.wind.com.cn/terms",
+    "defaultPrompt": [
+      "查询贵州茅台(600519.SH)最新股价和涨跌幅",
+      "获取沪深300指数近一周走势",
+      "查询最新CPI、PPI等宏观经济数据",
+      "帮我安装和配置万得金融数据能力"
+    ],
+    "brandColor": "#D4232A",
+    "screenshots": [],
+    "composerIcon": "./assets/app-icon.svg",
+    "logo": "./assets/app-icon.svg"
+  }
+}

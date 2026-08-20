@@ -1,0 +1,10 @@
+{
+  "name": "质地体检",
+  "installedAt": 1787228642957,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2085673565824847872",
+  "description_zh": "输入一只股票，快速提取财报三表核心指标、多期趋势对比、七维度财务异常检测、盈利能力诊断与同业对标，一分钟判断\"这公司财务健不健康、有没有雷\"。",
+  "description_en": "Rapidly extract core indicators from the three financial statements, compare multi-period trends, run a seven-dimension financial anomaly detection, diagnose profitability, and benchmark against industry peers. Determine in one minute whether a company financials are healthy or carry hidden risks.",
+  "iconSource": "letter:auto"
+}

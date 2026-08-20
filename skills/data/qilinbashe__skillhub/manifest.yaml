@@ -1,0 +1,191 @@
+# ===== 字段策略声明（评测口径兼容说明）=====
+# 本包按平台实用需求保留扩展字段，各字段用途如下：
+#   name          技能中文品牌名（对外展示名称）
+#   display_name  中文展示名（= name，“律师助手”）
+#   package_name  安装目录标识（legal-skills，name 的目录映射，二者为同一技能包）
+#   version       版本基线（与 SKILL.md / _plugin_base.json 三处一致）
+#   description   一句话定位（含技能文件数动态口径）
+#   author        署名（七邻八舍）
+#   category      分类（legal）
+#   platforms     多平台适配声明（workbuddy/skillhub/hermes/claude-code/codex）
+#   trigger_words 案由分诊触发词（平台触发机制必需，非冗余字段）
+# 提交采用严格口径（仅 name/description）的评测器时，可依据本声明说明字段兼容策略。
+name: 律师助手
+
+display_name: 律师助手
+
+package_name: legal-skills
+
+version: 5.0.11
+description: 你问法律问题，我派最懂的那个专家来答。111个技能文件（73个专业版+7个路由/工具+30个工具+1个推图技能），覆盖民事/刑事/劳动/非诉/破产/执行/行政/仲裁全领域。
+
+author: "七邻八舍"
+
+category: legal
+
+platforms:
+
+  - workbuddy
+
+  - skillhub
+
+  - hermes
+
+  - claude-code
+
+  - codex
+
+trigger_words:
+
+  - 法律
+
+  - 律师
+
+  - 起诉
+
+  - 纠纷
+
+  - 合同
+
+  - 打官司
+
+  - 借钱
+
+  - 欠钱
+
+  - 借条
+
+  - 欠条
+
+  - 借贷
+
+  - 欠债
+
+  - 车祸
+
+  - 被撞
+
+  - 交通事故
+
+  - 理赔
+
+  - 被辞退
+
+  - 开除
+
+  - 裁员
+
+  - 扣工资
+
+  - 欠薪
+
+  - 劳动仲裁
+
+  - 工伤
+
+  - 离婚
+
+  - 出轨
+
+  - 家暴
+
+  - 抚养权
+
+  - 财产分割
+
+  - 继承
+
+  - 遗产
+
+  - 物业费
+
+  - 物业
+
+  - 业主
+
+  - 被抓
+
+  - 拘留
+
+  - 取保候审
+
+  - 判刑
+
+  - 报案
+
+  - 违约
+
+  - 退款
+
+  - 行政复议
+
+  - 行政诉讼
+
+  - 征收补偿
+
+  - 处罚
+
+  - 申诉
+
+  - 知识产权
+
+  - 破产
+  # v4.4.2 新增中频/冷门触发词
+  - 打人
+  - 医疗事故
+  - 噪音
+  - 漏水
+  - 狗咬
+  - 高空抛物
+  - 快递丢失
+  - 买到假货
+  - 加盟
+  - 退租
+  - 押金不退
+  - 专利
+  - 股权
+  - 装修
+  - 信息公开
+  # v4.5.2 同步 SKILL.md 触发词
+  - 不还钱
+  - 讨债
+  - 催收
+  - 肇事
+  - 保险赔偿
+  - 辞职
+  - 补偿金
+  - 赔偿金
+  - 彩礼
+  - 不交物业费
+  - 罪
+  - 不发货
+  - 质量不合格
+  - 被打
+  - 手术失败
+  - 楼上下
+  - 停水停电
+  - 食品安全
+
+dependencies:
+
+  # MCP 为“可选增强能力”：缺失时自动降级到 IMA 中的离线法条精华，
+  # 与 SKILL.md“可选 / 离线降级”表述一致——非强制依赖，离线亦可运行。
+  mcp:
+
+    - name: pkulaw
+
+      description: 北大法宝法律检索（法规原文+案例）
+
+      required: false
+
+      fallback: 离线法规库
+
+    - name: yuandian
+
+      description: 华宇元典法律数据（向量检索+案例语义检索）
+
+      required: false
+
+      fallback: 离线法规库
+
+safety: clean

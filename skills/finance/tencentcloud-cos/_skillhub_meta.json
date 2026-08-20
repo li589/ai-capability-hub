@@ -1,0 +1,21 @@
+{
+  "name": "腾讯云COS",
+  "installedAt": 1787228686278,
+  "source": "marketplace",
+  "version": "1.1.6",
+  "skillId": "skill_2053083229642952704",
+  "examples_zh": [
+    "把这张图片上传到腾讯云COS",
+    "对图片进行AI抠图处理",
+    "下载COS里的文件到本地"
+  ],
+  "examples_en": [
+    "Upload this image to Tencent Cloud COS",
+    "Perform AI background removal on the image",
+    "Download files from COS bucket to local"
+  ],
+  "description_zh": "腾讯云 COS 对象存储、数据万象数据智能处理、MetaInsight多模态检索、知识库搭建",
+  "description_en": "Tencent Cloud COS Object Storage, CI Data Intelligence Processing, MetaInsight Multi-modal Retrieval, Knowledge Base Setup",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencentcloud-cos.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencentcloud-cos.png"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "nnzenw",
+  "slug": "pywencaistock",
+  "displayName": "PyWenCai Stock",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772884932368,
+    "commit": "https://github.com/openclaw/skills/commit/73a4ebf2486ee81556488d5653282d2c175c037a"
+  },
+  "history": []
+}

@@ -1,0 +1,7 @@
+{
+  "display_name": "Web Performance Audit",
+  "display_name_en": "Web Performance Audit",
+  "description_zh": "部署后网站性能审计，检查核心指标与加载瓶颈",
+  "description_en": "Audit deployed site performance, Core Web Vitals and loading bottlenecks",
+  "icon": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2057443344790511616/34bde5e28551dc22.svg"
+}

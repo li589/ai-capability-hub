@@ -1,0 +1,20 @@
+{
+  "name": "ClawBrowser",
+  "installedAt": 1787227633646,
+  "source": "marketplace",
+  "version": "0.1.1",
+  "skillId": "skill_2053081456668868608",
+  "examples_zh": [
+    "用 Playwright CLI 打开设置页，生成元素快照，找到保存按钮的引用并点击，随后截图确认状态提示。",
+    "复用已有浏览器会话登录测试后台，填写创建项目表单，提交后提取新项目详情页的文本。",
+    "通过命令行浏览器导航到多步骤向导，逐步选择下拉项、输入字段，并在每一步保存快照便于调试。"
+  ],
+  "examples_en": [
+    "Use the Playwright CLI to open the settings page, capture element refs, click the save button, and take a screenshot of the status message.",
+    "Reuse an existing browser session to log into the test admin panel, fill the create-project form, and extract text from the new project detail page.",
+    "Drive a multi-step wizard from the command line, selecting dropdowns and typing fields while saving snapshots at each step for debugging."
+  ],
+  "description_zh": "通过 Playwright CLI 驱动浏览器（快照、表单、会话管理）",
+  "description_en": "Browser control via Playwright CLI: snapshots, forms, session management",
+  "iconSource": "letter:auto"
+}

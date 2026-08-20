@@ -1,0 +1,11 @@
+{
+  "name": "CRM对象通用查询",
+  "installedAt": 1787228629496,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088536684678684672",
+  "description_zh": "调用标准对象查询能力完成分页、排序、公私海及多条件筛选，并返回查询口径和命中数。适用于用户要求CRM对象通用查询、生成相关结果或检查执行边界时。",
+  "description_en": "CRM Object Query workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_833cd2cf-1e1.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_833cd2cf-1e1.png"
+}

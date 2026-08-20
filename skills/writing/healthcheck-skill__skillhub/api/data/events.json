@@ -1,0 +1,99 @@
+{
+  "timestamp": "2026-03-29 18:20:00Z",
+  "threats": [],
+  "warnings": [
+    {
+      "timestamp": "2026-03-29 16:30:00Z",
+      "severity": "warning",
+      "type": "disk_space_low",
+      "message": "磁盘空间低于20%",
+      "score": 4.5
+    }
+  ],
+  "info": []
+}
+arget": "prod-db-01",
+    "details": "15分钟内5次登录失败，使用用户名：admin, test, root, admin123",
+    "status": "resolved"
+  },
+  {
+    "event_id": "INC_1711800000002",
+    "playbook": "isolate-host",
+    "severity": "critical",
+    "timestamp": "2026-03-29 16:00:00Z",
+    "message": "检测到CPU异常（98%）和内存异常（95%）的尖峰，疑似挖矿",
+    "type": "crypto_mining",
+    "target": "prod-db-01",
+    "details": "未知进程消耗大量CPU/内存，进程名称: unknown_kminer_x64",
+    "status": "resolved"
+  },
+  {
+    "event_id": "INC_1810000003",
+    "event_id": "INC_1810000004",
+    "playbook": "rate-limit",
+    "severity": "high",
+    "timestamp": "2026-03-29 16:15:00Z",
+    "message": "检测到入站流量激增，疑似DDoS攻击",
+    "type": "ddos_attack",
+    "target": "web-server-01",
+    "details": "每分钟超过10,000个请求，响应时间 >10秒，500+个500错误",
+    "status": "resolved"
+  },
+  {
+    "event_id": "INC_1810000005",
+    "playbook": "lockout",
+    "severity": "high",
+    "timestamp": "2026-03-29 16:30:00Z",
+    "message": "检测到root账户特权被滥用，检测到SUDO命令执行了多个系统管理命令",
+    "type": "suspicious_root",
+    "target": "app-server-01",
+    "details": "执行了useradd、systemctl、chmod等命令，严重安全隐患",
+    "status": "pending"
+  },
+  {
+    "event_id": "INC_1810000006",
+    "event_id": "INC_1810000007",
+    "event_id": "INC_1810000008",
+    "event_id": "INC_1810000009",
+    "event_id": "INC_181000010",
+    "playbook": "multiple_threats",
+    "severity": "critical",
+    "timestamp": "2026-03-29 16:00:00Z",
+    "message": "多阶段攻击：检测到4个安全事件：DDoS攻击→权限提升→Root滥用→端口扫描→Webshell访问",
+    "type": "multi_stage_attack",
+    "target": "prod-server-01",
+    "details": "攻击链：1.DDoS → 2.提权 → 3.扫描 → 4.Webshell后门",
+    "status": "resolved"
+  },
+  {
+    "event_id": "INC_181000011",
+    "event_id": "INC_181000012",
+    "event_id": "INC_181000013",
+    "event_id": "INC_181000014",
+    "event_id": "INC_181000015",
+    "event_id": "INC_181000016",
+    "event_id": "INC_181000017",
+    "event_id": "INC_181000018",
+    "event_id": "INC_181000019",
+    "event_id": "INC_181000020",
+    "event_id": "INC_181000021",
+    "event_id": "INC_181000022",
+    "event_id": "INC_181000023",
+    "event_id": "INC_181000024",
+    "event_id": "INC_181000025",
+    "event_id": "INC_181000026",
+    "event_id": "INC_181000027",
+    "event_id": "INC_181000028",
+    "event_id": "INC_181000029",
+    "event_id": "INC_181000030",
+    "event_id": "INC_181000031",
+    "event_id": "CPU:10": "CPU异常峰值",
+    "MEM:15": "内存峰值",
+    "IO:8": "I/O异常峰值",
+    "PROCESSES: 20": "异常进程数",
+    "NET_IN:1500": "入站流量峰值",
+    "PORT_SCAN": "端口扫描",
+    "ROOT": "Root权限滥用",
+    "WEB_SHELL": "Webshell后门"
+}
+]

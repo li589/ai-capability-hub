@@ -1,0 +1,11 @@
+{
+  "owner": "borodich",
+  "slug": "personal-os-onboarding",
+  "displayName": "Onboarding",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774966110069,
+    "commit": "https://github.com/openclaw/skills/commit/2ea2088e135f912bb57072674286e3f2288d6918"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "printsky",
+  "slug": "flink-kafka-dual-write1",
+  "displayName": "kafka写入hive和sr",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773921325705,
+    "commit": "https://github.com/openclaw/skills/commit/c358b2f86098d65c65370fd3d47aab9b27cd160a"
+  },
+  "history": []
+}

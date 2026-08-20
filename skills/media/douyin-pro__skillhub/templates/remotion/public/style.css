@@ -1,0 +1,20 @@
+/* Remotion 渲染器会读取 public/style.css */
+/* 显式声明中文字体，避免中文方块 */
+@font-face {
+  font-family: "Noto Sans SC";
+  src: local("Noto Sans SC"), local("Microsoft YaHei"), local("PingFang SC"), local("SimHei");
+  font-weight: 400 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

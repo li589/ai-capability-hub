@@ -1,0 +1,12 @@
+{
+  "connectors": {
+    "feishu": {
+      "type": "oauth",
+      "auth_policy": "ON_INVOKE"
+    },
+    "lark": {
+      "type": "oauth", 
+      "auth_policy": "ON_INVOKE"
+    }
+  }
+}

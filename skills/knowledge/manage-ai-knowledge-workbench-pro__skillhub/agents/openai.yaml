@@ -1,0 +1,4 @@
+interface:
+  display_name: "AI 自动知识工作台 Pro"
+  short_description: "付费取得结构绑定方案并在本地生成脱敏知识驾驶舱"
+  default_prompt: "使用 $manage-ai-knowledge-workbench-pro 先免费诊断，只创建不含路径、名称和正文的聚合结构清单；SkillHub 沙箱没有 Python 时使用随包 Shell 免费回退并如实停止在预检层。分别取得上传和 Agent Pay 确认后，只有在 Python 3.10+ 主路径可用时才用同一订单取得方案并在本地生成 Metadata-only HTML 驾驶舱。"

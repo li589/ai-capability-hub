@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Product Stage HTML style preview</title>
+  <desc id="desc">A premium pure-white procurement decision stage with one electric-blue accent and named rounded objects.</desc>
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect x="64" y="40" width="1472" height="264" rx="28" fill="#2B63E8"/>
+  <g font-family="PingFang SC,Noto Sans CJK SC,Arial,sans-serif" fill="#FFFFFF">
+    <text x="100" y="82" font-size="16" font-weight="600" letter-spacing="3">REFERENCE 07 / PRODUCT STAGE</text>
+    <text x="100" y="176" font-size="62" font-weight="600">品类价格与采购窗口</text>
+    <text x="100" y="236" font-size="24">一个主色 · 清楚的对象 · 用比例与留白建立层级</text>
+  </g>
+  <circle cx="1330" cy="170" r="90" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  <text x="1292" y="190" font-family="Georgia,serif" font-size="72" fill="#FFFFFF">01</text>
+  <g transform="translate(64 368)">
+    <rect width="900" height="252" rx="28" fill="#162033"/>
+    <g font-family="PingFang SC,Noto Sans CJK SC,Arial,sans-serif" fill="#FFFFFF">
+      <text x="34" y="54" font-size="15" font-weight="600" letter-spacing="2">PRICE WINDOW</text>
+      <text x="34" y="130" font-size="50" font-weight="600">9 月前锁定 60% 用量</text>
+      <text x="34" y="182" font-size="21">现货回落，但 Q4 供应弹性不足。</text>
+      <text x="34" y="220" font-size="16" fill="#FFFFFF" opacity=".72">月均价：¥ 3,246 / 吨 · 含税到厂 · 2026-07</text>
+    </g>
+    <rect x="938" width="534" height="252" rx="28" fill="#162033" opacity=".035"/>
+    <g font-family="PingFang SC,Noto Sans CJK SC,Arial,sans-serif" fill="#162033">
+      <text x="974" y="54" font-size="15" font-weight="600" letter-spacing="2">REVERSAL</text>
+      <text x="974" y="119" font-size="34" font-weight="600">基差回升</text>
+      <text x="974" y="163" font-size="21">或库存覆盖低于</text>
+      <text x="974" y="216" font-size="42" font-weight="600">28 天</text>
+    </g>
+  </g>
+  <g transform="translate(64 682)" font-family="PingFang SC,Noto Sans CJK SC,Arial,sans-serif">
+    <text x="0" y="24" font-size="15" font-weight="600" fill="#162033" letter-spacing="2">WEIGHTED PRICE / 6 MONTHS</text>
+    <path d="M0 202H1472M0 134H1472M0 66H1472" stroke="#162033" stroke-opacity=".16" stroke-width="2"/>
+    <path d="M0 78C130 98 214 110 340 94S570 36 710 74 936 178 1092 136 1320 66 1472 82" fill="none" stroke="#162033" stroke-width="7"/>
+    <g fill="#2B63E8" stroke="#FFFFFF" stroke-width="5">
+      <circle cx="0" cy="78" r="14"/><circle cx="340" cy="94" r="14"/><circle cx="710" cy="74" r="14"/><circle cx="1092" cy="136" r="14"/><circle cx="1472" cy="82" r="14"/>
+    </g>
+    <text x="0" y="250" font-size="17" fill="#162033">FEB</text>
+    <text x="690" y="250" font-size="17" fill="#162033">MAY</text>
+    <text x="1428" y="250" font-size="17" fill="#162033">JUL</text>
+  </g>
+</svg>

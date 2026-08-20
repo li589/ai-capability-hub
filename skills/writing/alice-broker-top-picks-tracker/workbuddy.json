@@ -1,0 +1,6 @@
+{
+  "display_name": "券商金股追踪",
+  "display_name_en": "Broker Top Picks Tracker",
+  "description_zh": "万得 Alice 券商金股追踪 CLI：汇总各大券商月度金股推荐，统计推荐热度与行业分布，输出含金股排行、推荐理由摘要与近月变化趋势的结构化报告。",
+  "description_en": "Wind Alice Broker Top Picks Tracker CLI — aggregates monthly broker top-pick recommendations, ranks stocks by recommendation frequency and heat score, summarizes investment rationale, and delivers sector distribution breakdown and trend charts. Ideal for monthly strategy meetings, sector rotation analysis, and pre-research stock screening."
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "commercial-jingle-maker",
+  "name": "广告歌生成AI",
+  "version": "1.3.2",
+  "installedAt": 1787228846395,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "进门-电话会纪要助手",
+  "installedAt": 1787227764464,
+  "source": "marketplace",
+  "version": "2.4.6",
+  "skillId": "skill_2087918528136953856",
+  "description_zh": "依赖进门 MCP 查询电话会纪要，并生成日报、周报或问答。支持按行业成文、列出标题清单、按公司或主题梳理观点。凡涉及电话会纪要、路演纪要、专家会、电话会议、纪要日报/周报、纪要列表，或询问某公司/主题最近电话会怎么说时使用。",
+  "description_en": "Requires the Comein MCP to search conference call notes and generate daily reports, weekly reports, or answers. It supports industry-based reports, title lists, and summaries of views by company or topic. Use it for requests involving conference call notes, roadshow notes, expert meetings, conference calls, daily or weekly note reports, note lists, or questions about what recent conference calls said about a company or topic.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_5840708c-79b.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_5840708c-79b.png"
+}

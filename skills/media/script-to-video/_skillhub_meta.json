@@ -1,0 +1,11 @@
+{
+  "name": "Flova 剧本生视频（需上传剧本）",
+  "installedAt": 1787227593908,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2089551748913889280",
+  "description_zh": "剧本上传、结构理解、分镜与角色连续性，在关键阶段等待用户确认。",
+  "description_en": "Use the matching live Flova Skill to plan, review, and deliver this video workflow.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/4f3019d4-c642-437f-ab0b-ea884d0e1f25/avatar/skill/au_760f3ab0-81d.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/4f3019d4-c642-437f-ab0b-ea884d0e1f25/avatar/skill/au_760f3ab0-81d.png"
+}

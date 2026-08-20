@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:product-lifecycle-workbench",
+  "registry": "trae-remote-official",
+  "plugin_name": "product-lifecycle-workbench",
+  "version": "0.2.1",
+  "marketplace_plugin_id": "68c8bc26-ebcf-42a1-963f-ed7a5e820fa9",
+  "remote_installed_plugin_id": "R3L0CIIL0W3WKU",
+  "checksum": "e8c7f8d0f7fe2139ef024a7786657cdde29a30851eb6fc650913a70273f2ea2a",
+  "file_size": 88943,
+  "installed_at": 1787227203421
+}

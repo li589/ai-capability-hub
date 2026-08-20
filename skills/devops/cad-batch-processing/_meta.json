@@ -1,0 +1,11 @@
+{
+  "owner": "137984917-cyber",
+  "slug": "cad-batch-processing",
+  "displayName": "CAD批量处理",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1776155401253,
+    "commit": "https://github.com/openclaw/skills/commit/873d71891a6d85e685f98349e672903627138438"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "liubroth",
+  "slug": "traffic-query",
+  "displayName": "Traffic Query",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773463860133,
+    "commit": "https://github.com/openclaw/skills/commit/083b28562ec0df5d70b9ce1840a4cb44c5a902b8"
+  },
+  "history": []
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "comic-drama-breakdown",
+  "name": "漫剧拆分",
+  "version": "1.0.1",
+  "installedAt": 1787228910310,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png"
+}

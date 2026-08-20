@@ -1,0 +1,38 @@
+{
+  "name": "browser_snapshot",
+  "description": "Capture accessibility snapshot of the current page, this is better than screenshot\n",
+  "arguments": {
+    "properties": {
+      "compact": {
+        "description": "When true, outputs a more compact snapshot format. Defaults to false.",
+        "type": "boolean"
+      },
+      "includeDiff": {
+        "description": "When true, include a diff vs the previous snapshot for this tab. Defaults to false.",
+        "type": "boolean"
+      },
+      "interactive": {
+        "description": "When true, only include interactive elements in the snapshot. Defaults to false.",
+        "type": "boolean"
+      },
+      "maxDepth": {
+        "description": "Maximum depth for snapshot output. Defaults to 20.",
+        "type": "number"
+      },
+      "selector": {
+        "description": "Optional CSS selector to scope the snapshot to a subtree.",
+        "type": "string"
+      },
+      "take_screenshot_afterwards": {
+        "description": "When true, takes a screenshot after snapshot completes. Defaults to false.",
+        "type": "boolean"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

@@ -1,0 +1,152 @@
+# CodeSec configuration file: full-field reference and first-run seed source.
+# Lookup order: --config > CODESEC_HOME/config.yaml > ~/.qodersec/config.yaml
+#
+
+# Debug switch. When enabled, the binary writes review/qodersdk debug logs to
+# ~/.qodersec/logs/qodersec.log. Equivalent to CODESEC_DEBUG=1.
+# Logs rotate by size at 5MB and history is not retained. Use this to diagnose
+# hooks not firing or unexpected output.
+hook_debug: false
+
+# Product defaults for direct qodersec commands used by the Qoder skill.
+# These keep user-facing commands short while preserving the underlying CLI
+# routing contract. Explicit command-line flags still override these values.
+qodersec:
+  defaults:
+    scan:
+      auth: qoder
+      platform: custom
+      all_when_no_target: true
+    review:
+      platform: qoder
+      mode: manual
+
+# File filters shared by scan and review.
+# Built-in defaults are used when this section is omitted; configured values replace defaults.
+# You can also append through environment variables:
+#   YUNDUN_CODESEC_EXCLUDE_EXTS=.log,.tmp
+#   YUNDUN_CODESEC_EXCLUDE_PATTERNS=generated/,fixtures/
+file_filter:
+  # Directory/file patterns to exclude. Matching path substrings are skipped.
+  exclude_patterns:
+    - node_modules/       # Node.js dependencies
+    - dist/               # Build output
+    - build/              # Build output
+    - .next/              # Next.js cache
+    - vendor/             # Go/PHP dependencies
+    - __pycache__/        # Python cache
+    - .venv/              # Python virtual environment
+    - target/             # Rust/Java build output
+    - .min.js             # Minified JavaScript
+    - .lock               # Lock files
+
+  # File extensions to exclude, typically binary or non-source files.
+  exclude_exts:
+    - .png
+    - .jpg
+    - .jpeg
+    - .gif
+    - .ico
+    - .svg
+    - .pdf
+    - .zip
+    - .tar
+    - .gz
+    - .woff
+    - .woff2
+    - .ttf
+    - .eot
+    - .mp4
+    - .mp3
+
+# Security review settings for the current Qoder plugin flow:
+# - L1 real-time pattern warnings run from the file-edit PostToolUse hook.
+# - Manual L2/L3 run only when the user invokes the skills.
+# - Full/file cloud scans run from the unified scan skill and use qoder_sdk transport settings.
+review:
+
+  # Previous-finding deduplication window in seconds. Manual L2/L3 share this
+  # per-session dedup state so the same vulnerability is not reported repeatedly.
+  previous_findings_ttl_secs: 3600
+
+  # -------------------------------------------------------
+  # Shared by L1 and manual L2/L3
+  # -------------------------------------------------------
+  shared:
+
+    # Default diff collection limits inherited by each hook review.
+    # Manual L2/L3 use these limits. The cloud scan skill sends file bundles and
+    # is controlled by file_filter plus scan-side limits, not these diff caps.
+    diff:
+      # Maximum diff bytes per file. Larger files are truncated. Default: 81920 = 80KB.
+      max_per_file: 81920
+      # Maximum total diff bytes across all files. Larger diffs are truncated by file priority.
+      # Default: 409600 = 400KB.
+      max_total: 409600
+      # Maximum files in one review. Larger sets are sorted by risk score and top-N files are kept.
+      # Default: 30.
+      max_files: 30
+
+    # State management caps to prevent unbounded state-file growth.
+    state:
+      # reviewed-SHA log cap. GC runs when exceeded. Repository-level setting used
+      # to prevent manual L3 from reviewing the same commit repeatedly. Default: 500.
+      reviewed_shas_cap: 500
+
+    # Git command timeouts in seconds. Every git command must have timeout protection.
+    git_timeouts:
+      rev_parse: 5          # git rev-parse HEAD. Default: 5s.
+      status: 30            # git status. Default: 30s.
+      diff: 30              # git diff. Default: 30s.
+      stash_create: 15      # git stash create for baseline snapshots. Default: 15s.
+
+  # -------------------------------------------------------
+  # PostToolUse - file edits (Edit / Write / MultiEdit / NotebookEdit).
+  # -------------------------------------------------------
+  # Real-time regex/substring detection. Matches inject a warning through the prompt.
+  post_tool_use_file:
+    enabled: true
+    patterns:
+      # Master switch for real-time regex/substring detection. Default: true.
+      # When false, the whole real-time matching layer is skipped and only LLM review is used.
+      enabled: true
+
+      # Per-source switches. These only matter when enabled above is true. Both default to true.
+      builtin:
+        enabled: true       # Built-in rules
+      custom:
+        enabled: true       # Custom rules. See security-patterns.yaml.
+
+      # Custom regex/substring rules live in a separate security-patterns.yaml file, not here:
+      #   Project-level <git-root>/.codesec/security-patterns.yaml  Higher priority; can be committed.
+      #   User-level    ~/.qodersec/security-patterns.yaml          Personal global rules.
+      # Project-level rules override user-level rules when ruleName matches. See
+      # security-patterns.yaml.example for the schema and examples.
+
+  # -------------------------------------------------------
+  # Manual review SDK path.
+  # -------------------------------------------------------
+  # L2/L3 manual skills spawn an inner qodercli through the Go SDK.
+  # The default Qoder plugin does not register Stop or Bash commit/push hooks;
+  # those legacy hook-mode settings are intentionally omitted from this example.
+  # Manual review protections remain active through review.previous_findings_ttl_secs,
+  # review.shared.*, and review.qoder_sdk.*.
+  qoder_sdk:
+    # cli_path: ""                 # Explicit qodercli path. Empty means auto-discover qodercli/qoderclicn.
+
+    # Timeout by review layer in seconds. Precedence: this field > built-in defaults
+    # (review 60 / commit 120).
+    # review = manual L2 single-pass diff review.
+    # commit = manual L3 agentic commit-range audit.
+    timeout_secs_by_layer:
+      review: 60
+      commit: 120
+
+    # Minimum budget gate by layer. If remaining time before spawn is below this value, fail fast
+    # locally instead of starting qodercli. Defaults: review 30 / commit 90.
+    # Invariant: timeout for each layer must be greater than min_budget.
+    # min_budget_secs:
+    #   review: 30
+    #   commit: 90
+
+    audit_max_turns: 24            # L3 agentic built-in tool loop limit (Read/Grep/Glob).

@@ -1,0 +1,184 @@
+{
+  "type": "保险资产管理公司",
+  "type_name": "保险资产管理公司",
+  "count": 35,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-06-26",
+  "institutions": [
+    {
+      "name": "中国人寿资产管理",
+      "code": "CLAM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "平安资产管理",
+      "code": "PAAM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "太平洋资产管理",
+      "code": "CPICAM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "泰康资产管理",
+      "code": "TKAM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "新华资产管理",
+      "code": "NAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "华泰资产管理",
+      "code": "HTAM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "太平资产管理",
+      "code": "TPAM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "人保资产管理",
+      "code": "PICCAM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "光大永明资产管理",
+      "code": "EBYAM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "中再资产管理",
+      "code": "ZRAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "阳光资产管理",
+      "code": "YGAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "生命保险资产管理",
+      "code": "SMAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "合众资产管理",
+      "code": "HZAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "民生通惠资产管理",
+      "code": "MSTHAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "长城财富资产管理",
+      "code": "CCCFAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "英大保险资产管理",
+      "code": "YDBAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "建信保险资产管理",
+      "code": "JXBAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "国寿投资控股",
+      "code": "CLTH",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "人保资本投资管理",
+      "code": "PICCCM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "华安财保资产管理",
+      "code": "HACBAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "中意资产管理",
+      "code": "ZYAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "中英益利资产管理",
+      "code": "ZYLAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "交银康联资产管理",
+      "code": "JYKLAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "中信保诚资产管理",
+      "code": "ZXBCAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "工银安盛资产管理",
+      "code": "ICBCASAM",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "百年保险资产管理",
+      "code": "BNBAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "华夏久盈资产管理",
+      "code": "HXJYAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "大家资产管理",
+      "code": "DJAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "恒安标准人寿保险资管",
+      "code": "HABZRBAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "前海再保险资管",
+      "code": "QHZRAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "长城财富资产管理",
+      "code": "CCAMC2",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "国华兴益保险资管",
+      "code": "GHXYBAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "复星保德信保险资管",
+      "code": "FXBAXBAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "小康人寿保险资管",
+      "code": "XKRSBAMC",
+      "type": "保险资产管理公司"
+    },
+    {
+      "name": "国联人寿保险资管",
+      "code": "GLRSBAMC",
+      "type": "保险资产管理公司"
+    }
+  ]
+}

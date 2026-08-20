@@ -1,0 +1,11 @@
+{
+  "owner": "alexfeng75",
+  "slug": "rag-system-builder",
+  "displayName": "RAG System Builder",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772668207185,
+    "commit": "https://github.com/openclaw/skills/commit/3b81d2dfe07c51e915d8ab3f617fa8089f307154"
+  },
+  "history": []
+}

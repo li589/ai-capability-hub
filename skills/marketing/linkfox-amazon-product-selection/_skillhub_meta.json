@@ -1,0 +1,21 @@
+{
+  "name": "Linkfox 亚马逊选品",
+  "installedAt": 1787227540506,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2077302735129378816",
+  "examples_zh": [
+    "看看 ASIN B08N5WRWNW 在美国站卖得怎么样，价格和销量趋势都要",
+    "美国站 yoga mat 这个词竞争大不大？",
+    "帮我按月销量大于 300、价格 10-50 美元筛几个能做的商品"
+  ],
+  "examples_en": [
+    "How is ASIN B08N5WRWNW selling on Amazon US? Show price and sales trends.",
+    "Is 'yoga mat' a competitive keyword on Amazon US?",
+    "Find products on Amazon US with monthly sales over 300 and price 10-50 USD."
+  ],
+  "description_zh": "亚马逊选品一站式 AI 工具集，整合 ABA 搜索词分析、亚马逊前台搜索/以图搜图/商品详情/评论/Alexa 导购、商业洞察六维报告与反向选品、Keepa/Sorftime 历史时序、Jungle Scout/卖家精灵/SIF/极目关键词与利基市场等 12 类底层工具、33 项子能力。覆盖美国、英国、德国、日本等 15+ 站点。当用户需要亚马逊选品、市场调研、竞品分析、关键词分析、评论挖掘、历史趋势追踪或反向找赛道时触发。",
+  "description_en": "One-stop Amazon product-selection AI toolkit integrating 33 sub-capabilities across 12 tool families — ABA search-term analysis, Amazon frontend search/image-search/product-detail/reviews/Alexa, business-insight reports and reverse selection, Keepa/Sorftime historical time series, and Jungle Scout/SellerSprite/SIF/Jiimore keyword and niche analysis. Covers 15+ marketplaces.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077302735129378816/be14a6f84fe1b2bd.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077302735129378816/be14a6f84fe1b2bd.png"
+}

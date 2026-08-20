@@ -1,0 +1,11 @@
+{
+  "name": "公众号热门账号推荐",
+  "installedAt": 1785864571524,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084106375850889216",
+  "description_zh": "快速获取公众号综合实力排行榜TOP50，支持日榜/周榜/月榜及垂直领域筛选",
+  "description_en": "Get top 50 WeChat accounts ranked by composite score, with daily/weekly/monthly views.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_e4499258-b0d.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_e4499258-b0d.svg"
+}

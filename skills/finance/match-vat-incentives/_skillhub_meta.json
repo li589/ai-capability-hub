@@ -1,0 +1,10 @@
+{
+  "name": "增值税税收优惠匹配",
+  "installedAt": 1787227507441,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2089229868923289600",
+  "description_zh": "根据企业或个人的业务事实，匹配并核验可能适用的中国大陆增值税优惠。",
+  "description_en": "Matches Chinese mainland VAT incentives to taxpayer and transaction facts using verified official policies.",
+  "iconSource": "letter:auto"
+}

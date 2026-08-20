@@ -1,0 +1,11 @@
+{
+  "owner": "zhenstaff",
+  "slug": "personal-cfo",
+  "displayName": "Openclaw Skill",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772922488873,
+    "commit": "https://github.com/openclaw/skills/commit/139c45aef5b547f7a37ddfe205e1e8bad1582802"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:neo-crm",
+  "registry": "trae-remote-official",
+  "plugin_name": "neo-crm",
+  "version": "1.0.0",
+  "marketplace_plugin_id": "31ed4ffd-5467-47d9-9cbb-c238f3ee7e7c",
+  "remote_installed_plugin_id": "6LL.KDKZFR0B48",
+  "checksum": "6409ff29cf8c4c9ddc693a2891d7fd4107500a17c1abc7786611a8e8699824ba",
+  "file_size": 9456,
+  "installed_at": 1787227203070
+}

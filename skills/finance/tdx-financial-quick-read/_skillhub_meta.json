@@ -1,0 +1,11 @@
+{
+  "name": "财报排雷",
+  "installedAt": 1787228661068,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2085676543714209792",
+  "description_zh": "输入一只股票，快速提取财报三表核心指标、多期趋势对比、七维度财务异常检测、盈利能力诊断与同业对标，一分钟判断\"这公司财务健不健康、有没有雷\"。",
+  "description_en": "Rapidly extract core indicators from the three financial statements, compare multi-period trends, run a seven-dimension financial anomaly detection, diagnose profitability, and benchmark against industry peers. Determine in one minute whether a company financials are healthy or carry hidden risks.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/c0c8b4b5-88b6-4952-a193-4c84115f2a91/avatar/skill/au_dba99378-2dd.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/c0c8b4b5-88b6-4952-a193-4c84115f2a91/avatar/skill/au_dba99378-2dd.png"
+}

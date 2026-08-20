@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "tencent-survey": {
+      "type": "streamableHttp",
+      "url": "https://wj.qq.com/api/v2/mcp",
+      "timeout": 30000,
+      "headers": {
+        "Authorization": "Bearer ${connector.tencent-survey.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

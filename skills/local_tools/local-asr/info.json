@@ -1,0 +1,19 @@
+{
+    "venv_name": "asr-cu",
+    "python_version": "3.11",
+    "mem_need_gb": 3.5,
+    "server_alive_timeout": 300,
+    "models": [
+        {
+            "model_id": "snake7gun/Qwen3-ASR-0.6B-fp16-ov",
+            "dir_name": "Qwen3-ASR-0.6B-fp16-ov",
+            "required_files": [
+                "config.json",
+                "thinker/openvino_thinker_language_model.bin",
+                "thinker/openvino_thinker_audio_encoder_model.bin",
+                "thinker/openvino_thinker_audio_model.bin",
+                "thinker/openvino_thinker_embedding_model.bin"
+            ]
+        }
+    ]
+}

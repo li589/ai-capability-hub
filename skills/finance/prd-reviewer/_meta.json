@@ -1,0 +1,11 @@
+{
+  "owner": "flamemyself",
+  "slug": "prd-reviewer",
+  "displayName": "Prd Reviewer",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1774405777677,
+    "commit": "https://github.com/openclaw/skills/commit/e0532ca2c14e443cc7a4502863938c38a6032043"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "philonis",
+  "slug": "dialectical-analysis",
+  "displayName": "辩证分析",
+  "latest": {
+    "version": "3.0.1",
+    "publishedAt": 1773382164439,
+    "commit": "https://github.com/openclaw/skills/commit/dbe53b276f83c8a1247642a3929c9b3008e7d02b"
+  },
+  "history": []
+}

@@ -1,0 +1,43 @@
+{
+  "name": "healthcheck",
+  "version": "3.0.0",
+  "description": "OpenClaw 主机安全加固与风险评估工具 - 集成2026年3月最新威胁情报，专项检测CVE-2026-25253等12个高危漏洞、恶意技能供应链风险",
+  "main": "SKILL.md",
+  "keywords": [
+    "security",
+    "audit",
+    "hardening",
+    "CVE",
+    "vulnerability",
+    "malware",
+    "skill-scan",
+    "prompt-injection",
+    "防火墙",
+    "安全",
+    "审计",
+    "加固",
+    "漏洞"
+  ],
+  "author": "OpenClaw Community",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openclaw/skills/healthcheck"
+  },
+  "bugs": {
+    "url": "https://github.com/openclaw/skills/healthcheck/issues"
+  },
+  "homepage": "https://github.com/openclaw/skills/healthcheck#readme",
+  "engines": {
+    "openclaw": ">=2026.1.29"
+  },
+  "language": ["zh-CN", "en"],
+  "tags": ["security", "system", "maintenance", "cve", "audit"],
+  "priority": "critical",
+  "threatIntelligence": {
+    "lastUpdated": "2026-03-29",
+    "cveDatabase": 12,
+    "maliciousSkills": 1184,
+    "aptGroups": ["APT37", "Kimsuky", "APT28", "Sandworm Team"]
+  }
+}

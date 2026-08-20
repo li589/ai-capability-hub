@@ -1,0 +1,33 @@
+@echo off
+setlocal EnableExtensions DisableDelayedExpansion
+chcp 65001 >nul 2>&1
+cd /d "%~dp0" || exit /b 1
+
+set "PYTHON_CMD="
+if exist ".venv\Scripts\python.exe" set "PYTHON_CMD=.venv\Scripts\python.exe"
+if not defined PYTHON_CMD (
+  where py >nul 2>&1
+  if not errorlevel 1 set "PYTHON_CMD=py -3"
+)
+if not defined PYTHON_CMD (
+  where python >nul 2>&1
+  if not errorlevel 1 set "PYTHON_CMD=python"
+)
+if not defined PYTHON_CMD (
+  echo [停止失败] 未找到可用 Python。请按运行说明检查环境。
+  pause
+  exit /b 2
+)
+if not exist "stop_server.py" (
+  echo [停止失败] 当前目录缺少 stop_server.py。
+  pause
+  exit /b 3
+)
+
+%PYTHON_CMD% "stop_server.py"
+set "RC=%ERRORLEVEL%"
+if not "%RC%"=="0" (
+  echo [停止失败] 项目服务未能正常停止，错误码：%RC%
+  pause
+)
+exit /b %RC%

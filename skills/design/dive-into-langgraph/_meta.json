@@ -1,0 +1,17 @@
+{
+  "owner": "luochang212",
+  "slug": "dive-into-langgraph",
+  "displayName": "dive-into-langgraph",
+  "latest": {
+    "version": "1.0.5",
+    "publishedAt": 1772888066372,
+    "commit": "https://github.com/openclaw/skills/commit/2b6235a7f47f2754ff23a1040b3c02334753ae57"
+  },
+  "history": [
+    {
+      "version": "1.0.4",
+      "publishedAt": 1772477673425,
+      "commit": "https://github.com/openclaw/skills/commit/1d47cc891ec4e50a8c5088d3688ff1f015be03ef"
+    }
+  ]
+}

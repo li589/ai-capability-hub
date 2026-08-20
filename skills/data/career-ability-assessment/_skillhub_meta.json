@@ -1,0 +1,10 @@
+{
+  "name": "职业能力测评",
+  "installedAt": 1787227673437,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2089337587766607872",
+  "description_zh": "评估沟通协作、逻辑分析、执行推进、学习适应、问题解决等职业能力，并输出能力结构解读。",
+  "description_en": "Use when users mention career competencies, capability assessments to analyze their competency profile.",
+  "iconSource": "letter:auto"
+}

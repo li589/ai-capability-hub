@@ -1,0 +1,30 @@
+{
+  "name": "browser_get_attribute",
+  "description": "Read a specific attribute from an element.\n",
+  "arguments": {
+    "properties": {
+      "element": {
+        "description": "Human-readable element description used to obtain permission to inspect the element",
+        "type": "string"
+      },
+      "name": {
+        "description": "Attribute name to read",
+        "type": "string"
+      },
+      "ref": {
+        "description": "Exact target element reference from the page snapshot",
+        "type": "string"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "element",
+      "ref",
+      "name"
+    ],
+    "type": "object"
+  }
+}

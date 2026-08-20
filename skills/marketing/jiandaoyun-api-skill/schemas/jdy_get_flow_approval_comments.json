@@ -1,0 +1,45 @@
+{
+  "client_only_params": [],
+  "description": "获取单条流程表单数据的审批意见列表",
+  "display_name": "查询流程审批意见",
+  "domain": "流程",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/app/{app_id}/entry/{entry_id}/data/{data_id}/approval_comments",
+  "method": "POST",
+  "name": "jdy_get_flow_approval_comments",
+  "params": {
+    "app_id": {
+      "description": "应用ID",
+      "type": "string"
+    },
+    "data_id": {
+      "description": "流程表单数据ID",
+      "type": "string"
+    },
+    "entry_id": {
+      "description": "表单ID",
+      "type": "string"
+    },
+    "limit": {
+      "default": 100,
+      "description": "每页条数，最大100，默认100",
+      "type": "integer"
+    },
+    "skip": {
+      "default": 0,
+      "description": "偏移量，每页最多100条，默认0",
+      "type": "integer"
+    }
+  },
+  "path_params": [
+    "app_id",
+    "entry_id",
+    "data_id"
+  ],
+  "required_params": [
+    "app_id",
+    "entry_id",
+    "data_id"
+  ],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

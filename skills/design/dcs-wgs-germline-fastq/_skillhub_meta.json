@@ -1,0 +1,11 @@
+{
+  "name": "WGS 胚系变异检测",
+  "installedAt": 1787228625574,
+  "source": "marketplace",
+  "version": "2.0.2",
+  "skillId": "skill_2089264480324091904",
+  "description_zh": "DCS Cloud WDL「DCS_WGS_Germline_FASTQ」(v2.0.1) 流程说明与填参指南：从 FASTQ 做 WGS 胚系变异检测（质控、比对、BQSR、HC，支持非二倍体）。用户提到 DCS_WGS_Germline_FASTQ、WGS Germline、全基因组胚系、Ploidy，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"DCS_WGS_Germline_FASTQ\" (v2.0.1) parameter guide: WGS germline variant calling from FASTQ (QC, alignment, BQSR, HaplotypeCaller; supports non-diploid). Use when the user mentions DCS_WGS_Germline_FASTQ, WGS Germline, whole-genome germline, Ploidy, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_9073f28e-1b5.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_9073f28e-1b5.png"
+}

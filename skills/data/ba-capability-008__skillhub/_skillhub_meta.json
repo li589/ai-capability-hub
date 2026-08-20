@@ -1,0 +1,10 @@
+{
+  "slug": "ba-capability-008",
+  "name": "网络安全防御专家",
+  "version": "1.0.0",
+  "installedAt": 1787229053136,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

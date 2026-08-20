@@ -1,0 +1,14 @@
+{
+  "client_only_params": [],
+  "description": "获取企业支持的审计日志范围和事件类型定义",
+  "display_name": "获取审计日志类型定义",
+  "domain": "用量与审计",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/audit_log/domains",
+  "method": "POST",
+  "name": "jdy_get_audit_log_domains",
+  "params": {},
+  "path_params": [],
+  "required_params": [],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "北森审批查询",
+  "installedAt": 1787227677596,
+  "source": "marketplace",
+  "version": "1.1.9",
+  "skillId": "skill_2086798498725855232",
+  "description_zh": "查询北森审批中心的待办与已办审批事项。仅支持本人审批数据查询，不涉及审批操作。",
+  "description_en": "Query pending and completed approval items in the Beisen approval center. Read-only access to personal approval data.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_6a44d3e7-aa6.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_6a44d3e7-aa6.png"
+}

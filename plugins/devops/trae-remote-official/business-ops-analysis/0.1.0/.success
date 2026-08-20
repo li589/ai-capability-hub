@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:business-ops-analysis",
+  "registry": "trae-remote-official",
+  "plugin_name": "business-ops-analysis",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "de46dd60-8c12-49b9-a60d-d8cb4da3f2f7",
+  "remote_installed_plugin_id": "AR3GRJ3JM8AJMF",
+  "checksum": "db115b39bea814f76c679b80303a08d44211052d7e573bbcc8e2baef148a8550",
+  "file_size": 24580,
+  "installed_at": 1787227202733
+}

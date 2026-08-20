@@ -1,0 +1,11 @@
+{
+  "name": "Linkfox 亚马逊店铺运营",
+  "installedAt": 1787227600641,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2077705010794016768",
+  "description_zh": "亚马逊店铺 SP-API 运营工具集，整合 10 项子能力：店铺授权与令牌管理、订单查询与发货确认、Listing 刊登与限制、定价与比价（含批量 FOEP/竞争摘要）、Catalog 目录检索、95+ 种后台报告下载、Feeds 批量上传、买家反馈洞察、文件预签名上传、A+ Content 管理。经 LinkFox 网关调用 SP-API，需先授权取令牌。当用户需要亚马逊店铺运营、订单、Listing、定价、报告、批量上传、A+ 页面或买家反馈分析时触发。参数见 references/，脚本见 scripts/。",
+  "description_en": "One-stop Amazon store SP-API operations toolkit integrating 10 sub-capabilities: store OAuth authorization & token management, order query & shipment confirmation, Listings management (PATCH/PUT/DELETE/restrictions/Product Type definitions), product pricing & comparison (batch FOEP & competitive summary), Catalog retrieval, automated download of 95+ Seller Central report types (request→poll→download→extract), Feeds bulk data upload, customer feedback insights (review topics/trends/return reasons), presigned file upload, and A+ Content management. All routed through the LinkFox gateway POST /spApi/developerProxy to Amazon SP-API; requires prior store authorization to obtain an access token. Triggered when the user needs Amazon store operations, order management, listing, pricing, report download, bulk upload, A+ pages, or customer feedback analysis. Full params per sub-capability in references/, scripts in scripts/.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077705010794016768/be14a6f84fe1b2bd.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077705010794016768/be14a6f84fe1b2bd.png"
+}

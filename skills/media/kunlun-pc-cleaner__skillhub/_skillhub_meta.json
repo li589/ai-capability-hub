@@ -1,0 +1,10 @@
+{
+  "slug": "kunlun-pc-cleaner",
+  "name": "电脑清理助手",
+  "version": "1.1.1",
+  "installedAt": 1787229050194,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

@@ -1,0 +1,593 @@
+name: tencentos-expert
+display_name: TencentOS Server 全栈运维诊断
+version: 2.1.0
+category: operations
+
+description: |
+  TencentOS Server 全栈运维诊断，根据用户的自然语言描述，自动识别需要的能力接口，
+  查询能力实现，使用具体能力解决客户问题。
+  覆盖磁盘空间/分区/文件系统/LVM/健康检测、网络连通性/丢包/延迟排查、
+  CPU火焰图/系统调用热点/调度延迟/中断均衡/文件IO延迟/进程IO追踪分析、
+  内存泄漏/OOM诊断、系统日志/服务管理/时间同步/软件包/软件源管理、
+  kdump配置与故障排查、等保三级安全基线检查与加固、CVE漏洞查询、产品文档实时查询。
+  共24项能力，渐进式按需加载。
+
+owners:
+  - kaeyahuang@tencent.com
+
+# Python 最低版本要求
+python_version: ">=3.6.8"
+
+# ============================================================
+# 能力清单（机器可读契约）
+# ------------------------------------------------------------
+# 字段说明：
+#   id                     - 模块标识（与 references 文件名/capability-index 一致）
+#   name                   - 中文能力名
+#   domain                 - 业务域：disk|network|performance|memory|system|security|recovery|docs
+#   mode                   - read | write | mixed
+#                            · read   = 纯读，不修改任何系统状态
+#                            · write  = 必然涉及写操作
+#                            · mixed  = 默认 read 路径；写路径必须 require_confirmation
+#   requires_confirmation  - true 时高危操作必须用户显式确认（命令文本仅作展示）
+#   requires_credentials   - 该模块需要的凭证类型（SSH 登录见 SKILL.md「凭证保护」段）
+#   primary_reference      - 模块主入口文档（默认加载）
+#   sub_references         - 子文档（按需加载）
+# ============================================================
+capabilities:
+  # ---- 磁盘与存储（5 项） ----
+  - id: disk-space
+    name: 磁盘空间分析与清理
+    domain: disk
+    mode: mixed
+    requires_confirmation: true     # 清理日志/缓存为写操作
+    requires_credentials: []
+    primary_reference: references/disk/disk-space.md
+
+  - id: disk-partition
+    name: 磁盘分区管理
+    domain: disk
+    mode: write
+    requires_confirmation: true
+    requires_credentials: []
+    primary_reference: references/disk/disk-partition.md
+
+  - id: disk-filesystem
+    name: 文件系统管理
+    domain: disk
+    mode: write
+    requires_confirmation: true
+    requires_credentials: []
+    primary_reference: references/disk/disk-filesystem.md
+
+  - id: disk-lvm
+    name: LVM 逻辑卷管理
+    domain: disk
+    mode: write
+    requires_confirmation: true
+    requires_credentials: []
+    primary_reference: references/disk/disk-lvm.md
+
+  - id: disk-health
+    name: 磁盘健康检测
+    domain: disk
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/disk/disk-health.md
+
+  # ---- 网络（3 项） ----
+  - id: network-check
+    name: 网络连通性诊断
+    domain: network
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/network/network-check.md
+
+  - id: network-latency
+    name: 网络丢包与延迟
+    domain: network
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/network/network-latency.md
+    sub_references:
+      - references/network/network-packet-loss.md
+      - references/network/network-latency-diag.md
+      - references/network/network-latency-guide.md
+      - references/network/network-nettrace.md
+      - references/network/network-faq-latency.md
+      - references/network/network-faq-packet-loss.md
+
+  # ---- 性能分析（7 项） ----
+  - id: cpu-flamegraph
+    name: CPU 火焰图
+    domain: performance
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/performance/cpu-flamegraph.md
+    sub_references:
+      - references/performance/cpu-flamegraph-guide.md
+      - references/performance/cpu-flamegraph-perf.md
+      - references/performance/cpu-flamegraph-examples.md
+      - references/performance/flamegraph-install.md
+
+  - id: syscall-hotspot
+    name: 系统调用热点
+    domain: performance
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/performance/syscall-hotspot.md
+    sub_references:
+      - references/performance/syscall-hotspot-guide.md
+
+  - id: sched-latency
+    name: 进程调度延迟
+    domain: performance
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/performance/sched-latency.md
+    sub_references:
+      - references/performance/sched-latency-guide.md
+
+  - id: irq-balance
+    name: 中断均衡排查
+    domain: performance
+    mode: mixed                     # 写：irq 亲和性、RPS/RFS 调整
+    requires_confirmation: true
+    requires_credentials: []
+    primary_reference: references/performance/irq-balance.md
+    sub_references:
+      - references/performance/irq-balance-guide.md
+      - references/performance/irq-balance-perf.md
+      - references/performance/irq-balance-examples.md
+
+  - id: fs-latency
+    name: 文件系统 IO 延迟
+    domain: performance
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/performance/fs-latency.md
+
+  - id: file-io-trace
+    name: 进程文件 IO 追踪
+    domain: performance
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/performance/file-io-trace.md
+
+  - id: oom-killer
+    name: OOM 事件诊断
+    domain: memory                  # 业务上跨 performance/memory，归 memory 主域
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/memory/oom-killer.md
+    sub_references:
+      - references/memory/oom-kernel-patterns.md
+      - references/memory/oom-metrics-guide.md
+
+  # ---- 内存（1 项） ----
+  - id: memory-leak
+    name: 内存泄漏诊断
+    domain: memory
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/memory/memory-leak.md
+    sub_references:
+      - references/memory/memory-leak-guide.md
+      - references/memory/memory-leak-indicators.md
+
+  # ---- 系统管理（5 项） ----
+  - id: system-log
+    name: 系统日志分析
+    domain: system
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/system/system-log.md
+
+  - id: service-status
+    name: 服务状态管理
+    domain: system
+    mode: write                     # systemctl start/stop/restart/disable
+    requires_confirmation: true
+    requires_credentials: []
+    primary_reference: references/system/service-status.md
+
+  - id: time-sync
+    name: 时间同步管理
+    domain: system
+    mode: write                     # date -s / hwclock / chronyd 重启
+    requires_confirmation: true
+    requires_credentials: []
+    primary_reference: references/system/time-sync.md
+
+  - id: package-version
+    name: 软件包版本管理
+    domain: system
+    mode: mixed                     # 查询=read，安装/升级/卸载=write
+    requires_confirmation: true
+    requires_credentials: []
+    primary_reference: references/system/package-version.md
+
+  - id: repo-source
+    name: 软件源配置
+    domain: system
+    mode: write                     # 覆写 /etc/yum.repos.d/*.repo
+    requires_confirmation: true
+    requires_credentials: []
+    primary_reference: references/system/repo-source.md
+
+  # ---- 安全（2 项） ----
+  - id: security-baseline
+    name: 等保三级安全加固
+    domain: security
+    mode: mixed                     # check=read, harden=write
+    requires_confirmation: true     # harden 模式必须确认
+    requires_credentials: []
+    primary_reference: references/security/security-baseline.md
+    sub_references:
+      - references/security/security-baseline-guide.md
+      - references/security/security-checklist.md
+
+  - id: tencentos-cve-query
+    name: CVE 漏洞查询
+    domain: security
+    mode: read
+    requires_confirmation: false
+    requires_credentials:
+      - api_token                   # CVE XML Server 可能需要 token
+    primary_reference: references/security/tencentos-cve-query.md
+    sub_references:
+      - references/security/tencentos-cve-guide.md
+
+  # ---- 故障恢复（1 项） ----
+  - id: kdump-check
+    name: kdump 配置与排查
+    domain: recovery
+    mode: write                     # 修改 crashkernel/kdump.conf 等
+    requires_confirmation: true
+    requires_credentials: []
+    primary_reference: references/recovery/kdump-check.md
+
+  # ---- 产品文档（1 项） ----
+  - id: tencentos-docs
+    name: 产品文档实时查询
+    domain: docs
+    mode: read
+    requires_confirmation: false
+    requires_credentials: []
+    primary_reference: references/docs/tencentos-docs.md
+
+# ============================================================
+# 危险命令黑名单（机器可读版的全局表）
+# 与 guides/workflow.md「危险操作管控表」一一对应
+# 任何 capability 都不得直接执行下列命令
+# ============================================================
+forbidden_commands:
+  reboot_panic:
+    description: 重启 / 关机 / 内核 panic 触发
+    commands:
+      - reboot
+      - shutdown
+      - poweroff
+      - halt
+      - "init 0"
+      - "init 6"
+      - "echo c > /proc/sysrq-trigger"
+
+  disk_destruction:
+    description: 磁盘格式化 / 擦除
+    commands:
+      - "mkfs.*"
+      - "dd if=/dev/zero of=/dev/*"
+      - wipefs
+      - "sgdisk --zap-all"
+
+  partition_write:
+    description: 分区表写入
+    commands:
+      - "fdisk (write operations)"
+      - "parted (write operations)"
+      - pvcreate
+
+  lvm_destruction:
+    description: LVM 破坏性操作
+    commands:
+      - lvremove
+      - vgremove
+      - pvremove
+      - lvreduce
+      - vgreduce
+
+  fs_repair:
+    description: 文件系统修复（含日志丢弃风险）
+    commands:
+      - fsck
+      - e2fsck
+      - "xfs_repair -L"
+
+  boot_kernel:
+    description: 引导 / 内核重建
+    commands:
+      - grub2-mkconfig
+      - update-grub
+      - "dracut -f"
+      - "update-initramfs -u"
+
+  network_disruption:
+    description: 网络服务中断
+    commands:
+      - "systemctl restart NetworkManager"
+      - "systemctl stop sshd"
+      - "iptables -F"
+      - "nft flush ruleset"
+
+  gpu_reset:
+    description: GPU 重置（涉及业务中断）
+    commands:
+      - "nvidia-smi -r"
+      - "nvidia-smi -e 1"
+
+  critical_file_deletion:
+    description: 关键文件删除
+    commands:
+      - "rm -rf /"
+      - "rm -rf /*"
+      - "rm -rf <目录>"
+      - "rm -f /etc/ld.so.preload"
+      - "rm -f /etc/cloud/cloud-init.disabled"
+
+  attribute_change:
+    description: 文件属性变更（修改不可变属性）
+    commands:
+      - chattr
+
+# ============================================================
+# 凭证保护策略（仅覆盖 SSH 登录场景，详见 SKILL.md「凭证保护」段）
+# ============================================================
+credentials_policy:
+  forbidden_actions:
+    - id: read_ssh_key
+      description: 禁止读取 SSH 私钥文件
+      patterns:
+        - "~/.ssh/id_*"
+    - id: log_credentials
+      description: 禁止把 SSH 密码 / 密钥写入日志 / stdout / 生成的脚本
+    - id: commit_credentials
+      description: 禁止提交含凭证的文件到 git
+    - id: rephrase_credentials
+      description: 禁止在 AI 回复中复述用户粘贴的密码或密钥明文
+  preferred_injection:
+    - method: ssh_agent
+      description: 本地 ssh-agent 持有 SSH 密钥（AI 只生成 ssh 命令模板）
+    - method: user_local_login
+      description: 登录目标主机由用户自己完成，AI 不代为执行
+
+# ============================================================
+# 失败重试策略（与 guides/workflow.md「失败重试与策略升级」对齐）
+# ============================================================
+retry_policy:
+  max_attempts: 3
+  forbid_repeating_identical_output: true
+  steps:
+    - attempt: 1
+      action: check_input_and_environment
+      description: 检查参数格式、依赖工具是否安装、文件/路径权限
+    - attempt: 2
+      action: switch_to_fallback
+      description: 切换降级方案；不得重复第 1 次的指令
+      example_chains:
+        - "perf-prof -> perf 原生命令"
+        - "nettrace -> tcpdump + 解析"
+        - "MCP API -> SSH 直连等价 shell 命令"
+    - attempt: 3
+      action: stop_and_escalate
+      description: 停止重试，列出已尝试方案，请求人工介入
+
+# ============================================================
+# 云 API 权限降级路径
+# ============================================================
+cloud_api_fallback:
+  on_permission_denied:
+    - level: 1
+      action: announce_minimum_permissions
+      description: 列出该 API 名称与所需的最小只读权限（如 cvm:DescribeInstances）
+    - level: 2
+      action: ssh_direct
+      description: 通过 SSH 直连目标实例执行等价 shell 命令
+    - level: 3
+      action: alternative_api
+      description: 切换到等价的监控/日志类 API
+    - level: 4
+      action: console_manual
+      description: 给出腾讯云控制台的菜单点击步骤
+  forbid_repeating_same_credential: true
+
+# 触发关键词
+triggers:
+  # 磁盘与存储
+  - 磁盘满
+  - 磁盘空间
+  - 分区
+  - 格式化
+  - 挂载
+  - fstab
+  - LVM
+  - 扩容
+  - SMART
+  - 坏块
+
+  # 网络
+  - ping不通
+  - 端口不通
+  - DNS
+  - 丢包
+  - 延迟
+  - 网络慢
+  - RTT
+
+  # CPU/性能
+  - 火焰图
+  - CPU热点
+  - perf
+  - 系统调用
+  - 调度延迟
+  - 中断不均衡
+  - 软中断
+
+  # IO
+  - 文件IO慢
+  - fsync慢
+  - page cache
+  - IO延迟
+  - 进程IO
+  - iotop
+
+  # 内存
+  - 内存泄漏
+  - OOM
+  - 进程被杀
+  - 内存不足
+
+  # 系统管理
+  - 日志
+  - journalctl
+  - dmesg
+  - 服务启动失败
+  - systemctl
+  - 时间不对
+  - NTP
+  - chrony
+  - 时区
+  - yum源
+  - dnf
+  - pip源
+  - npm源
+  - 软件包版本
+  - 安全更新
+
+  # 安全
+  - CVE
+  - kdump
+  - vmcore
+  - crashkernel
+  - 等保
+  - 安全加固
+  - 安全基线
+
+  # TencentOS 相关
+  - TencentOS文档
+  - 版本信息
+  - CentOS迁移
+
+keywords:
+  - TencentOS
+  - 运维
+  - 诊断
+  - 排查
+  - 性能分析
+  - 磁盘
+  - 网络
+  - 内存
+  - CPU
+  - IO
+  - OOM
+  - CVE
+  - 安全基线
+
+# 脚本文件
+scripts:
+  - scripts/cve_xml_server.py
+  - scripts/parse_oom_events.py
+  - scripts/parse_memory_leak.py
+  - scripts/collect_memory_leak.sh
+  - scripts/install-deps.sh
+
+# 参考文档（按业务域分子目录，与 references/ 实际结构对齐）
+references:
+  common:
+    - references/_common/common-instructions.md
+    - references/performance/performance-common.md
+
+  disk:
+    - references/disk/disk-space.md
+    - references/disk/disk-partition.md
+    - references/disk/disk-filesystem.md
+    - references/disk/disk-lvm.md
+    - references/disk/disk-health.md
+
+  network:
+    - references/network/network-check.md
+    - references/network/network-latency.md
+    - references/network/network-latency-diag.md
+    - references/network/network-latency-guide.md
+    - references/network/network-packet-loss.md
+    - references/network/network-nettrace.md
+    - references/network/network-faq-latency.md
+    - references/network/network-faq-packet-loss.md
+
+  performance:
+    - references/performance/cpu-flamegraph.md
+    - references/performance/cpu-flamegraph-guide.md
+    - references/performance/cpu-flamegraph-perf.md
+    - references/performance/cpu-flamegraph-examples.md
+    - references/performance/flamegraph-install.md
+    - references/performance/syscall-hotspot.md
+    - references/performance/syscall-hotspot-guide.md
+    - references/performance/sched-latency.md
+    - references/performance/sched-latency-guide.md
+    - references/performance/irq-balance.md
+    - references/performance/irq-balance-guide.md
+    - references/performance/irq-balance-perf.md
+    - references/performance/irq-balance-examples.md
+    - references/performance/fs-latency.md
+    - references/performance/file-io-trace.md
+
+  memory:
+    - references/memory/memory-leak.md
+    - references/memory/memory-leak-guide.md
+    - references/memory/memory-leak-indicators.md
+    - references/memory/oom-killer.md
+    - references/memory/oom-kernel-patterns.md
+    - references/memory/oom-metrics-guide.md
+
+  system:
+    - references/system/system-log.md
+    - references/system/service-status.md
+    - references/system/time-sync.md
+    - references/system/package-version.md
+    - references/system/repo-source.md
+
+  security:
+    - references/security/security-baseline.md
+    - references/security/security-baseline-guide.md
+    - references/security/security-checklist.md
+    - references/security/tencentos-cve-query.md
+    - references/security/tencentos-cve-guide.md
+
+  recovery:
+    - references/recovery/kdump-check.md
+
+  docs:
+    - references/docs/tencentos-docs.md
+
+# 支持的 TencentOS 版本
+supported_os:
+  - name: TencentOS Server 2 (TS2)
+    python: "3.6.8"
+    pkg_mgr: yum
+  - name: TencentOS Server 3 (TS3)
+    python: "3.6.8"
+    pkg_mgr: dnf
+  - name: TencentOS Server 4 (TS4)
+    python: "3.11"
+    pkg_mgr: dnf

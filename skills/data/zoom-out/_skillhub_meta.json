@@ -1,0 +1,20 @@
+{
+  "name": "zoom-out",
+  "installedAt": 1787228677339,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443423086948352",
+  "examples_zh": [
+    "帮我 zoom out，看看这块代码的全貌",
+    "这个模块是被谁调用的？",
+    "我不熟悉这个区域，给我一个模块地图"
+  ],
+  "examples_en": [
+    "zoom out, show me the big picture",
+    "give me a map of all callers of this module",
+    "I'm unfamiliar with this code area, orient me"
+  ],
+  "description_zh": "提升抽象层次，快速获取陌生代码模块的全局地图与调用关系",
+  "description_en": "Zoom out for a higher-level map of modules, callers, and how unfamiliar code fits the big picture",
+  "iconSource": "letter:auto"
+}

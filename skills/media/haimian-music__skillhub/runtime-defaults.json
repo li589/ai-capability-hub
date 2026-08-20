@@ -1,0 +1,10 @@
+{
+  "environment": "production",
+  "baseUrl": "https://music.68zysm.cn/api/v3",
+  "webBaseUrl": "https://lexuan.club",
+  "skillSlug": "haimian-music",
+  "displayName": "海绵音乐 Skill",
+  "marketplaceTitle": "海绵音乐 Skill",
+  "marketplaceOnly": false,
+  "autoUpdate": true
+}

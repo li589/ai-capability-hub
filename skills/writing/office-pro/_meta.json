@@ -1,0 +1,17 @@
+{
+  "owner": "deki18",
+  "slug": "office-pro",
+  "displayName": "Office Pro",
+  "latest": {
+    "version": "1.2.1",
+    "publishedAt": 1775194176000,
+    "commit": "https://github.com/openclaw/skills/commit/8bc0e8b6348d1e38888b64b21f57eb2a2aa496d3"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1775135511156,
+      "commit": "https://github.com/openclaw/skills/commit/324cae1ea870b92c24a4c0c30cdff8ac610d461e"
+    }
+  ]
+}

@@ -1,0 +1,622 @@
+{
+  "type": "城投机构",
+  "type_name": "城投机构",
+  "count": 100,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-05-24",
+  "_note": "主要城投公司列表，按区域分类",
+  "institutions": [
+    {
+      "name": "上海城投",
+      "code": "SHCT",
+      "type": "城投公司",
+      "region": "上海"
+    },
+    {
+      "name": "上海地产",
+      "code": "SHDC",
+      "type": "城投公司",
+      "region": "上海"
+    },
+    {
+      "name": "上海建工",
+      "code": "SHJG",
+      "type": "城投公司",
+      "region": "上海"
+    },
+    {
+      "name": "陆家嘴集团",
+      "code": "LJZ",
+      "type": "城投公司",
+      "region": "上海"
+    },
+    {
+      "name": "张江高科",
+      "code": "ZJGK",
+      "type": "城投公司",
+      "region": "上海"
+    },
+    {
+      "name": "外高桥集团",
+      "code": "WGQ",
+      "type": "城投公司",
+      "region": "上海"
+    },
+    {
+      "name": "金桥集团",
+      "code": "JQ",
+      "type": "城投公司",
+      "region": "上海"
+    },
+    {
+      "name": "陆家嘴股份",
+      "code": "LJZGF",
+      "type": "城投公司",
+      "region": "上海"
+    },
+    {
+      "name": "北京城投",
+      "code": "BJCT",
+      "type": "城投公司",
+      "region": "北京"
+    },
+    {
+      "name": "北京控股",
+      "code": "BJKZ",
+      "type": "城投公司",
+      "region": "北京"
+    },
+    {
+      "name": "首创集团",
+      "code": "SCJT",
+      "type": "城投公司",
+      "region": "北京"
+    },
+    {
+      "name": "北辰集团",
+      "code": "BCJT",
+      "type": "城投公司",
+      "region": "北京"
+    },
+    {
+      "name": "北京国资公司",
+      "code": "BJGZ",
+      "type": "城投公司",
+      "region": "北京"
+    },
+    {
+      "name": "京投公司",
+      "code": "JTGS",
+      "type": "城投公司",
+      "region": "北京"
+    },
+    {
+      "name": "深圳城投",
+      "code": "SZCT",
+      "type": "城投公司",
+      "region": "深圳"
+    },
+    {
+      "name": "深圳高速",
+      "code": "SZGS",
+      "type": "城投公司",
+      "region": "深圳"
+    },
+    {
+      "name": "深圳国际",
+      "code": "SZGJ",
+      "type": "城投公司",
+      "region": "深圳"
+    },
+    {
+      "name": "深圳燃气",
+      "code": "SZRQ",
+      "type": "城投公司",
+      "region": "深圳"
+    },
+    {
+      "name": "盐田港集团",
+      "code": "YTG",
+      "type": "城投公司",
+      "region": "深圳"
+    },
+    {
+      "name": "广州城投",
+      "code": "GZCT",
+      "type": "城投公司",
+      "region": "广州"
+    },
+    {
+      "name": "广州地铁",
+      "code": "GZDT",
+      "type": "城投公司",
+      "region": "广州"
+    },
+    {
+      "name": "广州金控",
+      "code": "GZJK",
+      "type": "城投公司",
+      "region": "广州"
+    },
+    {
+      "name": "广州交投",
+      "code": "GZJT",
+      "type": "城投公司",
+      "region": "广州"
+    },
+    {
+      "name": "广州国发",
+      "code": "GZGF",
+      "type": "城投公司",
+      "region": "广州"
+    },
+    {
+      "name": "天津城投",
+      "code": "TJCT",
+      "type": "城投公司",
+      "region": "天津"
+    },
+    {
+      "name": "天津泰达",
+      "code": "TJTD",
+      "type": "城投公司",
+      "region": "天津"
+    },
+    {
+      "name": "天津市政",
+      "code": "TJSZ",
+      "type": "城投公司",
+      "region": "天津"
+    },
+    {
+      "name": "天津能源",
+      "code": "TJNY",
+      "type": "城投公司",
+      "region": "天津"
+    },
+    {
+      "name": "重庆城投",
+      "code": "CQCT",
+      "type": "城投公司",
+      "region": "重庆"
+    },
+    {
+      "name": "重庆高速",
+      "code": "CQGS",
+      "type": "城投公司",
+      "region": "重庆"
+    },
+    {
+      "name": "重庆旅投",
+      "code": "CQLT",
+      "type": "城投公司",
+      "region": "重庆"
+    },
+    {
+      "name": "重庆水务",
+      "code": "CQSW",
+      "type": "城投公司",
+      "region": "重庆"
+    },
+    {
+      "name": "重庆能源",
+      "code": "CQNY",
+      "type": "城投公司",
+      "region": "重庆"
+    },
+    {
+      "name": "成都城投",
+      "code": "CDCT",
+      "type": "城投公司",
+      "region": "成都"
+    },
+    {
+      "name": "成都轨道",
+      "code": "CDGD",
+      "type": "城投公司",
+      "region": "成都"
+    },
+    {
+      "name": "成都交投",
+      "code": "CDJT",
+      "type": "城投公司",
+      "region": "成都"
+    },
+    {
+      "name": "成都兴城",
+      "code": "CDXC",
+      "type": "城投公司",
+      "region": "成都"
+    },
+    {
+      "name": "成都工投",
+      "code": "CDGT",
+      "type": "城投公司",
+      "region": "成都"
+    },
+    {
+      "name": "武汉城投",
+      "code": "WHCT",
+      "type": "城投公司",
+      "region": "武汉"
+    },
+    {
+      "name": "武汉地铁",
+      "code": "WHDT",
+      "type": "城投公司",
+      "region": "武汉"
+    },
+    {
+      "name": "武汉市政",
+      "code": "WHSZ",
+      "type": "城投公司",
+      "region": "武汉"
+    },
+    {
+      "name": "武汉燃气",
+      "code": "WHRQ",
+      "type": "城投公司",
+      "region": "武汉"
+    },
+    {
+      "name": "武汉交投",
+      "code": "WHJT",
+      "type": "城投公司",
+      "region": "武汉"
+    },
+    {
+      "name": "南京城投",
+      "code": "NJCT",
+      "type": "城投公司",
+      "region": "南京"
+    },
+    {
+      "name": "南京地铁",
+      "code": "NJDT",
+      "type": "城投公司",
+      "region": "南京"
+    },
+    {
+      "name": "南京安居",
+      "code": "NJAJ",
+      "type": "城投公司",
+      "region": "南京"
+    },
+    {
+      "name": "南京交通",
+      "code": "NJJT",
+      "type": "城投公司",
+      "region": "南京"
+    },
+    {
+      "name": "南京紫金",
+      "code": "NJZJ",
+      "type": "城投公司",
+      "region": "南京"
+    },
+    {
+      "name": "杭州城投",
+      "code": "HZCT",
+      "type": "城投公司",
+      "region": "杭州"
+    },
+    {
+      "name": "杭州地铁",
+      "code": "HZDT",
+      "type": "城投公司",
+      "region": "杭州"
+    },
+    {
+      "name": "杭州交投",
+      "code": "HZJT",
+      "type": "城投公司",
+      "region": "杭州"
+    },
+    {
+      "name": "杭州钱投",
+      "code": "HZTQ",
+      "type": "城投公司",
+      "region": "杭州"
+    },
+    {
+      "name": "杭州水务",
+      "code": "HZSW",
+      "type": "城投公司",
+      "region": "杭州"
+    },
+    {
+      "name": "苏州城投",
+      "code": "SZCT",
+      "type": "城投公司",
+      "region": "苏州"
+    },
+    {
+      "name": "苏州高新",
+      "code": "SZGX",
+      "type": "城投公司",
+      "region": "苏州"
+    },
+    {
+      "name": "苏州交投",
+      "code": "SZJT",
+      "type": "城投公司",
+      "region": "苏州"
+    },
+    {
+      "name": "苏州水务",
+      "code": "SZSW",
+      "type": "城投公司",
+      "region": "苏州"
+    },
+    {
+      "name": "苏州工业",
+      "code": "SZGY",
+      "type": "城投公司",
+      "region": "苏州"
+    },
+    {
+      "name": "西安城投",
+      "code": "XACT",
+      "type": "城投公司",
+      "region": "西安"
+    },
+    {
+      "name": "西安高压",
+      "code": "XAGY",
+      "type": "城投公司",
+      "region": "西安"
+    },
+    {
+      "name": "西安地铁",
+      "code": "XADT",
+      "type": "城投公司",
+      "region": "西安"
+    },
+    {
+      "name": "西安水务",
+      "code": "XASW",
+      "type": "城投公司",
+      "region": "西安"
+    },
+    {
+      "name": "西安投资",
+      "code": "XATZ",
+      "type": "城投公司",
+      "region": "西安"
+    },
+    {
+      "name": "青岛城投",
+      "code": "QDCT",
+      "type": "城投公司",
+      "region": "青岛"
+    },
+    {
+      "name": "青岛地铁",
+      "code": "QDDT",
+      "type": "城投公司",
+      "region": "青岛"
+    },
+    {
+      "name": "青岛交运",
+      "code": "QDJY",
+      "type": "城投公司",
+      "region": "青岛"
+    },
+    {
+      "name": "青岛国信",
+      "code": "QDGX",
+      "type": "城投公司",
+      "region": "青岛"
+    },
+    {
+      "name": "青岛华通",
+      "code": "QDHT",
+      "type": "城投公司",
+      "region": "青岛"
+    },
+    {
+      "name": "大连城投",
+      "code": "DLCT",
+      "type": "城投公司",
+      "region": "大连"
+    },
+    {
+      "name": "大连德泰",
+      "code": "DLTD",
+      "type": "城投公司",
+      "region": "大连"
+    },
+    {
+      "name": "大连星海湾",
+      "code": "DLXHW",
+      "type": "城投公司",
+      "region": "大连"
+    },
+    {
+      "name": "大连城投",
+      "code": "DLCT2",
+      "type": "城投公司",
+      "region": "大连"
+    },
+    {
+      "name": "宁波城投",
+      "code": "NBCT",
+      "type": "城投公司",
+      "region": "宁波"
+    },
+    {
+      "name": "宁波轨道交通",
+      "code": "NBGD",
+      "type": "城投公司",
+      "region": "宁波"
+    },
+    {
+      "name": "宁波交投",
+      "code": "NBJT",
+      "type": "城投公司",
+      "region": "宁波"
+    },
+    {
+      "name": "宁波开投",
+      "code": "NBKT",
+      "type": "城投公司",
+      "region": "宁波"
+    },
+    {
+      "name": "宁波工业",
+      "code": "NBGY",
+      "type": "城投公司",
+      "region": "宁波"
+    },
+    {
+      "name": "厦门城投",
+      "code": "XMCT",
+      "type": "城投公司",
+      "region": "厦门"
+    },
+    {
+      "name": "厦门火炬",
+      "code": "XMHJ",
+      "type": "城投公司",
+      "region": "厦门"
+    },
+    {
+      "name": "厦门海沧",
+      "code": "XMHC",
+      "type": "城投公司",
+      "region": "厦门"
+    },
+    {
+      "name": "厦门市政",
+      "code": "XMSZ",
+      "type": "城投公司",
+      "region": "厦门"
+    },
+    {
+      "name": "厦门安居",
+      "code": "XMAJ",
+      "type": "城投公司",
+      "region": "厦门"
+    },
+    {
+      "name": "长沙城投",
+      "code": "CSCT",
+      "type": "城投公司",
+      "region": "长沙"
+    },
+    {
+      "name": "长沙轨道",
+      "code": "CSGD",
+      "type": "城投公司",
+      "region": "长沙"
+    },
+    {
+      "name": "长沙交通",
+      "code": "CSJT",
+      "type": "城投公司",
+      "region": "长沙"
+    },
+    {
+      "name": "长沙水业",
+      "code": "CSSY",
+      "type": "城投公司",
+      "region": "长沙"
+    },
+    {
+      "name": "长沙燃气",
+      "code": "CSRQ",
+      "type": "城投公司",
+      "region": "长沙"
+    },
+    {
+      "name": "郑州城投",
+      "code": "ZZCT",
+      "type": "城投公司",
+      "region": "郑州"
+    },
+    {
+      "name": "郑州地铁",
+      "code": "ZZDT",
+      "type": "城投公司",
+      "region": "郑州"
+    },
+    {
+      "name": "郑州交投",
+      "code": "ZZJT",
+      "type": "城投公司",
+      "region": "郑州"
+    },
+    {
+      "name": "郑州公用",
+      "code": "ZZGY",
+      "type": "城投公司",
+      "region": "郑州"
+    },
+    {
+      "name": "郑州发展",
+      "code": "ZZFZ",
+      "type": "城投公司",
+      "region": "郑州"
+    },
+    {
+      "name": "济南城投",
+      "code": "JNCT",
+      "type": "城投公司",
+      "region": "济南"
+    },
+    {
+      "name": "济南轨交",
+      "code": "JNGJ",
+      "type": "城投公司",
+      "region": "济南"
+    },
+    {
+      "name": "济南能源",
+      "code": "JNNY",
+      "type": "城投公司",
+      "region": "济南"
+    },
+    {
+      "name": "济南水务",
+      "code": "JNSW",
+      "type": "城投公司",
+      "region": "济南"
+    },
+    {
+      "name": "济南建工",
+      "code": "JNJG",
+      "type": "城投公司",
+      "region": "济南"
+    },
+    {
+      "name": "哈尔滨城投",
+      "code": "HEBCT",
+      "type": "城投公司",
+      "region": "哈尔滨"
+    },
+    {
+      "name": "吉林城投",
+      "code": "JLCT",
+      "type": "城投公司",
+      "region": "吉林"
+    },
+    {
+      "name": "沈阳城投",
+      "code": "SYCT",
+      "type": "城投公司",
+      "region": "沈阳"
+    },
+    {
+      "name": "长春城投",
+      "code": "CCCT",
+      "type": "城投公司",
+      "region": "长春"
+    },
+    {
+      "name": "西安城投",
+      "code": "XACT2",
+      "type": "城投公司",
+      "region": "西安"
+    }
+  ]
+}

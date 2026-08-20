@@ -1,0 +1,11 @@
+{
+  "owner": "fang232629",
+  "slug": "video-note-maker",
+  "displayName": "学习类视频转笔记工具",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775806220836,
+    "commit": "https://github.com/openclaw/skills/commit/2f06328961bc636bb9f0484ed501f523f9ea2805"
+  },
+  "history": []
+}

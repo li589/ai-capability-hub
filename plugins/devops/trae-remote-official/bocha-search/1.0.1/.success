@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:bocha-search",
+  "registry": "trae-remote-official",
+  "plugin_name": "bocha-search",
+  "version": "1.0.1",
+  "marketplace_plugin_id": "ca0f7248-ffb6-479b-b972-d6ab3c43093e",
+  "remote_installed_plugin_id": "QWFX24ZSISF926",
+  "checksum": "be40dc1c2b560cdcd0cd89a2c643dc29494e48829d03de29ca8332ed180301fc",
+  "file_size": 11163,
+  "installed_at": 1787227204008
+}

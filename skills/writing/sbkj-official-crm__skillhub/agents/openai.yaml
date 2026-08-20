@@ -1,0 +1,4 @@
+interface:
+  display_name: "CRM客户商机增强"
+  short_description: "补全CRM客户画像、联系方式、项目记录和上下游合作商机信息"
+  default_prompt: "使用 $baobiao-enrich-crm-opportunities 增强这批CRM客户与商机信息。"

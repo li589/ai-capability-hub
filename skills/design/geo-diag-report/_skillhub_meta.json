@@ -1,0 +1,10 @@
+{
+  "name": "GEO诊断报告",
+  "installedAt": 1785784651815,
+  "source": "marketplace",
+  "version": "4.1.0",
+  "skillId": "skill_2068890468759261184",
+  "description_zh": "品牌GEO诊断专家（搜索增强）。4阶段流水线，真实搜索+虚拟推理双模式，输出HTML可视化报告",
+  "description_en": "Brand GEO diagnosis: 4-stage pipeline, search-augmented, HTML reports",
+  "iconSource": "letter:auto"
+}

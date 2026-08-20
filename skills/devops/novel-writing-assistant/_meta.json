@@ -1,0 +1,11 @@
+{
+  "owner": "folhj163",
+  "slug": "novel-writing-assistant",
+  "displayName": "小说创作助手",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774251376653,
+    "commit": "https://github.com/openclaw/skills/commit/11bda2016d54ef57c37df9cfbf9330ff585aa355"
+  },
+  "history": []
+}

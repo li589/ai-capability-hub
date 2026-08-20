@@ -1,0 +1,21 @@
+{
+  "name": "腾讯微云",
+  "installedAt": 1787227439283,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2053083167882870784",
+  "examples_zh": [
+    "帮我查看微云网盘里有哪些文件",
+    "把这个文件上传到微云",
+    "下载微云里的项目文档"
+  ],
+  "examples_en": [
+    "List all files in my Weiyun cloud drive",
+    "Upload this file to Weiyun",
+    "Download the project doc from my cloud drive"
+  ],
+  "description_zh": "管理腾讯微云网盘文件（列表、上传、下载、删除、分享）",
+  "description_en": "Manage Tencent Weiyun cloud drive files (list, upload, download, delete, share)",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/weiyun.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/weiyun.svg"
+}

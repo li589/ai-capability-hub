@@ -1,0 +1,26 @@
+{
+  "client_only_params": [],
+  "description": "激活已终止的流程实例。Only works on instances that were previously ended.",
+  "display_name": "激活流程实例",
+  "domain": "流程",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/workflow/instance/activate",
+  "method": "POST",
+  "name": "jdy_activate_flow_instance",
+  "params": {
+    "flow_id": {
+      "description": "激活的节点ID（必填）",
+      "type": "number"
+    },
+    "instance_id": {
+      "description": "流程实例ID，即数据的_id（必填）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "instance_id",
+    "flow_id"
+  ],
+  "risk": "write",
+  "source": "简道云工具包.zip"
+}

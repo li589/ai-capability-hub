@@ -1,0 +1,8 @@
+interface:
+  display_name: "veFaaS"
+  short_description: "部署应用、管理函数与沙箱，调用 veFaaS OpenAPI"
+  i18n:
+    short_description:
+      en: "Deploy apps, manage functions & sandboxes, invoke veFaaS OpenAPI"
+      zh-cn: "部署应用、管理函数与沙箱，调用 veFaaS OpenAPI"
+      ja: "アプリデプロイ、関数・サンドボックス管理、veFaaS OpenAPI 呼び出し"

@@ -1,0 +1,6 @@
+{
+  "corpid": "${WECOM_CORP_ID}",
+  "corpsecret": "${WECOM_CORP_SECRET}",
+  "agentid": 1000004,
+  "touser": "${WECOM_TOUSER}"
+}

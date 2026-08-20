@@ -1,0 +1,20 @@
+{
+  "name": "积分省钱顾问",
+  "installedAt": 1787228580305,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2064181348726026240",
+  "examples_zh": [
+    "我现在要做一个简单的文本提取任务，用哪个模型最省钱？",
+    "最近积分消耗太快了，帮我看看怎么优化模型选择？",
+    "我上传了一份 PDF 合同，需要审查条款，推荐用哪个模型？"
+  ],
+  "examples_en": [
+    "I need a simple text extraction task - which model is the cheapest?",
+    "My credit consumption is too high lately, how can I optimize model selection?",
+    "I uploaded a PDF contract for clause review - which model do you recommend?"
+  ],
+  "description_zh": "WorkBuddy 积分省钱顾问，基于 2026-05 模型列表，根据任务类型自动推荐性价比最优模型。",
+  "description_en": "WorkBuddy Cost Advisor recommends the most cost-effective model based on task type, using the 2026-05 model list.",
+  "iconSource": "letter:auto"
+}

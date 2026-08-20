@@ -1,0 +1,11 @@
+{
+  "name": "小红书标题生成",
+  "installedAt": 1787227571177,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087462892520046592",
+  "description_zh": "基于用户输入的任何信息，生成符合平台流量逻辑的小红书爆款标题",
+  "description_en": "Generate viral Xiaohongshu titles from any user input.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_f7b7a05b-c15.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_f7b7a05b-c15.svg"
+}

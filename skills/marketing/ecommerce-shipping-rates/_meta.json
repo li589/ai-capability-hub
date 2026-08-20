@@ -1,0 +1,11 @@
+{
+  "owner": "nexscope",
+  "slug": "ecommerce-shipping-rates",
+  "displayName": "E-Commerce Shipping Rates",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774494314125,
+    "commit": "https://github.com/openclaw/skills/commit/f291d60d23bb8273324b62b89c65be8d93e97d57"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "name": "品牌GEO分析",
+  "installedAt": 1787227588463,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2083024283092631552",
+  "description_zh": "向豆包、Kimi、DeepSeek 三大 AI 搜索自动提问，分析品牌出现率、情绪倾向与竞品对比，生成可视化报告",
+  "description_en": "Analyze brand visibility, sentiment and competitor presence across AI search engines such as Doubao, Kimi and DeepSeek.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_e067d49a-ce4.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_e067d49a-ce4.svg"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "seedew",
+  "slug": "stock-master-pro",
+  "displayName": "A 股大师 Pro",
+  "latest": {
+    "version": "0.0.1",
+    "publishedAt": 1774344974875,
+    "commit": "https://github.com/openclaw/skills/commit/b2b12c05a64ddbf51ff41127834348ded4d7cee3"
+  },
+  "history": []
+}

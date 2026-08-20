@@ -1,0 +1,21 @@
+{
+  "name": "平安证券场外基金榜单",
+  "installedAt": 1787227620868,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2079451542210265088",
+  "examples_zh": [
+    "最近收益排名靠前的基金有哪些",
+    "帮我找回撤小一点的稳健基金",
+    "热销基金榜前 10 名"
+  ],
+  "examples_en": [
+    "Show funds with top recent returns",
+    "Find stable funds with smaller drawdowns",
+    "Show the top 10 hot-selling public funds"
+  ],
+  "description_zh": "查询场外基金收益榜、稳健榜、低回撤榜、高胜率榜、热销榜、人气榜和定投榜。",
+  "description_en": "Query public fund rankings by return, drawdown, Sharpe ratio, volatility, popularity, sales, and regular investment heat.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079451542210265088/5616ea649d2d1692.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079451542210265088/5616ea649d2d1692.svg"
+}

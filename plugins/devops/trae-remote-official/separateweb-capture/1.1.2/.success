@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:separateweb-capture",
+  "registry": "trae-remote-official",
+  "plugin_name": "separateweb-capture",
+  "version": "1.1.2",
+  "marketplace_plugin_id": "fafb7ff2-8884-413e-8f98-6349a4cd6e37",
+  "remote_installed_plugin_id": "_THOH4-R5I_SGQ",
+  "checksum": "9bdc33d45ced5d0b3922f127482ab0c55b4ec4d4dcd660e0095ca08fefa2407c",
+  "file_size": 96381,
+  "installed_at": 1787227203575
+}

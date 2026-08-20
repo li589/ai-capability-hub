@@ -1,0 +1,11 @@
+{
+  "name": "北森 CLI 基础设施",
+  "installedAt": 1787227697419,
+  "source": "marketplace",
+  "version": "1.2.11",
+  "skillId": "skill_2087176807453274112",
+  "description_zh": "北森 HR 系统 CLI 工具集的基础依赖包。提供 CLI 环境检测、SSO 登录认证、用户身份切换、权限管理、高风险操作安全门禁等通用能力。所有北森业务 Skill 的前置依赖，安装后自动就绪。",
+  "description_en": "Foundation dependency for the Beisen HR CLI toolset. Provides environment setup, SSO authentication, user identity switching, permission management, and high-risk operation safeguards. Required by all Beisen domain Skills.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_8954d2d6-0d9.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_8954d2d6-0d9.png"
+}

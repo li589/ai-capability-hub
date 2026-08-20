@@ -1,0 +1,55 @@
+{
+  "name": "tdx",
+  "version": "0.1.2",
+  "description": "通达信 MCP 集成，支持填写 API Key 后通过通达信数据服务进行金融行情与数据查询。",
+  "i18n": {
+    "display_name": {
+      "en": "TDX",
+      "zh-cn": "通达信",
+      "ja": "TDX"
+    },
+    "description": {
+      "en": "TDX MCP integration for financial market data queries.",
+      "zh-cn": "通达信 MCP 集成，支持填写 API Key 后进行金融行情与数据查询。",
+      "ja": "TDX MCP 統合。金融マーケットデータ照会に対応。"
+    }
+  },
+  "author": {
+    "name": "TDX",
+    "url": "https://www.tdx.com.cn"
+  },
+  "homepage": "https://www.tdx.com.cn",
+  "license": "Proprietary",
+  "keywords": [
+    "tdx",
+    "tongdaxin",
+    "finance",
+    "stock",
+    "market-data",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "TDX",
+    "shortDescription": "通达信金融数据 MCP",
+    "longDescription": "填写通达信 API Key 后，可通过通达信 MCP 服务进行金融行情与数据查询，运行时会将凭证注入到 `tdx-api-key` 请求头。",
+    "developerName": "TDX",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://www.tdx.com.cn",
+    "defaultPrompt": [
+      "查询通达信金融行情数据",
+      "使用通达信 MCP 获取市场数据"
+    ],
+    "brandColor": "#D71920",
+    "logo": "./assets/app-icon.png",
+    "composerIcon": "./assets/app-icon.png",
+    "screenshots": []
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "env": {
+    "TDX_AUTH_TOKEN": "${connector.tdx.ACCESS_TOKEN}"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "财报标准数据提取器",
+  "installedAt": 1787227641806,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084643028666380288",
+  "description_zh": "自动识别并提取股份制银行财报中常态化披露的、标准化程度高、行业共识性强的零售业务表格类数据，包括分部报告效益类、零售存贷款结构与定价、资产质量、银行卡手续费及全行拨备等。",
+  "description_en": "Automatically identify and extract standardized, industry-consensus retail-banking tabular data that joint-stock banks routinely disclose in their financial reports, including segment-reporting profitability metrics, retail deposit/loan structure and pricing, asset quality, bank-card fee income, and bank-wide provisions.",
+  "iconSource": "letter:auto"
+}

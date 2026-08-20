@@ -1,0 +1,11 @@
+{
+  "owner": "1970168137",
+  "slug": "hr-policy-generator",
+  "displayName": "Hr Policy Generator",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774236290307,
+    "commit": "https://github.com/openclaw/skills/commit/cd6c5dbb845b60b1edb23547fc9998e75316bbc2"
+  },
+  "history": []
+}

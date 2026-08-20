@@ -1,0 +1,11 @@
+{
+  "name": "大智慧金融数据查询",
+  "installedAt": 1787227590733,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084544093387821056",
+  "description_zh": "查询股票、ETF、行业等多维金融数据，自动整合行情、财务、资金、公告等信息，适用于快速查数、分析底稿与数据核对。",
+  "description_en": "Queries multi-dimensional financial data for stocks, ETFs, sectors, and more. Automatically integrates market data, financials, capital flows, announcements, and other information. Suitable for quick data retrieval, analytical worksheets, and data verification.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_e443f651-a43.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_e443f651-a43.png"
+}

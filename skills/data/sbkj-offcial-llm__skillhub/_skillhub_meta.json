@@ -1,0 +1,12 @@
+{
+  "slug": "sbkj-offcial-llm",
+  "name": "招投标文本结构化与项目甄别LLM【世舶科技】",
+  "version": "1.0.0",
+  "installedAt": 1787228788058,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/60484da4-21ca-4044-b2ff-2b3a1ddcd63f.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/60484da4-21ca-4044-b2ff-2b3a1ddcd63f.png"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-资产配置（行业轮动策略）",
+  "installedAt": 1787228670040,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2086630647364857856",
+  "description_zh": "万得 Alice 资产配置-行业轮动策略 CLI：分析未来 1-6 个月各行业相对强弱与权重倾斜，结合动量、资金面、估值与景气度因子输出超配/中性/低配清单、行业评分、约束检查与可选行业目标权重。",
+  "description_en": "Use when analyzing 1-6 month equity sector rotation and sector-level tilts, combining momentum, flows, valuation, and fundamentals to produce overweight/neutral/underweight lists, sector scores, constraint checks, and optional sector targets while keeping total equity exposure unchanged.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_cb04701f-f31.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_cb04701f-f31.jpg"
+}

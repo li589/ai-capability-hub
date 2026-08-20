@@ -1,0 +1,20 @@
+{
+  "name": "Infographic Maker",
+  "installedAt": 1787228318402,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082171331530752",
+  "examples_zh": [
+    "把这篇行业报告整理成一张手绘风信息图",
+    "把这 5 个产品亮点做成适合分享的一页图解",
+    "把这份年度数据摘要转成卡通风知识卡片"
+  ],
+  "examples_en": [
+    "Turn this report into a hand-drawn infographic",
+    "Make a one-page visual summary of these 5 product highlights",
+    "Convert this annual data summary into a cartoon-style knowledge card"
+  ],
+  "description_zh": "把文章、概念和数据提炼成手绘卡通信息图",
+  "description_en": "Turn articles, concepts, and data into hand-drawn infographic visuals",
+  "iconSource": "letter:auto"
+}

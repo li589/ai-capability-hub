@@ -1,0 +1,12 @@
+{
+  "slug": "douyin-pro",
+  "name": "自动化克隆数字人口播混剪视频",
+  "version": "2.1.0",
+  "installedAt": 1787228747215,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/597584/f8805332b5df444785f231f75f382455.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/597584/f8805332b5df444785f231f75f382455.png"
+}

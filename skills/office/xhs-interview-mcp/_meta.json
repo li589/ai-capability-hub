@@ -1,0 +1,11 @@
+{
+  "owner": "krisdontknowcoding",
+  "slug": "xhs-interview-mcp",
+  "displayName": "Xiaohongshu Mcp Skill",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1776266183183,
+    "commit": "https://github.com/openclaw/skills/commit/661b0abfa44216bb1f6d8e14987e18f6163f3eab"
+  },
+  "history": []
+}

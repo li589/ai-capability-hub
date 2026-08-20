@@ -1,0 +1,20 @@
+{
+  "name": "内容分发",
+  "installedAt": 1785864394551,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2053081498548994048",
+  "examples_zh": [
+    "把这篇博客改成微信公众号文章格式",
+    "把这篇文章拆解为微博短文和抖音脚本",
+    "把这段视频转录改写为小红书笔记"
+  ],
+  "examples_en": [
+    "Transform this blog post for Xiaohongshu",
+    "Break this article into short social posts and video scripts",
+    "Rewrite this video transcript as a platform-optimized post"
+  ],
+  "description_zh": "将长文内容转化为多平台优化的社交媒体片段",
+  "description_en": "Transform long-form content into platform-optimized social media snippets",
+  "iconSource": "letter:auto"
+}

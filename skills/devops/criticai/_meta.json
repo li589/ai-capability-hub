@@ -1,0 +1,17 @@
+{
+  "owner": "doggychip",
+  "slug": "criticai",
+  "displayName": "CriticAI",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1773851281255,
+    "commit": "https://github.com/openclaw/skills/commit/0247ad03f536dbed8544d82e44b54604ea2f07e0"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773827884352,
+      "commit": "https://github.com/openclaw/skills/commit/c673268eb0b3ecb5ceefe63359894b9daffe1b17"
+    }
+  ]
+}

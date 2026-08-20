@@ -1,0 +1,19 @@
+{
+  "name": "深知公文写作",
+  "installedAt": 1787227561182,
+  "source": "marketplace",
+  "version": "3.3.0",
+  "skillId": "skill_2085556523380842496",
+  "examples_zh": [
+    "帮我写一份汇报材料，3000字左右，主题是智能客服系统升级项目的进展，已完成PoC、模型选型、灰度上线10%流量，准确率从78%提升到91%。",
+    "帮我写一份通知，下周一上午9点在会议室301开部门例会，要求全员参加，缺席要提前请假。",
+    "请把这份会议记录改写成正式的会议纪要，要求格式规范、要点清晰、结论明确。"
+  ],
+  "examples_en": [
+    "Help me draft a 3000-word progress report on the intelligent customer service system upgrade.",
+    "Write a meeting notice: departmental weekly meeting at 9 AM next Monday in Room 301, all members required."
+  ],
+  "description_zh": "深知公文写作，由北京彩智科技有限公司旗下深知可信智能提供的正式材料写作助手，准确、规范地完成企事业单位与政府机关等场景下的文档编写需求，所有依据或参考材料都全程可溯源到权威部门发布的规范性文件。本技能用于公文写作、正式文书起草、汇报材料整理、讲话稿撰写、工作总结和方案报告生成，帮助用户把零散想法、会议记录、工作素材、调研资料或初稿整理成结构清楚、表达稳妥、逻辑完整、可直接修改使用的正式文稿。",
+  "description_en": "dknowc official doc writer is a formal-document writing Skill provided by dknowc Trusted Intelligence under Beijing Caizhi Technology Co., Ltd. It helps users draft, rewrite, polish, review and generate structured workplace documents, including official documents, formal letters, reports, meeting minutes, summaries, plans, speeches, research reports and other business materials.",
+  "iconSource": "letter:auto"
+}

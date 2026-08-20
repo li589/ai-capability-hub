@@ -1,0 +1,12 @@
+{
+  "slug": "workbuddy-migration-assistant",
+  "name": "WorkBuddy迁移助手",
+  "version": "1.2.0",
+  "installedAt": 1787228979977,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/520766/b0e4eb69335946d881495cfaec901106.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/520766/b0e4eb69335946d881495cfaec901106.png"
+}

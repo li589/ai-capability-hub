@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-通胀情景债券轮动策略",
+  "installedAt": 1787228671259,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085540002366959616",
+  "description_zh": "万得 Alice 通胀情景债券轮动策略 CLI：实时追踪 CPI/PPI 四种通胀拐点信号，自动判断当月是否持有债券或转持货币基金（可空仓模式），或在 5/7/10 年期国债指数间做久期轮动（不可空仓模式），支持风险预算约束下的配置优化与历史回测。",
+  "description_en": "Wind Alice Inflation Bond Strategy CLI - continuously tracks four types of inflation turning-point signals based on CPI/PPI, automatically determines whether to hold bonds or switch to money market funds (long/flat mode), or to rotate duration among 5/7/10-year government bond indices (fully invested mode), supporting allocation optimization under risk-budget constraints and historical NAV backtesting.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_52b6805b-abf.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_52b6805b-abf.jpg"
+}

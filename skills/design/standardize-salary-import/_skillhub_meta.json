@@ -1,0 +1,10 @@
+{
+  "name": "正常工资薪金导入表生成",
+  "installedAt": 1787227506548,
+  "source": "marketplace",
+  "version": "0.3.2",
+  "skillId": "skill_2089233975109148672",
+  "description_zh": "将 Excel 或工资表图片整理为标准“正常工资薪金导入”Excel，缺失字段留空并报告异常。",
+  "description_en": "Converts uploaded Excel payroll files or payroll images into the bundled standard salary-import workbook without external OCR, leaving missing fields blank.",
+  "iconSource": "letter:auto"
+}

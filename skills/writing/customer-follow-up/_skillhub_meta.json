@@ -1,0 +1,10 @@
+{
+  "name": "客户跟进话术",
+  "installedAt": 1787227750637,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087078594478350336",
+  "description_zh": "为导购生成可直接发送的客户跟进话术，支持商品、活动和优惠券推荐及多轮改写。",
+  "description_en": "Generate ready-to-send customer follow-up messages for sales associates, including product, campaign, and coupon recommendations with iterative rewrites.",
+  "iconSource": "letter:auto"
+}

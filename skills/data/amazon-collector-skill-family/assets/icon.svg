@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Amazon product collector">
+  <rect width="256" height="256" rx="56" fill="#172033"/>
+  <path d="M58 78 128 42l70 36v88l-70 42-70-42Z" fill="#fff" opacity=".96"/>
+  <path d="m58 78 70 40 70-40M128 118v90" fill="none" stroke="#FF9900" stroke-width="14" stroke-linejoin="round"/>
+  <circle cx="178" cy="172" r="31" fill="#172033" stroke="#FF9900" stroke-width="12"/>
+  <path d="m201 195 25 25" stroke="#FF9900" stroke-width="14" stroke-linecap="round"/>
+</svg>

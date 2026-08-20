@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:nvidia",
+  "registry": "trae-remote-official",
+  "plugin_name": "nvidia",
+  "version": "1.0.2",
+  "marketplace_plugin_id": "5cb2a47c-eb6c-4623-9058-fd4002aa4de1",
+  "remote_installed_plugin_id": "9Z32V5NA3ED6HU",
+  "checksum": "0c6cbd96384356fa112c222907eac5d97bf14f8c5925ab2c655188362e0a47a6",
+  "file_size": 1414810,
+  "installed_at": 1787227201431
+}

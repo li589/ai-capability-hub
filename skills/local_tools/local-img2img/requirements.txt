@@ -1,0 +1,21 @@
+# optimum-intel / optimum-onnx wheels in wheels/ are installed separately by
+# scripts\install-env.ps1 because their wheel metadata still contains Git URL
+# requirements that `uv pip install -r` will not resolve.
+openvino>=2026.2.0
+openvino-tokenizers>=2026.2.0.0
+diffusers>=0.37.1
+transformers>=4.45,<4.58
+torch>=2.1
+torchaudio
+nncf>=2.19.0
+numpy<2.0
+scipy
+soundfile
+modelscope
+colorama
+psutil
+Pillow
+sentencepiece
+accelerate
+setuptools
+qwen-tts

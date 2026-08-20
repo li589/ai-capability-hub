@@ -1,0 +1,11 @@
+{
+  "owner": "kolyanberoks-23loud",
+  "slug": "oh-my-openagent",
+  "displayName": "Oh-my-openagent",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773525341029,
+    "commit": "https://github.com/openclaw/skills/commit/cd753f6f28ff4ed3f085bec17a269adb7a68ae0c"
+  },
+  "history": []
+}

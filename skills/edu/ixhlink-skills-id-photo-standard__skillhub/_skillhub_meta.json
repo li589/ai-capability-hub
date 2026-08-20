@@ -1,0 +1,13 @@
+{
+  "slug": "ixhlink-skills-id-photo-standard",
+  "name": "标准证件照片",
+  "version": "1.0.0",
+  "installedAt": 1787228931011,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/10f9d8ff-5e7f-434f-9992-5e71e1d4e990.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/10f9d8ff-5e7f-434f-9992-5e71e1d4e990.png"
+}

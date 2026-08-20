@@ -1,0 +1,11 @@
+{
+  "owner": "bensema",
+  "slug": "ths-financial-data",
+  "displayName": "股票",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773501353464,
+    "commit": "https://github.com/openclaw/skills/commit/713e19b9f894094dd054a9a32f468664b1098206"
+  },
+  "history": []
+}

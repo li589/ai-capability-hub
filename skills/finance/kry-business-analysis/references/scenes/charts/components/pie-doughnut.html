@@ -1,0 +1,27 @@
+<!-- 组件: 饼图/环形图 -->
+<!-- 用法: 复制到 container 内，替换 chartId 和 data 数组 -->
+<div class="section">
+  <div class="section-title"><!-- TITLE: 如 "💰 收入构成" --></div>
+  <div class="section-sub"><!-- SUB: 如 "各收入类型占比" --></div>
+  <div id="<!-- CHART_ID: 唯一ID如 chart-pie -->" class="chart-box"></div>
+</div>
+<script>
+(function(){
+  var chart = echarts.init(document.getElementById('/* CHART_ID */'));
+  chart.setOption({
+    tooltip: { trigger: 'item', formatter: '{b}: {c}元 ({d}%)' },
+    legend: { orient: 'vertical', right: 20, top: 'middle' },
+    series: [{
+      type: 'pie',
+      radius: ['45%', '70%'],  /* 环形图；改为 ['0%','70%'] 则为实心饼图 */
+      center: ['40%', '50%'],
+      avoidLabelOverlap: true,
+      itemStyle: { borderRadius: 6, borderColor: '#fff', borderWidth: 2 },
+      label: { show: true, formatter: '{b}\n{d}%' },
+      data: [
+        /* DATA: 扇区数据数组，格式: { value: 数值, name: '名称' } */
+      ]
+    }]
+  });
+})();
+</script>

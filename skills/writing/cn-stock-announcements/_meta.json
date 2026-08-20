@@ -1,0 +1,11 @@
+{
+  "owner": "noahstepheno",
+  "slug": "cn-stock-announcements",
+  "displayName": "A股上市公司公告",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773633975205,
+    "commit": "https://github.com/openclaw/skills/commit/636405ed675f64aa1724333be43d263cc2e83149"
+  },
+  "history": []
+}

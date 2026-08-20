@@ -1,0 +1,4 @@
+interface:
+  display_name: "企业画像与上下游关系分析"
+  short_description: "分析企业基本资料、联系方式、客户、供应商及关联项目关系网络"
+  default_prompt: "使用 $baobiao-analyze-company-network 分析目标企业画像及上下游关系。"

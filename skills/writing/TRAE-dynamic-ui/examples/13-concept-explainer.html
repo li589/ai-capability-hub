@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Concept Explainer — Consistent Hashing</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #555770;
+  --color-text-tertiary: #8b8da3;
+  --color-border-tertiary: #e2e4e9;
+  --color-border-secondary: #c8cad0;
+  --color-border-primary: #6e6e80;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Georgia', serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 2px 8px rgba(0,0,0,.08);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,.12);
+  --color-teal-1: #e6fcf5; --color-teal-2: #c3fae8; --color-teal-3: #96f2d7;
+  --color-teal-4: #63e6be; --color-teal-5: #38d9a9; --color-teal-6: #20c997;
+  --color-teal-7: #12b886; --color-teal-8: #0ca678; --color-teal-9: #099268;
+  --color-teal-10: #087f5b;
+  --color-indigo-1: #edf2ff; --color-indigo-2: #dbe4ff; --color-indigo-3: #bac8ff;
+  --color-indigo-4: #91a7ff; --color-indigo-5: #748ffc; --color-indigo-6: #5c7cfa;
+  --color-indigo-7: #4c6ef5; --color-indigo-8: #4263eb; --color-indigo-9: #3b5bdb;
+  --color-indigo-10: #364fc7;
+  --color-coral-1: #fff5f5; --color-coral-2: #ffe3e3; --color-coral-3: #ffc9c9;
+  --color-coral-4: #ffa8a8; --color-coral-5: #ff8787; --color-coral-6: #ff6b6b;
+  --color-coral-7: #fa5252; --color-coral-8: #f03e3e; --color-coral-9: #e03131;
+  --color-coral-10: #c92a2a;
+  --color-violet-1: #f3f0ff; --color-violet-2: #e5dbff; --color-violet-3: #d0bfff;
+  --color-violet-4: #b197fc; --color-violet-5: #9775fa; --color-violet-6: #845ef7;
+  --color-violet-7: #7950f2; --color-violet-8: #7048e8; --color-violet-9: #6741d9;
+  --color-violet-10: #5f3dc4;
+  --color-slate-1: #f8f9fa; --color-slate-2: #f1f3f5; --color-slate-3: #e9ecef;
+  --color-slate-4: #dee2e6; --color-slate-5: #ced4da; --color-slate-6: #adb5bd;
+  --color-slate-7: #868e96; --color-slate-8: #495057; --color-slate-9: #343a40;
+  --color-slate-10: #212529;
+  --color-amber-1: #fff9db; --color-amber-2: #fff3bf; --color-amber-3: #ffec99;
+  --color-amber-4: #ffe066; --color-amber-5: #ffd43b; --color-amber-6: #fcc419;
+  --color-amber-7: #fab005; --color-amber-8: #f59f00; --color-amber-9: #f08c00;
+  --color-amber-10: #e67700;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+.panel {
+  max-width: 1100px; margin: 24px auto;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+.eyebrow {
+  font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--color-teal-8); font-weight: 600;
+}
+header {
+  padding: 28px 32px 20px;
+  border-bottom: 1px solid var(--color-border-tertiary);
+}
+header h1 { font-size: 26px; margin-top: 6px; font-weight: 700; }
+header p { color: var(--color-text-secondary); margin-top: 4px; font-size: 14px; }
+.layout { display: flex; min-height: 520px; }
+.main { flex: 1; padding: 24px 32px; border-right: 1px solid var(--color-border-tertiary); }
+.sidebar {
+  width: 300px; padding: 20px; background: var(--color-background-secondary);
+  position: sticky; top: 0; max-height: 100vh; overflow-y: auto;
+}
+.sidebar .eyebrow { color: var(--color-indigo-7); margin-bottom: 12px; }
+.glossary-item {
+  padding: 10px 12px; margin-bottom: 8px;
+  border-left: 3px solid var(--color-indigo-3);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+  background: var(--color-background-primary);
+  transition: all .2s;
+}
+.glossary-item.active {
+  border-left-color: var(--color-indigo-7);
+  background: var(--color-indigo-1);
+  box-shadow: var(--shadow-sm);
+}
+.glossary-item dt { font-weight: 600; font-size: 13px; color: var(--color-indigo-9); }
+.glossary-item dd { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+.term {
+  border-bottom: 2px dotted var(--color-indigo-4); cursor: help;
+  transition: color .2s, border-color .2s;
+}
+.term:hover { color: var(--color-indigo-8); border-bottom-color: var(--color-indigo-8); }
+svg text { font-family: var(--font-sans); }
+.ring-svg { display: block; margin: 16px auto; }
+.controls { display: flex; gap: 10px; justify-content: center; margin: 16px 0; }
+.controls button {
+  font-family: var(--font-mono); font-size: 12px; padding: 8px 18px;
+  border-radius: var(--border-radius-md); border: 1px solid var(--color-border-secondary);
+  background: var(--color-background-primary); cursor: pointer;
+  font-weight: 600; transition: all .15s;
+}
+.controls button:hover { background: var(--color-teal-1); border-color: var(--color-teal-6); color: var(--color-teal-9); }
+.controls button.remove:hover { background: var(--color-coral-1); border-color: var(--color-coral-6); color: var(--color-coral-9); }
+.comparison { margin-top: 24px; }
+.comparison table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+.comparison th {
+  text-align: left; padding: 10px 14px; font-weight: 600;
+  background: var(--color-indigo-1); color: var(--color-indigo-9);
+  border-bottom: 2px solid var(--color-indigo-4);
+}
+.comparison td {
+  padding: 9px 14px; border-bottom: 1px solid var(--color-border-tertiary);
+}
+.comparison tr:hover td { background: var(--color-background-secondary); }
+.badge {
+  display: inline-block; padding: 2px 8px; border-radius: 20px;
+  font-size: 11px; font-weight: 600; font-family: var(--font-mono);
+}
+.badge-good { background: var(--color-teal-1); color: var(--color-teal-9); }
+.badge-bad { background: var(--color-coral-1); color: var(--color-coral-9); }
+.badge-neutral { background: var(--color-slate-2); color: var(--color-slate-8); }
+.node-count {
+  text-align: center; font-family: var(--font-mono); font-size: 13px;
+  color: var(--color-text-secondary); margin-bottom: 8px;
+}
+</style>
+</head>
+<body>
+<div class="panel">
+  <header>
+    <div class="eyebrow">Concept Deep-Dive</div>
+    <h1>Consistent Hashing</h1>
+    <p>How distributed systems map keys to nodes without rehashing everything when topology changes.</p>
+  </header>
+  <div class="layout">
+    <div class="main">
+      <p style="font-size:14px;color:var(--color-text-secondary);margin-bottom:12px;">
+        A <span class="term" data-term="hash-ring">hash ring</span> maps both
+        <span class="term" data-term="node">nodes</span> and
+        <span class="term" data-term="key">keys</span> onto a circular space.
+        Each key is served by the first node encountered clockwise — its
+        <span class="term" data-term="successor">successor</span>.
+        When a node joins or leaves, only keys in its
+        <span class="term" data-term="partition">partition</span> are remapped.
+      </p>
+
+      <div class="node-count" id="nodeCount">Nodes on ring: 3</div>
+      <svg class="ring-svg" id="ringSvg" width="340" height="340" viewBox="0 0 340 340"></svg>
+
+      <div class="controls">
+        <button onclick="addNode()">+ Add Node</button>
+        <button class="remove" onclick="removeNode()">− Remove Node</button>
+      </div>
+
+      <div class="comparison">
+        <div class="eyebrow" style="margin-bottom:10px;">Comparison — Consistent vs Mod-N</div>
+        <table>
+          <thead><tr><th>Property</th><th>Consistent Hashing</th><th>mod N</th></tr></thead>
+          <tbody>
+            <tr><td>Keys remapped on add</td><td><span class="badge badge-good">≈ K/N</span></td><td><span class="badge badge-bad">≈ K</span></td></tr>
+            <tr><td>Load balance</td><td><span class="badge badge-good">Even (w/ vnodes)</span></td><td><span class="badge badge-neutral">Even</span></td></tr>
+            <tr><td>Topology change cost</td><td><span class="badge badge-good">O(K/N)</span></td><td><span class="badge badge-bad">O(K)</span></td></tr>
+            <tr><td>Implementation</td><td><span class="badge badge-neutral">Moderate</span></td><td><span class="badge badge-good">Trivial</span></td></tr>
+            <tr><td>Used in</td><td>DynamoDB, Cassandra, Memcached</td><td>Simple caches</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="eyebrow">Glossary</div>
+      <dl>
+        <div class="glossary-item" data-term="hash-ring"><dt>Hash Ring</dt><dd>A circular space [0, 2³²) where both nodes and keys are positioned via a hash function.</dd></div>
+        <div class="glossary-item" data-term="node"><dt>Node</dt><dd>A server or process responsible for a range of the hash ring.</dd></div>
+        <div class="glossary-item" data-term="key"><dt>Key</dt><dd>A data identifier (e.g., cache key, row ID) hashed onto the ring.</dd></div>
+        <div class="glossary-item" data-term="successor"><dt>Successor</dt><dd>The first node clockwise from a key's position — the node responsible for that key.</dd></div>
+        <div class="glossary-item" data-term="partition"><dt>Partition</dt><dd>The arc of the ring between two consecutive nodes; all keys in this arc belong to the clockwise node.</dd></div>
+        <div class="glossary-item" data-term="vnode"><dt>Virtual Node</dt><dd>Multiple hash positions per physical node for better load distribution.</dd></div>
+      </dl>
+    </aside>
+  </div>
+</div>
+
+<script>
+const CX = 170, CY = 170, R = 130;
+const COLORS = [
+  'var(--color-teal-6)', 'var(--color-indigo-6)', 'var(--color-violet-6)',
+  'var(--color-coral-6)', 'var(--color-amber-7)', 'var(--color-teal-9)',
+  'var(--color-indigo-9)', 'var(--color-violet-9)'
+];
+const NAMES = ['Node-A', 'Node-B', 'Node-C', 'Node-D', 'Node-E', 'Node-F', 'Node-G', 'Node-H'];
+let nodes = [
+  { name: 'Node-A', angle: 30 },
+  { name: 'Node-B', angle: 150 },
+  { name: 'Node-C', angle: 270 }
+];
+const KEYS = [
+  { label: 'k1', angle: 60 },
+  { label: 'k2', angle: 110 },
+  { label: 'k3', angle: 200 },
+  { label: 'k4', angle: 320 },
+];
+
+function toRad(d) { return (d - 90) * Math.PI / 180; }
+function pos(angle, r) {
+  return { x: CX + r * Math.cos(toRad(angle)), y: CY + r * Math.sin(toRad(angle)) };
+}
+
+function render() {
+  const svg = document.getElementById('ringSvg');
+  document.getElementById('nodeCount').textContent = `Nodes on ring: ${nodes.length}`;
+  let html = '';
+  // ring
+  html += `<circle cx="${CX}" cy="${CY}" r="${R}" fill="none" stroke="var(--color-border-tertiary)" stroke-width="2.5" stroke-dasharray="6,4"/>`;
+  // partition arcs
+  const sorted = [...nodes].sort((a, b) => a.angle - b.angle);
+  sorted.forEach((n, i) => {
+    const next = sorted[(i + 1) % sorted.length];
+    const start = n.angle, end = next.angle;
+    const sa = toRad(start), ea = toRad(end < start ? end + 360 : end);
+    const largeArc = ((end < start ? end + 360 : end) - start) > 180 ? 1 : 0;
+    const p1 = pos(start, R), p2 = pos(end, R);
+    html += `<path d="M ${p1.x} ${p1.y} A ${R} ${R} 0 ${largeArc} 1 ${p2.x} ${p2.y}" fill="none" stroke="${COLORS[i % COLORS.length]}" stroke-width="4" opacity=".3"/>`;
+  });
+  // keys
+  KEYS.forEach(k => {
+    const p = pos(k.angle, R);
+    html += `<circle cx="${p.x}" cy="${p.y}" r="4" fill="var(--color-slate-7)"/>`;
+    const lp = pos(k.angle, R + 18);
+    html += `<text x="${lp.x}" y="${lp.y}" text-anchor="middle" dominant-baseline="middle" font-size="10" fill="var(--color-text-tertiary)" font-family="var(--font-mono)">${k.label}</text>`;
+  });
+  // nodes
+  nodes.forEach((n, i) => {
+    const p = pos(n.angle, R);
+    html += `<circle cx="${p.x}" cy="${p.y}" r="12" fill="${COLORS[i % COLORS.length]}" stroke="var(--color-background-primary)" stroke-width="3">`;
+    html += `<animate attributeName="r" from="6" to="12" dur=".3s" fill="freeze"/></circle>`;
+    const lp = pos(n.angle, R - 26);
+    html += `<text x="${lp.x}" y="${lp.y}" text-anchor="middle" dominant-baseline="middle" font-size="10" font-weight="600" fill="${COLORS[i % COLORS.length]}">${n.name}</text>`;
+  });
+  // center label
+  html += `<text x="${CX}" y="${CY - 6}" text-anchor="middle" font-size="11" font-weight="600" fill="var(--color-text-secondary)">Hash Ring</text>`;
+  html += `<text x="${CX}" y="${CY + 10}" text-anchor="middle" font-size="10" fill="var(--color-text-tertiary)">[0, 2³²)</text>`;
+  svg.innerHTML = html;
+}
+
+function addNode() {
+  if (nodes.length >= 8) return;
+  const usedNames = new Set(nodes.map(n => n.name));
+  const name = NAMES.find(n => !usedNames.has(n));
+  const usedAngles = nodes.map(n => n.angle);
+  let bestAngle = 0, bestDist = 0;
+  for (let a = 0; a < 360; a += 5) {
+    const minDist = Math.min(...usedAngles.map(ua => Math.min(Math.abs(a - ua), 360 - Math.abs(a - ua))));
+    if (minDist > bestDist) { bestDist = minDist; bestAngle = a; }
+  }
+  nodes.push({ name, angle: bestAngle });
+  render();
+}
+
+function removeNode() {
+  if (nodes.length <= 1) return;
+  nodes.pop();
+  render();
+}
+
+// Glossary hover
+document.querySelectorAll('.term').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    const t = el.dataset.term;
+    document.querySelectorAll('.glossary-item').forEach(g => {
+      g.classList.toggle('active', g.dataset.term === t);
+    });
+  });
+  el.addEventListener('mouseleave', () => {
+    document.querySelectorAll('.glossary-item').forEach(g => g.classList.remove('active'));
+  });
+});
+
+render();
+</script>
+</body>
+</html>

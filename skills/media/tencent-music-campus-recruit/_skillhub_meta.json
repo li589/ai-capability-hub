@@ -1,0 +1,11 @@
+{
+  "name": "腾讯音乐校招助手",
+  "installedAt": 1787228498765,
+  "source": "marketplace",
+  "version": "1.0.7",
+  "skillId": "skill_2060213179235553280",
+  "description_zh": "腾讯音乐优先的招聘流程引导、岗位推荐、简历优化与面试辅导助手",
+  "description_en": "Tencent Music campus recruiting assistant for job search, resume optimization and interview prep",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060213179235553280/401aade807f9e916.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060213179235553280/401aade807f9e916.svg"
+}

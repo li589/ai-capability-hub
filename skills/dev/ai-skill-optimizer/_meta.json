@@ -1,0 +1,17 @@
+{
+  "owner": "johnsmithfan",
+  "slug": "ai-skill-optimizer",
+  "displayName": "AI Skill Optimizer (EN)",
+  "latest": {
+    "version": "1.1.0-en2",
+    "publishedAt": 1776678577169,
+    "commit": "https://github.com/openclaw/skills/commit/f45e83c14b21d4c18ede6a2c81c0eee224f36837"
+  },
+  "history": [
+    {
+      "version": "1.1.0",
+      "publishedAt": 1776022724877,
+      "commit": "https://github.com/openclaw/skills/commit/d558cf0075a08d39169050468a45bfbc709c1b5c"
+    }
+  ]
+}

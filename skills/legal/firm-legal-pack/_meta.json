@@ -1,0 +1,11 @@
+{
+  "owner": "romainsantoli-web",
+  "slug": "firm-legal-pack",
+  "displayName": "Firm Legal Pack",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772323878417,
+    "commit": "https://github.com/openclaw/skills/commit/e398dca152bcbc3d11be09ffdf6b97fbcaf006b9"
+  },
+  "history": []
+}

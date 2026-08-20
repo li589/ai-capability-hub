@@ -1,0 +1,13 @@
+{
+  "slug": "k12-edu-consult",
+  "name": "K12教育AI咨询助手",
+  "version": "1.0.1",
+  "installedAt": 1787228935502,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/34a07e4e-fec8-4ce0-aaf8-a83e46546c2d.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/34a07e4e-fec8-4ce0-aaf8-a83e46546c2d.png"
+}

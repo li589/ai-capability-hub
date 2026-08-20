@@ -1,0 +1,12 @@
+{
+  "code": "PAYMENT_REQUIRED",
+  "message": "需要支付后才能获取漫剧拆分结果",
+  "WeixinPay": {
+    "WeixinPay-Required": "<payment-code-from-this-response>",
+    "prompt": "请将 WeixinPay-Required 交给 weixinpay_pay 完成支付授权；支付成功后使用相同 JSON body 和返回的两个 Header 重试。"
+  },
+  "out_trade_no": "<merchant-order-number-from-this-response>",
+  "amount": "<configured-price-in-yuan>",
+  "currency": "CNY",
+  "description": "漫剧拆分服务"
+}

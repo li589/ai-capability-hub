@@ -1,0 +1,11 @@
+{
+  "owner": "sunshine-del-ux",
+  "slug": "new-akshare-stock",
+  "displayName": "akshare-stock",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772549625855,
+    "commit": "https://github.com/openclaw/skills/commit/d67a11dc2c31b2555e06f337db13a681ce09b7aa"
+  },
+  "history": []
+}

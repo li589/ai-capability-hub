@@ -1,0 +1,34 @@
+{
+  "name": "fbs-bookwriter",
+  "version": "3.0.0",
+  "description": "福帮手 BookWriter 3.0 WorkBuddy Skill 元数据。入口为 SKILL.md，机读通道清单见 workbuddy/channel-manifest.json。",
+  "author": {
+    "name": "FBSir",
+    "email": "unique@u3w.com"
+  },
+  "displayName": {
+    "zh": "福帮手写书 Skill",
+    "en": "FBS BookWriter"
+  },
+  "license": "MIT",
+  "category": "writing",
+  "skillEntrypoint": "SKILL.md",
+  "runtimeContract": {
+    "schema": "fbs-bookwriter-runtime-contract/v3",
+    "version": "3.0.0",
+    "channelManifest": "workbuddy/channel-manifest.json",
+    "entrySurface": "bookwriter_skill",
+    "productId": "fbs-bookwriter",
+    "packCode": "fbss.bookwriter.seven_day.v1",
+    "connectorAssumedAvailable": false,
+    "noConnectorFirstValueDefault": true,
+    "sameBindingRequiredForClosure": true
+  },
+  "distributionSurface": {
+    "target": "workbuddy_marketplace",
+    "targetMarketplace": "skills",
+    "localEquivalentTestSurface": "same-name-skill-runtime-override",
+    "localEquivalentTestOnly": true
+  },
+  "channelManifest": "workbuddy/channel-manifest.json"
+}

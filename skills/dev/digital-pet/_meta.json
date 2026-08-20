@@ -1,0 +1,11 @@
+{
+  "owner": "wittfan",
+  "slug": "digital-pet",
+  "displayName": "数字宠物",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772555865050,
+    "commit": "https://github.com/openclaw/skills/commit/d805fee50aa83cb8d50e37f1e0fbaf391fcae530"
+  },
+  "history": []
+}

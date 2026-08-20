@@ -1,0 +1,8 @@
+{
+  "name": "qoder-computer-use",
+  "version": "0.0.15",
+  "description": "Qoder Computer Use Plugin",
+  "marketplaceName": "qoder-bundler",
+  "defaultEnabled": false,
+  "visibility": "hidden"
+}

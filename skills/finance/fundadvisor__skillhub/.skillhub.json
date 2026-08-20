@@ -1,0 +1,26 @@
+{
+  "name": "fund-advisor",
+  "version": "10.1.0",
+  "description": "基金投资智能顾问 skill",
+  "author": "社区开发者",
+  "tags": [
+    "基金",
+    "投资",
+    "skill"
+  ],
+  "ignore": [
+    "__pycache__/",
+    "*.pyc",
+    "*.pyo",
+    ".git/",
+    ".gitignore",
+    ".env",
+    ".venv/",
+    "venv/",
+    "dist/",
+    "build/",
+    "*.egg-info/",
+    ".DS_Store",
+    "Thumbs.db"
+  ]
+}

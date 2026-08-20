@@ -1,0 +1,17 @@
+{
+  "name": "极睿KOC 种草拼图",
+  "installedAt": 1785864606558,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2082316943100297216",
+  "examples_zh": [
+    "用这3张图给便携咖啡机做九宫格KOC种草拼图，卖点是400ml水箱"
+  ],
+  "examples_en": [
+    "Create a 3x3 KOC seeding collage for the portable coffee maker"
+  ],
+  "description_zh": "根据用户主动选择的商品图，生成 KOC 种草、买家秀或小红书风格的营销拼图。",
+  "description_en": "Create KOC-style promotional collages from product images explicitly selected by the user.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082316943100297216/76b612c2c822219c.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082316943100297216/76b612c2c822219c.svg"
+}

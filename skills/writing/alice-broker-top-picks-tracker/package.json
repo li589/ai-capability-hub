@@ -1,0 +1,19 @@
+{
+  "name": "alice-broker-top-picks-tracker",
+  "version": "1.0.3",
+  "description": "CLI: 调用万得 Alice Agent「券商金股追踪」技能（A2A SSE），汇总券商月度金股推荐、统计热度排行与行业分布",
+  "type": "module",
+  "private": true,
+  "files": [
+    "SKILL.md",
+    "AGENT.md",
+    "package.json",
+    "_meta.json",
+    "scripts/"
+  ],
+  "scripts": {},
+  "bin": {
+    "alice-broker-top-picks-tracker": "./scripts/cli.mjs",
+    "abtpt": "./scripts/cli.mjs"
+  }
+}

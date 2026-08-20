@@ -1,0 +1,19 @@
+{
+  "name": "alice-commodity-research-assistant",
+  "version": "1.0.3",
+  "description": "CLI: 调用万得 Alice Agent「商品智研助手」技能（A2A SSE），输入期货品种名称或 Wind Code 生成多维度商品智能研报",
+  "type": "module",
+  "private": true,
+  "files": [
+    "SKILL.md",
+    "AGENT.md",
+    "package.json",
+    "_meta.json",
+    "scripts/"
+  ],
+  "scripts": {},
+  "bin": {
+    "alice-commodity-research-assistant": "./scripts/cli.mjs",
+    "acra": "./scripts/cli.mjs"
+  }
+}

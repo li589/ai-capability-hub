@@ -1,0 +1,11 @@
+{
+  "owner": "linkfox-ai",
+  "slug": "linkfox-zhihuiya-pdf",
+  "displayName": "Zhihuiya Pdf",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775146347166,
+    "commit": "https://github.com/openclaw/skills/commit/35765f8e013c8ab0a1c8a9e394955fa0a310e86a"
+  },
+  "history": []
+}

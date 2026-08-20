@@ -1,0 +1,11 @@
+{
+  "name": "A股全栈数据",
+  "installedAt": 1786316037973,
+  "source": "marketplace",
+  "version": "3.2.3",
+  "skillId": "skill_2059464154913587200",
+  "description_zh": "A 股行情、研报、资金流、公告与财报查询工具包。",
+  "description_en": "A-share data toolkit for quotes, reports, funds flow, announcements, news, and financial analysis.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059464154913587200/521264b53a5f1fa7.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059464154913587200/521264b53a5f1fa7.jpg"
+}

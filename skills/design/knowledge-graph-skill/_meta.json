@@ -1,0 +1,11 @@
+{
+  "owner": "xnohat",
+  "slug": "knowledge-graph-skill",
+  "displayName": "Knowledge Graph",
+  "latest": {
+    "version": "1.1.1",
+    "publishedAt": 1772481508081,
+    "commit": "https://github.com/openclaw/skills/commit/55485a176858957d5874d84c3b1e6ddf5e5f26d7"
+  },
+  "history": []
+}

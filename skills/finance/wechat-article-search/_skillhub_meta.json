@@ -1,0 +1,20 @@
+{
+  "name": "wechat-article-search",
+  "installedAt": 1785784640586,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2053083784548929536",
+  "examples_zh": [
+    "搜索最近一周微信公众号里关于\"AI Agent 工作流\"的文章，返回标题、摘要、发布时间和公众号名称。",
+    "帮我找 5 篇讨论\"新能源汽车出海\"的公众号文章，并附上每篇文章链接。",
+    "检索\"职场沟通技巧\"相关微信公众号文章，按发布时间从新到旧列出来源账号和摘要。"
+  ],
+  "examples_en": [
+    "Search WeChat public account articles from the past week about \"AI Agent workflows\" and return titles, summaries, publish times, and account names.",
+    "Find 5 WeChat articles discussing \"new energy vehicle exports\" and include the link for each article.",
+    "Look up WeChat public account articles about \"workplace communication skills\", sorted newest first with source account and summary."
+  ],
+  "description_zh": "搜索微信公众号文章（标题、摘要、发布时间、来源账号、链接）",
+  "description_en": "Search WeChat public account articles by keyword",
+  "iconSource": "letter:auto"
+}

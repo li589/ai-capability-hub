@@ -1,0 +1,23 @@
+{
+  "name": "supabase_get_tables",
+  "description": "This tool allow you to get all the tables and their definitions from remote Supabase, which is connected to the project.\nYou should always get Supabase project first to ensure the Supabase project is successfully connected to local the project. This tool is guaranteed to fail if the current project is not successfully connected to Supabase.\n",
+  "arguments": {
+    "properties": {
+      "schema": {
+        "description": "The Postgres schema name you need to get the tables from. The default schema is `public`.",
+        "type": "string"
+      },
+      "tables": {
+        "description": "The names of the tables you want to check. Leave it an empty array to see all the tables in the schema you provided.",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "schema"
+    ],
+    "type": "object"
+  }
+}

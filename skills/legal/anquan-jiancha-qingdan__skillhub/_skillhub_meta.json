@@ -1,0 +1,12 @@
+{
+  "slug": "anquan-jiancha-qingdan",
+  "name": "安全检查清单AI辅助",
+  "version": "1.0.0",
+  "installedAt": 1787229083626,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png"
+}

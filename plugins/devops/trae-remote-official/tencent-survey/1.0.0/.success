@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:tencent-survey",
+  "registry": "trae-remote-official",
+  "plugin_name": "tencent-survey",
+  "version": "1.0.0",
+  "marketplace_plugin_id": "774e5e9b-7a5f-404f-b3d1-e0316fb752bd",
+  "remote_installed_plugin_id": "NJ-WMRC6M6N0KX",
+  "checksum": "91a1bd32cfc2bd96d24495b7ecb82ae145d8a36151fd5a593ac88b3d12b6e750",
+  "file_size": 32867,
+  "installed_at": 1787227204144
+}

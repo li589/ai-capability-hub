@@ -1,0 +1,20 @@
+{
+  "name": "视频截帧",
+  "installedAt": 1787227744794,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083083996790784",
+  "examples_zh": [
+    "从这个视频中每隔1秒截取一帧",
+    "提取视频的第10秒到第20秒片段",
+    "把视频的关键帧保存为图片"
+  ],
+  "examples_en": [
+    "Extract a frame every 1 second from this video",
+    "Extract the 10-20 second segment of the video",
+    "Save key frames as images"
+  ],
+  "description_zh": "从视频提取帧或短片段",
+  "description_en": "Extract frames or clips from videos",
+  "iconSource": "letter:auto"
+}

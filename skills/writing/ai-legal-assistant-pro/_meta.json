@@ -1,0 +1,11 @@
+{
+  "owner": "harrylabsj",
+  "slug": "ai-legal-assistant-pro",
+  "displayName": "AI Legal Assistant Pro",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774136483183,
+    "commit": "https://github.com/openclaw/skills/commit/d45d721bdf0060629c9d663896a052fc237b8a28"
+  },
+  "history": []
+}

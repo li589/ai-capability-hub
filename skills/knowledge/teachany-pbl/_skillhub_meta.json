@@ -1,0 +1,19 @@
+{
+  "name": "TeachAny PBL",
+  "installedAt": 1785784805511,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2065327860801552384",
+  "examples_zh": [
+    "帮我拆解初中水火箭项目，要做工程原型",
+    "家庭购车方案对比，高中，要决策表"
+  ],
+  "examples_en": [
+    "Design a water rocket for middle school science project",
+    "Compare family car purchase options for high school"
+  ],
+  "description_zh": "通过 teachany.cn 将 PBL 项目目标拆解为知识路径图谱、PNG 长图和可编辑链接。适用于项目式学习拆解、课标对齐项目路径等场景。",
+  "description_en": "Decompose a PBL project goal via teachany.cn into a knowledge-path PNG and editable link. Use for project-based learning decomposition and curriculum-aligned project planning.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2065327860801552384/ff86dee7e8db357d.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2065327860801552384/ff86dee7e8db357d.png"
+}

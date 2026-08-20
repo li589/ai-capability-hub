@@ -1,0 +1,11 @@
+{
+  "name": "北森数据查询",
+  "installedAt": 1787228553290,
+  "source": "marketplace",
+  "version": "2.0.13",
+  "skillId": "skill_2087175150671278080",
+  "description_zh": "北森 HR 通用数据查询引擎。支持自然语言查询假期余额、考勤记录、绩效数据、任职信息、组织架构等。6 步智能流水线自动匹",
+  "description_en": "Universal HR data query engine for Beisen. Query leave balances, attendance records, performance data, employment info, and org structure using natural language. Features a 6-step intelligent pipeline that auto-matches scenarios and generates structured answers.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_4c160fee-fc1.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_4c160fee-fc1.png"
+}

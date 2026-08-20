@@ -1,0 +1,11 @@
+{
+  "owner": "shaopanguo",
+  "slug": "cnki-scholar",
+  "displayName": "CNKI Scholar",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775061656908,
+    "commit": "https://github.com/openclaw/skills/commit/fab1f5e547a094e21f0645f638d6e63f37808e7f"
+  },
+  "history": []
+}

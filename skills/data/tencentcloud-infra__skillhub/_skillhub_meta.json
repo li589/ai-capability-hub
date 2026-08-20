@@ -1,0 +1,12 @@
+{
+  "slug": "tencentcloud-infra",
+  "name": "Tencent Cloud Infra",
+  "version": "1.0.12",
+  "installedAt": 1787228872634,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png"
+}

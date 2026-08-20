@@ -1,0 +1,11 @@
+{
+  "name": "进门-观点梳理",
+  "installedAt": 1787228652059,
+  "source": "marketplace",
+  "version": "1.2.1",
+  "skillId": "skill_2088192688821014528",
+  "description_zh": "依赖进门 MCP 检索多类机构研究资料，总结、对比不同机构对目标研究对象的近期观点，并输出机构观点汇总表与共识分歧分析。适用于用户给出研究对象（股票、行业、事件、宏观指标等），要求汇总券商/外资投行观点、对比机构分歧、梳理市场共识时。",
+  "description_en": "Requires the Comein MCP to retrieve multiple types of institutional research materials, then summarizes and compares recent views from different institutions on a target research subject, producing an institutional view table and an analysis of consensus and disagreements. Use it when the user provides a subject, such as a stock, industry, event, or macroeconomic indicator, and asks to summarize broker or foreign investment bank views, compare institutional disagreements, or identify market consensus.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_df8d8b37-0a4.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_df8d8b37-0a4.png"
+}

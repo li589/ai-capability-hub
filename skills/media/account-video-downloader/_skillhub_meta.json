@@ -1,0 +1,11 @@
+{
+  "name": "多平台账号主页视频提取器",
+  "installedAt": 1786089094077,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084568512649101312",
+  "description_zh": "输入平台和账号，批量拉取抖音/快手/B站/YouTube主页作品并一键下载",
+  "description_en": "Batch download videos from Douyin, Kuaishou, Bilibili, and YouTube account pages",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_24f8935e-3cf.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_24f8935e-3cf.svg"
+}

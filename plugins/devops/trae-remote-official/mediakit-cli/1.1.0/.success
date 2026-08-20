@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:mediakit-cli",
+  "registry": "trae-remote-official",
+  "plugin_name": "mediakit-cli",
+  "version": "1.1.0",
+  "marketplace_plugin_id": "9901b91b-bb80-444f-b7a5-a2d70de8dd5b",
+  "remote_installed_plugin_id": "6G6RZHTNM42H-D",
+  "checksum": "203b69453e741acac05279ea7ecb7a0cd483e26f36c2bb70ea71edaa6f512fed",
+  "file_size": 12030,
+  "installed_at": 1787227202589
+}

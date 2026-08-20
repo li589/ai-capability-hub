@@ -1,0 +1,11 @@
+{
+  "owner": "danyangliu-sandwichlab",
+  "slug": "budget-bidding-optimizer",
+  "displayName": "Ads Bid Optimizer",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772503951123,
+    "commit": "https://github.com/openclaw/skills/commit/523f93a19d6d79656b1630ecb376778b2d99c6b1"
+  },
+  "history": []
+}

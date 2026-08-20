@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "tencent-docs": {
+      "type": "http",
+      "url": "https://docs.qq.com/openapi/mcp",
+      "headers": {
+        "Authorization": "Bearer ${connector.tencent-docs.ACCESS_TOKEN}"
+      }
+    },
+    "slide-mcp": {
+      "type": "http",
+      "url": "https://docs.qq.com/api/v6/slide/mcp",
+      "headers": {
+        "Authorization": "Bearer ${connector.tencent-docs.ACCESS_TOKEN}"
+      }
+    },
+    "doc-mcp": {
+      "type": "http",
+      "url": "https://docs.qq.com/api/v6/doc/mcp",
+      "headers": {
+        "Authorization": "Bearer ${connector.tencent-docs.ACCESS_TOKEN}"
+      }
+    },
+    "sheet-mcp": {
+      "type": "http",
+      "url": "https://docs.qq.com/api/v6/sheet/mcp",
+      "headers": {
+        "Authorization": "Bearer ${connector.tencent-docs.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

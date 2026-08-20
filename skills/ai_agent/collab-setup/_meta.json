@@ -1,0 +1,11 @@
+{
+  "owner": "oldbulls",
+  "slug": "collab-setup",
+  "displayName": "Collab Setup",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774206988997,
+    "commit": "https://github.com/openclaw/skills/commit/b6e9e23db7e5e7da4aba21bc7acc399e39922a5e"
+  },
+  "history": []
+}

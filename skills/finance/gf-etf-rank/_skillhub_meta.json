@@ -1,0 +1,11 @@
+{
+  "name": "ETF榜单",
+  "installedAt": 1787227640266,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2083070740359876608",
+  "description_zh": "广发证券ETF排行查询工具，支持涨跌幅、换手率、主力资金、申赎、溢价率等多维度ETF榜单数据查询",
+  "description_en": "GF Securities ETF ranking query tool, supporting multi-dimensional ETF leaderboard data queries including price change, turnover rate, major capital flow, subscription/redemption, and premium rate",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_eef55189-54d.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_eef55189-54d.png"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "fire-detection-analysis",
+  "name": "Fire & Smoke Detection Skill | 火情烟雾检测技能",
+  "version": "1.0.5",
+  "installedAt": 1787229063657,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c0bd7863-2689-46f1-941c-e45be1317e90.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c0bd7863-2689-46f1-941c-e45be1317e90.png"
+}

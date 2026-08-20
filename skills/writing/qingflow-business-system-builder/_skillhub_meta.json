@@ -1,0 +1,21 @@
+{
+  "name": "轻流业务系统搭建",
+  "installedAt": 1787227707386,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084190068964397056",
+  "examples_zh": [
+    "帮我搭建一套采购管理系统，需要采购申请单、审批流程和数据看板",
+    "给已有的订单应用加上审批流程",
+    "给门户添加数据看板"
+  ],
+  "examples_en": [
+    "Build a procurement management system with request forms, approval workflow and dashboard",
+    "Add approval workflow to an existing order application",
+    "Add a data dashboard to the portal"
+  ],
+  "description_zh": "构建、更新、修复、审核、发布和验证轻流业务系统。覆盖表单排版、视图、流程、门户、Word 打印模板及数据播种的端到端强制规范与最佳实践。",
+  "description_en": "Build, update, repair, audit, publish, and validate Qingflow business systems. End-to-end conventions covering form layout, views, workflows, portals, Word print templates, and data seeding.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2084190068964397056/6bcfa5a248b650a2.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2084190068964397056/6bcfa5a248b650a2.png"
+}

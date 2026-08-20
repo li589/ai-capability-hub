@@ -1,0 +1,21 @@
+{
+  "name": "skyline渲染引擎",
+  "installedAt": 1787228694085,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083877422833664",
+  "examples_zh": [
+    "在微信小程序里使用Skyline渲染引擎",
+    "如何在Skyline里实现流畅的滚动动画",
+    "用worklet实现Skyline的手势交互"
+  ],
+  "examples_en": [
+    "Use Skyline rendering engine in WeChat Mini Program",
+    "Implement smooth scroll animation in Skyline",
+    "Use worklet to implement gesture interaction in Skyline"
+  ],
+  "description_zh": "微信小程序 Skyline 渲染引擎（组件、动画、路由、样式）",
+  "description_en": "WeChat Mini Program Skyline engine (components, animations, routes, styles)",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/skyline.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/skyline.png"
+}

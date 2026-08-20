@@ -1,0 +1,9 @@
+{
+  "name": "stripe_get_config",
+  "description": "This tool allow you to get Stripe config from the integration.\nIf you need to implement payment-related features, you **MUST** always use this tool to obtain the integrated Stripe pk / sk / products configuration.\n",
+  "arguments": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "ETF资金异动",
+  "installedAt": 1787227650273,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2083073297255219200",
+  "description_zh": "本Skill基于广发证券权威数据接口构建，支持查询大幅流入、大幅流出、持续流入、持续流出超级资金异动ETF及近14日资金明细，跟踪ETF资金异动、研判市场资金方向。",
+  "description_en": "GF Securities ETF super fund flow anomaly detection tool, supporting queries for major inflows, major outflows, continuous inflows, and continuous outflows with 14-day fund flow details. Track ETF capital anomalies and assess market fund direction.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_a23130f3-fa1.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_a23130f3-fa1.png"
+}

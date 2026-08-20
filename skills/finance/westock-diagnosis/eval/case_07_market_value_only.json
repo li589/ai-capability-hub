@@ -1,0 +1,5 @@
+[
+  {"name": "贵州茅台", "code": "sh600519", "market_value": 146000, "pnl": -34000},
+  {"name": "腾讯控股", "code": "hk00700", "market_value": 260000, "pnl": 70000},
+  {"name": "中国平安", "code": "sh601318", "market_value": 59000, "pnl": 14000}
+]

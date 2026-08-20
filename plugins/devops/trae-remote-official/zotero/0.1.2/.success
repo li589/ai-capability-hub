@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:zotero",
+  "registry": "trae-remote-official",
+  "plugin_name": "zotero",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "eed2c635-88a0-47fc-8d77-32b83e229263",
+  "remote_installed_plugin_id": "E._KYB8924VOMB",
+  "checksum": "0f86ba3085f680394b18c6804345bfadd0a298e4d9e27d6086d933bb38488e20",
+  "file_size": 33630,
+  "installed_at": 1787227200726
+}

@@ -1,0 +1,11 @@
+{
+  "name": "可观测数字分身",
+  "installedAt": 1787227728186,
+  "source": "marketplace",
+  "version": "1.2.0",
+  "skillId": "skill_2089267277862772736",
+  "description_zh": "腾讯云可观测平台SRE数字分身，支持个性化的数字分身能力，通过与分身对话进行资源查询、健康巡检、异常根因分析，自动化的任务机制实现AI自主分析，还可以管理数字分身和任务，满足可观测全场景的智能运维诉求。",
+  "description_en": "Operate Tencent Cloud TCOP AI Workbench SRE digital twins: chat, manage twins and tasks, query resources, and return workbench deep links. Trigger for digital-twin, SRE-agent, AI Workbench, task, resource-map, or #agent-name requests.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/397776d3-2f78-471e-b7cd-29a741cecf86/avatar/skill/au_b44d7fb9-bcb.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/397776d3-2f78-471e-b7cd-29a741cecf86/avatar/skill/au_b44d7fb9-bcb.svg"
+}

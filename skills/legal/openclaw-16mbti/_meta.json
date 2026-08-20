@@ -1,0 +1,11 @@
+{
+  "owner": "archibald80000-ai",
+  "slug": "openclaw-16mbti",
+  "displayName": "OpenClaw 16 MBTI",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773194481126,
+    "commit": "https://github.com/openclaw/skills/commit/46e2e6589a48e6afa32bf5ed6e83164e5f63a7ff"
+  },
+  "history": []
+}

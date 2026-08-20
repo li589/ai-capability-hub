@@ -1,0 +1,20 @@
+{
+  "name": "新闻摘要",
+  "installedAt": 1787227593004,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053082438073974784",
+  "examples_zh": [
+    "总结今天的科技新闻要点",
+    "获取36氪今天的头条新闻",
+    "把虎嗅最新文章总结成语音播报"
+  ],
+  "examples_en": [
+    "Summarize today's top tech news",
+    "Get today's headlines from tech media",
+    "Convert latest articles to audio briefing"
+  ],
+  "description_zh": "从国际 RSS 源获取新闻并生成摘要和语音播报",
+  "description_en": "Fetch and summarize news from international RSS feeds with voice support",
+  "iconSource": "letter:auto"
+}

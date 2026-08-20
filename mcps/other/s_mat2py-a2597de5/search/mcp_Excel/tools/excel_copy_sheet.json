@@ -1,0 +1,26 @@
+{
+  "name": "excel_copy_sheet",
+  "description": "Copy existing sheet to a new sheet",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "dstSheetName": {
+        "description": "Sheet name to be copied",
+        "type": "string"
+      },
+      "fileAbsolutePath": {
+        "description": "Absolute path to the Excel file",
+        "type": "string"
+      },
+      "srcSheetName": {
+        "description": "Source sheet name in the Excel file",
+        "type": "string"
+      }
+    },
+    "required": [
+      "fileAbsolutePath",
+      "srcSheetName",
+      "dstSheetName"
+    ]
+  }
+}

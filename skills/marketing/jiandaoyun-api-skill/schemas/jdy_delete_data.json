@@ -1,0 +1,36 @@
+{
+  "client_only_params": [],
+  "description": "按数据ID删除单条表单记录",
+  "display_name": "删除单条数据",
+  "domain": "数据",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/app/entry/data/delete",
+  "method": "POST",
+  "name": "jdy_delete_data",
+  "params": {
+    "app_id": {
+      "description": "App ID",
+      "type": "string"
+    },
+    "data_id": {
+      "description": "Data record ID to delete",
+      "type": "string"
+    },
+    "entry_id": {
+      "description": "Form ID",
+      "type": "string"
+    },
+    "is_start_trigger": {
+      "default": false,
+      "description": "Whether to trigger automations/智能助手 after deletion (default false)",
+      "type": "boolean"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "app_id",
+    "entry_id",
+    "data_id"
+  ],
+  "risk": "destructive",
+  "source": "简道云工具包.zip"
+}

@@ -1,0 +1,47 @@
+{
+  "data_dir": "",
+  "database": {
+    "type": "mysql",
+    "host": "",
+    "port": 3306,
+    "dbname": "emes_dev",
+    "user": "",
+    "password": ""
+  },
+  "allowed_tables_file": "data/allowed_tables.json",
+  "limits": {
+    "max_rows": 50,
+    "max_query_seconds": 10
+  },
+  "metrics_caliber": {
+    "产量": "仅 EXECUTE_TYPE=5（结束加工）计入报工/产量；发放/开始加工/站外处理不计（2026-08-06 用户确认）",
+    "发放": "PMC 职责（EXECUTE_TYPE=1），不属于报工",
+    "稼动率": "待确认（实际稼动/计划开机？）",
+    "OEE": "待确认（时间x性能x合格？）"
+  },
+  "shift_calendar": {
+    "shifts": "待确认（早/中/晚？切班时刻？跨夜归属？）",
+    "holidays": "待确认"
+  },
+  "synonyms": {
+    "产量": [
+      "产出",
+      "完工数",
+      "完成量"
+    ],
+    "良率": [
+      "合格率",
+      "一次合格率"
+    ],
+    "停机": [
+      "故障",
+      "暂停",
+      "停线"
+    ],
+    "不良": [
+      "报废",
+      "料废",
+      "缺陷"
+    ]
+  }
+}

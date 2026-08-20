@@ -1,0 +1,17 @@
+{
+  "owner": "handsomestwei",
+  "slug": "patent-disclosure-skill",
+  "displayName": "中国专利.Skill",
+  "latest": {
+    "version": "1.8.3",
+    "publishedAt": 1776308282915,
+    "commit": "https://github.com/openclaw/skills/commit/7124f65f53814838dce0650372ec0d19af16e71f"
+  },
+  "history": [
+    {
+      "version": "1.8.1",
+      "publishedAt": 1775631102640,
+      "commit": "https://github.com/openclaw/skills/commit/7825a86caeb8fbb0df539987caef661af068825d"
+    }
+  ]
+}

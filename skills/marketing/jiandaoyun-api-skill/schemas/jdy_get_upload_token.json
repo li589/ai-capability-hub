@@ -1,0 +1,31 @@
+{
+  "client_only_params": [],
+  "description": "获取向简道云上传文件所需的token和URL",
+  "display_name": "获取文件上传凭证",
+  "domain": "数据",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/app/entry/file/get_upload_token",
+  "method": "POST",
+  "name": "jdy_get_upload_token",
+  "params": {
+    "app_id": {
+      "description": "应用ID",
+      "type": "string"
+    },
+    "entry_id": {
+      "description": "表单ID",
+      "type": "string"
+    },
+    "transaction_id": {
+      "description": "事务ID（UUID格式，自行生成，后续新建/修改数据时需传入相同值）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "app_id",
+    "entry_id",
+    "transaction_id"
+  ],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

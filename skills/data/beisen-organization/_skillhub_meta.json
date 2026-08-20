@@ -1,0 +1,11 @@
+{
+  "name": "北森组织架构",
+  "installedAt": 1787228554364,
+  "source": "marketplace",
+  "version": "1.0.10",
+  "skillId": "skill_2087176115350323200",
+  "description_zh": "查询组织架构与编制信息。支持查看部门详情（负责人、HRBP、分管领导、行政助理）、组织层级关系和编制占用情况。需管理者视角，助你洞悉团队全貌。",
+  "description_en": "Query organizational structure and headcount info. View department details (manager, HRBP, reporting leader, admin assistant), org hierarchy, and headcount utilization. Manager-level access providing team visibility.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_e85640f8-3a3.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_e85640f8-3a3.png"
+}

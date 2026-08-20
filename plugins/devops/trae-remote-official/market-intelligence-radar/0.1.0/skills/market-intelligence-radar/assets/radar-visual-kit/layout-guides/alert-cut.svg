@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d">
+  <title id="t">Alert Cut layout guide</title>
+  <desc id="d">Immediate decision cut followed by a compact exact evidence table.</desc>
+  <rect width="1280" height="720" fill="#fff4df"/>
+  <rect x="0" y="0" width="1280" height="332" fill="#d93c20"/>
+  <g fill="#fff4df"><rect x="62" y="46" width="190" height="12"/><rect x="62" y="114" width="720" height="58"/><rect x="62" y="188" width="520" height="58"/><rect x="910" y="114" width="304" height="104"/></g>
+  <g fill="#1a0e0b"><rect x="62" y="380" width="220" height="28"/><rect x="62" y="442" width="1152" height="2"/><rect x="62" y="492" width="1152" height="2"/><rect x="62" y="542" width="1152" height="2"/><rect x="62" y="592" width="1152" height="2"/><rect x="62" y="642" width="1152" height="2"/></g>
+  <g fill="#1a0e0b"><rect x="62" y="456" width="250" height="12"/><rect x="360" y="456" width="350" height="12"/><rect x="758" y="456" width="180" height="12"/><rect x="986" y="456" width="228" height="12"/></g>
+</svg>

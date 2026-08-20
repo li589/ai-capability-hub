@@ -1,0 +1,27 @@
+{
+  "owner": "ckchzh",
+  "slug": "labor-law",
+  "displayName": "Labor Law",
+  "latest": {
+    "version": "2.0.1",
+    "publishedAt": 1773830725128,
+    "commit": "https://github.com/openclaw/skills/commit/e9644dc21fcf1bc57ae47fdc4ebace0a03123bab"
+  },
+  "history": [
+    {
+      "version": "1.0.5",
+      "publishedAt": 1773666315747,
+      "commit": "https://github.com/openclaw/skills/commit/6b4a715041baf99e3dde0e8179e836075808f004"
+    },
+    {
+      "version": "2.3.0",
+      "publishedAt": 1773447180292,
+      "commit": "https://github.com/openclaw/skills/commit/cbe50494bedb694a072ef72541cdf06ef03a41cf"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773310646193,
+      "commit": "https://github.com/openclaw/skills/commit/b699600a839d6478b1f779eda699d55c9b932241"
+    }
+  ]
+}

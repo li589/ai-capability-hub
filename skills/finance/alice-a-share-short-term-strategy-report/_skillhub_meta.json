@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-A股短线策略报告",
+  "installedAt": 1787227586772,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2082683466424094720",
+  "description_zh": "万得 Alice A股短线策略报告 CLI：每日收盘后自动拉取 Wind 涨停股与指数行情，梳理热点概念群与资金轮动方向，输出含收盘综述、涨停板复盘、AI 主线研判的结构化报告。",
+  "description_en": "Pulling daily Wind data on limit-up stocks, index closes, and sector moves, the AI maps hot concept clusters, identifies capital themes via broker research, and delivers a structured closing recap — covering index performance, turnover, sector breakdowns, and forward sector outlook for short-term traders.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082683466424094720/f69f2037d5045499.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082683466424094720/f69f2037d5045499.jpg"
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "cretu",
+  "slug": "evomap-assistant",
+  "displayName": "Evomap Assistant",
+  "latest": {
+    "version": "1.3.0",
+    "publishedAt": 1772434128197,
+    "commit": "https://github.com/openclaw/skills/commit/83491ec583062e6e99ec88dfb1cc475deeb9040c"
+  },
+  "history": [
+    {
+      "version": "1.2.0",
+      "publishedAt": 1772347649618,
+      "commit": "https://github.com/openclaw/skills/commit/8484883f33d1e3dcef7a25c91ae1fefc08edf84c"
+    }
+  ]
+}

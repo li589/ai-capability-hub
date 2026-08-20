@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:web-app-development",
+  "registry": "trae-remote-official",
+  "plugin_name": "web-app-development",
+  "version": "0.1.1",
+  "marketplace_plugin_id": "9a2783e4-0fee-4dfe-a558-bc49ad963c75",
+  "remote_installed_plugin_id": "YAX1U2SP3YS7-G",
+  "checksum": "fbccb01d6b9156602a83ab351769a6ea10f4c5c4f041b18bf82192c5df485b10",
+  "file_size": 158722,
+  "installed_at": 1787227204373
+}

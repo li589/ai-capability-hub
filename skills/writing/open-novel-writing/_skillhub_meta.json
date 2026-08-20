@@ -1,0 +1,20 @@
+{
+  "name": "开放小说创作助手",
+  "installedAt": 1785864587152,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082516611272704",
+  "examples_zh": [
+    "把一句\"修仙门派遭遇灵气枯竭\"的想法扩展成中文长篇小说的世界观、主线和分卷规划",
+    "为我的玄幻小说生成20章章节规划，并标注每章目标、冲突和钩子",
+    "评审第8章文本，指出节奏、人物动机和伏笔回收问题，并给出修订方案"
+  ],
+  "examples_en": [
+    "Turn the idea of a sect facing spiritual-energy collapse into a Chinese long-form novel world, main plot, and volume plan",
+    "Generate a 20-chapter plan for my xuanhuan novel with goals, conflicts, and hooks for each chapter",
+    "Review chapter 8 for pacing, character motivation, and foreshadowing payoff, then suggest revisions"
+  ],
+  "description_zh": "中文长篇小说创作助手，支持从想法到成书的模块化全流程",
+  "description_en": "Chinese novel creation assistant with modular worldbuilding-to-book workflow",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,8 @@
+{
+ "version": "0.1",
+ "generated": "2026-08-05",
+ "note": "查询路由索引：问题解析出(指标+实体)后，先在此索引查视图复用（142 视图含完整 SQL，口径已验证，见 sql_assets_full.md），未命中再用 schema.md 表结构生成",
+ "view_filters": {},
+ "intents": {},
+ "attribution": {}
+}

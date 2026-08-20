@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:research-data-analysis-workspace",
+  "registry": "trae-remote-official",
+  "plugin_name": "research-data-analysis-workspace",
+  "version": "0.1.1",
+  "marketplace_plugin_id": "b961f7c1-944c-4166-9d09-640f5c0400ae",
+  "remote_installed_plugin_id": "MA.QSW.OY7VNO5",
+  "checksum": "942ca6f30996731028e8fb9a19d09dc35fb6684d1b303273f9bd644fe0286989",
+  "file_size": 76470,
+  "installed_at": 1787227205194
+}

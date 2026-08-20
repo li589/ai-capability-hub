@@ -1,0 +1,54 @@
+# FormulaPlan — 发明交底公式选题与可算提纲
+
+成文写 **3.4.1** 之前固化：选哪些推荐范式、主式人话、符号草稿、**可代入数值**。  
+范式菜单来自可外挂配置：`references/formulas/paradigms.yaml`（及用户覆盖），见该目录 README。
+
+落盘：案件工作目录 **`formula_plan.yaml`**（或 `.json`），常见 `outputs/{案件标识}/`。  
+**有公式或形式化变量的发明交底必写**；纯文字流程且全文无 LaTeX 主式时可省略，并在自检注明「无公式」。
+
+```yaml
+$schema: formula_plan
+version: 1
+updated_at: ""                 # 可选 ISO 本地时间
+theme_summary: ""              # 与交底主题一句对齐
+combo_id: ""                   # 可选；来自 paradigms.combos[].id
+paradigm_ids: []               # 必填（有公式时）；须∈合并后的范式库
+plain_zh: ""                   # 主关系人话，如「匹配分=归一化CPU项+内存项−负载惩罚」
+equations:
+  - tag: 1                     # 对应式 (1)
+    paradigm_id: weighted_sum_unit
+    latex: ""                  # 代入本案符号后的 LaTeX（禁装饰音）
+    role: score                # score | trigger | smooth | assign | constraint | other
+  - tag: 2
+    paradigm_id: dual_threshold
+    latex: ""
+    role: trigger
+symbols:
+  - symbol: "s_{ij}"
+    meaning_zh: 任务i在节点j上的匹配分
+    unit_zh: 无量纲
+  - symbol: "A_{j,\\\\mathrm{cpu}}"
+    meaning_zh: 节点j平滑后的CPU可用比例
+    unit_zh: "[0,1]"
+numeric_example:
+  given:                       # 符号 -> 数
+    "b_{i,\\\\mathrm{cpu}}": 0.8
+    "A_{j,\\\\mathrm{cpu}}": 0.6
+  compute_zh: ""               # 逐步代算说明
+  result:                      # 期望得到的主结果
+    "s_{ij}": 0.72
+notes_zh: ""                   # 边界、平局、ε 选取等
+```
+
+## 硬性规则
+
+- `paradigm_ids` / 各 `equations[].paradigm_id` 必须能在合并后的范式库中找到。  
+- 遵守范式库 `rules`：禁 `\tilde`/`\hat`/`\bar` 等；自由符号建议 ≤ `max_free_symbols`。  
+- `numeric_example`：至少给出主打分式的一组输入与结果。  
+- 写 3.4.1 前执行：`python tools/shared/check_formula_plan.py -i path/to/formula_plan.yaml --eval`（简单式自动代算；复杂式跳过并手算）。  
+- 写 3.4.1 时**只展开本计划**中的式与符号；改公式须先改本文件再联动正文 / 3.5 / 第六章。  
+- 化学/反应选用 `stoichiometric_reaction` 等 `chemistry` 标签范式，勿套用 `weighted_sum`。
+
+## 多轮同步
+
+迭代若改打分逻辑、触发条件或关键参数，须重评本文件并重跑自检 §8.2。

@@ -1,0 +1,11 @@
+{
+  "name": "Moka 组织变更",
+  "installedAt": 1787228532694,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088129185398493184",
+  "description_zh": "面向组织管理与人事负责人的组织变更事前盘点与方案确认。当用户说「要停用某个部门」「新建部门并设负责人」「把部门挪到另一条线」「给某员工调岗」「组织架构重组」等变更意图时使用：先澄清变更对象与生效日期，再盘点影响面（子部门、部门在职员工名单、编制与汇报关系），向用户复述影响面并逐项确认处理方式。本技能只做事前盘点与方案确认，不执行任何变更；执行动作一律引导用户到 Moka 页面完成。",
+  "description_en": "Pre-change assessment and plan confirmation for org-management and HR leaders. Use it when the user intends to change the org structure — disabling, creating, transferring or enabling a department, updating department fields, transferring an employee, or planning a batch restructure. It clarifies the change intent, assesses the impact (sub-departments, active employees, headcount and reporting relations), and confirms the plan with the user item by item. It performs the assessment only and never executes changes; execution is always directed to the Moka client.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_79365a9e-3bd.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_79365a9e-3bd.png"
+}

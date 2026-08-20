@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:full-link-stock-analysis",
+  "registry": "trae-remote-official",
+  "plugin_name": "full-link-stock-analysis",
+  "version": "1.0.3",
+  "marketplace_plugin_id": "db281781-a083-426c-b2ec-6f7ae39718e7",
+  "remote_installed_plugin_id": "N4K3L73LAJ5OTE",
+  "checksum": "8c0b8214289fade24f10aad943b276a85b1db64e2b4f36b4d7f89a0ff5aaefca",
+  "file_size": 2075720,
+  "installed_at": 1787227204232
+}

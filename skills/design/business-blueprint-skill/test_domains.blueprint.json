@@ -1,0 +1,206 @@
+{
+  "version": "1.0",
+  "meta": {
+    "title": "Generated Blueprint",
+    "industry": "common",
+    "revisionId": "rev-test",
+    "createdAt": "2026-04-13T00:00:00Z",
+    "createdBy": "test"
+  },
+  "library": {
+    "capabilities": [
+      {
+        "id": "cap-ai-recommend",
+        "name": "AI智能推荐",
+        "domain": "产品智能化"
+      },
+      {
+        "id": "cap-smart-search",
+        "name": "智能搜索",
+        "domain": "产品智能化"
+      },
+      {
+        "id": "cap-auto-tag",
+        "name": "自动标签",
+        "domain": "产品智能化"
+      },
+      {
+        "id": "cap-content-gen",
+        "name": "内容生成",
+        "domain": "产品智能化"
+      },
+      {
+        "id": "cap-knowledge",
+        "name": "知识库",
+        "domain": "产品智能化"
+      },
+      {
+        "id": "cap-smart-service",
+        "name": "智能客服",
+        "domain": "客户服务智能化"
+      },
+      {
+        "id": "cap-sentiment",
+        "name": "情感分析",
+        "domain": "客户服务智能化"
+      },
+      {
+        "id": "cap-auto-reply",
+        "name": "自动回复",
+        "domain": "客户服务智能化"
+      },
+      {
+        "id": "cap-feedback",
+        "name": "反馈管理",
+        "domain": "客户服务智能化"
+      },
+      {
+        "id": "cap-data-analysis",
+        "name": "数据分析",
+        "domain": "运营管理智能化"
+      },
+      {
+        "id": "cap-inventory",
+        "name": "库存管理",
+        "domain": "运营管理智能化"
+      },
+      {
+        "id": "cap-supply-chain",
+        "name": "供应链优化",
+        "domain": "运营管理智能化"
+      },
+      {
+        "id": "cap-financial",
+        "name": "财务分析",
+        "domain": "运营管理智能化"
+      },
+      {
+        "id": "cap-partner-mgmt",
+        "name": "伙伴管理",
+        "domain": "生态伙伴赋能"
+      },
+      {
+        "id": "cap-channel",
+        "name": "渠道管理",
+        "domain": "生态伙伴赋能"
+      },
+      {
+        "id": "cap-co-marketing",
+        "name": "联合营销",
+        "domain": "生态伙伴赋能"
+      },
+      {
+        "id": "cap-data-share",
+        "name": "数据共享",
+        "domain": "生态伙伴赋能"
+      }
+    ],
+    "systems": [
+      {
+        "id": "sys-crm",
+        "name": "CRM",
+        "capabilityIds": [
+          "cap-smart-service",
+          "cap-auto-reply",
+          "cap-feedback"
+        ]
+      },
+      {
+        "id": "sys-pos",
+        "name": "POS",
+        "capabilityIds": [
+          "cap-inventory",
+          "cap-data-analysis"
+        ]
+      },
+      {
+        "id": "sys-erp",
+        "name": "ERP",
+        "capabilityIds": [
+          "cap-supply-chain",
+          "cap-financial",
+          "cap-partner-mgmt"
+        ]
+      },
+      {
+        "id": "sys-ai",
+        "name": "AI平台",
+        "capabilityIds": [
+          "cap-ai-recommend",
+          "cap-smart-search",
+          "cap-auto-tag",
+          "cap-content-gen",
+          "cap-knowledge"
+        ]
+      },
+      {
+        "id": "sys-partner",
+        "name": "伙伴门户",
+        "capabilityIds": [
+          "cap-channel",
+          "cap-co-marketing",
+          "cap-data-share"
+        ]
+      }
+    ],
+    "actors": [
+      {
+        "id": "actor-store-guide",
+        "name": "门店导购"
+      },
+      {
+        "id": "actor-service",
+        "name": "客服"
+      },
+      {
+        "id": "actor-manager",
+        "name": "店长"
+      },
+      {
+        "id": "actor-partner",
+        "name": "合作伙伴"
+      },
+      {
+        "id": "actor-admin",
+        "name": "系统管理员"
+      }
+    ],
+    "flowSteps": []
+  },
+  "relations": [
+    {
+      "from": "actor-store-guide",
+      "to": "cap-pos"
+    },
+    {
+      "from": "actor-service",
+      "to": "cap-smart-service"
+    },
+    {
+      "from": "actor-service",
+      "to": "cap-auto-reply"
+    },
+    {
+      "from": "actor-manager",
+      "to": "cap-data-analysis"
+    },
+    {
+      "from": "actor-manager",
+      "to": "cap-inventory"
+    },
+    {
+      "from": "actor-partner",
+      "to": "cap-partner-mgmt"
+    },
+    {
+      "from": "actor-partner",
+      "to": "cap-channel"
+    }
+  ],
+  "domainOrder": [
+    "产品智能化",
+    "客户服务智能化",
+    "运营管理智能化",
+    "生态伙伴赋能"
+  ]
+}

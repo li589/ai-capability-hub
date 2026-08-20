@@ -1,0 +1,20 @@
+{
+  "name": "tutor-skills",
+  "installedAt": 1787228481146,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083605843107840",
+  "examples_zh": [
+    "把这份机器学习课程 PDF 转成 Obsidian StudyVault，按章节生成概念笔记和课后测验。",
+    "读取这个 TypeScript 项目，为新人生成学习库：核心模块说明、练习题和掌握度追踪表。",
+    "根据三篇产品文档创建复习材料，并为每个关键概念安排间隔测验。"
+  ],
+  "examples_en": [
+    "Turn this machine learning course PDF into an Obsidian StudyVault with chapter notes and end-of-section quizzes.",
+    "Read this TypeScript project and build a StudyVault for new joiners with module explanations, exercises, and mastery tracking.",
+    "Create review materials from three product docs and schedule spaced quizzes for each key concept."
+  ],
+  "description_zh": "将文档/代码转为 Obsidian 学习库，自动出题、测验并跟踪掌握度",
+  "description_en": "Turn PDFs/docs/code into Obsidian study vaults with quizzes and progress tracking",
+  "iconSource": "letter:auto"
+}

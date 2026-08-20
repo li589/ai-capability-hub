@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototype — Drag-to-Reorder Sidebar</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #555770;
+  --color-text-tertiary: #8b8da3;
+  --color-border-tertiary: #e2e4e9;
+  --color-border-secondary: #c8ccd4;
+  --color-border-primary: #9ca0ab;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.12);
+  --color-indigo-1: #edf0ff; --color-indigo-2: #d4daff; --color-indigo-3: #b0bbff;
+  --color-indigo-4: #8594ff; --color-indigo-5: #5e6ff7; --color-indigo-6: #4555e0;
+  --color-indigo-7: #3544b8; --color-indigo-8: #283490;
+  --color-sky-1: #e8f4fd; --color-sky-2: #c5e4f9; --color-sky-3: #93ccf3;
+  --color-sky-5: #2e96e0; --color-sky-6: #1a7cc7; --color-sky-7: #1564a3;
+  --color-violet-1: #f3edff; --color-violet-2: #e0d2ff; --color-violet-5: #875af7;
+  --color-violet-6: #6e3fe0; --color-violet-7: #5630b8;
+  --color-amber-1: #fff7e6; --color-amber-2: #ffecbf; --color-amber-4: #ffc440;
+  --color-amber-5: #f0a800; --color-amber-6: #d49200; --color-amber-7: #a87300;
+  --color-mint-1: #e6faf5; --color-mint-2: #b8f0e0; --color-mint-5: #1abc90;
+  --color-mint-6: #0fa07a; --color-mint-7: #078363;
+  --color-coral-1: #fff0ed; --color-coral-5: #f0614e; --color-coral-6: #d44637;
+  --color-magenta-1: #fcedf6; --color-magenta-5: #e04590; --color-magenta-6: #c7347a;
+  --color-slate-1: #f4f5f7; --color-slate-2: #e8eaee; --color-slate-3: #d4d7de;
+  --color-slate-4: #b8bcc6; --color-slate-5: #9ca0ab; --color-slate-6: #7f8391;
+  --color-slate-7: #636776; --color-slate-8: #494d5a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  padding: 32px;
+}
+
+.container { max-width: 820px; margin: 0 auto; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+.subtitle { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 28px; }
+
+/* Layout */
+.main-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  margin-bottom: 28px;
+}
+
+/* Sidebar prototype */
+.sidebar-proto {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--color-border-tertiary);
+  box-shadow: var(--shadow-md);
+  padding: 16px;
+  align-self: start;
+}
+
+.sidebar-proto .eyebrow { color: var(--color-indigo-6); margin-bottom: 12px; }
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--border-radius-md);
+  cursor: grab;
+  user-select: none;
+  transition: background .12s, box-shadow .12s;
+  border: 1px solid transparent;
+  position: relative;
+}
+.nav-item:hover { background: var(--color-background-secondary); }
+.nav-item:active { cursor: grabbing; }
+
+.nav-item.dragging {
+  opacity: 0.35;
+  transform: rotate(2deg);
+  background: var(--color-indigo-1);
+  border: 1px dashed var(--color-indigo-4);
+}
+
+.nav-icon {
+  width: 32px; height: 32px;
+  border-radius: var(--border-radius-md);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.nav-text .label { font-size: 14px; font-weight: 600; }
+.nav-text .desc { font-size: 11px; color: var(--color-text-tertiary); }
+
+.drop-indicator {
+  height: 2px;
+  background: var(--color-indigo-5);
+  border-radius: 2px;
+  margin: 0 8px;
+  display: none;
+  position: relative;
+}
+.drop-indicator::before {
+  content: '';
+  position: absolute;
+  left: -4px; top: -3px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--color-indigo-5);
+}
+
+.drag-grip {
+  width: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  opacity: 0;
+  transition: opacity .15s;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.nav-item:hover .drag-grip { opacity: 1; }
+.drag-grip span {
+  width: 3px; height: 3px;
+  background: var(--color-slate-4);
+  border-radius: 50%;
+}
+
+/* Callouts */
+.callouts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.callout {
+  border-radius: var(--border-radius-lg);
+  padding: 18px 20px;
+  border: 1px solid var(--color-border-tertiary);
+  background: var(--color-background-primary);
+  box-shadow: var(--shadow-sm);
+}
+
+.callout.ghost {
+  border-left: 4px solid var(--color-violet-5);
+  background: var(--color-violet-1);
+}
+.callout.ghost .eyebrow { color: var(--color-violet-6); }
+
+.callout.indicator {
+  border-left: 4px solid var(--color-indigo-5);
+  background: var(--color-indigo-1);
+}
+.callout.indicator .eyebrow { color: var(--color-indigo-6); }
+
+.callout.snap {
+  border-left: 4px solid var(--color-mint-5);
+  background: var(--color-mint-1);
+}
+.callout.snap .eyebrow { color: var(--color-mint-6); }
+
+.callout.timing {
+  border-left: 4px solid var(--color-amber-5);
+  background: var(--color-amber-1);
+}
+.callout.timing .eyebrow { color: var(--color-amber-6); }
+
+.callout h3 { font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+.callout p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; }
+.callout code {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: rgba(0,0,0,.06);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* Open Questions */
+.questions {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--color-border-tertiary);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+.questions .eyebrow { color: var(--color-coral-5); }
+.questions h2 { font-size: 18px; font-weight: 700; margin-bottom: 16px; }
+
+.q-item {
+  display: flex;
+  gap: 12px;
+  padding: 14px 0;
+  border-bottom: 1px solid var(--color-border-tertiary);
+}
+.q-item:last-child { border-bottom: none; }
+
+.q-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--color-coral-1);
+  color: var(--color-coral-5);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  flex-shrink: 0;
+}
+
+.q-body strong { display: block; font-size: 14px; margin-bottom: 3px; }
+.q-body p { font-size: 13px; color: var(--color-text-secondary); }
+
+/* Order display */
+.order-display {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background: var(--color-slate-1);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="eyebrow" style="color:var(--color-indigo-6)">Interaction Prototype</div>
+  <h1>Drag-to-Reorder Sidebar Navigation</h1>
+  <p class="subtitle">Drag any item to reorder. Design decisions are documented on the right.</p>
+
+  <div class="main-grid">
+    <!-- Sidebar -->
+    <div class="sidebar-proto">
+      <div class="eyebrow">Navigation</div>
+      <div id="navList">
+        <div class="nav-item" draggable="true" data-id="dashboard">
+          <div class="nav-icon" style="background:var(--color-sky-1);color:var(--color-sky-6)">📊</div>
+          <div class="nav-text">
+            <div class="label">Dashboard</div>
+            <div class="desc">Overview & metrics</div>
+          </div>
+          <div class="drag-grip"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="nav-item" draggable="true" data-id="projects">
+          <div class="nav-icon" style="background:var(--color-indigo-1);color:var(--color-indigo-6)">📁</div>
+          <div class="nav-text">
+            <div class="label">Projects</div>
+            <div class="desc">Active workspaces</div>
+          </div>
+          <div class="drag-grip"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="nav-item" draggable="true" data-id="tasks">
+          <div class="nav-icon" style="background:var(--color-mint-1);color:var(--color-mint-6)">✅</div>
+          <div class="nav-text">
+            <div class="label">Tasks</div>
+            <div class="desc">Todo & in-progress</div>
+          </div>
+          <div class="drag-grip"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="nav-item" draggable="true" data-id="messages">
+          <div class="nav-icon" style="background:var(--color-violet-1);color:var(--color-violet-6)">💬</div>
+          <div class="nav-text">
+            <div class="label">Messages</div>
+            <div class="desc">Team conversations</div>
+          </div>
+          <div class="drag-grip"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="nav-item" draggable="true" data-id="analytics">
+          <div class="nav-icon" style="background:var(--color-amber-1);color:var(--color-amber-6)">📈</div>
+          <div class="nav-text">
+            <div class="label">Analytics</div>
+            <div class="desc">Usage & performance</div>
+          </div>
+          <div class="drag-grip"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+        <div class="nav-item" draggable="true" data-id="settings">
+          <div class="nav-icon" style="background:var(--color-slate-1);color:var(--color-slate-6)">⚙️</div>
+          <div class="nav-text">
+            <div class="label">Settings</div>
+            <div class="desc">Preferences & config</div>
+          </div>
+          <div class="drag-grip"><span></span><span></span><span></span><span></span><span></span><span></span></div>
+        </div>
+      </div>
+      <div class="order-display" id="orderDisplay">Order: dashboard → projects → tasks → messages → analytics → settings</div>
+    </div>
+
+    <!-- Callouts -->
+    <div class="callouts">
+      <div class="callout ghost">
+        <div class="eyebrow">Design Decision · Ghost</div>
+        <h3>35% opacity + 2° rotation</h3>
+        <p>The dragged item fades to <code>opacity: 0.35</code> in-place and tilts <code>2deg</code> clockwise. This signals "I've been picked up" without the jarring flash of a fully-invisible source. The slight tilt adds physicality — it feels like lifting a sticky note off a board.</p>
+      </div>
+
+      <div class="callout indicator">
+        <div class="eyebrow">Design Decision · Drop Indicator</div>
+        <h3>Indigo line + dot endpoint</h3>
+        <p>A 2px <code>indigo-5</code> line appears between items to show exactly where the drop will land. The dot on the left end anchors the eye. We avoid highlighting the entire gap (too heavy) or using a border on the target item (ambiguous direction).</p>
+      </div>
+
+      <div class="callout snap">
+        <div class="eyebrow">Design Decision · Snap Behavior</div>
+        <h3>Items reflow instantly, no animation</h3>
+        <p>During drag, items shift position without transition. Animated reflows during drag feel "laggy" — the user is already focused on their cursor, so instant snaps feel more responsive. The final drop <em>does</em> get a subtle 120ms ease-out.</p>
+      </div>
+
+      <div class="callout timing">
+        <div class="eyebrow">Design Decision · Drag Threshold</div>
+        <h3>No hold delay, immediate grab</h3>
+        <p>We use the native HTML5 drag API with no artificial delay. The 6-dot grip pattern on hover signals draggability. On touch devices we'd add a <code>150ms</code> long-press threshold, but this prototype targets desktop cursor interaction only.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Open Questions -->
+  <div class="questions">
+    <div class="eyebrow">Open Questions</div>
+    <h2>Unresolved Design Decisions</h2>
+
+    <div class="q-item">
+      <div class="q-num">1</div>
+      <div class="q-body">
+        <strong>Should reordering persist immediately or require a save action?</strong>
+        <p>Auto-save feels modern but could frustrate users who accidentally drag. A "Reset to default" option in Settings might be enough of a safety net.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-num">2</div>
+      <div class="q-body">
+        <strong>Keyboard-accessible reorder?</strong>
+        <p>Power users expect <code>Alt+↑/↓</code> to move items. This is straightforward to implement but needs clear focus styling that doesn't conflict with the drag states.</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-num">3</div>
+      <div class="q-body">
+        <strong>Pin/lock items to prevent accidental moves?</strong>
+        <p>Dashboard and Settings feel like fixtures. Should we allow pinning items so they can't be dragged? This adds UI complexity (pin icon, locked state styling).</p>
+      </div>
+    </div>
+
+    <div class="q-item">
+      <div class="q-num">4</div>
+      <div class="q-body">
+        <strong>Mobile touch behavior?</strong>
+        <p>HTML5 Drag and Drop has spotty mobile support. If mobile matters, we'd need a touch-based implementation with long-press activation. Should we scope this prototype to desktop only?</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const navList = document.getElementById('navList');
+let draggedItem = null;
+let placeholder = null;
+
+function createIndicator() {
+  const el = document.createElement('div');
+  el.className = 'drop-indicator';
+  el.style.display = 'block';
+  return el;
+}
+
+function updateOrderDisplay() {
+  const items = navList.querySelectorAll('.nav-item');
+  const ids = Array.from(items).map(function(item) { return item.dataset.id; });
+  document.getElementById('orderDisplay').textContent = 'Order: ' + ids.join(' → ');
+}
+
+navList.addEventListener('dragstart', function(e) {
+  const item = e.target.closest('.nav-item');
+  if (!item) return;
+  draggedItem = item;
+  placeholder = createIndicator();
+
+  setTimeout(function() {
+    item.classList.add('dragging');
+  }, 0);
+
+  e.dataTransfer.effectAllowed = 'move';
+  e.dataTransfer.setData('text/plain', item.dataset.id);
+
+  // ghost image with opacity
+  if (e.dataTransfer.setDragImage) {
+    const clone = item.cloneNode(true);
+    clone.style.position = 'absolute';
+    clone.style.top = '-1000px';
+    clone.style.opacity = '0.7';
+    clone.style.transform = 'rotate(2deg)';
+    clone.style.width = item.offsetWidth + 'px';
+    document.body.appendChild(clone);
+    e.dataTransfer.setDragImage(clone, 20, 20);
+    setTimeout(function() { document.body.removeChild(clone); }, 0);
+  }
+});
+
+navList.addEventListener('dragover', function(e) {
+  e.preventDefault();
+  e.dataTransfer.dropEffect = 'move';
+
+  if (!draggedItem) return;
+
+  // Remove existing placeholder
+  if (placeholder.parentNode) placeholder.parentNode.removeChild(placeholder);
+
+  const afterElement = getDragAfterElement(navList, e.clientY);
+  if (afterElement) {
+    navList.insertBefore(placeholder, afterElement);
+  } else {
+    navList.appendChild(placeholder);
+  }
+});
+
+navList.addEventListener('dragend', function(e) {
+  if (!draggedItem) return;
+  draggedItem.classList.remove('dragging');
+
+  // Place item where the indicator is
+  if (placeholder.parentNode) {
+    navList.insertBefore(draggedItem, placeholder);
+    placeholder.parentNode.removeChild(placeholder);
+  }
+
+  // Subtle settle animation
+  draggedItem.style.transition = 'transform 120ms ease-out, opacity 120ms ease-out';
+  draggedItem.style.transform = 'scale(1.02)';
+  draggedItem.style.opacity = '0.8';
+  setTimeout(function() {
+    draggedItem.style.transform = '';
+    draggedItem.style.opacity = '';
+    setTimeout(function() {
+      draggedItem.style.transition = '';
+    }, 120);
+  }, 10);
+
+  draggedItem = null;
+  updateOrderDisplay();
+});
+
+navList.addEventListener('dragleave', function(e) {
+  // Only remove if leaving the list entirely
+  if (!navList.contains(e.relatedTarget) && placeholder.parentNode) {
+    placeholder.parentNode.removeChild(placeholder);
+  }
+});
+
+function getDragAfterElement(container, y) {
+  const elements = Array.from(container.querySelectorAll('.nav-item:not(.dragging)'));
+  return elements.reduce(function(closest, child) {
+    const box = child.getBoundingClientRect();
+    const offset = y - box.top - box.height / 2;
+    if (offset < 0 && offset > closest.offset) {
+      return { offset: offset, element: child };
+    }
+    return closest;
+  }, { offset: Number.NEGATIVE_INFINITY }).element;
+}
+</script>
+</body>
+</html>

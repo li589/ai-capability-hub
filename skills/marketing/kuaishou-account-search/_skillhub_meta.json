@@ -1,0 +1,11 @@
+{
+  "name": "快手账号搜索",
+  "installedAt": 1787228316830,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087743080414281728",
+  "description_zh": "通过账号名称模糊搜索快手账号，返回kwaiId、昵称、头像、简介等信息",
+  "description_en": "Search Kuaishou accounts by name with fuzzy matching, returns kwaiId, nickname, avatar, bio",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_586bd377-8b9.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_586bd377-8b9.svg"
+}

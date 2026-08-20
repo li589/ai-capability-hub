@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "qoder-computer-use": {
+      "command": "./QoderComputerUse.exe",
+      "args": [],
+      "env": {}
+    }
+  }
+}

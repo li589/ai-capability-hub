@@ -1,0 +1,11 @@
+{
+  "name": "大智慧股票事件分析",
+  "installedAt": 1787227650678,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084547818809782272",
+  "description_zh": "分析主力资金流向、筹码变化与大单异动，识别资金关注方向与短线情绪，适用于择时与热点跟踪。",
+  "description_en": "Analyzes major capital flows, changes in shareholder holdings, and large-block trading anomalies. Identifies capital focus areas and short-term sentiment. Suitable for market timing and hot-topic tracking.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_78a7f68a-6be.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_78a7f68a-6be.png"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:build-macos-apps",
+  "registry": "trae-remote-official",
+  "plugin_name": "build-macos-apps",
+  "version": "0.1.4",
+  "marketplace_plugin_id": "3387f8ef-be45-48bd-9b78-a45da962a7b5",
+  "remote_installed_plugin_id": "X67UAPI9D30DM4",
+  "checksum": "a936300b6e11cd20714cbcd91cacd2072dfcd5c0ed6a27fbf85aa52d5de988a4",
+  "file_size": 56719,
+  "installed_at": 1787227202774
+}

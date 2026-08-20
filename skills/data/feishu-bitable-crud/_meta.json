@@ -1,0 +1,11 @@
+{
+  "owner": "lingzuer",
+  "slug": "feishu-bitable-crud",
+  "displayName": "Feishu Bitable CRUD",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1773801968927,
+    "commit": "https://github.com/openclaw/skills/commit/a407ab689c5e5e8ba3379f171fdda1f620a519ed"
+  },
+  "history": []
+}

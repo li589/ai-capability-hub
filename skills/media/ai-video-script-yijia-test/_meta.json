@@ -1,0 +1,11 @@
+{
+  "owner": "shiftshen",
+  "slug": "ai-video-script-yijia-test",
+  "displayName": "AI Video Script Generator (Yijia Test)",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1773827762880,
+    "commit": "https://github.com/openclaw/skills/commit/201d63cc2a9394c5318bf96fa8b0fa40301fe776"
+  },
+  "history": []
+}

@@ -1,0 +1,21 @@
+{
+  "name": "微盛企微管家SCRM",
+  "installedAt": 1787228461867,
+  "source": "marketplace",
+  "version": "1.0.6",
+  "skillId": "skill_2053083430982127616",
+  "examples_zh": [
+    "查询企业微信 SCRM 中最近 30 天新增、标签为\"高意向\"的客户，并按跟进人汇总数量。",
+    "查看客户群\"华南渠道群\"过去一周的群成员增长、活跃发言和待跟进客户列表。",
+    "帮我整理昨天企微群发任务的发送人数、触达客户标签和后续跟进记录。"
+  ],
+  "examples_en": [
+    "Find WeCom SCRM customers added in the last 30 days with the \"high intent\" tag, grouped by owner.",
+    "Review the \"South China Channel\" customer group for member growth, active messages, and customers needing follow-up this week.",
+    "Summarize yesterday's WeCom mass-message campaign, including recipients, customer tags reached, and follow-up records."
+  ],
+  "description_zh": "微盛AI·企微管家提供的技能，帮助用户查询和管理企业微信 SCRM 中的客户、客户群、标签、活码、群发、跟进、聊天记录内容等业务数据，可询问AI当前支持的能力清单。",
+  "description_en": "Built for WeCom customer operations, helping teams review customer and group activity, prepare campaign assets, and move follow-up, messaging, and opportunity workflows forward.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wecom-weisheng-scrm.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wecom-weisheng-scrm.png"
+}

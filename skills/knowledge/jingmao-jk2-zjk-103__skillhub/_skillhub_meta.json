@@ -1,0 +1,12 @@
+{
+  "slug": "jingmao-jk2-zjk-103",
+  "name": "jingmao-jk2-zjk-103",
+  "version": "1.0.0",
+  "installedAt": 1787229072889,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/62f73a9b-1aca-4f8e-921d-6102e258c768.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/62f73a9b-1aca-4f8e-921d-6102e258c768.png"
+}

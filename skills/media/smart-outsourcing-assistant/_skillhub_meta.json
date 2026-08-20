@@ -1,0 +1,10 @@
+{
+  "name": "鼎华eMES 产品委外助手-智能委外助手",
+  "installedAt": 1787228546621,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089991829519675392",
+  "description_zh": "委外全流程智能助手：取可委外清单与供应商绩效，智能排序推荐供应商，dry-run 预览后自动生成委外单；回货拍照/语音识别按单回货，支持批量/单条回货。纯接口数据源。",
+  "description_en": "Smart outsourcing assistant: fetch outsourceable list & supplier performance, rank suppliers, dry-run preview, auto-create outsourcing orders, and handle returns via photo/voice recognition.",
+  "iconSource": "letter:auto"
+}

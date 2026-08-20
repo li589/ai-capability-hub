@@ -1,0 +1,55 @@
+{
+  "source": "腾讯文档《实施方法论》子表 ls3pcw，2026-08-17 提取",
+  "stages": [
+    {
+      "stage": "1 规划与启航",
+      "tasks": [
+        {"code": "1.1", "name": "内部项目交接", "desc": "与售前、业务交接客户前期状况", "deliverables_b": "内部交接纪要；调研问卷模板；服务器配置表", "deliverables_a": "", "days": 0.5, "interval": 7, "milestone": false},
+        {"code": "1.2", "name": "共识目标", "desc": "客户初访、现场参观、了解及高阶访谈；组建项目小组，确认实施计划与预计上线日期", "deliverables_b": "初访PPT；提供目标选择库", "deliverables_a": "项目组织架构（含PM、关键用户）、收集调研问卷", "days": 1, "interval": 0, "milestone": false},
+        {"code": "1.3", "name": "项目计划制定", "desc": "制定项目实施计划、启动会策划方案、辅导通知单、服务记录单", "deliverables_b": "项目实施计划、启动会策划方案、辅导通知单、服务记录单", "deliverables_a": "", "days": 1, "interval": 0, "milestone": false},
+        {"code": "1.4", "name": "☆项目最佳实践调研", "desc": "高层调研及部门调研，了解企业现况及对信息化应用目标", "deliverables_b": "调研报告、Demo数据收集模板、硬件配置规格建议清单", "deliverables_a": "", "days": 1, "interval": 1, "milestone": true},
+        {"code": "1.5", "name": "系统安装集成", "desc": "客户需提供VPN远程连接方式，并在《安装完成报告书》上签字盖章", "deliverables_b": "系统安装报告", "deliverables_a": "", "days": 0.5, "interval": 7, "milestone": false}
+      ]
+    },
+    {
+      "stage": "2 蓝图与设计",
+      "tasks": [
+        {"code": "2.1", "name": "☆项目启动大会", "desc": "召开项目启动会：最佳实践整体模拟，项目启动共识会议", "deliverables_b": "启动大会PPT、最佳实践整体模拟系统演示", "deliverables_a": "会议签到表", "days": 0.5, "interval": 1, "milestone": true},
+        {"code": "2.2", "name": "☆最佳实践流程培训", "desc": "根据客户Demo数据，与每个部门培训最佳实践流程", "deliverables_b": "最佳实践流程图、DEMO数据、问题管制表", "deliverables_a": "", "days": 1.5, "interval": 1, "milestone": true},
+        {"code": "2.3", "name": "基础数据规划与收集", "desc": "完成相应基础资料规划讨论，制定完成相应原则文件", "deliverables_b": "根据前期DEMO数据，产出应该收集的资料", "deliverables_a": "基础资料整理跟进表", "days": 0.5, "interval": 7, "milestone": false},
+        {"code": "2.4", "name": "整合应用规划", "desc": "与ERP集成接口流程、设备集成接口流程", "deliverables_b": "ERP集成接口清单、设备集成接口清单", "deliverables_a": "集成设备清单", "days": 0.5, "interval": 0, "milestone": false},
+        {"code": "2.5", "name": "客户个性化需求分析", "desc": "按最佳实践流程结果确认差异化需求，完成需求评估，确认是否二开", "deliverables_b": "客户需求确认书、二开进度管控表", "deliverables_a": "", "days": 0.5, "interval": 1, "milestone": false},
+        {"code": "2.6", "name": "系统参数规划", "desc": "完成各系统模块参数规划及配置设定", "deliverables_b": "参数配置明细、系统参数规划", "deliverables_a": "", "days": 0.5, "interval": 0, "milestone": false},
+        {"code": "2.7", "name": "☆蓝图规划报告会", "desc": "客户签字盖章的《蓝图规划报告》《实施进度确认表》", "deliverables_b": "蓝图规划报告、实施进度确认表", "deliverables_a": "", "days": 1, "interval": 1, "milestone": true}
+      ]
+    },
+    {
+      "stage": "3 构建与验证",
+      "tasks": [
+        {"code": "3.1", "name": "需求客制与流程验证", "desc": "《二开测试验收报告》客户签字确认", "deliverables_b": "需求客制验收清单", "deliverables_a": "", "days": 0.5, "interval": 7, "milestone": false},
+        {"code": "3.2", "name": "整合应用测试", "desc": "项目组顾问完成应用集成测试，并签字确认《整合测试报告》", "deliverables_b": "整合测试报告", "deliverables_a": "", "days": 0.5, "interval": 0, "milestone": false},
+        {"code": "3.3", "name": "设备数采测试", "desc": "完成设备数采联调测试", "deliverables_b": "设备集成进度表清单", "deliverables_a": "", "days": 1, "interval": 1, "milestone": false},
+        {"code": "3.4", "name": "报工点位硬件部署确认", "desc": "确认报工点位硬件到位情况", "deliverables_b": "", "deliverables_a": "采购硬件完成清单", "days": 0.5, "interval": 0, "milestone": false},
+        {"code": "3.5", "name": "各部门流程模拟验证", "desc": "通过模拟检查各部门操作熟练率及流程完整性", "deliverables_b": "问题管制表-更新、操作手册", "deliverables_a": "", "days": 2, "interval": 2, "milestone": false},
+        {"code": "3.6", "name": "☆客户应用培训", "desc": "按流程结果培训系统操作，让用户可熟练操作系统模块", "deliverables_b": "问题管制表-更新、模拟剧本、内训操作手册", "deliverables_a": "", "days": 1, "interval": 1, "milestone": true},
+        {"code": "3.7", "name": "基础资料导入与检核", "desc": "检查基础资料完善度及完整度", "deliverables_b": "基础资料整理跟进表-更新", "deliverables_a": "", "days": 0.5, "interval": 7, "milestone": false},
+        {"code": "3.8", "name": "上线试运行", "desc": "通过模拟检查数据、流程、操作及报表，评估是否可以上线", "deliverables_b": "试运行计划（可分段试运行）、实施进度确认表", "deliverables_a": "", "days": 1, "interval": 1, "milestone": false}
+      ]
+    },
+    {
+      "stage": "4 上线与赋能",
+      "tasks": [
+        {"code": "4.1", "name": "正式区期初工单导入", "desc": "按期初工单导入进度跟踪表导入", "deliverables_b": "期初工单导入进度跟踪表", "deliverables_a": "", "days": 0.5, "interval": 21, "milestone": false},
+        {"code": "4.2", "name": "系统正式切换", "desc": "停用旧操作方法，全面启动系统使用", "deliverables_b": "问题管制表-更新", "deliverables_a": "问题管制表-更新", "days": 2, "interval": 1, "milestone": false},
+        {"code": "4.3", "name": "☆首月运行报告会", "desc": "客户签字盖章的《首月运行报告》《实施进度确认表》", "deliverables_b": "首月运行报告", "deliverables_a": "", "days": 1, "interval": 7, "milestone": true}
+      ]
+    },
+    {
+      "stage": "5 优化与升华",
+      "tasks": [
+        {"code": "5.1", "name": "上线成果体检及改善建议规划", "desc": "对上线使用情况，每个岗位进行体检", "deliverables_b": "改善建议表", "deliverables_a": "", "days": 0.5, "interval": 14, "milestone": false},
+        {"code": "5.2", "name": "☆运行成果总结报告会", "desc": "客户签字的《运行成果总结报告》《实施进度确认表》", "deliverables_b": "运行成果总结报告", "deliverables_a": "", "days": 0.5, "interval": 1, "milestone": true}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "excel_create_table",
+  "description": "Create a table in the Excel sheet",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "fileAbsolutePath": {
+        "description": "Absolute path to the Excel file",
+        "type": "string"
+      },
+      "range": {
+        "description": "Range to be a table (e.g., \"A1:C10\")",
+        "type": "string"
+      },
+      "sheetName": {
+        "description": "Sheet name where the table is created",
+        "type": "string"
+      },
+      "tableName": {
+        "description": "Table name to be created",
+        "type": "string"
+      }
+    },
+    "required": [
+      "fileAbsolutePath",
+      "sheetName",
+      "tableName"
+    ]
+  }
+}

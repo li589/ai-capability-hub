@@ -1,0 +1,11 @@
+{
+  "owner": "mike47512",
+  "slug": "livestream-commerce",
+  "displayName": "直播带货",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1774161797622,
+    "commit": "https://github.com/openclaw/skills/commit/95044aa3eeb5ead23bf69faba9880917a4e0d397"
+  },
+  "history": []
+}

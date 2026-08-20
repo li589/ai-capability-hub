@@ -1,0 +1,11 @@
+{
+  "name": "Moka 候选人",
+  "installedAt": 1787228553770,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088131074499887104",
+  "description_zh": "面向招聘负责人与用人经理的候选人跟进与流程盘点。查询分配给我的候选人及其申请详情（简历要点、教育与工作经历、评分与推荐理由）、按招聘流程与阶段查看候选人名单（HR 视角）、统计各流程各阶段的候选人申请数量。当用户问「我有哪些待筛选的候选人」「面试阶段现在有哪些人」「各阶段各有多少人」「这个候选人的简历怎么样」时使用。",
+  "description_en": "Candidate follow-up and pipeline review for recruiting owners and hiring managers. Lists candidates assigned to me with full application details (resume highlights, education and work history, ratings and recommendation reasons), lists candidates in a given recruiting pipeline stage (HR view), and reports candidate application counts across pipeline stages. Use it for questions like \"which candidates are pending my screening\", \"who is in the interview stage now\", \"how many applications are in each stage\", or \"how does this candidate's resume look\".",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_b15100a7-94a.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_b15100a7-94a.png"
+}

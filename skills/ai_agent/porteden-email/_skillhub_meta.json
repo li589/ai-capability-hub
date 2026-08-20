@@ -1,0 +1,20 @@
+{
+  "name": "PortEden Email",
+  "installedAt": 1787228705776,
+  "source": "marketplace",
+  "version": "1.0.7",
+  "skillId": "skill_2053084596990251008",
+  "examples_zh": [
+    "在我的 Gmail 和 Outlook 账户中搜索过去 7 天来自客户域名的邮件，按待回复、已安排会议和仅需归档分类。",
+    "读取 Exchange 收件箱里带有合同附件的邮件，汇总发件人、主题、日期和附件名称，不执行删除或转发操作。",
+    "帮我整理今天的未读邮件优先级，标出需要我确认后才能回复或转发的邮件草稿建议。"
+  ],
+  "examples_en": [
+    "Search my Gmail and Outlook accounts for messages from the customer domain in the last seven days and group them into reply-needed, meeting-scheduled, and archive-only.",
+    "Read Exchange inbox messages that include contract attachments and summarize sender, subject, date, and attachment names without deleting or forwarding anything.",
+    "Prioritize today's unread email and mark which messages would need my confirmation before any reply or forward is sent."
+  ],
+  "description_zh": "安全邮件管理，支持 Gmail/Outlook/Exchange 多账户收发、搜索与分类",
+  "description_en": "Secure email management for Gmail, Outlook & Exchange with multi-account read, send, search & triage",
+  "iconSource": "letter:auto"
+}

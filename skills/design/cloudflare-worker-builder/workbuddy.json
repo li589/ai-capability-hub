@@ -1,0 +1,6 @@
+{
+  "display_name": "Cloudflare Worker Builder",
+  "display_name_en": "Cloudflare Worker Builder",
+  "description_zh": "脚手架并部署 Cloudflare Worker 全栈应用",
+  "description_en": "Scaffold and deploy Cloudflare Worker apps with Hono, Vite and assets"
+}

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Quiet porcelain evidence surface</title>
+  <desc id="desc">A near-white layered evidence tray floats over a calm monochrome field.</desc>
+  <defs>
+    <radialGradient id="wash"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#E7E7E3"/></radialGradient>
+    <filter id="lift" x="-30%" y="-40%" width="160%" height="200%"><feDropShadow dx="0" dy="28" stdDeviation="28" flood-color="#3D3D3A" flood-opacity=".16"/></filter>
+  </defs>
+  <rect width="1200" height="720" rx="64" fill="url(#wash)"/>
+  <g opacity=".72">
+    <rect x="330" y="120" width="170" height="220" rx="18" fill="#FFFFFF" stroke="#D8D8D4" transform="rotate(-7 415 230)"/>
+    <rect x="448" y="98" width="170" height="230" rx="18" fill="#FFFFFF" stroke="#D8D8D4" transform="rotate(5 533 213)"/>
+    <path d="M366 166h96M366 190h82M478 146h102M478 172h88" stroke="#B8B8B3" stroke-width="6" stroke-linecap="round"/>
+  </g>
+  <g filter="url(#lift)">
+    <rect x="188" y="278" width="824" height="258" rx="42" fill="#FFFFFF" fill-opacity=".9"/>
+    <rect x="236" y="326" width="96" height="38" rx="19" fill="#E9E9E6"/>
+    <path d="M370 345h314" stroke="#A5A5A0" stroke-width="10" stroke-linecap="round"/>
+    <g transform="translate(242 444)" fill="none" stroke="#1A1A1A" stroke-width="5" stroke-linecap="round">
+      <path d="M0 0h58M0 18h42M14-12v42M44-12v42"/>
+      <path d="M96 24c-18 0-20-26-3-29 11-2 17 7 13 17l-12 28c-5 12 13 19 19 7l16-34"/>
+    </g>
+    <circle cx="914" cy="442" r="48" fill="#171717"/>
+    <path d="M888 442h48m-18-18 18 18-18 18" fill="none" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

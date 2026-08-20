@@ -1,0 +1,11 @@
+{
+  "name": "同花顺黄金_黄金信号分",
+  "installedAt": 1787228494652,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087165986158444544",
+  "description_zh": "基于黄金品种的主力资金动向和各类经济指标得到的黄金信号评分，帮助快速判断黄金行情。",
+  "description_en": "Gold grade according to cash flows and other economic factors, would help you seize gold investment opportunity ASAP.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_83c64bd6-c1f.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_83c64bd6-c1f.png"
+}

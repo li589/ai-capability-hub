@@ -1,0 +1,11 @@
+{
+  "name": "小红书标题生成与评分",
+  "installedAt": 1787227559430,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2085658403021144064",
+  "description_zh": "一键生成10个爆款标题，或从六大维度对已有标题加权评分，输出等级评定与优化建议",
+  "description_en": "Generate 10 viral titles or score existing ones across 6 dimensions with grading and optimization suggestions",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_f09bbdc8-f1b.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_f09bbdc8-f1b.svg"
+}

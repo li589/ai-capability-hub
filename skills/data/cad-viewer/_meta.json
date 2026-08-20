@@ -1,0 +1,17 @@
+{
+  "owner": "sanshuili334-code",
+  "slug": "cad-viewer",
+  "displayName": "CAD Viewer",
+  "latest": {
+    "version": "1.0.5",
+    "publishedAt": 1775698360541,
+    "commit": "https://github.com/openclaw/skills/commit/09ff067003753ee642fb4b8c7e15d5d1a3561352"
+  },
+  "history": [
+    {
+      "version": "1.0.2",
+      "publishedAt": 1773297290982,
+      "commit": "https://github.com/openclaw/skills/commit/b3f250c1be2f23ec1293af3cda83190c6d77ae21"
+    }
+  ]
+}

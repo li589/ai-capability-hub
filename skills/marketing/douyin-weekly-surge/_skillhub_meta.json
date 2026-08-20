@@ -1,0 +1,11 @@
+{
+  "name": "抖音七日点赞飙升榜",
+  "installedAt": 1785864580440,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2082737685945044992",
+  "description_zh": "抖音七日点赞飙升榜查询工具，输出七日新增点赞TOP50榜单，支持赛道筛选和30天回溯。",
+  "description_en": "Douyin weekly like-surge ranking. Outputs the TOP50 works by 7-day new likes, with category filters and 30-day history lookup.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_02b821bc-dc5.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_02b821bc-dc5.svg"
+}

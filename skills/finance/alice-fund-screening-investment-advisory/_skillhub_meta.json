@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-基金筛选与投资建议",
+  "installedAt": 1787227744250,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085539434292518912",
+  "description_zh": "万得 Alice 基金筛选与投资建议 CLI：多维度基金筛选、对比分析与个性化投资建议，输出含筛选结果、对比分析、配置建议与投资者画像匹配的结构化报告。",
+  "description_en": "Wind Alice Fund Screening & Investment Advisory CLI - professional fund screening, comparative analysis, and personalized investment recommendations for investment advisors, with multi-dimensional filtering by risk preference, objectives, and horizon, plus allocation suggestions aligned with investor profiles.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_050a9bb4-66c.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_050a9bb4-66c.jpg"
+}

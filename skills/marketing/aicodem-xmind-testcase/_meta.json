@@ -1,0 +1,11 @@
+{
+  "owner": "aicodem",
+  "slug": "aicodem-xmind-testcase",
+  "displayName": "Aicodem skill",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773367644555,
+    "commit": "https://github.com/openclaw/skills/commit/b70fc790caf7734f8a03b6d663600e94141ac185"
+  },
+  "history": []
+}

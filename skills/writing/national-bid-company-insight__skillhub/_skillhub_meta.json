@@ -1,0 +1,12 @@
+{
+  "slug": "national-bid-company-insight",
+  "name": "全国招中标查询与企业洞察",
+  "version": "1.0.1",
+  "installedAt": 1787228785440,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png"
+}

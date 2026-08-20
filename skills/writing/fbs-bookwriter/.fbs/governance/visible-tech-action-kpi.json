@@ -1,0 +1,19 @@
+{
+  "generatedAt": "2026-06-13T12:27:13.891Z",
+  "mode": "static",
+  "skillRoot": "E:\\FBS001\\work\\fbs-bookwriter-3.0-candidate",
+  "bookRoot": "E:\\FBS001\\work\\fbs-bookwriter-3.0-candidate",
+  "status": "passed",
+  "thresholds": {
+    "minReasonCoverage": 90
+  },
+  "staticChecks": {
+    "hasNarrationFieldInIntake": true,
+    "hasGoalImpactInIntake": true,
+    "hasActionSelectionPolicyInIntake": true,
+    "hasNarrationPathInHints": true,
+    "hasActionPolicyPathInHints": true,
+    "hasGoalImpactPathInHints": true
+  },
+  "runtimeChecks": null
+}

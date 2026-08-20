@@ -1,0 +1,4 @@
+interface:
+  display_name: "拟在建项目提前发现"
+  short_description: "搜索拟在建项目并提取建设单位、地区、项目正文、附件和跟进线索"
+  default_prompt: "使用 $baobiao-find-planned-projects 提前发现符合条件的拟在建项目。"

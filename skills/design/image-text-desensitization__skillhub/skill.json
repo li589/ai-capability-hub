@@ -1,0 +1,95 @@
+{
+    "name": "smart-desensitize",
+    "description": "智能自动脱敏工具 - 支持文本、JSON、图像的智能脱敏处理，自动识别并遮盖敏感信息如手机号、身份证、银行卡、人脸等",
+    "version": "1.0.0",
+    "author": "Agent Assistant",
+    "tags": ["脱敏", "隐私保护", "数据安全", "OCR", "人脸检测"],
+    "keywords": ["desensitize", "privacy", "PII", "face detection", "OCR"],
+    "capabilities": {
+        "text_desensitize": {
+            "enabled": true,
+            "description": "文本脱敏",
+            "supported_types": [
+                "手机号",
+                "身份证号",
+                "邮箱地址",
+                "银行卡号",
+                "IP地址"
+            ]
+        },
+        "json_desensitize": {
+            "enabled": true,
+            "description": "JSON结构化数据脱敏",
+            "auto_detect_fields": true,
+            "sensitive_fields": [
+                "password", "pwd", "secret", "token", "api_key",
+                "phone", "mobile", "tel",
+                "id_card", "idcard", "identity",
+                "email", "bank_card",
+                "address", "name", "real_name",
+                "salary", "银行卡"
+            ]
+        },
+        "image_desensitize": {
+            "enabled": true,
+            "description": "图像脱敏",
+            "features": [
+                "文字检测与模糊(OCR)",
+                "人脸检测与模糊"
+            ],
+            "performance_modes": {
+                "standard": {
+                    "class": "DeepLearningDesensitizer",
+                    "description": "标准模式 - 高精度"
+                },
+                "fast": {
+                    "class": "FastDeepLearningDesensitizer",
+                    "description": "快速模式 - 针对大图片优化"
+                }
+            }
+        },
+        "batch_processing": {
+            "enabled": true,
+            "description": "批量脱敏处理"
+        }
+    },
+    "dependencies": {
+        "required": [
+            "opencv-python",
+            "Pillow",
+            "numpy"
+        ],
+        "optional": [
+            "easyocr",
+            "paddleocr"
+        ],
+        "ocr_language": ["ch_sim", "en"]
+    },
+    "usage": {
+        "basic_usage": {
+            "text": "from smart_desensitize_skill import SmartDesensitizer\n\ndesensitizer = SmartDesensitizer()\nresult = desensitizer.desensitize_text('手机号: 13812345678')",
+            "json": "result = desensitizer.desensitize_json('{\"phone\": \"13812345678\"}')"
+        },
+        "image_usage": {
+            "enable_ocr": "SmartDesensitizer(use_deep_learning=True)",
+            "high_performance": "SmartDesensitizer(use_deep_learning=True, high_performance=True)"
+        }
+    },
+    "configurations": {
+        "default": {
+            "use_deep_learning": false,
+            "high_performance": false,
+            "blur_strength": 51
+        },
+        "high_quality": {
+            "use_deep_learning": true,
+            "high_performance": false,
+            "blur_strength": 51
+        },
+        "fast": {
+            "use_deep_learning": true,
+            "high_performance": true,
+            "blur_strength": 31
+        }
+    }
+}

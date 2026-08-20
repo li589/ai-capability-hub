@@ -1,0 +1,11 @@
+{
+  "owner": "chinadaas-department",
+  "slug": "qibook-company-wiki-deepresearch",
+  "displayName": "Qibook Company Wiki Deepresearch",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1774849021649,
+    "commit": "https://github.com/openclaw/skills/commit/d36fa0da74beef6d9bbeb0978392973536754402"
+  },
+  "history": []
+}

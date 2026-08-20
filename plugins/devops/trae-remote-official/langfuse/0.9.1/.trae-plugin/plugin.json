@@ -1,0 +1,44 @@
+{
+  "name": "langfuse",
+  "version": "0.9.1",
+  "description": "Langfuse observability - query traces, debug exceptions, analyze sessions, manage prompts via MCP tools",
+  "author": {
+    "name": "Aviv Sinai",
+    "url": "https://github.com/avivsinai"
+  },
+  "homepage": "https://github.com/avivsinai/langfuse-mcp#skills",
+  "repository": "https://github.com/avivsinai/langfuse-mcp",
+  "license": "MIT",
+  "keywords": [
+    "langfuse",
+    "observability",
+    "traces",
+    "llm",
+    "prompts",
+    "debugging",
+    "mcp",
+    "telemetry"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Langfuse Observability",
+    "shortDescription": "Query traces, debug exceptions, analyze sessions, and manage prompts via MCP",
+    "longDescription": "Inspect Langfuse traces, observations, sessions, exceptions, prompts, and datasets from Codex via bundled skills and MCP workflows.",
+    "developerName": "Aviv Sinai",
+    "category": "development_tools",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/avivsinai/langfuse-mcp",
+    "defaultPrompt": [
+      "Investigate the latest Langfuse exceptions and tell me which service is failing first.",
+      "Summarize the slowest traces from the last 24 hours and suggest where to look next.",
+      "Create a dataset item from this failing trace and label the related prompt for follow-up."
+    ],
+    "brandColor": "#4A90D9",
+    "screenshots": [],
+    "composerIcon": "./assets/langfuse-icon.svg",
+    "logo": "./assets/langfuse-icon.svg"
+  }
+}

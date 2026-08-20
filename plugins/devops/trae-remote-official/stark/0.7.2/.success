@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:stark",
+  "registry": "trae-remote-official",
+  "plugin_name": "stark",
+  "version": "0.7.2",
+  "marketplace_plugin_id": "87530964-41d9-4c12-ab35-ff01ada07a01",
+  "remote_installed_plugin_id": ".QL_.YF7KMWIF4",
+  "checksum": "4c42d60b3801485524441773d404625c30aab931346d7fba52d37f60831c144d",
+  "file_size": 46981,
+  "installed_at": 1787227204649
+}

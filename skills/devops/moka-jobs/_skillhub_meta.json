@@ -1,0 +1,11 @@
+{
+  "name": "Moka 职位",
+  "installedAt": 1787228581068,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088129858157776896",
+  "description_zh": "面向招聘负责人的职位查询。按关键词与状态搜索招聘职位、查看职位详情（职位描述 JD、工作职责、任职要求、招聘团队）、查某个职位发布到了哪些招聘站点，以及查询企业配置的工作地点与候选人来源渠道清单。当用户问「现在有哪些在招的前端职位」「这个职位的 JD 是什么」「这个职位发到哪些官网了」「我们开通了哪些招聘渠道」「面试可以安排在哪些地点」时使用。",
+  "description_en": "Job lookup for recruiting owners. Searches recruiting jobs by keyword and status, shows job details (job description, responsibilities, requirements, recruiting team), checks which recruiting sites a job is published to, and lists the company's configured work locations and candidate source channels. Use it for questions like \"which frontend jobs are open now\", \"what is the JD of this job\", \"which career sites is this job published on\", \"which recruiting channels do we have\", or \"where can interviews be held\".",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_f8a7e256-aa6.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_f8a7e256-aa6.png"
+}

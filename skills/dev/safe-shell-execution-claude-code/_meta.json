@@ -1,0 +1,11 @@
+{
+  "owner": "lizlzzzz",
+  "slug": "safe-shell-execution-claude-code",
+  "displayName": "safe-shell-execution-claude-code",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775021864540,
+    "commit": "https://github.com/openclaw/skills/commit/8d403e76b7ce32b7d541e18e0e28d5e061ff7c3d"
+  },
+  "history": []
+}

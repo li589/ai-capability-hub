@@ -1,0 +1,11 @@
+{
+  "owner": "lens-lzy",
+  "slug": "easy-testcase",
+  "displayName": "feishu-prd2testcase",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773987992217,
+    "commit": "https://github.com/openclaw/skills/commit/691240c717f4db403491ff114fa11eab78d35c62"
+  },
+  "history": []
+}

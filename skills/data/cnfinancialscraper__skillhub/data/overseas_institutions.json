@@ -1,0 +1,1479 @@
+{
+  "_version": "1.0.0",
+  "_last_updated": "2026-07-28",
+  "_description": "全球主流金融机构网站列表 - 11大类 250+ 机构",
+  "_total": 207,
+  "central_banks": [
+    {
+      "name": "Federal Reserve (美联储)",
+      "code": "FED",
+      "website": "https://www.federalreserve.gov",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "European Central Bank (欧洲央行)",
+      "code": "ECB",
+      "website": "https://www.ecb.europa.eu",
+      "country": "EU",
+      "priority": 1
+    },
+    {
+      "name": "Bank of England (英格兰银行)",
+      "code": "BOE",
+      "website": "https://www.bankofengland.co.uk",
+      "country": "UK",
+      "priority": 1
+    },
+    {
+      "name": "Bank of Japan (日本银行)",
+      "code": "BOJ",
+      "website": "https://www.boj.or.jp",
+      "country": "JP",
+      "priority": 1
+    },
+    {
+      "name": "Swiss National Bank (瑞士央行)",
+      "code": "SNB",
+      "website": "https://www.snb.ch",
+      "country": "CH",
+      "priority": 2
+    },
+    {
+      "name": "Reserve Bank of Australia (澳洲联储)",
+      "code": "RBA",
+      "website": "https://www.rba.gov.au",
+      "country": "AU",
+      "priority": 2
+    },
+    {
+      "name": "Bank of Canada (加拿大央行)",
+      "code": "BOC",
+      "website": "https://www.bankofcanada.ca",
+      "country": "CA",
+      "priority": 2
+    },
+    {
+      "name": "Reserve Bank of India (印度储备银行)",
+      "code": "RBI",
+      "website": "https://www.rbi.org.in",
+      "country": "IN",
+      "priority": 2
+    },
+    {
+      "name": "Bank of Korea (韩国银行)",
+      "code": "BOK",
+      "website": "https://www.bok.or.kr",
+      "country": "KR",
+      "priority": 2
+    },
+    {
+      "name": "Central Bank of Brazil (巴西央行)",
+      "code": "BCB",
+      "website": "https://www.bcb.gov.br",
+      "country": "BR",
+      "priority": 3
+    },
+    {
+      "name": "Bank of Russia (俄罗斯央行)",
+      "code": "CBR",
+      "website": "https://www.cbr.ru",
+      "country": "RU",
+      "priority": 3
+    },
+    {
+      "name": "Monetary Authority of Singapore (新加坡金管局)",
+      "code": "MAS",
+      "website": "https://www.mas.gov.sg",
+      "country": "SG",
+      "priority": 2
+    },
+    {
+      "name": "Hong Kong Monetary Authority (香港金管局)",
+      "code": "HKMA",
+      "website": "https://www.hkma.gov.hk",
+      "country": "HK",
+      "priority": 2
+    },
+    {
+      "name": "Reserve Bank of New Zealand (新西兰联储)",
+      "code": "RBNZ",
+      "website": "https://www.rbnz.govt.nz",
+      "country": "NZ",
+      "priority": 3
+    },
+    {
+      "name": "Bank for International Settlements (国际清算银行)",
+      "code": "BIS",
+      "website": "https://www.bis.org",
+      "country": "INTL",
+      "priority": 1
+    }
+  ],
+  "investment_banks": [
+    {
+      "name": "Goldman Sachs (高盛)",
+      "code": "GS",
+      "website": "https://www.goldmansachs.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Morgan Stanley (摩根士丹利)",
+      "code": "MS",
+      "website": "https://www.morganstanley.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "J.P. Morgan (摩根大通)",
+      "code": "JPM",
+      "website": "https://www.jpmorgan.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Bank of America Merrill Lynch (美银美林)",
+      "code": "BAC",
+      "website": "https://www.bofaml.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Citigroup (花旗)",
+      "code": "C",
+      "website": "https://www.citigroup.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Barclays (巴克莱)",
+      "code": "BARC",
+      "website": "https://www.barclays.com",
+      "country": "UK",
+      "priority": 1
+    },
+    {
+      "name": "HSBC (汇丰)",
+      "code": "HSBC",
+      "website": "https://www.hsbc.com",
+      "country": "UK",
+      "priority": 1
+    },
+    {
+      "name": "Deutsche Bank (德意志银行)",
+      "code": "DB",
+      "website": "https://www.db.com",
+      "country": "DE",
+      "priority": 1
+    },
+    {
+      "name": "UBS (瑞银)",
+      "code": "UBS",
+      "website": "https://www.ubs.com",
+      "country": "CH",
+      "priority": 1
+    },
+    {
+      "name": "Credit Suisse (瑞士信贷)",
+      "code": "CS",
+      "website": "https://www.credit-suisse.com",
+      "country": "CH",
+      "priority": 2
+    },
+    {
+      "name": "BNP Paribas (法国巴黎银行)",
+      "code": "BNP",
+      "website": "https://www.bnpparibas.com",
+      "country": "FR",
+      "priority": 2
+    },
+    {
+      "name": "Societe Generale (法国兴业银行)",
+      "code": "SG",
+      "website": "https://www.societegenerale.com",
+      "country": "FR",
+      "priority": 2
+    },
+    {
+      "name": "Nomura (野村证券)",
+      "code": "NOM",
+      "website": "https://www.nomura.com",
+      "country": "JP",
+      "priority": 2
+    },
+    {
+      "name": "Daiwa Securities (大和证券)",
+      "code": "DAIWA",
+      "website": "https://www.daiwa-grp.jp",
+      "country": "JP",
+      "priority": 3
+    },
+    {
+      "name": "Macquarie Group (麦格理)",
+      "code": "MQG",
+      "website": "https://www.macquarie.com",
+      "country": "AU",
+      "priority": 2
+    },
+    {
+      "name": "Evercore",
+      "code": "EVR",
+      "website": "https://www.evercore.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Lazard",
+      "code": "LAZ",
+      "website": "https://www.lazard.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Jefferies",
+      "code": "JEF",
+      "website": "https://www.jefferies.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "RBC Capital Markets",
+      "code": "RBC",
+      "website": "https://www.rbccm.com",
+      "country": "CA",
+      "priority": 2
+    },
+    {
+      "name": "TD Securities",
+      "code": "TD",
+      "website": "https://www.tdsecurities.com",
+      "country": "CA",
+      "priority": 3
+    }
+  ],
+  "asset_managers": [
+    {
+      "name": "BlackRock (贝莱德)",
+      "code": "BLK",
+      "website": "https://www.blackrock.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Vanguard (先锋领航)",
+      "code": "VGD",
+      "website": "https://www.vanguard.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "State Street Global Advisors (道富)",
+      "code": "STT",
+      "website": "https://www.ssga.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Fidelity Investments (富达)",
+      "code": "FID",
+      "website": "https://www.fidelity.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "PIMCO (太平洋投资)",
+      "code": "PIMCO",
+      "website": "https://www.pimco.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Capital Group (美国资本集团)",
+      "code": "CAP",
+      "website": "https://www.capitalgroup.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Amundi (东方汇理)",
+      "code": "AMUNDI",
+      "website": "https://www.amundi.com",
+      "country": "FR",
+      "priority": 2
+    },
+    {
+      "name": "T. Rowe Price (普信)",
+      "code": "TROW",
+      "website": "https://www.troweprice.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Invesco (景顺)",
+      "code": "IVZ",
+      "website": "https://www.invesco.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Franklin Templeton (富兰克林邓普顿)",
+      "code": "FT",
+      "website": "https://www.franklintempleton.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "BNY Mellon Investment (纽约梅隆)",
+      "code": "BNY",
+      "website": "https://www.bnymellon.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Legal & General (法通保险)",
+      "code": "LGEN",
+      "website": "https://www.legalandgeneral.com",
+      "country": "UK",
+      "priority": 2
+    },
+    {
+      "name": "Schroders (施罗德)",
+      "code": "SDR",
+      "website": "https://www.schroders.com",
+      "country": "UK",
+      "priority": 2
+    },
+    {
+      "name": "Allianz Global Investors (安联投资)",
+      "code": "ALLIANZ",
+      "website": "https://www.allianzgi.com",
+      "country": "DE",
+      "priority": 2
+    },
+    {
+      "name": "DWS Group",
+      "code": "DWS",
+      "website": "https://www.dws.com",
+      "country": "DE",
+      "priority": 2
+    },
+    {
+      "name": "UBS Asset Management",
+      "code": "UBSAM",
+      "website": "https://www.ubs.com/am",
+      "country": "CH",
+      "priority": 2
+    },
+    {
+      "name": "Wellington Management (惠灵顿)",
+      "code": "WLGT",
+      "website": "https://www.wellington.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Northern Trust Asset Management",
+      "code": "NTRS",
+      "website": "https://www.northerntrust.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Nuveen",
+      "code": "NUV",
+      "website": "https://www.nuveen.com",
+      "country": "US",
+      "priority": 3
+    },
+    {
+      "name": "Janus Henderson",
+      "code": "JHG",
+      "website": "https://www.janushenderson.com",
+      "country": "UK",
+      "priority": 3
+    }
+  ],
+  "hedge_funds": [
+    {
+      "name": "Bridgewater Associates (桥水)",
+      "code": "BW",
+      "website": "https://www.bridgewater.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Renaissance Technologies (文艺复兴科技)",
+      "code": "RENTEC",
+      "website": "https://www.rentec.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Citadel (城堡)",
+      "code": "CITADEL",
+      "website": "https://www.citadel.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "D.E. Shaw",
+      "code": "DES",
+      "website": "https://www.deshaw.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Two Sigma",
+      "code": "TS",
+      "website": "https://www.twosigma.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Millennium Management (千禧年)",
+      "code": "MLN",
+      "website": "https://www.mlp.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Point72",
+      "code": "P72",
+      "website": "https://www.point72.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Baupost Group",
+      "code": "BAUPOST",
+      "website": "https://www.baupost.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Brevan Howard",
+      "code": "BH",
+      "website": "https://www.brevanhoward.com",
+      "country": "UK",
+      "priority": 2
+    },
+    {
+      "name": "Man Group (英仕曼)",
+      "code": "MAN",
+      "website": "https://www.man.com",
+      "country": "UK",
+      "priority": 2
+    },
+    {
+      "name": "Marshall Wace",
+      "code": "MW",
+      "website": "https://www.mwam.com",
+      "country": "UK",
+      "priority": 2
+    },
+    {
+      "name": "AQR Capital Management",
+      "code": "AQR",
+      "website": "https://www.aqr.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Elliott Management",
+      "code": "ELLIOTT",
+      "website": "https://www.elliottmgmt.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Davidson Kempner",
+      "code": "DK",
+      "website": "https://www.dkcapitalpartners.com",
+      "country": "US",
+      "priority": 3
+    },
+    {
+      "name": "Viking Global Investors",
+      "code": "VIKING",
+      "website": "https://www.vikingglobal.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Tiger Global Management",
+      "code": "TIGER",
+      "website": "https://www.tigerglobal.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Coatue Management",
+      "code": "COATUE",
+      "website": "https://www.coatue.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Pershing Square (潘兴广场)",
+      "code": "PS",
+      "website": "https://www.pershingsquareholdings.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Soros Fund Management (索罗斯)",
+      "code": "SFM",
+      "website": "https://www.sorosfundmgmt.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Oaktree Capital (橡树资本)",
+      "code": "OAK",
+      "website": "https://www.oaktreecapital.com",
+      "country": "US",
+      "priority": 2
+    }
+  ],
+  "rating_agencies": [
+    {
+      "name": "S&P Global (标普全球)",
+      "code": "SPGI",
+      "website": "https://www.spglobal.com/ratings",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Moody's (穆迪)",
+      "code": "MCO",
+      "website": "https://www.moodys.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Fitch Ratings (惠誉)",
+      "code": "FITCH",
+      "website": "https://www.fitchratings.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Morningstar (晨星)",
+      "code": "MORN",
+      "website": "https://www.morningstar.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "MSCI (明晟)",
+      "code": "MSCI",
+      "website": "https://www.msci.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "A.M. Best",
+      "code": "AMB",
+      "website": "https://www.ambest.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "DBRS Morningstar",
+      "code": "DBRS",
+      "website": "https://www.dbrsmorningstar.com",
+      "country": "CA",
+      "priority": 2
+    },
+    {
+      "name": "China Chengxin (中诚信)",
+      "code": "CCX",
+      "website": "https://www.ccxi.com.cn",
+      "country": "CN",
+      "priority": 2
+    },
+    {
+      "name": "Dagong Global (大公国际)",
+      "code": "DAGONG",
+      "website": "https://www.dagongcredit.com",
+      "country": "CN",
+      "priority": 3
+    },
+    {
+      "name": "Japan Credit Rating Agency (JCR)",
+      "code": "JCR",
+      "website": "https://www.jcr.co.jp",
+      "country": "JP",
+      "priority": 3
+    }
+  ],
+  "exchanges": [
+    {
+      "name": "New York Stock Exchange (纽交所)",
+      "code": "NYSE",
+      "website": "https://www.nyse.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "NASDAQ (纳斯达克)",
+      "code": "NASDAQ",
+      "website": "https://www.nasdaq.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "London Stock Exchange (伦交所)",
+      "code": "LSE",
+      "website": "https://www.londonstockexchange.com",
+      "country": "UK",
+      "priority": 1
+    },
+    {
+      "name": "Tokyo Stock Exchange (东交所)",
+      "code": "TSE",
+      "website": "https://www.jpx.co.jp",
+      "country": "JP",
+      "priority": 1
+    },
+    {
+      "name": "Hong Kong Exchange (港交所)",
+      "code": "HKEX",
+      "website": "https://www.hkex.com.hk",
+      "country": "HK",
+      "priority": 1
+    },
+    {
+      "name": "Shanghai Stock Exchange (上交所)",
+      "code": "SSE",
+      "website": "https://www.sse.com.cn",
+      "country": "CN",
+      "priority": 1
+    },
+    {
+      "name": "Shenzhen Stock Exchange (深交所)",
+      "code": "SZSE",
+      "website": "https://www.szse.cn",
+      "country": "CN",
+      "priority": 1
+    },
+    {
+      "name": "Euronext",
+      "code": "ENX",
+      "website": "https://www.euronext.com",
+      "country": "EU",
+      "priority": 2
+    },
+    {
+      "name": "Deutsche Boerse (德交所)",
+      "code": "DB1",
+      "website": "https://www.deutsche-boerse.com",
+      "country": "DE",
+      "priority": 2
+    },
+    {
+      "name": "SIX Swiss Exchange",
+      "code": "SIX",
+      "website": "https://www.six-group.com",
+      "country": "CH",
+      "priority": 2
+    },
+    {
+      "name": "Australian Securities Exchange (澳交所)",
+      "code": "ASX",
+      "website": "https://www.asx.com.au",
+      "country": "AU",
+      "priority": 2
+    },
+    {
+      "name": "Singapore Exchange (新交所)",
+      "code": "SGX",
+      "website": "https://www.sgx.com",
+      "country": "SG",
+      "priority": 2
+    },
+    {
+      "name": "Toronto Stock Exchange (多伦多证交所)",
+      "code": "TSX",
+      "website": "https://www.tsx.com",
+      "country": "CA",
+      "priority": 2
+    },
+    {
+      "name": "Korea Exchange (韩国交易所)",
+      "code": "KRX",
+      "website": "https://www.krx.co.kr",
+      "country": "KR",
+      "priority": 2
+    },
+    {
+      "name": "BSE India (孟买证交所)",
+      "code": "BSE",
+      "website": "https://www.bseindia.com",
+      "country": "IN",
+      "priority": 3
+    },
+    {
+      "name": "NSE India (印度国家证交所)",
+      "code": "NSE",
+      "website": "https://www.nseindia.com",
+      "country": "IN",
+      "priority": 3
+    },
+    {
+      "name": "B3 (巴西交易所)",
+      "code": "B3",
+      "website": "https://www.b3.com.br",
+      "country": "BR",
+      "priority": 3
+    },
+    {
+      "name": "Moscow Exchange (莫斯科交易所)",
+      "code": "MOEX",
+      "website": "https://www.moex.com",
+      "country": "RU",
+      "priority": 3
+    },
+    {
+      "name": "Taiwan Stock Exchange (台湾证交所)",
+      "code": "TWSE",
+      "website": "https://www.twse.com.tw",
+      "country": "TW",
+      "priority": 3
+    },
+    {
+      "name": "CBOE Global Markets",
+      "code": "CBOE",
+      "website": "https://www.cboe.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "CME Group (芝商所)",
+      "code": "CME",
+      "website": "https://www.cmegroup.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "ICE (洲际交易所)",
+      "code": "ICE",
+      "website": "https://www.theice.com",
+      "country": "US",
+      "priority": 1
+    }
+  ],
+  "regulatory_bodies": [
+    {
+      "name": "SEC (美国证交会)",
+      "code": "SEC",
+      "website": "https://www.sec.gov",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "CFTC (美国商品期货委员会)",
+      "code": "CFTC",
+      "website": "https://www.cftc.gov",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "FINRA (美国金融业监管局)",
+      "code": "FINRA",
+      "website": "https://www.finra.org",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "FCA (英国金融行为监管局)",
+      "code": "FCA",
+      "website": "https://www.fca.org.uk",
+      "country": "UK",
+      "priority": 1
+    },
+    {
+      "name": "PRA (英国审慎监管局)",
+      "code": "PRA",
+      "website": "https://www.bankofengland.co.uk/prudential-regulation",
+      "country": "UK",
+      "priority": 2
+    },
+    {
+      "name": "ESMA (欧洲证券市场监管局)",
+      "code": "ESMA",
+      "website": "https://www.esma.europa.eu",
+      "country": "EU",
+      "priority": 1
+    },
+    {
+      "name": "EBA (欧洲银行管理局)",
+      "code": "EBA",
+      "website": "https://www.eba.europa.eu",
+      "country": "EU",
+      "priority": 2
+    },
+    {
+      "name": "BaFin (德国联邦金融监管局)",
+      "code": "BAFIN",
+      "website": "https://www.bafin.de",
+      "country": "DE",
+      "priority": 2
+    },
+    {
+      "name": "AMF (法国金融市场管理局)",
+      "code": "AMF",
+      "website": "https://www.amf-france.org",
+      "country": "FR",
+      "priority": 2
+    },
+    {
+      "name": "SFC (香港证监会)",
+      "code": "SFC",
+      "website": "https://www.sfc.hk",
+      "country": "HK",
+      "priority": 2
+    },
+    {
+      "name": "MAS (新加坡金管局)",
+      "code": "MAS_REG",
+      "website": "https://www.mas.gov.sg",
+      "country": "SG",
+      "priority": 2
+    },
+    {
+      "name": "ASIC (澳大利亚证投委)",
+      "code": "ASIC",
+      "website": "https://www.asic.gov.au",
+      "country": "AU",
+      "priority": 2
+    },
+    {
+      "name": "FSB (金融稳定理事会)",
+      "code": "FSB",
+      "website": "https://www.fsb.org",
+      "country": "INTL",
+      "priority": 1
+    },
+    {
+      "name": "IOSCO (国际证监会组织)",
+      "code": "IOSCO",
+      "website": "https://www.iosco.org",
+      "country": "INTL",
+      "priority": 2
+    },
+    {
+      "name": "Japan FSA (日本金融厅)",
+      "code": "JFSA",
+      "website": "https://www.fsa.go.jp",
+      "country": "JP",
+      "priority": 1
+    },
+    {
+      "name": "Korea FSS (韩国金融监督院)",
+      "code": "FSS_KR",
+      "website": "https://www.fss.or.kr",
+      "country": "KR",
+      "priority": 2
+    },
+    {
+      "name": "SEBI (印度证交会)",
+      "code": "SEBI",
+      "website": "https://www.sebi.gov.in",
+      "country": "IN",
+      "priority": 1
+    },
+    {
+      "name": "OSFI (加拿大金融机构监管署)",
+      "code": "OSFI",
+      "website": "https://www.osfi-bsif.gc.ca",
+      "country": "CA",
+      "priority": 2
+    },
+    {
+      "name": "FINMA (瑞士金融市场监管局)",
+      "code": "FINMA",
+      "website": "https://www.finma.ch",
+      "country": "CH",
+      "priority": 1
+    },
+    {
+      "name": "CVM (巴西证交会)",
+      "code": "CVM_BR",
+      "website": "https://www.gov.br/cvm",
+      "country": "BR",
+      "priority": 2
+    },
+    {
+      "name": "CONSOB (意大利证监会)",
+      "code": "CONSOB",
+      "website": "https://www.consob.it",
+      "country": "IT",
+      "priority": 2
+    },
+    {
+      "name": "CNMV (西班牙证监会)",
+      "code": "CNMV",
+      "website": "https://www.cnmv.es",
+      "country": "ES",
+      "priority": 2
+    },
+    {
+      "name": "AFM (荷兰金融市场管理局)",
+      "code": "AFM_NL",
+      "website": "https://www.afm.nl",
+      "country": "NL",
+      "priority": 2
+    },
+    {
+      "name": "Sweden FI (瑞典金融监管局)",
+      "code": "FI_SE",
+      "website": "https://www.fi.se",
+      "country": "SE",
+      "priority": 2
+    },
+    {
+      "name": "Taiwan FSC (台湾金管会)",
+      "code": "FSC_TW",
+      "website": "https://www.fsc.gov.tw",
+      "country": "TW",
+      "priority": 2
+    },
+    {
+      "name": "South Africa FSCA (南非金融监管局)",
+      "code": "FSCA",
+      "website": "https://www.fsca.co.za",
+      "country": "ZA",
+      "priority": 3
+    },
+    {
+      "name": "Dubai DFSA (迪拜金融服务局)",
+      "code": "DFSA",
+      "website": "https://www.dfsa.ae",
+      "country": "AE",
+      "priority": 3
+    },
+    {
+      "name": "OCC (美国货币监理署)",
+      "code": "OCC",
+      "website": "https://www.occ.gov",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "FDIC (美国联邦存款保险公司)",
+      "code": "FDIC",
+      "website": "https://www.fdic.gov",
+      "country": "US",
+      "priority": 2
+    }
+  ],
+  "data_providers": [
+    {
+      "name": "Bloomberg (彭博)",
+      "code": "BBG",
+      "website": "https://www.bloomberg.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Reuters (路透)",
+      "code": "RTRS",
+      "website": "https://www.reuters.com",
+      "country": "UK",
+      "priority": 1
+    },
+    {
+      "name": "Yahoo Finance",
+      "code": "YAHOO",
+      "website": "https://finance.yahoo.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Google Finance",
+      "code": "GOOG",
+      "website": "https://www.google.com/finance",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "MarketWatch",
+      "code": "MW",
+      "website": "https://www.marketwatch.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Investing.com",
+      "code": "INV",
+      "website": "https://www.investing.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "TradingView",
+      "code": "TV",
+      "website": "https://www.tradingview.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Seeking Alpha",
+      "code": "SA",
+      "website": "https://seekingalpha.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Refinitiv",
+      "code": "REF",
+      "website": "https://www.refinitiv.com",
+      "country": "UK",
+      "priority": 2
+    },
+    {
+      "name": "FactSet",
+      "code": "FDS",
+      "website": "https://www.factset.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "CNBC",
+      "code": "CNBC",
+      "website": "https://www.cnbc.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Financial Times",
+      "code": "FT",
+      "website": "https://www.ft.com",
+      "country": "UK",
+      "priority": 1
+    },
+    {
+      "name": "The Wall Street Journal",
+      "code": "WSJ",
+      "website": "https://www.wsj.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Nikkei Asia (日经亚洲)",
+      "code": "NIKKEI",
+      "website": "https://asia.nikkei.com",
+      "country": "JP",
+      "priority": 2
+    },
+    {
+      "name": "South China Morning Post (南华早报)",
+      "code": "SCMP",
+      "website": "https://www.scmp.com",
+      "country": "HK",
+      "priority": 2
+    },
+    {
+      "name": "Barron's",
+      "code": "BARRONS",
+      "website": "https://www.barrons.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "The Economist",
+      "code": "ECON",
+      "website": "https://www.economist.com",
+      "country": "UK",
+      "priority": 2
+    },
+    {
+      "name": "ZeroHedge",
+      "code": "ZH",
+      "website": "https://www.zerohedge.com",
+      "country": "US",
+      "priority": 3
+    },
+    {
+      "name": "Finviz",
+      "code": "FINVIZ",
+      "website": "https://finviz.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "StockCharts",
+      "code": "SCH",
+      "website": "https://stockcharts.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "TipRanks",
+      "code": "TR",
+      "website": "https://www.tipranks.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "GuruFocus",
+      "code": "GF",
+      "website": "https://www.gurufocus.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "FRED (圣路易斯联储经济数据)",
+      "code": "FRED",
+      "website": "https://fred.stlouisfed.org",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "World Bank Data (世界银行)",
+      "code": "WB",
+      "website": "https://data.worldbank.org",
+      "country": "INTL",
+      "priority": 1
+    },
+    {
+      "name": "IMF Data (国际货币基金组织)",
+      "code": "IMF",
+      "website": "https://www.imf.org/en/Data",
+      "country": "INTL",
+      "priority": 1
+    },
+    {
+      "name": "OECD Data (经合组织)",
+      "code": "OECD",
+      "website": "https://data.oecd.org",
+      "country": "INTL",
+      "priority": 1
+    },
+    {
+      "name": "EDGAR (SEC公司文件)",
+      "code": "EDGAR",
+      "website": "https://www.sec.gov/edgar",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Alpha Vantage",
+      "code": "AV",
+      "website": "https://www.alphavantage.co",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "IEX Cloud",
+      "code": "IEX",
+      "website": "https://iexcloud.io",
+      "country": "US",
+      "priority": 3
+    },
+    {
+      "name": "Polygon.io",
+      "code": "POLY",
+      "website": "https://polygon.io",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Finnhub",
+      "code": "FH",
+      "website": "https://finnhub.io",
+      "country": "FI",
+      "priority": 3
+    },
+    {
+      "name": "Tiingo",
+      "code": "TIINGO",
+      "website": "https://www.tiingo.com",
+      "country": "US",
+      "priority": 3
+    }
+  ],
+  "international_orgs": [
+    {
+      "name": "International Monetary Fund (IMF)",
+      "code": "IMF_ORG",
+      "website": "https://www.imf.org",
+      "country": "INTL",
+      "priority": 1
+    },
+    {
+      "name": "World Bank (世界银行)",
+      "code": "WB_ORG",
+      "website": "https://www.worldbank.org",
+      "country": "INTL",
+      "priority": 1
+    },
+    {
+      "name": "Bank for International Settlements (BIS)",
+      "code": "BIS_ORG",
+      "website": "https://www.bis.org",
+      "country": "INTL",
+      "priority": 1
+    },
+    {
+      "name": "OECD (经合组织)",
+      "code": "OECD_ORG",
+      "website": "https://www.oecd.org",
+      "country": "INTL",
+      "priority": 1
+    },
+    {
+      "name": "Financial Stability Board (金融稳定理事会)",
+      "code": "FSB_ORG",
+      "website": "https://www.fsb.org",
+      "country": "INTL",
+      "priority": 1
+    },
+    {
+      "name": "World Economic Forum (世界经济论坛)",
+      "code": "WEF",
+      "website": "https://www.weforum.org",
+      "country": "INTL",
+      "priority": 2
+    },
+    {
+      "name": "Asian Development Bank (亚开行)",
+      "code": "ADB",
+      "website": "https://www.adb.org",
+      "country": "INTL",
+      "priority": 2
+    },
+    {
+      "name": "African Development Bank (非洲开发银行)",
+      "code": "AFDB",
+      "website": "https://www.afdb.org",
+      "country": "INTL",
+      "priority": 3
+    },
+    {
+      "name": "European Investment Bank (欧投行)",
+      "code": "EIB",
+      "website": "https://www.eib.org",
+      "country": "EU",
+      "priority": 2
+    },
+    {
+      "name": "Inter-American Development Bank (泛美开发银行)",
+      "code": "IDB",
+      "website": "https://www.iadb.org",
+      "country": "INTL",
+      "priority": 3
+    },
+    {
+      "name": "AIIB (亚投行)",
+      "code": "AIIB",
+      "website": "https://www.aiib.org",
+      "country": "INTL",
+      "priority": 2
+    },
+    {
+      "name": "New Development Bank (金砖银行)",
+      "code": "NDB",
+      "website": "https://www.ndb.int",
+      "country": "INTL",
+      "priority": 3
+    },
+    {
+      "name": "Financial Action Task Force (FATF)",
+      "code": "FATF",
+      "website": "https://www.fatf-gafi.org",
+      "country": "INTL",
+      "priority": 2
+    },
+    {
+      "name": "World Gold Council (世界黄金协会)",
+      "code": "WGC",
+      "website": "https://www.gold.org",
+      "country": "INTL",
+      "priority": 2
+    },
+    {
+      "name": "International Energy Agency (国际能源署)",
+      "code": "IEA",
+      "website": "https://www.iea.org",
+      "country": "INTL",
+      "priority": 2
+    },
+    {
+      "name": "OPEC (石油输出国组织)",
+      "code": "OPEC",
+      "website": "https://www.opec.org",
+      "country": "INTL",
+      "priority": 2
+    }
+  ],
+  "sovereign_wealth_funds": [
+    {
+      "name": "NBIM (挪威政府全球养老基金)",
+      "code": "NBIM",
+      "website": "https://www.nbim.no",
+      "country": "NO",
+      "priority": 1
+    },
+    {
+      "name": "ADIA (阿布扎比投资局)",
+      "code": "ADIA",
+      "website": "https://www.adia.ae",
+      "country": "AE",
+      "priority": 1
+    },
+    {
+      "name": "CIC (中投公司)",
+      "code": "CIC",
+      "website": "https://www.china-inv.cn",
+      "country": "CN",
+      "priority": 1
+    },
+    {
+      "name": "GIC (新加坡政府投资公司)",
+      "code": "GIC",
+      "website": "https://www.gic.com.sg",
+      "country": "SG",
+      "priority": 1
+    },
+    {
+      "name": "Temasek (淡马锡)",
+      "code": "TEMASEK",
+      "website": "https://www.temasek.com.sg",
+      "country": "SG",
+      "priority": 1
+    },
+    {
+      "name": "KIA (科威特投资局)",
+      "code": "KIA",
+      "website": "https://www.kia.gov.kw",
+      "country": "KW",
+      "priority": 2
+    },
+    {
+      "name": "QIA (卡塔尔投资局)",
+      "code": "QIA",
+      "website": "https://www.qia.qa",
+      "country": "QA",
+      "priority": 2
+    },
+    {
+      "name": "PIF (沙特公共投资基金)",
+      "code": "PIF",
+      "website": "https://www.pif.gov.sa",
+      "country": "SA",
+      "priority": 1
+    }
+  ],
+  "private_equity": [
+    {
+      "name": "Blackstone (黑石)",
+      "code": "BX",
+      "website": "https://www.blackstone.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "KKR",
+      "code": "KKR",
+      "website": "https://www.kkr.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Apollo Global Management",
+      "code": "APO",
+      "website": "https://www.apollo.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Carlyle Group (凯雷)",
+      "code": "CG",
+      "website": "https://www.carlyle.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "TPG",
+      "code": "TPG",
+      "website": "https://www.tpg.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Warburg Pincus (华平)",
+      "code": "WP",
+      "website": "https://www.warburgpincus.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "CVC Capital Partners",
+      "code": "CVC",
+      "website": "https://www.cvc.com",
+      "country": "LU",
+      "priority": 2
+    },
+    {
+      "name": "Bain Capital (贝恩资本)",
+      "code": "BAIN",
+      "website": "https://www.baincapital.com",
+      "country": "US",
+      "priority": 2
+    }
+  ],
+  "market_makers": [
+    {
+      "name": "Jane Street",
+      "code": "JANE",
+      "website": "https://www.janestreet.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "SIG (海纳国际集团)",
+      "code": "SIG",
+      "website": "https://www.sig.com",
+      "country": "US",
+      "priority": 1
+    },
+    {
+      "name": "Jump Trading",
+      "code": "JUMP",
+      "website": "https://www.jumptrading.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "DRW",
+      "code": "DRW",
+      "website": "https://www.drw.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Optiver",
+      "code": "OPTIVER",
+      "website": "https://www.optiver.com",
+      "country": "NL",
+      "priority": 2
+    },
+    {
+      "name": "Hudson River Trading (HRT)",
+      "code": "HRT",
+      "website": "https://www.hudsonrivertrading.com",
+      "country": "US",
+      "priority": 2
+    },
+    {
+      "name": "Virtu Financial",
+      "code": "VIRTU",
+      "website": "https://www.virtu.com",
+      "country": "US",
+      "priority": 2
+    }
+  ]
+}

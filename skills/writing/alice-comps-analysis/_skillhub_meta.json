@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-可比公司分析",
+  "installedAt": 1787227730201,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2082686884540944384",
+  "description_zh": "万得 Alice 可比公司分析 CLI：构建机构级可比公司分析，覆盖经营指标、估值倍数对比及统计基准分析，输出 Excel 表格 + 文字分析报告。",
+  "description_en": "Wind Alice Comps Analysis CLI — build institutional-grade Comparable Companies Analysis, delivered in Excel workbook and written analytical report, covering operating metrics, valuation multiple comparisons, and statistical benchmark analysis across peer companies.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082686884540944384/f69f2037d5045499.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082686884540944384/f69f2037d5045499.jpg"
+}

@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "duoguan-fengchao": {
+      "type": "stdio",
+      "timeout": 60000,
+      "command": "npx",
+      "args": [
+        "-y",
+        "--package",
+        "@duoguan-fengchao/mcp-launcher@^1.0.8",
+        "duoguan-fengchao-launcher"
+      ],
+      "env": {
+        "DUOGUAN_FENGCHAO_API_BASE_URL": "https://fc.duoguan.com",
+        "DUOGUAN_FENGCHAO_PUBLIC_BASE_URL": "https://fc.duoguan.com",
+        "DUOGUAN_FENGCHAO_API_TOKEN": "${AGENT_KEY}"
+      },
+      "runtime": {
+        "type": "node",
+        "version": ">=18"
+      }
+    }
+  }
+}

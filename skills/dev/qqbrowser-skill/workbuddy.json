@@ -1,0 +1,6 @@
+{
+  "display_name": "QQ浏览器自动化",
+  "display_name_en": "QQ Browser Use",
+  "description_zh": "QQBrowserUse 是一个面向 AI 代理的浏览器自动化技能工具。它允许 AI 通过命令行操控 QQ 浏览器，完成各种网页交互任务，包括页面导航、表单填写、按钮点击、截图、数据提取和文件下载等。",
+  "description_en": "QQBrowserUse is a browser automation skill for AI agents. It lets AI drive QQ Browser via command line to perform web interactions including page navigation, form filling, button clicks, screenshots, data extraction, and file downloads."
+}

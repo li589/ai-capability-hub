@@ -1,0 +1,20 @@
+{
+  "name": "handoff",
+  "installedAt": 1785784692466,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443322432040960",
+  "examples_zh": [
+    "生成一份交接文档",
+    "帮我总结当前进展，下一个会话继续",
+    "写一个 handoff，下次专注在前端部分"
+  ],
+  "examples_en": [
+    "create a handoff document",
+    "summarize progress for the next session",
+    "handoff, next session will focus on the API layer"
+  ],
+  "description_zh": "将当前对话压缩为交接文档，供下一个 Agent 无缝接续工作",
+  "description_en": "Summarise current conversation into a handoff doc for a fresh agent to continue the work",
+  "iconSource": "letter:auto"
+}

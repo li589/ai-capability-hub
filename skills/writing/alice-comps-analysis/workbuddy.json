@@ -1,0 +1,6 @@
+{
+  "display_name": "可比公司分析",
+  "display_name_en": "Comparable Companies Analysis",
+  "description_zh": "万得 Alice 可比公司分析 CLI：构建机构级可比公司分析，覆盖经营指标、估值倍数对比及统计基准分析，输出 Excel 表格 + 文字分析报告。",
+  "description_en": "Wind Alice Comps Analysis CLI — build institutional-grade Comparable Companies Analysis, delivered in Excel workbook and written analytical report, covering operating metrics, valuation multiple comparisons, and statistical benchmark analysis across peer companies."
+}

@@ -1,0 +1,19 @@
+{
+  "author": "Github",
+  "author_icon": "https://static.marvis.qq.com/wupload/skill-author-icons/1778639349473_GitHub.png",
+  "description": "|",
+  "detail_describe": "GPU共享内存的调整(仅限英特尔AIPC平台)。当用户以中文或英文询问限制、调整、增加或更改GPU共享内存限制时触发，无论用户是否指定“本地”/“locally”。",
+  "display_description": "调整集成显卡共享显存最大限制(仅限英特尔AIPC平台)",
+  "display_name": "集成显卡显存调整",
+  "name": "local-vram",
+  "scope": [
+    "main"
+  ],
+  "type": "英特尔用户专区",
+  "use_cases": [
+    "设置GPU显存为87%",
+    "调整VRAM限制到最大",
+    "当前GPU共享内存限制是多少？"
+  ],
+  "version": "1.0.0"
+}

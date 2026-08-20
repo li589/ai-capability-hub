@@ -1,0 +1,71 @@
+{
+  "skill_name": "yescan-transoffice-universal",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "帮我把这张财务报表截图转换成 Excel 文件，结果原样透出不要修改。图片文件地址是 https://img.alicdn.com/imgextra/i2/O1CN01XB1C0x1vlbh7XY1Pe_!!6000000006213-0-tps-1413-2000.jpg",
+      "expected_output": "调用 image-to-excel 场景将表格图片转换为 Excel 文件，返回 JSON 格式的转换结果",
+      "expectations": [
+        "使用了 image-to-excel 场景",
+        "执行了 python3 scripts/scan.py 命令",
+        "命令中包含 --scene image-to-excel 参数",
+        "返回了 JSON 格式的转换结果，code 为 00000"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "把这张会议记录的拍照图片转成 Word 文档，结果原样透出不要修改。图片文件地址是 https://img.alicdn.com/imgextra/i2/O1CN01rZbIcC1LbgwwJtxdo_!!6000000001318-0-tps-1016-1308.jpg",
+      "expected_output": "调用 image-to-word 场景将会议记录图片转换为 Word 文档，返回 JSON 格式的转换结果",
+      "expectations": [
+        "使用了 image-to-word 场景",
+        "执行了 python3 scripts/scan.py 命令",
+        "命令中包含 --scene image-to-word 参数",
+        "返回了 JSON 格式的转换结果，code 为 00000"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "帮我把这张合同照片处理一下，转成清晰的 PDF 存档，结果原样透出不要修改。图片文件地址是 https://img.alicdn.com/imgextra/i3/O1CN01bpJ7Kl24VQEmh1l0D_!!6000000007396-0-tps-1080-1440.jpg",
+      "expected_output": "调用 image-to-pdf 场景将合同照片转换为 PDF 文档，返回 JSON 格式的转换结果",
+      "expectations": [
+        "使用了 image-to-pdf 场景",
+        "执行了 python3 scripts/scan.py 命令",
+        "命令中包含 --scene image-to-pdf 参数",
+        "返回了 JSON 格式的转换结果，code 为 00000"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "这是一份产品需求文档的扫描件，请帮我转成可编辑的 Word 文件，结果原样透出不要修改。图片文件地址是 https://img.alicdn.com/imgextra/i4/O1CN0101ZHcN1vqe7lCX5Y8_!!6000000006224-0-tps-1536-2171.jpg",
+      "expected_output": "调用 image-to-word 场景将产品需求文档扫描件转换为 Word 文档，返回 JSON 格式的转换结果",
+      "expectations": [
+        "使用了 image-to-word 场景",
+        "执行了 python3 scripts/scan.py 命令",
+        "命令中包含 --scene image-to-word 参数",
+        "返回了 JSON 格式的转换结果，code 为 00000"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "我拍了一张仓库盘点表的照片，里面有物料名称、数量和单价，帮我转成 Excel 表格，结果原样透出不要修改。图片文件地址是 https://img.alicdn.com/imgextra/i2/O1CN01DFdU7m1CFrj9oOCp7_!!6000000000052-0-tps-1500-2000.jpg",
+      "expected_output": "调用 image-to-excel 场景将仓库盘点表照片转换为 Excel 文件，返回 JSON 格式的转换结果",
+      "expectations": [
+        "使用了 image-to-excel 场景",
+        "执行了 python3 scripts/scan.py 命令",
+        "命令中包含 --scene image-to-excel 参数",
+        "返回了 JSON 格式的转换结果，code 为 00000"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "帮我把这张图片转成 Word，结果原样透出。图片文件地址是 https://img.alicdn.com/imgextra/i2/O1CN01DFdU7m1CFrj9oOCp7_!!6000000000052-0-tps-1500-2000.jpg。注意：执行命令时请先执行 unset SCAN_WEBSERVICE_KEY，然后再执行转换命令，模拟未配置 API Key 的场景。",
+      "expected_output": "调用 image-to-word 场景将图片转换为 Word 文档，但由于 API Key 未配置，应返回 Markdown 格式的错误提示",
+      "expectations": [
+        "返回的不是 JSON 格式，而是 Markdown 格式的提示信息",
+        "提示信息中包含'API 密钥未配置'或类似表述",
+        "提示信息中包含获取密钥的链接 https://scan.quark.cn/business",
+        "提示信息中包含配置键名 SCAN_WEBSERVICE_KEY"
+      ]
+    }
+  ]
+}

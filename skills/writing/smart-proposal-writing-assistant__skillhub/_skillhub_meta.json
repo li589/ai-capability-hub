@@ -1,0 +1,12 @@
+{
+  "slug": "smart-proposal-writing-assistant",
+  "name": "智能标书写作助手",
+  "version": "1.0.1",
+  "installedAt": 1787228764245,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png"
+}

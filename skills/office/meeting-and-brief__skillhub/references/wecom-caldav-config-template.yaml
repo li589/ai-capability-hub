@@ -1,0 +1,31 @@
+# ~/.consult/wecom-caldav.yaml · 模板（v1.3.0）
+#
+# ⚠ 把本文件复制到 ~/.consult/wecom-caldav.yaml（不是 plugin 目录）
+# ⚠ 含敏感密码 · .gitignore · macOS/Linux 用 chmod 600
+# ⚠ 怀疑泄露 → 企微 APP → 日历 → 同步设置 → 关闭/重新生成密码
+#
+# 详细配置 + 凭据获取方式见 wecom-caldav-setup.md
+
+# === 必填 ===
+
+username: "your-wecom-account"                # 企微 APP → 日历 → 同步到其他日历 → 账户
+
+password: "your-caldav-password"               # 同上 → 密码（**固定**，不过期）
+
+# === 默认值（一般不需改）===
+
+server: "https://caldav.wecom.work"           # 企微 CalDAV 服务器
+
+# === 可选 ===
+
+# 只读特定日历名（精确匹配 summary，留空读所有日历）
+calendar_filter: []
+#  - "我的日程"
+#  - "客户工作"
+#  - "我司项目"
+
+# === 安全规则 ===
+# 1. .gitignore 必须含 .consult/
+# 2. macOS/Linux: chmod 600 ~/.consult/wecom-caldav.yaml
+# 3. 不发邮件 / 不微信 / 不复制粘贴到任何聊天
+# 4. 泄露立即在企微 APP 关闭/重新生成密码

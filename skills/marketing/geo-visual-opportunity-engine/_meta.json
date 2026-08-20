@@ -1,0 +1,22 @@
+{
+  "owner": "geo-seo",
+  "slug": "geo-visual-opportunity-engine",
+  "displayName": "GEO Visual Content Engine",
+  "latest": {
+    "version": "3.0.4",
+    "publishedAt": 1773126838924,
+    "commit": "https://github.com/openclaw/skills/commit/17cc49996c53468901d5d2d93b2097e5d543c8ce"
+  },
+  "history": [
+    {
+      "version": "1.0.6",
+      "publishedAt": 1772765680293,
+      "commit": "https://github.com/openclaw/skills/commit/e1bc13ef46161fbce3cddb6c75efd4c73328f2dc"
+    },
+    {
+      "version": "1.0.4",
+      "publishedAt": 1772505459196,
+      "commit": "https://github.com/openclaw/skills/commit/cb15437415be768d231a0693d0930bdad69e7749"
+    }
+  ]
+}

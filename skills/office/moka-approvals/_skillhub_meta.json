@@ -1,0 +1,11 @@
+{
+  "name": "Moka 审批",
+  "installedAt": 1787228572972,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088131166825033728",
+  "description_zh": "面向全体员工的审批与办事自助。查本人可发起的流程入口（请假、补卡、出差、转正等）与功能页面的操作路径；按「我发起的 / 待我处理 / 我已处理 / 抄送我的」四个视角看待办清单；跟进某个审批的流转进度与驳回意见、查看审批单表单内容、按流程名找发起链接。全部只读，不代替用户发起或审批。当用户问「补卡在哪里申请」「我有哪些待审批事项」「我的请假审批现在到谁了」「这张单子填了什么」时使用。",
+  "description_en": "Approval and office self-service for all employees. Look up launchable process entries with step-by-step paths, list approval backlogs in four views (initiated, to-do, processed, copied-to-me), follow an approval's progress and rejection comments, read the submitted form content, and find launch links by process name. Read-only; it never submits or approves on the user's behalf. Use when the user asks where to start a request, what is pending on them, where an approval is stuck, or what a form contains.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_175c573b-576.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_175c573b-576.png"
+}

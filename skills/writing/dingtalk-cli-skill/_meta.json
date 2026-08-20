@@ -1,0 +1,11 @@
+{
+  "owner": "cizixiu",
+  "slug": "dingtalk-cli-skill",
+  "displayName": "Dingtalk CLI SKILL",
+  "latest": {
+    "version": "1.0.13",
+    "publishedAt": 1775809545504,
+    "commit": "https://github.com/openclaw/skills/commit/522e3eaa43fed345e7fdcca2267583bd8c35b7d9"
+  },
+  "history": []
+}

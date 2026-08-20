@@ -1,0 +1,12 @@
+{
+  "slug": "ppt-win32com-editor",
+  "name": "PPT全局美化",
+  "version": "1.0.0",
+  "installedAt": 1787229120102,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png"
+}

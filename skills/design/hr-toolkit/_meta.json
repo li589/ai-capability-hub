@@ -1,0 +1,27 @@
+{
+  "owner": "bytesagain3",
+  "slug": "hr-toolkit",
+  "displayName": "Hr Toolkit",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1773773976491,
+    "commit": "https://github.com/openclaw/skills/commit/3002c362f76e5114aa4347506f5c9cf45ed7f5e8"
+  },
+  "history": [
+    {
+      "version": "1.0.6",
+      "publishedAt": 1773666190754,
+      "commit": "https://github.com/openclaw/skills/commit/0f506db1ff5972dd0cb6f02f3c7d8eb5e6f86e65"
+    },
+    {
+      "version": "2.2.0",
+      "publishedAt": 1773444885773,
+      "commit": "https://github.com/openclaw/skills/commit/d98a8fc6f66460e9bbe5a2aa8d86c7ae30917c39"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773235765275,
+      "commit": "https://github.com/openclaw/skills/commit/48c57b7429fc8f2dad708da93f1433be6976f6b2"
+    }
+  ]
+}

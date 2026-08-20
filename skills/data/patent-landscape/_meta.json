@@ -1,0 +1,11 @@
+{
+  "owner": "aipoch-ai",
+  "slug": "patent-landscape",
+  "displayName": "Patent Landscape",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774849991653,
+    "commit": "https://github.com/openclaw/skills/commit/da697e329334655a691af27547a0efb496bbe408"
+  },
+  "history": []
+}

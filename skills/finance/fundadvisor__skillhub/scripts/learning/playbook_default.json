@@ -1,0 +1,76 @@
+{
+  "version": "7.0",
+  "description": "投顾策略规则库（默认模板）。首次运行时若 data/learning/playbook.json 不存在，由 LearningEngine 自动拷贝此文件。",
+  "rules": [
+    {
+      "rule_id": "R001",
+      "name": "止盈30%减持",
+      "condition": {
+        "text": "持仓基金累计收益超过止盈阈值(默认30%)时，建议部分减持锁定收益",
+        "kind": "rebalance",
+        "action": "减持止盈",
+        "param": "profit_take_threshold"
+      },
+      "action": "减持止盈",
+      "enabled": true,
+      "stats": {"uses": 0, "evaluated": 0, "hits": 0, "win_rate": null, "avg_benefit": null},
+      "last_updated": ""
+    },
+    {
+      "rule_id": "R002",
+      "name": "亏损20%评估止损",
+      "condition": {
+        "text": "持仓基金累计亏损超过止损阈值(默认-20%)时，评估止损或转换",
+        "kind": "risk_alert",
+        "action": "评估止损",
+        "param": "stop_loss_threshold"
+      },
+      "action": "评估止损",
+      "enabled": true,
+      "stats": {"uses": 0, "evaluated": 0, "hits": 0, "win_rate": null, "avg_benefit": null},
+      "last_updated": ""
+    },
+    {
+      "rule_id": "R003",
+      "name": "漂移5%再平衡",
+      "condition": {
+        "text": "资产类别权重偏离目标配置超过漂移阈值(默认5%)时，建议再平衡回归目标",
+        "kind": "rebalance",
+        "action": "再平衡",
+        "param": "drift_threshold"
+      },
+      "action": "再平衡",
+      "enabled": true,
+      "stats": {"uses": 0, "evaluated": 0, "hits": 0, "win_rate": null, "avg_benefit": null},
+      "last_updated": ""
+    },
+    {
+      "rule_id": "R004",
+      "name": "多源评级低于等于2星考虑转换",
+      "condition": {
+        "text": "基金多源聚合评级降至2星及以下时，建议转换为同类更优基金",
+        "kind": "fund_pick",
+        "action": "考虑转换",
+        "param": "rating_weights"
+      },
+      "action": "考虑转换",
+      "enabled": true,
+      "stats": {"uses": 0, "evaluated": 0, "hits": 0, "win_rate": null, "avg_benefit": null},
+      "last_updated": ""
+    },
+    {
+      "rule_id": "R005",
+      "name": "基金经理变更触发检视",
+      "condition": {
+        "text": "持仓基金发生基金经理变更时，触发组合检视并评估持有逻辑是否变化",
+        "kind": "risk_alert",
+        "action": "检视",
+        "param": null
+      },
+      "action": "检视",
+      "enabled": true,
+      "stats": {"uses": 0, "evaluated": 0, "hits": 0, "win_rate": null, "avg_benefit": null},
+      "last_updated": ""
+    }
+  ]
+}

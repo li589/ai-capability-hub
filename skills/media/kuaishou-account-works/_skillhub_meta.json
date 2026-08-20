@@ -1,0 +1,11 @@
+{
+  "name": "快手账号作品查询",
+  "installedAt": 1787228301135,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087742870720053248",
+  "description_zh": "通过kwaiId或threeXId查询账号作品列表，通过photoId查询单条作品详情",
+  "description_en": "Query Kuaishou account works list by kwaiId or threeXId, and single work details by photoId",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_da1d5437-298.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_da1d5437-298.svg"
+}

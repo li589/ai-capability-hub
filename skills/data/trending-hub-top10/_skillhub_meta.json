@@ -1,0 +1,11 @@
+{
+  "name": "全网聚合热点榜",
+  "installedAt": 1787227640759,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087461619956781056",
+  "description_zh": "基于每小时收录的七大平台热点数据，聚合全网最热TOP10，支持近7天回溯",
+  "description_en": "Top 10 trending topics aggregated hourly from seven major platforms.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_a4068429-65f.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_a4068429-65f.svg"
+}

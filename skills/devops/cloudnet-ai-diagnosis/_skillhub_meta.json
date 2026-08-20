@@ -1,0 +1,21 @@
+{
+  "name": "Cloudnet AI 终端智诊",
+  "installedAt": 1787228470861,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2079123560324452352",
+  "examples_zh": [
+    "总部办公室的终端 AA-BB-CC-DD-EE-FF 上网很慢，帮忙排查一下",
+    "北京朝阳门店的设备连不上WiFi，MAC地址是 AA-BB-DD-EE-FF-11",
+    "AI创新中心C6的用户反馈网络卡"
+  ],
+  "examples_en": [
+    "The terminal AA-BB-CC-DD-EE-FF in the headquarters office has slow internet",
+    "Devices in the Beijing Chaoyang store cannot connect to WiFi, MAC: AA-BB-DD-EE-FF-11",
+    "Users in AI Innovation Center C6 report network lag"
+  ],
+  "description_zh": "针对无线场景下终端体验差、网卡、无法接入 WiFi 等问题进行 AI 智能排障，自动定位根因并给出修复建议。",
+  "description_en": "AI-powered troubleshooting for wireless terminal issues including poor experience, network lag, and WiFi connectivity problems. Automatically identifies root causes and provides repair recommendations.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079123560324452352/344563e1ee7c3903.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079123560324452352/344563e1ee7c3903.svg"
+}

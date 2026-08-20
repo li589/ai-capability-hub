@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:visual-image-generator",
+  "registry": "trae-remote-official",
+  "plugin_name": "visual-image-generator",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "d2882ad2-c245-4be5-b997-444532cdce7a",
+  "remote_installed_plugin_id": "CTS6R4IWDGDFH0",
+  "checksum": "bde73736b070202ac9eb0d6aae28b0f958f755a960ddc1e757004eeba98648d7",
+  "file_size": 26000,
+  "installed_at": 1787227203776
+}

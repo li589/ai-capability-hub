@@ -1,0 +1,9 @@
+{
+  "connectors": {
+    "tencent-survey": {
+      "type": "remote_mcp",
+      "mcp_server": "tencent-survey",
+      "auth_policy": "ON_INVOKE"
+    }
+  }
+}

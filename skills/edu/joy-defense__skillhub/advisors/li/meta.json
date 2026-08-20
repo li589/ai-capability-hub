@@ -1,0 +1,9 @@
+{
+  "name": "李四",
+  "code": "li",
+  "focus": "创新点、文献对比、贡献度",
+  "review_style": "聚焦创新性评估、可验证性、文献对比",
+  "persona_keywords": ["创新点到底是什么", "与XX工作相比优势在哪", "这个novelty不够"],
+  "priority_questions": ["创新点是否具备独特性", "与现有研究对比充分性", "学术贡献是否明显"],
+  "is_trained": false
+}

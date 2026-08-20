@@ -1,0 +1,13 @@
+{
+    "id": "local-screenshot-qa-001",
+    "turns": [
+        {
+            "input": "看看这张报错截图说了什么 C:\\Users\\user\\Desktop\\err.png",
+            "answer": "a natural-language answer describing the error shown in the screenshot, followed by source_image and device fields"
+        },
+        {
+            "input": "看看我现在屏幕上是什么",
+            "answer": "the skill auto-captures the primary screen and answers about it; auto_captured is true and source_image points to the saved capture"
+        }
+    ]
+}

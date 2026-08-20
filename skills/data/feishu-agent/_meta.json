@@ -1,0 +1,11 @@
+{
+  "owner": "boyd4y",
+  "slug": "feishu-agent",
+  "displayName": "Feishu Agent",
+  "latest": {
+    "version": "1.0.14",
+    "publishedAt": 1772287109840,
+    "commit": "https://github.com/openclaw/skills/commit/100cc2915ee7405a534d556ad3577c51cde292ba"
+  },
+  "history": []
+}

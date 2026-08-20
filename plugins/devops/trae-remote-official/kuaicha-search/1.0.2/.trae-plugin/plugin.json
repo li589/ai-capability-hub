@@ -1,0 +1,25 @@
+{
+  "name": "kuaicha-search",
+  "version": "1.0.2",
+  "displayName": "快查企业数据",
+  "displayNameEn": "Kuaicha Enterprise Search",
+  "description": "查询中国企业工商、股权投资、经营司法风险、知识产权、招投标及新闻舆情数据。",
+  "descriptionEn": "Search Chinese company profiles, ownership, risks, intellectual property, tenders, and news.",
+  "author": {
+    "name":"Kuaicha"
+  },
+  "keywords": [
+    "企业数据",
+    "工商信息",
+    "股权投资",
+    "经营风险",
+    "司法风险",
+    "知识产权",
+    "招投标",
+    "新闻舆情"
+  ],
+  "logo": "./icon.svg",
+  "skills": "./skills/",
+  "mcp": "./.mcp.json",
+  "connector": "./connector.json"
+}

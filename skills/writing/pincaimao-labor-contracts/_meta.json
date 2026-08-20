@@ -1,0 +1,17 @@
+{
+  "owner": "mrhaoji",
+  "slug": "pincaimao-labor-contracts",
+  "displayName": "聘才猫（Pincaimao）劳动合同卫士",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1775114203421,
+    "commit": "https://github.com/openclaw/skills/commit/08111fa7c68b1227227965b5728649d39fa14e49"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1774539231867,
+      "commit": "https://github.com/openclaw/skills/commit/bcb62b6e61c4386addc0b2e0fff19bbd78f4c7af"
+    }
+  ]
+}

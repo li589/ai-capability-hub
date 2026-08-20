@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:unity-agent-workflows",
+  "registry": "trae-remote-official",
+  "plugin_name": "unity-agent-workflows",
+  "version": "0.5.0",
+  "marketplace_plugin_id": "bb37f6f9-4827-4c79-9acd-5d9aff18c950",
+  "remote_installed_plugin_id": "I_8-.XX2OXLGHQ",
+  "checksum": "087bb7a7b39d2274a4f0232c3ee2d7bb87c76a618d93b579d3490ed94408dbd7",
+  "file_size": 64362,
+  "installed_at": 1787227200321
+}

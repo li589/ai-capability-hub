@@ -1,0 +1,17 @@
+{
+  "owner": "changye",
+  "slug": "patent-disclosure-writer",
+  "displayName": "中文专利交底书撰写(Patent Disclosure Doc Writer)",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1772253165753,
+    "commit": "https://github.com/openclaw/skills/commit/8d1f021a6d683eee96391433ed9ec10ecf1b36db"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1772247763859,
+      "commit": "https://github.com/openclaw/skills/commit/7b3125ebd598ba2ba9f5b830956d2abd8662126e"
+    }
+  ]
+}

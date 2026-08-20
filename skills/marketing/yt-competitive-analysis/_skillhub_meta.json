@@ -1,0 +1,10 @@
+{
+  "name": "yt-competitive-analysis",
+  "installedAt": 1787228368150,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053083751602102272",
+  "description_zh": "YouTube 竞品分析，发现爆款视频与标题包装规律",
+  "description_en": "YouTube competitive analysis: outlier video detection and packaging patterns",
+  "iconSource": "letter:auto"
+}

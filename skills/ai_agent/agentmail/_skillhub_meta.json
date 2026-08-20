@@ -1,0 +1,20 @@
+{
+  "name": "智能体邮箱",
+  "installedAt": 1787227613447,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053078990332825600",
+  "examples_zh": [
+    "查看智能体邮箱收到的最新邮件",
+    "用智能体邮箱发送一封邮件",
+    "设置邮件自动回复规则"
+  ],
+  "examples_en": [
+    "Check the latest emails in my agent inbox",
+    "Send an email from the agent mailbox",
+    "Set up an auto-reply rule"
+  ],
+  "description_zh": "AI 智能体专属邮箱，收发邮件",
+  "description_en": "Email inbox for AI agents",
+  "iconSource": "letter:auto"
+}

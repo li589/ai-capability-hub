@@ -1,0 +1,12 @@
+{
+  "slug": "cross-border-ecommerce-product-analysis",
+  "name": "跨境电商选品分析",
+  "version": "1.0.2",
+  "installedAt": 1787228809929,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/34a07e4e-fec8-4ce0-aaf8-a83e46546c2d.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/34a07e4e-fec8-4ce0-aaf8-a83e46546c2d.png"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "revenue-intelligence",
+  "installedAt": 1787228385729,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053082912180723712",
+  "description_zh": "收入归因分析，销售通话洞察与客户报告自动生成",
+  "description_en": "Revenue attribution, sales call insights, and automated client report generation",
+  "iconSource": "letter:auto"
+}

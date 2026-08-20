@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-证券业监管政策简报",
+  "installedAt": 1787228670462,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2086742517668569088",
+  "description_zh": "万得 Alice 证券业监管政策简报 CLI：基于 Wind 监管法规数据库，获取指定时间范围内的证券行业监管政策，生成含政策详情、摘要、清单与机构分布统计的结构化简报，支持中英双语输出。",
+  "description_en": "Retrieve securities industry regulatory policies within a specified time range and generate structured policy summaries and checklist tables. Built on the Wind regulatory database, it covers the CSRC, SSE, SZSE, BSE, securities/fund/futures industry associations, and the NEEQ, delivering a bilingual structured briefing with policy details, summaries, a checklist, and issuer-distribution statistics.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_fa02ecfd-ecd.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_fa02ecfd-ecd.jpg"
+}

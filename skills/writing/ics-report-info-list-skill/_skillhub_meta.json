@@ -1,0 +1,11 @@
+{
+  "name": "兴业证券智达平台研报摘要查询",
+  "installedAt": 1787228664716,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2089241893952311296",
+  "description_zh": "支持批量查询兴业证券智达平台研报标题、作者、发布时间、研报标签、摘要等内容。",
+  "description_en": "Support batch querying of research report titles, authors, publication dates, report tags, abstracts, and other content from the Xingye Securities Zhida Platform.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/99a20eef-d080-4f5d-80b3-2c2bdc8d1164/avatar/skill/au_3c2134f9-ff7.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/99a20eef-d080-4f5d-80b3-2c2bdc8d1164/avatar/skill/au_3c2134f9-ff7.jpg"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "aviationstack-flight-tracker",
+  "installedAt": 1787228459103,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081372760412160",
+  "examples_zh": [
+    "帮我查一下 AA100 今天的航班状态、登机口和预计延误时间。",
+    "追踪 UA2402 的实时位置，并告诉我它现在飞到哪里了。",
+    "查询 DL89 的出发/到达机场、航站楼、登机口和最新延误信息。"
+  ],
+  "examples_en": [
+    "Track AA100 today and show its status, gate, terminal, and delay details.",
+    "Where is UA2402 right now? Show its live position and latest flight status.",
+    "Look up DL89 with departure and arrival airports, terminals, gates, and current delay information."
+  ],
+  "description_zh": "实时航班追踪：登机口、延误、飞行位置，类 Flighty 体验（需 API Key）",
+  "description_en": "Real-time flight tracking with gate info, delays and live position via Aviationstack",
+  "iconSource": "letter:auto"
+}

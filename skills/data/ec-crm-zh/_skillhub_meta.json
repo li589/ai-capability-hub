@@ -1,0 +1,11 @@
+{
+  "name": "EC CRM",
+  "installedAt": 1787227592202,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2086746829424005120",
+  "description_zh": "EC CRM 客户管理技能，支持客户管理、工商数据、AI画像、销售跟进、联络中心质检及订单查询六大业务操作。",
+  "description_en": "EC CRM customer management skill, supporting six business operations: customer management, business registration data, AI profiling, sales follow-up, contact center quality inspection, and order querying.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/6cee1ad9-9c76-46fb-bda5-fc54181e04a3/avatar/skill/au_3da56529-96b.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/6cee1ad9-9c76-46fb-bda5-fc54181e04a3/avatar/skill/au_3da56529-96b.png"
+}

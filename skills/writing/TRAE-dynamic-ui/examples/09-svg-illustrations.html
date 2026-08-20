@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical SVG Illustrations</title>
+<style>
+  :root {
+    --color-background-primary: #ffffff;
+    --color-background-secondary: #f8f9fa;
+    --color-background-tertiary: #f0f1f3;
+    --color-text-primary: #1a1a2e;
+    --color-text-secondary: #5a5a7a;
+    --color-text-tertiary: #9a9ab0;
+    --color-border-tertiary: #e2e4e9;
+    --color-border-secondary: #c8cad0;
+    --color-border-primary: #6e6e8a;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    --border-radius-md: 8px;
+    --border-radius-lg: 10px;
+    --border-radius-xl: 12px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+    --color-sky-1: #e8f4fd; --color-sky-2: #c5e4f9; --color-sky-3: #90caf4;
+    --color-sky-5: #42a5f5; --color-sky-7: #1976d2; --color-sky-9: #0d47a1;
+    --color-amber-1: #fff8e1; --color-amber-2: #ffecb3; --color-amber-3: #ffe082;
+    --color-amber-5: #ffc107; --color-amber-7: #f57f17; --color-amber-9: #e65100;
+    --color-mint-1: #e0f7f0; --color-mint-2: #b2ebdb; --color-mint-3: #80debc;
+    --color-mint-5: #4caf85; --color-mint-7: #2e7d5a; --color-mint-9: #1b5e3b;
+    --color-coral-1: #ffeaea; --color-coral-2: #ffcdd2; --color-coral-3: #ef9a9a;
+    --color-coral-5: #ef5350; --color-coral-7: #c62828; --color-coral-9: #8e0000;
+    --color-slate-2: #e8eaed; --color-slate-5: #78849e; --color-slate-7: #4a5568;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-background-tertiary);
+    color: var(--color-text-primary);
+    padding: 32px 24px;
+  }
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--color-sky-7);
+    margin-bottom: 8px;
+  }
+  h1 { font-size: 22px; font-weight: 700; margin-bottom: 6px; }
+  .subtitle { color: var(--color-text-secondary); font-size: 14px; margin-bottom: 28px; }
+  .card {
+    background: var(--color-background-primary);
+    border: 1px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-xl);
+    padding: 24px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow-sm);
+    border-left: 4px solid var(--color-sky-5);
+  }
+  .card:nth-child(2) { border-left-color: var(--color-amber-5); }
+  .card:nth-child(3) { border-left-color: var(--color-mint-5); }
+  .card-title {
+    font-size: 15px; font-weight: 600; margin-bottom: 4px;
+  }
+  .card-desc {
+    font-size: 13px; color: var(--color-text-secondary); margin-bottom: 16px;
+  }
+  .svg-wrap {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 16px;
+    overflow-x: auto;
+    margin-bottom: 12px;
+  }
+  .svg-wrap svg { display: block; margin: 0 auto; }
+  .btn-download {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+    padding: 6px 14px; border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-border-secondary);
+    background: var(--color-background-primary);
+    color: var(--color-text-primary); cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-download:hover {
+    background: var(--color-sky-1); border-color: var(--color-sky-5);
+    color: var(--color-sky-7);
+  }
+  .palette {
+    background: var(--color-background-secondary);
+    border-radius: var(--border-radius-md);
+    padding: 16px 20px;
+    display: flex; flex-wrap: wrap; gap: 16px;
+    margin-top: 8px;
+  }
+  .palette-item { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+  .palette-swatch {
+    width: 16px; height: 16px; border-radius: 4px;
+    border: 1px solid var(--color-border-tertiary);
+  }
+</style>
+</head>
+<body>
+  <div class="eyebrow">Documentation Assets</div>
+  <h1>Technical Pattern Illustrations</h1>
+  <p class="subtitle">Hand-drawn style SVG diagrams for distributed systems documentation.</p>
+
+  <!-- Illustration 1: Message Queue FIFO -->
+  <div class="card">
+    <div class="card-title">Message Queue — FIFO Order</div>
+    <div class="card-desc">Producers enqueue messages; consumers dequeue in strict first-in-first-out order.</div>
+    <div class="svg-wrap">
+      <svg id="svg1" width="680" height="280" viewBox="0 0 680 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="678" height="278" rx="12" fill="var(--color-background-primary)" stroke="var(--color-border-tertiary)" stroke-width="1.5"/>
+        <!-- Producer -->
+        <rect x="30" y="100" width="90" height="70" rx="8" fill="var(--color-sky-1)" stroke="var(--color-sky-5)" stroke-width="2"/>
+        <text x="75" y="128" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--color-sky-7)">Producer</text>
+        <text x="75" y="148" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-sky-5)">publish()</text>
+        <!-- Arrow P → Q -->
+        <line x1="125" y1="135" x2="175" y2="135" stroke="var(--color-sky-5)" stroke-width="2" stroke-dasharray="6 3"/>
+        <polygon points="175,130 185,135 175,140" fill="var(--color-sky-5)"/>
+        <!-- Queue box -->
+        <rect x="190" y="70" width="300" height="130" rx="10" fill="var(--color-amber-1)" stroke="var(--color-amber-5)" stroke-width="2"/>
+        <text x="340" y="60" text-anchor="middle" font-family="var(--font-mono)" font-size="11" font-weight="600" fill="var(--color-amber-7)" text-transform="uppercase">FIFO QUEUE</text>
+        <!-- Messages inside -->
+        <rect x="210" y="95" width="52" height="36" rx="5" fill="var(--color-amber-2)" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <text x="236" y="117" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-amber-9)">msg-1</text>
+        <rect x="274" y="95" width="52" height="36" rx="5" fill="var(--color-amber-2)" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <text x="300" y="117" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-amber-9)">msg-2</text>
+        <rect x="338" y="95" width="52" height="36" rx="5" fill="var(--color-amber-2)" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <text x="364" y="117" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-amber-9)">msg-3</text>
+        <rect x="402" y="95" width="52" height="36" rx="5" fill="var(--color-amber-3)" stroke="var(--color-amber-5)" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <text x="428" y="117" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-amber-7)">msg-4</text>
+        <!-- Order arrows inside queue -->
+        <text x="340" y="165" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-amber-7)">← HEAD                TAIL →</text>
+        <!-- Arrow Q → C -->
+        <line x1="495" y1="135" x2="545" y2="135" stroke="var(--color-mint-5)" stroke-width="2" stroke-dasharray="6 3"/>
+        <polygon points="545,130 555,135 545,140" fill="var(--color-mint-5)"/>
+        <!-- Consumer -->
+        <rect x="560" y="100" width="90" height="70" rx="8" fill="var(--color-mint-1)" stroke="var(--color-mint-5)" stroke-width="2"/>
+        <text x="605" y="128" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--color-mint-7)">Consumer</text>
+        <text x="605" y="148" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-mint-5)">poll()</text>
+        <!-- ACK note -->
+        <rect x="510" y="210" width="120" height="34" rx="6" fill="var(--color-mint-1)" stroke="var(--color-mint-5)" stroke-width="1.5"/>
+        <text x="570" y="231" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-mint-7)">ACK → dequeue</text>
+        <line x1="570" y1="210" x2="570" y2="175" stroke="var(--color-mint-5)" stroke-width="1.5" stroke-dasharray="3 2"/>
+      </svg>
+    </div>
+    <button class="btn-download" onclick="downloadSVG('svg1','message-queue-fifo.svg')">↓ Download SVG</button>
+  </div>
+
+  <!-- Illustration 2: Retry with Backoff -->
+  <div class="card">
+    <div class="card-title">Retry with Exponential Backoff</div>
+    <div class="card-desc">Failed requests retry with increasing delays: 1s → 2s → 4s, with jitter to avoid thundering herd.</div>
+    <div class="svg-wrap">
+      <svg id="svg2" width="680" height="280" viewBox="0 0 680 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="678" height="278" rx="12" fill="var(--color-background-primary)" stroke="var(--color-border-tertiary)" stroke-width="1.5"/>
+        <!-- Attempt 1 - fail -->
+        <rect x="40" y="60" width="100" height="50" rx="7" fill="var(--color-coral-1)" stroke="var(--color-coral-5)" stroke-width="2"/>
+        <text x="90" y="82" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--color-coral-7)">Attempt 1</text>
+        <text x="90" y="98" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-coral-5)">500 ERR</text>
+        <!-- Wait 1s -->
+        <line x1="145" y1="85" x2="195" y2="85" stroke="var(--color-amber-5)" stroke-width="2" stroke-dasharray="4 3"/>
+        <rect x="155" y="118" width="50" height="22" rx="4" fill="var(--color-amber-1)" stroke="var(--color-amber-5)" stroke-width="1"/>
+        <text x="180" y="133" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-amber-7)">1s wait</text>
+        <!-- Attempt 2 - fail -->
+        <rect x="200" y="60" width="100" height="50" rx="7" fill="var(--color-coral-1)" stroke="var(--color-coral-5)" stroke-width="2"/>
+        <text x="250" y="82" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--color-coral-7)">Attempt 2</text>
+        <text x="250" y="98" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-coral-5)">503 ERR</text>
+        <!-- Wait 2s -->
+        <line x1="305" y1="85" x2="375" y2="85" stroke="var(--color-amber-5)" stroke-width="2" stroke-dasharray="4 3"/>
+        <rect x="315" y="118" width="50" height="22" rx="4" fill="var(--color-amber-1)" stroke="var(--color-amber-5)" stroke-width="1"/>
+        <text x="340" y="133" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-amber-7)">2s wait</text>
+        <!-- Attempt 3 - fail -->
+        <rect x="380" y="60" width="100" height="50" rx="7" fill="var(--color-coral-1)" stroke="var(--color-coral-5)" stroke-width="2"/>
+        <text x="430" y="82" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--color-coral-7)">Attempt 3</text>
+        <text x="430" y="98" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-coral-5)">503 ERR</text>
+        <!-- Wait 4s -->
+        <line x1="485" y1="85" x2="575" y2="85" stroke="var(--color-amber-5)" stroke-width="2" stroke-dasharray="4 3"/>
+        <rect x="505" y="118" width="50" height="22" rx="4" fill="var(--color-amber-2)" stroke="var(--color-amber-5)" stroke-width="1"/>
+        <text x="530" y="133" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-amber-7)">4s wait</text>
+        <!-- Attempt 4 - success -->
+        <rect x="580" y="60" width="70" height="50" rx="7" fill="var(--color-mint-1)" stroke="var(--color-mint-5)" stroke-width="2"/>
+        <text x="615" y="82" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--color-mint-7)">Retry 4</text>
+        <text x="615" y="98" text-anchor="middle" font-family="var(--font-mono)" font-size="10" fill="var(--color-mint-5)">200 OK</text>
+        <!-- Backoff curve -->
+        <text x="40" y="175" font-family="var(--font-mono)" font-size="10" fill="var(--color-text-tertiary)">DELAY</text>
+        <line x1="70" y1="180" x2="70" y2="250" stroke="var(--color-border-tertiary)" stroke-width="1.5"/>
+        <line x1="70" y1="250" x2="620" y2="250" stroke="var(--color-border-tertiary)" stroke-width="1.5"/>
+        <!-- Bars -->
+        <rect x="110" y="235" width="40" height="15" rx="3" fill="var(--color-sky-2)"/>
+        <rect x="240" y="220" width="40" height="30" rx="3" fill="var(--color-sky-3)"/>
+        <rect x="420" y="195" width="40" height="55" rx="3" fill="var(--color-sky-5)"/>
+        <text x="130" y="262" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-text-tertiary)">1s</text>
+        <text x="260" y="262" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-text-tertiary)">2s</text>
+        <text x="440" y="262" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-text-tertiary)">4s</text>
+        <!-- Jitter note -->
+        <rect x="500" y="190" width="140" height="44" rx="6" fill="var(--color-amber-1)" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <text x="570" y="208" text-anchor="middle" font-family="var(--font-mono)" font-size="10" font-weight="600" fill="var(--color-amber-7)">+ jitter</text>
+        <text x="570" y="224" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-amber-5)">rand(0, delay×0.3)</text>
+      </svg>
+    </div>
+    <button class="btn-download" onclick="downloadSVG('svg2','retry-backoff.svg')">↓ Download SVG</button>
+  </div>
+
+  <!-- Illustration 3: Fan-out/Fan-in -->
+  <div class="card">
+    <div class="card-title">Fan-out / Fan-in Pattern</div>
+    <div class="card-desc">A dispatcher fans work out to parallel workers, then an aggregator collects and merges results.</div>
+    <div class="svg-wrap">
+      <svg id="svg3" width="680" height="280" viewBox="0 0 680 280" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="678" height="278" rx="12" fill="var(--color-background-primary)" stroke="var(--color-border-tertiary)" stroke-width="1.5"/>
+        <!-- Dispatcher -->
+        <rect x="30" y="105" width="100" height="60" rx="8" fill="var(--color-sky-1)" stroke="var(--color-sky-5)" stroke-width="2"/>
+        <text x="80" y="130" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--color-sky-7)">Dispatcher</text>
+        <text x="80" y="148" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-sky-5)">fan_out()</text>
+        <!-- Fan-out arrows -->
+        <line x1="135" y1="120" x2="220" y2="55" stroke="var(--color-sky-5)" stroke-width="1.5"/>
+        <line x1="135" y1="135" x2="220" y2="135" stroke="var(--color-sky-5)" stroke-width="1.5"/>
+        <line x1="135" y1="150" x2="220" y2="215" stroke="var(--color-sky-5)" stroke-width="1.5"/>
+        <polygon points="218,50 228,55 218,60" fill="var(--color-sky-5)"/>
+        <polygon points="218,130 228,135 218,140" fill="var(--color-sky-5)"/>
+        <polygon points="218,210 228,215 218,220" fill="var(--color-sky-5)"/>
+        <!-- Worker 1 -->
+        <rect x="230" y="30" width="90" height="50" rx="7" fill="var(--color-mint-1)" stroke="var(--color-mint-5)" stroke-width="1.5"/>
+        <text x="275" y="52" text-anchor="middle" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-mint-7)">Worker A</text>
+        <text x="275" y="68" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-mint-5)">chunk[0:N]</text>
+        <!-- Worker 2 -->
+        <rect x="230" y="110" width="90" height="50" rx="7" fill="var(--color-mint-1)" stroke="var(--color-mint-5)" stroke-width="1.5"/>
+        <text x="275" y="132" text-anchor="middle" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-mint-7)">Worker B</text>
+        <text x="275" y="148" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-mint-5)">chunk[N:2N]</text>
+        <!-- Worker 3 -->
+        <rect x="230" y="190" width="90" height="50" rx="7" fill="var(--color-mint-1)" stroke="var(--color-mint-5)" stroke-width="1.5"/>
+        <text x="275" y="212" text-anchor="middle" font-family="var(--font-sans)" font-size="10" font-weight="600" fill="var(--color-mint-7)">Worker C</text>
+        <text x="275" y="228" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-mint-5)">chunk[2N:]</text>
+        <!-- Results -->
+        <line x1="325" y1="55" x2="400" y2="55" stroke="var(--color-mint-5)" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <line x1="325" y1="135" x2="400" y2="135" stroke="var(--color-mint-5)" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <line x1="325" y1="215" x2="400" y2="215" stroke="var(--color-mint-5)" stroke-width="1.5" stroke-dasharray="4 2"/>
+        <!-- Result boxes -->
+        <rect x="405" y="35" width="70" height="36" rx="5" fill="var(--color-amber-1)" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <text x="440" y="57" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-amber-7)">result A</text>
+        <rect x="405" y="117" width="70" height="36" rx="5" fill="var(--color-amber-1)" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <text x="440" y="139" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-amber-7)">result B</text>
+        <rect x="405" y="197" width="70" height="36" rx="5" fill="var(--color-amber-1)" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <text x="440" y="219" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-amber-7)">result C</text>
+        <!-- Fan-in arrows -->
+        <line x1="480" y1="53" x2="545" y2="120" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <line x1="480" y1="135" x2="545" y2="135" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <line x1="480" y1="215" x2="545" y2="150" stroke="var(--color-amber-5)" stroke-width="1.5"/>
+        <polygon points="543,115 553,120 543,125" fill="var(--color-amber-5)"/>
+        <polygon points="543,130 553,135 543,140" fill="var(--color-amber-5)"/>
+        <polygon points="543,145 553,150 543,155" fill="var(--color-amber-5)"/>
+        <!-- Aggregator -->
+        <rect x="555" y="105" width="100" height="60" rx="8" fill="var(--color-sky-1)" stroke="var(--color-sky-5)" stroke-width="2"/>
+        <text x="605" y="130" text-anchor="middle" font-family="var(--font-sans)" font-size="11" font-weight="600" fill="var(--color-sky-7)">Aggregator</text>
+        <text x="605" y="148" text-anchor="middle" font-family="var(--font-mono)" font-size="9" fill="var(--color-sky-5)">merge()</text>
+      </svg>
+    </div>
+    <button class="btn-download" onclick="downloadSVG('svg3','fan-out-fan-in.svg')">↓ Download SVG</button>
+  </div>
+
+  <!-- Palette reference -->
+  <div class="eyebrow" style="margin-top:12px;">Color Legend</div>
+  <div class="palette">
+    <div class="palette-item"><div class="palette-swatch" style="background:var(--color-sky-5)"></div><span>Sky — Primary / Control flow</span></div>
+    <div class="palette-item"><div class="palette-swatch" style="background:var(--color-amber-5)"></div><span>Amber — Warnings / Wait states</span></div>
+    <div class="palette-item"><div class="palette-swatch" style="background:var(--color-mint-5)"></div><span>Mint — Success / Active workers</span></div>
+    <div class="palette-item"><div class="palette-swatch" style="background:var(--color-coral-5)"></div><span>Coral — Failures / Errors</span></div>
+    <div class="palette-item"><div class="palette-swatch" style="background:var(--color-slate-5)"></div><span>Slate — Neutral / Labels</span></div>
+  </div>
+
+<script>
+function downloadSVG(id, filename) {
+  const svg = document.getElementById(id);
+  const clone = svg.cloneNode(true);
+  const styles = getComputedStyle(document.documentElement);
+  const varsUsed = [
+    '--color-background-primary','--color-background-secondary','--color-border-tertiary',
+    '--color-sky-1','--color-sky-2','--color-sky-3','--color-sky-5','--color-sky-7','--color-sky-9',
+    '--color-amber-1','--color-amber-2','--color-amber-3','--color-amber-5','--color-amber-7','--color-amber-9',
+    '--color-mint-1','--color-mint-2','--color-mint-5','--color-mint-7',
+    '--color-coral-1','--color-coral-5','--color-coral-7',
+    '--color-text-tertiary',
+  ];
+  let svgStr = new XMLSerializer().serializeToString(clone);
+  varsUsed.forEach(v => {
+    const val = styles.getPropertyValue(v).trim();
+    svgStr = svgStr.replaceAll(`var(${v})`, val);
+  });
+  const blob = new Blob([svgStr], { type: 'image/svg+xml' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = filename;
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+</script>
+</body>
+</html>

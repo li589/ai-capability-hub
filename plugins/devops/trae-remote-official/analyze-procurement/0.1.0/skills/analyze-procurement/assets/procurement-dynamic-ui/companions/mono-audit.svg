@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Mono Audit Dynamic UI companion</title>
+  <desc id="desc">Six monochrome procurement layouts using grids, audit indices, line weights, and hatch marks.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fff}.surface{fill:#f4f4f4}.ink{fill:#111}.muted{fill:#5e5e5e}.rule{stroke:#cfcfcf;fill:none}.heavy{stroke:#111;fill:none}.label{font:700 11px Arial,sans-serif;letter-spacing:1.4px}.meta{font:400 9px Arial,sans-serif}.tiny{font:700 8px Arial,sans-serif;letter-spacing:.8px}.display{font:700 22px Arial,sans-serif}
+    </style>
+    <pattern id="hatch" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="7" stroke="#111" stroke-width="2"/></pattern>
+    <pattern id="dots" width="8" height="8" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="#111"/></pattern>
+  </defs>
+  <rect class="bg" width="960" height="720"/>
+  <text x="24" y="28" class="ink label">MONO AUDIT / DYNAMIC UI COMPOSITION PLATE</text>
+  <text x="936" y="28" text-anchor="end" class="muted meta">GRID · HATCH · EVIDENCE</text>
+
+  <g transform="translate(24 54)">
+    <rect class="surface" width="444" height="190" stroke="#111"/>
+    <text x="14" y="22" class="ink tiny">01</text><text x="44" y="22" class="ink label">AWARD FRONTIER</text><text x="430" y="22" text-anchor="end" class="muted meta">COST / CAPABILITY</text>
+    <path d="M14 32H430M286 32V176" class="heavy"/>
+    <path d="M28 158L80 142L132 124L188 98L240 66L270 54" class="heavy" stroke-width="2"/>
+    <circle cx="80" cy="142" r="5" class="ink"/><circle cx="132" cy="124" r="5" fill="#fff" stroke="#111" stroke-width="2"/><circle cx="188" cy="98" r="7" fill="url(#hatch)" stroke="#111"/><circle cx="240" cy="66" r="5" class="ink"/>
+    <path d="M300 54H416M300 82H416M300 110H416M300 138H416M300 166H416" class="rule"/>
+    <text x="302" y="48" class="muted meta">REGISTER</text><text x="302" y="74" class="ink meta">01 / S03 / 92</text><text x="302" y="102" class="ink meta">02 / S01 / 86</text><text x="302" y="130" class="ink meta">03 / S04 / 79</text>
+  </g>
+
+  <g transform="translate(492 54)">
+    <rect class="surface" width="444" height="190" stroke="#111"/>
+    <text x="14" y="22" class="ink tiny">02</text><text x="44" y="22" class="ink label">PRICE PULSE</text>
+    <path d="M14 32H430M28 70H416M28 108H416M28 146H416" class="rule"/>
+    <path d="M28 146C76 138 104 102 146 112S214 136 260 88S334 70 416 82" class="heavy" stroke-width="2.5"/>
+    <circle cx="260" cy="88" r="6" fill="url(#hatch)" stroke="#111"/><circle cx="416" cy="82" r="6" class="ink"/>
+    <rect x="28" y="158" width="100" height="10" fill="url(#hatch)" stroke="#111"/><rect x="136" y="158" width="76" height="10" class="ink"/><rect x="220" y="158" width="116" height="10" fill="url(#dots)" stroke="#111"/><rect x="344" y="158" width="72" height="10" fill="#fff" stroke="#111"/>
+  </g>
+
+  <g transform="translate(24 274)">
+    <rect class="surface" width="444" height="190" stroke="#111"/>
+    <text x="14" y="22" class="ink tiny">03</text><text x="44" y="22" class="ink label">RISK LENS</text><text x="430" y="22" text-anchor="end" class="muted meta">GATE / EVIDENCE</text>
+    <path d="M14 32H430M14 68H430M14 104H430M14 140H430M122 32V176M198 32V176M274 32V176M350 32V176" class="rule"/>
+    <rect x="200" y="70" width="72" height="32" fill="url(#hatch)"/><rect x="276" y="106" width="72" height="32" class="ink"/><rect x="352" y="142" width="76" height="32" fill="url(#dots)"/>
+    <text x="20" y="56" class="muted meta">SECURITY</text><text x="20" y="92" class="muted meta">CAPACITY</text><text x="20" y="128" class="muted meta">DELIVERY</text><text x="20" y="164" class="muted meta">EXIT</text>
+  </g>
+
+  <g transform="translate(492 274)">
+    <rect class="surface" width="444" height="190" stroke="#111"/>
+    <text x="14" y="22" class="ink tiny">04</text><text x="44" y="22" class="ink label">EXCEPTION QUEUE</text>
+    <path d="M14 32H430M14 76H430M14 120H430M14 164H430M48 32V176M314 32V176" class="rule"/>
+    <text x="24" y="60" class="ink tiny">01</text><text x="60" y="60" class="ink meta">COVERAGE / ITEM 014</text><text x="326" y="60" class="ink tiny">02 AUG</text>
+    <text x="24" y="104" class="ink tiny">02</text><text x="60" y="104" class="ink meta">DELAY / ITEM 022</text><text x="326" y="104" class="ink tiny">05 AUG</text>
+    <text x="24" y="148" class="ink tiny">03</text><text x="60" y="148" class="ink meta">MOQ / ITEM 031</text><text x="326" y="148" class="ink tiny">09 AUG</text>
+    <rect x="406" y="46" width="10" height="10" fill="url(#hatch)" stroke="#111"/><rect x="406" y="90" width="10" height="10" class="ink"/><rect x="406" y="134" width="10" height="10" fill="url(#dots)"/>
+  </g>
+
+  <g transform="translate(24 494)">
+    <rect class="surface" width="444" height="190" stroke="#111"/>
+    <text x="14" y="22" class="ink tiny">05</text><text x="44" y="22" class="ink label">LANDED FLOW</text>
+    <path d="M14 32H430M304 32V176" class="heavy"/>
+    <rect x="28" y="82" width="40" height="40" fill="#fff" stroke="#111"/><rect x="134" y="52" width="54" height="32" fill="url(#hatch)" stroke="#111"/><rect x="134" y="122" width="54" height="32" fill="url(#dots)" stroke="#111"/><rect x="246" y="82" width="40" height="40" class="ink"/>
+    <path d="M68 94C92 78 108 68 134 68M68 110C94 128 108 138 134 138M188 68C214 72 228 86 246 94M188 138C216 134 230 118 246 110" class="heavy"/>
+    <text x="320" y="62" class="muted meta">BASE</text><text x="416" y="62" text-anchor="end" class="ink meta">62%</text><text x="320" y="96" class="muted meta">FREIGHT</text><text x="416" y="96" text-anchor="end" class="ink meta">21%</text><text x="320" y="130" class="muted meta">DUTY</text><text x="416" y="130" text-anchor="end" class="ink meta">17%</text>
+  </g>
+
+  <g transform="translate(492 494)">
+    <rect class="surface" width="444" height="190" stroke="#111"/>
+    <text x="14" y="22" class="ink tiny">06</text><text x="44" y="22" class="ink label">EXECUTION TRACK</text>
+    <path d="M14 32H430M54 92H392" class="heavy"/>
+    <rect x="40" y="76" width="28" height="28" class="ink"/><rect x="152" y="76" width="28" height="28" fill="url(#hatch)" stroke="#111"/><rect x="264" y="76" width="28" height="28" fill="#fff" stroke="#111"/><rect x="376" y="76" width="28" height="28" fill="url(#dots)" stroke="#111"/>
+    <text x="54" y="136" text-anchor="middle" class="ink meta">VERIFY</text><text x="166" y="136" text-anchor="middle" class="ink meta">PILOT</text><text x="278" y="136" text-anchor="middle" class="ink meta">AWARD</text><text x="390" y="136" text-anchor="middle" class="ink meta">REVIEW</text>
+    <text x="14" y="174" class="muted meta">OWNER / DATE / FALLBACK</text><text x="430" y="174" text-anchor="end" class="ink tiny">AUDIT 06</text>
+  </g>
+</svg>

@@ -1,0 +1,246 @@
+{
+  "schema_version": "1.0",
+  "template_notice": "这是待执行模板，不能作为通过证据；必须由真实命令生成。",
+  "generated_at": null,
+  "environment": {
+    "python": null,
+    "os": null
+  },
+  "cases": [
+    {
+      "id": "database_init",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "crud_roundtrip",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "business_key_uniqueness",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "data_scope_isolation",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "permissions_403",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "optimistic_lock_409",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "workflow_transition",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "approval_return",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "audit_before_after",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "dashboard_metrics",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "responsive_layout",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "file_import_roundtrip",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "import_idempotency",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "export_roundtrip",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "integration_not_configured",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "startup_preflight",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "build_resume",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "database_integrity",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "backup_restore",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "security_controls",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "chinese_locale_utf8_gb18030",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "offline_dependency_install",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "office_wps_export_roundtrip",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "personal_data_masking",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "currency_decimal_rounding",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "business_calendar_boundary",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "external_resources_disabled",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "value_added_reports_truthful",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    },
+    {
+      "id": "standalone_energy_self_test",
+      "status": "pending",
+      "command": null,
+      "exit_code": null,
+      "executed_at": null,
+      "evidence": null
+    }
+  ],
+  "windows_real_machine": null,
+  "macos_real_machine": null,
+  "external_integrations_real_connection": null
+}

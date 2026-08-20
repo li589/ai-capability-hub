@@ -1,0 +1,12 @@
+{
+  "slug": "lobster-self-iteration",
+  "name": "自我迭代",
+  "version": "1.0.1",
+  "installedAt": 1787228877152,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png"
+}

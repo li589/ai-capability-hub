@@ -1,0 +1,6 @@
+# PyInstaller spec baseline; generated business system must include its own extra data/resources.
+from PyInstaller.utils.hooks import collect_submodules
+hiddenimports=collect_submodules('flask')+collect_submodules('waitress')
+a=Analysis(['exe_entry.py'],pathex=[],binaries=[],datas=[('templates','templates'),('static','static')],hiddenimports=hiddenimports,hookspath=[],hooksconfig={},runtime_hooks=[],excludes=[],noarchive=False)
+pyz=PYZ(a.pure)
+exe=EXE(pyz,a.scripts,a.binaries,a.datas,[],name='{{SYSTEM_NAME}}',debug=False,bootloader_ignore_signals=False,strip=False,upx=True,console=True)

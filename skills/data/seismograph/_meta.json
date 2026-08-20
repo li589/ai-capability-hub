@@ -1,0 +1,11 @@
+{
+  "owner": "jcools1977",
+  "slug": "seismograph",
+  "displayName": "Seismograph",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772572096546,
+    "commit": "https://github.com/openclaw/skills/commit/ea810ae6d78492aa6b0dd0ed192e0c8ffcafe20a"
+  },
+  "history": []
+}

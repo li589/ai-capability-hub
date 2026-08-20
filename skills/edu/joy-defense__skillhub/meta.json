@@ -1,0 +1,16 @@
+{
+  "slug": "defense-thesis",
+  "name": "答辩审阅 Skill",
+  "description": "多导师论文答辩审阅模拟工具",
+  "version": "1.0.0",
+  "created_at": "2026-04-25T00:00:00Z",
+  "updated_at": "2026-04-25T00:00:00Z",
+  "advisors": ["zhang", "li", "wang"],
+  "active_advisors": ["zhang", "li", "wang"],
+  "is_trained": false,
+  "skills": ["thesis_review", "multi_advisor", "defense_simulation"],
+  "tags": {
+    "domain": "academic",
+    "use_case": "thesis_defense_review"
+  }
+}

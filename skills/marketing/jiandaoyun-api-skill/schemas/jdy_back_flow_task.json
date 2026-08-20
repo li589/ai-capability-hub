@@ -1,0 +1,46 @@
+{
+  "client_only_params": [],
+  "description": "回退一个流程待办任务到指定节点",
+  "display_name": "流程待办回退",
+  "domain": "流程",
+  "endpoint": "https://api.jiandaoyun.com/api/v2/workflow/task/rollback",
+  "method": "POST",
+  "name": "jdy_back_flow_task",
+  "params": {
+    "back_type": {
+      "default": 0,
+      "description": "回退人选择：1=正常流转，2=直达目标节点（可选，节点配置了回退人选择时需要）",
+      "type": "number"
+    },
+    "comment": {
+      "default": "",
+      "description": "回退意见（可选）",
+      "type": "string"
+    },
+    "flow_id": {
+      "default": 0,
+      "description": "回退目标节点flow_id（可选，Number类型。节点配置为回退到指定节点时需要设置）",
+      "type": "number"
+    },
+    "instance_id": {
+      "description": "流程实例ID，即数据的_id（必填）",
+      "type": "string"
+    },
+    "task_id": {
+      "description": "待办任务ID（必填）",
+      "type": "string"
+    },
+    "username": {
+      "description": "操作人username（必填）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "username",
+    "instance_id",
+    "task_id"
+  ],
+  "risk": "destructive",
+  "source": "简道云工具包.zip"
+}

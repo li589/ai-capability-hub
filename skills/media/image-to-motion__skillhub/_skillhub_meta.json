@@ -1,0 +1,12 @@
+{
+  "slug": "image-to-motion",
+  "name": "图生视频与照片动画",
+  "version": "0.1.4",
+  "installedAt": 1787228866915,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7920727c-4e7d-496a-9223-d9c6673e9e53.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7920727c-4e7d-496a-9223-d9c6673e9e53.png"
+}

@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="orbit" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="8" fill="currentColor"/>
+    <ellipse cx="32" cy="32" rx="25" ry="12" fill="none" stroke="currentColor" stroke-width="3" transform="rotate(-24 32 32)"/>
+    <circle cx="53" cy="20" r="4" fill="currentColor"/>
+  </symbol>
+  <symbol id="fold" viewBox="0 0 64 64">
+    <path d="M10 47 28 9l9 21 17-8-18 33-9-20z" fill="none" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="aperture" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="3"/>
+    <path d="m18 17 20 3 10 15-9 15-20-3-7-17z" fill="none" stroke="currentColor" stroke-width="3"/>
+  </symbol>
+  <symbol id="ripple" viewBox="0 0 64 64">
+    <circle cx="32" cy="32" r="6" fill="currentColor"/>
+    <circle cx="32" cy="32" r="15" fill="none" stroke="currentColor" stroke-width="3"/>
+    <circle cx="32" cy="32" r="25" fill="none" stroke="currentColor" stroke-width="2" opacity=".55"/>
+  </symbol>
+  <symbol id="signal" viewBox="0 0 64 64">
+    <path d="M10 45V34m14 11V22m14 23V29m14 16V13" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="spark" viewBox="0 0 64 64">
+    <path d="M32 6c4 14 12 22 26 26-14 4-22 12-26 26-4-14-12-22-26-26 14-4 22-12 26-26z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="loop" viewBox="0 0 64 64">
+    <path d="M17 42c-11-17 7-34 21-20 13 13-5 31-17 18-10-11 5-23 16-15 6 4 9 10 10 19" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="stack" viewBox="0 0 64 64">
+    <path d="m32 8 24 12-24 12L8 20zm0 24 22-11v12L32 44 10 33V21m22 23 20-10v11L32 56 12 45V34" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="constellation" viewBox="0 0 64 64">
+    <path d="m13 42 13-25 17 9 8 23-28 5z" fill="none" stroke="currentColor" stroke-width="2.5"/>
+    <g fill="currentColor"><circle cx="13" cy="42" r="5"/><circle cx="26" cy="17" r="5"/><circle cx="43" cy="26" r="5"/><circle cx="51" cy="49" r="5"/><circle cx="23" cy="54" r="5"/></g>
+  </symbol>
+  <symbol id="portal" viewBox="0 0 64 64">
+    <path d="M14 54V28C14 15 22 8 32 8s18 7 18 20v26M23 54V29c0-7 4-11 9-11s9 4 9 11v25" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="prism" viewBox="0 0 64 64">
+    <path d="m32 7 24 42-48 1zm0 0v43m24-1L20 28 8 50" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="wave" viewBox="0 0 64 64">
+    <path d="M6 34c8-16 16-16 24 0s16 16 28 0M6 46c8-12 16-12 24 0s16 12 28 0" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+  </symbol>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "slug": "jwt-oauth-token-attacks-lr-0xh6",
+  "name": "JWT/OAuth令牌攻击",
+  "version": "1.0.0",
+  "installedAt": 1787229010286,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

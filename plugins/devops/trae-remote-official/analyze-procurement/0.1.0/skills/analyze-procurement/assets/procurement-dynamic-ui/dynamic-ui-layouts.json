@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "purpose": "Procurement composition companions for the built-in Dynamic UI runtime.",
+  "system_boundary": {
+    "authority_order": [
+      "built-in dynamic-ui/SKILL.md",
+      "built-in scene file",
+      "built-in templates/manifest.json",
+      "selected built-in template.md",
+      "built-in visual-tokens.md",
+      "procurement companion composition"
+    ],
+    "companion_role": "Composition reference only. It may alter proportion, alignment, visual rhythm, and support-block placement inside an allowed built-in material; it is not a template, component library, widget payload, or runtime asset.",
+    "ready_material_first": true,
+    "embed_companion_svg_in_widget": false,
+    "copy_companion_text_or_sample_marks": false,
+    "create_new_template_id": false,
+    "preserve_host_light_dark": true,
+    "preserve_system_typography_spacing_radius": true,
+    "preserve_system_root_selector_and_tool_protocol": true,
+    "color_mapping": "Map the selected HTML --accent to built-in --brand or the primary chart series, map HTML neutrals to built-in surface/text/border roles, and use HTML --accent2 only for its verified exception or reversal meaning. Do not create local palette aliases.",
+    "surface_mapping": "Keep cards, metric blocks, tables, and chart panels on built-in neutral surface roles in both host themes; route color belongs in data marks, inset badges, focal text, or a deliberately full bounded reversal.",
+    "outer_widget_width": "Fill the available chat width; constrain only an inner polar or mechanism visual when the built-in contract requires it.",
+    "frame_rule": "All card and panel borders remain complete and neutral. Never use a colored single-edge strip or an accent-color frame; use inset badges, text, whole chart marks, or a full bounded reversal instead. Preserve keyboard visibility with a complete high-contrast neutral focus outline or neutral full-frame border."
+  },
+  "layout_families": [
+    {
+      "id": "award-frontier",
+      "label": "Award frontier",
+      "analysis_routes": ["supplier-discovery-rfx", "supplier-performance-risk", "mixed-award"],
+      "relationships": ["cost-capability trade-off", "shortlist", "outlier", "award frontier"],
+      "system_scene": "data-visualization",
+      "ready_templates": ["scatter-chart", "comparison-cards"],
+      "fallback_primitive": "decision-cards",
+      "composition": "A dominant two-axis plot takes about two thirds of the width; a compact ranked register or two-option comparison occupies the remaining column. Keep the recommendation in a direct chart mark or inset badge, never in analysis prose inside the widget.",
+      "interaction": "Hover or keyboard focus inspects a supplier; click or tap locks the same supplier across plot and register.",
+      "panel_slot": "01"
+    },
+    {
+      "id": "price-pulse",
+      "label": "Price pulse",
+      "analysis_routes": ["price-cost-intelligence", "inventory-replenishment", "mixed-award"],
+      "relationships": ["trend", "variance", "benchmark gap", "volume driver"],
+      "system_scene": "data-visualization",
+      "ready_templates": ["line-trend", "bar-chart-multiple", "bar-stacked-legend"],
+      "fallback_primitive": "metric-strip-chart",
+      "composition": "Use one full-width trend or grouped comparison as the dominant row. Add one compact aligned driver strip below or at the right only when it answers a second evidence question; never place two large charts side by side.",
+      "interaction": "Hover or focus reveals exact period and basis; click or tap may lock one period or switch benchmark series.",
+      "panel_slot": "02"
+    },
+    {
+      "id": "risk-lens",
+      "label": "Risk lens",
+      "analysis_routes": ["supplier-performance-risk", "supplier-discovery-rfx", "mixed-award"],
+      "relationships": ["gate matrix", "risk intensity", "capability profile", "evidence gap"],
+      "system_scene": "data-visualization",
+      "ready_templates": ["heatmap-chart", "radar-chart-lines-only", "comparison-cards"],
+      "fallback_primitive": "compact-table-visual",
+      "composition": "A scan-first matrix or bounded profile occupies the primary field; a narrow evidence or gate register aligns to the same rows. Use words, symbols, or intensity marks rather than a color-per-status card system.",
+      "interaction": "Hover or keyboard focus inspects a cell or dimension; click or tap locks one risk level, supplier, or evidence state.",
+      "panel_slot": "03"
+    },
+    {
+      "id": "exception-queue",
+      "label": "Exception queue",
+      "analysis_routes": ["inventory-replenishment", "supplier-performance-risk", "mixed-award"],
+      "relationships": ["priority", "critical date", "coverage gap", "exception order"],
+      "system_scene": "comparison-and-decision",
+      "ready_templates": ["comparison-cards", "gantt-chart", "bar-chart-multiple"],
+      "fallback_primitive": "compact-table-visual",
+      "composition": "Use a ranked exception rail with one expanded focal row or a compact schedule with a subordinate queue. Limit the visible peers to four and keep dates, units, and missing values explicit.",
+      "interaction": "Hover or focus previews an exception; click or tap pins one item and reveals its date, trigger, or evidence row.",
+      "panel_slot": "04"
+    },
+    {
+      "id": "landed-flow",
+      "label": "Landed flow",
+      "analysis_routes": ["international-logistics-landed-cost", "price-cost-intelligence", "mixed-award"],
+      "relationships": ["weighted flow", "route comparison", "landed-cost build", "time-cost trade-off"],
+      "system_scene": "data-visualization",
+      "ready_templates": ["sankey-chart", "bar-stacked-legend", "scatter-chart", "bar-chart-multiple"],
+      "fallback_primitive": "node-flow",
+      "composition": "Use one left-to-right route or cost-build field with a compact totals register. Weighted ribbons require real non-negative weights; otherwise use bars, a scatter, or a simple node flow.",
+      "interaction": "Hover or keyboard focus traces one lane or cost component; click or tap locks its path and linked total.",
+      "panel_slot": "05"
+    },
+    {
+      "id": "execution-track",
+      "label": "Execution track",
+      "analysis_routes": ["mixed-award", "supplier-discovery-rfx", "inventory-replenishment", "international-logistics-landed-cost"],
+      "relationships": ["action sequence", "gate timing", "owner handoff", "decision state"],
+      "system_scene": "architecture-and-flow",
+      "ready_templates": ["gantt-chart", "sequence-diagram", "tree-flow", "comparison-cards"],
+      "fallback_primitive": "node-flow",
+      "composition": "Use a three-to-five-step track, compact schedule, or owner handoff with one focal gate. Keep connectors neutral except for one primary path and keep all labels within the planned geometry.",
+      "interaction": "Hover or focus inspects one gate or task; click or tap locks the step and its owner, due date, or fallback.",
+      "panel_slot": "06"
+    }
+  ],
+  "routes": [
+    {
+      "route_id": "precision-ledger",
+      "companion": "companions/precision-ledger.svg",
+      "composition_transform": "Hard ledger grid, exact alignment, asymmetric 62/38 evidence splits, thin neutral rules, and compact tabular registers. Keep at least one open field rather than boxing every fact."
+    },
+    {
+      "route_id": "product-stage",
+      "companion": "companions/product-stage.svg",
+      "composition_transform": "One generous focal stage with one or two named supporting objects, pronounced scale contrast, large gaps, and only one raised plane."
+    },
+    {
+      "route_id": "signal-docket",
+      "companion": "companions/signal-docket.svg",
+      "composition_transform": "Editorial act changes, oversized labels, horizontal docket rows, and deliberate light/dark reversals; avoid a repeating card grid."
+    },
+    {
+      "route_id": "mono-audit",
+      "companion": "companions/mono-audit.svg",
+      "composition_transform": "Strict monochrome grid, line-weight hierarchy, audit indices, hatched data marks, and card-free evidence wherever possible."
+    },
+    {
+      "route_id": "acid-registry",
+      "companion": "companions/acid-registry.svg",
+      "composition_transform": "Pure-white field, irregular modular spans, one chartreuse focal block, black comparison anchors, compact condensed labels, and neutral outlined peers."
+    },
+    {
+      "route_id": "night-circuit",
+      "companion": "companions/night-circuit.svg",
+      "composition_transform": "Near-black editorial field, offset emerald modules, cyan primary data, yellow reversal only, large numbered acts, and explicit high-contrast light text."
+    }
+  ]
+}

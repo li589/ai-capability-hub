@@ -1,0 +1,11 @@
+{
+  "name": "公私海批量分配",
+  "installedAt": 1787227780434,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088537058736029696",
+  "description_zh": "对已核对的lead/customer执行公海转私海、私海转移或退公海。适用于用户要求公私海批量分配、生成相关结果或检查执行边界时。",
+  "description_en": "CRM Pool Assignment workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_7350567a-565.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_7350567a-565.png"
+}

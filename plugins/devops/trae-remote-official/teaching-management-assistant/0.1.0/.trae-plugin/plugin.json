@@ -1,0 +1,30 @@
+{
+  "name": "teaching-management-assistant",
+  "version": "0.1.0",
+  "description": "面向教师和教学管理人员的数据分析助手，支持成绩分析、试卷质量分析、知识点诊断等，生成可离线查看的 HTML 报告。",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": ["teaching-management-assistant", "internal", "skills"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "teaching-management-assistant",
+    "shortDescription": "面向教师和教学管理人员的数据分析助手，支持成绩分析、试卷质量分析、知识点诊断等，生成可离线查看的 HTML 报告。",
+    "longDescription": "面向教师和教学管理人员的数据分析助手，支持成绩分析、试卷质量分析、知识点诊断等，生成可离线查看的 HTML 报告。",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use teaching-management-assistant to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

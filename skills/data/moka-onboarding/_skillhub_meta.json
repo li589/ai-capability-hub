@@ -1,0 +1,11 @@
+{
+  "name": "Moka 入职",
+  "installedAt": 1787228600289,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088129250003468288",
+  "description_zh": "面向入职负责人的入职进度查询。使用当前平台提供的 Moka 连接器查询待入职员工清单、单个员工的档案与材料齐备度、入职任务的聚合统计与逐人运行详情、扫码入职的配置与员工信息。当用户问「今天/本周有哪些待入职员工」「这名员工材料是否齐全」「哪些入职任务还没完成」「扫码入职进来多少人」等问题时使用；只覆盖入职进度，不覆盖招聘流程。",
+  "description_en": "Onboarding progress queries for onboarding owners. Uses the Moka Connector available on the current platform to query pending-onboarding employee lists, a single employee's profile and document completeness, onboarding task aggregate statistics and per-person run details, and scan-to-onboard configuration and employees. Use it for questions like who is onboarding today, whether an employee's materials are complete, which onboarding tasks are unfinished, or how many people joined via scan-to-onboard. Covers onboarding progress only, not the recruiting pipeline.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_f2f5b0ee-a29.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_f2f5b0ee-a29.png"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "财报追踪",
+  "installedAt": 1787228372463,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2053081855772266496",
+  "examples_zh": [
+    "帮我查看下周A股的重要财报日历",
+    "追踪腾讯下季度的财报发布时间",
+    "扫描美股本周的财报预告"
+  ],
+  "examples_en": [
+    "Show me next week's important A-share earnings calendar",
+    "Track when Tencent's quarterly report will be released",
+    "Scan US stock earnings announcements this week"
+  ],
+  "description_zh": "AI 驱动的 A 股/美股财报追踪与智能分析推送",
+  "description_en": "AI-powered earnings tracker for A-share and US stock financial reports",
+  "iconSource": "letter:auto"
+}

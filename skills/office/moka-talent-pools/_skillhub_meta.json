@@ -1,0 +1,11 @@
+{
+  "name": "Moka 人才库",
+  "installedAt": 1787228588389,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088128109132333056",
+  "description_zh": "面向招聘负责人的人才库查询。列出当前招聘模式下本人可见的人才库（含多级库的名称路径），并按职位查看系统从人才库智能推荐的候选人（候选人卡片、推荐分数、推荐总结与原因）。当用户问「我有哪些人才库」「社招这边有哪些库可以运营」「这个职位系统从人才库推荐了谁」时使用。",
+  "description_en": "Talent pool lookup for recruiting owners. Lists the talent pools visible to the current account under the current hiring mode (including nested pool paths), and shows the candidates the system recommends from talent pools for a given job (candidate cards, recommendation scores, summaries and reasons). Use it for questions like \"which talent pools do I have\", \"which pools can I work with for social recruiting\", or \"who does the system recommend from the talent pools for this job\".",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_c4f84883-af8.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_c4f84883-af8.png"
+}

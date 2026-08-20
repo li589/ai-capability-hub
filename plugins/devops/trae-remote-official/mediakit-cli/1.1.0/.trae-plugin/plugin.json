@@ -1,0 +1,28 @@
+{
+  "name": "mediakit-cli",
+  "displayName": "MediaKit CLI",
+  "displayNameEn": "MediaKit CLI",
+  "version": "1.1.0",
+  "description": "mediakit-cli 支持音频处理、视频处理、视频剪辑和图像处理，部分能力同时支持云模式和本地模式，可通过自然语言任务自动编排并完成复杂音视频处理。",
+  "descriptionEn": "mediakit-cli supports audio processing, video processing, video editing, and image processing, with selected capabilities available in both cloud and local modes. It can orchestrate and complete complex media workflows from natural-language tasks.",
+  "author": {
+    "name": "火山引擎 AI Mediakit"
+  },
+  "license": "MIT",
+  "logo": "./icon.svg",
+  "keywords": [
+    "mediakit",
+    "media",
+    "video",
+    "audio",
+    "image",
+    "content-creation"
+  ],
+  "skills": "./skills/",
+  "connector": "./connector.json",
+  "env": {
+    "MEDIAKIT_API_KEY": "${connector.mediakit-cli.ACCESS_TOKEN}",
+    "MEDIAKIT_SURFACE": "plugin",
+    "MEDIAKIT_RUNTIME": "trae"
+  }
+}

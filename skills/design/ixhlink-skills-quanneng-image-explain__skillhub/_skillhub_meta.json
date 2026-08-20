@@ -1,0 +1,13 @@
+{
+  "slug": "ixhlink-skills-quanneng-image-explain",
+  "name": "全能图片理解",
+  "version": "1.0.1",
+  "installedAt": 1787228928632,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png"
+}

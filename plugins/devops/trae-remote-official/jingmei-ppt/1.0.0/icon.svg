@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="精美 PPT">
+  <defs>
+    <linearGradient id="bg" x1="24" y1="20" x2="230" y2="238" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF6B4A"/>
+      <stop offset="0.52" stop-color="#B84FFF"/>
+      <stop offset="1" stop-color="#346DFF"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="74" y1="52" x2="190" y2="203" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#F2F4FF"/>
+    </linearGradient>
+  </defs>
+  <rect x="12" y="12" width="232" height="232" rx="56" fill="url(#bg)"/>
+  <rect x="57" y="55" width="142" height="108" rx="15" fill="url(#paper)"/>
+  <rect x="73" y="73" width="70" height="10" rx="5" fill="#28233A"/>
+  <rect x="73" y="92" width="107" height="6" rx="3" fill="#B9BCD0"/>
+  <rect x="73" y="106" width="84" height="6" rx="3" fill="#D0D2DF"/>
+  <rect x="73" y="126" width="34" height="21" rx="5" fill="#FF6B4A"/>
+  <rect x="114" y="116" width="28" height="31" rx="5" fill="#B84FFF"/>
+  <rect x="149" y="102" width="31" height="45" rx="5" fill="#346DFF"/>
+  <path d="M128 163V203" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M93 208H163" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round"/>
+  <path d="M202 37L208 50L221 56L208 62L202 75L196 62L183 56L196 50L202 37Z" fill="#FFF4A8"/>
+  <path d="M42 145L46 154L55 158L46 162L42 171L38 162L29 158L38 154L42 145Z" fill="#FFFFFF" fill-opacity="0.9"/>
+</svg>

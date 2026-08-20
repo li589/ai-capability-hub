@@ -1,0 +1,20 @@
+{
+  "name": "browser_evaluate",
+  "description": "Execute JavaScript in the page for debugging and inspection. RESTRICTIONS: Cannot access document.cookie, localStorage, sessionStorage, or credentials. Use for DOM inspection and debugging only.\n",
+  "arguments": {
+    "properties": {
+      "script": {
+        "description": "JavaScript to evaluate in the page context. Use return to return a value. Cannot access cookies, localStorage, or sessionStorage.",
+        "type": "string"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "script"
+    ],
+    "type": "object"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "slides-maker",
+  "name": "slide-maker",
+  "version": "5.0.0",
+  "installedAt": 1787228793310,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/596373/e49a39d8142a45f49892863ec58fd996.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/596373/e49a39d8142a45f49892863ec58fd996.png"
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "account": "newrankcn",
+    "accountId": "newrankcn",
+    "accountName": "新榜",
+    "avatar": null,
+    "bizInfo": null,
+    "codeImageUrl": null,
+    "description": null,
+    "gmtCreate": null,
+    "similarAccounts": [
+      {
+        "accountId": "gh_4ed145384731",
+        "accountName": "财联社",
+        "avatar": "http://wx.qlogo.cn/mmhead/Q3auHgzwzM62NwhWWYgRT7NniaO2YqbPKmRulwLjPBnmiaXbOkpreJdg/",
+        "description": "财联社是上海报业集团主管主办，定位资本市场报道财经通讯社，以“准确、快速、权威、专业”为准则，提供7x24小时金融信息服务。",
+        "gmtCreate": "2026-08-05 13:12:27",
+        "verifyName": "微信认证：上海界面财联社科技股份有限公司"
+      },
+      {
+        "accountId": "wxid_pzhf43hmwizd11",
+        "accountName": "央视新闻",
+        "avatar": "http://wx.qlogo.cn/mmhead/1gvL9ficRs1Hhp7QkFrytlhB6z5p5bTeY7Z9Vt12OiaaVRPic4iafgKEt2zibYDv4xSfnHudZRnGIe4o/",
+        "description": "“央视新闻”是中央广播电视总台新闻新媒体旗舰账号，是重大新闻、突发事件和重要报道的总台首发平台。",
+        "gmtCreate": "2026-08-10 15:04:03",
+        "verifyName": "微信认证：中央广播电视总台"
+      },
+      {
+        "accountId": "gh_7fbf45a6a562",
+        "accountName": "第一财经",
+        "avatar": "http://wx.qlogo.cn/mmhead/Q3auHgzwzM70SddjBlb2JNTkJkvWI3gFru3DNArTToFgePibyg6cJWg/",
+        "description": "第一财经官方公众号，致力为广大投资者打造权威的财经信息平台，同时，努力成为第一财经忠实用户的交流平台。",
+        "gmtCreate": "2026-08-03 15:10:21",
+        "verifyName": "微信认证：上海第一财经传媒有限公司"
+      },
+      {
+        "accountId": "gh_6651e07e4b2d",
+        "accountName": "新华社",
+        "avatar": "http://mmbiz.qpic.cn/mmbiz_png/azXQmS1HA7lUbOh6fqpzyseAmRpR1PryBaaCUxAuyqJO4sKj9hQO814kKgXARvMAqMtF3icxhy1lhbCT2ktyf2Q/0?wx_fmt=png",
+        "description": "新华通讯社官方账号。硬新闻、暖故事、好朋友。",
+        "gmtCreate": "2026-07-20 15:14:38",
+        "verifyName": "微信认证：新华通讯社"
+      },
+      {
+        "accountId": "gh_363b924965e9",
+        "accountName": "人民日报",
+        "avatar": "http://wx.qlogo.cn/mmhead/Q3auHgzwzM5Dlw4H8vWoicXPXccEVkWYgrmSiavKwjaTkYuqswgXicqhA/",
+        "description": "参与、沟通、记录时代。",
+        "gmtCreate": "2026-08-10 15:04:03",
+        "verifyName": "微信认证：人民日报社"
+      },
+      {
+        "accountId": "gh_a7bbb71d655c",
+        "accountName": "中国新闻周刊",
+        "avatar": "http://wx.qlogo.cn/mmhead/Q3auHgzwzM7IPhF5bMgNmQicGMYMOWiciaZp8Npj7VspibYbuGyNa4G0Tw/",
+        "description": "这里是《中国新闻周刊》掌门周刊君，影响有影响力的你。和我一起拨开迷雾，追寻真相，守望时代。",
+        "gmtCreate": "2026-08-10 15:04:03",
+        "verifyName": "微信认证：《中国新闻周刊》杂志社有限公司"
+      }
+    ],
+    "verifyName": null,
+    "works": [],
+    "avgReadCount": 0
+  }
+]

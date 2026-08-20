@@ -1,0 +1,34 @@
+{
+  "type": "金融资产投资公司",
+  "type_name": "金融资产投资公司(AIC)",
+  "count": 5,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-06-26",
+  "institutions": [
+    {
+      "name": "工银金融资产投资",
+      "code": "ICBCAIC",
+      "type": "金融资产投资公司"
+    },
+    {
+      "name": "农银金融资产投资",
+      "code": "ABCAIC",
+      "type": "金融资产投资公司"
+    },
+    {
+      "name": "中银金融资产投资",
+      "code": "BOCAIC",
+      "type": "金融资产投资公司"
+    },
+    {
+      "name": "建信金融资产投资",
+      "code": "CCBAIC",
+      "type": "金融资产投资公司"
+    },
+    {
+      "name": "交银金融资产投资",
+      "code": "BCMAIC",
+      "type": "金融资产投资公司"
+    }
+  ]
+}

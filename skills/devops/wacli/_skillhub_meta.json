@@ -1,0 +1,21 @@
+{
+  "name": "WhatsApp",
+  "installedAt": 1787228713477,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083296751816704",
+  "examples_zh": [
+    "通过WhatsApp发一条消息给朋友",
+    "查看WhatsApp最新收到的消息",
+    "发送一张图片到WhatsApp群组"
+  ],
+  "examples_en": [
+    "Send a WhatsApp message to a friend",
+    "Check the latest WhatsApp messages",
+    "Send an image to a WhatsApp group"
+  ],
+  "description_zh": "发送 WhatsApp 消息和同步历史",
+  "description_en": "Send WhatsApp messages & sync history",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wacli.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wacli.png"
+}

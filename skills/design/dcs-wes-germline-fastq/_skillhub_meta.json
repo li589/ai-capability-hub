@@ -1,0 +1,11 @@
+{
+  "name": "WES 胚系变异检测",
+  "installedAt": 1787228533467,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2089264237058654208",
+  "description_zh": "DCS Cloud WDL「DCS_WES_Germline_FASTQ」(v1.0.1) 流程说明与填参指南：从 FASTQ 做 WES 胚系变异检测（质控、比对、BQSR、靶区 HC、报告）。用户提到 DCS_WES_Germline_FASTQ、WES Germline、全外显子胚系、IntervalBed，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"DCS_WES_Germline_FASTQ\" (v1.0.1) parameter guide: WES germline variant calling from FASTQ (QC, alignment, BQSR, targeted HaplotypeCaller, report). Use when the user mentions DCS_WES_Germline_FASTQ, WES Germline, whole-exome germline, IntervalBed, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_6a36e823-f17.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_6a36e823-f17.png"
+}

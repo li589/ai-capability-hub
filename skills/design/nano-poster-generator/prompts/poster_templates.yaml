@@ -1,0 +1,398 @@
+# Poster prompt templates
+# Each template targets a specific poster type with detailed layout and composition instructions.
+# Variables are injected via format_map: {title}, {subtitle}, {style_description}, etc.
+#
+# Design philosophy for quality:
+#   Different poster types need fundamentally different "quality" — a movie poster
+#   needs cinematic grain and depth, while a social post needs screen-crisp flatness.
+#   Each template specifies its own TEXTURE & FINISH requirements.
+
+# Shared text rendering rules appended to all templates
+text_rendering_rules: >
+  TEXT RENDERING RULES:
+  - Limit visible text in the image to the TITLE and at most ONE other text element (subtitle or CTA).
+  - For all other text (date, venue, info): leave clearly designated blank spaces where text will be overlaid in post-production.
+  - For English titles of 1-4 words, spell with extra spacing: e.g., "J A Z Z  F E S T".
+  - PREFER all-uppercase for English titles — fewer letter-form rendering errors.
+  - If you cannot render a word accurately, OMIT it entirely. Empty space is better than misspelled text.
+  - For Chinese titles: limit to 4-6 characters maximum in the image. Use thick-stroke fonts (黑体).
+
+templates:
+  - id: event_poster
+    type: event
+    name: "Event Poster"
+    filename: "poster_event"
+    prompt: >
+      Create a professional event poster with the following exact specifications:
+
+      POSTER CONTENT (render all text accurately, letter by letter):
+      - Title: "{title}" — this is the most prominent text element, placed in the {title_position} of the poster.
+        It should be large, bold, and immediately eye-catching.
+      - Subtitle: "{subtitle}" — secondary text, noticeably smaller than the title, placed near it.
+      - Event details: {text_elements_formatted}
+      - Call to action: "{cta}" — placed at the bottom area of the poster, inviting the viewer to act.
+
+      VISUAL COMPOSITION:
+      - Primary visual subject: {visual_elements}
+      - The composition uses a {layout_strategy} layout with the focal point at {focal_point}.
+      - Visual hierarchy (largest to smallest): title > visual subject > event details > subtitle > CTA.
+      - Target aspect ratio: {aspect_ratio} (approximately {output_width}x{output_height} pixels).
+      - Leave breathing room between elements — avoid crowding.
+
+      TYPOGRAPHY:
+      - Title font style: {title_font_style}
+      - Body text style: {body_font_style}
+      - All text must be crisp, fully legible, and properly kerned with no spelling errors.
+      - Text language: {language}
+      {chinese_text_instruction}
+
+      COLOR PALETTE & EMOTIONAL TONE:
+      - Primary ({primary_color}): Sets the event's energy — this color IS the vibe.
+        Use it for large background shapes, key graphic elements. ~50-60% coverage.
+      - Secondary ({secondary_color}): The canvas that grounds everything.
+        Should feel like a natural partner to the primary, not a competitor. ~25-30% coverage.
+      - Accent ({accent_color}): The spark — used SPARINGLY for CTA, key highlights, emphasis.
+        This is the color the eye finds last but remembers first. Max ~10-15% coverage.
+      - The relationship between primary and secondary should feel intentional:
+        warm+warm for inviting energy, warm+cool for dramatic tension.
+      - Overall aesthetic: {style_description}
+      {style_modifiers}
+
+      TEXTURE & FINISH:
+      - The poster should feel like it belongs on a venue wall or a concert hall lobby.
+      - The visual quality should evoke anticipation — the viewer should feel excited about
+        attending before reading a single word. Lighting, color, and composition together
+        create a sense of "something special is about to happen."
+      - Surface quality follows the chosen style — let the style preset define whether
+        this feels like aged paper, crisp digital, neon-lit, or hand-painted.
+      {text_rendering_rules}
+    requires_reference_image: false
+
+  - id: promotional_poster
+    type: promotional
+    name: "Promotional Poster"
+    filename: "poster_promo"
+    prompt: >
+      Create a high-impact promotional poster with the following specifications:
+
+      POSTER CONTENT (render all text accurately):
+      - Headline: "{title}" — the dominant text element, designed to grab attention instantly.
+        Placed in the {title_position} of the poster with maximum visual weight.
+      - Tagline: "{subtitle}" — supporting message, complementing the headline.
+      - Key information: {text_elements_formatted}
+      - Call to action: "{cta}" — prominent, actionable, placed in the lower portion.
+
+      VISUAL COMPOSITION:
+      - Product or subject: {visual_elements}
+      - Layout: {layout_strategy} with focal point at {focal_point}.
+      - The design should create a clear visual path: headline > product/subject > key info > CTA.
+      - Aspect ratio: {aspect_ratio} ({output_width}x{output_height} pixels).
+      - The product/subject should be showcased prominently — occupying 40-60% of the poster area.
+
+      TYPOGRAPHY:
+      - Headline style: {title_font_style}
+      - Body style: {body_font_style}
+      - CTA should stand out with a contrasting background block or border.
+      - All text perfectly spelled and kerned.
+      - Text language: {language}
+      {chinese_text_instruction}
+
+      COLOR PALETTE & EMOTIONAL TONE:
+      - Primary ({primary_color}): Drives desire — this color sells. Use for dominant visual areas. ~50-60% coverage.
+      - Secondary ({secondary_color}): Creates the stage — clean, professional backdrop. ~25-30% coverage.
+      - Accent ({accent_color}): Triggers action — use for CTA button, price tag, urgency badges.
+        This color should feel like it's saying "now, not later." Max ~10-15% coverage.
+      - The accent must create maximum contrast with the secondary — it should feel like
+        it's vibrating or glowing against the background.
+      - Style: {style_description}
+      {style_modifiers}
+
+      TEXTURE & FINISH:
+      - The poster should feel like a premium advertisement — the visual equivalent of a product
+        displayed in a showroom with perfect lighting. Every surface is intentional.
+      - Product/subject lighting: Studio-quality, slightly aspirational — products look
+        better here than in real life, but not unrealistically so. Soft highlights,
+        controlled reflections, dimensional shadows.
+      - Overall impression: "I want this" — the design should create desire, not just inform.
+      {text_rendering_rules}
+    requires_reference_image: false
+
+  - id: social_media_poster
+    type: social_media
+    name: "Social Media Poster"
+    filename: "poster_social"
+    prompt: >
+      Create a scroll-stopping social media graphic with these specifications:
+
+      CONTENT (render all text accurately):
+      - Main text: "{title}" — bold, immediately readable even at thumbnail size.
+        Placed in the {title_position}, taking up significant visual space.
+      - Supporting text: "{subtitle}"
+      - Additional elements: {text_elements_formatted}
+      - CTA: "{cta}" — clear and actionable.
+
+      COMPOSITION:
+      - Visual subject: {visual_elements}
+      - Layout: {layout_strategy}, focal point: {focal_point}.
+      - CRITICAL: Design must be impactful at small screen sizes (mobile phone).
+        Use bold, simple composition. Avoid fine details that get lost when scaled down.
+      - Text should be minimal and extremely large relative to the poster size.
+      - Maximum 3-4 lines of text total on the entire poster.
+      - Aspect ratio: {aspect_ratio} ({output_width}x{output_height} pixels).
+
+      TYPOGRAPHY:
+      - Title: {title_font_style} — oversized for mobile readability.
+      - Body: {body_font_style}
+      - Text language: {language}
+      {chinese_text_instruction}
+
+      COLOR PALETTE & EMOTIONAL TONE:
+      - Primary ({primary_color}): The scroll-stopper — one bold, saturated color that makes
+        the thumb pause. Fill large areas with this. ~50-60% coverage.
+      - Secondary ({secondary_color}): Maximum contrast with primary — if primary is dark,
+        secondary is light, and vice versa. ~25-30% coverage.
+      - Accent ({accent_color}): A surprise — a color the viewer doesn't expect in this
+        combination. Small but memorable. Max ~10-15% coverage.
+      - Colors must be at HIGH SATURATION — social feeds desaturate content, so
+        start vivid. The poster should look almost too colorful in isolation.
+      - Style: {style_description}
+      {style_modifiers}
+
+      TEXTURE & FINISH:
+      - Screen-native quality — this lives on glass screens, not paper. Surfaces should
+        feel crisp, smooth, and luminous, like the colors are backlit.
+      - No print textures, no paper grain, no analog effects UNLESS the style specifically
+        calls for them. The default is digital crispness.
+      - At arm's length (phone in hand), the message should be instantly clear.
+        At thumbnail size (scrolling), the COLOR and SHAPE should still register.
+      {text_rendering_rules}
+    requires_reference_image: false
+
+  - id: movie_poster
+    type: movie
+    name: "Movie-style Poster"
+    filename: "poster_movie"
+    prompt: >
+      Create a cinematic movie-style poster with these specifications:
+
+      CONTENT (render all text accurately):
+      - Title: "{title}" — the movie/show title, placed in the {title_position}.
+        Rendered with dramatic, cinematic typography that matches the genre.
+      - Tagline: "{subtitle}" — a compelling one-line tagline placed near the title.
+      - Credits/details: {text_elements_formatted}
+
+      COMPOSITION:
+      - Visual subject: {visual_elements}
+      - Layout: {layout_strategy} with dramatic {focal_point} focal point.
+      - Cinematic composition: use dramatic lighting, depth of field, and atmospheric effects.
+      - Character or subject should dominate the poster with a powerful, evocative pose or scene.
+      - Aspect ratio: {aspect_ratio} ({output_width}x{output_height} pixels).
+      - The bottom 15% should be reserved for credits in a smaller condensed font.
+
+      TYPOGRAPHY:
+      - Title: {title_font_style} — cinematic, dramatic, genre-appropriate.
+      - Tagline: elegant, slightly italicized or stylized.
+      - Credits at bottom: very small, condensed, in the classic movie poster credit block style.
+      - Text language: {language}
+      {chinese_text_instruction}
+
+      COLOR PALETTE & EMOTIONAL TONE:
+      - Primary ({primary_color}): The dominant atmospheric tone that tells the genre.
+        Action = warm amber/orange. Thriller = cold steel blue. Horror = desaturated
+        with sickly accent. Romance = warm golden. ~50-60% coverage.
+      - Secondary ({secondary_color}): The shadows and depth — this color lives in the parts
+        of the image where light doesn't reach. ~25-30% coverage.
+      - Accent ({accent_color}): The key light and rim light color — rim lighting edges,
+        spark highlights, title glow effects. Max ~10-15% coverage.
+      - Colors should feel graded — like a colorist has spent hours making every pixel serve the mood.
+      - Style: {style_description}
+      {style_modifiers}
+
+      TEXTURE & FINISH:
+      - CINEMATIC TEXTURE IS CRITICAL: The poster should feel like a frame from a film.
+      - Subtle film grain adds warmth and authenticity — this is not a digital render,
+        it's a cinematic moment frozen in time.
+      - Depth of field: the subject is tack-sharp, background elements softly blur.
+      - Atmospheric depth: distant elements are slightly hazier, slightly cooler in tone.
+      - Light quality: light sources are motivated (you can imagine where the lamp or
+        sun would be), creating naturalistic but dramatic falloff.
+      - The overall impression should be: "I would buy a ticket to see this."
+      {text_rendering_rules}
+    requires_reference_image: false
+
+  - id: educational_poster
+    type: educational
+    name: "Educational Poster"
+    filename: "poster_edu"
+    prompt: >
+      Create a clear, informative educational poster with these specifications:
+
+      CONTENT (render all text accurately):
+      - Title: "{title}" — placed in the {title_position}, clear and authoritative.
+      - Subtitle/topic: "{subtitle}"
+      - Information sections: {text_elements_formatted}
+
+      COMPOSITION:
+      - Visual aids: {visual_elements}
+      - Layout: {layout_strategy} — organized into clear, distinct sections.
+      - Information hierarchy: title > main concept > supporting details > source/credits.
+      - Use visual dividers, numbered sections, or color-coded areas to organize information.
+      - Aspect ratio: {aspect_ratio} ({output_width}x{output_height} pixels).
+      - Must be readable from a reasonable distance (e.g., classroom wall).
+
+      TYPOGRAPHY:
+      - Title: {title_font_style} — clear, bold, educational.
+      - Body: {body_font_style} — highly readable, comfortable size.
+      - Use bullet points, numbered lists, or labeled diagrams for clarity.
+      - Text language: {language}
+      {chinese_text_instruction}
+
+      COLOR PALETTE & EMOTIONAL TONE:
+      - Primary ({primary_color}): Organizes — used for section headers and key visual elements.
+        Should feel trustworthy and authoritative. ~30-40% coverage.
+      - Secondary ({secondary_color}): Calms — used for the canvas/background. Should be easy
+        on the eyes for sustained reading. Light, neutral. ~40-50% coverage.
+      - Accent ({accent_color}): Highlights — draws attention to the most important takeaway.
+        Used for numbering, key callouts, "remember this" markers. ~10-15% coverage.
+      - Colors should have HIGH CONTRAST with each other for accessibility — no similar-value
+        colors that would be hard to distinguish in poor lighting or for color-blind viewers.
+      - Style: {style_description}
+      {style_modifiers}
+
+      TEXTURE & FINISH:
+      - The poster should feel like a well-made infographic from a textbook or museum display.
+      - Clarity is the highest virtue — nothing decorative should interfere with comprehension.
+      - Clean, matte surfaces. Illustrations should be simple, clear, and labeled.
+      - The overall impression should be "I understand this now" — the design serves learning,
+        not aesthetics.
+      {text_rendering_rules}
+    requires_reference_image: false
+
+  - id: motivational_poster
+    type: motivational
+    name: "Motivational Poster"
+    filename: "poster_motivational"
+    prompt: >
+      Create a powerful, emotionally resonant motivational poster:
+
+      CONTENT (render all text accurately):
+      - Quote/message: "{title}" — this is the centerpiece. It should be rendered with
+        exceptional typography that amplifies the emotional impact of the words.
+        Placed in the {title_position} with commanding presence.
+      - Attribution: "{subtitle}" — smaller, elegant, below the quote.
+      - Additional text: {text_elements_formatted}
+
+      COMPOSITION:
+      - Visual imagery: {visual_elements}
+      - Layout: {layout_strategy}, focal point: {focal_point}.
+      - The image should evoke the emotion of the quote — powerful, inspiring, aspirational.
+      - Minimal design elements — the quote and a single powerful image are enough.
+      - Generous white space or atmospheric backdrop to let the message breathe.
+      - Aspect ratio: {aspect_ratio} ({output_width}x{output_height} pixels).
+
+      TYPOGRAPHY:
+      - Quote: {title_font_style} — expressive, impactful, with personality.
+      - Attribution: {body_font_style} — understated, elegant.
+      - The typography itself should be a design element — consider creative line breaks,
+        varying weights within the quote, or highlighted key words.
+      - Text language: {language}
+      {chinese_text_instruction}
+
+      COLOR PALETTE & EMOTIONAL TONE:
+      - Primary ({primary_color}): Carries the emotion — warm for hope, cool for resolve,
+        dark for depth. This color is the emotional temperature of the quote. ~40-50% coverage.
+      - Secondary ({secondary_color}): The sky, the landscape, the space behind the words.
+        Should feel infinite, not confined. ~35-45% coverage.
+      - Accent ({accent_color}): The spark of emphasis — used to highlight the ONE key word
+        or phrase in the quote that carries its deepest meaning. Max ~10% coverage.
+      - The transition between primary and secondary should feel like a natural landscape
+        gradient: earth to sky, shore to ocean, shadow to light.
+      - Style: {style_description}
+      {style_modifiers}
+
+      TEXTURE & FINISH:
+      - ATMOSPHERIC DEPTH is everything: the image should feel like a place you could step into.
+      - Light quality matters more than any other element — golden hour warmth, misty morning
+        diffusion, dramatic storm light, or the quiet glow of dusk. The light itself should
+        carry emotion before any words are read.
+      - If the background is a photograph/landscape: it should have the rich tonal range
+        of a medium-format film image. Visible but tasteful grain adds warmth.
+      - If the background is abstract: it should feel like a slow-motion explosion of
+        color and light, with visible energy and movement.
+      - The overall impression: the viewer pauses, reads, and feels something shift inside them.
+      {text_rendering_rules}
+    requires_reference_image: false
+
+  - id: generic_poster
+    type: generic
+    name: "Generic Poster"
+    filename: "poster_generic"
+    prompt: >
+      Create a high-quality poster with the following specifications:
+
+      CONTENT (render all text accurately, letter by letter):
+      - Title: "{title}" — the primary text element, placed in the {title_position}.
+      - Subtitle: "{subtitle}" — secondary text near the title.
+      - Additional content: {text_elements_formatted}
+      - Call to action: "{cta}"
+
+      COMPOSITION:
+      - Visual elements: {visual_elements}
+      - Layout: {layout_strategy} with focal point at {focal_point}.
+      - Visual hierarchy: title > visual subject > supporting text > CTA.
+      - Aspect ratio: {aspect_ratio} ({output_width}x{output_height} pixels).
+      - Well-balanced composition with proper spacing between all elements.
+
+      TYPOGRAPHY:
+      - Title: {title_font_style}
+      - Body: {body_font_style}
+      - All text must be perfectly legible with correct spelling and kerning.
+      - Text language: {language}
+      {chinese_text_instruction}
+
+      COLOR PALETTE & EMOTIONAL TONE:
+      - Primary ({primary_color}): dominant visual area. ~50-60% coverage.
+      - Secondary ({secondary_color}): background and supporting areas. ~25-30% coverage.
+      - Accent ({accent_color}): focal highlights. Max ~10-15% coverage.
+      - Style: {style_description}
+      {style_modifiers}
+
+      TEXTURE & FINISH:
+      - Professional design quality — sharp, clean, well-composed.
+      - Surface quality follows the chosen style preset.
+      - The overall impression: competent, polished, intentional.
+      {text_rendering_rules}
+    requires_reference_image: false
+
+# Type-specific variation instructions (used for variants 2+)
+# Falls back to "default" if poster_type not found
+variation_instructions:
+  event:
+    - "VARIATION: Shift the mood from festive/celebratory to intimate/exclusive — adjust lighting warmth, color saturation, and visual density to suggest a more VIP experience."
+    - "VARIATION: Change the visual perspective — instead of showing the performer/event, show the venue atmosphere from the audience's point of view."
+    - "VARIATION: Shift the time of day — if the original is an evening event feel, make it a golden-hour daytime festival mood with warm natural lighting."
+  movie:
+    - "VARIATION: Create a character-focused teaser poster — tighter framing on the subject with dramatic lighting and shallow depth of field."
+    - "VARIATION: Create an environment-focused poster — pull back to show the world of the story with the character small within a vast atmospheric landscape."
+    - "VARIATION: Shift the genre tone — if the original feels dramatic, introduce a more mysterious or suspenseful visual language with cooler tones and higher contrast."
+  promotional:
+    - "VARIATION: Make the product/offer the absolute hero — larger, closer, with a premium studio-lit feel and minimal surrounding text."
+    - "VARIATION: Shift to a lifestyle context — show the product in use, in a real aspirational setting, with environmental storytelling."
+    - "VARIATION: Create a high-urgency sale version — bolder accent colors, stronger CTA, visual elements suggesting limited time or scarcity."
+  social_media:
+    - "VARIATION: Go ultra-minimal — use only 2 colors and the title text, with a single bold geometric or graphic element."
+    - "VARIATION: Shift to a photo-centric approach with text overlaid on an atmospheric image instead of graphic design."
+    - "VARIATION: Try a split-composition — divide the frame into two contrasting halves (before/after, problem/solution, question/answer)."
+  educational:
+    - "VARIATION: Use a completely different information architecture — if the original uses sections, try a flowchart or timeline layout instead."
+    - "VARIATION: Shift from text-heavy to icon-heavy — replace descriptive text with large, clear pictograms with minimal labels."
+    - "VARIATION: Change from a structured grid to a central hub-and-spoke diagram with the main concept at center."
+  motivational:
+    - "VARIATION: Change the backdrop completely — if the original uses nature, try an urban/architectural setting, or vice versa."
+    - "VARIATION: Shift the typography treatment — if the original uses elegant serif, try a raw, bold, sans-serif approach with more kinetic energy."
+    - "VARIATION: Darken the overall mood — use a more dramatic, high-contrast treatment with deeper shadows and more intense emotion."
+  default:
+    - "VARIATION: Use an alternative color arrangement — swap primary and secondary colors for a different mood."
+    - "VARIATION: Try an inverted layout — if the title was at the top, place it at the bottom, and vice versa."
+    - "VARIATION: Create a more dramatic and dynamic composition with diagonal elements and stronger contrast."
+    - "VARIATION: Take a more minimalist approach — reduce visual elements to the absolute essentials."

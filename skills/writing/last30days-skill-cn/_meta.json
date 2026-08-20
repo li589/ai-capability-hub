@@ -1,0 +1,11 @@
+{
+  "owner": "chiting111",
+  "slug": "last30days-skill-cn",
+  "displayName": "Last30Days CN",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775094489324,
+    "commit": "https://github.com/openclaw/skills/commit/bde49afc1b3cbd18973f78d9712e375245de056b"
+  },
+  "history": []
+}

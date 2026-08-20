@@ -1,0 +1,468 @@
+# Visual style presets for poster generation
+#
+# Design philosophy: Each preset is not just a label — it describes a complete
+# sensory experience. Style is defined by three layers:
+#   1. TEXTURE & MATERIALITY — what does it feel like to touch? (paper, glass, concrete, silk)
+#   2. LIGHT & ATMOSPHERE — how does light behave? (diffused, harsh, glowing, filtered)
+#   3. EMOTIONAL TONE — what mood does it evoke? (confident calm, electric energy, quiet dignity)
+#
+# The negative_constraints ensure style purity by preventing cross-contamination
+# between aesthetics (e.g., retro must never feel digital-clean).
+
+presets:
+  minimalist:
+    name: "Minimalist"
+    description: "Clean lines, ample white space, limited color palette, elegant typography"
+    style_description: >
+      Minimalist design in the tradition of Swiss International Style and Bauhaus.
+      The overall feeling is one of confident calm — as if every pixel has been questioned
+      and only the essential survived. The poster should feel like a perfectly composed
+      gallery piece: silent, precise, and authoritative.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: The surface feels like smooth matte paper or a gallery wall.
+      No visible texture, no grain, no noise. Pure, flat, pristine surfaces.
+      Every edge is razor-sharp, every shape is mathematically precise.
+
+      LIGHT & ATMOSPHERE: Even, ambient light — no shadows, no highlights, no depth cues.
+      The image exists in a dimensionless, perfectly lit space. Colors are matte,
+      never glossy or reflective.
+
+      COMPOSITION: Use a maximum of 3 colors. Negative space is not empty — it is the
+      dominant design element, giving the remaining elements room to breathe.
+      Typography IS the visual. Geometric shapes only if they serve composition.
+      Every element must justify its existence; if in doubt, remove it.
+    negative_constraints: >
+      AVOID: gradients, drop shadows, 3D effects, decorative borders, ornamental elements,
+      busy patterns, textures, more than 3 colors, clipart, stock photography, rounded playful shapes,
+      anything that feels decorative rather than functional.
+    title_font_style: "thin or light weight sans-serif, uppercase, wide letter-spacing — the kind of typography you'd see in a museum"
+    body_font_style: "light weight sans-serif, regular case, generous line-height"
+    suggested_palettes:
+      - ["#000000", "#FFFFFF", "#E53935"]
+      - ["#212121", "#FAFAFA", "#1565C0"]
+      - ["#263238", "#ECEFF1", "#FF6F00"]
+      - ["#1A1A1A", "#F5F5F5", "#00BFA5"]
+
+  retro:
+    name: "Retro / Vintage"
+    description: "70s-80s nostalgia, warm tones, textured backgrounds, bold serif fonts"
+    style_description: >
+      Vintage retro design that feels like a well-loved poster found in a record store.
+      The emotional quality is warm nostalgia — colors feel sun-faded, edges feel hand-cut,
+      everything has the gentle imperfection of pre-digital craftsmanship. You should
+      almost be able to smell the old paper and printer's ink.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: The surface should feel like aged kraft paper or a worn cardboard
+      record sleeve. Visible paper grain or fiber texture throughout. Colors look like they
+      were screen-printed with slightly thick ink — you can almost feel the raised edges
+      where ink pools. Slight misregistration between color layers (1-2px offset) gives
+      authentic screen-print character.
+
+      LIGHT & ATMOSPHERE: Warm, golden-hour warmth pervades everything. Colors are slightly
+      desaturated as if the poster has been hanging in a sunny shop window for years.
+      No harsh digital precision — everything feels softened by time.
+
+      DETAILS: Halftone dot patterns in gradients (visible at close inspection). Rounded shapes
+      and retro illustration style. Decorative borders or frames. Starburst or sunburst elements
+      radiate analog energy. Color bleeding where different inks meet.
+    negative_constraints: >
+      AVOID: clean digital aesthetics, sharp vector perfection, neon colors, modern flat design,
+      glossy/reflective effects, cool blue tones, minimalist layouts, monospace fonts,
+      anything that looks like it was made on a computer after 2000.
+    title_font_style: "bold retro serif or slab serif, with inline, shadow, or 3D block letter effects — like vintage woodblock type"
+    body_font_style: "rounded or geometric sans-serif, slightly condensed — like old diner menus"
+    suggested_palettes:
+      - ["#D84315", "#FFF8E1", "#4E342E"]
+      - ["#F57F17", "#FFF3E0", "#BF360C"]
+      - ["#E65100", "#FFFDE7", "#33691E"]
+      - ["#AD1457", "#FFF9C4", "#4A148C"]
+
+  cyberpunk:
+    name: "Cyberpunk / Neon"
+    description: "Dark backgrounds, neon glows, futuristic tech aesthetic, high contrast"
+    style_description: >
+      Cyberpunk aesthetic drawn from the rain-soaked neon cityscapes of Blade Runner
+      and the electric chaos of Akira. The feeling is urban midnight electricity —
+      a dark world illuminated only by the bleeding glow of neon signs. Everything
+      vibrates with barely contained energy, as if the poster itself is a screen
+      flickering in a dark alley.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: Dark surfaces feel like wet asphalt or brushed black metal.
+      Neon elements glow with a soft, bleeding halo — light bleeds and refracts through
+      what feels like humid night air. Chrome and holographic surfaces catch light with
+      sharp, electric reflections. The overall surface quality shifts between matte darkness
+      and blinding luminescence.
+
+      LIGHT & ATMOSPHERE: Light comes ONLY from neon sources — there is no ambient daylight.
+      Neon glow casts colored light onto surrounding surfaces (color spill). Elements farther
+      from light sources fade into pure black. The atmosphere feels thick with haze or mist
+      that catches and scatters the neon light.
+
+      DETAILS: Glitch effects, scan lines, or CRT artifacts as subtle texture overlays.
+      Futuristic UI-inspired frames or HUD elements. Circuit-board patterns as decoration.
+      The gap between light and shadow is extreme — no mid-tones.
+    negative_constraints: >
+      AVOID: warm natural colors, organic/botanical shapes, pastoral/countryside imagery,
+      hand-drawn/watercolor elements, light backgrounds, vintage aesthetics, muted/pastel tones,
+      watercolor textures, serif fonts, anything that feels warm, cozy, or natural.
+    title_font_style: "futuristic sans-serif or monospace, with electric neon glow that bleeds light into surrounding darkness"
+    body_font_style: "monospace or condensed sans-serif, styled like a tech terminal readout"
+    suggested_palettes:
+      - ["#E040FB", "#0D0D0D", "#00E5FF"]
+      - ["#76FF03", "#1A1A2E", "#FF1744"]
+      - ["#00B0FF", "#0A0A0A", "#FF6D00"]
+      - ["#EA80FC", "#121212", "#64FFDA"]
+
+  watercolor:
+    name: "Watercolor / Artistic"
+    description: "Soft watercolor textures, organic shapes, artistic hand-painted feel"
+    style_description: >
+      Artistic watercolor style that feels like walking through a bright, airy gallery
+      of hand-painted originals. The emotional quality is gentle warmth and effortless
+      elegance — nothing is forced, everything flows. Colors bloom and bleed into each
+      other the way real watercolor pigments find their own path on wet paper.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: The surface IS textured cold-press watercolor paper — you can
+      see the subtle tooth of the paper fiber through the washes of color. Paint pooling
+      is visible: pigment concentrates at the edges of each wash, creating natural dark
+      outlines where the water evaporated. Some areas are deliberately left as bare white
+      paper, showing the artist's restraint.
+
+      LIGHT & ATMOSPHERE: Light feels like diffused morning sunlight through a studio window.
+      Colors are luminous and translucent — you can sense the white paper glowing through
+      the pigment layers. The atmosphere is airy, with a sense of openness and breath.
+
+      DETAILS: Organic, flowing shapes with the naturally uneven edges of real brushwork.
+      Color bleeds and blooms where two wet areas meet. Botanical or nature-inspired
+      decorative elements (leaves, flowers, vines) painted in the same watercolor language.
+      Nothing looks computer-generated — every mark feels like it came from a human hand.
+    negative_constraints: >
+      AVOID: sharp geometric edges, digital/tech aesthetics, neon colors, dark backgrounds,
+      heavy bold sans-serif typography, metallic effects, pixel-art, rigid grid layouts,
+      anything that feels mechanical, cold, or computer-perfect.
+    title_font_style: "brush script or hand-lettered style — organic strokes that feel like they were painted with a real brush"
+    body_font_style: "light serif or humanist sans-serif, elegant and quietly beautiful"
+    suggested_palettes:
+      - ["#1565C0", "#FAFAFA", "#43A047"]
+      - ["#AD1457", "#FFF8E1", "#6A1B9A"]
+      - ["#00695C", "#FFF3E0", "#E65100"]
+      - ["#283593", "#FCE4EC", "#C62828"]
+
+  corporate:
+    name: "Corporate / Professional"
+    description: "Business-appropriate, structured grid layout, authoritative and trustworthy"
+    style_description: >
+      Professional corporate design that communicates institutional confidence.
+      The feeling is a well-organized annual report or a Fortune 500 company's keynote
+      slide — polished, trustworthy, and deliberately understated. Power is expressed
+      through restraint and structure, never through visual excess.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: Surfaces feel like premium coated paper — smooth, crisp,
+      professional. If photography is used, it has the quality of an expensive headshot
+      or architectural photograph. Everything feels expensive but never flashy.
+
+      LIGHT & ATMOSPHERE: Clean, professional lighting — soft directional light from
+      the upper left, the way a professional photographer would light a corporate portrait.
+      No dramatic shadows, no atmospheric haze. The light says "we have nothing to hide."
+
+      COMPOSITION: Clean grid-based layout with invisible but strong alignment.
+      Geometric shapes for section dividers or accent blocks — rectangles, not circles.
+      Subtle linear gradients allowed for depth. Photography-centric when imagery is needed.
+      Conservative color usage — colors serve brand identity, not decoration.
+    negative_constraints: >
+      AVOID: playful illustrations, casual/handwritten fonts, neon colors, grunge textures,
+      overly creative layouts, comic-style graphics, watercolor effects, anime elements,
+      anything that could look unprofessional in a boardroom.
+    title_font_style: "medium or bold weight geometric sans-serif — the kind of font you'd see on a bank's facade"
+    body_font_style: "regular weight sans-serif, highly readable with comfortable line-height"
+    suggested_palettes:
+      - ["#1565C0", "#FFFFFF", "#212121"]
+      - ["#00695C", "#FAFAFA", "#37474F"]
+      - ["#283593", "#F5F5F5", "#455A64"]
+      - ["#0D47A1", "#FFFFFF", "#1B5E20"]
+
+  bold_modern:
+    name: "Bold Modern"
+    description: "High impact, oversized type, strong color blocks, dynamic composition"
+    style_description: >
+      Bold contemporary design that hits you like a billboard at highway speed.
+      The feeling is pure adrenaline — oversized everything, maximum contrast,
+      zero subtlety. This is design that doesn't ask for attention, it seizes it.
+      Think Nike campaigns, Spotify Wrapped, Supreme drops.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: Surfaces are smooth, digital-native, and screen-optimized.
+      Colors are at maximum saturation — the kind of vivid that makes your phone screen
+      look like it's glowing brighter. Everything has the crispness of a Retina display.
+
+      LIGHT & ATMOSPHERE: No atmospheric effects — this is purely graphic, not photographic.
+      Light doesn't exist as a source; instead, color contrast creates the visual energy.
+      The space is flat and two-dimensional by design — depth comes from scale contrast
+      (huge vs. tiny) not from perspective.
+
+      COMPOSITION: Typography IS the visual — oversized, heavy-weight, possibly bleeding
+      off edges or cropped by the frame. Strong saturated color blocks filling large areas.
+      Dynamic diagonal or asymmetric layouts that feel kinetic, as if elements are still
+      in motion. Text may overlap or interact with imagery. Nothing is centered politely.
+    negative_constraints: >
+      AVOID: muted colors, thin/lightweight fonts, excessive whitespace, delicate illustrations,
+      subtle gradients, traditional centered layouts, serif fonts, watercolor textures, pastel tones,
+      anything that whispers when it should shout.
+    title_font_style: "extra bold or black weight sans-serif, comically large, possibly cropped by edges — the word IS the poster"
+    body_font_style: "medium weight condensed sans-serif, all-caps"
+    suggested_palettes:
+      - ["#FF1744", "#000000", "#FFFFFF"]
+      - ["#FFEA00", "#212121", "#FFFFFF"]
+      - ["#00E676", "#1A1A1A", "#FFFFFF"]
+      - ["#2979FF", "#000000", "#FFD600"]
+
+  japanese_anime:
+    name: "Japanese Anime / Manga"
+    description: "Anime-inspired art style, dynamic composition, vivid colors, action energy"
+    style_description: >
+      Japanese anime-inspired visual language with the kinetic energy of a manga splash page.
+      The feeling is pure dynamic excitement — everything is in mid-action, mid-explosion,
+      mid-transformation. Colors are vivid and unapologetic, compositions are dramatic,
+      and there's always a sense that something incredible is about to happen.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: The surface has the quality of high-quality anime cel art —
+      smooth flat color fills bounded by clean, confident outlines. Colors transition in
+      the cel-shading style: distinct tonal steps rather than smooth gradients.
+      Line art is bold and varies in weight — thicker for foreground, thinner for detail.
+
+      LIGHT & ATMOSPHERE: Dramatic anime-style lighting — strong rim light creates a bright
+      edge around characters. Lens flares, sparkle particles, and light beam effects add
+      magical/dramatic energy. Highlights are small, sharp, and white (the anime "eye sparkle"
+      language applies to all surfaces). Backgrounds may use speed lines or radial bursts
+      to create motion energy even in a still image.
+
+      DETAILS: Dynamic perspective with foreshortening — fists punching toward camera,
+      dramatic low-angle hero shots. Action lines and speed lines radiating from the focal point.
+      Vivid, fully saturated colors. Character-centric composition when applicable.
+    negative_constraints: >
+      AVOID: photorealistic imagery, corporate aesthetics, muted earth tones, rigid grid layouts,
+      serif fonts, stock photography, Western comic styles, watercolor textures,
+      anything static, calm, or restrained.
+    title_font_style: "bold dynamic lettering with perspective, angle, or impact effect — like a manga sound effect"
+    body_font_style: "clean rounded sans-serif"
+    suggested_palettes:
+      - ["#E53935", "#FFFFFF", "#1A237E"]
+      - ["#FF6F00", "#FFF8E1", "#311B92"]
+      - ["#D500F9", "#000000", "#FFEA00"]
+      - ["#1B5E20", "#FFF8E1", "#E53935"]
+
+  chinese_traditional:
+    name: "Chinese Traditional / 国风"
+    description: "Traditional Chinese aesthetics, ink wash style, classical motifs, refined elegance"
+    style_description: >
+      Traditional Chinese artistic style (国风) rooted in the philosophy of ink wash painting.
+      The feeling is one of quiet dignity, deliberate restraint, and deep cultural resonance.
+      Unlike Western watercolor's spontaneous charm, 国风 is about controlled mastery —
+      each brushstroke is the result of years of practice, each blank space is an intentional
+      invitation for the viewer's imagination. The poster should feel like it could hang
+      in a scholar's study, timeless and unhurried.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: The surface IS rice paper (宣纸) — slightly warm white with
+      visible fiber texture. Ink wash (水墨) renders in the authentic way: darkest at the
+      brush's point of contact, gradually fading to pale gray as the ink disperses through
+      wet paper. When color is used, it has the transparent, luminous quality of traditional
+      Chinese mineral pigments (国画颜料) — never opaque, always letting the paper glow through.
+
+      LIGHT & ATMOSPHERE: Light is implied, never rendered literally. The atmosphere is
+      misty and ethereal, like a mountain landscape viewed through morning fog (烟雨).
+      Depth is created through ink density — darker elements feel closer, lighter elements
+      recede into the mist. The overall feeling is of infinite space contained in a finite frame.
+
+      CULTURAL ELEMENTS: Red seals (印章) as compositional accents — small, precise, authentic.
+      Classical motifs used with cultural accuracy: clouds (祥云) for auspicious occasions,
+      mountains and water (山水) for landscape, bamboo (竹) for integrity, plum blossoms (梅花)
+      for resilience. Generous blank space (留白) is the most important compositional element —
+      it is not emptiness but possibility.
+
+      COMPOSITION: Asymmetric harmony inspired by traditional Chinese painting principles.
+      Elements are balanced by visual weight, not by geometric symmetry.
+    negative_constraints: >
+      AVOID: neon colors, digital/tech aesthetics, Western typography, photorealism,
+      bold modern graphics, gradient meshes, anime style, sharp geometric patterns,
+      sans-serif-only designs, anything that feels rushed, loud, or commercially aggressive.
+    title_font_style: "calligraphic brush style or elegant Song typeface (宋体) — each stroke should feel deliberate and cultivated"
+    body_font_style: "regular weight Kai typeface (楷体) or clean sans-serif for readability"
+    suggested_palettes:
+      - ["#B71C1C", "#FFF8E1", "#212121"]
+      - ["#1B5E20", "#FFF3E0", "#4E342E"]
+      - ["#0D47A1", "#FFFDE7", "#37474F"]
+      - ["#BF360C", "#FBE9E7", "#1A237E"]
+
+  art_deco:
+    name: "Art Deco"
+    description: "1920s-30s elegance, geometric patterns, gold accents, luxury feel"
+    style_description: >
+      Art Deco style channeling the precise glamour of the Chrysler Building lobby and
+      Gatsby-era ballroom invitations. The feeling is geometric opulence — luxury expressed
+      not through organic abundance but through mathematical perfection. Every line is
+      deliberate, every angle is calculated, and gold catches the light with the confidence
+      of old money.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: Surfaces feel like polished marble, brushed gold leaf, and
+      lacquered black enamel. Metallic gold (#C9A84C or #D4AF37) doesn't just appear as
+      a color — it shimmers with the depth of actual metal. Backgrounds feel like dark
+      velvet or polished obsidian. The overall tactile impression is of entering a
+      luxury hotel from 1928.
+
+      LIGHT & ATMOSPHERE: Light catches metallic surfaces with sharp, directional highlights.
+      The atmosphere is warm but not soft — it's the amber glow of champagne, not sunlight.
+      Shadows are deep and precise, never fuzzy. Everything exists in a world lit by
+      chandeliers and art deco wall sconces.
+
+      DETAILS: Strong geometric patterns — chevrons, sunbursts, fan shapes, zigzag borders.
+      Perfect bilateral symmetry in decorative elements. Tall, narrow proportions in typography
+      and architectural elements. Repeating geometric motifs create rhythm and opulence.
+    negative_constraints: >
+      AVOID: casual/playful elements, organic/flowing shapes, bright primary colors,
+      digital aesthetics, rough textures, hand-drawn elements, asymmetric layouts,
+      anything that feels informal, spontaneous, or budget-conscious.
+    title_font_style: "tall, narrow elegant serif with Art Deco geometric precision — each letter feels like it's carved in gold"
+    body_font_style: "light weight serif or geometric sans-serif, uppercase with wide letter-spacing"
+    suggested_palettes:
+      - ["#C9A84C", "#0D0D0D", "#F5F0E1"]
+      - ["#D4AF37", "#1B2838", "#FAFAFA"]
+      - ["#B8860B", "#1A1A2E", "#E8E0D0"]
+
+  flat_design:
+    name: "Flat Design"
+    description: "Bold flat colors, simple shapes, no shadows or gradients, modern and clean"
+    style_description: >
+      Modern flat design with the friendly clarity of a well-designed app icon.
+      The feeling is approachable intelligence — complex ideas made simple through
+      bold color and shape. Nothing tries to look like something else; a circle is
+      a circle, a color is a color. Honest, direct, modern.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: There IS no texture — that's the point. Surfaces are perfectly
+      smooth, perfectly matte, perfectly flat. No shadows suggest depth, no gradients suggest
+      light sources. The poster exists in a world where the third dimension doesn't exist.
+      This isn't a limitation — it's a liberation. Without depth, shape and color must carry
+      all meaning.
+
+      LIGHT & ATMOSPHERE: No light, no shadow, no atmosphere. Color IS the light.
+      Bright, fully saturated hues sit next to each other with crisp, clean edges.
+      The "atmosphere" is one of cheerful clarity — like a toy store for adults.
+
+      COMPOSITION: Simple geometric shapes (circles, rectangles, triangles) as building blocks.
+      Clean iconography with consistent stroke weight. Visual hierarchy through size and color
+      alone — no spatial tricks. The design should feel like it could be recreated in pure CSS.
+    negative_constraints: >
+      AVOID: any shadow (even subtle ones), any gradient (even subtle ones), any 3D effect,
+      photographic elements, textures, grunge, watercolor, hand-drawn elements, ornamental details,
+      anything that tries to simulate a physical material.
+    title_font_style: "bold geometric sans-serif (like Montserrat or Poppins) — clean and friendly, not cold"
+    body_font_style: "regular weight rounded sans-serif, friendly and readable"
+    suggested_palettes:
+      - ["#2196F3", "#FFFFFF", "#FF5722"]
+      - ["#4CAF50", "#FAFAFA", "#FF9800"]
+      - ["#9C27B0", "#F5F5F5", "#00BCD4"]
+      - ["#F44336", "#FFFFFF", "#3F51B5"]
+
+  glassmorphism:
+    name: "Glassmorphism"
+    description: "Frosted glass effect, translucent layers, vibrant gradient backgrounds"
+    style_description: >
+      Glassmorphism design inspired by Apple's frosted glass UI language. The feeling is
+      premium digital craftsmanship — as if the poster is a window into a luminous world,
+      with information floating on frosted glass panels that let the beauty behind them
+      bleed through, softened but still visible.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: Two distinct layers define the surface. BEHIND: a rich, vibrant,
+      multi-color gradient that flows and pulses with color. ABOVE: frosted glass panels
+      with the look of actual etched glass — semi-transparent white fill at 20-40% opacity,
+      a subtle 1px white border at 30% opacity, and a visible Gaussian blur effect that
+      softens whatever is behind the glass. You should be able to tell the glass is
+      translucent, not opaque. Edges of glass panels have generous rounded corners (16-24px).
+
+      LIGHT & ATMOSPHERE: The gradient background is the light source — it glows and
+      illuminates the glass panels from behind. Soft, diffused light-shadows beneath each
+      glass panel give them just enough lift to feel like they're floating. The atmosphere
+      is clean, premium, and slightly futuristic — like a concept for iOS 25.
+
+      TEXT: Always sits on glass panels for readability. White text preferred on darker gradients.
+      The glass ensures legibility while maintaining visual richness.
+    negative_constraints: >
+      AVOID: opaque solid backgrounds, hard edges without roundness, flat design without depth,
+      grunge textures, hand-drawn elements, vintage aesthetics, dark-only backgrounds without
+      gradient, serif fonts, anything that feels analog or physical.
+    title_font_style: "medium weight sans-serif (like SF Pro or Inter), white, clean — modern premium"
+    body_font_style: "light weight sans-serif, white or light gray against glass"
+    suggested_palettes:
+      - ["#FFFFFF", "#667EEA", "#764BA2"]
+      - ["#FFFFFF", "#F093FB", "#F5576C"]
+      - ["#FFFFFF", "#4FACFE", "#00F2FE"]
+
+  photography:
+    name: "Photography / Realistic"
+    description: "Full-bleed photo background, minimal text overlay, editorial magazine feel"
+    style_description: >
+      Photography-driven editorial design where the image tells 90% of the story.
+      The feeling is the opening spread of a premium magazine — Vogue, National Geographic,
+      or Monocle. The photograph is not decoration; it IS the design. Text is a quiet,
+      confident annotation, never competing with the image.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: The photograph should have the tonal richness and dynamic range
+      of a medium-format camera image. Rich shadows with visible detail, bright highlights
+      that don't clip. The image quality should make the viewer lean in. If there's a person,
+      you can almost count their eyelashes. If there's a landscape, you can feel the weather.
+
+      LIGHT & ATMOSPHERE: The photograph's own lighting IS the poster's atmosphere.
+      Natural light is preferred — golden hour warmth for inviting moods, overcast diffusion
+      for contemplative moods, harsh noon sun for raw energy. Color grading should be subtle
+      and purposeful: a slight push toward warmth or coolness, never the Instagram-filter
+      heavy-handedness.
+
+      TEXT OVERLAY: Minimal. Text floats over the photograph with one of these techniques
+      (choose the most appropriate):
+      - Semi-transparent dark band (30-50% opacity) behind text areas
+      - Text placed in naturally dark or simple areas of the photo
+      - Subtle text shadow or slight stroke for contrast
+      The text should feel like it was added by a magazine art director, not a social media app.
+    negative_constraints: >
+      AVOID: graphic design elements that compete with photography, bold geometric shapes,
+      illustration, flat colors, heavy text, clipart, stock-photo-quality imagery (use
+      premium quality only), heavy filters, anything that makes the photo feel secondary.
+    title_font_style: "clean serif or sans-serif, white or light cream — quiet confidence, never shouting"
+    body_font_style: "light weight sans-serif, white with subtle shadow for readability"
+    suggested_palettes:
+      - ["#FFFFFF", "#1A1A1A", "#E0A854"]
+      - ["#FFFFFF", "#2C3E50", "#E74C3C"]
+      - ["#F5F0E1", "#0D0D0D", "#C9A84C"]
+
+  graffiti:
+    name: "Graffiti / Street Art"
+    description: "Urban energy, spray paint textures, bold colors, raw authentic feel"
+    style_description: >
+      Street art and graffiti-inspired design that feels like it was wheat-pasted to a
+      concrete wall at 3am. The emotional quality is rebellious authenticity — raw, loud,
+      unapologetic, and dripping with attitude. This is design that doesn't care about
+      design rules. It follows the energy of the street: layered, chaotic, alive.
+    style_modifiers: >
+      TEXTURE & MATERIALITY: The background IS a wall — brick, concrete, or corrugated metal
+      with visible weathering, cracks, and grime. Spray paint sits on this surface with the
+      texture of actual aerosol — slightly fuzzy edges where paint mist drifts, drips running
+      down from thick areas, the subtle sheen of wet paint on rough surfaces. Stickers,
+      wheat-paste layers, and stencil marks overlap each other like geological strata of
+      street culture.
+
+      LIGHT & ATMOSPHERE: Harsh, uncontrolled light — like a camera flash or a streetlight
+      hitting a wall at night. Some areas are blown out, others are in deep shadow.
+      The atmosphere is urban nighttime: slightly gritty, slightly dangerous, completely alive.
+
+      DETAILS: Hand-drawn graffiti-style lettering for titles — thick, stylized, with personality.
+      Paint drips, splatters, and overspray are features, not defects. Collage-like layering:
+      elements overlap, partially obscure each other, exist at different "depths" on the wall.
+      Nothing is perfectly aligned. The imperfection IS the aesthetic.
+    negative_constraints: >
+      AVOID: clean layouts, corporate fonts, muted/pastel colors, perfect symmetry,
+      minimalist aesthetics, gallery-style presentation, watercolor, anything that looks
+      approved by a marketing department.
+    title_font_style: "bold graffiti-style lettering — thick hand-painted strokes with drips, splatters, and wild style energy"
+    body_font_style: "stencil or mono sans-serif, rough edges — like spray-painted through a cardboard cutout"
+    suggested_palettes:
+      - ["#FF1744", "#212121", "#FFEA00"]
+      - ["#00E676", "#1A1A1A", "#FF6D00"]
+      - ["#D500F9", "#0D0D0D", "#00E5FF"]

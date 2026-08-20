@@ -1,0 +1,20 @@
+{
+  "name": "AI交叉审查",
+  "installedAt": 1787228684090,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053082539056898048",
+  "examples_zh": [
+    "用另一个AI模型审查这段代码有没有Bug",
+    "让第二个模型交叉验证这个方案是否可行",
+    "用Claude审查GPT的回答是否正确"
+  ],
+  "examples_en": [
+    "Have a second AI model review this code for bugs",
+    "Cross-validate this solution with another model",
+    "Use Claude to review GPT's response for accuracy"
+  ],
+  "description_zh": "调用第二个 AI 模型交叉审查代码",
+  "description_en": "Cross-validate code with a second AI model",
+  "iconSource": "letter:auto"
+}

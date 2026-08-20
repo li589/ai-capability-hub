@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:global-market-entry-navigator",
+  "registry": "trae-remote-official",
+  "plugin_name": "global-market-entry-navigator",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "e3168335-7852-4d86-9bfd-7ca3b539170e",
+  "remote_installed_plugin_id": "0Z4POZ6KO6T-D3",
+  "checksum": "2a08d78d6ce88edf20c15e62e25d98e14a243a0919e85d081fa43e1db481c4b0",
+  "file_size": 29334,
+  "installed_at": 1787227200941
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Stealth Browser",
+  "installedAt": 1785784676754,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082740118388736",
+  "examples_zh": [
+    "在我负责的测试站点上验证 Cloudflare 挑战流程：使用持久会话登录，并截图记录每一步。",
+    "用有头浏览器访问我们的 DataDome 防护 QA 页面，完成登录回归测试并导出控制台日志。",
+    "为内部验证码兼容性环境运行检查，比较 undetected-chromedriver 与 Playwright stealth 的页面到达路径。"
+  ],
+  "examples_en": [
+    "On my own test site, validate the Cloudflare challenge flow with a persistent login session and screenshots for each step.",
+    "Use a headed browser against our DataDome-protected QA page, complete the login regression test, and export console logs.",
+    "Run checks in an internal CAPTCHA compatibility environment, comparing the page arrival paths for undetected-chromedriver and Playwright stealth."
+  ],
+  "description_zh": "四层反检测浏览器自动化，支持隐身登录与验证码绕过",
+  "description_en": "4-layer anti-detection browser automation with stealth login & CAPTCHA bypass",
+  "iconSource": "letter:auto"
+}

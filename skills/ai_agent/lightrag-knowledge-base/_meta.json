@@ -1,0 +1,11 @@
+{
+  "owner": "mosoonpi-ai",
+  "slug": "lightrag-knowledge-base",
+  "displayName": "LightRAG Knowledge Base",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775297199003,
+    "commit": "https://github.com/openclaw/skills/commit/57129f6b8be37162b9b41523d6545e216f76ef02"
+  },
+  "history": []
+}

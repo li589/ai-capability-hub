@@ -1,0 +1,36 @@
+# wechat-mp-suite 统一配置 (v1.0.2)
+# 所有模块从这里读取配置，不再硬编码
+
+app:
+  name: "微信公众号终极工作台"
+  version: "1.0.2"
+  debug: false
+  data_dir: "./output"
+
+search:
+  max_results: 10
+  request_delay_min_ms: 500
+  request_delay_max_ms: 1500
+  request_timeout_ms: 30000
+  retry_count: 2
+  sogou_cookie_url: "https://v.sogou.com/v?ie=utf8&query=&p=40030600"
+
+spider:
+  download_images: true
+  image_timeout: 15
+  parallel_downloads: 5
+  max_image_retries: 3
+  default_output: "./output"
+
+publisher:
+  default_theme: "lapis"
+  default_highlight: "solarized-light"
+  cover_width: 1080
+  cover_height: 864
+  wenyan_timeout: 60000
+
+typeset:
+  external_service: "https://edit.shiker.tech"
+  local_fallback: true
+  default_preset: "default"
+  service_timeout: 30000

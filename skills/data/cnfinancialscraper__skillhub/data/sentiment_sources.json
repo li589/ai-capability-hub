@@ -1,0 +1,1035 @@
+{
+ "_meta": {
+  "version": "7.0.0",
+  "updated_at": "2026-08-13",
+  "description": "全网舆情爬虫媒体源库 v6.0.0 — 财经媒体 / 财经垂直 / 自媒体 / 国际媒体 4 类 + 搜索引擎，全站支持 RSS",
+  "categories": [
+   "authoritative",
+   "financial_vertical",
+   "self_media",
+   "international",
+   "search_engine"
+  ]
+ },
+ "search_engines": [
+  {
+   "name": "duckduckgo",
+   "type": "search_engine",
+   "engine": "duckduckgo",
+   "credibility": 7,
+   "language": "multi",
+   "tags": [
+    "搜索引擎",
+    "隐私",
+    "零依赖"
+   ],
+   "url": "https://html.duckduckgo.com/html/",
+   "needs_api_key": false,
+   "enabled": true,
+   "rss_feeds": []
+  },
+  {
+   "name": "bing_html",
+   "type": "search_engine",
+   "engine": "bing_html",
+   "credibility": 6,
+   "language": "multi",
+   "tags": [
+    "搜索引擎"
+   ],
+   "url": "https://www.bing.com/search",
+   "needs_api_key": false,
+   "enabled": true,
+   "note": "HTML 解析，易反爬，仅作 fallback",
+   "rss_feeds": []
+  },
+  {
+   "name": "bing_api",
+   "type": "search_engine",
+   "engine": "bing_api",
+   "credibility": 9,
+   "language": "multi",
+   "tags": [
+    "搜索引擎",
+    "官方API"
+   ],
+   "url": "https://api.bing.microsoft.com/v7.0/search",
+   "needs_api_key": true,
+   "env_key": "BING_API_KEY",
+   "enabled": false,
+   "rss_feeds": []
+  },
+  {
+   "name": "google_api",
+   "type": "search_engine",
+   "engine": "google_api",
+   "credibility": 10,
+   "language": "multi",
+   "tags": [
+    "搜索引擎",
+    "官方API"
+   ],
+   "url": "https://www.googleapis.com/customsearch/v1",
+   "needs_api_key": true,
+   "env_keys": [
+    "GOOGLE_API_KEY",
+    "GOOGLE_CSE_ID"
+   ],
+   "enabled": false,
+   "rss_feeds": []
+  },
+  {
+   "name": "searxng",
+   "type": "search_engine",
+   "engine": "searxng",
+   "credibility": 6,
+   "language": "multi",
+   "tags": [
+    "元搜索",
+    "公共实例"
+   ],
+   "instance": "https://searx.be",
+   "needs_api_key": false,
+   "enabled": true,
+   "note": "公共实例可用性看具体实例",
+   "rss_feeds": []
+  },
+  {
+   "name": "baidu",
+   "type": "search_engine",
+   "engine": "baidu_html",
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "搜索引擎",
+    "中文",
+    "零依赖"
+   ],
+   "url": "https://www.baidu.com/s",
+   "needs_api_key": false,
+   "enabled": true,
+   "note": "中文财经召回最佳，无需 API Key"
+  },
+  {
+   "name": "sogou",
+   "type": "search_engine",
+   "engine": "sogou_html",
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "搜索引擎",
+    "中文"
+   ],
+   "url": "https://www.sogou.com/web",
+   "needs_api_key": false,
+   "enabled": true,
+   "note": "微信公众号内容检索入口"
+  }
+ ],
+ "authoritative": [
+  {
+   "name": "财联社",
+   "homepage": "https://www.cls.cn/",
+   "search_urls": [
+    "https://www.cls.cn/searchPage?type=telegram&keyword={kw}",
+    "https://www.cls.cn/searchPage?type=article&keyword={kw}"
+   ],
+   "telegraph_api": "https://www.cls.cn/nodeapi/updateTelegraphList",
+   "credibility": 9,
+   "language": "zh",
+   "tags": [
+    "财联社",
+    "快讯"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "华尔街见闻",
+   "homepage": "https://wallstreetcn.com/",
+   "search_urls": [
+    "https://wallstreetcn.com/search?keyword={kw}"
+   ],
+   "api_endpoints": [
+    "https://api-one.wallstcn.com/apimobile/v2/articles?keyword={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "财经垂直",
+    "全球市场"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "第一财经",
+   "homepage": "https://www.yicai.com/",
+   "search_urls": [
+    "https://www.yicai.com/search?keys={kw}"
+   ],
+   "credibility": 9,
+   "language": "zh",
+   "tags": [
+    "财经媒体",
+    "专业"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "财新网",
+   "homepage": "https://www.caixin.com/",
+   "search_urls": [
+    "https://search.caixin.com/search/all/{kw}.html"
+   ],
+   "credibility": 9,
+   "language": "zh",
+   "tags": [
+    "财经媒体",
+    "深度调查"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "21世纪经济报道",
+   "homepage": "https://m.21jingji.com/",
+   "search_urls": [
+    "https://search.21jingji.com/search/home.html?keyword={kw}"
+   ],
+   "credibility": 9,
+   "language": "zh",
+   "tags": [
+    "财经媒体",
+    "深度"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "经济观察报",
+   "homepage": "http://www.eeo.com.cn/",
+   "search_urls": [
+    "http://www.eeo.com.cn/search/index.html?keyword={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "财经媒体",
+    "评论"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "每日经济新闻",
+   "homepage": "https://www.nbd.com.cn/",
+   "search_urls": [
+    "https://www.nbd.com.cn/search/?keyword={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "财经媒体",
+    "日报"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "36氪",
+   "homepage": "https://36kr.com/",
+   "search_urls": [
+    "https://gateway.36kr.com/api/mis/nav/home/nav/rank/hot?keyword={kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "创投",
+    "科技"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "投中网",
+   "homepage": "https://www.chinaventure.com.cn/",
+   "search_urls": [
+    "https://www.chinaventure.com.cn/search?keyword={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "PE/VC",
+    "一级市场"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "虎嗅",
+   "homepage": "https://www.huxiu.com/",
+   "search_urls": [
+    "https://www.huxiu.com/search.html?keyword={kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "科技",
+    "评论"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "集思录",
+   "homepage": "https://www.jisilu.cn/",
+   "search_urls": [
+    "https://www.jisilu.cn/search.php?search={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "可转债",
+    "债券"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "同花顺财经",
+   "homepage": "https://www.10jqka.com.cn/",
+   "search_urls": [
+    "https://news.10jqka.com.cn/search/{kw}.html"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "财经垂直",
+    "行情"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "格隆汇",
+   "homepage": "https://www.gelonghui.com/",
+   "search_urls": [
+    "https://www.gelonghui.com/search?keyword={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "财经垂直",
+    "港股"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "金十数据",
+   "homepage": "https://www.jin10.com/",
+   "search_urls": [
+    "https://www.jin10.com/search.html?keyword={kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "财经垂直",
+    "快讯"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "钛媒体",
+   "homepage": "https://www.tmtpost.com/",
+   "search_urls": [
+    "https://www.tmtpost.com/search?keyword={kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "创投",
+    "科技"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "亿欧",
+   "homepage": "https://www.iyiou.com/",
+   "search_urls": [
+    "https://www.iyiou.com/search?keyword={kw}"
+   ],
+   "credibility": 6,
+   "language": "zh",
+   "tags": [
+    "创投",
+    "产业"
+   ],
+   "rss_feeds": []
+  }
+ ],
+ "financial_vertical": [
+  {
+   "name": "新浪财经",
+   "homepage": "https://finance.sina.com.cn/",
+   "search_urls": [
+    "https://search.sina.com.cn/?q={kw}&c=finance"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "财经门户"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "腾讯财经",
+   "homepage": "https://finance.qq.com/",
+   "search_urls": [
+    "https://new.qq.com/so/m_finance?query={kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "财经门户"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "网易财经",
+   "homepage": "https://money.163.com/",
+   "search_urls": [
+    "https://www.163.com/search?keyword={kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "财经门户"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "东方财富网",
+   "homepage": "https://www.eastmoney.com/",
+   "search_urls": [
+    "https://so.eastmoney.com/news/s?keyword={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "财经门户"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "证券之星",
+   "homepage": "https://www.stockstar.com/",
+   "search_urls": [
+    "https://www.stockstar.com/search/?keyword={kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "财经垂直"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "中金在线",
+   "homepage": "https://www.cnfol.com/",
+   "search_urls": [
+    "https://www.cnfol.com/search?keyword={kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "财经门户"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "和讯网",
+   "homepage": "https://www.hexun.com/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Ahexun.com%20{kw}",
+    "https://www.baidu.com/s?wd=和讯网%20{kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "综合财经",
+    "期货"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "金融界",
+   "homepage": "https://www.jrj.com.cn/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Ajrj.com.cn%20{kw}",
+    "https://www.baidu.com/s?wd=金融界%20{kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "综合财经",
+    "银行"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "凤凰财经",
+   "homepage": "https://finance.ifeng.com/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Afinance.ifeng.com%20{kw}",
+    "https://www.baidu.com/s?wd=凤凰财经%20{kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "综合财经",
+    "港股"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "汇通网",
+   "homepage": "https://www.fx678.com/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Afx678.com%20{kw}",
+    "https://www.baidu.com/s?wd=汇通网%20{kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "外汇",
+    "贵金属"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "金投网",
+   "homepage": "https://www.cngold.org/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Acngold.org%20{kw}",
+    "https://www.baidu.com/s?wd=金投网%20{kw}"
+   ],
+   "credibility": 6,
+   "language": "zh",
+   "tags": [
+    "黄金",
+    "大宗商品"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "英为财情中文",
+   "homepage": "https://cn.investing.com/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Acn.investing.com%20{kw}",
+    "https://www.baidu.com/s?wd=英为财情中文%20{kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "全球行情",
+    "财经日历"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "智通财经",
+   "homepage": "https://www.zhitongcaijing.com/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Azhitongcaijing.com%20{kw}",
+    "https://www.baidu.com/s?wd=智通财经%20{kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "港股",
+    "美股"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "界面新闻",
+   "homepage": "https://www.jiemian.com/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Ajiemian.com%20{kw}",
+    "https://www.baidu.com/s?wd=界面新闻%20{kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "综合财经",
+    "公司"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "蓝鲸财经",
+   "homepage": "https://www.lanjinger.com/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Alanjinger.com%20{kw}",
+    "https://www.baidu.com/s?wd=蓝鲸财经%20{kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "财经记者",
+    "银行保险"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "富途资讯",
+   "homepage": "https://news.futunn.com/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Afutunn.com%20{kw}",
+    "https://www.baidu.com/s?wd=富途资讯%20{kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "港股",
+    "美股",
+    "社区"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "阿思达克财经",
+   "homepage": "https://www.aastocks.com/tc/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Aaastocks.com%20{kw}",
+    "https://www.baidu.com/s?wd=阿思达克财经%20{kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "港股",
+    "AH股"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  },
+  {
+   "name": "上海有色网",
+   "homepage": "https://www.smm.cn/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd=site%3Asmm.cn%20{kw}",
+    "https://www.baidu.com/s?wd=上海有色网%20{kw}"
+   ],
+   "credibility": 7,
+   "language": "zh",
+   "tags": [
+    "有色金属",
+    "现货"
+   ],
+   "rss_feeds": [],
+   "enabled": true
+  }
+ ],
+ "self_media": [
+  {
+   "name": "新浪财经微博",
+   "homepage": "https://finance.sina.com.cn/",
+   "weibo_accounts": [
+    "新浪财经",
+    "21世纪经济报道"
+   ],
+   "search_urls": [
+    "https://s.weibo.com/article?q={kw}"
+   ],
+   "credibility": 6,
+   "language": "zh",
+   "tags": [
+    "微博",
+    "自媒体"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "微信公众号（财经类）",
+   "homepage": "https://mp.weixin.qq.com/",
+   "search_urls": [
+    "https://weixin.sogou.com/weixin?type=2&query={kw}"
+   ],
+   "credibility": 5,
+   "language": "zh",
+   "tags": [
+    "微信",
+    "自媒体",
+    "需搜狗引擎"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "今日头条",
+   "homepage": "https://www.toutiao.com/",
+   "search_urls": [
+    "https://so.toutiao.com/search?keyword={kw}"
+   ],
+   "credibility": 5,
+   "language": "zh",
+   "tags": [
+    "自媒体",
+    "算法推荐"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "百家号",
+   "homepage": "https://baijiahao.baidu.com/",
+   "search_urls": [
+    "https://www.baidu.com/s?wd={kw}+site%3Abaijiahao.baidu.com"
+   ],
+   "credibility": 4,
+   "language": "zh",
+   "tags": [
+    "自媒体",
+    "百度"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "雪球（用户讨论）",
+   "homepage": "https://xueqiu.com/",
+   "search_urls": [
+    "https://xueqiu.com/k?q={kw}"
+   ],
+   "api_endpoints": [
+    "https://xueqiu.com/query/v1/symbol/search/status.json?count=20&keyword={kw}"
+   ],
+   "credibility": 6,
+   "language": "zh",
+   "tags": [
+    "投资社区",
+    "用户讨论"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "东方财富股吧",
+   "homepage": "https://guba.eastmoney.com/",
+   "search_urls": [
+    "https://guba.eastmoney.com/search?keyword={kw}"
+   ],
+   "credibility": 4,
+   "language": "zh",
+   "tags": [
+    "投资社区",
+    "股吧"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "知乎",
+   "homepage": "https://www.zhihu.com/",
+   "search_urls": [
+    "https://www.zhihu.com/search?type=content&q={kw}"
+   ],
+   "credibility": 6,
+   "language": "zh",
+   "tags": [
+    "问答社区",
+    "用户"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "小红书",
+   "homepage": "https://www.xiaohongshu.com/",
+   "search_urls": [
+    "https://www.xiaohongshu.com/search_result?keyword={kw}"
+   ],
+   "credibility": 4,
+   "language": "zh",
+   "tags": [
+    "社交",
+    "生活"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "B站财经",
+   "homepage": "https://www.bilibili.com/",
+   "search_urls": [
+    "https://search.bilibili.com/article?keyword={kw}"
+   ],
+   "credibility": 5,
+   "language": "zh",
+   "tags": [
+    "视频",
+    "自媒体"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "抖音财经",
+   "homepage": "https://www.douyin.com/",
+   "search_urls": [
+    "https://www.douyin.com/search/{kw}"
+   ],
+   "credibility": 4,
+   "language": "zh",
+   "tags": [
+    "视频",
+    "算法推荐"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "百度贴吧（财经类）",
+   "homepage": "https://tieba.baidu.com/",
+   "search_urls": [
+    "https://tieba.baidu.com/f/search/res?kw={kw}"
+   ],
+   "credibility": 3,
+   "language": "zh",
+   "tags": [
+    "论坛",
+    "用户"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "快手财经",
+   "homepage": "https://www.kuaishou.com/",
+   "search_urls": [
+    "https://www.kuaishou.com/search/video?searchKey={kw}"
+   ],
+   "credibility": 3,
+   "language": "zh",
+   "tags": [
+    "视频",
+    "自媒体"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  },
+  {
+   "name": "富途牛牛社区",
+   "homepage": "https://www.futunn.com/",
+   "search_urls": [
+    "https://www.futunn.com/search?keyword={kw}"
+   ],
+   "credibility": 5,
+   "language": "zh",
+   "tags": [
+    "港股",
+    "美股",
+    "社区"
+   ],
+   "rss_feeds": [],
+   "weibo_accounts": []
+  }
+ ],
+ "international": [
+  {
+   "name": "Reuters",
+   "homepage": "https://www.reuters.com/",
+   "search_urls": [
+    "https://www.reuters.com/search/news?query={kw}"
+   ],
+   "credibility": 10,
+   "language": "en",
+   "tags": [
+    "国际通讯社"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "Bloomberg",
+   "homepage": "https://www.bloomberg.com/",
+   "search_urls": [
+    "https://www.bloomberg.com/search?query={kw}"
+   ],
+   "credibility": 10,
+   "language": "en",
+   "tags": [
+    "国际财经"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "Financial Times",
+   "homepage": "https://www.ft.com/",
+   "search_urls": [
+    "https://www.ft.com/search?q={kw}"
+   ],
+   "credibility": 10,
+   "language": "en",
+   "tags": [
+    "国际财经"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "Wall Street Journal",
+   "homepage": "https://www.wsj.com/",
+   "search_urls": [
+    "https://www.wsj.com/search?query={kw}"
+   ],
+   "credibility": 10,
+   "language": "en",
+   "tags": [
+    "国际财经"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "路透中文",
+   "homepage": "https://cn.reuters.com/",
+   "search_urls": [
+    "https://cn.reuters.com/search?query={kw}"
+   ],
+   "credibility": 9,
+   "language": "zh",
+   "tags": [
+    "国际通讯社"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "日经中文网",
+   "homepage": "https://cn.nikkei.com/",
+   "search_urls": [
+    "https://cn.nikkei.com/search?query={kw}"
+   ],
+   "credibility": 9,
+   "language": "zh",
+   "tags": [
+    "国际媒体",
+    "日本"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "HKET（香港经济日报）",
+   "homepage": "https://www.hket.com/",
+   "search_urls": [
+    "https://www.hket.com/search/?q={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "港澳媒体"
+   ],
+   "rss_feeds": []
+  },
+  {
+   "name": "FT中文网",
+   "homepage": "https://www.ftchinese.com/",
+   "search_urls": [
+    "https://www.ftchinese.com/search?keyword={kw}"
+   ],
+   "rss_feeds": [
+    "https://www.ftchinese.com/rss/feed"
+   ],
+   "credibility": 10,
+   "language": "zh",
+   "tags": [
+    "国际财经",
+    "中文"
+   ],
+   "reachable_cn": true
+  },
+  {
+   "name": "CNBC",
+   "homepage": "https://www.cnbc.com/",
+   "search_urls": [
+    "https://www.cnbc.com/search/?query={kw}"
+   ],
+   "rss_feeds": [
+    "https://www.cnbc.com/id/100003114/device/rss/rss.html"
+   ],
+   "credibility": 9,
+   "language": "en",
+   "tags": [
+    "国际财经"
+   ],
+   "reachable_cn": false
+  },
+  {
+   "name": "MarketWatch",
+   "homepage": "https://www.marketwatch.com/",
+   "search_urls": [
+    "https://www.marketwatch.com/search?q={kw}"
+   ],
+   "credibility": 8,
+   "language": "en",
+   "tags": [
+    "国际财经"
+   ],
+   "reachable_cn": false,
+   "rss_feeds": []
+  },
+  {
+   "name": "联合早报",
+   "homepage": "https://www.zaobao.com/",
+   "search_urls": [
+    "https://www.zaobao.com.sg/search?query={kw}"
+   ],
+   "credibility": 9,
+   "language": "zh",
+   "tags": [
+    "东南亚华文"
+   ],
+   "reachable_cn": true,
+   "rss_feeds": []
+  },
+  {
+   "name": "香港信报",
+   "homepage": "https://www.hkej.com/",
+   "search_urls": [
+    "https://www.hkej.com/search?keyword={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "港澳媒体"
+   ],
+   "reachable_cn": true,
+   "rss_feeds": []
+  },
+  {
+   "name": "香港01",
+   "homepage": "https://www.hk01.com/",
+   "search_urls": [
+    "https://www.hk01.com/search?q={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "港澳媒体"
+   ],
+   "reachable_cn": true,
+   "rss_feeds": []
+  },
+  {
+   "name": "大公报",
+   "homepage": "https://www.takungpao.com/",
+   "search_urls": [
+    "https://www.takungpao.com/search/?keyword={kw}"
+   ],
+   "credibility": 8,
+   "language": "zh",
+   "tags": [
+    "港澳媒体"
+   ],
+   "reachable_cn": true,
+   "rss_feeds": []
+  }
+ ]
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "dawnlck",
+  "slug": "okr",
+  "displayName": "OKR for clawbot",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773066918618,
+    "commit": "https://github.com/openclaw/skills/commit/18627040d6e947f3e83024090ba15da968a17407"
+  },
+  "history": []
+}

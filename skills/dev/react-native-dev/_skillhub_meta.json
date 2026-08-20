@@ -1,0 +1,21 @@
+{
+  "name": "React Native 开发",
+  "installedAt": 1785864411583,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082634047590400",
+  "examples_zh": [
+    "用 Expo 创建一个新项目",
+    "实现 React Native 页面跳转动画",
+    "帮我优化这个 React Native 列表性能"
+  ],
+  "examples_en": [
+    "Create a new project with Expo",
+    "Implement page transition animations in React Native",
+    "Optimize this React Native list performance"
+  ],
+  "description_zh": "React Native 跨平台开发指南",
+  "description_en": "React Native & Expo development guide",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/react-native-dev.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/react-native-dev.svg"
+}

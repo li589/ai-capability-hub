@@ -1,0 +1,11 @@
+{
+  "name": "同花顺iFinD金融数据查询",
+  "installedAt": 1787227518072,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2083031467671093248",
+  "description_zh": "同花顺iFinD金融数据查询，查询股票、基金、宏观经济、行业经济、新闻公告、债券、港美股及指数板块数据；其中A股、基金、债券、指数支持日内高频/实时行情数据，同时支持智能选股、选基、宏观行业经济指标搜索、金融公告资讯搜索等服务。",
+  "description_en": "THS iFinD Financial Data Query: Access comprehensive data on stocks, funds, macroeconomic and industry indicators, news & announcements, bonds, Hong Kong & U.S. equities, and index sectors. Notably, A-shares, funds, bonds, and indices are supported with intraday high-frequency and real-time market data. The platform also offers a suite of intelligent services, including smart stock screening, fund selection, macro & industry indicator search, and financial news & announcement search.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_476963ee-072.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_476963ee-072.png"
+}

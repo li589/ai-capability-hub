@@ -1,0 +1,11 @@
+{
+  "owner": "axelhu",
+  "slug": "superpowers-parallel-agents",
+  "displayName": "Parallel Agents",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774515935682,
+    "commit": "https://github.com/openclaw/skills/commit/489347e89205d86f105700ec480db3e121066de0"
+  },
+  "history": []
+}

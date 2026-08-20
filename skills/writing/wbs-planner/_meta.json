@@ -1,0 +1,11 @@
+{
+  "owner": "ycz87",
+  "slug": "wbs-planner",
+  "displayName": "WBS Planner",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1771931503389,
+    "commit": "https://github.com/openclaw/skills/commit/013af414cf962da40830f3017d75096543ebbbd8"
+  },
+  "history": []
+}

@@ -1,0 +1,25 @@
+{
+  "name": "excel_screen_capture",
+  "description": "[Windows only] Take a screenshot of the Excel sheet with pagination.",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "fileAbsolutePath": {
+        "description": "Absolute path to the Excel file",
+        "type": "string"
+      },
+      "range": {
+        "description": "Range of cells to read in the Excel sheet (e.g., \"A1:C10\"). [default: first paging range]",
+        "type": "string"
+      },
+      "sheetName": {
+        "description": "Sheet name in the Excel file",
+        "type": "string"
+      }
+    },
+    "required": [
+      "fileAbsolutePath",
+      "sheetName"
+    ]
+  }
+}

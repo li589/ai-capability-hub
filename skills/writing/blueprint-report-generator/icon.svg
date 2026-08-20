@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg-blue-blueprint-report-generator" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5DA3E8"/>
+      <stop offset="100%" stop-color="#165296"/>
+    </linearGradient>
+    <linearGradient id="bg-orange-blueprint-report-generator" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A93C"/>
+      <stop offset="100%" stop-color="#DD7B2C"/>
+    </linearGradient>
+    <clipPath id="clip-blueprint-report-generator">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-blueprint-report-generator)">
+    <rect width="64" height="44" fill="url(#bg-blue-blueprint-report-generator)"/>
+    <rect y="44" width="64" height="20" fill="url(#bg-orange-blueprint-report-generator)"/>
+    <g fill="#FFFFFF" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+
+<rect x="14" y="8" width="36" height="32" rx="2" fill="none" stroke="#FFFFFF" stroke-width="2.8"/>
+<line x1="14" y1="18" x2="28" y2="18" stroke="#FFFFFF" stroke-width="2.2"/>
+<line x1="14" y1="28" x2="28" y2="28" stroke="#FFFFFF" stroke-width="2.2"/>
+<line x1="22" y1="8" x2="22" y2="40" stroke="#FFFFFF" stroke-width="2.2"/>
+<path d="M28 18 L42 32" stroke="#FFFFFF" stroke-width="2.2"/>
+<path d="M38 28 L46 36 L40 38 Z" fill="#FFFFFF"/>
+
+    </g>
+    <text x="32" y="58" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">eMES</text>
+  </g>
+</svg>

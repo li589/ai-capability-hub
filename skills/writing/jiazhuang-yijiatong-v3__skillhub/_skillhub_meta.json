@@ -1,0 +1,11 @@
+{
+  "slug": "jiazhuang-yijiatong-v3",
+  "name": "家装一价通",
+  "version": "1.1.0",
+  "installedAt": 1787228950947,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

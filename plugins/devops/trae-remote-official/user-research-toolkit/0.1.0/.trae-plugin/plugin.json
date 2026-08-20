@@ -1,0 +1,34 @@
+{
+  "name": "user-research-toolkit",
+  "version": "0.1.0",
+  "description": "面向产品、设计和用研团队的专业用户调研工具，支持问卷设计、访谈管理、数据分析与洞察提炼，覆盖定性与定量研究的全流程场景。",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "user-research-toolkit",
+    "internal",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "user-research-toolkit",
+    "shortDescription": "面向产品、设计和用研团队的专业用户调研工具，支持问卷设计、访谈管理、数据分析与洞察提炼，覆盖定性与定量研究的全流程场景。",
+    "longDescription": "面向产品、设计和用研团队的专业用户调研工具，支持问卷设计、访谈管理、数据分析与洞察提炼，覆盖定性与定量研究的全流程场景。",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use user-research-toolkit to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-宏观数据解读",
+  "installedAt": 1787228654352,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085540539237871616",
+  "description_zh": "万得 Alice 宏观数据解读 CLI：将 CPI/PPI/PMI/GDP/社融/外贸/失业率/利率等宏观指标解读为结构化研究周报，输出结论摘要、核心数据、趋势结构分析与后续跟踪展望。",
+  "description_en": "Wind Alice Macro Data Interpretation CLI - transforms macroeconomic data into structured, publication-ready research commentary covering key conclusions, core data points, trend and structural drivers, and forward-looking tracking items for CPI, PPI, PMI, GDP, credit aggregates, trade, unemployment, and interest rates.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_aa4e9bfc-f6a.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_aa4e9bfc-f6a.jpg"
+}

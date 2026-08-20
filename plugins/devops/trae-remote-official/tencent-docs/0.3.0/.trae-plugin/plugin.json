@@ -1,0 +1,44 @@
+{
+  "name": "tencent-docs",
+  "version": "0.3.0",
+  "description": "Create, read, edit, and manage Tencent Docs documents, spreadsheets, presentations, and knowledge spaces through official MCP services.",
+  "author": {
+    "name": "Tencent Docs",
+    "url": "https://docs.qq.com"
+  },
+  "homepage": "https://docs.qq.com",
+  "license": "Proprietary",
+  "keywords": [
+    "tencent-docs",
+    "docs",
+    "document",
+    "spreadsheet",
+    "presentation",
+    "knowledge-space",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "Tencent Docs",
+    "shortDescription": "Create and manage Tencent Docs content",
+    "longDescription": "Use official Tencent Docs MCP services to create, read, edit, and manage documents, spreadsheets, presentations, smart tables, and knowledge spaces.",
+    "developerName": "Tencent Docs",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://docs.qq.com",
+    "defaultPrompt": [
+      "Find and summarize my recent Tencent Docs documents.",
+      "Create a Tencent Docs document from this content.",
+      "Update a Tencent Docs spreadsheet or presentation."
+    ],
+    "brandColor": "#1473E6",
+    "logo": "./assets/tencent-docs-BprqnGYL.png",
+    "composerIcon": "./assets/tencent-docs-BprqnGYL.png"
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "skills": "./skills/"
+}

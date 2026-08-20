@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-信用分析",
+  "installedAt": 1787227687070,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2082687341684166656",
+  "description_zh": "万得 Alice 信用分析 CLI：对各类企业 / 机构主体做六大维度系统化信用研究，集成 Wind 风险评分提供更精准违约概率，输出含核心结论、优势、风险、投资建议的结构化报告。",
+  "description_en": "Wind Alice Credit Analysis CLI — systematic credit research across credit profile, industry risk, financial health, cash-flow quality, rating benchmarking, and default probability for any corporate / institutional entity (LGFV, SOE, private cos, listed cos, financial institutions, real-estate, bond issuers, etc.), integrated with Wind risk scoring for accurate PD estimation.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082687341684166656/f69f2037d5045499.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082687341684166656/f69f2037d5045499.jpg"
+}

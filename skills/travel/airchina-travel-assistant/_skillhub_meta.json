@@ -1,0 +1,21 @@
+{
+  "name": "国航出行助手",
+  "installedAt": 1787228460567,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053079023891451904",
+  "examples_zh": [
+    "帮我领取当前可用的国航机票优惠券，并确认优惠券是否已发到我的国航会员账户。",
+    "我五一准备坐国航去成都，检查有没有可领取的国航活动券并完成领取流程。",
+    "为我的国航会员账户领取一张机票优惠券，领券过程中需要短信验证码时提醒我输入。"
+  ],
+  "examples_en": [
+    "Claim the currently available Air China flight coupon and confirm whether it was sent to my Air China member account.",
+    "I'm planning an Air China trip to Chengdu for the May holiday; check for available Air China campaign coupons and claim one.",
+    "Claim a flight coupon for my Air China member account and prompt me when an SMS verification code is required."
+  ],
+  "description_zh": "免费领取国航机票优惠券！自动发送到国航会员账户，五一出游好搭子",
+  "description_en": "Claim free Air China flight coupons! Auto-sent to your Air China member account",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/airchina-travel-assistant.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/airchina-travel-assistant.svg"
+}

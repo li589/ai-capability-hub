@@ -1,0 +1,88 @@
+{
+  "version": "1.0",
+  "meta": {
+    "title": "Generated Blueprint",
+    "industry": "common",
+    "revisionId": "rev-20260413145403",
+    "parentRevisionId": null,
+    "lastModifiedAt": "2026-04-13T14:54:03Z",
+    "lastModifiedBy": "ai"
+  },
+  "context": {
+    "goals": [],
+    "scope": [],
+    "assumptions": [],
+    "constraints": [],
+    "sourceRefs": [
+      {
+        "type": "inline-text",
+        "excerpt": "生成云之家AI转型的业务能力架构，云之家是金蝶旗下企业协同办公平台"
+      }
+    ],
+    "clarifyRequests": [
+      {
+        "code": "MISSING_PRIMARY_ACTOR",
+        "question": "Which primary business actors should appear in the solution?",
+        "affectedIds": []
+      },
+      {
+        "code": "MISSING_CAPABILITY",
+        "question": "Which business capabilities must be represented in the blueprint?",
+        "affectedIds": []
+      },
+      {
+        "code": "MISSING_SYSTEM",
+        "question": "Which existing or target systems should appear in the architecture?",
+        "affectedIds": []
+      }
+    ],
+    "clarifications": []
+  },
+  "library": {
+    "capabilities": [],
+    "actors": [],
+    "flowSteps": [],
+    "systems": []
+  },
+  "relations": [],
+  "views": [
+    {
+      "id": "view-capability",
+      "type": "business-capability-map",
+      "title": "业务能力蓝图",
+      "includedNodeIds": [],
+      "includedRelationIds": [],
+      "layout": {
+        "groups": []
+      },
+      "annotations": []
+    },
+    {
+      "id": "view-swimlane",
+      "type": "swimlane-flow",
+      "title": "泳道流程图",
+      "includedNodeIds": [],
+      "includedRelationIds": [],
+      "layout": {
+        "lanes": []
+      },
+      "annotations": []
+    },
+    {
+      "id": "view-architecture",
+      "type": "application-architecture",
+      "title": "应用架构图",
+      "includedNodeIds": [],
+      "includedRelationIds": [],
+      "layout": {
+        "groups": []
+      },
+      "annotations": []
+    }
+  ],
+  "editor": {
+    "fieldLocks": {},
+    "theme": "enterprise-default"
+  },
+  "artifacts": {}
+}

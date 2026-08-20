@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "jinshuju": {
+      "type": "http",
+      "url": "https://jinshuju.net/mcp",
+      "timeout": 30000,
+      "headers": {
+        "Authorization": "Bearer ${connector.jinshuju.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

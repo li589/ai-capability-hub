@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">PPT Generator</title>
+  <defs>
+    <linearGradient id="bg" x1="16" y1="12" x2="112" y2="116" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7A45"/>
+      <stop offset="1" stop-color="#E83E5B"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="28" fill="url(#bg)"/>
+  <rect x="26" y="25" width="76" height="78" rx="10" fill="#FFFFFF"/>
+  <rect x="38" y="38" width="52" height="7" rx="3.5" fill="#F05A4F"/>
+  <rect x="38" y="53" width="33" height="6" rx="3" fill="#F7A099"/>
+  <rect x="38" y="68" width="22" height="22" rx="5" fill="#FFD4C8"/>
+  <path d="M68 88V66h22v22H68z" fill="#F05A4F"/>
+  <path d="M72 83l5-6 4 4 5-7v9H72z" fill="#FFFFFF"/>
+</svg>

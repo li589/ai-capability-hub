@@ -1,0 +1,11 @@
+{
+  "name": "所有女生会员服务中心",
+  "installedAt": 1787228422947,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2067426227564457984",
+  "description_zh": "为李佳琦直播间会员提供精选好物试用、畅购服务，支持自然语言下单、导购式选品、商品搜索、规格选择、智能推荐的一站式购物体验。",
+  "description_en": "It offers Li Jiaqi’s livestream channel members a one-stop shopping experience featuring trials of curated products and seamless purchasing services, supporting natural language ordering, guided product selection, product search, specification selection, and intelligent recommendations.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/803d2199-f921-4b57-83b7-95ffefb69248/avatar/skill/au_2e24fc1a-bff.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/803d2199-f921-4b57-83b7-95ffefb69248/avatar/skill/au_2e24fc1a-bff.png"
+}

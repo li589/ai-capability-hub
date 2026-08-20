@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "generated_at": null,
+  "target_environment": {
+    "os": null,
+    "os_version": null,
+    "architecture": null,
+    "python_or_exe": null
+  },
+  "steps": [
+    {"id": "environment", "status": "not_tested", "evidence": null},
+    {"id": "start_and_health", "status": "not_tested", "evidence": null},
+    {"id": "core_smoke", "status": "not_tested", "evidence": null},
+    {"id": "persistence_restart", "status": "not_tested", "evidence": null},
+    {"id": "import_export", "status": "not_tested", "evidence": null},
+    {"id": "backup_integrity", "status": "not_tested", "evidence": null},
+    {"id": "safe_stop", "status": "not_tested", "evidence": null}
+  ],
+  "overall_status": "not_tested",
+  "known_limitations": []
+}

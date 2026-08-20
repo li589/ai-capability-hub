@@ -1,0 +1,17 @@
+{
+  "owner": "financial-ai-analyst",
+  "slug": "mx-findata",
+  "displayName": "MX Fin Data",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1773660886944,
+    "commit": "https://github.com/openclaw/skills/commit/b85b97c415a1aaad818f2ff1e30409506f23957e"
+  },
+  "history": [
+    {
+      "version": "1.0.1",
+      "publishedAt": 1773470872584,
+      "commit": "https://github.com/openclaw/skills/commit/b8a28c7ff164cd653a4c42bdebca6241aebe6698"
+    }
+  ]
+}

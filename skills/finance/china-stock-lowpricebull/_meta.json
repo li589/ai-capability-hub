@@ -1,0 +1,11 @@
+{
+  "owner": "luyao-inc",
+  "slug": "china-stock-lowpricebull",
+  "displayName": "China Stock Lowpricebull",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1776152176063,
+    "commit": "https://github.com/openclaw/skills/commit/9c06ebf48a2d679ab5edc5a06a8e5ec855756f0b"
+  },
+  "history": []
+}

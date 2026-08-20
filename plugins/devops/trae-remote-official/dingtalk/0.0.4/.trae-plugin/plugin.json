@@ -1,0 +1,133 @@
+{
+  "name": "dingtalk",
+  "version": "0.0.4",
+  "description": "DingTalk collaboration workflows for enterprise messaging, documents, calendars, approvals, and organization productivity.",
+  "i18n": {
+    "display_name": {
+      "en": "DingTalk",
+      "zh-cn": "钉钉",
+      "ja": "DingTalk"
+    },
+    "description": {
+      "en": "DingTalk collaboration workflows for enterprise messaging, documents, calendars, approvals, and organization productivity.",
+      "zh-cn": "钉钉协作工作流，支持企业消息、文档、日历、审批和组织效率场景。",
+      "ja": "DingTalk によるエンタープライズ向けメッセージ、ドキュメント、カレンダー、承認、組織生産性のワークフロー。"
+    }
+  },
+  "author": {
+    "name": "DingTalk",
+    "url": "https://www.dingtalk.com"
+  },
+  "homepage": "https://www.dingtalk.com",
+  "license": "Proprietary",
+  "keywords": [
+    "dingtalk",
+    "dingding",
+    "collaboration",
+    "messaging",
+    "documents",
+    "calendar",
+    "approval",
+    "productivity"
+  ],
+  "binaries": [
+    {
+      "name": "dws",
+      "path": "bin/dws",
+      "required": true,
+      "executable": true,
+      "platforms": {
+        "win32-x64": {
+          "sha256": "65ce7e2427d0e84aae856c4a2027ae1da4673a5facf402a705184cd4d9c8ec16",
+          "file_size": 12060913,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/dws-cli/1.0.46/win32-x64-1783747458807783552.zip"
+            }
+          ]
+        },
+        "darwin-x64": {
+          "sha256": "064dde8407cf9abb1f46151a97eff98cac231cb6d8514b5335b8dc1177b5edfb",
+          "file_size": 11984171,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/dws-cli/1.0.46/darwin-x64.zip"
+            }
+          ]
+        },
+        "darwin-arm64": {
+          "sha256": "ef832cb98ead9790a47a3b149bc09c30c0695ad6641109fc3534dd879bf6b2c2",
+          "file_size": 11216488,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/dws-cli/1.0.46/darwin-arm64-1783747172810957192.zip"
+            }
+          ]
+        },
+        "linux-x64": {
+          "sha256": "cd97d0c3aec14f383c8f8b368db0c90df668b32799a4b2b01ee189911fd0c224",
+          "file_size": 11828425,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/dws-cli/1.0.46/linux-x64-1783747396763108997.zip"
+            }
+          ]
+        },
+        "linux-arm64": {
+          "sha256": "24e2f2b881ebe903179f6ff5e153e331e48fc6d0485ff2f94b7e1b1b3858d671",
+          "file_size": 10854881,
+          "urls": [
+            {
+              "source_group": "cn",
+              "url": "https://p11-market.byteimg.com/tos-cn-i-17oceyzymr/binaries/dws-cli/1.0.46/linux-arm64-1783747080290971851.zip"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "skills": "./skills/",
+  "connector": "./connector.json",
+  "env": {
+    "DWS_HOST_PROVIDER": "${connector.dingtalk.Provider}",
+    "DWS_HOST_ACCESS_TOKEN": "${connector.dingtalk.ACCESS_TOKEN}",
+    "DWS_HOST_REFRESH_TOKEN": "${connector.dingtalk.REFRESH_TOKEN}",
+    "DWS_HOST_PERSISTENT_CODE": "${connector.dingtalk.metadata.persistent_code}",
+    "DWS_HOST_EXPIRES_AT": "${connector.dingtalk.EXPIRES_AT}",
+    "DWS_HOST_REFRESH_EXPIRES_AT": "${connector.dingtalk.REFRESH_EXPIRES_AT}",
+    "DWS_HOST_CORP_ID": "${connector.dingtalk.metadata.corp_id}",
+    "DWS_HOST_CORP_NAME": "${connector.dingtalk.metadata.corp_name}",
+    "DWS_HOST_USER_ID": "${connector.dingtalk.metadata.user_id}",
+    "DWS_HOST_USER_NAME": "${connector.dingtalk.metadata.user_name}",
+    "DWS_HOST_CLIENT_ID": "${connector.dingtalk.metadata.client_id}",
+    "DWS_HOST_SOURCE": "${connector.dingtalk.metadata.source}"
+  },
+  "interface": {
+    "displayName": "DingTalk",
+    "shortDescription": "Enterprise collaboration powered by DingTalk",
+    "longDescription": "DingTalk collaboration workflows for enterprise messaging, documents, calendars, approvals, and organization productivity.",
+    "developerName": "DingTalk",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://www.dingtalk.com",
+    "privacyPolicyURL": "https://terms.alicdn.com/legal-agreement/terms/privacy_policy_full/20240304152846534/20240304152846534.html",
+    "termsOfServiceURL": "https://page.dingtalk.com/wow/dingtalk/act/service-en",
+    "defaultPrompt": [
+      "Send a DingTalk message",
+      "Search DingTalk organization information",
+      "Create or manage a DingTalk workflow"
+    ],
+    "brandColor": "#1677FF",
+    "screenshots": [],
+    "logo": "./assets/app-icon.svg",
+    "composerIcon": "./assets/app-icon.svg"
+  }
+}

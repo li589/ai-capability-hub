@@ -1,0 +1,10 @@
+{
+  "slug": "tencentcloud-oceanus-ops",
+  "name": "tencentcloud-oceanus-ops",
+  "version": "1.0.0",
+  "installedAt": 1787229054616,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "true"
+  }
+}

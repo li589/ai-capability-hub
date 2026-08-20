@@ -1,0 +1,17 @@
+{
+  "name": "极睿商品主图生成",
+  "installedAt": 1787227583164,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2082316971063721984",
+  "examples_zh": [
+    "用这两张面霜图生成5张1:1商品主图，简约高端风格"
+  ],
+  "examples_en": [
+    "Generate 5 square product main images from these cream photos"
+  ],
+  "description_zh": "根据用户主动选择的商品图片、已确认类目、风格或参考图，创建 5–10 张电商商品主图，并通过极睿电商生图 Connector 跟踪任务直至完成或明确失败。",
+  "description_en": "Generate 5-10 e-commerce product main images from user-selected assets and explicit requirements, then track the task to completion.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082316971063721984/76b612c2c822219c.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082316971063721984/76b612c2c822219c.svg"
+}

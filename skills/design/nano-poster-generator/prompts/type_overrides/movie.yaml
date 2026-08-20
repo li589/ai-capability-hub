@@ -1,0 +1,23 @@
+type: movie
+
+overrides:
+  movie_poster:
+    prompt_append: >
+      ADDITIONAL FOR MOVIE-STYLE POSTERS:
+      - CINEMATIC LIGHTING IS NON-NEGOTIABLE: Strong directional key light from one side,
+        atmospheric haze catching the light, rim lighting that separates the subject from
+        background. The lighting alone should tell you this is cinema, not graphic design.
+      - The composition should tell a story — the viewer should sense the narrative
+        from the image alone. What conflict? What emotion? What's at stake?
+      - Character/subject poses: not stiff portrait poses, but caught-in-a-moment poses
+        that imply action, tension, or emotion. Eyes should have intent.
+      - Background suggests the world: a city for noir, a battlefield for action,
+        a bedroom for drama, darkness for horror. The background is a CHARACTER.
+      - GENRE CONVENTIONS for color grading:
+        * Action: teal shadows + orange highlights (the "Michael Bay" grade)
+        * Thriller: cold steel blues + desaturated skin tones + single warm accent
+        * Romance: warm golden tones + soft focus + slightly overexposed highlights
+        * Horror: severely desaturated with a sickly green or yellow cast + deep blacks
+        * Sci-fi: high contrast + cyan/magenta color split + chromatic aberration hints
+      - Bottom credit block: a narrow condensed sans-serif at about 2% of poster height,
+        spanning the full width. This is a genre convention — it signals "this is a real movie."

@@ -1,0 +1,7 @@
+{
+  "display_name": "腾讯会议",
+  "display_name_en": "Tencent Meeting",
+  "description_zh": "腾讯会议管理助手，支持预约/创建/修改/取消会议、查询录制与转写、获取AI智能纪要",
+  "description_en": "Tencent Meeting assistant for scheduling, managing meetings, querying recordings, transcripts & AI summaries",
+  "icon": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencent-meeting-skill.png"
+}

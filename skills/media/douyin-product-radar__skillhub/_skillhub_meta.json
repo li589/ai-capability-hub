@@ -1,0 +1,11 @@
+{
+  "slug": "douyin-product-radar",
+  "name": "抖音选品雷达",
+  "version": "1.1.0",
+  "installedAt": 1787228903158,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

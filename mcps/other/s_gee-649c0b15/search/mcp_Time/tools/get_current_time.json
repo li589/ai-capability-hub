@@ -1,0 +1,16 @@
+{
+  "name": "get_current_time",
+  "description": "Get current time in a specific timezone",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "timezone": {
+        "type": "string",
+        "description": "IANA timezone name (e.g., 'America/New_York', 'Europe/London'). Use 'Asia/Shanghai' as local timezone if no timezone provided by the user."
+      }
+    },
+    "required": [
+      "timezone"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "client_only_params": [],
+  "description": "列出企业内所有角色",
+  "display_name": "列出角色",
+  "domain": "通讯录",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/corp/role/list",
+  "method": "POST",
+  "name": "jdy_list_roles",
+  "params": {
+    "has_internal": {
+      "default": true,
+      "description": "是否包含自建角色，默认true",
+      "type": "boolean"
+    },
+    "has_sync": {
+      "default": true,
+      "description": "是否包含集成角色，默认true",
+      "type": "boolean"
+    },
+    "limit": {
+      "default": 20,
+      "description": "每页条数，默认1",
+      "type": "integer"
+    },
+    "skip": {
+      "default": 0,
+      "description": "偏移量，默认0",
+      "type": "integer"
+    }
+  },
+  "path_params": [],
+  "required_params": [],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

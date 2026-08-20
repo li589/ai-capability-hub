@@ -1,0 +1,11 @@
+{
+  "owner": "yogurtliu",
+  "slug": "wecom-agent-message",
+  "displayName": "企业微信应用消息",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773413837069,
+    "commit": "https://github.com/openclaw/skills/commit/e5a086197180f2b6d67bae1ae34952ed78902643"
+  },
+  "history": []
+}

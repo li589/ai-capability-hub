@@ -1,0 +1,21 @@
+{
+  "name": "QQ音乐助手",
+  "installedAt": 1786004764696,
+  "source": "marketplace",
+  "version": "0.0.3",
+  "skillId": "skill_2070033533400236032",
+  "examples_zh": [
+    "帮我搜周杰伦的歌",
+    "今天有什么好听的推荐",
+    "看看最近的热歌排行榜"
+  ],
+  "examples_en": [
+    "Search for Jay Chou songs",
+    "What music is recommended today",
+    "Show me the trending music charts"
+  ],
+  "description_zh": "QQ音乐官方智能助手，支持歌曲搜索、每日推荐、AI歌单、排行榜、听歌报告与AI音乐解读。",
+  "description_en": "Official QQ Music assistant: search songs, daily recommendations, AI-powered playlists, charts, listening reports, and AI music interpretation.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2070033533400236032/c33f4af4151344c2.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2070033533400236032/c33f4af4151344c2.png"
+}

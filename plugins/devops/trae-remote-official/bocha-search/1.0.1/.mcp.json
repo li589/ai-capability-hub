@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "bocha-search": {
+      "type": "http",
+      "url": "https://trae-mcp.bocha.cn/mcp",
+      "headers": {
+        "Authorization": "Bearer ${connector.bocha-search.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

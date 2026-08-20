@@ -1,0 +1,27 @@
+{
+  "owner": "bytesagain1",
+  "slug": "okr-planner",
+  "displayName": "Okr Planner",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1773773418479,
+    "commit": "https://github.com/openclaw/skills/commit/87673d055d1e517aaae4a19611c19d0e6c05f05b"
+  },
+  "history": [
+    {
+      "version": "1.0.4",
+      "publishedAt": 1773666637183,
+      "commit": "https://github.com/openclaw/skills/commit/1de71fe685517bd1db661a26af94120dc5484770"
+    },
+    {
+      "version": "2.2.0",
+      "publishedAt": 1773421609499,
+      "commit": "https://github.com/openclaw/skills/commit/45d0b7494f2b80b80dcb4c67150bea7c58d28879"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773231513734,
+      "commit": "https://github.com/openclaw/skills/commit/f00861323d004dc96df4888c1f39ad16bb81a2f3"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "browser_upload_file",
+  "description": "Upload a file to a file input element. Use this when you need to attach or upload files through a file input (<input type=\"file\">) on the page.\n",
+  "arguments": {
+    "properties": {
+      "element": {
+        "description": "Human-readable element description used to obtain permission to interact with the element",
+        "type": "string"
+      },
+      "filePath": {
+        "description": "Absolute path to the file to upload",
+        "type": "string"
+      },
+      "ref": {
+        "description": "Exact target element reference from the page snapshot. Must be a file input element.",
+        "type": "string"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "element",
+      "ref",
+      "filePath"
+    ],
+    "type": "object"
+  }
+}

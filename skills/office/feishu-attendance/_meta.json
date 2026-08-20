@@ -1,0 +1,27 @@
+{
+  "owner": "autogame-17",
+  "slug": "feishu-attendance",
+  "displayName": "feishu-attendance",
+  "latest": {
+    "version": "1.0.9",
+    "publishedAt": 1771046467353,
+    "commit": "https://github.com/openclaw/skills/commit/95565ac4d3e7abd02849e156e8e43a35055d3f6d"
+  },
+  "history": [
+    {
+      "version": "1.0.11",
+      "publishedAt": 1770791182990,
+      "commit": "https://github.com/openclaw/skills/commit/f458be8b4dfec80ebb815435df08424d4231bd1d"
+    },
+    {
+      "version": "1.0.9",
+      "publishedAt": 1770118153420,
+      "commit": "https://github.com/clawdbot/skills/commit/2491caee2dd3ef00666c2d92bd079f5f90d73e34"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": 1769892393314,
+      "commit": "https://github.com/clawdbot/skills/commit/ccf326e022a98a71676d971af29be6181b3fbb3d"
+    }
+  ]
+}

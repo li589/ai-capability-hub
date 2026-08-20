@@ -1,0 +1,12 @@
+{
+  "slug": "bid-tender-master",
+  "name": "标书大师｜全行业AI标书生成助手",
+  "version": "2.1.0",
+  "installedAt": 1787229117712,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c5e5faab-b8e1-489d-a489-8b56ffc52c07.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c5e5faab-b8e1-489d-a489-8b56ffc52c07.png"
+}

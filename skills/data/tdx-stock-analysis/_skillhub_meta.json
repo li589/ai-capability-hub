@@ -1,0 +1,10 @@
+{
+  "name": "个股深研",
+  "installedAt": 1787227555231,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2085673884558397440",
+  "description_zh": "对单只 A 股生成九维度结构化研究报告：公司近况、核心投资逻辑、催化事件、业务拆分、产销链、财务健康、同业对比、盈利预测与估值、风险提示。适合需要\"一页纸看懂一只股票\"的场景。",
+  "description_en": "Generate a nine-dimension structured research report for a single A-share stock — company overview, core investment logic, catalysts, business breakdown, supply-demand chain, financial health, peer comparison, earnings forecast & valuation, and risk alerts. Designed for scenarios requiring a one-page comprehensive view of a stock.",
+  "iconSource": "letter:auto"
+}

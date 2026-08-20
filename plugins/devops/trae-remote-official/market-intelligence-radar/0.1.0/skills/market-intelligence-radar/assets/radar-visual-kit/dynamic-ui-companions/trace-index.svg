@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+  <title id="t">Trace Index Dynamic UI companion guide</title>
+  <desc id="d">Strict coordinate field with a continuous blue trace and narrow source index.</desc>
+  <rect width="720" height="360" fill="#fafafa"/>
+  <g fill="#0d0e10"><rect x="40" y="30" width="640" height="2"/><rect x="40" y="48" width="158" height="12"/><rect x="574" y="48" width="106" height="8"/></g>
+  <g stroke="#d8d9dc" stroke-width="1" fill="none"><rect x="40" y="86" width="640" height="176"/><path d="M200 86v176M360 86v176M520 86v176M40 174h640"/></g>
+  <path d="M66 226L152 132L242 196L332 118L430 166L526 106L654 142" fill="none" stroke="#2357ff" stroke-width="7" stroke-linecap="square"/>
+  <g fill="#0d0e10"><circle cx="152" cy="132" r="6"/><circle cx="332" cy="118" r="6"/><circle cx="526" cy="106" r="6"/></g>
+  <g fill="#e5e6e8"><rect x="40" y="286" width="148" height="38"/><rect x="204" y="286" width="148" height="38"/><rect x="368" y="286" width="148" height="38"/><rect x="532" y="286" width="148" height="38"/></g>
+  <g fill="#0d0e10"><rect x="54" y="301" width="78" height="7"/><rect x="218" y="301" width="94" height="7"/><rect x="382" y="301" width="70" height="7"/><rect x="546" y="301" width="106" height="7"/></g>
+  <rect x="40" y="344" width="640" height="2" fill="#0d0e10"/>
+</svg>

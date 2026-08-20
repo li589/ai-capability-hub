@@ -1,0 +1,11 @@
+{
+  "name": "进门-调研活动查询",
+  "installedAt": 1787227721756,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2088191682213556224",
+  "description_zh": "依赖进门 MCP 查询 A 股上市公司调研活动的排期安排——哪些公司什么时候、在哪儿办调研，主题是什么、哪些机构参加。可按自选股、指定公司或全市场范围，配合过去一周、未来一周等时间范围汇总调研日程表。",
+  "description_en": "Requires the Comein MCP to query the schedules of research activities for A-share listed companies, including which companies are holding activities, when and where they take place, their topics, and participating institutions. It can summarize schedules for a watchlist, selected companies, or the full market over periods such as the past week or the coming week.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_25ee0d83-bd4.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_25ee0d83-bd4.png"
+}

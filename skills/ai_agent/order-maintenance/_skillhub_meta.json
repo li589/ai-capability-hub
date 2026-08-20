@@ -1,0 +1,11 @@
+{
+  "name": "订单维护",
+  "installedAt": 1787228538603,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088538182003671040",
+  "description_zh": "通过orderData新增或更新order及orderProduct，核对订单头、明细、SKU、数量、单价和币种，确认后执行并同步回查。适用于用户要求订单维护、生成相关结果或检查执行边界时。",
+  "description_en": "Order Maintenance workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_0c8bff63-53f.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_0c8bff63-53f.png"
+}

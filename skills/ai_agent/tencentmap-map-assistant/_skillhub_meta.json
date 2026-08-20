@@ -1,0 +1,11 @@
+{
+  "name": "腾讯地图·地图助手",
+  "installedAt": 1787227682651,
+  "source": "marketplace",
+  "version": "1.5.2",
+  "skillId": "skill_2062731548497326080",
+  "description_zh": "一句自然语言调用腾讯地图全套能力。提供 AI 旅游攻略、地点搜索（含评分/人均/营业时间）、路线规划（驾车/步行/公交/骑行）、地址解析与逆解析、行政区划、IP 定位、距离计算、天气查询、坐标转换，并可将行程渲染成网页地图或生成腾讯地图小程序指南。",
+  "description_en": "Invoke the full capabilities of Tencent Map with one natural language command. Provides AI travel guides, place search (with ratings/prices/hours), route planning (driving/walking/transit/cycling), geocoding/reverse geocoding, administrative districts, IP location, distance calculation, weather queries, coordinate conversion, and trip visualization as web maps or Tencent Map mini-program guides.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2062731548497326080/44995d6a3cbd5443.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2062731548497326080/44995d6a3cbd5443.png"
+}

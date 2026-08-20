@@ -1,0 +1,11 @@
+{
+  "owner": "ckchzh2022",
+  "slug": "job-search-assistant",
+  "displayName": "Job Search Assistant",
+  "latest": {
+    "version": "1.4.1",
+    "publishedAt": 1773140855120,
+    "commit": "https://github.com/openclaw/skills/commit/ee4bb368904878b429e9493f5767468fd1f92a49"
+  },
+  "history": []
+}

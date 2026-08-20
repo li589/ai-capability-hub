@@ -1,0 +1,4 @@
+interface:
+  display_name: "投标人参考报告生成"
+  short_description: "查询招投标数据，生成面向投标决策的Markdown和PDF参考报告"
+  default_prompt: "使用 $baobiao-generate-bidder-reference-report 为目标企业、采购方或代理机构生成投标人参考报告，重点输出机会判断、竞争格局、投标准备建议和风险提示，并同时生成 Markdown 与带世舶科技水印的 PDF。"

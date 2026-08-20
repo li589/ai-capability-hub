@@ -1,0 +1,11 @@
+{
+  "name": "腾讯云通用文字识别 OCR",
+  "installedAt": 1785864595169,
+  "source": "marketplace",
+  "version": "1.0.4",
+  "skillId": "skill_2059984237344256000",
+  "description_zh": "调用腾讯云OCR通用文字识别（高精度版）接口，对图片中的文字进行高精度识别。支持中英文、数字和特殊字符识别，适用于文字较多、版式复杂的场景。支持图片URL、Base64、PDF输入，可返回单字信息和文字框位置。内含简历结构化解析指引。",
+  "description_en": "High-accuracy OCR powered by Tencent Cloud GeneralAccurateOCR API. Recognizes Chinese, English, numbers and special characters from images. Supports image URL, Base64, and PDF input with optional per-character positioning.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984237344256000/49ee9b552678078b.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984237344256000/49ee9b552678078b.png"
+}

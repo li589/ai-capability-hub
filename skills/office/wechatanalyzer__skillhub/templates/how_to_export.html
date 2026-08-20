@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>如何导出微信聊天记录</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, "Microsoft YaHei", sans-serif; background: #f5f6fa; color: #333; }
+.container { max-width: 700px; margin: 0 auto; padding: 20px; }
+.header { background: linear-gradient(135deg, #07c160, #1aad19); color: white; padding: 28px; border-radius: 12px; text-align: center; margin-bottom: 20px; }
+.header h1 { font-size: 22px; }
+.step-card { background: white; border-radius: 10px; padding: 20px; margin-bottom: 14px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.step-num { display: inline-block; width: 28px; height: 28px; background: #07c160; color: white; border-radius: 50%; text-align: center; line-height: 28px; font-weight: bold; font-size: 14px; margin-right: 10px; }
+.step-title { font-size: 16px; font-weight: bold; color: #333; display: inline; }
+.step-card p { margin-top: 10px; font-size: 14px; color: #555; line-height: 1.7; padding-left: 38px; }
+.screenshot-box { background: #f0f0f0; border-radius: 8px; padding: 12px; margin-top: 10px; text-align: center; color: #888; font-size: 13px; }
+.tip { background: #e8f5e9; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; color: #2e7d32; }
+.warning { background: #fff3cd; border-radius: 8px; padding: 12px 14px; margin-top: 10px; font-size: 13px; color: #856404; }
+.highlight { color: #07c160; font-weight: bold; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📱 如何导出微信聊天记录</h1>
+    <p style="opacity:0.9;margin-top:6px;font-size:14px">电脑端微信 · 三种方式任选</p>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">1</span><span class="step-title">打开电脑端微信</span>
+    <p>在电脑上登录微信（手机微信扫码登录）</p>
+    <div class="screenshot-box">💻 电脑端微信界面</div>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">2</span><span class="step-title">选择聊天对象</span>
+    <p>在左侧聊天列表中找到你想分析的对象（个人或群聊），点击打开对话框</p>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">3</span><span class="step-title">导出聊天记录（方式一：文字记录）</span>
+    <p>点击右上角 <span class="highlight">"···"</span> 或 <span class="highlight">"..."</span> 按钮</p>
+    <p style="margin-top:8px">选择 <span class="highlight">"聊天记录"</span> → <span class="highlight">"聊天文件"</span></p>
+    <p style="margin-top:8px">点击"导出聊天记录"，选择格式为 <span class="highlight">"txt"</span> 或 <span class="highlight">"json"</span></p>
+    <div class="tip">✅ 推荐使用 txt 格式，兼容性最好</div>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">4</span><span class="step-title">导出聊天记录（方式二：直接复制）</span>
+    <p>在对话框中 <span class="highlight">鼠标选中</span> 想分析的聊天内容</p>
+    <p style="margin-top:8px">按 <span class="highlight">Ctrl + C</span> 复制</p>
+    <p style="margin-top:8px">然后在分析工具中选择"粘贴模式"，直接 <span class="highlight">Ctrl + V</span> 粘贴</p>
+    <div class="tip">✅ 最简单！支持微信手机端复制后到电脑端粘贴</div>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">5</span><span class="step-title">导入到分析工具</span>
+    <p>启动"微信分析助手.bat"，选择对应选项：</p>
+    <p style="margin-top:6px">• 选 <span class="highlight">[1]</span> 粘贴模式 → 直接粘贴刚才复制的内容</p>
+    <p style="margin-top:4px">• 选 <span class="highlight">[2]</span> 文件模式 → 选择导出的 txt/json 文件</p>
+    <p style="margin-top:4px">• 选 <span class="highlight">[5]</span> Web服务 → 浏览器中粘贴内容</p>
+  </div>
+
+  <div class="step-card">
+    <span class="step-num">💡</span><span class="step-title">注意事项</span>
+    <div class="warning">⚠️ 建议一次分析不超过 500 条消息，分析效果最佳</div>
+    <div class="warning" style="margin-top:8px">⚠️ 群聊记录导出需要选择"全部成员"或指定成员范围</div>
+    <div class="tip" style="margin-top:8px">💡 如果是手机微信：设置 → 通用 → 聊天记录备份与迁移 → 迁移到电脑微信</div>
+  </div>
+
+  <div style="text-align:center;padding:20px;color:#aaa;font-size:12px">
+    微信聊天分析助手 · 隐私安全 · 数据仅在本地处理
+  </div>
+</div>
+</body>
+</html>

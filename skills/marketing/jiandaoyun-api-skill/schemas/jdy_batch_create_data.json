@@ -1,0 +1,62 @@
+{
+  "client_only_params": [
+    "allow_duplicate",
+    "duplicate_check_filters"
+  ],
+  "description": "批量向表单新建多条记录（最多100条/次）",
+  "display_name": "批量新建数据",
+  "domain": "数据",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/app/entry/data/batch_create",
+  "method": "POST",
+  "name": "jdy_batch_create_data",
+  "params": {
+    "allow_duplicate": {
+      "default": false,
+      "description": "仅当用户明确接受可能产生重复数据时设为true；该选择会进入写入确认令牌",
+      "type": "boolean"
+    },
+    "app_id": {
+      "description": "应用ID",
+      "type": "string"
+    },
+    "data_list": {
+      "description": "数据列表，每条格式同新建单条，最多100条。每条数据格式：{\"_widget_xxx\":{\"value\":值}}。各字段类型的value格式：\n- text/textarea: 字符串，如 {\"value\":\"文本\"}\n- number: 数字，如 {\"value\":100}\n- datetime: ISO字符串，如 {\"value\":\"2026-01-01T10:00:00.000Z\"}\n- radiogroup/combo(单选): 字符串，如 {\"value\":\"选项一\"}\n- checkboxgroup/combocheck(多选): 数组，如 {\"value\":[\"选项一\",\"选项二\"]}\n- phone(电话): 对象，如 {\"value\":{\"phone\":\"13800138000\"}}\n- address(地址): 对象，如 {\"value\":{\"province\":\"省\",\"city\":\"市\",\"district\":\"区\",\"detail\":\"详细地址\"}}\n- location(定位): 对象含lnglatXY，如 {\"value\":{\"province\":\"省\",\"city\":\"市\",\"district\":\"区\",\"detail\":\"地址\",\"lnglatXY\":[经度,纬度]}}\n- user(成员单选): username字符串，如 {\"value\":\"username\"}\n- usergroup(成员多选): username数组，如 {\"value\":[\"user1\",\"user2\"]}\n- dept(部门单选): dept_no数字，如 {\"value\":12}\n- deptgroup(部门多选): dept_no数组，如 {\"value\":[12,13]}\n- image/upload(图片/附件): 文件key数组，如 {\"value\":[\"file-key-1\",\"file-key-2\"]}\n- subform(子表单): 数组，每行含子字段，如 {\"value\":[{\"_widget_child\":{\"value\":\"值\"}}]}",
+      "type": "array"
+    },
+    "entry_id": {
+      "description": "表单ID",
+      "type": "string"
+    },
+    "duplicate_check_filters": {
+      "default": [],
+      "description": "与 data_list 一一对应的精确查重过滤器数组；发现任一已有记录则停止整批创建",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "is_start_trigger": {
+      "default": false,
+      "description": "是否触发智能助手（默认false）",
+      "type": "boolean"
+    },
+    "is_start_workflow": {
+      "default": false,
+      "description": "是否发起流程（默认false）",
+      "type": "boolean"
+    },
+    "transaction_id": {
+      "default": "",
+      "description": "含附件时必填（UUID格式）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "app_id",
+    "entry_id",
+    "data_list"
+  ],
+  "risk": "write",
+  "source": "简道云工具包.zip"
+}

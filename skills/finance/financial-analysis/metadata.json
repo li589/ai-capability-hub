@@ -1,0 +1,16 @@
+
+  {
+    "name": "financial-analysis",
+    "displayName": "金融分析与资讯查询",
+    "emoji": "📊",
+    "skillKey": "financial-analysis",
+    "version": "1.0",
+    "author": "Huatai Securities",
+    "userInvocable": true,
+    "description": "金融分析与资讯查询。支持分析诊断、市场洞察分析。当用户提出金融市场分析、资讯检索或分析诊断相关问题时，根据类别路由到对应工具获取专业结果。",
+    "requires": {
+      "bins": ["python3"]
+    },
+    "note": "外部清单文件，仅供分发/展示用途；QoderWork 加载器只读 SKILL.md frontmatter。"
+  }
+

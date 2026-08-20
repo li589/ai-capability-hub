@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">品牌搭建</title>
+  <desc id="desc">An open structural frame being built around a distinct brand core.</desc>
+
+  <rect width="512" height="512" rx="116" fill="#F3F1FF"/>
+
+  <path d="M146 346V216C146 183 173 156 206 156H226" fill="none" stroke="#202047" stroke-width="30" stroke-linecap="round"/>
+  <path d="M366 346V216C366 183 339 156 306 156H286" fill="none" stroke="#202047" stroke-width="30" stroke-linecap="round"/>
+
+  <path d="M256 211L270 247L306 261L270 275L256 311L242 275L206 261L242 247L256 211Z" fill="#6D5CE8"/>
+
+  <rect x="126" y="374" width="260" height="30" rx="15" fill="#202047"/>
+</svg>

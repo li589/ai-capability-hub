@@ -1,0 +1,17 @@
+{
+  "name": "极睿电商详情页生成",
+  "installedAt": 1785864625387,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2082316859546009600",
+  "examples_zh": [
+    "用我选中的两张面霜商品图，按护肤面霜类目做一套简约高端的商品详情页，5张，简体中文"
+  ],
+  "examples_en": [
+    "Generate a premium product detail page from these two cream photos, 5 images in Simplified Chinese"
+  ],
+  "description_zh": "根据用户主动选择的商品图片、已确认类目、风格或参考图，创建电商商品详情页长图，并通过极睿电商生图 Connector 跟踪任务直至完成或明确失败。",
+  "description_en": "Generate e-commerce product detail-page images from user-selected assets and explicit requirements, then track the task to completion.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082316859546009600/76b612c2c822219c.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082316859546009600/76b612c2c822219c.svg"
+}

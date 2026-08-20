@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-全球上市公司季报点评",
+  "installedAt": 1787228648969,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085539868153425920",
+  "description_zh": "万得 Alice 全球上市公司季报点评 CLI：一键生成卖方研究风格财报点评，涵盖业绩回顾、盈利能力、投资逻辑、盈利预测与风险提示，支持 A 股、港股、美股及欧洲市场。",
+  "description_en": "Wind Alice Global Share Quarterly Earnings Review CLI - generates sell-side style earnings reviews in one click. Enter a company name and reporting period to automatically extract financial data, analyze profitability, synthesize investment themes, reference consensus estimates, and flag key risks, delivering a structured one-page commentary. Covers A-shares, Hong Kong, US, and European markets with automatic adaptation to local disclosure rules. Also detects preliminary earnings announcements.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_6dfedcb9-c23.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_6dfedcb9-c23.jpg"
+}

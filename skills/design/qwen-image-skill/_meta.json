@@ -1,0 +1,11 @@
+{
+  "owner": "irron",
+  "slug": "qwen-image-skill",
+  "displayName": "qwenz-image-gen",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770693195834,
+    "commit": "https://github.com/openclaw/skills/commit/1da3ac907a61b6696b776c0353c164fce21ef974"
+  },
+  "history": []
+}

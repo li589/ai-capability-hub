@@ -1,0 +1,10 @@
+{
+  "slug": "http-status-code-check",
+  "name": "HTTP状态码查询",
+  "version": "2.0.0",
+  "installedAt": 1787229014268,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

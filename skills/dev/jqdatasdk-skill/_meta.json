@@ -1,0 +1,11 @@
+{
+  "owner": "idiosyncraticdragon",
+  "slug": "jqdatasdk-skill",
+  "displayName": "JoinQuant datasdk skill",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773766962919,
+    "commit": "https://github.com/openclaw/skills/commit/3581f8a22a1e3182b440334cd193eecff53244aa"
+  },
+  "history": []
+}

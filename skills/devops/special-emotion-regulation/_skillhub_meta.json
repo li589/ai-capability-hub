@@ -1,0 +1,11 @@
+{
+  "name": "特殊学生支持 · 情绪管理困难学生",
+  "installedAt": 1787227531697,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084941554672041984",
+  "description_zh": "为教师生成针对情绪管理困难学生的多维支持方案：课堂支持 + 作业调整 + 家校沟通 + IEP 个别化辅导计划；严守不诊断、不暴露隐私的红线。触发关键词：情绪困难、易暴躁、易哭、情绪失控、情绪管理、特殊需要学生支持、个别化辅导计划、IEP。",
+  "description_en": "Generates multi-dimensional support plans for teachers targeting students with emotion-regulation difficulties: classroom support + homework adjustments + home-school communication + IEP individualized support plan; strictly upholds red lines of not diagnosing and not disclosing privacy. Trigger keywords: emotional difficulty, easily irritable, easily cries, emotional outbursts, emotion management, special-needs student support, individualized education plan, IEP.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_03d3ab20-cee.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_03d3ab20-cee.png"
+}

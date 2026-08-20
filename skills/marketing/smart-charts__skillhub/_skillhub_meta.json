@@ -1,0 +1,12 @@
+{
+  "slug": "smart-charts",
+  "name": "smart-charts",
+  "version": "6.0.0",
+  "installedAt": 1787227480054,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/421765/85a10ac10d4242a89852889f7ee5b06d.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/421765/85a10ac10d4242a89852889f7ee5b06d.png"
+}

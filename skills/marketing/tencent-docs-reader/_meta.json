@@ -1,0 +1,11 @@
+{
+  "owner": "cm-wenge",
+  "slug": "tencent-docs-reader",
+  "displayName": "Tencent Docs Reader",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775955625786,
+    "commit": "https://github.com/openclaw/skills/commit/0635388fef25e9210b19cefb3ee667760c6489d1"
+  },
+  "history": []
+}

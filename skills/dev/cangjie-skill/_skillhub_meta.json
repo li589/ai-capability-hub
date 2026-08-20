@@ -1,0 +1,10 @@
+{
+  "name": "book2skill",
+  "installedAt": 1785784834177,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053081431465295872",
+  "description_zh": "把书蒸馏成可执行的技能（拆书、方法论提取）",
+  "description_en": "Distill books into executable skills (book methodology extraction)",
+  "iconSource": "letter:auto"
+}

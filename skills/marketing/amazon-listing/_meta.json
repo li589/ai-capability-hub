@@ -1,0 +1,22 @@
+{
+  "owner": "bytesagain",
+  "slug": "amazon-listing",
+  "displayName": "Amazon Listing",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1773773137201,
+    "commit": "https://github.com/openclaw/skills/commit/87e2b223dab5eefa6ce63b47eee5545b83b64a72"
+  },
+  "history": [
+    {
+      "version": "1.0.6",
+      "publishedAt": 1773664509695,
+      "commit": "https://github.com/openclaw/skills/commit/2afa147171810b1999f5db4ece43a2a94cce8b8c"
+    },
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773152382772,
+      "commit": "https://github.com/openclaw/skills/commit/17ce2359a98172a81f5acd02d2e019400a7a6faf"
+    }
+  ]
+}

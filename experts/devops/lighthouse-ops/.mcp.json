@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "lighthouse-ops": {
+      "type": "streamableHttp",
+      "url": "https://lightai.cloud.tencent.com/workbuddy/mcp",
+      "timeout": 30000,
+      "x-workbuddy": {
+        "displayName": {
+          "zh": "Lighthouse 运维",
+          "en": "Lighthouse Ops"
+        },
+        "description": {
+          "zh": "连接腾讯云账号，管理 Lighthouse 轻量应用服务器：查看实例、配置防火墙、管理快照、查看监控",
+          "en": "Connect your Tencent Cloud account to manage Lighthouse servers: view instances, configure firewalls, manage snapshots, and check monitoring metrics."
+        },
+        "icon": "avatars/connector.png",
+        "auth": {
+          "type": "oauth"
+        }
+      }
+    }
+  }
+}

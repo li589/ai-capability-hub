@@ -1,0 +1,12 @@
+{
+  "slug": "wechatanalyzer",
+  "name": "微信聊天分析及预测工具",
+  "version": "1.0.15",
+  "installedAt": 1787228821571,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/cab3c5ed-3acd-4936-a59b-5f0c5f5dab1b.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/cab3c5ed-3acd-4936-a59b-5f0c5f5dab1b.png"
+}

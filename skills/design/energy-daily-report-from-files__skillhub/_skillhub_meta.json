@@ -1,0 +1,12 @@
+{
+  "slug": "energy-daily-report-from-files",
+  "name": "能源管理平台生成器",
+  "version": "1.0.31",
+  "installedAt": 1787228847372,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/615449/22ad7647632d41019a71485c2179eaec.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/615449/22ad7647632d41019a71485c2179eaec.png"
+}

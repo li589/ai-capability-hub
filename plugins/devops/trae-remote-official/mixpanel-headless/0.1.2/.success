@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:mixpanel-headless",
+  "registry": "trae-remote-official",
+  "plugin_name": "mixpanel-headless",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "665000c0-6897-4674-9e1d-f8060297fda7",
+  "remote_installed_plugin_id": ".-RPHG7-0S-ZEX",
+  "checksum": "f7f39cafcb7ed2a2e8043cadab31aeda305533904185a39d39a21a9a5eff3c0d",
+  "file_size": 254443,
+  "installed_at": 1787227200783
+}

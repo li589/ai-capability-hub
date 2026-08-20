@@ -1,0 +1,11 @@
+{
+  "owner": "huyong2023",
+  "slug": "ozon-product-sourcing",
+  "displayName": "OZON选品货源搜索助手",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772784959717,
+    "commit": "https://github.com/openclaw/skills/commit/c2656bb2e3aa9ebe86d9d78680b49fdfb4e58e6a"
+  },
+  "history": []
+}

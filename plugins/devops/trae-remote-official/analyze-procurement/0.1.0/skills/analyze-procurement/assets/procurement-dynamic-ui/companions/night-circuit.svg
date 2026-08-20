@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Night Circuit Dynamic UI companion</title>
+  <desc id="desc">Six dark procurement widget layouts with offset modules, cyan data, emerald surfaces, and yellow reversal marks.</desc>
+  <defs>
+    <style>
+      .bg{fill:#111315}.surface{fill:#16302b}.surface2{fill:#1c2523}.ink{fill:#f6f7f8}.muted{fill:#a9b3b1}.cyan{fill:#20c7e8}.yellow{fill:#f2e923}.rule{stroke:#3a4441;fill:none}.cyan-line{stroke:#20c7e8;fill:none;stroke-linecap:round;stroke-linejoin:round}.label{font:700 11px Arial,sans-serif;letter-spacing:1.2px}.display{font:700 22px Arial,sans-serif}.meta{font:400 9px Arial,sans-serif}.tiny{font:700 8px Arial,sans-serif;letter-spacing:.7px}
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="720"/>
+  <text x="24" y="28" class="ink label">NIGHT CIRCUIT / DYNAMIC UI COMPOSITION PLATE</text>
+  <text x="936" y="28" text-anchor="end" class="muted meta">OFFSET MODULES · HIGH CONTRAST</text>
+
+  <g transform="translate(24 54)">
+    <rect class="surface" width="444" height="190" rx="14" stroke="#3a4441"/>
+    <text x="18" y="28" class="cyan tiny">01 / AWARD FRONTIER</text><text x="18" y="58" class="ink display">SELECT</text>
+    <rect x="18" y="74" width="276" height="96" rx="12" class="surface2" stroke="#3a4441"/>
+    <path d="M34 150L82 138L128 120L180 94L230 68L278 54" class="cyan-line" stroke-width="2.5"/><circle cx="82" cy="138" r="5" class="ink"/><circle cx="128" cy="120" r="5" class="ink"/><circle cx="180" cy="94" r="7" class="cyan"/><circle cx="230" cy="68" r="6" class="yellow"/>
+    <rect x="310" y="26" width="116" height="72" rx="12" class="cyan"/><text x="326" y="48" fill="#111315" class="tiny">RECOMMEND</text><text x="326" y="80" fill="#111315" class="display">02</text>
+    <rect x="310" y="112" width="116" height="58" rx="12" class="surface2" stroke="#3a4441"/><text x="326" y="136" class="ink meta">LOCK S03</text><text x="326" y="154" class="yellow tiny">92 / 8.7</text>
+  </g>
+
+  <g transform="translate(492 54)">
+    <rect class="surface2" width="444" height="190" rx="14" stroke="#3a4441"/>
+    <text x="18" y="28" class="cyan tiny">02 / PRICE PULSE</text><text x="18" y="58" class="ink display">108</text><text x="86" y="56" class="muted meta">INDEX</text>
+    <path d="M18 84H426M18 120H426M18 156H426" class="rule"/>
+    <path d="M24 148C76 140 104 102 146 112S210 136 258 88S332 70 418 80" class="cyan-line" stroke-width="2.5"/>
+    <circle cx="258" cy="88" r="6" class="cyan"/><circle cx="418" cy="80" r="6" class="yellow"/>
+    <rect x="24" y="168" width="126" height="8" rx="4" class="cyan"/><rect x="160" y="168" width="84" height="8" rx="4" fill="#326c62"/><rect x="254" y="168" width="104" height="8" rx="4" class="ink"/><rect x="368" y="168" width="50" height="8" rx="4" class="yellow"/>
+  </g>
+
+  <g transform="translate(24 274)">
+    <rect class="surface2" width="444" height="190" rx="14" stroke="#3a4441"/>
+    <rect x="18" y="18" width="130" height="154" rx="12" class="surface"/><text x="34" y="44" class="cyan tiny">03 / RISK</text><text x="34" y="80" class="ink display">4/6</text><text x="34" y="104" class="muted meta">VERIFIED</text><text x="34" y="144" class="yellow tiny">01 UNKNOWN</text>
+    <g transform="translate(166 18)">
+      <rect width="260" height="154" rx="12" class="surface"/>
+      <rect x="16" y="16" width="50" height="34" rx="8" class="cyan"/><rect x="74" y="16" width="50" height="34" rx="8" fill="#326c62"/><rect x="132" y="16" width="50" height="34" rx="8" class="surface2" stroke="#3a4441"/><rect x="190" y="16" width="54" height="34" rx="8" class="cyan"/>
+      <rect x="16" y="58" width="108" height="34" rx="8" class="surface2" stroke="#3a4441"/><rect x="132" y="58" width="112" height="34" rx="8" class="yellow"/>
+      <rect x="16" y="100" width="70" height="34" rx="8" fill="#326c62"/><rect x="94" y="100" width="70" height="34" rx="8" class="cyan"/><rect x="172" y="100" width="72" height="34" rx="8" class="surface2" stroke="#3a4441"/>
+    </g>
+  </g>
+
+  <g transform="translate(492 274)">
+    <rect class="surface" width="444" height="190" rx="14" stroke="#3a4441"/>
+    <text x="18" y="28" class="cyan tiny">04 / EXCEPTION QUEUE</text>
+    <rect x="18" y="44" width="408" height="44" rx="10" class="yellow"/><text x="34" y="70" fill="#111315" class="label">01 · COVERAGE</text><text x="410" y="70" text-anchor="end" fill="#111315" class="tiny">02 AUG</text>
+    <rect x="18" y="98" width="246" height="74" rx="10" class="surface2" stroke="#3a4441"/><text x="34" y="126" class="ink meta">02 · LATE SUPPLY</text><text x="34" y="150" class="cyan tiny">05 AUG / OWNER B</text>
+    <rect x="278" y="98" width="148" height="74" rx="10" class="cyan"/><text x="294" y="124" fill="#111315" class="tiny">OPEN</text><text x="294" y="152" fill="#111315" class="display">03</text>
+  </g>
+
+  <g transform="translate(24 494)">
+    <rect class="surface" width="444" height="190" rx="14" stroke="#3a4441"/>
+    <text x="18" y="28" class="cyan tiny">05 / LANDED FLOW</text>
+    <rect x="18" y="44" width="272" height="128" rx="12" class="surface2" stroke="#3a4441"/>
+    <circle cx="50" cy="108" r="12" class="cyan"/><circle cx="144" cy="82" r="12" fill="#326c62"/><circle cx="144" cy="138" r="12" class="yellow"/><circle cx="258" cy="108" r="15" class="cyan"/>
+    <path d="M62 104C92 92 108 84 132 82M62 112C92 128 108 138 132 138M156 82C196 84 218 98 243 104M156 138C196 136 218 120 243 112" class="cyan-line" stroke-width="2"/>
+    <rect x="304" y="18" width="122" height="154" rx="12" class="surface2" stroke="#3a4441"/><text x="320" y="46" class="muted tiny">TOTAL</text><text x="320" y="78" class="ink display">9.42</text><text x="320" y="98" class="muted meta">CNY / UNIT</text><rect x="320" y="118" width="92" height="10" rx="5" class="cyan"/><rect x="320" y="140" width="56" height="10" rx="5" class="yellow"/>
+  </g>
+
+  <g transform="translate(492 494)">
+    <rect class="surface2" width="444" height="190" rx="14" stroke="#3a4441"/>
+    <text x="18" y="28" class="cyan tiny">06 / EXECUTION TRACK</text><text x="18" y="58" class="ink display">ACT</text>
+    <path d="M98 84H414M98 122H414M98 160H414" class="rule"/>
+    <text x="18" y="90" class="ink label">01</text><text x="18" y="128" class="ink label">02</text><text x="18" y="166" class="ink label">03</text>
+    <rect x="104" y="76" width="112" height="16" rx="8" class="cyan"/><rect x="184" y="114" width="154" height="16" rx="8" fill="#326c62"/><rect x="302" y="152" width="112" height="16" rx="8" class="yellow"/>
+    <circle cx="216" cy="84" r="6" class="cyan"/><circle cx="338" cy="122" r="6" fill="#326c62"/><circle cx="414" cy="160" r="6" class="yellow"/>
+    <text x="104" y="70" class="muted meta">VERIFY</text><text x="184" y="108" class="muted meta">PILOT</text><text x="302" y="146" class="muted meta">AWARD</text>
+  </g>
+</svg>

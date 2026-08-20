@@ -1,0 +1,21 @@
+{
+  "name": "TDesign 微信小程序组件",
+  "installedAt": 1787228682158,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083513698443264",
+  "examples_zh": [
+    "在微信小程序里使用TDesign的Button组件",
+    "查看TDesign的Toast组件用法",
+    "用TDesign实现一个底部导航栏"
+  ],
+  "examples_en": [
+    "Use TDesign Button component in WeChat Mini Program",
+    "Check usage of TDesign Toast component",
+    "Implement a bottom navigation bar with TDesign"
+  ],
+  "description_zh": "TDesign 微信小程序组件库（60+ 组件、主题定制、AI 聊天）",
+  "description_en": "TDesign WeChat Mini Program UI components, themes & AI chat",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tdesign-miniprogram.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tdesign-miniprogram.png"
+}

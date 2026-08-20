@@ -1,0 +1,11 @@
+{
+  "name": "腾讯云广告文字识别 OCR",
+  "installedAt": 1785864607678,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2059984290604376064",
+  "description_zh": "调用腾讯云OCR广告文字识别接口，支持中英文、横排竖排及倾斜场景的图片文字识别，支持90/180/270度翻转场景识别。返回文本框四顶点坐标和置信度。适用于广告、海报等多方向文字场景。",
+  "description_en": "Tencent Cloud AdvertiseOCR API for text recognition in images. Supports horizontal, vertical, tilted, and rotated (90/180/270 degree) text recognition with polygon coordinates and confidence scores.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984290604376064/5e58c4bba46a92a5.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984290604376064/5e58c4bba46a92a5.png"
+}

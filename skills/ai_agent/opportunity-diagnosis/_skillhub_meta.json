@@ -1,0 +1,11 @@
+{
+  "name": "商机查询诊断",
+  "installedAt": 1787228537327,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088538005859680256",
+  "description_zh": "查询opportunity及关联followUpRecord，识别阶段停滞、金额/预计成交时间缺失和跟进风险。适用于用户要求商机查询诊断、生成相关结果或检查执行边界时。",
+  "description_en": "Opportunity Diagnosis workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_d82f57e4-d0f.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_d82f57e4-d0f.png"
+}

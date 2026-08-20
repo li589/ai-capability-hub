@@ -1,0 +1,287 @@
+{
+  "version": "9.3.0",
+  "last_updated": "2026-08-17",
+  "security_notice": "请使用环境变量配置API密钥（如 DEEPSEEK_API_KEY），不要在此文件中填写任何明文密钥。",
+  "data_sources": {
+    "stock_price": {
+      "primary": "eastmoney",
+      "fallback": "tencent",
+      "timeout": 8,
+      "retries": 2
+    },
+    "fund_data": "eastmoney",
+    "fund_nav": "eastmoney",
+    "news": "eastmoney",
+    "bond_price": [
+      "eastmoney",
+      "wind"
+    ],
+    "bond_quote": [
+      "eastmoney",
+      "akshare"
+    ],
+    "convertible_quote": [
+      "eastmoney",
+      "akshare"
+    ],
+    "index_price": [
+      "tencent",
+      "eastmoney",
+      "mootdx"
+    ]
+  },
+  "prediction_tracking": {
+    "enabled": false
+  },
+  "data_source_whitelist": {
+    "description": "数据源白名单 — 只使用列表中的数据源获取数据。留空则使用所有已启用平台",
+    "allowed_sources": [
+      "tencent",
+      "eastmoney",
+      "mootdx",
+      "tonghuashun"
+    ],
+    "note": "免费源默认可用。加入 wind/tushare 需先在 config/api_keys.json 配置 API Key"
+  },
+  "cache": {
+    "enabled": true,
+    "ttl": 300,
+    "max_size": 1000,
+    "directory": ".cache"
+  },
+  "analysis": {
+    "analysts": {
+      "fundamental": {
+        "weight": 0.25,
+        "enabled": true
+      },
+      "technical": {
+        "weight": 0.15,
+        "enabled": true
+      },
+      "risk": {
+        "weight": 0.15,
+        "enabled": true
+      },
+      "sentiment": {
+        "weight": 0.15,
+        "enabled": true
+      },
+      "growth": {
+        "weight": 0.2,
+        "enabled": true
+      },
+      "macro": {
+        "weight": 0.1,
+        "enabled": true
+      }
+    },
+    "default_top": 20,
+    "min_score": 50
+  },
+  "screening": {
+    "default_conditions": {
+      "pe": [
+        0,
+        50
+      ],
+      "pb": [
+        0,
+        10
+      ],
+      "roe": [
+        10,
+        100
+      ]
+    },
+    "top_stocks": 20,
+    "market_defaults": {
+      "cn": {
+        "pe": [
+          0,
+          50
+        ],
+        "pb": [
+          0,
+          10
+        ],
+        "roe": [
+          10,
+          100
+        ]
+      },
+      "hk": {
+        "pe": [
+          0,
+          30
+        ],
+        "pb": [
+          0,
+          5
+        ],
+        "roe": [
+          8,
+          100
+        ]
+      },
+      "us": {
+        "pe": [
+          0,
+          40
+        ],
+        "pb": [
+          0,
+          15
+        ],
+        "roe": [
+          8,
+          100
+        ]
+      }
+    }
+  },
+  "watchlist": [
+    {
+      "code": "600519",
+      "market": "cn",
+      "name": "贵州茅台"
+    },
+    {
+      "code": "000858",
+      "market": "cn",
+      "name": "五粮液"
+    },
+    {
+      "code": "300750",
+      "market": "cn",
+      "name": "宁德时代"
+    },
+    {
+      "code": "00700",
+      "market": "hk",
+      "name": "腾讯控股"
+    },
+    {
+      "code": "09988",
+      "market": "hk",
+      "name": "阿里巴巴-W"
+    },
+    {
+      "code": "AAPL",
+      "market": "us",
+      "name": "苹果"
+    },
+    {
+      "code": "NVDA",
+      "market": "us",
+      "name": "英伟达"
+    }
+  ],
+  "report": {
+    "output_dir": "reports",
+    "formats": [
+      "json",
+      "markdown"
+    ],
+    "auto_generate": {
+      "daily": true,
+      "weekly": true,
+      "monthly": true
+    }
+  },
+  "portfolio": {
+    "supported_types": [
+      "stock",
+      "bond",
+      "index",
+      "fund"
+    ],
+    "default_alerts": {
+      "stop_loss_pct": -10,
+      "take_profit_pct": 30,
+      "overbought_rsi": 80,
+      "oversold_rsi": 20
+    },
+    "snapshot_dir": "data/tracking_history",
+    "auto_snapshot": true
+  },
+  "llm": {
+    "provider": "deepseek",
+    "base_url": "https://api.deepseek.com",
+    "model": "deepseek-chat",
+    "temperature": 0.7,
+    "max_tokens": 2000,
+    "api_key_source": "请使用环境变量 DEEPSEEK_API_KEY 配置，勿在此文件填写明文密钥"
+  },
+  "markets": {
+    "cn": {
+      "enabled": true,
+      "supported_types": [
+        "stock",
+        "fund",
+        "index",
+        "bond",
+        "money_fund",
+        "convertible"
+      ],
+      "currency": "CNY"
+    },
+    "hk": {
+      "enabled": true,
+      "supported_types": [
+        "stock",
+        "index"
+      ],
+      "currency": "HKD",
+      "stock_connect_only": false
+    },
+    "us": {
+      "enabled": true,
+      "supported_types": [
+        "stock",
+        "index"
+      ],
+      "currency": "USD"
+    }
+  },
+  "sentiment": {
+    "enabled": true,
+    "sources": {
+      "cn": [
+        "forum",
+        "news",
+        "broker"
+      ],
+      "hk": [
+        "news",
+        "fund_flow"
+      ],
+      "us": [
+        "news",
+        "vix"
+      ]
+    },
+    "alert_thresholds": {
+      "sentiment_surge": 30,
+      "sentiment_extreme": 85,
+      "news_cluster_count": 5
+    }
+  },
+  "notifications": {
+    "channels": [
+      "console"
+    ],
+    "webhook_url": "",
+    "email": {
+      "smtp_host": "",
+      "smtp_port": 587,
+      "from_addr": "",
+      "to_addr": ""
+    }
+  },
+  "_version_info": {
+    "version": "9.3.0",
+    "release_date": "2026-08-17",
+    "codename": "Pattern Forecast + Fund/Futures Quant Enhancement"
+  }
+}

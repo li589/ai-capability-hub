@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-金融监管局处罚月报",
+  "installedAt": 1787227616737,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2086741896932548608",
+  "description_zh": "万得 Alice 金融监管局处罚月报 CLI：基于国家金融监督管理总局（NFRA）及各地派出机构的公开处罚数据，按月汇总银行业、保险业、信托业等金融机构的行政处罚信息，生成含处罚概览、趋势分析与明细清单的三章结构化月报，支持中英双语输出。",
+  "description_en": "Generate an NFRA monthly enforcement report for a specified month. Built on public enforcement data from the National Financial Regulatory Administration (NFRA) and its local offices, it aggregates administrative penalties across banking, insurance, trust, and non-bank financial institutions, delivering a bilingual three-chapter report covering an enforcement overview, trend analysis, and penalty details.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_9c57a959-15a.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_9c57a959-15a.jpg"
+}

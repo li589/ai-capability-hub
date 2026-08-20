@@ -1,0 +1,30 @@
+{
+  "id": "system-diagnostics",
+  "name": "系统性能诊断和优化",
+  "version": "1.0.0",
+  "description": "专门用于诊断OpenClaw系统性能问题、识别瓶颈并提供优化解决方案的完整工具包。基于实际系统卡顿和高资源使用问题的解决经验。",
+  "author": "银月 (silvermoon)",
+  "created_date": "2026-04-16",
+  "category": [
+    "system",
+    "performance",
+    "diagnostics"
+  ],
+  "tags": [
+    "系统诊断",
+    "性能优化",
+    "资源监控",
+    "故障排除",
+    "健康检查"
+  ],
+  "dependencies": [],
+  "features": [
+    "系统监控和性能分析工具",
+    "常见问题诊断和解决方案",
+    "资源优化和成本控制",
+    "预防性维护策略"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/openclaw/skills",
+  "documentation": "https://docs.openclaw.ai/tools/skills"
+}

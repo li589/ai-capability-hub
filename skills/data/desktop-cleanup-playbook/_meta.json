@@ -1,0 +1,11 @@
+{
+  "owner": "52yuanchangxing",
+  "slug": "desktop-cleanup-playbook",
+  "displayName": "Desktop Cleanup Playbook",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773654302171,
+    "commit": "https://github.com/openclaw/skills/commit/80fb6f08a33b67183dbd5bcd185a4bc158079ac8"
+  },
+  "history": []
+}

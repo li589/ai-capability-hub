@@ -1,0 +1,11 @@
+{
+  "owner": "dao24dao",
+  "slug": "create-agent-arch",
+  "displayName": "create-agent",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773039739785,
+    "commit": "https://github.com/openclaw/skills/commit/c3a964fac6e3d5b02a96ff3a506c24fb59dc76e1"
+  },
+  "history": []
+}

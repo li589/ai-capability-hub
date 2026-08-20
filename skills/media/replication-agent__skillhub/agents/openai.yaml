@@ -1,0 +1,4 @@
+interface:
+  display_name: "复刻 Agent"
+  short_description: "授权网站静态复刻、本地预览和部署辅助"
+  default_prompt: "请使用 $replication-agent，在确认我拥有授权后，复刻目标网站并生成本地预览和部署配置。"

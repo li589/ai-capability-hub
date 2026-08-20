@@ -1,0 +1,11 @@
+{
+  "owner": "lhldolike",
+  "slug": "ecommerce-assistant",
+  "displayName": "Ecommerce Assistant",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774080238330,
+    "commit": "https://github.com/openclaw/skills/commit/3e11adc31528b345d99b0a7b763e75ec96b32584"
+  },
+  "history": []
+}

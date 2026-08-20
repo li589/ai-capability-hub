@@ -1,0 +1,11 @@
+{
+  "name": "同花顺黄金_查行情",
+  "installedAt": 1787227765244,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087163909925683200",
+  "description_zh": "同花顺黄金相关行情数据查询：AU9999、浙商/民生/广发积存金",
+  "description_en": "You can attach gold market quote through THS official skill.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_6a36695b-185.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_6a36695b-185.png"
+}

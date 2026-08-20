@@ -1,0 +1,10 @@
+{
+  "name": "导购业绩管理",
+  "installedAt": 1787228473145,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087079228047712256",
+  "description_zh": "查询导购交易与业绩明细，支持按业绩类型、订单来源、客户、商品和订单信息进行筛选。",
+  "description_en": "Review sales-associate transactions and performance details, filtered by performance type, order source, customer, product, and order information.",
+  "iconSource": "letter:auto"
+}

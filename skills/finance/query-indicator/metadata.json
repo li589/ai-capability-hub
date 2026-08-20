@@ -1,0 +1,16 @@
+
+  {
+    "name": "query-indicator",
+    "displayName": "金融指标与行情综合检索",
+    "emoji": "📈",
+    "skillKey": "query-indicator",
+    "version": "1.0",
+    "author": "Huatai Securities",
+    "userInvocable": true,
+    "description": "金融指标与行情综合检索。当用户查询金融指标、行情数据或财务估值时，使用此技能获取专业结果。只要用户意图涉及\"查数值\"、\"看指标\"或\"对比表现\"，且目标对象为金融标的，均应调用。",
+    "requires": {
+      "bins": ["python3"]
+    },
+    "note": "外部清单文件，仅供分发/展示用途；QoderWork 加载器只读 SKILL.md frontmatter。"
+  }
+

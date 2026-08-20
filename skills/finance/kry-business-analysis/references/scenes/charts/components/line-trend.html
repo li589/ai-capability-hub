@@ -1,0 +1,35 @@
+<!-- 组件: 折线趋势图 -->
+<!-- 用法: 复制到 container 内，替换 chartId、xLabels、series数据 -->
+<div class="section">
+  <div class="section-title"><!-- TITLE: 如 "📈 营收趋势" --></div>
+  <div class="section-sub"><!-- SUB: 如 "近7日营业额走势" --></div>
+  <div id="<!-- CHART_ID: 唯一ID如 chart-trend -->" class="chart-box"></div>
+</div>
+<script>
+(function(){
+  var chart = echarts.init(document.getElementById('/* CHART_ID */'));
+  chart.setOption({
+    tooltip: { trigger: 'axis', backgroundColor: 'rgba(255,255,255,0.95)', borderColor: '#e5e7eb', textStyle: { color: '#374151', fontSize: 13 } },
+    legend: { top: 10 },
+    grid: { top: 60, right: 30, bottom: 40, left: 60, containLabel: true },
+    xAxis: {
+      type: 'category',
+      data: [/* DATA: X轴标签数组，如 ['7/1','7/2','7/3'] */]
+    },
+    yAxis: { type: 'value' },
+    series: [
+      /* DATA: 每条线一个对象，格式如下 */
+      {
+        name: '/* 系列名 */',
+        type: 'line',
+        data: [/* 数值数组 */],
+        smooth: true,
+        symbol: 'circle',
+        symbolSize: 6,
+        lineStyle: { width: 2.5 },
+        areaStyle: { opacity: 0.08 }
+      }
+    ]
+  });
+})();
+</script>

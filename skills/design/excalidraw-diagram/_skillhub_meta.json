@@ -1,0 +1,20 @@
+{
+  "name": "Excalidraw Diagram",
+  "installedAt": 1787228684358,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082275194277888",
+  "examples_zh": [
+    "把这个系统拆成输入、编排、存储、输出四层，生成可编辑架构图",
+    "画一张用户登录流程图，标出成功、失败和重试分支",
+    "把 AI agent 到前端 UI 的事件流画成可编辑图，并导出预览图"
+  ],
+  "examples_en": [
+    "Turn this workflow into an editable diagram with clear decision branches",
+    "Create an architecture diagram for this API flow and export a preview image",
+    "Visualize this agent-to-UI event stream with real payload examples"
+  ],
+  "description_zh": "Excalidraw 图解生成与渲染校验",
+  "description_en": "Generate Excalidraw diagrams with local rendering validation",
+  "iconSource": "letter:auto"
+}

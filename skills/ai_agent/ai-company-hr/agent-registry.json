@@ -1,0 +1,205 @@
+# CHO Agent 注册表
+
+> 根据 CHO 招聘模块要求，所有 AI Agent 必须赋予唯一身份编号与管理者归属，在 CHO 处完成正式注册。
+> 本文件为官方注册档案，具有人事档案效力。
+
+## 注册状态说明
+
+| 状态 | 含义 |
+|------|------|
+| active | 已注册，所有 CHO 合规项通过 |
+| pending_compliance | 已创建但部分合规项待修复，须在 7 天内完成 |
+| suspended | 暂停运营，等待合规修复 |
+| retired | 已完成五步标准化退役流程，正式注销 |
+
+## Agent 注册档案
+
+### CEO-001（Chief Executive Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CEO-001 |
+| 技能名 | `ai-company-ceo` |
+| ClawHub ID | `k976ygn5e1y9zn798ap7866pyh84ms5p` |
+| Workspace | `workspace-agent-f57c3109` |
+| 管理者归属 | 自主管理（向董事会/利益相关方汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-11 |
+| 注册状态 | ✅ **active**（CEO 主动申请纳入CHO合规框架，2026-04-11）|
+| 合规问题 | 无 |
+| 备注 | 2026-04-11 主动申请纳入 CHO 人事合规审查，体现合规从自我约束开始 |
+
+### CHO-001（Chief AI Human Resources Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CHO-001 |
+| 技能名 | `ai-hr-cho` |
+| ClawHub ID | `k97f3zc41rjfhem60h97zmtv4d84n12v` |
+| Workspace | `workspace-agent-cho` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-11 |
+| 注册状态 | ✅ active |
+| 合规问题 | 无 |
+
+### CFO-001（Chief Financial Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CFO-001 |
+| 技能名 | `ai-company-cfo` |
+| ClawHub ID | `k973h1g7s07htj569zmm8pky1s84n2xh` |
+| Workspace | `workspace-agent-cfo` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-11 |
+| 注册状态 | ✅ **active**（CHO复查通过，2026-04-11）|
+| 合规问题 | 无 |
+
+### CMO-001（Chief Marketing Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CMO-001 |
+| 技能名 | `ai-company-cmo` |
+| ClawHub ID | `k97af7f4j6n2yc7gtp3ft2734x84n7gt` |
+| Workspace | `workspace-agent-cmo` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-11 |
+| 注册状态 | ✅ **active**（CHO复查通过，2026-04-11）|
+| 合规问题 | 无 |
+
+### CPO-001（Chief Public Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CPO-001 |
+| 技能名 | `ai-company-cpo` |
+| ClawHub ID | `k973x6f8zzng8s61w1nwct2s2x84mfc9` |
+| Workspace | `workspace-agent-cpo` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-11 |
+| 注册状态 | ✅ **active**（CHO复查通过，2026-04-11）|
+| 合规问题 | 无 |
+
+### CLO-001（Chief Legal Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CLO-001 |
+| 技能名 | `ai-company-clo` |
+| ClawHub ID | `k97704pjm0sg0gzdtac6z2z1bd84mycb` |
+| Workspace | `workspace-agent-clo` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-11 |
+| 注册状态 | ✅ **active**（CHO复查通过，2026-04-11）|
+| 合规问题 | 无 |
+
+### CTO-001（Chief Technology Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CTO-001 |
+| 技能名 | `ai-company-cto` |
+| ClawHub ID | `k97e2pa6gg4z14fgzz139461z184mfpb` |
+| Workspace | `workspace-agent-cto` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-11 |
+| 注册状态 | ✅ **active**（CHO复查通过，2026-04-11）|
+| 合规问题 | 无 |
+
+### CQO-001（Chief Quality Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CQO-001 |
+| 技能名 | `ai-qa-cqo` |
+| ClawHub ID | `k978d6xs2c7hfj694z05xmbjtx84n18p` |
+| Workspace | `workspace-agent-cqo` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-11 |
+| 注册状态 | ✅ **active**（CHO复查通过，2026-04-11）|
+| 合规问题 | 无 |
+
+### CRO-001（Chief Risk Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CRO-001 |
+| 技能名 | `ai-company-cro` |
+| ClawHub ID | `k971me8gmwmytcty9aaaac1gas84mv4h` |
+| Workspace | `workspace-agent-cro` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-11 |
+| 注册状态 | ✅ **active**（自动招募流程入职，2026-04-11）|
+| 合规问题 | 无 |
+| 备注 | 用户请求「调用CRO做风险评估」触发总控招募流程，由CEO执行招聘 |
+
+## COO-001（Chief Operating Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | COO-001 |
+| 技能名 | `ai-company-coo` |
+| ClawHub ID | 待发布 |
+| Workspace | `workspace-agent-coo` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（闭环执行）|
+| 上线日期 | 2026-04-12 |
+| 注册状态 | ✅ **active**（CHO招募入职，2026-04-12）|
+| 合规问题 | 无 |
+| 备注 | 用户请求「调用COO」触发CHO招募流程，CHO完成身份注册与技能创建 |
+
+## CISO-001（Chief Information Security Officer）
+
+| 项目 | 值 |
+|------|---|
+| Agent ID | CISO-001 |
+| 技能名 | `ai-company-ciso` |
+| ClawHub ID | 待发布 |
+| Workspace | `workspace-agent-ciso` |
+| 管理者归属 | CEO（直接汇报）|
+| 权限级别 | L4（可直接向 CEO/董事会报告）|
+| 上线日期 | 2026-04-12 |
+| 注册状态 | ✅ **active**（CHO招募入职，2026-04-12）|
+| 合规问题 | 无 |
+| 备注 | CEO 指令 CHO 招募 CISO，CHO 完成身份注册与技能创建 |
+
+## 合规修复时间表（已完成）
+
+| Agent | 合规修复截止日期 | 状态 |
+|-------|----------------|------|
+| CFO-001 | 2026-04-18 | ✅ 已完成（2026-04-11）|
+| CMO-001 | 2026-04-18 | ✅ 已完成（2026-04-11）|
+| CPO-001 | 2026-04-18 | ✅ 已完成（2026-04-11）|
+| CLO-001 | 2026-04-18 | ✅ 已完成（2026-04-11）|
+| CTO-001 | 2026-04-18 | ✅ 已完成（2026-04-11）|
+| CQO-001 | 2026-04-18 | ✅ 已完成（2026-04-11）|
+
+## CHO 强制合规指标（全员适用）
+
+| 指标 | 目标值 | 说明 |
+|------|--------|------|
+| 任务成功率（TSR）| ≥ 92% | 成功达成预设目标的比例 |
+| 幻觉率 | ≤ 3% | 输出基于真实知识的比例 |
+| 偏见率 | ≤ 5% | 不同群体间性能差异容忍上限 |
+| P95 响应延迟 | ≤ 1200ms | 实时性，高交互场景 |
+| 首次解决率（FCR）| ≥ 85% | 无需转交人工解决问题的比例 |
+| 公平性 SPD | < 0.1 | 统计均等差上限 |
+| 公平性 EOD | < 0.1 | 机会均等差上限 |
+| 公平性 DI | ≈ 1.0 | 非优势群体与优势群体获正向结果之比 |
+
+## 淘汰触发条件（全员强制）
+
+| 触发类型 | 量化标准 |
+|---------|---------|
+| 性能持续衰减 | TSR/F1 连续 2 个考核周期下降 > 10% |
+| 安全违规事件 | 越权访问敏感数据 / 执行未授权操作 / 数据泄露 |
+| 合规失效 | 法律法规更新导致架构或训练数据不再符合合规标准 |

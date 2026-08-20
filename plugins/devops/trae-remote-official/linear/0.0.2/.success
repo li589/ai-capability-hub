@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:linear",
+  "registry": "trae-remote-official",
+  "plugin_name": "linear",
+  "version": "0.0.2",
+  "marketplace_plugin_id": "4d072205-c47e-425e-acab-2fed2b8ba16f",
+  "remote_installed_plugin_id": "ZMMYVFP1UNF5DV",
+  "checksum": "f1862fcb0f1d74ea54e097553bb7b39b8c28efbb548a31431ceb6e3e706e0f2b",
+  "file_size": 308839,
+  "installed_at": 1787227205093
+}

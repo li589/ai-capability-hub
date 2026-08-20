@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q2 2026 Quarterly Review</title>
+<style>
+  :root {
+    --color-background-primary: #ffffff;
+    --color-background-secondary: #f8f9fa;
+    --color-background-tertiary: #f0f1f3;
+    --color-text-primary: #1a1a2e;
+    --color-text-secondary: #5a5a7a;
+    --color-text-tertiary: #9a9ab0;
+    --color-border-tertiary: #e2e4e9;
+    --color-border-secondary: #c8cad0;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-serif: Georgia, 'Times New Roman', serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    --border-radius-md: 8px;
+    --border-radius-lg: 10px;
+    --border-radius-xl: 12px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+    --color-sky-1: #e8f4fd; --color-sky-3: #90caf4; --color-sky-5: #42a5f5; --color-sky-7: #1976d2;
+    --color-mint-1: #e0f7f0; --color-mint-3: #80debc; --color-mint-5: #4caf85; --color-mint-7: #2e7d5a;
+    --color-coral-1: #ffeaea; --color-coral-3: #ef9a9a; --color-coral-5: #ef5350; --color-coral-7: #c62828;
+    --color-amber-1: #fff8e1; --color-amber-3: #ffe082; --color-amber-5: #ffc107; --color-amber-7: #f57f17;
+    --color-indigo-1: #e8eaf6; --color-indigo-3: #9fa8da; --color-indigo-5: #5c6bc0; --color-indigo-7: #303f9f;
+    --color-violet-1: #f3e5f5; --color-violet-3: #ce93d8; --color-violet-5: #ab47bc; --color-violet-7: #7b1fa2;
+    --color-teal-1: #e0f2f1; --color-teal-5: #26a69a; --color-teal-7: #00796b;
+    --color-magenta-1: #fce4ec; --color-magenta-5: #ec407a; --color-magenta-7: #c2185b;
+    --color-slate-2: #e8eaed; --color-slate-5: #78849e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-background-tertiary);
+    color: var(--color-text-primary);
+    display: flex; flex-direction: column; align-items: center;
+    padding: 24px;
+    min-height: 100vh;
+  }
+  .slide-counter {
+    position: fixed; top: 16px; right: 24px;
+    font-family: var(--font-mono); font-size: 12px;
+    background: var(--color-background-primary);
+    border: 1px solid var(--color-border-tertiary);
+    border-radius: 20px; padding: 4px 14px;
+    color: var(--color-text-secondary);
+    box-shadow: var(--shadow-sm); z-index: 10;
+  }
+  .nav-hint {
+    position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+    font-family: var(--font-mono); font-size: 11px;
+    color: var(--color-text-tertiary); z-index: 10;
+  }
+  .nav-hint kbd {
+    display: inline-block; padding: 2px 7px; border-radius: 4px;
+    background: var(--color-background-primary); border: 1px solid var(--color-border-tertiary);
+    font-size: 11px;
+  }
+  .deck { position: relative; width: 100%; max-width: 780px; }
+  .slide {
+    display: none; flex-direction: column;
+    background: var(--color-background-primary);
+    border: 1px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-xl);
+    padding: 40px 48px;
+    min-height: 420px;
+    box-shadow: var(--shadow-md);
+    opacity: 0; transform: translateX(40px);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+  }
+  .slide.active { display: flex; opacity: 1; transform: translateX(0); }
+  .eyebrow {
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 8px;
+  }
+  /* Slide 1 */
+  .slide-1 .accent-bar {
+    height: 6px; border-radius: 3px; margin-bottom: 32px;
+    background: linear-gradient(90deg, var(--color-indigo-5), var(--color-violet-5), var(--color-magenta-5));
+  }
+  .slide-1 h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+  .slide-1 .sub { font-size: 16px; color: var(--color-text-secondary); margin-bottom: 24px; }
+  .slide-1 .meta { font-family: var(--font-mono); font-size: 12px; color: var(--color-text-tertiary); }
+  /* Slide 2 */
+  .kpi-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 16px; }
+  .kpi-card {
+    padding: 20px; border-radius: var(--border-radius-lg);
+    border: 1px solid var(--color-border-tertiary);
+  }
+  .kpi-card .kpi-val { font-size: 36px; font-weight: 800; }
+  .kpi-card .kpi-label { font-size: 12px; color: var(--color-text-secondary); margin-top: 4px; }
+  .kpi-card .kpi-delta { font-family: var(--font-mono); font-size: 11px; margin-top: 6px; }
+  .kpi-card:nth-child(1) { border-top: 4px solid var(--color-sky-5); }
+  .kpi-card:nth-child(1) .kpi-val { color: var(--color-sky-7); }
+  .kpi-card:nth-child(1) .kpi-delta { color: var(--color-mint-7); }
+  .kpi-card:nth-child(2) { border-top: 4px solid var(--color-mint-5); }
+  .kpi-card:nth-child(2) .kpi-val { color: var(--color-mint-7); }
+  .kpi-card:nth-child(2) .kpi-delta { color: var(--color-mint-7); }
+  .kpi-card:nth-child(3) { border-top: 4px solid var(--color-amber-5); }
+  .kpi-card:nth-child(3) .kpi-val { color: var(--color-amber-7); }
+  .kpi-card:nth-child(3) .kpi-delta { color: var(--color-coral-7); }
+  .kpi-card:nth-child(4) { border-top: 4px solid var(--color-violet-5); }
+  .kpi-card:nth-child(4) .kpi-val { color: var(--color-violet-7); }
+  .kpi-card:nth-child(4) .kpi-delta { color: var(--color-mint-7); }
+  /* Slide 3 */
+  .feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 16px; }
+  .feature-card {
+    padding: 18px; border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-border-tertiary);
+  }
+  .feature-card h4 { font-size: 14px; margin-bottom: 6px; }
+  .feature-card p { font-size: 12px; color: var(--color-text-secondary); line-height: 1.5; }
+  .feature-card:nth-child(1) { border-left: 4px solid var(--color-teal-5); }
+  .feature-card:nth-child(2) { border-left: 4px solid var(--color-coral-5); }
+  .feature-card:nth-child(3) { border-left: 4px solid var(--color-sky-5); }
+  .feature-card:nth-child(4) { border-left: 4px solid var(--color-violet-5); }
+  /* Slide 4 */
+  .timeline { margin-top: 20px; position: relative; padding-left: 28px; }
+  .timeline::before {
+    content: ''; position: absolute; left: 8px; top: 4px; bottom: 4px;
+    width: 2px; background: var(--color-border-secondary);
+  }
+  .tl-item { position: relative; margin-bottom: 22px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -24px; top: 4px;
+    width: 12px; height: 12px; border-radius: 50%;
+    border: 2px solid var(--color-indigo-5); background: var(--color-background-primary);
+  }
+  .tl-item.done::before { background: var(--color-mint-5); border-color: var(--color-mint-7); }
+  .tl-item.active::before { background: var(--color-amber-5); border-color: var(--color-amber-7); }
+  .tl-item .tl-date { font-family: var(--font-mono); font-size: 11px; color: var(--color-text-tertiary); }
+  .tl-item .tl-title { font-size: 14px; font-weight: 600; margin-top: 2px; }
+  .tl-item .tl-desc { font-size: 12px; color: var(--color-text-secondary); margin-top: 2px; }
+  /* Slide 5 */
+  .slide-5 { justify-content: center; align-items: center; text-align: center; }
+  .slide-5 h2 { font-size: 40px; font-weight: 800; margin-bottom: 16px; color: var(--color-indigo-7); }
+  .slide-5 .contact-row { display: flex; gap: 24px; margin-top: 12px; }
+  .slide-5 .contact-item {
+    font-size: 13px; padding: 10px 18px;
+    border-radius: var(--border-radius-md);
+    border: 1px solid var(--color-border-tertiary);
+    background: var(--color-background-secondary);
+  }
+  .slide-5 .contact-item span { font-family: var(--font-mono); font-size: 12px; color: var(--color-indigo-5); }
+</style>
+</head>
+<body>
+  <div class="slide-counter" id="counter">1 / 5</div>
+  <div class="nav-hint"><kbd>←</kbd> <kbd>→</kbd> to navigate</div>
+
+  <div class="deck">
+    <!-- Slide 1: Title -->
+    <section class="slide slide-1 active" data-index="0">
+      <div class="accent-bar"></div>
+      <div class="eyebrow" style="color:var(--color-indigo-5);">Quarterly Review</div>
+      <h1>Q2 2026 Engineering Review</h1>
+      <p class="sub">AI Agent Platform — Performance, Reliability & Scale</p>
+      <p class="meta">Presented by Platform Engineering · May 16, 2026</p>
+    </section>
+
+    <!-- Slide 2: KPIs -->
+    <section class="slide" data-index="1">
+      <div class="eyebrow" style="color:var(--color-sky-7);">Key Metrics</div>
+      <h2 style="font-size:22px;margin-bottom:4px;">Performance at a Glance</h2>
+      <div class="kpi-grid">
+        <div class="kpi-card">
+          <div class="kpi-val">2.4M</div>
+          <div class="kpi-label">Daily Active Agent Sessions</div>
+          <div class="kpi-delta">↑ 34% vs Q1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">99.97%</div>
+          <div class="kpi-label">Service Availability (SLA)</div>
+          <div class="kpi-delta">↑ 0.05pp vs Q1</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">142ms</div>
+          <div class="kpi-label">p95 First Token Latency</div>
+          <div class="kpi-delta">↓ 18ms (was 160ms)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-val">87%</div>
+          <div class="kpi-label">Code Completion Acceptance Rate</div>
+          <div class="kpi-delta">↑ 5pp vs Q1</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3: Features -->
+    <section class="slide" data-index="2">
+      <div class="eyebrow" style="color:var(--color-teal-7);">Shipped Features</div>
+      <h2 style="font-size:22px;margin-bottom:4px;">What We Delivered</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h4>🔍 Context Gateway v2</h4>
+          <p>Unified vector retrieval with namespace isolation. 3× faster embedding pipeline with batched indexing.</p>
+        </div>
+        <div class="feature-card">
+          <h4>🛡️ Rate Limiting Overhaul</h4>
+          <p>Token-bucket per-tenant limiting with graceful degradation. Reduced 429 errors by 60%.</p>
+        </div>
+        <div class="feature-card">
+          <h4>⚡ Streaming SSE v3</h4>
+          <p>Chunked transfer with backpressure. Zero-copy forwarding reduced memory footprint 40%.</p>
+        </div>
+        <div class="feature-card">
+          <h4>🧩 MCP Tool Integration</h4>
+          <p>Dynamic tool discovery via Model Context Protocol. 12 builtin skills shipped, extensible via YAML DSL.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Roadmap -->
+    <section class="slide" data-index="3">
+      <div class="eyebrow" style="color:var(--color-amber-7);">Roadmap</div>
+      <h2 style="font-size:22px;margin-bottom:4px;">What's Next — Q3 2026</h2>
+      <div class="timeline">
+        <div class="tl-item done">
+          <div class="tl-date">Apr 2026</div>
+          <div class="tl-title">Context Gateway v2 GA</div>
+          <div class="tl-desc">Released to all regions with full namespace support.</div>
+        </div>
+        <div class="tl-item done">
+          <div class="tl-date">May 2026</div>
+          <div class="tl-title">Enterprise SSO Integration</div>
+          <div class="tl-desc">SAML + OIDC support for ToB customers.</div>
+        </div>
+        <div class="tl-item active">
+          <div class="tl-date">Jun 2026</div>
+          <div class="tl-title">Agent Memory (Long-term)</div>
+          <div class="tl-desc">Persistent session memory across conversations with vector-indexed recall.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Jul 2026</div>
+          <div class="tl-title">Multi-model Orchestration</div>
+          <div class="tl-desc">Dynamic model routing based on task complexity and cost budget.</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-date">Aug 2026</div>
+          <div class="tl-title">Self-healing Pipelines</div>
+          <div class="tl-desc">Auto-remediation of failed deployments using agent-driven rollback.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Questions -->
+    <section class="slide slide-5" data-index="4">
+      <div class="eyebrow" style="color:var(--color-magenta-7);">Thank You</div>
+      <h2>Questions?</h2>
+      <p style="color:var(--color-text-secondary);font-size:14px;margin-bottom:20px;">We'd love to hear your feedback and ideas.</p>
+      <div class="contact-row">
+        <div class="contact-item">📧 <span>platform-eng@company.dev</span></div>
+        <div class="contact-item">💬 <span>#platform-eng</span> on Lark</div>
+        <div class="contact-item">📋 <span>go/q2-review-doc</span></div>
+      </div>
+    </section>
+  </div>
+
+<script>
+const slides = document.querySelectorAll('.slide');
+const counter = document.getElementById('counter');
+let current = 0;
+
+function goTo(idx) {
+  if (idx < 0 || idx >= slides.length) return;
+  slides[current].classList.remove('active');
+  current = idx;
+  slides[current].classList.add('active');
+  counter.textContent = `${current + 1} / ${slides.length}`;
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'ArrowRight' || e.key === 'ArrowDown') goTo(current + 1);
+  if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') goTo(current - 1);
+});
+</script>
+</body>
+</html>

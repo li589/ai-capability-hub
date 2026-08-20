@@ -1,0 +1,18 @@
+{
+  "name": "腾讯云解决方案PPT制作",
+  "installedAt": 1787228461468,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2069374713620635648",
+  "examples_zh": [
+    "帮我做一个金融行业数字化转型的解决方案PPT，面向银行客户",
+    "帮我做一个医疗行业智慧医疗解决方案PPT"
+  ],
+  "examples_en": [
+    "Create a solution PPT for retail industry digital transformation targeting the Southeast Asian market"
+  ],
+  "description_zh": "基于腾讯云标准解决方案框架，自动生成面向客户的行业解决方案PPT。通过多轮网络调研与知识库检索，围绕客户行业场景智能组织内容（行业背景→需求挑战→解决方案→客户案例），调用PPT模板生成专业PDF演示文稿。",
+  "description_en": "Generates customer-facing industry solution PPTs following the Tencent Cloud standard solution framework. Conducts multi-round web research and knowledge base search to intelligently organize content across industry background, challenges, solutions, and customer cases, then generates professional PDF presentations.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2069374713620635648/aad2fcb198ea2a3a.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2069374713620635648/aad2fcb198ea2a3a.png"
+}

@@ -1,0 +1,54 @@
+{
+  "name": "weiyun",
+  "version": "1.0.3",
+  "description": "腾讯微云 MCP 集成，支持云端文件管理。",
+  "i18n": {
+    "display_name": {
+      "en": "Tencent Weiyun",
+      "zh-cn": "腾讯微云",
+      "ja": "テンセント微雲"
+    },
+    "description": {
+      "en": "Tencent Weiyun MCP integration for cloud file management.",
+      "zh-cn": "腾讯微云 MCP 集成，支持云端文件管理。",
+      "ja": "テンセント微雲MCP統合。クラウドファイル管理に対応。"
+    }
+  },
+  "author": {
+    "name": "Tencent",
+    "url": "https://www.weiyun.com"
+  },
+  "homepage": "https://www.weiyun.com",
+  "license": "Proprietary",
+  "keywords": [
+    "tencent",
+    "weiyun",
+    "cloud-storage",
+    "file-management",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "腾讯微云",
+    "shortDescription": "腾讯微云文件管理",
+    "longDescription": "通过腾讯微云 MCP 管理云端文件，支持文件浏览、上传、下载等操作。",
+    "developerName": "Tencent",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://www.weiyun.com",
+    "defaultPrompt": [
+      "查看腾讯微云中的文件",
+      "上传文件到腾讯微云",
+      "下载腾讯微云的文件"
+    ],
+    "brandColor": "#07C160",
+    "logo": "./assets/app-icon.svg",
+    "composerIcon": "./assets/app-icon.svg",
+    "screenshots": []
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json"
+}

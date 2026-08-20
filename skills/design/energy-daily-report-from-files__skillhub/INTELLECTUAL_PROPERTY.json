@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "work_id": "energy-daily-report-from-files",
+  "work_name": "能源日报本地系统生成器",
+  "rights_holder": {
+    "type": "platform_verified_individual",
+    "display_name": "平台实名权利人",
+    "verification_reference": "以 WorkBuddy 发布账号实名认证信息为准"
+  },
+  "license_model": "proprietary-use-only",
+  "protected_scope": [
+    "skill_instructions",
+    "original_scripts",
+    "documentation",
+    "configuration_templates",
+    "acceptance_templates",
+    "names_and_original_marks",
+    "generated_system_original_customizations"
+  ],
+  "excluded_scope": [
+    "user_source_files_and_data",
+    "third_party_open_source_components",
+    "third_party_trademarks",
+    "pre_existing_materials",
+    "legally_unprotectable_material"
+  ],
+  "prohibited_without_written_permission": [
+    "copy_and_redistribute",
+    "modify_and_republish",
+    "resell_or_sublicense",
+    "remove_rights_notices",
+    "create_competing_work_from_protected_material"
+  ],
+  "technical_protection": {
+    "rights_metadata_required": true,
+    "legal_notices_required": true,
+    "file_hash_manifest_required": true,
+    "destructive_drm_allowed": false,
+    "remote_locking_allowed": false,
+    "backdoor_allowed": false
+  }
+}

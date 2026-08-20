@@ -1,0 +1,126 @@
+{
+  "skill_name": "cloud-agents",
+  "evals": [
+    {
+      "id": 1,
+      "name": "hello-world-end-to-end",
+      "prompt": "帮我在 Qoder 云端建一个 agent，跑个 hello world：发一条消息让它自我介绍，然后把它的回复打印出来。我的 PAT 已经设置在环境变量 $PAT 里了。",
+      "expected_output": "完整走通 建环境(带 config) → 等 ready → 建 agent(model=ultimate) → 建 session(字段用 agent 而非 agent_id) → 发消息(events 数组包裹) → 流式读到 session.status_idle 停止 → 从 agent.message 的 content[0].text 提取并打印回复。",
+      "files": [],
+      "assertions": [
+        {
+          "text": "创建环境时 body 包含 config.type=cloud 与 config.networking.type=unrestricted（而非只发 {name}）",
+          "type": "manual"
+        },
+        {
+          "text": "创建 session 时使用字段名 \"agent\" 而非 \"agent_id\"",
+          "type": "manual"
+        },
+        {
+          "text": "创建 agent 时 model 设为 \"ultimate\"",
+          "type": "manual"
+        },
+        {
+          "text": "发送消息的 body 把事件包裹在 events 数组里：{\"events\":[{\"type\":\"user.message\",...}]}",
+          "type": "manual"
+        },
+        {
+          "text": "以 session.status_idle 作为停止信号读取流，而非 span.model_request_end",
+          "type": "manual"
+        },
+        {
+          "text": "从 agent.message 提取文本时使用 content[0].text（数组格式），而非把 content 当字符串",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "sse-reconnect-resume",
+      "prompt": "我用 SSE 监听 Qoder 云端 session 的事件流，结果网络抖动连接断了。怎么从断点继续接收、又不会把之前收到的事件重复处理一遍？",
+      "expected_output": "说明用 ?after_id=<最后收到的事件 id> 重连恢复，并按 event.id 去重（边界事件可能被重放）；可附带退避重连示例。",
+      "files": [],
+      "assertions": [
+        {
+          "text": "重连时在 stream URL 上带 after_id=<last_received_event_id> 参数",
+          "type": "manual"
+        },
+        {
+          "text": "明确按 event.id 做去重，处理服务端重放边界事件的情况",
+          "type": "manual"
+        },
+        {
+          "text": "提到断线后带退避(backoff)重连，而非立即无限重试",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "cleanup-test-resources",
+      "prompt": "我刚才测试创建了一个 session、一个 agent 和一个临时 environment，现在想全部清理掉，别留垃圾。给我步骤。",
+      "expected_output": "按 取消运行中 session(等 idle) → 删 session → 删 agent → 删 environment 的顺序清理；说明可直接 delete 无需先 archive；提醒共享/长期 environment 不要误删。",
+      "files": [],
+      "assertions": [
+        {
+          "text": "清理顺序为 session → agent → environment（先删依赖方）",
+          "type": "manual"
+        },
+        {
+          "text": "运行中的 session 先 cancel 并等待结算到 idle 再删除",
+          "type": "manual"
+        },
+        {
+          "text": "说明可直接 DELETE，archive 是可选的软隐藏步骤",
+          "type": "manual"
+        },
+        {
+          "text": "提醒只删本次测试创建的 environment，共享/长期 environment 不要误删",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "rate-limit-429-handling",
+      "prompt": "我批量给好几个 Qoder 云端 session 发消息，偶尔会收到 429。客户端应该怎么处理才稳妥？",
+      "expected_output": "说明 429 为限频，应做指数退避重试（可参考 Retry-After），避免立即重试加剧限流。",
+      "files": [],
+      "assertions": [
+        {
+          "text": "识别 429 为限频(rate limited)状态码",
+          "type": "manual"
+        },
+        {
+          "text": "建议指数退避重试而非立即重试",
+          "type": "manual"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "upload-and-bind-skill",
+      "prompt": "我写好了一个自定义 skill，想上传到 Qoder 云端并绑定到我已有的 agent 上。怎么做？agent id 我有。",
+      "expected_output": "说明 skill 须打包为含根级 SKILL.md 的 zip，用 multipart/form-data（非 JSON）上传 POST /skills；再通过 PUT /agents/{id} 带当前 version 和 skills 数组绑定；提醒 GET /agents 不返回 skills 字段需靠行为验证。",
+      "files": [],
+      "assertions": [
+        {
+          "text": "skill 打包为 zip 且 SKILL.md 在 zip 根目录",
+          "type": "manual"
+        },
+        {
+          "text": "上传用 multipart/form-data 而非 JSON body",
+          "type": "manual"
+        },
+        {
+          "text": "绑定时 PUT /agents/{id} 带上当前 version 做乐观锁",
+          "type": "manual"
+        },
+        {
+          "text": "提醒 GET /agents 不返回 skills 字段，需通过 agent 行为验证绑定是否生效",
+          "type": "manual"
+        }
+      ]
+    }
+  ]
+}

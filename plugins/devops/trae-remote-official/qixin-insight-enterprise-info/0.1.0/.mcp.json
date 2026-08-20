@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "qixin-insight-mcp": {
+      "type": "http",
+      "url": "https://mcp.qixin.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${connector.qixin-insight-oauth.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

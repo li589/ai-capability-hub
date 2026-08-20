@@ -1,0 +1,11 @@
+{
+  "owner": "pietjepuh",
+  "slug": "ai-orchestration",
+  "displayName": "Ai Orchestration",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775085025190,
+    "commit": "https://github.com/openclaw/skills/commit/28cc2cc1d20bdd185c8c5ddadb4c182f36504f5a"
+  },
+  "history": []
+}

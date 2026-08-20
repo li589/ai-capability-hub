@@ -1,0 +1,11 @@
+{
+  "name": "Moka 假勤管理",
+  "installedAt": 1787228608759,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088131166803935232",
+  "description_zh": "面向考勤负责人与人事管理角色的假勤管理查询（普通员工账号无相应权限）。使用当前平台提供的 Moka 连接器查询员工出勤报表（日历/月报/日报/补卡）、假期账户与请假辅助、加班详情与试算、已发布排班、出差与外出记录。当用户以管理视角查询员工出勤明细、假期余额与离职清算、加班结算原因、排班与换班、出差行程重叠预检等问题时使用。",
+  "description_en": "Attendance administration queries for attendance owners and HR admin roles (regular employee accounts lack the required permissions). Uses the Moka Connector available on the current platform to query employee attendance reports (calendar, monthly, daily, patch clock-in), leave accounts and leave-request assistance, overtime details and trial calculations, published shift schedules, and business travel or out-of-office records. Use it when the user asks admin-view questions about attendance details, leave balances and settlement, overtime settlement reasons, shift schedules, or travel overlap pre-checks.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_d1ca7fae-3be.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_d1ca7fae-3be.png"
+}

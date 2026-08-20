@@ -1,0 +1,11 @@
+{
+  "owner": "windy-001-crypto",
+  "slug": "meeting-notes-generator",
+  "displayName": "Meeting Notes Generator",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772468558543,
+    "commit": "https://github.com/openclaw/skills/commit/5c6d2c0bb585896070b7841af5a34cbb3e634e6e"
+  },
+  "history": []
+}

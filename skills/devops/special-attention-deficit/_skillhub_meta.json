@@ -1,0 +1,11 @@
+{
+  "name": "特殊学生支持 · 注意力不足学生",
+  "installedAt": 1787227527707,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084941152031440896",
+  "description_zh": "为教师生成针对注意力不足学生的多维支持方案：课堂支持 + 作业调整 + 家校沟通 + IEP 个别化辅导计划；严守不诊断、不暴露隐私的红线。触发关键词：注意力不足、注意力涣散、ADHD、坐不住、分神、多动、特殊需要学生支持、个别化辅导计划、IEP。",
+  "description_en": "Generates multi-dimensional support plans for teachers targeting attention-deficit students: classroom support + homework adjustments + home-school communication + IEP individualized support plan; strictly upholds red lines of not diagnosing and not disclosing privacy. Trigger keywords: attention deficit, inattention, ADHD, can't sit still, distracted, hyperactive, special-needs student support, individualized education plan, IEP.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_3c3d1be6-498.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_3c3d1be6-498.png"
+}

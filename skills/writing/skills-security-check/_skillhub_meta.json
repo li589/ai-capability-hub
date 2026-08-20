@@ -1,0 +1,21 @@
+{
+  "name": "Skill安全审计（云鼎实验室）",
+  "installedAt": 1785865000199,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082711420960768",
+  "examples_zh": [
+    "对这个社区技能做安全审计",
+    "检查技能里是否有敏感信息泄漏风险",
+    "审计技能的网络访问权限"
+  ],
+  "examples_en": [
+    "Audit this community skill for security issues",
+    "Check for sensitive data leak risks in the skill",
+    "Review the network access permissions"
+  ],
+  "description_zh": "腾讯云鼎出品，Skill 安全审计工具",
+  "description_en": "Scan a third-party Claude Code skill for security risks before enabling it. Use...",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/skills-security-check.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/skills-security-check.svg"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "elfilalihamza",
+  "slug": "job-watch",
+  "displayName": "Job Watch",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775180461528,
+    "commit": "https://github.com/openclaw/skills/commit/93ee6b2162d3a71ad42b5176a8bc20a73ea8fe23"
+  },
+  "history": []
+}

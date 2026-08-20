@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:hotl",
+  "registry": "trae-remote-official",
+  "plugin_name": "hotl",
+  "version": "2.18.0",
+  "marketplace_plugin_id": "f57c45ea-d9ac-46b7-a923-34cdefcfedf1",
+  "remote_installed_plugin_id": "M-10N56WTOQER1",
+  "checksum": "e77ca87c090cfbace99e9c9d87080a6477cd603019902fe9a6cf3c565a7c55e2",
+  "file_size": 102929,
+  "installed_at": 1787227203122
+}

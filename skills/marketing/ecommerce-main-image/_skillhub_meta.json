@@ -1,0 +1,10 @@
+{
+  "name": "电商主图",
+  "installedAt": 1787227580114,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087511132384673792",
+  "description_zh": "基于 电商主图 的 AI 图片生成与编辑器，通用图片能力和商业场景搜索入口，底层调用 AI Hive 裸接口。当用户需要 电商主图、商品主图、电商首图、白底图、SKU主图、平台主图、GPT Image 2、Image2、Nano Banana、AI图片、AIGC图片 时使用此 Skill。",
+  "description_en": "Generic Ecommerce Main Image capability via AI Hive open API. Model-agnostic, auto-selects the best model. Use when users request this image capability.",
+  "iconSource": "letter:auto"
+}

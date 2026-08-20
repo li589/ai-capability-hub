@@ -1,0 +1,11 @@
+{
+  "slug": "store-competitor-analysis-pro-v2",
+  "name": "开店选址与门店竞品分析专家",
+  "version": "1.2.0",
+  "installedAt": 1787228947129,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

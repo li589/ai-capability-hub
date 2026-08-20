@@ -1,0 +1,20 @@
+{
+  "author": "Intel",
+  "author_icon": "",
+  "description": "Local offline document parsing on Windows — no cloud, no API cost, full privacy.",
+  "detail_describe": "本地文档与图片解析\n支持PDF和图像文件的文档解析\n输出结构化的Markdown格式结果\n保留原文档的标题、段落、列表、表格、公式与版面层次",
+  "display_description": "基于本地AI大模型对PDF、图片进行文档解析（仅限英特尔AIPC平台）",
+  "display_name": "本地文档与图片解析",
+  "name": "local-mineru",
+  "scope": [
+    "main"
+  ],
+  "type": "英特尔用户专区",
+  "use_cases": [
+    "帮我解析这份文档",
+    "把PDF文件解析成Markdown",
+    "帮我这张图片里的文字和表格提取出来",
+    "请解析文件夹中的文档"
+  ],
+  "version": "1.0.0"
+}

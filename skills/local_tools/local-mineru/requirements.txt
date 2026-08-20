@@ -1,0 +1,13 @@
+openvino>=2026.0
+numpy<2.0
+openvino-genai>=2024.5
+mineru-vl-utils>=0.2.0
+pypdfium2>=4.0
+Pillow>=10.0
+pyyaml>=6.0
+loguru>=0.7
+tqdm>=4.0
+modelscope>=1.0.0
+opencv-python>=4.8.0
+psutil>=5.9
+colorama>=0.4

@@ -1,0 +1,12 @@
+{
+  "slug": "zlbx-bidding",
+  "name": "全国招标中标查询及分析【知了标讯】",
+  "version": "2.1.3",
+  "installedAt": 1787228876411,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/423399/8c0c067a61574fd69a587d8ebf051357.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/423399/8c0c067a61574fd69a587d8ebf051357.png"
+}

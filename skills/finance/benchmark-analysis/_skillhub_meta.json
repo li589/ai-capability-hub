@@ -1,0 +1,10 @@
+{
+  "name": "股份制银行财报数据分析",
+  "installedAt": 1787227578689,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084642039448072192",
+  "description_zh": "基于Skill 1和Skill 2获取的数据，从2015年起建立连贯的头部7家股份制银行零售业务对标数据库，形成营收结构、减值损失、营业支出、存贷利差等多维趋势分析，并进行同业排名和变化追踪。用户需指定基准银行和对标银行，如\"以A银行为基准、对比B/C/D银行生成同业对标分析\"。",
+  "description_en": "Based on the data obtained from Skill 1 and Skill 2, build a coherent retail-banking benchmarking database covering the top 7 joint-stock banks from 2015 onward. Generate multi-dimensional trend analyses across revenue structure, impairment losses, operating expenses, deposit-loan spreads, and more, along with peer rankings and change tracking. Users must specify a benchmark bank and the comparison banks, e.g., \"Using Bank A as the benchmark, compare Banks B/C/D to generate a peer benchmarking analysis.\"",
+  "iconSource": "letter:auto"
+}

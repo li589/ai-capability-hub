@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:lark",
+  "registry": "trae-remote-official",
+  "plugin_name": "lark",
+  "version": "1.0.4",
+  "marketplace_plugin_id": "6614a267-48fb-485f-8758-fea6136602f8",
+  "remote_installed_plugin_id": "builtin:trae-remote-official:lark",
+  "checksum": "a12900f661d44d1465c23cc3947b347a39c82c87778ae7626e04e513fc7a0434",
+  "file_size": 1786865,
+  "installed_at": 1787227200550
+}

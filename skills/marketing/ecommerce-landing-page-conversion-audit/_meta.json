@@ -1,0 +1,17 @@
+{
+  "owner": "leooooooow",
+  "slug": "ecommerce-landing-page-conversion-audit",
+  "displayName": "Ecommerce Landing Page Conversion Audit",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773838898865,
+    "commit": "https://github.com/openclaw/skills/commit/ff8501c9d09b88f068e1a626f0900ebe7ad495d2"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773725058072,
+      "commit": "https://github.com/openclaw/skills/commit/d724012cbe070cb9988e6959dbc68465c73f8f67"
+    }
+  ]
+}

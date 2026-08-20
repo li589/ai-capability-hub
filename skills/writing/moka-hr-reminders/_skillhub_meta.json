@@ -1,0 +1,11 @@
+{
+  "name": "Moka 人事提醒",
+  "installedAt": 1787228610293,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088130043932065792",
+  "description_zh": "面向人事负责人的提醒清单与提醒文案起草。使用当前平台提供的 Moka 连接器查出需要跟进的人群（合同到期、试用期到期、离职办理滞留、考勤异常、入职材料未齐等），按收件人分组去重并起草逐人或逐组的提醒文案；实际发送由用户或宿主的消息渠道完成，本技能不发送任何消息。当用户要「提醒一下这些人」「催一下没交入职材料的」「给相关负责人准备合同到期 / 考勤异常提醒」时使用。",
+  "description_en": "Reminder lists and ready-to-send reminder drafts for HR owners. Uses the Moka Connector available on the current platform to find people who need follow-up (expiring contracts, probation deadlines, stalled offboarding, attendance anomalies, incomplete onboarding materials), groups them by recipient, and drafts per-person or per-group reminder messages. Actual delivery is done by the user or the host's messaging channel; this skill never sends messages. Use it when the user wants to remind people, chase missing onboarding materials, or prepare contract-expiry or attendance-anomaly reminders for owners.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_ac016c69-db8.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_ac016c69-db8.png"
+}

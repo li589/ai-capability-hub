@@ -1,0 +1,9 @@
+openvino>=2026.2
+numpy<2.0
+soundfile
+scipy
+librosa
+modelscope
+moviepy
+psutil
+qwen-asr

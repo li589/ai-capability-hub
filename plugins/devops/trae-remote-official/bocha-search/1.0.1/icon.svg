@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 310" role="img" aria-labelledby="title">
+  <title id="title">Bocha Market MCP</title>
+  <!-- Vector recreation of the supplied Bocha mark. -->
+  <path fill="#ACCDF9" d="M53 73c18-6 35-4 47 7v104L53 73Z"/>
+  <path fill="#C7DDFC" d="M31 117c18-13 43-14 69 8v59L31 117Z"/>
+  <path fill="#086BFA" d="M99 48v123c0 50 40 90 90 90 50 0 90-40 90-90s-40-89-89-89c-17 0-33 4-46 12V93c0-25-20-45-45-45Z"/>
+  <circle cx="189" cy="172" r="46" fill="#FFF"/>
+  <path fill="#086BFA" d="M204 215c20-5 37 4 50 24-13-11-27-19-42-20l-8-4Z"/>
+</svg>

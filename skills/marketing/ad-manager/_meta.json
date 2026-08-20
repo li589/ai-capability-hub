@@ -1,0 +1,42 @@
+{
+  "owner": "yang1002378395-cmyk",
+  "slug": "ad-manager",
+  "displayName": "Ad Manager",
+  "latest": {
+    "version": "1.2.4",
+    "publishedAt": 1773727079151,
+    "commit": "https://github.com/openclaw/skills/commit/a57189487839bb2712ff010e5cc673bf4ae80482"
+  },
+  "history": [
+    {
+      "version": "1.2.3",
+      "publishedAt": 1773649914475,
+      "commit": "https://github.com/openclaw/skills/commit/6a0ffe1cb7ea72d8e5ce23b8f0585a268f6a1736"
+    },
+    {
+      "version": "1.3.0",
+      "publishedAt": 1773647535448,
+      "commit": "https://github.com/openclaw/skills/commit/4fe5729e6cca907bae385c72b5bfd6024193d3d5"
+    },
+    {
+      "version": "1.0.52",
+      "publishedAt": 1773633015881,
+      "commit": "https://github.com/openclaw/skills/commit/aa94e19a6e6f05e88731347d940406dfed346436"
+    },
+    {
+      "version": "1.0.47",
+      "publishedAt": 1773632346986,
+      "commit": "https://github.com/openclaw/skills/commit/0f072a97cad7b86de7616a214ee50bcfd3bbfdc0"
+    },
+    {
+      "version": "1.0.18",
+      "publishedAt": 1773622842877,
+      "commit": "https://github.com/openclaw/skills/commit/6c1ef7bc802988b5459350dfccd174524f7f0bf1"
+    },
+    {
+      "version": "1.0.3",
+      "publishedAt": 1773599961108,
+      "commit": "https://github.com/openclaw/skills/commit/7ba305ffc2fc460d0d9ff2bda8eb13de6a36f2f8"
+    }
+  ]
+}

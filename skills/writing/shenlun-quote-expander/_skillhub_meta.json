@@ -1,0 +1,10 @@
+{
+  "name": "申论金句扩写",
+  "installedAt": 1787228614219,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2087182532632383488",
+  "description_zh": "按主题生成申论金句、古文引用、排比对仗、经典案例与使用技巧 HTML。触发：申论金句、申论素材、大白话转申论、主题词扩写等。",
+  "description_en": "Generate structured Shenlun writing materials (official quotes, classics, parallels, cases, tips) as an HTML page.",
+  "iconSource": "letter:auto"
+}

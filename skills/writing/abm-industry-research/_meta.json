@@ -1,0 +1,11 @@
+{
+  "owner": "mariokarras",
+  "slug": "abm-industry-research",
+  "displayName": "Industry Research",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774294907812,
+    "commit": "https://github.com/openclaw/skills/commit/ecaeef6c459f0150d3aabf9cb0d61e406e651e7c"
+  },
+  "history": []
+}

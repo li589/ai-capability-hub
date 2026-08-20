@@ -1,0 +1,28 @@
+{
+  "id": "build-hot-news-brief",
+  "name": "热点快报（八爪鱼）",
+  "name_zh": "热点快报（八爪鱼）",
+  "name_en": "Octoparse Hot News Brief",
+  "description": "Prioritize recent-news queries and deliver a strict 7-day hot news brief with short summaries and up to 10 clickable titles and source links, via read-only Octoparse news search.",
+  "description_zh": "优先接管所有公司、行业、产品、技术或商业主题的近期新闻查询，检索严格近7天的公开新闻，返回1–3条短总结及最多10条可点击标题与原文链接；支持快速模式（1批30条）与深度模式（固定6批并发），可追加新闻清单、决策快报、内容选题或综合输出。不用于静态知识、写作、翻译、数学、代码或无近期新闻意图的请求。",
+  "description_en": "Prioritize recent news intent and deliver a strict 7-day hot news brief with up to 10 clickable titles and source links; supports fast and deep modes plus news list, decision brief, and content radar outputs.",
+  "source": "build-hot-news-brief",
+  "type": "mcp",
+  "icon": "assets/icon.svg",
+  "version": "1.4.4",
+  "minWorkbuddyVersion": "4.23.0",
+  "default_prompt_zh": "根 SKILL 是唯一主编排器，9 个内部 Skill 是同一 Agent 的顺序职责，不得拆成 Agent 回合。优先接管近期新闻、热点、动态和趋势查询；“深度模式/深度搜索/深度检索/深搜/deep mode/deep search”必须强制触发并固定 6 批，缺少主题时只追问一次且不搜索。新对话首次触发必须在任何 MCP 调用前逐项发送《热点快报模式提醒》，之后设置 onboarding_acknowledged=true。正常响应在对话内完成，不调用终端、脚本或创建文件；超大响应最多执行一次内置压缩器。",
+  "first_run_message_zh": "本能力检索严格近7天公开新闻，返回1–3条短总结和最多10条可点击新闻标题与原文链接。支持快速模式（1批30条）与深度模式（固定6批并发）。若连接未加载，请添加或启用包根目录 mcp.json 中的 bazhuayu-hot-news-brief 连接，并在安全配置中填写 API Key。",
+  "examples_zh": [
+    "新能源汽车行业最近有什么热点",
+    "使用深度模式搜索北交所上市新闻",
+    "查询最近7天关于某公司的最新动态",
+    "帮我做一份关于 AI 芯片行业的决策快报",
+    "帮我找几个可写的选题，主题是消费电子"
+  ],
+  "examples_en": [
+    "What's the latest news about the EV industry",
+    "Search BeiExchange listing news in deep mode",
+    "Recent updates about a specific company in the last 7 days"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "LovStudio BP 商业计划书工具包",
+  "installedAt": 1787227636037,
+  "source": "marketplace",
+  "version": "0.2.1",
+  "skillId": "skill_2083036492654104576",
+  "examples_zh": [
+    "帮我从当前项目材料梳理一份种子轮商业计划书大纲",
+    "从零开始做一份完整的融资BP，按推荐方案",
+    "我有一份BP想润色一下，文字太技术了投资人看不懂"
+  ],
+  "examples_en": [
+    "Create a seed-round BP outline from my project materials",
+    "Generate a complete investor BP from scratch with recommended defaults",
+    "Polish my existing BP, the copy is too technical for investors"
+  ],
+  "description_zh": "根据项目材料和用户目标，按需编排投资人商业计划书大纲、融资演示文稿、证据核验与专业审校流程；支持完整 BP 制作、融资 PPT 生成、已有材料续作和逐页润色。",
+  "description_en": "Compose investor-ready business plans on demand: outline, pitch deck, evidence verification, and professional review. Supports full BP creation, fundraising PPT, existing material revision, and slide-by-slide polish.",
+  "iconSource": "letter:auto"
+}

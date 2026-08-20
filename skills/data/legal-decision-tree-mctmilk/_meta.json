@@ -1,0 +1,11 @@
+{
+  "owner": "mctmilk",
+  "slug": "legal-decision-tree-mctmilk",
+  "displayName": "法条决策树生成",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774324288539,
+    "commit": "https://github.com/openclaw/skills/commit/cace6b99fc80f4cf74e42fd1a3564d6e43050610"
+  },
+  "history": []
+}

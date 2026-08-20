@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:ppt-generator",
+  "registry": "trae-remote-official",
+  "plugin_name": "ppt-generator",
+  "version": "1.0.0",
+  "marketplace_plugin_id": "9ba4c2f2-deda-4630-b4e5-7e0615c7518b",
+  "remote_installed_plugin_id": "9NTJ2Y23Q2HB42",
+  "checksum": "c31fc46c1576698654fb23f1cd47b22e295fc42385fadfa9d3080dd99b7af5ce",
+  "file_size": 142489,
+  "installed_at": 1787227201912
+}

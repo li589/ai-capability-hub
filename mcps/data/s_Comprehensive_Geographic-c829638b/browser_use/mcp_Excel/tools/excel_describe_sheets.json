@@ -1,0 +1,16 @@
+{
+  "name": "excel_describe_sheets",
+  "description": "List all sheet information of specified Excel file",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "fileAbsolutePath": {
+        "description": "Absolute path to the Excel file",
+        "type": "string"
+      }
+    },
+    "required": [
+      "fileAbsolutePath"
+    ]
+  }
+}

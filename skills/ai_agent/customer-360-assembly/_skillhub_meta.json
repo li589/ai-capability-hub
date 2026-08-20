@@ -1,0 +1,11 @@
+{
+  "name": "客户360组装",
+  "installedAt": 1787228537775,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088537165323079680",
+  "description_zh": "按customer记录组装contact、opportunity、followUpRecord和order信息，形成分主题摘要与时间线。适用于用户要求客户360组装、生成相关结果或检查执行边界时。",
+  "description_en": "Customer 360 Assembly workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_4120f166-28b.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_4120f166-28b.png"
+}

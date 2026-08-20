@@ -1,0 +1,12 @@
+{
+  "slug": "bid-query-analysis-workbench",
+  "name": "招中标查询分析服务工作台",
+  "version": "1.0.1",
+  "installedAt": 1787228762595,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png"
+}

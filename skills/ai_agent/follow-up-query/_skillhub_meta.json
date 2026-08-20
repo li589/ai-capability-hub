@@ -1,0 +1,11 @@
+{
+  "name": "跟进记录查询",
+  "installedAt": 1787227785002,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088537292824645632",
+  "description_zh": "只读查询followUpRecord，并按线索、客户或商机整理时间线、摘要和待办。适用于用户要求跟进记录查询、生成相关结果或检查执行边界时。",
+  "description_en": "Follow-up Record Query workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_8210f308-2ce.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_8210f308-2ce.png"
+}

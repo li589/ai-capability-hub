@@ -1,0 +1,10 @@
+{
+  "name": "会员权益运营",
+  "installedAt": 1787228473385,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087080649681588224",
+  "description_zh": "查询积分与储值方案、流水和客户权益变动，支持按客户信息、业务编号及明确时间范围筛选。",
+  "description_en": "Query points and stored-value programs, transaction records, and customer benefit changes with filters for customer details, business IDs, and explicit time ranges.",
+  "iconSource": "letter:auto"
+}

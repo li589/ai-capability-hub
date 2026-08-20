@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "skill_version": "1.7.0",
+  "project_id": "paperless-demo",
+  "input_fingerprint": "0000000000000000000000000000000000000000000000000000000000000000",
+  "business_blueprint_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "calculation_version": "1.0.0",
+  "current_stage": "ANALYZED",
+  "resume_from": "ANALYZED",
+  "stages": {
+    "ANALYZED": {
+      "status": "pending",
+      "artifacts": []
+    },
+    "MAPPED": {
+      "status": "pending",
+      "artifacts": []
+    },
+    "SCAFFOLDED": {
+      "status": "pending",
+      "artifacts": []
+    },
+    "IMPLEMENTED": {
+      "status": "pending",
+      "artifacts": []
+    },
+    "IMPORTED": {
+      "status": "pending",
+      "artifacts": []
+    },
+    "TESTED": {
+      "status": "pending",
+      "artifacts": []
+    },
+    "PACKAGED": {
+      "status": "pending",
+      "artifacts": []
+    }
+  },
+  "last_error": null,
+  "automatic_retry": {
+    "allowed_codes": [
+      "FILE_LOCKED",
+      "PORT_IN_USE",
+      "TEMPORARY_IO",
+      "OFFLINE_FILE_TEMPORARY"
+    ],
+    "max_retries": 2
+  }
+}

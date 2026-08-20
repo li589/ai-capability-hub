@@ -1,0 +1,13 @@
+{
+  "slug": "zlbx-bidding-persist",
+  "name": "全网招中标数据查询（长期版）",
+  "version": "1.0.2",
+  "installedAt": 1787228919467,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png"
+}

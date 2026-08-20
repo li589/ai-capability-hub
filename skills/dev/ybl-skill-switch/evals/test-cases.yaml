@@ -1,0 +1,102 @@
+# ybl-skill-switch 测试用例
+# 触发准确率目标 ≥ 90%（红线）；开发期 ≥85% 为预警
+# 用例均对齐本窗口真实测试；TC05/TC08 覆盖"无 disable 字段"分支（C1/I1 修复）
+
+cases:
+  - id: TC01
+    input: "启用 market-researcher"
+    expect_trigger: true
+    expect_action: enable
+    target: market-researcher
+
+  - id: TC02
+    input: "把 GitHub 启用"
+    expect_trigger: true
+    expect_action: enable
+    target: github
+
+  - id: TC03
+    input: "打开 GitHub 技能"
+    expect_trigger: true
+    expect_action: enable
+    target: github
+
+  - id: TC04
+    input: "关闭 XX skill"
+    expect_trigger: true
+    expect_action: disable
+
+  - id: TC05
+    input: "关闭 ybl-search-web 技能"
+    expect_trigger: true
+    expect_action: disable
+    target: ybl-search-web
+    note: '目标无 disable 字段 → 插入 disable: true（C1 修复，机制已实测）'
+
+  - id: TC06
+    input: "列出禁用的 skill"
+    expect_trigger: true
+    expect_action: list_disabled
+
+  - id: TC07
+    input: "精简 skill"
+    expect_trigger: true
+    expect_action: slim_confirm
+
+  - id: TC08
+    input: "启用 humanizer"
+    expect_trigger: true
+    expect_action: enable
+    target: humanizer
+    note: humanizer 当前无 disable 字段 = 默认启用 → 反馈"已启用无需操作"，不改文件（I1 修复）
+
+  - id: TC09
+    input: "关闭网页"
+    expect_trigger: false
+    note: 负面触发——非 Skill 开关
+
+  - id: TC10
+    input: "打开文件"
+    expect_trigger: false
+    note: 负面触发——非 Skill 开关
+
+  - id: TC11
+    input: "禁用 ybl-skill-switch 自身"
+    expect_trigger: true
+    expect_action: block_self
+    note: G2 自身保护，永不禁用
+
+  - id: TC12
+    input: "帮我写篇文章"
+    expect_trigger: false
+    note: 与开关无关，不触发
+
+  - id: TC13
+    input: "查看启用的深度研究类 skill"
+    expect_trigger: true
+    expect_action: view_enabled
+    note: '范围=启用集(-rL "^disable: true")，按 description 关键词 research/调研/深度研究 过滤'
+
+  - id: TC14
+    input: "查看禁用的 GitHub 相关技能"
+    expect_trigger: true
+    expect_action: view_disabled
+    note: '范围=禁用集(-rn "^disable: true")，按关键词过滤；纯展示不改文件'
+
+  - id: TC15
+    input: "查看深度研究类的 skill（启用的和禁用的都列出来）"
+    expect_trigger: true
+    expect_action: view_all
+    note: 扫描全部、不做状态过滤、逐个标 ✅/⛔；类别靠 description 关键词，不维护标签
+
+  - id: TC16
+    input: "查看深度研究类 skill 的状态"
+    expect_trigger: false
+    expect_action: view_all
+    note: '防御用例——2026-07-23 触发词收窄后，"查看某类skill的状态"（无启用/禁用/打开/关闭关键词）已从触发词中移除，应由系统内置能力接管而不触发本技能。确认 expect_trigger: false 不被误判为失效。'
+
+  - id: TC17
+    input: "禁用 1,3"
+    expect_trigger: true
+    expect_action: disable
+    note: 编号选择场景——承接 view_all（TC15）产出的编号清单，用户回复编号即可禁用对应技能，无需重复名称；模型须映射到最近一次查看列表中的第 1、3 项，并在执行前重述选中项待确认（2026-07-23 群友痛点：100+ skill 列表无搜索，逐名打很麻烦）

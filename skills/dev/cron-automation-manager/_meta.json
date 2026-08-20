@@ -1,0 +1,11 @@
+{
+  "owner": "mr-chen-05",
+  "slug": "cron-automation-manager",
+  "displayName": "Cron Automation Manager",
+  "latest": {
+    "version": "1.2.1",
+    "publishedAt": 1774184709912,
+    "commit": "https://github.com/openclaw/skills/commit/545915e779c5d1dfe276e1c88d2fff928c0f1e1e"
+  },
+  "history": []
+}

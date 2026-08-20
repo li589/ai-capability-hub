@@ -1,0 +1,11 @@
+{
+  "owner": "jeyeshield",
+  "slug": "ad-production-demand-management",
+  "displayName": "需求管理",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773891960822,
+    "commit": "https://github.com/openclaw/skills/commit/5068500d64f08b9953b6bba88b1ddb3f7f663714"
+  },
+  "history": []
+}

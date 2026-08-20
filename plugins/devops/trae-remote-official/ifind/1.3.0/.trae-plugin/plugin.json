@@ -1,0 +1,59 @@
+{
+  "name": "ifind",
+  "version": "1.3.0",
+  "description": "同花顺 iFinD 金融数据 MCP 集成，支持填写 API Key 后查询股票、基金、宏观经济、新闻公告、债券、港美股及指数板块数据。",
+  "i18n": {
+    "display_name": {
+      "en": "iFinD",
+      "zh-cn": "同花顺 iFinD",
+      "ja": "iFinD"
+    },
+    "description": {
+      "en": "iFinD financial data MCP integration for stocks, funds, macro indicators, news, bonds, global stocks, and indices.",
+      "zh-cn": "同花顺 iFinD 金融数据 MCP 集成，支持填写 API Key 后查询股票、基金、宏观经济、新闻公告、债券、港美股及指数板块数据。",
+      "ja": "iFinD 金融データ MCP 統合。株式、ファンド、マクロ指標、ニュース、債券、海外株式、指数に対応。"
+    }
+  },
+  "author": {
+    "name": "iFinD",
+    "url": "https://www.51ifind.com"
+  },
+  "homepage": "https://www.51ifind.com",
+  "license": "Proprietary",
+  "keywords": [
+    "ifind",
+    "finance",
+    "stock",
+    "fund",
+    "bond",
+    "index",
+    "macro",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "iFinD",
+    "shortDescription": "同花顺 iFinD 金融数据查询",
+    "longDescription": "填写同花顺 iFinD API Key 后，可通过 MCP 服务查询 A 股、基金、宏观经济、新闻公告、债券、港美股及指数板块数据，支持实时行情、智能选股选基和指标搜索。",
+    "developerName": "iFinD",
+    "category": "Productivity",
+    "capabilities": [
+      "Read"
+    ],
+    "websiteURL": "https://www.51ifind.com",
+    "defaultPrompt": [
+      "查询 A 股实时行情",
+      "搜索宏观经济指标",
+      "查询基金和债券数据"
+    ],
+    "brandColor": "#D71920",
+    "logo": "./assets/app-icno.png",
+    "composerIcon": "./assets/app-icno.png",
+    "screenshots": []
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "skills": "./skills/",
+  "env": {
+    "IFIND_AUTH_TOKEN": "${connector.ifind.ACCESS_TOKEN}"
+  }
+}

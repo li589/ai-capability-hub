@@ -1,0 +1,21 @@
+{
+  "name": "腾讯云COS向量",
+  "installedAt": 1787228696118,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053081509973127168",
+  "examples_zh": [
+    "创建一个新的向量桶",
+    "插入一组文本向量到索引",
+    "用文本搜索相似的向量"
+  ],
+  "examples_en": [
+    "Create a new vector bucket",
+    "Insert text vectors into an index",
+    "Search for similar vectors by text query"
+  ],
+  "description_zh": "腾讯云 COS 向量桶管理（索引、存储、相似度搜索）",
+  "description_en": "腾讯云 COS 向量桶全功能管理技能。覆盖向量桶、索引、向量数据的全生命周期管理，包括创建/删除/查询向量桶、创建/管理索引、插入/查询/搜索/删除向量数据、策...",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/cos-vectors.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/cos-vectors.png"
+}

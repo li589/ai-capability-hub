@@ -1,0 +1,11 @@
+{
+  "owner": "dalomeve",
+  "slug": "powershell-reliable",
+  "displayName": "PowerShell Reliable Execution",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772306369220,
+    "commit": "https://github.com/openclaw/skills/commit/eeb25fc7936723347cd3d5067f988154ecc14187"
+  },
+  "history": []
+}

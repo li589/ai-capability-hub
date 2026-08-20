@@ -1,0 +1,11 @@
+{
+  "name": "龙虎榜",
+  "installedAt": 1787227708596,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2083074933946847232",
+  "description_zh": "广发证券龙虎榜个股查询Skill，获取指定日期、沪深市场异常上榜个股数据",
+  "description_en": "GF Securities Dragon-Tiger Board stock query skill, retrieving abnormal trading stock data for specified dates in Shanghai and Shenzhen markets.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_c0a2d957-3a1.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_c0a2d957-3a1.png"
+}

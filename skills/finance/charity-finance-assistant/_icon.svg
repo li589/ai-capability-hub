@@ -1,0 +1,26 @@
+<svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="finance-bg" x1="5" y1="5" x2="49" y2="49" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#11BFA6"/>
+      <stop offset="1" stop-color="#0FB7C8"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="3" y="3" width="48" height="48" rx="12" fill="url(#finance-bg)"/>
+
+  <path d="M15 13.5C15 12.6716 15.6716 12 16.5 12H31.8L38.5 18.7V36.5L35.8 35.1L33.1 36.5L30.4 35.1L27.7 36.5L25 35.1L22.3 36.5L19.6 35.1L16.9 36.5L15 37.5V13.5Z" fill="white" fill-opacity="0.97"/>
+  <path d="M31.5 12.3V17.4C31.5 18.1732 32.1268 18.8 32.9 18.8H38" stroke="#11BFA6" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M20 19.7H29.4" stroke="#11BFA6" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M20 25H32.8" stroke="#11BFA6" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M20 30.3H28.4" stroke="#11BFA6" stroke-width="2.5" stroke-linecap="round"/>
+
+  <circle cx="36" cy="32.5" r="9.8" fill="#FF7A59"/>
+  <circle cx="36" cy="32.5" r="7.2" fill="none" stroke="#FFD9CF" stroke-width="1.8" stroke-dasharray="1.8 1.8"/>
+  <path d="M33.2 28.6L36 31.4L38.8 28.6" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M33.1 31.5H38.9" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M33.1 33.8H38.9" stroke="white" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M36 31.4V38" stroke="white" stroke-width="2" stroke-linecap="round"/>
+
+  <path d="M17.5 39.8H32.2" stroke="#D9FFFA" stroke-width="1.8" stroke-linecap="round" opacity="0.55"/>
+</svg>

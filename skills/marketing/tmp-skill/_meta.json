@@ -1,0 +1,11 @@
+{
+  "owner": "alexeyvorobiev",
+  "slug": "tmp-skill",
+  "displayName": "Tmp Skill",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772307988409,
+    "commit": "https://github.com/openclaw/skills/commit/0dd57dd6a32784686001775ea828ea90a222a46d"
+  },
+  "history": []
+}

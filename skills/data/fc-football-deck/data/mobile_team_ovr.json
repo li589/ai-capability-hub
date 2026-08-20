@@ -1,0 +1,222 @@
+{
+  "阿根廷": {
+    "name_en": "Argentina",
+    "team_ovr": 142
+  },
+  "澳大利亚": {
+    "name_en": "Australia",
+    "team_ovr": 139
+  },
+  "奥地利": {
+    "name_en": "Austria",
+    "team_ovr": 141
+  },
+  "比利时": {
+    "name_en": "Belgium",
+    "team_ovr": 141
+  },
+  "波黑": {
+    "name_en": "Bosnia and Herzegovina",
+    "team_ovr": 139
+  },
+  "巴西": {
+    "name_en": "Brazil",
+    "team_ovr": 141
+  },
+  "加拿大": {
+    "name_en": "Canada",
+    "team_ovr": 139
+  },
+  "佛得角": {
+    "name_en": "Cape Verde Islands",
+    "team_ovr": 138
+  },
+  "哥伦比亚": {
+    "name_en": "Colombia",
+    "team_ovr": 141
+  },
+  "刚果": {
+    "name_en": "Congo DR",
+    "team_ovr": 140
+  },
+  "克罗地亚": {
+    "name_en": "Croatia",
+    "team_ovr": 141
+  },
+  "捷克": {
+    "name_en": "Czech Republic",
+    "team_ovr": 140
+  },
+  "科特迪瓦": {
+    "name_en": "Côte d'Ivoire",
+    "team_ovr": 141
+  },
+  "丹麦": {
+    "name_en": "Denmark",
+    "team_ovr": 141
+  },
+  "厄瓜多尔": {
+    "name_en": "Ecuador",
+    "team_ovr": 140
+  },
+  "埃及": {
+    "name_en": "Egypt",
+    "team_ovr": 139
+  },
+  "英格兰": {
+    "name_en": "England",
+    "team_ovr": 142
+  },
+  "芬兰": {
+    "name_en": "Finland",
+    "team_ovr": 139
+  },
+  "法国": {
+    "name_en": "France",
+    "team_ovr": 142
+  },
+  "德国": {
+    "name_en": "Germany",
+    "team_ovr": 142
+  },
+  "加纳": {
+    "name_en": "Ghana",
+    "team_ovr": 140
+  },
+  "海地": {
+    "name_en": "Haiti",
+    "team_ovr": 138
+  },
+  "荷兰": {
+    "name_en": "Holland",
+    "team_ovr": 142
+  },
+  "匈牙利": {
+    "name_en": "Hungary",
+    "team_ovr": 139
+  },
+  "冰岛": {
+    "name_en": "Iceland",
+    "team_ovr": 139
+  },
+  "印度尼西亚": {
+    "name_en": "Indonesia",
+    "team_ovr": 139
+  },
+  "意大利": {
+    "name_en": "Italy",
+    "team_ovr": 141
+  },
+  "日本": {
+    "name_en": "Japan",
+    "team_ovr": 140
+  },
+  "韩国": {
+    "name_en": "Korea Republic",
+    "team_ovr": 140
+  },
+  "墨西哥": {
+    "name_en": "Mexico",
+    "team_ovr": 140
+  },
+  "摩洛哥": {
+    "name_en": "Morocco",
+    "team_ovr": 141
+  },
+  "新西兰": {
+    "name_en": "New Zealand",
+    "team_ovr": 138
+  },
+  "北爱尔兰": {
+    "name_en": "Northern Ireland",
+    "team_ovr": 139
+  },
+  "挪威": {
+    "name_en": "Norway",
+    "team_ovr": 140
+  },
+  "巴拿马": {
+    "name_en": "Panama",
+    "team_ovr": 139
+  },
+  "巴拉圭": {
+    "name_en": "Paraguay",
+    "team_ovr": 140
+  },
+  "波兰": {
+    "name_en": "Poland",
+    "team_ovr": 140
+  },
+  "葡萄牙": {
+    "name_en": "Portugal",
+    "team_ovr": 142
+  },
+  "卡塔尔": {
+    "name_en": "Qatar",
+    "team_ovr": 138
+  },
+  "爱尔兰": {
+    "name_en": "Republic of Ireland",
+    "team_ovr": 140
+  },
+  "罗马尼亚": {
+    "name_en": "Romania",
+    "team_ovr": 139
+  },
+  "沙特阿拉伯": {
+    "name_en": "Saudi Arabia",
+    "team_ovr": 139
+  },
+  "苏格兰": {
+    "name_en": "Scotland",
+    "team_ovr": 140
+  },
+  "塞内加尔": {
+    "name_en": "Senegal",
+    "team_ovr": 140
+  },
+  "南非": {
+    "name_en": "South Africa",
+    "team_ovr": 138
+  },
+  "西班牙": {
+    "name_en": "Spain",
+    "team_ovr": 142
+  },
+  "瑞典": {
+    "name_en": "Sweden",
+    "team_ovr": 140
+  },
+  "瑞士": {
+    "name_en": "Switzerland",
+    "team_ovr": 140
+  },
+  "突尼斯": {
+    "name_en": "Tunisia",
+    "team_ovr": 139
+  },
+  "土耳其": {
+    "name_en": "Turkey",
+    "team_ovr": 141
+  },
+  "乌克兰": {
+    "name_en": "Ukraine",
+    "team_ovr": 140
+  },
+  "美国": {
+    "name_en": "United States",
+    "team_ovr": 141
+  },
+  "乌拉圭": {
+    "name_en": "Uruguay",
+    "team_ovr": 141
+  },
+  "乌兹别克斯坦": {
+    "name_en": "Uzbekistan",
+    "team_ovr": 138
+  },
+  "威尔士": {
+    "name_en": "Wales",
+    "team_ovr": 139
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:story-craft",
+  "registry": "trae-remote-official",
+  "plugin_name": "story-craft",
+  "version": "0.1.1",
+  "marketplace_plugin_id": "e4e2f181-5103-40c5-a689-73c2652955b2",
+  "remote_installed_plugin_id": "1TQCWE.CKL-IZY",
+  "checksum": "478591a8a758fb463483d075f7fb7b511e9bb6de01315615e6eb92e57c87c998",
+  "file_size": 18765,
+  "installed_at": 1787227203017
+}

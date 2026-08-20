@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-06-13T12:27:13.946Z",
+  "bookRoot": "E:\\FBS001\\work\\fbs-bookwriter-3.0-candidate",
+  "status": "passed",
+  "thresholds": {
+    "maxPerFileKb": 1024,
+    "maxTotalMb": 16
+  },
+  "totals": {
+    "files": 3,
+    "totalMb": 0
+  },
+  "oversized": [],
+  "recommendations": [
+    "将超大工具输出外置到 .fbs/governance 或 qc-output，并在对话中返回路径指针。",
+    "优先保留 summary 字段，避免把整份 JSON 回注到主上下文。"
+  ]
+}

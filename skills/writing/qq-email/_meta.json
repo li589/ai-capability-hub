@@ -1,0 +1,11 @@
+{
+  "owner": "chao-nj-cn",
+  "slug": "qq-email",
+  "displayName": "Qq Email",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772451213425,
+    "commit": "https://github.com/openclaw/skills/commit/75ace9f8f8e22bcd1bab842e31dc28ed3ea913f1"
+  },
+  "history": []
+}

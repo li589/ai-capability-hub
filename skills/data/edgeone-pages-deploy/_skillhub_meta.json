@@ -1,0 +1,21 @@
+{
+  "name": "EdgeOne Pages Deploy",
+  "installedAt": 1787227695845,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2054902619926732800",
+  "examples_zh": [
+    "把这个前端项目部署到 EdgeOne Pages",
+    "给这个站点创建一个预览部署",
+    "重新发布当前项目到 EdgeOne Pages"
+  ],
+  "examples_en": [
+    "Deploy this frontend project to EdgeOne Pages",
+    "Create a preview deployment for this site",
+    "Redeploy the current project to EdgeOne Pages"
+  ],
+  "description_zh": "将前端或全栈项目部署到腾讯 EdgeOne Pages",
+  "description_en": "Deploy frontend and full-stack projects to Tencent EdgeOne Pages",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_f091c6b8-b37.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_f091c6b8-b37.svg"
+}

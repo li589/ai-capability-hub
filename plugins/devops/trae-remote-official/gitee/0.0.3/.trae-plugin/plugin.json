@@ -1,0 +1,54 @@
+{
+  "name": "gitee",
+  "version": "0.0.3",
+  "description": "Gitee platform integration. Manage repositories, issues, pull requests, and notifications through Gitee's official Remote MCP Server.",
+  "i18n": {
+    "display_name": {
+      "en": "Gitee",
+      "zh-cn": "Gitee",
+      "ja": "Gitee"
+    },
+    "description": {
+      "en": "Gitee platform integration. Manage repositories, issues, pull requests, and notifications through Gitee's official Remote MCP Server.",
+      "zh-cn": "Gitee 平台集成。通过 Gitee 官方 Remote MCP Server 管理仓库、Issue、Pull Request 和通知。",
+      "ja": "Gitee プラットフォーム連携。公式リモート MCP Server を通じてリポジトリ、Issue、プルリクエスト、通知を管理します。"
+    }
+  },
+  "author": {
+    "name": "Gitee",
+    "url": "https://gitee.com/"
+  },
+  "homepage": "https://gitee.com/",
+  "license": "MIT",
+  "keywords": [
+    "gitee",
+    "repository",
+    "pull-request",
+    "issues",
+    "code-review",
+    "devops",
+    "git"
+  ],
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "Gitee",
+    "shortDescription": "Gitee code hosting for repositories, issues, and pull requests",
+    "longDescription": "Gitee platform integration. Manage repositories, issues, pull requests, and notifications. Full access to Gitee's comprehensive DevOps lifecycle tools through the official Remote MCP Server.",
+    "developerName": "Gitee",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://gitee.com/",
+    "privacyPolicyURL": "https://gitee.com/privacy_terms",
+    "termsOfServiceURL": "https://gitee.com/terms",
+    "defaultPrompt": [
+      "Help me manage Gitee repositories, issues, and pull requests",
+      "List my Gitee repositories",
+      "Create a pull request on Gitee"
+    ],
+    "brandColor": "#C71D23",
+    "composerIcon": "./assets/gitee.svg",
+    "logo": "./assets/gitee.svg",
+    "screenshots": []
+  }
+}

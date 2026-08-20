@@ -1,0 +1,21 @@
+{
+  "name": "Netlify Deploy",
+  "installedAt": 1787228397948,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2054901638482558976",
+  "examples_zh": [
+    "把当前站点部署到 Netlify 预览环境",
+    "检查这个 Netlify 项目的登录和关联状态",
+    "把构建产物发布到 Netlify 生产环境"
+  ],
+  "examples_en": [
+    "Deploy the current site to a Netlify preview",
+    "Check Netlify login and site linking for this project",
+    "Publish the build output to Netlify production"
+  ],
+  "description_zh": "使用 Netlify CLI 部署和管理静态网站",
+  "description_en": "Deploy and manage Netlify sites with preview and production releases",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_477dd850-278.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_477dd850-278.svg"
+}

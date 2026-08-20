@@ -1,0 +1,34 @@
+description = "Add structured logging to TypeScript projects with @alcyone-labs/simple-logger"
+
+prompt = """
+Load the simple-logger-usage skill and help implement logging patterns.
+
+## Instructions
+
+1. **Load skill**: @{{{SKILL_PATH}}/simple-logger-usage/SKILL.md}
+
+2. **Identify task** from request:
+   - Backend/service logging
+   - Frontend component logging
+   - Chrome MV3 service worker logging
+   - Transport configuration
+   - Best practices question
+
+3. **Read relevant references**:
+   - API details: `references/usage/api.md`
+   - Configuration: `references/usage/configuration.md`
+   - Patterns: `references/usage/patterns.md`
+   - Gotchas: `references/usage/gotchas.md`
+
+4. **Generate implementation**:
+   - File-scoped logger with contextual metadata
+   - Child loggers for request/function context
+   - Transport setup if needed
+   - MV3-specific IIFE pattern for Chrome extensions
+
+5. **Include examples**:
+   - Import statement
+   - Logger initialization
+   - Sample log statements
+   - Pattern explanation
+"""

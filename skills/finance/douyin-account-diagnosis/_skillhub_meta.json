@@ -1,0 +1,11 @@
+{
+  "name": "抖音账号诊断",
+  "installedAt": 1787227570271,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2085649157288583168",
+  "description_zh": "一键诊断抖音账号运营健康度，从六个维度量化评估，输出100分制评分与优化建议",
+  "description_en": "One-click Douyin account health diagnosis with six-dimension scoring and optimization advice",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_492994d3-5f6.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_492994d3-5f6.svg"
+}

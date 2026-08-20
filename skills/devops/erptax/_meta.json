@@ -1,0 +1,11 @@
+{
+  "owner": "loverun321",
+  "slug": "erptax",
+  "displayName": "ERP Tax Filler",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774445293672,
+    "commit": "https://github.com/openclaw/skills/commit/6bcbeac50da6d41d787325412a7e9321c5e6d221"
+  },
+  "history": []
+}

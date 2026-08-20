@@ -1,0 +1,37 @@
+{
+  "name": "government-ai-legal-services",
+  "version": "1.0.0",
+  "description": "政府AI法律服务技能包 - 为AI政府法律服务全球标准v1.1提供完整的AI服务支持，包括政策解读、影响评估、实施指导、适用性检查、合规性检查等功能",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "government",
+    "policy",
+    "interpretation",
+    "AI",
+    "legal",
+    "analysis",
+    "impact",
+    "guidance",
+    "compliance"
+  ],
+  "author": "阿拉丁",
+  "guidance": "张海洋",
+  "standard": "AI政府法律服务全球标准 v1.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sealawyer2026/government-ai-legal-services.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sealawyer2026/government-ai-legal-services/issues"
+  },
+  "homepage": "https://github.com/sealawyer2026/government-ai-legal-services#readme",
+  "dependencies": {
+    "axios": "^1.6.0",
+    "fs-extra": "^11.1.0"
+  },
+  "devDependencies": {}
+}

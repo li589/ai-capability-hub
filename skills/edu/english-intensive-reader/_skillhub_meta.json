@@ -1,0 +1,20 @@
+{
+  "name": "英语精读笔记",
+  "installedAt": 1787228501450,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443512627294208",
+  "examples_zh": [
+    "帮我精读这篇经济学人文章",
+    "逐句讲解这段英文的语法结构",
+    "标注这篇文章里的考研级别生词"
+  ],
+  "examples_en": [
+    "Do an intensive reading of this Economist article",
+    "Break down the grammar structure sentence by sentence",
+    "Annotate the graduate-level vocabulary in this article"
+  ],
+  "description_zh": "输入英文文章，逐句语法拆解+生词分级标注，生成双栏阅读笔记，支持加入单词本和导出Anki",
+  "description_en": "Input an English article for sentence-by-sentence grammar breakdown, graded vocab annotation & dual-column reading notes",
+  "iconSource": "letter:auto"
+}

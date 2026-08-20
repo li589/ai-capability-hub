@@ -1,0 +1,67 @@
+{
+  "code": "SUCCESS",
+  "message": "漫剧拆分完成",
+  "out_trade_no": "SKP20260724143000abcdef123456789",
+  "transaction_id": "4200000000202607240000000000",
+  "content": {
+    "schema_version": "1.0",
+    "skill": "comic-drama-breakdown",
+    "skill_version": "1.0.0",
+    "status": "succeeded",
+    "result": {
+      "screenplay": "## S1 | 内景 · 办公室 | 夜\n林夏发现合同被替换。",
+      "characters": [
+        {
+          "key": "char_1",
+          "name": "林夏",
+          "role": "主角",
+          "description": "都市职场女性",
+          "appearance": "青年女性，中等身高，黑色长发，深色西装，神态克制。",
+          "personality": "冷静、警觉"
+        }
+      ],
+      "scenes": [
+        {
+          "key": "scene_1",
+          "location": "办公室",
+          "time": "夜",
+          "description": "深夜办公区。",
+          "image_prompt": "深夜现代办公室，桌面文件整齐，冷白灯光，电影感写实。"
+        }
+      ],
+      "storyboards": [
+        {
+          "shot_number": 1,
+          "title": "合同异样",
+          "scene_key": "scene_1",
+          "character_keys": [
+            "char_1"
+          ],
+          "duration_seconds": 8,
+          "shot_type": "近景",
+          "angle": "平视",
+          "movement": "固定",
+          "action": "林夏翻开合同，发现关键页被替换。",
+          "dialogue": "",
+          "description": "林夏坐在办公桌前检查合同，目光停在异常页码。",
+          "result": "林夏按住合同异常页，视线锁定页脚编号。",
+          "atmosphere": "冷白灯光，安静紧张。",
+          "image_prompt": "现代办公室近景，林夏检查合同异常页，冷白灯光。",
+          "first_frame_prompt": "林夏手指停在尚未翻开的合同页边缘。",
+          "last_frame_prompt": "林夏按住异常页，视线锁定页脚编号。",
+          "video_prompt": "素材：人物与办公室参考。\n画面：林夏检查合同。\n开场：合同尚未翻开。\n时间轴：0.0-8.0秒完成翻页和发现。\n镜头：固定近景。\n结尾：按住异常页。\n对白：无。\n风格：电影感写实。\n约束：无字幕、Logo、水印或UI。"
+        }
+      ],
+      "warnings": [
+        "示例只展示一个镜头，正式结果会根据素材和目标时长拆分。"
+      ],
+      "summary": {
+        "character_count": 1,
+        "scene_count": 1,
+        "shot_count": 1,
+        "total_duration_seconds": 8
+      }
+    }
+  },
+  "already_fulfilled": false
+}

@@ -1,0 +1,49 @@
+{
+  "selection": "uniform-random",
+  "pool_size": 6,
+  "dynamic_ui_companion_manifest": "assets/radar-visual-kit/dynamic-ui-companions/manifest.json",
+  "styles": [
+    {
+      "id": "verdict-sheet",
+      "name": "Verdict Sheet",
+      "framework": "index-gate",
+      "page_background": "#ffffff",
+      "asset": "assets/radar-visual-kit/layout-guides/verdict-sheet.svg"
+    },
+    {
+      "id": "evidence-object",
+      "name": "Evidence Object",
+      "framework": "reading-rail",
+      "page_background": "#ffffff",
+      "asset": "assets/radar-visual-kit/layout-guides/evidence-object.svg"
+    },
+    {
+      "id": "swiss-trace",
+      "name": "Swiss Trace",
+      "framework": "reading-rail",
+      "page_background": "#fafafa",
+      "asset": "assets/radar-visual-kit/layout-guides/swiss-trace.svg"
+    },
+    {
+      "id": "decision-mosaic",
+      "name": "Decision Mosaic",
+      "framework": "index-gate",
+      "page_background": "#ffffff",
+      "asset": "assets/radar-visual-kit/layout-guides/decision-mosaic.svg"
+    },
+    {
+      "id": "signal-stage",
+      "name": "Signal Stage",
+      "framework": "exhibit-path",
+      "page_background": "#111210",
+      "asset": "assets/radar-visual-kit/layout-guides/signal-stage.svg"
+    },
+    {
+      "id": "alert-cut",
+      "name": "Alert Cut",
+      "framework": "exhibit-path",
+      "page_background": "#fff4df",
+      "asset": "assets/radar-visual-kit/layout-guides/alert-cut.svg"
+    }
+  ]
+}

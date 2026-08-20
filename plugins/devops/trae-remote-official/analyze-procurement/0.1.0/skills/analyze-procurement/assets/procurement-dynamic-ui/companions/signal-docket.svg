@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Signal Docket Dynamic UI companion</title>
+  <desc id="desc">Six editorial procurement widget compositions with alternating acts, bold labels, and docket rows.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fff}.paper{fill:#f8f6f5}.ink{fill:#201918}.muted{fill:#746c6a}.verm{fill:#a23a2b}.gold{fill:#d39b36}.dark{fill:#201918}.rule{stroke:#ddd8d6;fill:none}.light-rule{stroke:#6b5f5d;fill:none}.verm-line{stroke:#a23a2b;fill:none}.label{font:700 11px Arial,sans-serif;letter-spacing:1.2px}.display{font:700 22px Arial,sans-serif}.meta{font:400 9px Arial,sans-serif}.tiny{font:700 8px Arial,sans-serif;letter-spacing:.7px}
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="720"/>
+  <text x="24" y="28" class="ink label">SIGNAL DOCKET / DYNAMIC UI COMPOSITION PLATE</text>
+  <text x="936" y="28" text-anchor="end" class="muted meta">EDITORIAL ACTS · STRICT ROWS</text>
+
+  <g transform="translate(24 54)">
+    <rect class="paper" width="444" height="190"/>
+    <text x="18" y="28" class="verm tiny">01 / AWARD</text><text x="18" y="56" class="ink display">FRONTIER</text>
+    <rect x="18" y="72" width="150" height="98" class="dark"/><text x="34" y="94" fill="#fff" class="tiny">DECISION</text><text x="34" y="128" fill="#fff" class="display">02</text><rect x="34" y="146" width="82" height="10" class="verm"/>
+    <path d="M190 150L238 136L278 112L326 82L410 54" class="verm-line" stroke-width="2.5"/><circle cx="238" cy="136" r="5" class="ink"/><circle cx="278" cy="112" r="5" class="ink"/><circle cx="326" cy="82" r="7" class="verm"/><circle cx="410" cy="54" r="5" class="gold"/>
+  </g>
+
+  <g transform="translate(492 54)">
+    <rect class="dark" width="444" height="190"/>
+    <text x="18" y="28" fill="#d39b36" class="tiny">02 / PRICE PULSE</text><text x="18" y="58" fill="#fff" class="display">CHANGE</text>
+    <path d="M20 86H424M20 122H424M20 158H424" class="light-rule"/>
+    <path d="M26 150C82 132 102 104 154 112S230 132 278 86S354 66 418 76" stroke="#fff" fill="none" stroke-width="2.5"/>
+    <circle cx="278" cy="86" r="6" class="verm"/><circle cx="418" cy="76" r="6" class="gold"/>
+    <text x="24" y="180" fill="#cfc7c5" class="meta">INDEX / VOLUME / FX</text><text x="420" y="180" text-anchor="end" fill="#fff" class="tiny">LOCK PERIOD</text>
+  </g>
+
+  <g transform="translate(24 274)">
+    <rect class="paper" width="444" height="190"/>
+    <text x="18" y="28" class="verm tiny">03 / RISK LENS</text><text x="18" y="56" class="ink display">GATES</text>
+    <g transform="translate(190 24)">
+      <path d="M0 0H236M0 32H236M0 64H236M0 96H236M0 128H236M59 0V128M118 0V128M177 0V128" class="rule"/>
+      <rect x="61" y="34" width="55" height="28" class="verm"/><rect x="120" y="66" width="55" height="28" class="gold"/><rect x="179" y="98" width="55" height="28" class="dark"/>
+      <text x="8" y="20" class="muted meta">SEC.</text><text x="8" y="52" class="muted meta">CAP.</text><text x="8" y="84" class="muted meta">DEL.</text><text x="8" y="116" class="muted meta">EXIT</text>
+    </g>
+    <text x="18" y="108" class="ink label">4 VERIFIED</text><text x="18" y="130" class="gold label">1 CONDITIONAL</text><text x="18" y="152" class="verm label">1 UNKNOWN</text>
+  </g>
+
+  <g transform="translate(492 274)">
+    <rect class="paper" width="444" height="190"/>
+    <rect x="0" y="0" width="170" height="190" class="verm"/><text x="18" y="30" fill="#fff" class="tiny">04 / EXCEPTION</text><text x="18" y="64" fill="#fff" class="display">QUEUE</text><text x="18" y="112" fill="#fff" class="display">03</text><text x="18" y="136" fill="#fff" class="meta">OPEN ITEMS</text>
+    <path d="M190 32H426M190 78H426M190 124H426M190 170H426" class="rule"/>
+    <text x="194" y="56" class="ink meta">01 · COVERAGE</text><text x="422" y="56" text-anchor="end" class="verm tiny">02 AUG</text>
+    <text x="194" y="102" class="ink meta">02 · DELAY</text><text x="422" y="102" text-anchor="end" class="ink tiny">05 AUG</text>
+    <text x="194" y="148" class="ink meta">03 · MOQ</text><text x="422" y="148" text-anchor="end" class="gold tiny">09 AUG</text>
+  </g>
+
+  <g transform="translate(24 494)">
+    <rect class="dark" width="444" height="190"/>
+    <text x="18" y="28" fill="#d39b36" class="tiny">05 / LANDED FLOW</text><text x="18" y="58" fill="#fff" class="display">ROUTE</text>
+    <circle cx="52" cy="120" r="13" fill="#fff"/><circle cx="196" cy="88" r="13" class="verm"/><circle cx="196" cy="146" r="13" class="gold"/><circle cx="350" cy="118" r="16" fill="#fff"/>
+    <path d="M66 116C112 102 142 90 182 88M66 124C116 136 144 146 182 146M210 88C258 90 294 104 334 114M210 146C262 142 298 130 334 122" stroke="#cfc7c5" fill="none" stroke-width="2"/>
+    <text x="18" y="178" fill="#cfc7c5" class="meta">BASE 62</text><text x="168" y="178" fill="#fff" class="meta">FREIGHT 21</text><text x="330" y="178" fill="#d39b36" class="meta">DUTY 17</text>
+  </g>
+
+  <g transform="translate(492 494)">
+    <rect class="paper" width="444" height="190"/>
+    <text x="18" y="28" class="verm tiny">06 / EXECUTION TRACK</text><text x="18" y="56" class="ink display">ACT</text>
+    <path d="M110 76H420M110 112H420M110 148H420" class="rule"/>
+    <text x="18" y="94" class="ink label">VERIFY</text><text x="18" y="130" class="ink label">PILOT</text><text x="18" y="166" class="ink label">AWARD</text>
+    <rect x="112" y="82" width="108" height="10" class="verm"/><rect x="194" y="118" width="148" height="10" class="dark"/><rect x="308" y="154" width="112" height="10" class="gold"/>
+    <circle cx="220" cy="87" r="5" class="verm"/><circle cx="342" cy="123" r="5" class="dark"/><circle cx="420" cy="159" r="5" class="gold"/>
+  </g>
+</svg>

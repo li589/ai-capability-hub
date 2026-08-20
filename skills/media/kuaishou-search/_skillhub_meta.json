@@ -1,0 +1,11 @@
+{
+  "name": "快手作品搜索",
+  "installedAt": 1785864601803,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2083024383323914240",
+  "description_zh": "输入关键词搜索快手热门作品，支持综合、最新、最多点赞等多维排序，灵活筛选发布时间范围",
+  "description_en": "Search trending Kuaishou videos by keywords with sorting options and publish-time filters.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_d8edb4f7-140.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_d8edb4f7-140.svg"
+}

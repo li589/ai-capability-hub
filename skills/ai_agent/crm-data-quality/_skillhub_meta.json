@@ -1,0 +1,11 @@
+{
+  "name": "数据质量治理",
+  "installedAt": 1787227619476,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088536974875115520",
+  "description_zh": "只读扫描lead、customer、contact的缺失字段、异常选项、格式不一致和疑似重复，生成修复预览。适用于用户要求数据质量治理、生成相关结果或检查执行边界时。",
+  "description_en": "CRM Data Quality workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_de237c3d-aff.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_de237c3d-aff.png"
+}

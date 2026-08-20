@@ -1,0 +1,20 @@
+{
+  "name": "Stagehand Browser CLI",
+  "installedAt": 1787228570921,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082740114194432",
+  "examples_zh": [
+    "用自然语言打开我们产品的定价页，提取每个套餐的价格、席位限制和试用规则，保存为 JSON。",
+    "在本地 Chrome 中访问指定招聘网站，搜索\"前端工程师\"，提取前 20 条职位标题、公司和地点。",
+    "使用云端 Browserbase 会话登录测试账号，完成表单填写并截取提交成功页面。"
+  ],
+  "examples_en": [
+    "Use natural language commands to open our pricing page, extract each plan's price, seat limit, and trial rules into JSON.",
+    "In local Chrome, visit the specified job board, search for \"frontend engineer,\" and extract the first 20 titles, companies, and locations.",
+    "Use a cloud Browserbase session to log in with a test account, fill the form, and capture the submission success page."
+  ],
+  "description_zh": "Stagehand CLI 自然语言浏览器自动化（支持本地/云端）",
+  "description_en": "Stagehand CLI natural language browser automation (local or cloud)",
+  "iconSource": "letter:auto"
+}

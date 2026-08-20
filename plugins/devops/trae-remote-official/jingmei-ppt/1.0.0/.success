@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:jingmei-ppt",
+  "registry": "trae-remote-official",
+  "plugin_name": "jingmei-ppt",
+  "version": "1.0.0",
+  "marketplace_plugin_id": "d2f9993a-60c8-469c-9353-0f0e8f2899fc",
+  "remote_installed_plugin_id": "Y51YS7MB9J7J3G",
+  "checksum": "4ee1ddab49a45b694ed567fd9532c9b09ed7c264a5d49e0c0dd70ebf25b0d51e",
+  "file_size": 26776,
+  "installed_at": 1787227204929
+}

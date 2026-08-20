@@ -1,0 +1,65 @@
+# ── realtime-translator skill — Python dependencies ──
+# Installed by common\scripts\install-env.ps1 into the rt-translator venv
+# (Python 3.11). Wheels in wheels\ (if any) take precedence.
+
+# PyTorch (CPU build is sufficient: VAD + MeloTTS run on CPU)
+# Pinned to 2.4.1: an unbounded `torch>=2.0.0` resolves to the newest release
+# (e.g. 2.12.0), whose native DLLs failed to initialize on a clean Intel AIPC
+# (`import torch` -> WinError 1114, c10.dll init failure) despite a present
+# VC++ runtime. 2.4.1+cpu loads reliably there. torch and torchaudio versions
+# must stay in lockstep (2.4.1 <-> 2.4.1).
+# Full investigation: docs/torch-winerror-1114调查.md (local-only, gitignored).
+--extra-index-url https://download.pytorch.org/whl/cpu
+torch==2.4.1
+torchaudio==2.4.1
+
+# Audio capture + I/O
+sounddevice>=0.4.6
+soundfile>=0.12.0
+numpy<2.0
+scipy>=1.10.0
+librosa>=0.10.0
+
+# Streaming ASR (Paraformer) + model hub
+funasr>=1.0.0
+modelscope>=1.37.0
+
+# Accurate ASR (Qwen3-ASR, optional) + Hunyuan translation on iGPU
+openvino>=2025.4
+transformers>=4.57.0,<4.58
+optimum-intel>=1.27.0
+
+# Translation fallback (Opus-MT)
+sentencepiece>=0.1.99
+protobuf>=3.20.0
+huggingface_hub
+
+# TTS (MeloTTS) + its text-processing deps.
+# MeloTTS ships as a dependency-free wheel (wheels/melotts-*.whl, install_requires
+# stripped) installed by install-env.ps1; its pinned deps would conflict with the
+# pipeline's numpy<2 / torch / transformers pins. The pure-python text deps it
+# actually uses are therefore listed here so uv resolves compatible versions.
+cn2an
+pypinyin
+jieba
+pykakasi
+num2words
+cached_path
+nltk
+g2p-en
+# anyascii + jamo: both imported by melo/text/korean.py, which melo/text/__init__.py
+# pulls in unconditionally from get_bert() even on the EN/ZH path. Missing either
+# makes every synthesis raise ModuleNotFoundError, so TTS produces no audio (no play
+# button in the UI). The melo wheel declares no deps, so they must be listed here.
+anyascii
+jamo
+# tqdm: imported unconditionally by melo/api.py during synthesis. Present
+# transitively via transformers/funasr today, but pinned here so MeloTTS does not
+# rely on another package happening to pull it.
+tqdm
+
+# WebSocket / HTTP server
+websockets>=12.0
+
+# Process management (used by client.py / server-dog.py)
+psutil

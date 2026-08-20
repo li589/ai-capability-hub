@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:qichacha",
+  "registry": "trae-remote-official",
+  "plugin_name": "qichacha",
+  "version": "0.0.2",
+  "marketplace_plugin_id": "518043c0-5b5a-46ad-823e-6a0d80e5acae",
+  "remote_installed_plugin_id": "7S4RG8FXA__1QE",
+  "checksum": "e11b116d930dbaff6c27f521713119b03e899c5f31bfa09b42cf6a5c751d4feb",
+  "file_size": 24548,
+  "installed_at": 1787227202008
+}

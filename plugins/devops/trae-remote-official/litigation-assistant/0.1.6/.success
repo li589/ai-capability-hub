@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:litigation-assistant",
+  "registry": "trae-remote-official",
+  "plugin_name": "litigation-assistant",
+  "version": "0.1.6",
+  "marketplace_plugin_id": "df143d7b-3405-4ce7-ad90-30f4d5ccdc00",
+  "remote_installed_plugin_id": "B2TE7KRJ64S9HW",
+  "checksum": "6a0b817be99b9099247f9a3b23ac99e8b676cea6d13af57011a9a8a07742b370",
+  "file_size": 35279,
+  "installed_at": 1787227201532
+}

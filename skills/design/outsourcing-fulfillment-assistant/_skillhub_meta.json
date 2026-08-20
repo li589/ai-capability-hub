@@ -1,0 +1,10 @@
+{
+  "name": "鼎华eMES 产品助手-委外发货回货助手",
+  "installedAt": 1787228531098,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089991555711528960",
+  "description_zh": "委外全流程助手：按供应商绩效推荐供应商，自动生成委外单并执行发货；回货时拍照识别回货单按单回货。支持供应商绩效查询、在手委外单、待发货/在途清单、逾期提醒。",
+  "description_en": "Outsourcing workflow assistant: recommend suppliers by quality/delivery performance, auto-create outsourcing orders, and handle return of goods via photo recognition.",
+  "iconSource": "letter:auto"
+}

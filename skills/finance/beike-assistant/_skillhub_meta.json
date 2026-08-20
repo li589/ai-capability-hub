@@ -1,0 +1,11 @@
+{
+  "name": "贝壳找房",
+  "installedAt": 1787228407572,
+  "source": "marketplace",
+  "version": "1.1.2",
+  "skillId": "skill_2087148386831736832",
+  "description_zh": "贝壳找房智能助手：覆盖买房、租房、卖房、出租、装修。",
+  "description_en": "Beike Real Estate Intelligent Assistant: covering home buying, renting, home selling, property leasing, and decoration.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/656b5299-4b00-4e4b-becb-03344df50124/avatar/skill/au_0b0732ea-f34.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/656b5299-4b00-4e4b-becb-03344df50124/avatar/skill/au_0b0732ea-f34.png"
+}

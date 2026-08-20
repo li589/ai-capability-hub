@@ -1,0 +1,20 @@
+{
+  "name": "小说管理工具",
+  "installedAt": 1785864617238,
+  "source": "marketplace",
+  "version": "2.0.0",
+  "skillId": "skill_2053082600497352704",
+  "examples_zh": [
+    "在终端里为我的小说项目新增10个章节条目，并把每章关联到对应角色和情节线",
+    "搜索所有包含\"失踪王子\"伏笔的章节和角色记录，整理成时间线",
+    "导出当前小说的角色表、章节摘要和未解决情节线，方便我做修订"
+  ],
+  "examples_en": [
+    "Add 10 chapter records to my novel project from the terminal and link each one to its characters and plotlines",
+    "Search all chapter and character records containing the 'missing prince' foreshadowing and organize them into a timeline",
+    "Export the current novel's character table, chapter summaries, and unresolved plotlines for revision"
+  ],
+  "description_zh": "在终端管理小说数据(章节、角色、情节)，支持导出和搜索",
+  "description_en": "Manage novel data (chapters, characters, plots) from terminal with export and search",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,10 @@
+{
+  "slug": "offensive-jwt-lr-trtm",
+  "name": "攻击性JWT",
+  "version": "1.0.0",
+  "installedAt": 1787229032317,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

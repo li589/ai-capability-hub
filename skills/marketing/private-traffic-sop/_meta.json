@@ -1,0 +1,11 @@
+{
+  "owner": "amaxclaw",
+  "slug": "private-traffic-sop",
+  "displayName": "私域流量运营SOP生成器",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1776254312688,
+    "commit": "https://github.com/openclaw/skills/commit/1196bcb7d36654e4e09109e75bcdb4b57ece3cab"
+  },
+  "history": []
+}

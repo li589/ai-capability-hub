@@ -1,0 +1,60 @@
+{
+  "name": "vefaas",
+  "version": "0.0.2",
+  "description": "Deploy and manage serverless functions on Volcengine veFaaS. Provides CLI-driven workflows for application deployment, function management, sandbox management, and OpenAPI invocation.",
+  "i18n": {
+    "display_name": {
+      "en": "veFaaS",
+      "zh-cn": "函数服务",
+      "ja": "veFaaS"
+    },
+    "description": {
+      "en": "Connect your Volcengine account to deploy and manage serverless functions, applications, and cloud sandboxes with veFaaS CLI.",
+      "zh-cn": "连接火山引擎账号，通过 veFaaS CLI 部署和管理 Serverless 应用、函数和云沙箱。",
+      "ja": "Volcengine アカウントを接続して、veFaaS CLI でサーバーレスアプリケーション・関数・クラウドサンドボックスをデプロイ・管理します。"
+    }
+  },
+  "author": {
+    "name": "Volcengine",
+    "url": "https://www.volcengine.com"
+  },
+  "homepage": "https://www.volcengine.com/product/vefaas",
+  "license": "Proprietary",
+  "keywords": [
+    "volcengine",
+    "vefaas",
+    "serverless",
+    "faas",
+    "function",
+    "deploy",
+    "cloud",
+    "sandbox",
+    "ai-agent"
+  ],
+  "env": {
+    "VOLC_ACCESS_KEY_ID": "${connector.volcengine.metadata.access_key_id}",
+    "VOLC_SECRET_ACCESS_KEY": "${connector.volcengine.ACCESS_TOKEN}"
+  },
+  "skills": "./skills/",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "veFaaS",
+    "shortDescription": "Volcengine Serverless Function Service",
+    "longDescription": "Deploy and manage serverless applications on Volcengine veFaaS. Supports application deployment, function management, sandbox instances, environment variables, template initialization, domain configuration, and OpenAPI invocation through the veFaaS CLI.",
+    "developerName": "Volcengine",
+    "category": "Developer Tools",
+    "capabilities": ["Interactive", "Read", "Write"],
+    "websiteURL": "https://www.volcengine.com/product/vefaas",
+    "privacyPolicyURL": "https://www.volcengine.com/docs/6291/69498",
+    "termsOfServiceURL": "https://www.volcengine.com/docs/6291/69497",
+    "defaultPrompt": [
+      "帮我把这个项目部署到 veFaaS",
+      "Deploy my project to veFaaS",
+      "查看 veFaaS 函数日志和实例状态"
+    ],
+    "brandColor": "#0C56EB",
+    "logo": "./assets/app-icon.svg",
+    "composerIcon": "./assets/app-icon.svg",
+    "screenshots": []
+  }
+}

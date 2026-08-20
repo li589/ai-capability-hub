@@ -1,0 +1,160 @@
+{
+  "$schema": "fbs-workbuddy-host-capability-v2",
+  "detectedAt": "2026-06-25T12:42:27.443Z",
+  "cacheTtlMinutes": 60,
+  "channel": "workbuddy-marketplace",
+  "hostType": "workbuddy",
+  "bookRoot": "D:\\0625\\packages\\fbs-bookwriter",
+  "skillRoot": "D:\\0625\\packages\\fbs-bookwriter",
+  "nodeEnv": {
+    "ok": true,
+    "version": "v24.14.0",
+    "execPath": "C:\\Users\\10171\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "minRequired": "18.0.0"
+  },
+  "git": {
+    "available": true,
+    "version": "2.54.0.windows.1"
+  },
+  "workbuddy": {
+    "homeDir": "C:\\Users\\10171\\.workbuddy",
+    "settingsPath": "C:\\Users\\10171\\.workbuddy\\settings.json",
+    "skillsMarketplaceRoot": "C:\\Users\\10171\\.workbuddy\\skills-marketplace",
+    "skillsMarketplaceSkillsDir": "C:\\Users\\10171\\.workbuddy\\skills-marketplace\\skills",
+    "installedSkillsDir": "C:\\Users\\10171\\.workbuddy\\skills",
+    "profilePaths": {
+      "userProfilePath": "C:\\Users\\10171\\.workbuddy\\USER.md",
+      "identityPath": "C:\\Users\\10171\\.workbuddy\\IDENTITY.md",
+      "soulPath": "C:\\Users\\10171\\.workbuddy\\SOUL.md",
+      "preferredMemoryDir": "C:\\Users\\10171\\.workbuddy\\memory",
+      "memoryDir": "C:\\Users\\10171\\.workbuddy\\memory",
+      "legacyMemeryDir": "C:\\Users\\10171\\.workbuddy\\memery"
+    }
+  },
+  "markers": {
+    "workbuddyHomeExists": true,
+    "settingsExists": true,
+    "skillsMarketplaceRootExists": false,
+    "skillsMarketplaceSkillsExists": false,
+    "installedSkillsDirExists": true,
+    "userProfileExists": true,
+    "identityExists": true,
+    "soulExists": true,
+    "memoryDirExists": true,
+    "legacyMemeryDirExists": false,
+    "channelManifestExists": true
+  },
+  "plugins": {
+    "requiredTier2": [
+      "pptx",
+      "pdf",
+      "docx",
+      "xlsx",
+      "playwright-cli",
+      "find-skills"
+    ],
+    "enabled": [
+      "fbsir-industry-scene-researcher",
+      "fbsir-super-partner-group",
+      "long-manuscript-expert"
+    ],
+    "available": [],
+    "missing": [
+      "pptx",
+      "pdf",
+      "docx",
+      "xlsx",
+      "playwright-cli",
+      "find-skills"
+    ]
+  },
+  "tier1": {
+    "marketplaceAvailable": false,
+    "relevantSkills": {
+      "checked": [
+        "agent-team-orchestration",
+        "autoresearch",
+        "citation-manager",
+        "content-factory",
+        "content-ops",
+        "content-repurposer",
+        "deck-generator",
+        "deep-research",
+        "humanizer",
+        "minimax-docx",
+        "minimax-pdf",
+        "multi-search-engine",
+        "nano-pdf",
+        "notebooklm-studio",
+        "pptx-generator",
+        "web-search-exa",
+        "wechat-article-search"
+      ],
+      "available": [],
+      "missing": [
+        "agent-team-orchestration",
+        "autoresearch",
+        "citation-manager",
+        "content-factory",
+        "content-ops",
+        "content-repurposer",
+        "deck-generator",
+        "deep-research",
+        "humanizer",
+        "minimax-docx",
+        "minimax-pdf",
+        "multi-search-engine",
+        "nano-pdf",
+        "notebooklm-studio",
+        "pptx-generator",
+        "web-search-exa",
+        "wechat-article-search"
+      ],
+      "availableCount": 0
+    },
+    "marketplaceSummary": "0/17",
+    "marketplaceSummaryNote": "已安装/可探测的 Tier1 技能数与仓库声明的相关技能总数之比；未全部安装为正常情况，将按 provider 降级链路执行"
+  },
+  "workbuddyFeatures": {
+    "resumeSnapshotSupported": true,
+    "profileBridgeAvailable": true,
+    "presentationBridgeSupported": true,
+    "packagedChannelManifest": "D:\\0625\\packages\\fbs-bookwriter\\workbuddy\\channel-manifest.json"
+  },
+  "binaryToolchain": {
+    "registryVersion": 1,
+    "lastUpdated": 1782389374171,
+    "pythonManagedVersion": "3.13.12",
+    "pythonManagedPath": "C:\\Users\\10171\\.workbuddy\\binaries\\python\\versions\\3.13.12\\python.exe",
+    "nodeDetectedPath": null,
+    "nodeDetectedVersion": null
+  },
+  "workbuddyGenieVersion": null,
+  "skillVersion": {
+    "runtime": "3.0.0",
+    "target": "3.0.0",
+    "sources": {
+      "workbuddyChannelManifest": "3.0.0",
+      "packageJson": "3.0.0",
+      "pluginMeta": "3.0.0"
+    },
+    "mismatch": false,
+    "upgradeMode": "overwrite-code",
+    "recommendUpgrade": false
+  },
+  "dataCompatibility": {
+    "status": "compatible",
+    "issueCount": 0,
+    "issues": [],
+    "mode": "standard",
+    "note": "当前数据结构与 3.0.0 兼容。"
+  },
+  "routingMode": "hybrid",
+  "routingModeExplain": "WorkBuddy 宿主能力 + 本地脚本双轨可用，按恢复优先模式运行",
+  "recommendedEntry": "resume-first",
+  "compatibilityMode": "standard",
+  "recommendedActions": [
+    "优先读取 .fbs/workbuddy-resume.json，走恢复优先开场",
+    "以下插件当前未启用：pptx、pdf、docx、xlsx、playwright-cli、find-skills"
+  ]
+}

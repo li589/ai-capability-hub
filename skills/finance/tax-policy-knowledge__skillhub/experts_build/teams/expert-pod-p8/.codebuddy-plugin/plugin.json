@@ -1,0 +1,165 @@
+{
+  "name": "expert-pod-p8",
+  "version": "1.0.0",
+  "description": "P8: cross-domain tax compliance pod coordinated by a lead agent.",
+  "author": {
+    "name": "Joyxj2devs Team",
+    "email": "joyxj2devs@example.com"
+  },
+  "agents": [
+    "./agents/pod-p8-lead.md"
+  ],
+  "expertType": "team",
+  "agentName": "pod-p8-lead",
+  "teamInfo": {
+    "leadAgent": "pod-p8-lead",
+    "memberAgents": [
+      "tax-vat-law-expert",
+      "tax-policy-knowledge-expert",
+      "china-tax-guidance-expert",
+      "tax-social-insurance-expert",
+      "tax-advisory-practice-expert",
+      "tax-export-refund-expert"
+    ]
+  },
+  "displayName": {
+    "en": "企业全税种合规专家团",
+    "zh": "企业全税种合规专家团"
+  },
+  "profession": {
+    "en": "企业全税种合规专家团",
+    "zh": "企业全税种合规专家团"
+  },
+  "displayDescription": {
+    "en": "企业全税种合规专家团 coordinated by a lead agent.",
+    "zh": "企业全税种合规专家团：由全税种合规总监（统筹企业全税种合规体检与重大风险分诊），协调增值税法落地合规专家、财税政策与风险合规专家、全业务办税指南专家、社保入税与申报合规专家、中介机构智能合规咨询专家、出口退税合规专家，安装后即出现在「我的专家」。"
+  },
+  "avatar": "avatars/pod-p8-lead.svg",
+  "categoryId": "11-SecurityCompliance",
+  "defaultInitPrompt": {
+    "zh": "我是「企业全税种合规专家团」主理人全税种合规总监，统筹企业全税种合规体检与重大风险分诊。请描述您的跨域财税诉求，我将先分诊、再协调增值税法落地合规专家、财税政策与风险合规专家、全业务办税指南专家、社保入税与申报合规专家、中介机构智能合规咨询专家、出口退税合规专家为您输出一体化方案。",
+    "en": "I am the lead of 企业全税种合规专家团."
+  },
+  "plugin": "expert-pod-p8",
+  "tags": [
+    {
+      "en": "Cross-domain",
+      "zh": "跨域协同"
+    },
+    {
+      "en": "Compliance",
+      "zh": "合规闭环"
+    },
+    {
+      "en": "T1",
+      "zh": "T1优先"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Coordinate experts for my case",
+      "zh": "协调专家处理我的事项"
+    },
+    {
+      "en": "What pod handles my scenario",
+      "zh": "我的场景归哪个团"
+    },
+    {
+      "en": "Full-process compliance plan",
+      "zh": "全流程合规方案"
+    }
+  ],
+  "members": [
+    {
+      "id": "pod-p8-lead",
+      "displayName": {
+        "en": "全税种合规总监",
+        "zh": "全税种合规总监"
+      },
+      "profession": {
+        "en": "企业税务合规总监",
+        "zh": "企业税务合规总监"
+      },
+      "avatar": "avatars/pod-p8-lead.svg",
+      "role": "lead"
+    },
+    {
+      "id": "tax-vat-law-expert",
+      "displayName": {
+        "en": "增值税法落地合规专家",
+        "zh": "增值税法落地合规专家"
+      },
+      "profession": {
+        "en": "Tax Compliance Expert",
+        "zh": "财税合规专家"
+      },
+      "avatar": "avatars/tax-vat-law-expert.svg",
+      "role": "member"
+    },
+    {
+      "id": "tax-policy-knowledge-expert",
+      "displayName": {
+        "en": "财税政策与风险合规专家",
+        "zh": "财税政策与风险合规专家"
+      },
+      "profession": {
+        "en": "Tax Compliance Expert",
+        "zh": "财税合规专家"
+      },
+      "avatar": "avatars/tax-policy-knowledge-expert.svg",
+      "role": "member"
+    },
+    {
+      "id": "china-tax-guidance-expert",
+      "displayName": {
+        "en": "全业务办税指南专家",
+        "zh": "全业务办税指南专家"
+      },
+      "profession": {
+        "en": "Tax Compliance Expert",
+        "zh": "财税合规专家"
+      },
+      "avatar": "avatars/china-tax-guidance-expert.svg",
+      "role": "member"
+    },
+    {
+      "id": "tax-social-insurance-expert",
+      "displayName": {
+        "en": "社保入税与申报合规专家",
+        "zh": "社保入税与申报合规专家"
+      },
+      "profession": {
+        "en": "Tax Compliance Expert",
+        "zh": "财税合规专家"
+      },
+      "avatar": "avatars/tax-social-insurance-expert.svg",
+      "role": "member"
+    },
+    {
+      "id": "tax-advisory-practice-expert",
+      "displayName": {
+        "en": "中介机构智能合规咨询专家",
+        "zh": "中介机构智能合规咨询专家"
+      },
+      "profession": {
+        "en": "Tax Compliance Expert",
+        "zh": "财税合规专家"
+      },
+      "avatar": "avatars/tax-advisory-practice-expert.svg",
+      "role": "member"
+    },
+    {
+      "id": "tax-export-refund-expert",
+      "displayName": {
+        "en": "出口退税合规专家",
+        "zh": "出口退税合规专家"
+      },
+      "profession": {
+        "en": "Tax Compliance Expert",
+        "zh": "财税合规专家"
+      },
+      "avatar": "avatars/tax-export-refund-expert.svg",
+      "role": "member"
+    }
+  ]
+}

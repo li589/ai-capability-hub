@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0",
+  "system_id": "{{SYSTEM_ID}}",
+  "system_name": "{{SYSTEM_NAME}}",
+  "generated_by": "energy-daily-report-from-files",
+  "rights_holder": {
+    "display_name": "{{RIGHTS_HOLDER}}",
+    "verification_reference": "{{RIGHTS_HOLDER_REFERENCE}}"
+  },
+  "license_model": "proprietary-use-only",
+  "protected_scope": [
+    "generated_original_custom_code",
+    "generated_business_configuration",
+    "generated_interface_structure",
+    "generated_project_documentation"
+  ],
+  "excluded_scope": [
+    "user_source_files_and_data",
+    "third_party_open_source_components",
+    "third_party_trademarks",
+    "pre_existing_materials"
+  ],
+  "notices": {
+    "copyright": "COPYRIGHT.md",
+    "license": "PROPRIETARY_LICENSE.md",
+    "third_party": "THIRD_PARTY_NOTICES.md",
+    "hash_manifest": "FILES_SHA256.txt"
+  }
+}

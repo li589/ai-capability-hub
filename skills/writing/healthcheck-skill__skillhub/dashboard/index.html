@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCheck 企业安全仪表盘 v4.0.0</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="logo">🛡️</div>
+            <h1>HealthCheck 企业安全仪表盘</h1>
+            <div class="version">v4.0.0 Enterprise</div>
+            <div class="last-updated">
+                上次更新: <span id="last-updated">加载中...</span>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <!-- 主仪表盘 -->
+        <div class="dashboard">
+            <div class="dashboard-section">
+                <h2>📊 安全评分总览</h2>
+                <div class="score-container">
+                    <div class="score-card" id="overall-score">
+                        <div class="score-value" id="score-value">--</div>
+                        <div class="score-label">安全评分</div>
+                        <div class="score-status" id="score-status">--</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 实时监控 -->
+            <div class="dashboard-section">
+                <h2>📈 实时监控</h2>
+                <div class="monitoring-grid">
+                    <div class="monitor-card">
+                        <div class="icon">🖥️</div>
+                        <div class="label">CPU</div>
+                        <div class="value" id="cpu-value">--</div>
+                    </div>
+                    <div class="monitor-card">
+                        <div class="icon">💾</div>
+                        <div class="label">内存</div>
+                        <div class="value" id="mem-value">--</div>
+                    </div>
+                    <div class="monitor-card">
+                        <div class="icon">💿</div>
+                        <div class="label">磁盘I/O</div>
+                        <div class="value" id="io-value">--</div>
+                    </div>
+                    <div class="monitor-card">
+                        <div class="icon">📡</div>
+                        <div class="label">网络入流量</div>
+                        <div class="value" id="in-value">--</div>
+                    </div>
+                    <div class="monitor-card">
+                        <div class="icon">📤</div>
+                        <div class="label">网络出流量</div>
+                        <div class="value" id="out-value">--</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- CVE漏洞状态 -->
+            <div class="dashboard-section">
+                <h2>🔴 CVE漏洞状态</h2>
+                <div class="cve-grid">
+                    <div class="cve-card" id="cve-total-count">
+                        <div class="label">总检查项</div>
+                        <div class="value" id="cve-total">0</div>
+                    </div>
+                    <div class="cve-card" id="cve-vulnerable-count">
+                        <div class="label">存在漏洞</div>
+                        <div class="value" id="cve-vulnerable">0</div>
+                    </div>
+                    <div class="cve-card" id="cve-patched-count">
+                        <div class="label">已修复</div>
+                        <div class="value" id="cve-patched">0</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 误报率趋势 -->
+            <div class="dashboard-section">
+                <h2>📉 误报率趋势</h2>
+                <div class="chart-container" id="chart-container">
+                    <canvas id="trend-chart"></canvas>
+                </div>
+            </div>
+            
+            <!-- 威胁事件时间线 -->
+            <div class="dashboard-section">
+                <h2>🚨 威胁事件时间线</h2>
+                <div class="timeline-container" id="timeline-container">
+                    <div id="timeline-items"></div>
+                </div>
+            </div>
+            
+            <!-- 系统信息 -->
+            <div class="dashboard-section">
+                <h2>💻 系统信息</h2>
+                <div class="system-info" id="system-info">
+                    <table>
+                        <tr>
+                            <td>主机名</td>
+                            <td id="info-hostname">--</td>
+                        </tr>
+                        <tr>
+                            <td>操作系统</td>
+                            <td id="info-os">--</td>
+                        </tr>
+                        <tr>
+                            <td>OpenClaw版本</td>
+                            <td id="info-version">--</td>
+                        </tr>
+                        <tr>
+                            <td>检测到CVE</td>
+                            <td id="info-cve">--</td>
+                        </tr>
+                        <tr>
+                            <td>误报率</td>
+                            <td id="info-fp">--</td>
+                        </tr>
+                        <tr>
+                            <td>严重威胁</td>
+                            <td id="threat-count">--</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- 操作按钮 -->
+            <div class="actions">
+                <button class="btn" onclick="refreshDashboard()">🔄 刷新</button>
+                <button class="btn btn-primary" onclick="export_report()">📄 导出报告</button>
+                <button class="btn btn-success" onclick="collect_baseline()">🧠 学习基线</button>
+            </div>
+        </div>
+        
+        <!-- 隐藏数据 -->
+        <div style="display:none;" id="raw-data"></div>
+    </div>
+    
+    <script src="js/utils.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

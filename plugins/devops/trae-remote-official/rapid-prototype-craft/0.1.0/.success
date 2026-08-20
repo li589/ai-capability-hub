@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:rapid-prototype-craft",
+  "registry": "trae-remote-official",
+  "plugin_name": "rapid-prototype-craft",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "042f20bb-60cc-4eea-ab78-475f42b388d9",
+  "remote_installed_plugin_id": "HR-HXLREE9EZAZ",
+  "checksum": "0e63b8d71b36b759cc2325789ef0ad6df3aed25705dd780b8c935f327db87e7e",
+  "file_size": 35080,
+  "installed_at": 1787227204602
+}

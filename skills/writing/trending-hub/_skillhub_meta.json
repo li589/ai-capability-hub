@@ -1,0 +1,11 @@
+{
+  "name": "全网热点追踪",
+  "installedAt": 1785784673185,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2082738642266279936",
+  "description_zh": "全网热点聚合追踪工具，一次聚合抖音、微博、B站等7大平台热搜，支持回溯30天。",
+  "description_en": "All-in-one trending hub aggregating hot searches from 7 platforms including Douyin, Weibo and Bilibili, with 30-day history.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_45e464b8-993.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_45e464b8-993.svg"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "经营数据分析",
+  "installedAt": 1787227598628,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087078945183113216",
+  "description_zh": "分析经营指标并生成图表或报告，覆盖日报、趋势、对比、排行、促销活动与导购任务分析。",
+  "description_en": "Analyze business metrics and produce charts or reports for daily operations, trends, comparisons, rankings, promotions, and sales-associate tasks.",
+  "iconSource": "letter:auto"
+}

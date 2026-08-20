@@ -1,0 +1,21 @@
+{
+  "name": "创业可以学",
+  "installedAt": 1785864408765,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083248287678464",
+  "examples_zh": [
+    "我很努力但公司还是没起色，问题出在哪？",
+    "客户太分散了，我该怎么聚焦？",
+    "团队执行力差，加人能解决吗？"
+  ],
+  "examples_en": [
+    "I work hard but the company isn't growing, what's wrong?",
+    "My customer base is too scattered, how do I focus?",
+    "My team has poor execution, will hiring more people help?"
+  ],
+  "description_zh": "服务创业者和管理者，解答创业/商业/管理问题，引发深度思考",
+  "description_en": "Business Q&A for founders and managers, with reflective follow-up questions",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/the-entrepreneurship-handbook.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/the-entrepreneurship-handbook.png"
+}

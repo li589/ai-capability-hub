@@ -1,0 +1,11 @@
+{
+  "owner": "frank-git1",
+  "slug": "insp-hr-knowledge",
+  "displayName": "INSP 公司 HR 知识库",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773651485702,
+    "commit": "https://github.com/openclaw/skills/commit/91851a0b510dd82df14fe2fbc44d6249bb89f24f"
+  },
+  "history": []
+}

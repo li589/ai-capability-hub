@@ -1,0 +1,26 @@
+type: motivational
+
+overrides:
+  motivational_poster:
+    prompt_append: >
+      ADDITIONAL FOR MOTIVATIONAL POSTERS:
+      - The quote and the image must form a SINGLE EMOTION, not two parallel messages.
+        The image doesn't illustrate the words — it amplifies the feeling behind them.
+        If the quote is about perseverance, the image should FEEL like perseverance
+        (a climber's hand reaching, a runner's silhouette against dawn), not just
+        show something labeled "perseverance."
+      - LESS IS MORE — aggressively so. Every additional element dilutes the emotional
+        punch. A single powerful image + a single powerful quote = maximum impact.
+        Add a border? You just lost 10% of the impact. Add a logo? 15% gone.
+      - LIGHT IS EMOTION: This is the one poster type where the quality of light matters
+        more than anything else:
+        * Warm golden light = hope, warmth, beginning
+        * Cool blue light = resolve, clarity, calm strength
+        * Dramatic chiaroscuro = inner struggle, depth, transformation
+        * Soft diffused light = peace, acceptance, wisdom
+      - If using a landscape background, add a semi-transparent gradient overlay
+        (dark at text areas, transparent elsewhere) to guarantee text readability
+        without destroying the image's emotional power.
+      - The poster should work as a test: if someone sees it on a wall every day
+        for a year, does it still land? Avoid cliché (generic sunrise, stock-photo
+        mountain). Find an image that has enough specificity to stay fresh.

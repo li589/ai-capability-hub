@@ -1,0 +1,11 @@
+{
+  "name": "Moka 招聘提醒",
+  "installedAt": 1787228627985,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088128327236141056",
+  "description_zh": "面向招聘负责人的通知与外呼查询。查本人的招聘通知与待办提醒（候选人推荐待处理、面试安排变更、评论@我、审批提醒等，支持只看重要通知），以及智能外呼（AI 电话）的模板配置与某位候选人的外呼任务记录。当用户问「我有哪些招聘通知」「有什么待办要处理」「给这个候选人打过外呼吗、结果怎么样」「我们有哪些外呼模板」时使用。",
+  "description_en": "Notification and outbound-call lookup for recruiting owners. Checks my recruiting notifications and to-do reminders (pending candidate recommendations, interview changes, comment mentions, approval reminders, with an important-only filter), plus the smart outbound-call (AI phone) templates and a candidate's outbound task records. Use it for questions like \"what recruiting notifications do I have\", \"what is pending on me\", \"have we called this candidate and how did it go\", or \"which outbound-call templates do we have\".",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_cf765ada-496.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_cf765ada-496.png"
+}

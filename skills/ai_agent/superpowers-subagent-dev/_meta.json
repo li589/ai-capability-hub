@@ -1,0 +1,11 @@
+{
+  "owner": "axelhu",
+  "slug": "superpowers-subagent-dev",
+  "displayName": "Subagent Dev",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774515928826,
+    "commit": "https://github.com/openclaw/skills/commit/c95813eec079ed2ae3c2cfe3da6130f37d3e6171"
+  },
+  "history": []
+}

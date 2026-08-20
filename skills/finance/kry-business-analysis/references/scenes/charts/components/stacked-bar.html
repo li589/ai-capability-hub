@@ -1,0 +1,29 @@
+<!-- 组件: 堆叠柱图 -->
+<!-- 用法: 复制到 container 内，替换 chartId、xLabels、各分类series -->
+<div class="section">
+  <div class="section-title"><!-- TITLE: 如 "📊 品类营收贡献" --></div>
+  <div class="section-sub"><!-- SUB: 如 "各品类占比趋势" --></div>
+  <div id="<!-- CHART_ID: 唯一ID如 chart-stacked -->" class="chart-box"></div>
+</div>
+<script>
+(function(){
+  var chart = echarts.init(document.getElementById('/* CHART_ID */'));
+  chart.setOption({
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+    legend: { top: 10 },
+    grid: { top: 60, right: 30, bottom: 40, left: 60, containLabel: true },
+    xAxis: { type: 'category', data: [/* DATA: X轴标签 */] },
+    yAxis: { type: 'value', axisLabel: { formatter: '{value}元' } },
+    series: [
+      /* DATA: 每个分类一个对象 */
+      {
+        name: '/* 分类名 */',
+        type: 'bar',
+        stack: 'total',
+        data: [/* 数值数组 */],
+        emphasis: { focus: 'series' }
+      }
+    ]
+  });
+})();
+</script>

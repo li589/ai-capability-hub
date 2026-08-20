@@ -1,0 +1,11 @@
+{
+  "name": "SciencePal 智能体",
+  "installedAt": 1787228298291,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087118313730416640",
+  "description_zh": "SciencePal 是由 香港城市大学HKAI-SCI 研究院自主研发、面向科研场景的 AI 研究智能体平台。用户只需用自然语言提出研究问题，系统即可在隔离沙盒中自主完成 文献检索、网页调研、代码执行、数据分析、图表绘制与报告撰写等端到端任务，并产出带引用、可追溯、可复现的研究成果。\n\n  平台内置材料、生物、蛋白、等离子、专利分析、医学与 MIMIC 临床数据、等多个专业智能体，覆盖材料发现、药物靶点、蛋白设计、专利布局、临床队列挖掘等真实科研工作流。每个任务可调度浏览器、Shell、文件系统、端口暴露、知识库、MCP 工具与子智能体协作，并支持飞书、WhatsApp 等外部平台接入，实现人—智能体—数据的闭环。\n\n  SciencePal 同时面向科研机构、医院、企业与高校：既可作为科研人员全天候的研究助手，把数天的前期调研压缩到数小时；也可作为研究培训与 协作底座，帮助学生与青年学者在可见、可评、可复用的流程中学习规范研究方法。无论是新材料研发、生物医学发现，还是教育科研，SciencePal 都致力于让科学探索更快、更透明、更可信。",
+  "description_en": "SciencePal is an AI research agent platform built by CityUHK HKAI-SCI for scientists, engineers, clinicians, and students who need to turn ideas into reproducible results. Describe a research question in natural language and the platform autonomously executes the full  workflow inside an isolated sandbox — literature search, web research, code execution, data analysis, figure generation, and  report writing — producing cited, traceable artifacts at every step.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/bacc7b7f-086c-4b62-89ce-6557bb945621/avatar/skill/au_b3593684-3ff.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/bacc7b7f-086c-4b62-89ce-6557bb945621/avatar/skill/au_b3593684-3ff.png"
+}

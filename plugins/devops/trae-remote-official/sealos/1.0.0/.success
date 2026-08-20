@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:sealos",
+  "registry": "trae-remote-official",
+  "plugin_name": "sealos",
+  "version": "1.0.0",
+  "marketplace_plugin_id": "1b427307-a946-40d0-9f9e-0e25d31d20cd",
+  "remote_installed_plugin_id": "GX5IYRTPO_.SHD",
+  "checksum": "fcb93573727f4745ce5e8f24af64a833dc3473ccd17c3d858eee25e6649f98c5",
+  "file_size": 370194,
+  "installed_at": 1787227205141
+}

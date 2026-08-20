@@ -1,0 +1,9 @@
+{
+  "slug": "cloudbase",
+  "name": "cloudbase",
+  "version": "2.30.1",
+  "installedAt": 1787230412419,
+  "source": "skillhub",
+  "iconSource": "https://raw.githubusercontent.com/TencentCloudBase/cloudbase-plugin/main/assets/logo-dark.png",
+  "iconDownloadedFrom": "https://raw.githubusercontent.com/TencentCloudBase/cloudbase-plugin/main/assets/logo-dark.png"
+}

@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Rate Limiting Works</title>
+<style>
+  :root {
+    --color-background-primary: #ffffff;
+    --color-background-secondary: #f8f9fa;
+    --color-background-tertiary: #f0f1f3;
+    --color-text-primary: #1a1a2e;
+    --color-text-secondary: #5a5a7a;
+    --color-text-tertiary: #9a9ab0;
+    --color-border-tertiary: #e2e4e9;
+    --color-border-secondary: #c8cad0;
+    --color-border-primary: #6e6e8a;
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+    --border-radius-md: 8px;
+    --border-radius-lg: 10px;
+    --border-radius-xl: 12px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+    --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+    --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+    --color-sky-1: #e8f4fd; --color-sky-2: #c5e4f9; --color-sky-3: #90caf4;
+    --color-sky-5: #42a5f5; --color-sky-7: #1976d2; --color-sky-9: #0d47a1;
+    --color-amber-1: #fff8e1; --color-amber-2: #ffecb3; --color-amber-3: #ffe082;
+    --color-amber-5: #ffc107; --color-amber-7: #f57f17; --color-amber-9: #e65100;
+    --color-mint-1: #e0f7f0; --color-mint-5: #4caf85; --color-mint-7: #2e7d5a;
+    --color-coral-1: #ffeaea; --color-coral-5: #ef5350; --color-coral-7: #c62828;
+    --color-indigo-1: #e8eaf6; --color-indigo-5: #5c6bc0; --color-indigo-7: #303f9f;
+    --color-violet-1: #f3e5f5; --color-violet-5: #ab47bc; --color-violet-7: #7b1fa2;
+    --color-teal-1: #e0f2f1; --color-teal-5: #26a69a; --color-teal-7: #00796b;
+    --color-slate-2: #e8eaed; --color-slate-5: #78849e;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-background-tertiary);
+    color: var(--color-text-primary);
+    padding: 32px 24px;
+    max-width: 800px; margin: 0 auto;
+  }
+  .eyebrow {
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 6px;
+  }
+  h1 { font-size: 24px; font-weight: 700; margin-bottom: 4px; }
+  .subtitle { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 24px; }
+
+  /* TL;DR */
+  .tldr {
+    background: var(--color-sky-1);
+    border: 1px solid var(--color-sky-3);
+    border-left: 4px solid var(--color-sky-5);
+    border-radius: var(--border-radius-lg);
+    padding: 18px 22px; margin-bottom: 28px;
+  }
+  .tldr .eyebrow { color: var(--color-sky-7); }
+  .tldr p { font-size: 14px; color: var(--color-sky-9); line-height: 1.6; }
+
+  /* Steps */
+  .section-label { font-size: 16px; font-weight: 700; margin-bottom: 12px; }
+  .step {
+    background: var(--color-background-primary);
+    border: 1px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-md);
+    margin-bottom: 10px; box-shadow: var(--shadow-sm);
+    overflow: hidden;
+  }
+  .step-header {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 18px; cursor: pointer;
+    transition: background 0.15s;
+  }
+  .step-header:hover { background: var(--color-background-secondary); }
+  .step-num {
+    width: 26px; height: 26px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-mono); font-size: 12px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .step:nth-child(1) .step-num { background: var(--color-sky-1); color: var(--color-sky-7); }
+  .step:nth-child(2) .step-num { background: var(--color-indigo-1); color: var(--color-indigo-7); }
+  .step:nth-child(3) .step-num { background: var(--color-teal-1); color: var(--color-teal-7); }
+  .step:nth-child(4) .step-num { background: var(--color-violet-1); color: var(--color-violet-7); }
+  .step:nth-child(1) { border-left: 3px solid var(--color-sky-5); }
+  .step:nth-child(2) { border-left: 3px solid var(--color-indigo-5); }
+  .step:nth-child(3) { border-left: 3px solid var(--color-teal-5); }
+  .step:nth-child(4) { border-left: 3px solid var(--color-violet-5); }
+  .step-title { font-size: 14px; font-weight: 600; flex: 1; }
+  .step-chevron {
+    font-size: 14px; color: var(--color-text-tertiary);
+    transition: transform 0.2s;
+  }
+  .step.open .step-chevron { transform: rotate(90deg); }
+  .step-body {
+    display: none; padding: 0 18px 16px 54px;
+    font-size: 13px; color: var(--color-text-secondary); line-height: 1.7;
+  }
+  .step.open .step-body { display: block; }
+  .step-body code {
+    font-family: var(--font-mono); font-size: 12px;
+    background: var(--color-background-secondary);
+    padding: 1px 5px; border-radius: 3px;
+  }
+
+  /* Tabs */
+  .tabs-section { margin: 28px 0; }
+  .tab-bar {
+    display: flex; gap: 0; border-bottom: 2px solid var(--color-border-tertiary);
+    margin-bottom: 0;
+  }
+  .tab-btn {
+    font-family: var(--font-mono); font-size: 12px; font-weight: 500;
+    padding: 10px 18px; border: none; background: none;
+    color: var(--color-text-secondary); cursor: pointer;
+    border-bottom: 2px solid transparent; margin-bottom: -2px;
+    transition: all 0.15s;
+  }
+  .tab-btn:hover { color: var(--color-text-primary); }
+  .tab-btn.active {
+    color: var(--color-indigo-7);
+    border-bottom-color: var(--color-indigo-5);
+  }
+  .tab-panel {
+    display: none; background: var(--color-background-primary);
+    border: 1px solid var(--color-border-tertiary);
+    border-top: none; border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+    padding: 16px 20px;
+  }
+  .tab-panel.active { display: block; }
+  .tab-panel pre {
+    font-family: var(--font-mono); font-size: 12px;
+    line-height: 1.6; overflow-x: auto;
+    color: var(--color-text-primary);
+  }
+
+  /* Gotchas */
+  .gotchas { margin: 28px 0; }
+  .gotcha-card {
+    background: var(--color-amber-1);
+    border: 1px solid var(--color-amber-3);
+    border-left: 4px solid var(--color-amber-5);
+    border-radius: var(--border-radius-md);
+    padding: 14px 18px; margin-bottom: 10px;
+  }
+  .gotcha-card h4 { font-size: 13px; font-weight: 700; color: var(--color-amber-9); margin-bottom: 4px; }
+  .gotcha-card p { font-size: 12px; color: var(--color-amber-7); line-height: 1.6; }
+
+  /* FAQ */
+  .faq { margin-top: 28px; }
+  .faq-item {
+    border-bottom: 1px solid var(--color-border-tertiary);
+  }
+  .faq-q {
+    display: flex; align-items: center; gap: 8px;
+    padding: 14px 0; cursor: pointer; font-size: 14px; font-weight: 600;
+  }
+  .faq-q::before {
+    content: 'Q'; font-family: var(--font-mono); font-size: 11px; font-weight: 700;
+    width: 22px; height: 22px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: var(--color-mint-1); color: var(--color-mint-7);
+    flex-shrink: 0;
+  }
+  .faq-a {
+    display: none; padding: 0 0 14px 30px;
+    font-size: 13px; color: var(--color-text-secondary); line-height: 1.7;
+  }
+  .faq-item.open .faq-a { display: block; }
+</style>
+</head>
+<body>
+  <div class="eyebrow" style="color:var(--color-indigo-5);">Feature Explainer</div>
+  <h1>How Rate Limiting Works in This API</h1>
+  <p class="subtitle">Token-bucket algorithm with per-tenant quotas and graceful degradation.</p>
+
+  <!-- TL;DR -->
+  <div class="tldr">
+    <div class="eyebrow">TL;DR</div>
+    <p>Every API request passes through a <strong>token-bucket rate limiter</strong> keyed by tenant ID. Each tenant gets a configurable burst capacity and steady refill rate. When the bucket is empty, requests receive a <code>429 Too Many Requests</code> with a <code>Retry-After</code> header. Premium tiers get higher limits. The limiter runs as middleware before any business logic executes.</p>
+  </div>
+
+  <!-- Steps -->
+  <div class="eyebrow" style="color:var(--color-teal-7);">How It Works</div>
+  <div class="section-label">Request Path (4 Steps)</div>
+
+  <div class="steps-container">
+    <div class="step open">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num">1</div>
+        <div class="step-title">Request arrives at API Gateway</div>
+        <div class="step-chevron">▶</div>
+      </div>
+      <div class="step-body">
+        The gateway extracts the <code>X-Tenant-ID</code> header (or derives it from the API key). This becomes the rate-limit key. If no tenant ID is found, the request is rejected with <code>401 Unauthorized</code> before reaching the limiter.
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num">2</div>
+        <div class="step-title">Token bucket check (Redis)</div>
+        <div class="step-chevron">▶</div>
+      </div>
+      <div class="step-body">
+        The middleware calls <code>EVALSHA</code> on a Lua script in Redis that atomically: (a) refills tokens based on elapsed time since last request, (b) checks if ≥1 token is available, (c) decrements the counter. The bucket parameters come from config: <code>burst=100, refill_rate=10/s</code> for standard tier.
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num">3</div>
+        <div class="step-title">Decision: allow or throttle</div>
+        <div class="step-chevron">▶</div>
+      </div>
+      <div class="step-body">
+        If tokens are available, the request proceeds to the handler. Response headers include <code>X-RateLimit-Remaining</code> and <code>X-RateLimit-Reset</code>. If the bucket is empty, a <code>429</code> response is returned immediately with <code>Retry-After: {seconds}</code> computed from the refill rate.
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-header" onclick="toggleStep(this)">
+        <div class="step-num">4</div>
+        <div class="step-title">Graceful degradation mode</div>
+        <div class="step-chevron">▶</div>
+      </div>
+      <div class="step-body">
+        If Redis is unreachable, the limiter falls back to an in-memory counter with a <code>2× conservative limit</code>. A circuit breaker monitors Redis health and auto-recovers. During degradation, the <code>X-RateLimit-Source: local</code> header is set so clients can detect the fallback.
+      </div>
+    </div>
+  </div>
+
+  <!-- Code tabs -->
+  <div class="tabs-section">
+    <div class="eyebrow" style="color:var(--color-violet-7);">Code Examples</div>
+    <div class="section-label">Configuration & Implementation</div>
+    <div class="tab-bar">
+      <button class="tab-btn active" onclick="switchTab(0)">YAML Config</button>
+      <button class="tab-btn" onclick="switchTab(1)">Route Code</button>
+      <button class="tab-btn" onclick="switchTab(2)">Client Response</button>
+    </div>
+    <div class="tab-panel active" data-tab="0">
+<pre>rate_limit:
+  default_tier:
+    burst: 100            # max tokens in bucket
+    refill_rate: 10       # tokens per second
+    refill_interval: 100ms
+  premium_tier:
+    burst: 500
+    refill_rate: 50
+    refill_interval: 100ms
+  redis:
+    cluster: rate-limit-cluster
+    key_prefix: "rl:v2:"
+    ttl: 3600s
+  fallback:
+    enabled: true
+    local_limit_multiplier: 0.5</pre>
+    </div>
+    <div class="tab-panel" data-tab="1">
+<pre>// middleware/rate_limit.go
+
+func RateLimitMiddleware(cfg *RateLimitConfig) gin.HandlerFunc {
+    return func(c *gin.Context) {
+        tenantID := c.GetHeader("X-Tenant-ID")
+        if tenantID == "" {
+            c.AbortWithStatusJSON(401, ErrNoTenant)
+            return
+        }
+
+        bucket := cfg.GetBucket(tenantID)
+        allowed, remaining, resetAt := bucket.Allow()
+
+        c.Header("X-RateLimit-Remaining",
+            strconv.Itoa(remaining))
+        c.Header("X-RateLimit-Reset",
+            strconv.FormatInt(resetAt.Unix(), 10))
+
+        if !allowed {
+            retryAfter := time.Until(resetAt).Seconds()
+            c.Header("Retry-After",
+                strconv.Itoa(int(retryAfter)))
+            c.AbortWithStatusJSON(429, ErrRateLimited)
+            return
+        }
+        c.Next()
+    }
+}</pre>
+    </div>
+    <div class="tab-panel" data-tab="2">
+<pre>HTTP/1.1 429 Too Many Requests
+Content-Type: application/json
+Retry-After: 6
+X-RateLimit-Remaining: 0
+X-RateLimit-Reset: 1747420800
+
+{
+  "error": {
+    "code": "RATE_LIMITED",
+    "message": "Request rate exceeded. Try again in 6s.",
+    "tenant_id": "tenant_abc123",
+    "tier": "default",
+    "docs": "https://docs.api.dev/rate-limits"
+  }
+}</pre>
+    </div>
+  </div>
+
+  <!-- Gotchas -->
+  <div class="gotchas">
+    <div class="eyebrow" style="color:var(--color-amber-7);">Gotchas</div>
+    <div class="section-label">Common Pitfalls</div>
+    <div class="gotcha-card">
+      <h4>⚠️ Clock skew between Redis nodes</h4>
+      <p>Token refill uses Redis server time (<code>redis.time()</code>), not client time. If your Redis cluster has clock drift &gt;100ms, buckets may refill unevenly. Use NTP sync on all nodes.</p>
+    </div>
+    <div class="gotcha-card">
+      <h4>⚠️ Burst ≠ sustained throughput</h4>
+      <p>A burst of 100 means 100 requests can fire instantly, but the sustained rate is only <code>refill_rate</code> (10/s). Don't confuse burst capacity with steady-state QPS.</p>
+    </div>
+    <div class="gotcha-card">
+      <h4>⚠️ Retry-After is approximate</h4>
+      <p>The <code>Retry-After</code> header rounds up to the nearest second. Clients should add 100-500ms jitter to avoid thundering herd on retry.</p>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq">
+    <div class="eyebrow" style="color:var(--color-mint-7);">FAQ</div>
+    <div class="section-label">Frequently Asked Questions</div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Can I get a higher rate limit for my tenant?</div>
+      <div class="faq-a">Yes. Contact the platform team via <code>#platform-eng</code> on Lark. Premium tier provides 5× the default limits. Enterprise customers can request custom quotas via the admin console.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">What happens during Redis failover?</div>
+      <div class="faq-a">The circuit breaker detects Redis unavailability within 3 failed health checks (~1.5s). It switches to local in-memory counting with 50% of the configured limit (conservative). When Redis recovers, the circuit breaker auto-resets after 5 consecutive successful checks.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">Are WebSocket connections rate-limited?</div>
+      <div class="faq-a">WebSocket <strong>upgrades</strong> are rate-limited (counts as 1 request). Once connected, individual messages are not token-bucketed — they use a separate message-rate limiter with a sliding window of 60 messages/minute.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">How do I monitor my usage?</div>
+      <div class="faq-a">Check the <code>X-RateLimit-Remaining</code> response header on every request. For dashboards, query the <code>rate_limit_consumption</code> metric in Grafana filtered by <code>tenant_id</code>. Alerts fire when remaining drops below 10% of burst.</div>
+    </div>
+  </div>
+
+<script>
+function toggleStep(header) {
+  header.closest('.step').classList.toggle('open');
+}
+function switchTab(idx) {
+  document.querySelectorAll('.tab-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+  document.querySelectorAll('.tab-panel').forEach((p, i) => p.classList.toggle('active', i === idx));
+}
+function toggleFaq(q) {
+  q.closest('.faq-item').classList.toggle('open');
+}
+</script>
+</body>
+</html>

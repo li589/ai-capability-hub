@@ -1,0 +1,20 @@
+{
+  "name": "文字转语音",
+  "installedAt": 1785864616569,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082652696510464",
+  "examples_zh": [
+    "把这段文字转成语音文件",
+    "用中文女声朗读这篇文章",
+    "生成一段适合视频配音的音频"
+  ],
+  "examples_en": [
+    "Convert this text to a speech audio file",
+    "Read this article aloud in a female voice",
+    "Generate audio suitable for video voiceover"
+  ],
+  "description_zh": "文字转语音（ElevenLabs）",
+  "description_en": "Text-to-speech powered by ElevenLabs",
+  "iconSource": "letter:auto"
+}

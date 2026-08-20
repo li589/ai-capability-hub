@@ -1,0 +1,11 @@
+{
+  "name": "抖音热门账号推荐",
+  "installedAt": 1785864605413,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2082737958548967424",
+  "description_zh": "抖音最具影响力账号榜单工具，支持日榜/周榜/月榜TOP50查询、赛道筛选与HTML报告下载。",
+  "description_en": "Douyin top account ranking tool with daily/weekly/monthly TOP50 lists, category filters and downloadable HTML reports.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_090102d7-a97.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_090102d7-a97.svg"
+}

@@ -1,0 +1,55 @@
+{
+  "name": "excel_write_to_sheet",
+  "description": "Write values to the Excel sheet",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "fileAbsolutePath": {
+        "description": "Absolute path to the Excel file",
+        "type": "string"
+      },
+      "newSheet": {
+        "description": "Create a new sheet if true, otherwise write to the existing sheet",
+        "type": "boolean"
+      },
+      "range": {
+        "description": "Range of cells in the Excel sheet (e.g., \"A1:C10\")",
+        "type": "string"
+      },
+      "sheetName": {
+        "description": "Sheet name in the Excel file",
+        "type": "string"
+      },
+      "values": {
+        "description": "Values to write to the Excel sheet. If the value is a formula, it should start with \"=\"",
+        "items": {
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "fileAbsolutePath",
+      "sheetName",
+      "newSheet",
+      "range",
+      "values"
+    ]
+  }
+}

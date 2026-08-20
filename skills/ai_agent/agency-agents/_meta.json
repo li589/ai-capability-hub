@@ -1,0 +1,11 @@
+{
+  "owner": "jerry-guo-mys",
+  "slug": "agency-agents",
+  "displayName": "Agency Agents",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1772849594407,
+    "commit": "https://github.com/openclaw/skills/commit/002ed239fffc9e2b52059912161567871070169a"
+  },
+  "history": []
+}

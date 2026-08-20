@@ -1,0 +1,21 @@
+{
+  "name": "Vercel Deploy",
+  "installedAt": 1787228398536,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2054902267853770752",
+  "examples_zh": [
+    "把当前项目部署到 Vercel 预览环境",
+    "查看最近一次 Vercel 部署状态",
+    "给这个 Vercel 项目配置环境变量"
+  ],
+  "examples_en": [
+    "Deploy the current project to a Vercel preview",
+    "Check the latest Vercel deployment status",
+    "Set environment variables for this Vercel project"
+  ],
+  "description_zh": "部署和管理 Vercel 项目、环境变量与日志",
+  "description_en": "Deploy and manage Vercel projects, environments, status and logs",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_a2601307-a68.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_a2601307-a68.svg"
+}

@@ -1,0 +1,25 @@
+{
+  "name": "interactive_feedback",
+  "description": "Interactive feedback collection tool for LLM agents.\n\nUSAGE RULES:\n1. During any process, task, or conversation, whether asking, replying, or completing phased tasks, you must call this tool to ask for feedback.\n2. Unless receiving termination instructions, all steps must repeatedly call this tool.\n3. Whenever user feedback is received, if the feedback content is not empty, you must call this tool again and adjust behavior based on the feedback content.\n4. Only when the user explicitly indicates \"end\" or \"no more interaction needed\" can you stop calling this tool, and the process is considered complete.\n5. You should summarize what have done, and provide project directory through args to let user know what you have done to provide feedback for next step.",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "project_directory": {
+        "default": ".",
+        "description": "專案目錄路徑",
+        "type": "string"
+      },
+      "summary": {
+        "default": "我已完成了您請求的任務。",
+        "description": "AI 工作完成的摘要說明",
+        "type": "string"
+      },
+      "timeout": {
+        "default": 600,
+        "description": "等待用戶回饋的超時時間（秒）",
+        "type": "integer"
+      }
+    },
+    "additionalProperties": false
+  }
+}

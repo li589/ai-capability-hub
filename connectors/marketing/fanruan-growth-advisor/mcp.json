@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "fanruan-growth-advisor": {
+      "type": "streamableHttp",
+      "url": "https://www.mossdo.com/api/v1/mcp",
+      "headers": {
+        "Authorization": "Bearer ${MOSS_API_KEY}"
+      },
+      "timeout": 30000
+    }
+  }
+}

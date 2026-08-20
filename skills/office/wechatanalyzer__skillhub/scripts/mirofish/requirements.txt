@@ -1,0 +1,17 @@
+# MiroFish 群体智能引擎依赖
+# 仅当启用对话预测功能时需要安装
+
+# LLM支持
+openai>=1.12.0
+
+# 环境变量加载（config.py 依赖）
+python-dotenv>=1.0.0
+
+# Zep Memory（可选，群体记忆增强）
+zep-cloud>=0.14.0
+
+# PDF解析
+PyMuPDF>=1.23.0
+
+# 字符编码检测
+charset-normalizer>=3.3.0

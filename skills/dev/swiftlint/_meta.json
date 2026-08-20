@@ -1,0 +1,11 @@
+{
+  "owner": "alexissan",
+  "slug": "swiftlint",
+  "displayName": "Swiftlint",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773006597397,
+    "commit": "https://github.com/openclaw/skills/commit/d30154e34dde04ccd2f52d50b880356b6a908259"
+  },
+  "history": []
+}

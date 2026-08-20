@@ -1,0 +1,41 @@
+{
+  "client_only_params": [],
+  "description": "转交一个流程待办任务给其他成员",
+  "display_name": "流程待办转交",
+  "domain": "流程",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/workflow/task/transfer",
+  "method": "POST",
+  "name": "jdy_transfer_flow_task",
+  "params": {
+    "comment": {
+      "default": "",
+      "description": "转交说明（可选）",
+      "type": "string"
+    },
+    "instance_id": {
+      "description": "流程实例ID，即数据的_id（必填）",
+      "type": "string"
+    },
+    "transfer_username": {
+      "description": "转交目标人username（必填）",
+      "type": "string"
+    },
+    "task_id": {
+      "description": "待办任务ID（必填）",
+      "type": "string"
+    },
+    "username": {
+      "description": "当前操作人username（必填）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "username",
+    "instance_id",
+    "task_id",
+    "transfer_username"
+  ],
+  "risk": "write",
+  "source": "简道云工具包.zip"
+}

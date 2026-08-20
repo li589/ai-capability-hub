@@ -1,0 +1,11 @@
+{
+  "slug": "ad-compliance-assistant-v3",
+  "name": "广告与营销合规风控助手",
+  "version": "1.1.0",
+  "installedAt": 1787228943689,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

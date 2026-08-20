@@ -1,0 +1,10 @@
+{
+  "slug": "observability-and-instrumentation-sh-k1xmdy",
+  "name": "ObservabilityAndInstrumentation",
+  "version": "1.0.0",
+  "installedAt": 1787229021445,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

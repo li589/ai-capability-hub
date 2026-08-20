@@ -1,0 +1,11 @@
+{
+  "name": "客户分层运营",
+  "installedAt": 1787227581174,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088537207266119680",
+  "description_zh": "结合customer及可关联的opportunity、followUpRecord、order生成分层和标签更新建议。适用于用户要求客户分层运营、生成相关结果或检查执行边界时。",
+  "description_en": "Customer Segmentation workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_1178d96b-53f.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_1178d96b-53f.png"
+}

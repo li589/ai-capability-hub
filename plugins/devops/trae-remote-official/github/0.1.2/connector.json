@@ -1,0 +1,8 @@
+{
+  "connectors": {
+    "github": {
+      "type": "oauth",
+      "auth_policy": "ON_INSTALL"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "同花顺快查-查企业 查老板 查风险",
+  "installedAt": 1787227548201,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2084095982255915008",
+  "description_zh": "同花顺快查skill支持查询企业工商信息、股东股权、对外投资、经营与司法风险、知识产权、招投标信息、新闻舆情，地方园区企业数据等，并支持企业筛选、批量查询及关系分析。",
+  "description_en": "ths_kuaicha_search supports inquiries into corporate industrial and commercial information, shareholder equity, external investments, operational and legal risks, intellectual property, bidding and tendering records, news public opinions, local industrial park enterprise data, and more. It also enables enterprise filtering, batch queries and relationship analysis.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_307403f1-725.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_307403f1-725.png"
+}

@@ -1,0 +1,27 @@
+{
+  "owner": "devkrutik",
+  "slug": "openclaw-commerce-shopify",
+  "displayName": "Openclaw Commerce Shopify",
+  "latest": {
+    "version": "1.0.4",
+    "publishedAt": 1772191544776,
+    "commit": "https://github.com/openclaw/skills/commit/bc094f0097c264b1db7936687507b5bad199be18"
+  },
+  "history": [
+    {
+      "version": "1.0.3",
+      "publishedAt": 1772100635245,
+      "commit": "https://github.com/openclaw/skills/commit/7b46154f66bfb454976bb271f96a074caa1d5769"
+    },
+    {
+      "version": "1.0.2",
+      "publishedAt": 1771780408911,
+      "commit": "https://github.com/openclaw/skills/commit/4047ed537fe8c6d48668cb7f43972d8108526f4f"
+    },
+    {
+      "version": "1.0.1",
+      "publishedAt": 1771182521776,
+      "commit": "https://github.com/openclaw/skills/commit/b1934bae78d1f8891304643979bc48503dcef274"
+    }
+  ]
+}

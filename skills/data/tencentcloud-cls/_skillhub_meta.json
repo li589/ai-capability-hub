@@ -1,0 +1,21 @@
+{
+  "name": "腾讯云日志服务CLS",
+  "installedAt": 1787228681525,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2053082958491492352",
+  "examples_zh": [
+    "查一下广州地域最近1小时的错误日志",
+    "获取我的日志主题列表",
+    "检查机器组状态，看看有没有离线的机器"
+  ],
+  "examples_en": [
+    "Search error logs in Guangzhou region for the last hour",
+    "List my log topics",
+    "Check machine group status for any offline machines"
+  ],
+  "description_zh": "腾讯云日志服务 CLS 助手，提供日志检索、资源管理、指标查询和告警运维能力",
+  "description_en": "Tencent Cloud Log Service (CLS) operations assistant for log search, resource management, metrics query, and alerting operations",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencentcloud-cls.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencentcloud-cls.svg"
+}

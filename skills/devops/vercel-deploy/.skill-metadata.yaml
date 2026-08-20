@@ -1,0 +1,37 @@
+examples:
+  - id: preview-deploy
+    title:
+      zh: 快速预览部署到Vercel
+      en: Quick Preview Deployment to Vercel
+    description:
+      zh: 将当前项目一键预览部署到Vercel，获取预览链接
+      en: Deploy current project to Vercel as preview and get the preview URL
+    prompt:
+      zh: |-
+        请帮我把当前项目部署到Vercel，创建一个预览部署。
+
+        项目情况：
+        - 前端框架：React + Vite
+        - 构建命令：npm run build
+        - 输出目录：dist/
+
+        请帮我部署并给我预览链接。
+      en: |-
+        Please help me deploy the current project to Vercel as a preview deployment.
+
+        Project details:
+        - Frontend framework: React + Vite
+        - Build command: npm run build
+        - Output directory: dist/
+
+        Please deploy and give me the preview URL.
+  - id: deploy-give-link
+    title:
+      zh: 部署项目并给我链接
+      en: Deploy and Give Me the Link
+    description:
+      zh: 部署当前项目到Vercel并返回可访问的链接
+      en: Deploy current project to Vercel and return an accessible URL
+    prompt:
+      zh: 帮我把这个项目部署上线，给我一个可以访问的链接。
+      en: Deploy this project and give me a link I can visit.

@@ -1,0 +1,20 @@
+{
+  "name": "GitHub AI趋势追踪",
+  "installedAt": 1787227739307,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2053082035544330240",
+  "examples_zh": [
+    "生成本周GitHub上AI项目热度排行榜",
+    "查看今天GitHub上最热的LLM项目",
+    "获取本月AI/ML领域最受关注的仓库列表"
+  ],
+  "examples_en": [
+    "Generate this week's GitHub AI project rankings",
+    "Show today's hottest LLM repos on GitHub",
+    "Get the most starred AI/ML repos this month"
+  ],
+  "description_zh": "生成 GitHub AI 热门项目趋势排行榜报告",
+  "description_en": "Generate GitHub AI trending project leaderboard reports",
+  "iconSource": "letter:auto"
+}

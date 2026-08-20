@@ -1,0 +1,4 @@
+interface:
+  display_name: "企业招投标研究报告生成"
+  short_description: "查询企业招投标数据，生成Markdown及带世舶科技水印的PDF报告"
+  default_prompt: "使用 $baobiao-generate-company-report 为目标企业生成正式Markdown报告和带世舶科技水印的PDF报告，成品不得出现接口路径、参数、状态码或调用过程。"

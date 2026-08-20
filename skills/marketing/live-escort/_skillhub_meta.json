@@ -1,0 +1,11 @@
+{
+  "name": "小鹅通直播护航",
+  "installedAt": 1787227637329,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2088905078789349376",
+  "description_zh": "实时守护小鹅通平台直播状态，帮助商家快速发现推流异常、卡顿、在线波动等问题。支持开播检查、直播监控和播后复盘，保障直播稳定进行。",
+  "description_en": "Monitors live stream status on the xiaoe platform in real time, helping merchants quickly detect issues such as push failures, lag, and fluctuating viewership. Supports pre-broadcast checks, live monitoring, and post-broadcast review to ensure stable streaming.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/70f8ec50-1fce-4990-8b38-75c3506712b8/avatar/skill/au_15bceffd-ce1.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/70f8ec50-1fce-4990-8b38-75c3506712b8/avatar/skill/au_15bceffd-ce1.png"
+}

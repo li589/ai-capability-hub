@@ -1,0 +1,11 @@
+{
+  "owner": "corinbtc",
+  "slug": "ai-product-space",
+  "displayName": "Openclaw Skill",
+  "latest": {
+    "version": "1.0.4",
+    "publishedAt": 1773301748847,
+    "commit": "https://github.com/openclaw/skills/commit/71d3f0d958982c8454f29ccf0bba5e893ba56123"
+  },
+  "history": []
+}

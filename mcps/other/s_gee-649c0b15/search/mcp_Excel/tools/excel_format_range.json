@@ -1,0 +1,198 @@
+{
+  "name": "excel_format_range",
+  "description": "Format cells in the Excel sheet with style information",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "fileAbsolutePath": {
+        "description": "Absolute path to the Excel file",
+        "type": "string"
+      },
+      "range": {
+        "description": "Range of cells in the Excel sheet (e.g., \"A1:C3\")",
+        "type": "string"
+      },
+      "sheetName": {
+        "description": "Sheet name in the Excel file",
+        "type": "string"
+      },
+      "styles": {
+        "description": "2D array of style objects for each cell. If a cell does not change style, use null. The number of items of the array must match the range size.",
+        "items": {
+          "items": {
+            "anyOf": [
+              {
+                "description": "Style object for the cell",
+                "properties": {
+                  "border": {
+                    "items": {
+                      "properties": {
+                        "color": {
+                          "pattern": "^#[0-9A-Fa-f]{6}$",
+                          "type": "string"
+                        },
+                        "style": {
+                          "enum": [
+                            "none",
+                            "continuous",
+                            "dash",
+                            "dot",
+                            "double",
+                            "dashDot",
+                            "dashDotDot",
+                            "slantDashDot",
+                            "mediumDashDot",
+                            "mediumDashDotDot"
+                          ],
+                          "type": "string"
+                        },
+                        "type": {
+                          "enum": [
+                            "left",
+                            "right",
+                            "top",
+                            "bottom",
+                            "diagonalDown",
+                            "diagonalUp"
+                          ],
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "type"
+                      ],
+                      "type": "object"
+                    },
+                    "type": "array"
+                  },
+                  "decimalPlaces": {
+                    "maximum": 30,
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "fill": {
+                    "properties": {
+                      "color": {
+                        "items": {
+                          "pattern": "^#[0-9A-Fa-f]{6}$",
+                          "type": "string"
+                        },
+                        "type": "array"
+                      },
+                      "pattern": {
+                        "enum": [
+                          "none",
+                          "solid",
+                          "mediumGray",
+                          "darkGray",
+                          "lightGray",
+                          "darkHorizontal",
+                          "darkVertical",
+                          "darkDown",
+                          "darkUp",
+                          "darkGrid",
+                          "darkTrellis",
+                          "lightHorizontal",
+                          "lightVertical",
+                          "lightDown",
+                          "lightUp",
+                          "lightGrid",
+                          "lightTrellis",
+                          "gray125",
+                          "gray0625"
+                        ],
+                        "type": "string"
+                      },
+                      "shading": {
+                        "enum": [
+                          "horizontal",
+                          "vertical",
+                          "diagonalDown",
+                          "diagonalUp",
+                          "fromCenter",
+                          "fromCorner"
+                        ],
+                        "type": "string"
+                      },
+                      "type": {
+                        "enum": [
+                          "gradient",
+                          "pattern"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "type",
+                      "pattern",
+                      "color"
+                    ],
+                    "type": "object"
+                  },
+                  "font": {
+                    "properties": {
+                      "bold": {
+                        "type": "boolean"
+                      },
+                      "color": {
+                        "pattern": "^#[0-9A-Fa-f]{6}$",
+                        "type": "string"
+                      },
+                      "italic": {
+                        "type": "boolean"
+                      },
+                      "size": {
+                        "maximum": 409,
+                        "minimum": 1,
+                        "type": "number"
+                      },
+                      "strike": {
+                        "type": "boolean"
+                      },
+                      "underline": {
+                        "enum": [
+                          "none",
+                          "single",
+                          "double",
+                          "singleAccounting",
+                          "doubleAccounting"
+                        ],
+                        "type": "string"
+                      },
+                      "vertAlign": {
+                        "enum": [
+                          "baseline",
+                          "superscript",
+                          "subscript"
+                        ],
+                        "type": "string"
+                      }
+                    },
+                    "type": "object"
+                  },
+                  "numFmt": {
+                    "description": "Custom number format string",
+                    "type": "string"
+                  }
+                },
+                "type": "object"
+              },
+              {
+                "description": "No style applied to this cell",
+                "type": "null"
+              }
+            ]
+          },
+          "type": "array"
+        },
+        "type": "array"
+      }
+    },
+    "required": [
+      "fileAbsolutePath",
+      "sheetName",
+      "range",
+      "styles"
+    ]
+  }
+}

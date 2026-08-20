@@ -1,0 +1,11 @@
+{
+  "slug": "jiazhuang-yijizitong-v3",
+  "name": "家装一技通：施工阶段监工与验收清单",
+  "version": "1.1.0",
+  "installedAt": 1787228946411,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

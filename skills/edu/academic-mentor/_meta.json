@@ -1,0 +1,11 @@
+{
+  "owner": "zhenstaff",
+  "slug": "academic-mentor",
+  "displayName": "Academic Mentor",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772787138417,
+    "commit": "https://github.com/openclaw/skills/commit/b95e430aa8055dbd5ad10ecd06dd7593dc11b085"
+  },
+  "history": []
+}

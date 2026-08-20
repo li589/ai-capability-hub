@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-公司一页纸",
+  "installedAt": 1787227609060,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2082686364441989120",
+  "description_zh": "万得 Alice 公司一页纸 CLI：为上市公司生成结构化一页纸投资报告，涵盖公司速览、投资逻辑、催化剂、财务估值、风险评估与操作建议，支持 A 股、港股、美股等全球市场。",
+  "description_en": "Wind Alice Company One-Page Investment Memo CLI — generates structured one-page investment reports for listed companies across global markets (A-shares, HK, US, etc.), covering company overview, investment thesis, catalysts & tracking metrics, financial & valuation analysis, risk assessment, and actionable recommendations.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082686364441989120/f69f2037d5045499.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082686364441989120/f69f2037d5045499.jpg"
+}

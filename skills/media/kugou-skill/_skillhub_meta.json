@@ -1,0 +1,21 @@
+{
+  "name": "酷狗音乐助手",
+  "installedAt": 1787228408299,
+  "source": "marketplace",
+  "version": "0.1.2",
+  "skillId": "skill_2074106144009043968",
+  "examples_zh": [
+    "帮我搜索周杰伦的歌",
+    "给我推荐几首和《晴天》相似的歌",
+    "看看酷狗飙升榜现在有什么歌"
+  ],
+  "examples_en": [
+    "Search for songs by Jay Chou",
+    "Recommend songs similar to Blue and White Porcelain",
+    "Show me the current Kugou trending chart"
+  ],
+  "description_zh": "酷狗音乐 AI 助手，支持歌曲搜索、每日推荐、相似推荐、榜单查询、收藏管理、听歌统计与歌单创建。",
+  "description_en": "Kugou Music AI assistant for song search, daily and similar recommendations, charts, favorites, listening stats, and playlist creation.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2074106144009043968/fb351c499eef2d64.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2074106144009043968/fb351c499eef2d64.png"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "lingyi-member-system-setup",
+  "name": "会员体系搭建",
+  "version": "0.1.0",
+  "installedAt": 1787228811238,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/f7fabcfa-0496-4dc7-9258-df9b7c751850.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/f7fabcfa-0496-4dc7-9258-df9b7c751850.png"
+}

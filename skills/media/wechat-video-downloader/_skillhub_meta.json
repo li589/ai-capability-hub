@@ -1,0 +1,11 @@
+{
+  "name": "视频号视频下载",
+  "installedAt": 1787227577860,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087462846362775552",
+  "description_zh": "粘贴视频号分享链接，一键解析视频标题、封面图和高清无水印下载地址",
+  "description_en": "Parse WeChat Channels share links for HD watermark-free downloads.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_5d64139b-504.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_5d64139b-504.svg"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "音频可视化",
+  "installedAt": 1785864611337,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082736246448128",
+  "examples_zh": [
+    "把这首歌生成频谱可视化图",
+    "从这段音频生成波形图",
+    "分析这段音频的频率分布"
+  ],
+  "examples_en": [
+    "Generate a spectrogram for this audio file",
+    "Create a waveform visualization for this song",
+    "Analyze the frequency distribution of this audio"
+  ],
+  "description_zh": "从音频生成频谱图和可视化",
+  "description_en": "Generate spectrograms from audio",
+  "iconSource": "letter:auto"
+}

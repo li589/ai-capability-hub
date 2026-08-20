@@ -1,0 +1,10 @@
+{
+  "name": "财报文字数据提取器",
+  "installedAt": 1787227709760,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084644321149714432",
+  "description_zh": "自动识别并提取股份制银行财报中在文字描述中披露的核心零售指标，包括：(A)AUM、(B)客户数、(C)财富管理收入、(D)信用卡经营、(E)其他量化指标，以及(F)分部效益类指标（零售营收/利润/非息/减值，当Skill 1表格未提取到时必须补充）和(G)量价类指标（存款成本率/贷款收益率/不良率等）。采用\"粗筛(Python) + 精筛(SubAgent 子代理)\"架构，严禁主 Agent / Member 自己调用 LLM API。",
+  "description_en": "Automatically identify and extract core retail metrics disclosed in the narrative text of joint-stock banks' financial reports, including: (A) AUM, (B) customer count, (C) wealth-management income, (D) credit-card operations, (E) other quantitative metrics, plus (F) segment-profitability metrics (retail revenue/profit/non-interest income/impairment—must be supplemented when Skill 1 fails to extract them from tables) and (G) volume-and-price metrics (deposit cost rate/loan yield/NPL ratio, etc.). It adopts a \"coarse screening (Python) + fine screening (SubAgent)\" architecture, and strictly prohibits the main Agent/Member from calling the LLM API themselves.",
+  "iconSource": "letter:auto"
+}

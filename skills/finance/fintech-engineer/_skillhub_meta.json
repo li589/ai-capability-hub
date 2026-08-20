@@ -1,0 +1,20 @@
+{
+  "name": "金融科技工程师",
+  "installedAt": 1787228663514,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2053085052692000768",
+  "examples_zh": [
+    "帮我设计一个符合 PCI DSS 的支付系统架构",
+    "怎么集成银行核心系统的 API？",
+    "我需要实现 KYC 身份验证流程，有什么最佳实践"
+  ],
+  "examples_en": [
+    "Design a PCI DSS compliant payment processing system",
+    "How do I integrate with core banking APIs?",
+    "What's the best architecture for KYC verification flow?"
+  ],
+  "description_zh": "金融科技工程专家：支付系统、银行API集成、PCI DSS/AML/KYC合规、安全交易架构",
+  "description_en": "Expert fintech engineer: payment systems, banking integrations, PCI DSS compliance, AML/KYC, secure financial architecture",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "yannboy",
+  "slug": "feishu-meeting-summary",
+  "displayName": "飞书会议总结",
+  "latest": {
+    "version": "1.0.4",
+    "publishedAt": 1773387182668,
+    "commit": "https://github.com/openclaw/skills/commit/13d52ec4308a7de8045b1f34fb80c2a2f20c221c"
+  },
+  "history": []
+}

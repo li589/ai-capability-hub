@@ -1,0 +1,64 @@
+{
+  "schema_version": "preview-1.0",
+  "target": "workbuddy",
+  "target_display_name": "WORKBUDDY",
+  "status": "ready",
+  "platform_import_format": "workbuddy-skill-package",
+  "execution": {
+    "mode": "direct-mcp",
+    "server": "bazhuayu-hot-news-brief",
+    "endpoint": "https://mcp.bazhuayu.com",
+    "credential": "由客户在平台安全配置中提供 API Key",
+    "creates_cloud_tasks": false,
+    "quota_notice_zh": "只读新闻搜索；快速模式1批、深度模式固定6批，每批最多30条。"
+  },
+  "capability_catalog": "../../capability-catalog.json",
+  "skill_body_policy": "generated-package-copy-from-single-source",
+  "skills": [
+    {
+      "name": "ensure-hot-news-connector",
+      "entry": "../../subskills/ensure-hot-news-connector/SKILL.md",
+      "capability": "connector-ready"
+    },
+    {
+      "name": "plan-hot-news-request",
+      "entry": "../../subskills/plan-hot-news-request/SKILL.md",
+      "capability": "plan"
+    },
+    {
+      "name": "collect-hot-news-data",
+      "entry": "../../subskills/collect-hot-news-data/SKILL.md",
+      "capability": "collect"
+    },
+    {
+      "name": "clean-rank-hot-news",
+      "entry": "../../subskills/clean-rank-hot-news/SKILL.md",
+      "capability": "clean"
+    },
+    {
+      "name": "evaluate-hot-news-value",
+      "entry": "../../subskills/evaluate-hot-news-value/SKILL.md",
+      "capability": "evaluate"
+    },
+    {
+      "name": "summarize-hot-news",
+      "entry": "../../subskills/summarize-hot-news/SKILL.md",
+      "capability": "summarize"
+    },
+    {
+      "name": "analyze-decision-brief",
+      "entry": "../../subskills/analyze-decision-brief/SKILL.md",
+      "capability": "decision-brief"
+    },
+    {
+      "name": "analyze-content-radar",
+      "entry": "../../subskills/analyze-content-radar/SKILL.md",
+      "capability": "content-radar"
+    },
+    {
+      "name": "render-hot-news-brief",
+      "entry": "../../subskills/render-hot-news-brief/SKILL.md",
+      "capability": "render"
+    }
+  ]
+}

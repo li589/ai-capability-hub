@@ -1,0 +1,16 @@
+interface:
+  display_name: "Amazon 商品采集（八爪鱼）"
+  short_description: "关键词或 ASIN 采集商品、详情、评论并导出 CSV"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#FF9900"
+  default_prompt: "使用 $amazon-collector-skill-family 采集 Amazon 商品数据并导出 CSV；首次 MCP 调用前提示免费版与个人版每周最多 2000 条，团队版不限条数。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "bazhuayu-amazon-collector"
+      description: "八爪鱼 Amazon 商品列表、详情和评论采集 MCP"
+      transport: "streamable_http"
+      url: "https://mcp.bazhuayu.com/?includeTools=search_templates,execute_task,get_task_status,start_or_stop_task,export_data"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #1672fa;
+      }
+
+      .cls-2 {
+        fill: #1e144b;
+      }
+
+      .cls-3 {
+        fill: url(#_未命名的渐变_45);
+      }
+
+      .cls-4 {
+        fill: url(#_未命名的渐变_45-3);
+      }
+
+      .cls-5 {
+        fill: url(#_未命名的渐变_45-2);
+      }
+    </style>
+    <linearGradient id="_未命名的渐变_45" data-name="未命名的渐变 45" x1="11.65" y1="10.86" x2="17.78" y2="23.36" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fc802d"/>
+      <stop offset=".12" stop-color="#fa7c32"/>
+      <stop offset=".28" stop-color="#f67042"/>
+      <stop offset=".46" stop-color="#f05e5c"/>
+      <stop offset=".65" stop-color="#e74481"/>
+      <stop offset=".85" stop-color="#db23af"/>
+      <stop offset="1" stop-color="#d207d8"/>
+    </linearGradient>
+    <linearGradient id="_未命名的渐变_45-2" data-name="未命名的渐变 45" x1="7.32" y1="12.99" x2="13.45" y2="25.5" xlink:href="#_未命名的渐变_45"/>
+    <linearGradient id="_未命名的渐变_45-3" data-name="未命名的渐变 45" x1="1.44" y1="15.86" x2="7.57" y2="28.37" xlink:href="#_未命名的渐变_45"/>
+  </defs>
+  <rect class="cls-2" y="0" width="32" height="32"/>
+  <g>
+    <polygon class="cls-1" points="20.55 6.91 16 16.04 20.57 25.09 29.7 25.09 20.55 6.91"/>
+    <path class="cls-3" d="M11.45,6.91l-.95,1.88c-.53,1.06-.53,2.31,0,3.37l3.71,7.44,.95-1.87c.54-1.06,.54-2.31,0-3.37l-3.71-7.44Z"/>
+    <path class="cls-5" d="M15.11,25.09h-3.66l-3.72-7.45c-.53-1.06-.53-2.31,0-3.37l.99-1.97,6.38,12.79Z"/>
+    <polygon class="cls-4" points="5.97 17.78 9.62 25.09 2.3 25.09 5.97 17.78"/>
+  </g>
+</svg>

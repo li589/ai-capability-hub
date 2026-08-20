@@ -1,0 +1,13 @@
+{
+  "slug": "ixhlink-skills-pet-portrait",
+  "name": "宠物写真照片",
+  "version": "1.0.0",
+  "installedAt": 1787228954547,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png"
+}

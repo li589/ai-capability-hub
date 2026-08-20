@@ -1,0 +1,11 @@
+{
+  "owner": "farmerboybi-bot",
+  "slug": "elite-longterm-memory-backup",
+  "displayName": "Elite Longterm Memory Backup",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773779355686,
+    "commit": "https://github.com/openclaw/skills/commit/41fb1668470cb3d9908f1237cfb6c85519810fe6"
+  },
+  "history": []
+}

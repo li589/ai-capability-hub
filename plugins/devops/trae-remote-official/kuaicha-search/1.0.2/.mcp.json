@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "kuaicha-search": {
+      "type": "http",
+      "url": "https://bizveris.kuaicha365.com/mcp?source=trae",
+      "headers": {
+        "open-authorization": "Bearer ${connector.kuaicha-search.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

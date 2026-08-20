@@ -1,0 +1,19 @@
+{
+  "name": "marketing-compliance-review",
+  "version": "1.0.6",
+  "private": true,
+  "description": "金融营销宣传材料消保合规审查 Skill 的本地脚本依赖",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "check": "node --check scripts/generate_review.js && node --check scripts/ocr_extract.js",
+    "smoke": "node scripts/generate_review.js examples/minimal-input.json smoke-output.docx"
+  },
+  "dependencies": {
+    "docx": "9.6.1"
+  },
+  "optionalDependencies": {
+    "tencentcloud-sdk-nodejs-ocr": "4.1.268"
+  }
+}

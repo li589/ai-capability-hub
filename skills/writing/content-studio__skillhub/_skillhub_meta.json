@@ -1,0 +1,11 @@
+{
+  "slug": "content-studio",
+  "name": "图文内容规划助手",
+  "version": "1.0.1",
+  "installedAt": 1787228961950,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

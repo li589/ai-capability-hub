@@ -1,0 +1,11 @@
+{
+  "owner": "harrylabsj",
+  "slug": "content-asset-orchestrator",
+  "displayName": "Content Asset Orchestrator",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1776092996838,
+    "commit": "https://github.com/openclaw/skills/commit/2b5e3c12a75009669ba0ca703bb473ae7cac207d"
+  },
+  "history": []
+}

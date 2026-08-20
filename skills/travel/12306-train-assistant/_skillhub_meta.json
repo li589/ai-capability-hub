@@ -1,0 +1,20 @@
+{
+  "name": "12306 订票助手",
+  "installedAt": 1787228415638,
+  "source": "marketplace",
+  "version": "0.1.7",
+  "skillId": "skill_2053084644263239680",
+  "examples_zh": [
+    "登录 12306 后帮我查询明天深圳北到武汉的余票，优先二等座并准备下单。",
+    "查一下北京到哈尔滨周五无直达票时的中转换乘方案，并看能否提交候补。",
+    "帮我查看 12306 候补订单状态，如果还没兑现就取消候补并重新查询车票。"
+  ],
+  "examples_en": [
+    "After logging in to 12306, check tomorrow's Shenzhen North to Wuhan tickets, prioritize second-class seats, and prepare booking.",
+    "Find transfer options from Beijing to Harbin for Friday if direct trains are sold out, then check waitlist availability.",
+    "Review my 12306 waitlist order status; if it is not fulfilled, cancel it and search for tickets again."
+  ],
+  "description_zh": "12306 全功能辅助：余票/中转/候补/下单/支付，需登录账号",
+  "description_en": "Full 12306 assistant: ticket query, transfer, waitlist, booking and payment",
+  "iconSource": "letter:auto"
+}

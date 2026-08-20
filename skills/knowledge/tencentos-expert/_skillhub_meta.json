@@ -1,0 +1,21 @@
+{
+  "name": "TencentOS运维助手",
+  "installedAt": 1787228692759,
+  "source": "marketplace",
+  "version": "2.1.1",
+  "skillId": "skill_2053085047019143168",
+  "examples_zh": [
+    "服务器磁盘满了，帮我分析下哪些文件占用空间最大",
+    "网络丢包严重，帮我排查一下原因",
+    "帮我生成CPU火焰图，分析性能热点"
+  ],
+  "examples_en": [
+    "Disk is full, help me analyze which files take the most space",
+    "Network packet loss is severe, help me troubleshoot",
+    "Generate a CPU flamegraph to analyze performance hotspots"
+  ],
+  "description_zh": "TencentOS 服务器运维诊断助手，排查磁盘/网络/CPU/内存/安全问题",
+  "description_en": "TencentOS Server ops assistant for disk, network, CPU, memory & security diagnostics",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencentos-expert.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencentos-expert.png"
+}

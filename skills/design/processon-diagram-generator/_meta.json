@@ -1,0 +1,17 @@
+{
+  "owner": "leilizhang",
+  "slug": "processon-diagram-generator",
+  "displayName": "ProcessOn Diagram Generator",
+  "latest": {
+    "version": "2.3.1",
+    "publishedAt": 1776309991794,
+    "commit": "https://github.com/openclaw/skills/commit/d3c544b19e263ddbb0e41a62e0894de6e045b742"
+  },
+  "history": [
+    {
+      "version": "1.0.6",
+      "publishedAt": 1775713251427,
+      "commit": "https://github.com/openclaw/skills/commit/dd51861153829f5fcf60a6970d9b5acc7a545e51"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "微信支付基础支付",
+  "installedAt": 1787228695571,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053083402814226432",
+  "examples_zh": [
+    "帮我为小程序商品订单设计微信支付 JSAPI 下单流程，列出必要接口、请求字段和回调验签步骤。",
+    "生成一段 Java 示例代码，用于发起微信支付 H5 支付并处理支付成功回调。",
+    "排查微信支付退款回调验签失败的问题，重点检查证书序列号、平台证书和通知解密参数。"
+  ],
+  "examples_en": [
+    "Design a WeChat Pay JSAPI payment flow for a mini-program product order, including required APIs, request fields, and callback signature verification.",
+    "Generate Java sample code to create a WeChat Pay H5 payment order and handle the successful payment callback.",
+    "Troubleshoot a WeChat Pay refund notification signature failure, focusing on certificate serial number, platform certificate, and notification decryption parameters."
+  ],
+  "description_zh": "微信支付基础支付接入助手，涵盖支付、退款账单、分账、商户进件、开户意愿确认",
+  "description_en": "WeChat Pay basic payment assistant covering payments, refunds, billing, profit sharing & merchant onboarding",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wechatpay-basic-payment.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wechatpay-basic-payment.png"
+}

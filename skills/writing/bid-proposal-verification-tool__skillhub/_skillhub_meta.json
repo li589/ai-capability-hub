@@ -1,0 +1,12 @@
+{
+  "slug": "bid-proposal-verification-tool",
+  "name": "标书核对校验工具",
+  "version": "1.0.1",
+  "installedAt": 1787228777270,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/5a1e9830-80e4-4cbb-8d00-cee893ca9555.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/5a1e9830-80e4-4cbb-8d00-cee893ca9555.png"
+}

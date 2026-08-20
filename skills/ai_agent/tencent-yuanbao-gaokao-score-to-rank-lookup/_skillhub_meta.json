@@ -1,0 +1,21 @@
+{
+  "name": "元宝高考通-一分一段查询",
+  "installedAt": 1787228496361,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2060612661537902592",
+  "examples_zh": [
+    "福建2024年物理类考了600分，全省排第几？",
+    "广东历史类位次10000名大概是多少分？",
+    "给我看看山东2025年的一分一段表"
+  ],
+  "examples_en": [
+    "In Fujian 2024 Physics track, what is the provincial rank for a score of 600?",
+    "Roughly what score corresponds to rank 10000 for Guangdong History track?",
+    "Show me Shandong's 2025 score-segment table"
+  ],
+  "description_zh": "高考一分一段信息检索助手。当用户想根据分数查询全省排名位次、根据位次估算对应分数区间，或获取某省份某年份的一分一段表时使用，支持按地区、年份、选科组合查询并自动适配新老高考政策。",
+  "description_en": "An information retrieval assistant for Gaokao score-to-rank tables. Use it when a user wants to look up a province-wide ranking by score, estimate the score range for a given ranking, or obtain a province's score-segment table for a specific year. Supports queries by region, year and subject choice with automatic adaptation to old and new Gaokao policies.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060612661537902592/64cbd9db986f8063.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060612661537902592/64cbd9db986f8063.svg"
+}

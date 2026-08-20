@@ -1,0 +1,41 @@
+{
+  "name": "alicloud-migration-expert",
+  "displayName": "阿里云上云迁移专家团",
+  "version": "1.0.0",
+  "description": "阿里云上云迁移全流程AI专家团，由首席迁移专家（主理人）统一编排，联动云产品选型、Landing Zone、上云架构、迁移交付、云运维、FDE前置部署等7位专家，按6阶段SOP完成端到端方案。覆盖从AWS/Azure/GCP/腾讯云/华为云/自建IDC迁移至阿里云的完整场景。内置阿里云全平台产品对标映射表、HA/DR三级决策模型、等保2.0三级合规框架、40+监控指标体系、4类回滚触发条件和8章PRCA应急预案模板。支持Markdown对话摘要 + xlsx/HTML/Mermaid正式文档双格式输出，可直接交付客户。",
+  "displayNameEn": "Alibaba Cloud Migration Expert Team",
+  "descriptionEn": "An end-to-end AI expert team for Alibaba Cloud migration, orchestrated by a Chief Migration Expert who coordinates 7 specialists across a 6-phase SOP: requirement alignment, product mapping, Landing Zone design, target architecture, migration delivery, operations handoff, and FDE pre-deployment. Supports migration from AWS/Azure/GCP/Tencent Cloud/Huawei Cloud/self-hosted IDC to Alibaba Cloud. Ships with cross-cloud product mapping tables, a 3-tier HA/DR decision model, MLPS 2.0 Level 3 compliance framework, 40+ monitoring metrics, 4 rollback trigger categories, and an 8-chapter PRCA emergency plan template. Delivers both Markdown chat summaries and formal xlsx/HTML/Mermaid documents ready for customer handoff.",
+  "author": {
+    "name": "神盾局TAM - 三烽"
+  },
+  "keywords": [
+    "阿里云",
+    "上云迁移",
+    "云迁移",
+    "Landing Zone",
+    "着陆区",
+    "架构设计",
+    "HA/DR",
+    "高可用",
+    "灾备",
+    "等保2.0",
+    "合规",
+    "监控告警",
+    "应急预案",
+    "TCO",
+    "成本估算",
+    "DTS",
+    "SMC",
+    "TAM",
+    "售前",
+    "交付咨询"
+  ],
+  "qoderMarket": {
+    "source": "apphub",
+    "extensionType": "plugin",
+    "pluginId": "44bacdf5-209f-4aff-a7d4-ad3a7dac81a9",
+    "version": "1.0.0",
+    "contentUpdatedAt": 1787211631040,
+    "installedAt": 1787230737573
+  }
+}

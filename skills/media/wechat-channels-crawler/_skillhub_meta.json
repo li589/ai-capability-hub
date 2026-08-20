@@ -1,0 +1,11 @@
+{
+  "name": "视频号作品查询",
+  "installedAt": 1787227584563,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2085251870491729920",
+  "description_zh": "根据关键词搜索视频号热门作品，支持多种排序方式展示互动数据",
+  "description_en": "Search trending WeChat Channels videos by keywords with sorting and analytics",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_158a45d2-cab.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_158a45d2-cab.svg"
+}

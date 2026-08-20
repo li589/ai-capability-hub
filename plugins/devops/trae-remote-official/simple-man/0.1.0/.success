@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:simple-man",
+  "registry": "trae-remote-official",
+  "plugin_name": "simple-man",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "65d76bb4-5c97-48ac-9cde-a345c5d11611",
+  "remote_installed_plugin_id": "RB7SRP-V0JHY3J",
+  "checksum": "93dcd57a25ad5d9ece83b53b86f079b7d7ee60de9048d1e7bc8dca1c6782af5f",
+  "file_size": 27016,
+  "installed_at": 1787227204829
+}

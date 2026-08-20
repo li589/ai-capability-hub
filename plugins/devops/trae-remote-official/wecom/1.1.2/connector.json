@@ -1,0 +1,7 @@
+{
+  "connectors": {
+    "wecom": {
+      "type": "custom"
+    }
+  }
+}

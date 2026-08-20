@@ -1,0 +1,11 @@
+{
+  "owner": "harrylabsj",
+  "slug": "legal-ai-counsel",
+  "displayName": "Legal Ai Counsel",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774791265950,
+    "commit": "https://github.com/openclaw/skills/commit/fc22b89f6ebcd2ae6072ecde57e793e557fe1552"
+  },
+  "history": []
+}

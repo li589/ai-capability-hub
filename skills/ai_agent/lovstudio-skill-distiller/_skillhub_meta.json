@@ -1,0 +1,10 @@
+{
+  "name": "Skill 经验蒸馏",
+  "installedAt": 1787227738101,
+  "source": "marketplace",
+  "version": "0.3.0",
+  "skillId": "skill_2084262663958056960",
+  "description_zh": "将已验证的项目经验蒸馏为边界清晰、可创建且可验收的 Skill 蓝图。",
+  "description_en": "Distill proven project experience into a reusable, testable Skill blueprint with clear boundaries and acceptance checks.",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d">
+  <title id="t">Signal Stage layout guide</title>
+  <desc id="d">Near-black executive field with one bright evidence stage and a narrow decision rail.</desc>
+  <rect width="1280" height="720" fill="#111210"/>
+  <g fill="#f3f2ea"><rect x="62" y="54" width="176" height="12"/><rect x="62" y="112" width="656" height="52"/><rect x="62" y="180" width="510" height="52"/></g>
+  <rect x="62" y="278" width="826" height="330" rx="12" fill="#f3f2ea"/>
+  <g fill="#111210"><rect x="98" y="314" width="316" height="20"/><rect x="98" y="366" width="718" height="2"/><rect x="98" y="520" width="510" height="14"/></g>
+  <path d="M108 478L246 418L372 450L516 352L662 398L826 328" fill="none" stroke="#3d63ff" stroke-width="10"/>
+  <g fill="#3d63ff"><circle cx="246" cy="418" r="11"/><circle cx="516" cy="352" r="11"/><circle cx="826" cy="328" r="11"/></g>
+  <g fill="#f3f2ea"><rect x="924" y="278" width="292" height="86" rx="10"/><rect x="924" y="386" width="292" height="86" rx="10"/><rect x="924" y="494" width="292" height="114" rx="10"/></g>
+  <g fill="#111210"><rect x="950" y="308" width="190" height="14"/><rect x="950" y="416" width="190" height="14"/><rect x="950" y="524" width="190" height="14"/></g>
+  <rect x="62" y="660" width="1154" height="2" fill="#f3f2ea"/>
+</svg>

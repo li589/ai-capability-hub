@@ -1,0 +1,44 @@
+{
+  "name": "market-intelligence-radar",
+  "displayName": "市场情报雷达",
+  "displayNameEn": "Market Intelligence Radar",
+  "version": "0.1.0",
+  "description": "面向企业战略、产品、市场和研究人员，持续跟踪竞争对手、产品、市场、技术、政策和生态变化，将分散动态转化为具有优先级的情报、风险与机会信号。",
+  "descriptionEn": "Continuously tracks competitors, products, markets, technologies, policies, and ecosystem developments, turning fragmented updates into prioritized intelligence, risks, opportunities, and actionable implications.",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "MIT",
+  "logo": "./assets/icon.png",
+  "keywords": [
+    "竞争情报",
+    "企业战略",
+    "产品战略",
+    "市场研究",
+    "行业研究",
+    "产品负责人",
+    "创业者"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "市场情报雷达",
+    "shortDescription": "持续看见变化，提前判断影响。",
+    "longDescription": "面向企业战略、产品、市场和研究人员，持续跟踪竞争对手、产品、市场、技术、政策和生态变化，将分散动态转化为具有优先级的情报、风险与机会信号。",
+    "developerName": "Trae",
+    "category": "Data Analysis",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "使用市场情报雷达持续跟踪 AI Coding 产品，每周给我五条最重要的新变化。",
+      "建立竞争对手雷达，重点监测产品、价格、融资、组织与合作动态。",
+      "扫描今日新增的市场、技术和政策变化，并判断风险、机会与行动含义。"
+    ],
+    "brandColor": "#FF4D45",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "screenshots": []
+  }
+}

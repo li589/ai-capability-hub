@@ -1,0 +1,11 @@
+{
+  "owner": "navygo",
+  "slug": "bailian-image-gen",
+  "displayName": "Alibaba Cloud Bailian Qwen Image 2.0 image generation. Supports text-to-image and image-to-image (reference image + text). For product promotion image generation, e-commerce image editing, marketing material creation. Provides Python API, CLI tool, and ComfyUI custom nodes.",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773743947286,
+    "commit": "https://github.com/openclaw/skills/commit/237b0ecf5bf2f1abefbaeeedfa430551c959f9b3"
+  },
+  "history": []
+}

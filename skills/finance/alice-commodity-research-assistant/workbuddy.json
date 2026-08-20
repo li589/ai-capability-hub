@@ -1,0 +1,6 @@
+{
+  "display_name": "商品智研助手",
+  "display_name_en": "Commodity Research Assistant",
+  "description_zh": "万得 Alice 商品智研助手 CLI：输入期货品种名称或 Wind Code，自动生成涵盖价格、基差、基本面、远期曲线、资金、仓单、宏观等多维度的商品智能日报或专项分析，输出含核心驱动逻辑与明确结论的结构化报告。",
+  "description_en": "Wind Alice Commodity Research Assistant CLI — enter a commodity name or Wind Code to auto-generate smart research reports distilling core drivers across price, structure, capital flow, and fundamentals, with clear conclusions for institutional investors and professional traders."
+}

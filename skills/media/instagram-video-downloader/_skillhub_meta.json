@@ -1,0 +1,11 @@
+{
+  "name": "Instagram视频下载",
+  "installedAt": 1785864612686,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084102589730938880",
+  "description_zh": "粘贴 Instagram 视频链接，一键解析返回无水印视频下载链接",
+  "description_en": "Paste an Instagram video link to get a watermark-free download URL.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_42280958-8b7.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_42280958-8b7.svg"
+}

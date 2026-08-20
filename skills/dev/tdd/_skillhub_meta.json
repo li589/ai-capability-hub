@@ -1,0 +1,20 @@
+{
+  "name": "tdd",
+  "installedAt": 1787227761645,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443411905277952",
+  "examples_zh": [
+    "用 TDD 实现这个功能",
+    "帮我写测试，先红后绿",
+    "red-green-refactor 流程开发"
+  ],
+  "examples_en": [
+    "implement this feature using TDD",
+    "red-green-refactor this",
+    "write the test first, then make it pass"
+  ],
+  "description_zh": "测试驱动开发：红→绿→重构，以行为测试驱动实现",
+  "description_en": "Test-driven development with red-green-refactor loop and behavior-first testing",
+  "iconSource": "letter:auto"
+}

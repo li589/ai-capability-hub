@@ -1,0 +1,11 @@
+{
+  "owner": "niceck",
+  "slug": "hhxg-market",
+  "displayName": "恢恢量化 A股数据助手",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1772352526442,
+    "commit": "https://github.com/openclaw/skills/commit/49b024f6d2e7b1c5ca831e26b296d9e4ef268848"
+  },
+  "history": []
+}

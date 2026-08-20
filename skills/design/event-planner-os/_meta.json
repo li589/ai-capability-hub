@@ -1,0 +1,11 @@
+{
+  "owner": "chris-openclaw",
+  "slug": "event-planner-os",
+  "displayName": "Event Planner OS",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775932477147,
+    "commit": "https://github.com/openclaw/skills/commit/daaccbb2e13046a2eee843c5d10aafdc3deb75d2"
+  },
+  "history": []
+}

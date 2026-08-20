@@ -1,0 +1,21 @@
+{
+  "name": "GLSL Shader 开发",
+  "installedAt": 1787228692404,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082684416987136",
+  "examples_zh": [
+    "写一个流体模拟的 GLSL Shader",
+    "帮我实现一个射线行进效果",
+    "创建一个粒子系统 Shader"
+  ],
+  "examples_en": [
+    "Write a fluid simulation GLSL shader",
+    "Implement a ray marching effect",
+    "Create a particle system shader"
+  ],
+  "description_zh": "GLSL Shader 视觉效果开发",
+  "description_en": "GLSL shader techniques for stunning visual effects",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/shader-dev.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/shader-dev.svg"
+}

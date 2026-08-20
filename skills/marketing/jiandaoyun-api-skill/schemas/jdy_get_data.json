@@ -1,0 +1,31 @@
+{
+  "client_only_params": [],
+  "description": "按数据ID查询单条表单记录",
+  "display_name": "查询单条数据",
+  "domain": "数据",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/app/entry/data/get",
+  "method": "POST",
+  "name": "jdy_get_data",
+  "params": {
+    "app_id": {
+      "description": "App ID (应用ID)",
+      "type": "string"
+    },
+    "data_id": {
+      "description": "Data record ID (_id field value)",
+      "type": "string"
+    },
+    "entry_id": {
+      "description": "Form ID (表单ID)",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "app_id",
+    "entry_id",
+    "data_id"
+  ],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

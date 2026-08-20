@@ -1,0 +1,11 @@
+{
+  "owner": "tariqsumatri82",
+  "slug": "arxiv-1-0-1",
+  "displayName": "Arxiv 1.0.1",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770551609819,
+    "commit": "https://github.com/openclaw/skills/commit/7cabd0cebae1bdab8ba42d71fd8145b741c1978b"
+  },
+  "history": []
+}

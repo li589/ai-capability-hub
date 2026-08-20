@@ -1,0 +1,11 @@
+{
+  "name": "社媒话题研究",
+  "installedAt": 1787227560206,
+  "source": "marketplace",
+  "version": "2.0.1",
+  "skillId": "skill_2084461188821094400",
+  "description_zh": "从小红书、抖音、公众号三平台搜索近30天讨论，跨平台对比分析舆情趋势",
+  "description_en": "Search and analyze trending topics across Xiaohongshu, Douyin, and WeChat over the last 30 days",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_dbc3192a-8e1.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_dbc3192a-8e1.svg"
+}

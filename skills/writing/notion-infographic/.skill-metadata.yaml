@@ -1,0 +1,109 @@
+examples:
+  - id: article-visualization
+    title:
+      zh: 文章内容信息图转化
+      en: Article Content Infographic Conversion
+    description:
+      zh: 将深度文章转化为Notion风格的信息图系列
+      en: Convert in-depth articles into Notion-style infographic series
+    prompt:
+      zh: |-
+        我有一篇关于远程办公效率提升的深度文章需要转化为社交媒体信息图。
+
+        文章要点：
+        - 远程办公的五大挑战
+        - 提升效率的七个实用技巧
+        - 团队协作的最佳实践
+        - 工具推荐和使用心得
+        - 未来趋势预测
+
+        转化要求：
+        1. 保持原文的核心观点不变
+        2. 采用Notion手绘风格设计
+        3. 每张图突出一个核心概念
+        4. 适合在微信、微博等平台传播
+        5. 统一的视觉风格和配色方案
+
+        请帮我：
+        1. 分析文章结构和核心观点
+        2. 设计信息图的内容布局
+        3. 制定视觉风格指南
+        4. 优化文字表达适应视觉化
+        5. 提供发布建议和标签策略
+      en: |-
+        I have an in-depth article about remote work efficiency improvement that needs to be converted into social media infographics.
+
+        Article key points:
+        - Five major challenges of remote work
+        - Seven practical tips for efficiency improvement
+        - Best practices for team collaboration
+        - Tool recommendations and usage insights
+        - Future trend predictions
+
+        Conversion requirements:
+        1. Maintain original core viewpoints unchanged
+        2. Adopt Notion hand-drawn style design
+        3. Each graphic highlights one core concept
+        4. Suitable for sharing on WeChat, Weibo and other platforms
+        5. Unified visual style and color scheme
+
+        Please help me:
+        1. Analyze article structure and core viewpoints
+        2. Design infographic content layout
+        3. Create visual style guidelines
+        4. Optimize text expression for visualization
+        5. Provide publishing recommendations and hashtag strategies
+  - id: data-storytelling
+    title:
+      zh: 数据故事化视觉呈现
+      en: Data Storytelling Visual Presentation
+    description:
+      zh: 将复杂数据转化为易于理解的视觉故事
+      en: Transform complex data into easily understandable visual stories
+    prompt:
+      zh: |-
+        我需要将年度用户行为数据分析报告转化为信息图系列。
+
+        数据内容：
+        - 用户活跃度月度变化趋势
+        - 不同功能模块使用率对比
+        - 用户画像和偏好分析
+        - 转化漏斗各环节表现
+        - 竞品对标数据对比
+
+        可视化目标：
+        1. 让非技术人员也能轻松理解
+        2. 突出关键的数据洞察
+        3. 展现数据间的关联关系
+        4. 体现业务价值和影响
+        5. 支持决策层快速获取信息
+
+        请帮我：
+        1. 提炼数据中的关键洞察
+        2. 设计数据可视化的叙事逻辑
+        3. 选择合适的图表类型
+        4. 添加解释性文字和标注
+        5. 制作系列化的视觉呈现
+      en: |-
+        I need to convert annual user behavior data analysis report into infographic series.
+
+        Data content:
+        - Monthly user activity trend changes
+        - Usage rate comparison across different functional modules
+        - User profile and preference analysis
+        - Performance at each stage of conversion funnel
+        - Competitor benchmarking data comparison
+
+        Visualization goals:
+        1. Make it easy for non-technical people to understand
+        2. Highlight key data insights
+        3. Show relationships between data points
+        4. Demonstrate business value and impact
+        5. Support decision-makers in quickly obtaining information
+
+        Please help me:
+        1. Extract key insights from the data
+        2. Design narrative logic for data visualization
+        3. Select appropriate chart types
+        4. Add explanatory text and annotations
+        5. Create serialized visual presentations

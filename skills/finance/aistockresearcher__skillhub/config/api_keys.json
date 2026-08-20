@@ -1,0 +1,62 @@
+{
+  "version": "1.0",
+  "description": "多平台API密钥配置 - 支持Wind、东方财富等多个数据平台",
+  "last_updated": "",
+  "platforms": {
+    "eastmoney": {
+      "name": "东方财富",
+      "enabled": true,
+      "api_key": "",
+      "app_id": "",
+      "app_secret": "",
+      "base_url": "https://datacenter.eastmoney.com/api",
+      "rate_limit": 5,
+      "note": "东方财富Choice数据API，需要注册开发者账号"
+    },
+    "wind": {
+      "name": "万得Wind",
+      "enabled": false,
+      "api_key": "",
+      "token": "",
+      "base_url": "https://api.wind.com.cn",
+      "rate_limit": 10,
+      "note": "Wind万得金融终端API，需要机构账号"
+    },
+    "tushare": {
+      "name": "Tushare Pro",
+      "enabled": false,
+      "api_key": "",
+      "base_url": "https://api.tushare.pro",
+      "rate_limit": 200,
+      "note": "Tushare Pro数据接口，免费注册即可获取token"
+    },
+    "tencent": {
+      "name": "腾讯财经",
+      "enabled": true,
+      "api_key": "",
+      "base_url": "https://qt.gtimg.cn",
+      "rate_limit": 0,
+      "note": "免费公开接口，无需API Key"
+    },
+    "caibao": {
+      "name": "财报说",
+      "enabled": false,
+      "api_key": "",
+      "base_url": "https://api.caibaoshuo.com",
+      "rate_limit": 10,
+      "note": "财报数据API，需要注册"
+    }
+  },
+  "global_settings": {
+    "timeout": 15,
+    "max_retries": 3,
+    "retry_delay": 1.0,
+    "cache_enabled": true,
+    "cache_ttl": 300,
+    "prefer_free_sources": true,
+    "fallback_chain": [
+      "tencent",
+      "eastmoney"
+    ]
+  }
+}

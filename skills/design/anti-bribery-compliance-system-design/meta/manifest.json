@@ -1,0 +1,39 @@
+{
+  "name": "反商业贿赂合规制度设计",
+  "name_en": "anti-bribery-compliance-system-gen",
+  "description": "生成反商业贿赂合规制度文件（多文件DOCX+XLSX）。触发：反贿赂合规制度搭建/反腐败合规手册编制/ISO 37001制度建立。不触发：第三方尽调单案/东道国法规汇编/贸易合规风险初评——调用对应专项技能。",
+  "version": "2.0.0",
+  "blueprint": "bp-research-organization-v1",
+  "risk_level": "L2",
+  "release_level": "LIMITED",
+  "knowledge_cutoff": "2026-06-01",
+  "created": "2026-06-26",
+  "updated": "2026-06-26",
+  "author": "builder-foreign-batch",
+  "format_seriousness": "C-Professional",
+  "type_tag": "T-content",
+  "output_formats": ["docx", "xlsx"],
+  "o1_format": "docx",
+  "o2_format": "xlsx",
+  "legal_domain": "涉外-反商业贿赂合规",
+  "script_necessity": "none",
+  "infrastructure_dependencies": {
+    "required": ["governance.soft_degraded", "engines.docx", "engines.xlsx"],
+    "optional": []
+  },
+  "upstream_skills": [
+    "host-country-legal-compilation",
+    "trade-compliance-risk-assessment",
+    "supply-chain-compliance-review"
+  ],
+  "downstream_skills": [
+    "compliance-training-audit",
+    "voluntary-disclosure-prep"
+  ],
+  "generation_scope": {
+    "modes": ["full", "standard", "compact"],
+    "auto_recommend": true,
+    "recommendation_basis": "company_size",
+    "user_overridable": true
+  }
+}

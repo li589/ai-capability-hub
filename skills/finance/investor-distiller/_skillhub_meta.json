@@ -1,0 +1,11 @@
+{
+  "name": "公众号投资博主蒸馏器",
+  "installedAt": 1787227742871,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087461109924012032",
+  "description_zh": "自动采集公众号文章，提取投资博主交易体系、市场判断等七维DNA风格画像",
+  "description_en": "Distill seven-dimension style profiles of WeChat investment bloggers.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_bd324b9a-134.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_bd324b9a-134.svg"
+}

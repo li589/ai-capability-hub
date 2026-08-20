@@ -1,0 +1,11 @@
+{
+  "name": "B站评论分析",
+  "installedAt": 1787228310793,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087459438934138880",
+  "description_zh": "输入B站视频链接获取一级评论，支持分页浏览与四维情感分析，生成精美HTML报告",
+  "description_en": "Fetch Bilibili video comments and run sentiment analysis with HTML reports.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_a326bafc-29e.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_a326bafc-29e.svg"
+}

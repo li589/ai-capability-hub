@@ -1,0 +1,24 @@
+{
+  "type": "政策性银行",
+  "type_name": "政策性银行",
+  "count": 3,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-05-24",
+  "institutions": [
+    {
+      "name": "国家开发银行",
+      "code": "CDB",
+      "type": "政策性银行"
+    },
+    {
+      "name": "中国进出口银行",
+      "code": "EXIMB",
+      "type": "政策性银行"
+    },
+    {
+      "name": "中国农业发展银行",
+      "code": "ADBC",
+      "type": "政策性银行"
+    }
+  ]
+}

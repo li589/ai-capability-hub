@@ -1,0 +1,11 @@
+{
+  "name": "腾讯自选股·持仓诊断",
+  "installedAt": 1787228667733,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089685535149817856",
+  "description_zh": "帮你给整个股票组合做一次“体检”并开出调仓建议。它会从盈亏贡献、仓位集中度、行业分布、风险敞口等角度逐项诊断，找出拖后腿的个股、过度集中的仓位和潜在风险，并提示哪些标的该考虑止盈或止损。想知道“我这套持仓到底健不健康、问题出在哪、该怎么调”时问它。",
+  "description_en": "It performs a comprehensive \"health check\" on your entire stock portfolio and provides recommendations for rebalancing. It conducts a detailed diagnosis—analyzing factors such as profit/loss contribution, position concentration, industry allocation, and risk exposure—to identify underperforming stocks, over-concentrated positions, and potential risks, while flagging assets where you should consider taking profits or cutting losses. Consult it whenever you want to know if your portfolio is healthy, where the issues lie, and how to adjust it.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_63bac045-0c3.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_63bac045-0c3.png"
+}

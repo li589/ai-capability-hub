@@ -1,0 +1,50 @@
+{
+  "skill_name": "distiller",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "distill — 我刚花了两小时排查一个 race condition，最后发现是锁的获取顺序不一致导致的死锁。帮我把这次调试经验提炼出来。",
+      "expected_output": "Should detect Bug Retrospective scene, produce a document with bug profile, root cause chain with → arrow notation, code evidence (problem + fix), and prevention checklist. Frontmatter in English, body in Chinese. All extraction points have confidence markers.",
+      "files": [],
+      "expectations": [
+        "Output has YAML frontmatter with `scene: bug-retrospective`",
+        "Frontmatter `lang` field is `zh`",
+        "Tags include both `distilled` and `scene/bug-retrospective`",
+        "Frontmatter `title` is in English (no Chinese characters in title value)",
+        "Root Cause Chain uses → arrow notation to show multi-layer causation (surface → direct cause → root cause)",
+        "At least 3 extraction points have inline confidence markers (**[high]**, **[medium]**, or **[low]**)",
+        "Code Evidence section contains both a problem code block and a fix code block (two distinct fenced code blocks minimum)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "I just finished building a REST API with FastAPI and PostgreSQL. We made some interesting architecture decisions around connection pooling and middleware ordering. Can you extract the key learnings from this session?",
+      "expected_output": "Should detect Project Wrap-up scene, produce a document with ADRs (alternatives + trade-offs), reusable module table, pitfall guide, and implementation playbook. Frontmatter and body both in English.",
+      "files": [],
+      "expectations": [
+        "Output has YAML frontmatter with `scene: project-wrapup`",
+        "Frontmatter `lang` field is `en`",
+        "Tags include at least one of `tech/python`, `tech/fastapi`, or `tech/postgresql`",
+        "Frontmatter `title` is in English",
+        "Architecture Decisions include 'Alternatives considered' and 'Trade-offs accepted' sub-items for at least one decision",
+        "At least 3 extraction points have inline confidence markers (**[high]**, **[medium]**, or **[low]**)",
+        "Reusable Modules presented as a table with columns for Module, Purpose, Dependencies, and Adaptation Notes"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "retrospective — 今天学了 Rust 的所有权和借用机制，感觉终于理解 borrow checker 了。帮我整理一下。",
+      "expected_output": "Should detect Tech Learning scene, produce a document with concept map (with associations), API quick-reference table, use-case judgment, and progression roadmap with Level 1/2/3. Frontmatter in English, body in Chinese.",
+      "files": [],
+      "expectations": [
+        "Output has YAML frontmatter with `scene: tech-learning`",
+        "Frontmatter `lang` field is `zh`",
+        "Tags include `tech/rust`",
+        "Frontmatter `title` is in English (no Chinese characters in title value)",
+        "Core Concepts entries include association links ('关联概念', 'Relates to', or similar) connecting concepts to each other",
+        "At least 3 extraction points have inline confidence markers (**[high]**, **[medium]**, or **[low]**)",
+        "Progression Roadmap has at least 3 distinct levels (Level 1/2/3 or equivalent tiered structure)"
+      ]
+    }
+  ]
+}

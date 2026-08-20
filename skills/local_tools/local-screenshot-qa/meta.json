@@ -1,0 +1,20 @@
+{
+  "author": "Intel",
+  "description": "Answers natural-language questions about screenshots and images using a local Qwen3-VL model on Intel AIPC.",
+  "detail_describe": "看懂截图、屏幕截图和图片\n用自然语言提问、获得精准回答\n识别报错信息、UI 元素、图片中的文字\n完全本地运行，图片不离开本机\n首次自动下载模型并构建运行环境",
+  "display_description": "基于本地AI大模型看懂截图、回答关于图像的问题(仅限英特尔AIPC平台)",
+  "display_name": "本地截图问答",
+  "name": "local-screenshot-qa",
+  "scope": [
+    "main"
+  ],
+  "type": "英特尔用户专区",
+  "use_cases": [
+    "看看这张报错截图[请填入截图文件名，如\"err.png\"]说了什么",
+    "帮我描述一下这张界面截图[请填入截图文件名，如\"dashboard.png\"]里有什么",
+    "提取这张图片[请填入图片文件名，如\"note.png\"]里的文字",
+    "看看我现在屏幕上是什么",
+    "帮我看一下当前画面，这个报错是什么意思"
+  ],
+  "version": "1.0.0"
+}

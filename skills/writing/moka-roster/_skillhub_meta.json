@@ -1,0 +1,11 @@
+{
+  "name": "Moka 花名册",
+  "installedAt": 1787228590537,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088128262643224576",
+  "description_zh": "面向人事负责人的花名册与人事列表查询及导出。使用当前平台提供的 Moka 连接器按业务场景查询花名册、入离职、合同、试用期、异动、请假出差等人事列表数据，并把花名册异步导出为 Excel 文件。当用户要按条件盘点在职/离职员工名单、查历史花名册快照、浏览请假/加班/打卡等记录列表，或要求「导出一份名单/Excel」时使用。",
+  "description_en": "Roster and HR list queries plus roster export for HR owners. Uses the Moka Connector available on the current platform to query HR list data by business scene (roster, onboarding/offboarding, contracts, probation, job changes, leave and travel records) and to export the roster to an Excel file as an asynchronous task. Use it when the user wants to inventory employees by criteria, browse HR record lists, view historical roster snapshots, or asks for a roster Excel file.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_a825ff97-ad8.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_a825ff97-ad8.png"
+}

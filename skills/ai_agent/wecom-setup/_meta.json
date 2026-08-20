@@ -1,0 +1,11 @@
+{
+  "owner": "pengtruman922-dotcom",
+  "slug": "wecom-setup",
+  "displayName": "企业微信对话配置",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774261633697,
+    "commit": "https://github.com/openclaw/skills/commit/f284a501761958b7c53efc1090e2a691c894aaba"
+  },
+  "history": []
+}

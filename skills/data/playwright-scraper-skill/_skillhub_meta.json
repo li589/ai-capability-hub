@@ -1,0 +1,20 @@
+{
+  "name": "Playwright Scraper",
+  "installedAt": 1785784723578,
+  "source": "marketplace",
+  "version": "1.2.0",
+  "skillId": "skill_2053082580726448129",
+  "examples_zh": [
+    "用 playwright-stealth.js 抓取我们授权测试站点的 Cloudflare 保护页面，提取动态表格中的公司名和融资轮次。",
+    "针对需要浏览器渲染的商品页运行 playwright-simple.js，抓取商品标题、价格、库存和图片链接。",
+    "在测试环境中启用验证码处理流程，验证表单页面是否能被 Playwright 完整加载，并输出失败步骤截图。"
+  ],
+  "examples_en": [
+    "Use playwright-stealth.js to scrape our authorized Cloudflare-protected test site and extract company names plus funding rounds from the dynamic table.",
+    "Run playwright-simple.js against a browser-rendered product page to collect title, price, inventory, and image links.",
+    "Enable the CAPTCHA-handling flow in a test environment, verify that the form page loads fully in Playwright, and output screenshots for failed steps."
+  ],
+  "description_zh": "Playwright 隐身网页抓取，支持反爬绕过与验证码处理",
+  "description_en": "Playwright stealth web scraping with anti-bot bypass & CAPTCHA solving",
+  "iconSource": "letter:auto"
+}

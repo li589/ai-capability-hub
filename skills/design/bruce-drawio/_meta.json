@@ -1,0 +1,11 @@
+{
+  "owner": "bruc3van",
+  "slug": "bruce-drawio",
+  "displayName": "Draw.io Diagram Generator And Exporter",
+  "latest": {
+    "version": "3.1.0",
+    "publishedAt": 1775701876448,
+    "commit": "https://github.com/openclaw/skills/commit/4fff9b42f87ca63fa3bc580ce05ed5b74799b88f"
+  },
+  "history": []
+}

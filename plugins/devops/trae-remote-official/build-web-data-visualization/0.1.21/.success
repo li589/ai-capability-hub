@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:build-web-data-visualization",
+  "registry": "trae-remote-official",
+  "plugin_name": "build-web-data-visualization",
+  "version": "0.1.21",
+  "marketplace_plugin_id": "c166ec21-d693-442e-8df9-cbad8b64ff6b",
+  "remote_installed_plugin_id": "P2GZY_YC4ROAEL",
+  "checksum": "114425c915f19b093bec2401883ae011f11bb9b251e9729b4f2c39a5c12b2b56",
+  "file_size": 350439,
+  "installed_at": 1787227203473
+}

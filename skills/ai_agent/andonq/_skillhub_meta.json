@@ -1,0 +1,21 @@
+{
+  "name": "AndonQ",
+  "installedAt": 1787227709231,
+  "source": "marketplace",
+  "version": "2.0.1",
+  "skillId": "skill_2053081325436334080",
+  "examples_zh": [
+    "查询我最近的腾讯云工单",
+    "帮我创建一个CVM无法登录的工单",
+    "轻量应用服务器如何设置防火墙规则"
+  ],
+  "examples_en": [
+    "List my recent Tencent Cloud tickets",
+    "Create a ticket for CVM login failure",
+    "How to set firewall rules on Lighthouse"
+  ],
+  "description_zh": "腾讯云智能客服领域虾，支持工单、需求单、云产品问答、资源查询",
+  "description_en": "Tencent Cloud smart customer service — tickets, stories, product Q&A, resource query",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/andonq.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/andonq.svg"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "rashed-mamoon",
+  "slug": "report-generator-en",
+  "displayName": "Report Generator EN",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774594577142,
+    "commit": "https://github.com/openclaw/skills/commit/aa738f48688203c78b99cefc95e59b3949c4659e"
+  },
+  "history": []
+}

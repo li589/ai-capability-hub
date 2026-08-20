@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>投资日历 · Financial Calendar</title>
+<style>
+  :root {
+    --bg: #f5f7fa;
+    --surface: #ffffff;
+    --surface-2: #fafbfc;
+    --primary: #1e3a5f;
+    --primary-dark: #15293f;
+    --primary-light: #2c5282;
+    --accent: #dc2626;
+    --accent-light: #fef2f2;
+    --green: #16a34a;
+    --green-light: #f0fdf4;
+    --orange: #d97706;
+    --orange-light: #fffbeb;
+    --blue: #2563eb;
+    --blue-light: #eff6ff;
+    --purple: #7c3aed;
+    --purple-light: #f5f3ff;
+    --text: #0f172a;
+    --text-2: #334155;
+    --text-muted: #64748b;
+    --text-light: #94a3b8;
+    --border: #e8ecf1;
+    --border-light: #f1f4f8;
+    --shadow-sm: 0 1px 2px rgba(15,23,42,0.04);
+    --shadow: 0 1px 3px rgba(15,23,42,0.06), 0 1px 2px rgba(15,23,42,0.04);
+    --shadow-md: 0 4px 6px -1px rgba(15,23,42,0.07), 0 2px 4px -2px rgba(15,23,42,0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(15,23,42,0.08), 0 4px 6px -4px rgba(15,23,42,0.05);
+    --radius: 12px;
+    --radius-md: 8px;
+    --radius-sm: 6px;
+    --radius-xs: 4px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ===== Header ===== */
+  .header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+  }
+  .header-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 28px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--primary);
+    flex-shrink: 0;
+  }
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(30,58,95,0.25);
+  }
+  .logo-text { letter-spacing: 0.5px; }
+  .logo-text .sub { font-size: 11px; font-weight: 500; color: var(--text-muted); letter-spacing: 2px; }
+  .header-nav {
+    display: flex;
+    gap: 4px;
+    margin-left: 8px;
+  }
+  .nav-item {
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    color: var(--text-2);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.15s;
+  }
+  .nav-item:hover { background: var(--surface-2); color: var(--primary); }
+  .nav-item.active { background: var(--primary); color: #fff; }
+  .header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .search-box {
+    position: relative;
+    width: 240px;
+  }
+  .search-box input {
+    width: 100%;
+    height: 36px;
+    padding: 0 12px 0 36px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 13px;
+    background: var(--surface-2);
+    color: var(--text);
+    outline: none;
+    transition: all 0.15s;
+  }
+  .search-box input:focus { border-color: var(--primary-light); background: var(--surface); box-shadow: 0 0 0 3px rgba(44,82,130,0.1); }
+  .search-box .icon {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-light);
+    font-size: 14px;
+  }
+  .btn-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-2);
+    transition: all 0.15s;
+  }
+  .btn-icon:hover { background: var(--surface-2); color: var(--primary); border-color: var(--primary-light); }
+
+  /* ===== Main Layout ===== */
+  .main {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 24px 28px;
+  }
+
+  /* ===== Toolbar ===== */
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .month-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .month-nav .btn-month {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-2);
+    font-size: 16px;
+    transition: all 0.15s;
+  }
+  .btn-month:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .month-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text);
+    min-width: 140px;
+    text-align: center;
+  }
+  .month-title .year { color: var(--text-muted); font-weight: 500; margin-left: 4px; }
+  .btn-today {
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-2);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .btn-today:hover { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .view-switch {
+    display: flex;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    padding: 3px;
+    gap: 2px;
+  }
+  .view-switch button {
+    padding: 6px 14px;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: var(--radius-xs);
+    transition: all 0.15s;
+  }
+  .view-switch button.active { background: var(--primary); color: #fff; }
+  .view-switch button:hover:not(.active) { background: var(--surface-2); color: var(--text); }
+
+  /* ===== Filter Bar ===== */
+  .filter-bar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    box-shadow: var(--shadow-sm);
+  }
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .filter-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-right: 4px;
+  }
+  .chip {
+    padding: 5px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text-2);
+    cursor: pointer;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .chip:hover { border-color: var(--primary-light); color: var(--primary); }
+  .chip.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+  .chip.imp-high.active { background: var(--accent); border-color: var(--accent); }
+  .chip.imp-mid.active { background: var(--orange); border-color: var(--orange); }
+  .chip.imp-low.active { background: var(--blue); border-color: var(--blue); }
+
+  /* ===== Stat Strip ===== */
+  .stat-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .stat-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .stat-icon.s-total { background: var(--blue-light); color: var(--blue); }
+  .stat-icon.s-high { background: var(--accent-light); color: var(--accent); }
+  .stat-icon.s-cn { background: var(--accent-light); color: var(--accent); }
+  .stat-icon.s-intl { background: var(--blue-light); color: var(--blue); }
+  .stat-info { flex: 1; }
+  .stat-num { font-size: 22px; font-weight: 700; color: var(--text); line-height: 1.2; }
+  .stat-label { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+  /* ===== Calendar Layout ===== */
+  .cal-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 20px;
+    align-items: start;
+  }
+
+  /* ===== Calendar ===== */
+  .calendar {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .cal-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: var(--surface-2);
+    border-bottom: 1px solid var(--border);
+  }
+  .cal-weekdays > div {
+    text-align: center;
+    padding: 12px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .cal-weekdays .we { color: var(--accent); }
+  .cal-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: minmax(118px, 1fr);
+  }
+  .cal-day {
+    border-right: 1px solid var(--border-light);
+    border-bottom: 1px solid var(--border-light);
+    padding: 6px 6px 4px;
+    cursor: pointer;
+    transition: background 0.12s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    overflow: hidden;
+  }
+  .cal-day:nth-child(7n) { border-right: none; }
+  .cal-day:hover { background: var(--surface-2); }
+  .cal-day.out { background: #fbfcfd; }
+  .cal-day.out .day-num { color: var(--text-light); }
+  .cal-day.today { background: linear-gradient(180deg, rgba(220,38,38,0.03) 0%, transparent 100%); }
+  .cal-day.today .day-num {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+  }
+  .cal-day.selected { background: rgba(44,82,130,0.06); box-shadow: inset 0 0 0 2px var(--primary-light); }
+  .day-num {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+  }
+  .cal-day.we .day-num { color: var(--accent); }
+  .cal-day.out.we .day-num { color: #fca5a5; }
+
+  .ev {
+    border-radius: 4px;
+    padding: 3px 6px;
+    font-size: 11px;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: all 0.12s;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-left: 3px solid;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .ev:hover { transform: translateX(2px); box-shadow: var(--shadow-sm); }
+  .ev-time { font-size: 10px; opacity: 0.8; flex-shrink: 0; font-variant-numeric: tabular-nums; }
+  .ev-title { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .ev-high { background: var(--accent-light); color: #991b1b; border-color: var(--accent); }
+  .ev-mid { background: var(--orange-light); color: #92400e; border-color: var(--orange); }
+  .ev-low { background: var(--blue-light); color: #1e40af; border-color: var(--blue); }
+  .ev-cn { }
+  .ev-us { }
+  .ev-eu { background: var(--green-light); color: #166534; border-color: var(--green); }
+  .ev-more {
+    font-size: 10px;
+    color: var(--text-muted);
+    text-align: center;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  .ev-more:hover { color: var(--primary); }
+  .holiday-mark {
+    position: absolute;
+    top: 4px;
+    right: 6px;
+    font-size: 9px;
+    background: var(--text-light);
+    color: #fff;
+    padding: 1px 5px;
+    border-radius: 3px;
+    font-weight: 600;
+  }
+
+  /* ===== Detail Panel ===== */
+  .detail-panel {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 88px;
+  }
+  .dp-header {
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid var(--border-light);
+    background: linear-gradient(135deg, var(--surface) 0%, var(--surface-2) 100%);
+  }
+  .dp-date {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 4px;
+  }
+  .dp-date .d { font-size: 28px; font-weight: 700; color: var(--text); line-height: 1; }
+  .dp-date .m { font-size: 14px; color: var(--text-muted); font-weight: 500; }
+  .dp-date .weekday { font-size: 13px; color: var(--text-muted); margin-left: auto; }
+  .dp-summary { font-size: 12px; color: var(--text-muted); }
+  .dp-summary b { color: var(--accent); }
+  .dp-body {
+    max-height: calc(100vh - 240px);
+    overflow-y: auto;
+    padding: 12px;
+  }
+  .dp-body::-webkit-scrollbar { width: 6px; }
+  .dp-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+  .dp-body::-webkit-scrollbar-track { background: transparent; }
+
+  .event-card {
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: var(--radius-md);
+    padding: 14px;
+    margin-bottom: 10px;
+    transition: all 0.15s;
+    cursor: pointer;
+    border-left: 4px solid;
+  }
+  .event-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+  .event-card.high { border-left-color: var(--accent); }
+  .event-card.mid { border-left-color: var(--orange); }
+  .event-card.low { border-left-color: var(--blue); }
+  .ec-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    flex-wrap: wrap;
+  }
+  .ec-time {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .ec-flag { font-size: 14px; }
+  .ec-badge {
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 600;
+  }
+  .ec-badge.high { background: var(--accent-light); color: var(--accent); }
+  .ec-badge.mid { background: var(--orange-light); color: var(--orange); }
+  .ec-badge.low { background: var(--blue-light); color: var(--blue); }
+  .ec-cat {
+    font-size: 10px;
+    color: var(--text-muted);
+    margin-left: auto;
+    background: var(--surface-2);
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+  .ec-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+  .ec-desc { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin-bottom: 8px; }
+  .ec-values {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin: 10px 0;
+    padding: 10px;
+    background: var(--surface-2);
+    border-radius: var(--radius-sm);
+  }
+  .ec-val { text-align: center; }
+  .ec-val .lbl { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.3px; margin-bottom: 2px; }
+  .ec-val .num { font-size: 15px; font-weight: 700; color: var(--text); font-variant-numeric: tabular-nums; }
+  .ec-val .num.pos { color: var(--accent); }
+  .ec-val .num.neg { color: var(--green); }
+  .ec-surprise {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 10px;
+    margin-top: 6px;
+  }
+  .ec-surprise.pos { background: var(--accent-light); color: var(--accent); }
+  .ec-surprise.neg { background: var(--green-light); color: var(--green); }
+  .ec-surprise.neutral { background: var(--surface-2); color: var(--text-muted); }
+  .ec-assets {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--border-light);
+  }
+  .ec-assets .lbl { font-size: 11px; color: var(--text-muted); margin-right: 4px; align-self: center; }
+  .asset-tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--surface-2);
+    color: var(--text-2);
+    border: 1px solid var(--border-light);
+    font-weight: 500;
+  }
+  .ec-source { font-size: 11px; color: var(--text-light); margin-top: 8px; }
+
+  .dp-empty {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+  }
+  .dp-empty .icon { font-size: 40px; opacity: 0.4; margin-bottom: 12px; }
+
+  /* ===== Legend ===== */
+  .legend {
+    display: flex;
+    gap: 16px;
+    padding: 12px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    margin-bottom: 20px;
+    font-size: 12px;
+    color: var(--text-muted);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .legend-item { display: flex; align-items: center; gap: 6px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 3px; border-left: 3px solid; }
+  .legend-dot.high { background: var(--accent-light); border-color: var(--accent); }
+  .legend-dot.mid { background: var(--orange-light); border-color: var(--orange); }
+  .legend-dot.low { background: var(--blue-light); border-color: var(--blue); }
+
+  /* ===== List View ===== */
+  .list-view { display: none; }
+  .list-view.active { display: block; }
+  .calendar.hidden, .detail-panel.hidden { display: none; }
+  .cal-layout.list-mode { grid-template-columns: 1fr; }
+
+  .lv-group {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-sm);
+  }
+  .lv-group-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 20px;
+    background: linear-gradient(90deg, var(--surface-2) 0%, var(--surface) 100%);
+    border-bottom: 1px solid var(--border-light);
+    cursor: pointer;
+    transition: background 0.12s;
+  }
+  .lv-group-header:hover { background: var(--surface-2); }
+  .lv-date-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-sm);
+    background: var(--primary);
+    color: #fff;
+    flex-shrink: 0;
+  }
+  .lv-date-box.today { background: var(--accent); }
+  .lv-date-box .d { font-size: 22px; font-weight: 700; line-height: 1; }
+  .lv-date-box .m { font-size: 10px; opacity: 0.85; margin-top: 2px; }
+  .lv-date-info { display: flex; flex-direction: column; gap: 2px; }
+  .lv-date-info .full { font-size: 15px; font-weight: 600; color: var(--text); }
+  .lv-date-info .weekday { font-size: 12px; color: var(--text-muted); }
+  .lv-date-info .weekday.we { color: var(--accent); }
+  .lv-group-count {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+  }
+  .lv-count-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+  }
+  .lv-count-badge.high { background: var(--accent-light); color: var(--accent); }
+  .lv-toggle { font-size: 14px; color: var(--text-light); transition: transform 0.2s; }
+  .lv-group.collapsed .lv-toggle { transform: rotate(-90deg); }
+  .lv-group.collapsed .lv-group-body { display: none; }
+
+  .lv-group-body {
+    padding: 8px 12px 12px;
+  }
+  .lv-event-row {
+    display: grid;
+    grid-template-columns: 70px 36px 1fr 120px 100px;
+    gap: 16px;
+    align-items: center;
+    padding: 12px 12px;
+    border-radius: var(--radius-sm);
+    transition: background 0.12s;
+    border-left: 4px solid transparent;
+    cursor: pointer;
+  }
+  .lv-event-row:hover { background: var(--surface-2); box-shadow: var(--shadow-sm); }
+  .lv-event-row.high { border-left-color: var(--accent); }
+  .lv-event-row.mid { border-left-color: var(--orange); }
+  .lv-event-row.low { border-left-color: var(--blue); }
+  .lv-ev-time {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  .lv-ev-imp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .imp-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  .imp-dot.high { background: var(--accent); box-shadow: 0 0 0 3px var(--accent-light); }
+  .imp-dot.mid { background: var(--orange); box-shadow: 0 0 0 3px var(--orange-light); }
+  .imp-dot.low { background: var(--blue); box-shadow: 0 0 0 3px var(--blue-light); }
+  .lv-ev-main { min-width: 0; }
+  .lv-ev-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 2px;
+  }
+  .lv-ev-flag { font-size: 15px; }
+  .lv-ev-desc {
+    font-size: 12px;
+    color: var(--text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .lv-ev-vals {
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+  }
+  .lv-val { display: flex; flex-direction: column; align-items: center; }
+  .lv-val .lbl { font-size: 10px; color: var(--text-light); text-transform: uppercase; }
+  .lv-val .num { font-weight: 700; color: var(--text); }
+  .lv-val .num.pos { color: var(--accent); }
+  .lv-val .num.neg { color: var(--green); }
+  .lv-val .num.pending { color: var(--text-light); font-weight: 500; }
+  .lv-ev-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: flex-end;
+  }
+  .lv-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    background: var(--surface-2);
+    color: var(--text-2);
+    border: 1px solid var(--border-light);
+    font-weight: 500;
+    white-space: nowrap;
+  }
+  .lv-tag.cat { background: var(--purple-light); color: var(--purple); border-color: transparent; }
+  .lv-surprise {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px 7px;
+    border-radius: 8px;
+  }
+  .lv-surprise.pos { background: var(--accent-light); color: var(--accent); }
+  .lv-surprise.neg { background: var(--green-light); color: var(--green); }
+
+  .lv-empty {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-muted);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .lv-empty .icon { font-size: 48px; opacity: 0.3; margin-bottom: 16px; }
+
+  @media (max-width: 768px) {
+    .lv-event-row { grid-template-columns: 60px 28px 1fr; gap: 10px; }
+    .lv-ev-vals, .lv-ev-tags { display: none; }
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 1100px) {
+    .cal-layout { grid-template-columns: 1fr; }
+    .detail-panel { position: static; }
+    .stat-strip { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .header-nav, .search-box { display: none; }
+    .main { padding: 16px; }
+    .cal-day { min-height: 80px; }
+    .filter-bar { gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== Header ===== -->
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">
+      <div class="logo-icon">📅</div>
+      <div>
+        <div class="logo-text">投资日历</div>
+        <div class="logo-text"><span class="sub">FINANCIAL CALENDAR</span></div>
+      </div>
+    </div>
+    <nav class="header-nav">
+      <div class="nav-item active">财经日历</div>
+    </nav>
+    <div class="header-right">
+      <div class="search-box">
+        <span class="icon">🔍</span>
+        <input type="text" placeholder="搜索事件、指标、公司..." />
+      </div>
+      <button class="btn-icon" title="提醒设置">🔔</button>
+      <button class="btn-icon" title="导出">📤</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Main ===== -->
+<main class="main">
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <div class="month-nav">
+      <button class="btn-month" id="prevMonth">‹</button>
+      <div class="month-title"><span id="monthName">1月</span><span class="year" id="yearName">2026</span></div>
+      <button class="btn-month" id="nextMonth">›</button>
+      <button class="btn-today" id="todayBtn">今天</button>
+    </div>
+    <div class="view-switch">
+      <button>日</button>
+      <button>周</button>
+      <button class="active" id="btnCalView">📅 月历</button>
+      <button id="btnListView">📋 列表</button>
+    </div>
+  </div>
+
+  <!-- Stat Strip -->
+  <div class="stat-strip" id="statStrip"></div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <div class="filter-group">
+      <span class="filter-label">重要性</span>
+      <span class="chip imp-high active" data-filter="imp" data-val="high">🔴 高</span>
+      <span class="chip imp-mid active" data-filter="imp" data-val="mid">🟡 中</span>
+      <span class="chip imp-low active" data-filter="imp" data-val="low">🔵 低</span>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">地区</span>
+      <span class="chip active" data-filter="region" data-val="cn">🇨🇳 国内</span>
+      <span class="chip active" data-filter="region" data-val="us">🇺🇸 美国</span>
+      <span class="chip active" data-filter="region" data-val="eu">🇪🇺 欧洲</span>
+      <span class="chip active" data-filter="region" data-val="jp">🇯🇵 日本</span>
+      <span class="chip active" data-filter="region" data-val="global">🌍 全球</span>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">类别</span>
+      <span class="chip active" data-filter="cat" data-val="macro">宏观经济</span>
+      <span class="chip active" data-filter="cat" data-val="monetary">央行政策</span>
+      <span class="chip active" data-filter="cat" data-val="meeting">重要会议</span>
+      <span class="chip active" data-filter="cat" data-val="earnings">财报</span>
+      <span class="chip active" data-filter="cat" data-val="ipo">新股</span>
+      <span class="chip active" data-filter="cat" data-val="corporate">公司事件</span>
+      <span class="chip active" data-filter="cat" data-val="index">指数调整</span>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <span style="font-weight:600;color:var(--text);">图例：</span>
+    <div class="legend-item"><span class="legend-dot high"></span>高影响事件</div>
+    <div class="legend-item"><span class="legend-dot mid"></span>中影响事件</div>
+    <div class="legend-item"><span class="legend-dot low"></span>低影响事件</div>
+    <div class="legend-item" id="legendTip">💡 点击日期查看当日事件详情 · 点击事件查看完整信息</div>
+  </div>
+
+  <!-- Calendar + Detail -->
+  <div class="cal-layout" id="calLayout">
+    <div>
+      <!-- Calendar View -->
+      <div class="calendar" id="calView">
+        <div class="cal-weekdays">
+          <div>一</div><div>二</div><div>三</div><div>四</div><div class="we">五</div><div class="we">六</div><div class="we">日</div>
+        </div>
+        <div class="cal-body" id="calBody"></div>
+      </div>
+      <!-- List View -->
+      <div class="list-view" id="listView"></div>
+    </div>
+    <div class="detail-panel" id="detailPanel">
+      <div class="dp-header">
+        <div class="dp-date">
+          <span class="d" id="dpDay">9</span>
+          <span class="m" id="dpMonth">1月 · 周五</span>
+          <span class="weekday" id="dpWeekday"></span>
+        </div>
+        <div class="dp-summary" id="dpSummary">当日共 <b>3</b> 个事件，其中高影响 <b>2</b> 个</div>
+      </div>
+      <div class="dp-body" id="dpBody"></div>
+    </div>
+  </div>
+</main>
+
+<script>
+// ===== Event Data: 2026年1月 =====
+const EVENTS = [
+  // Week 1
+  { id:1, day:1, time:"全天", title:"元旦节 休市", titleEn:"New Year Holiday", flag:"🇨🇳", region:"cn", cat:"corporate", imp:"high", desc:"A股、港股休市。北向资金暂停。", source:"沪深交易所", assets:["A股","港股"], holiday:true },
+  { id:2, day:2, time:"09:45", title:"12月财新制造业PMI", titleEn:"Caixin Manufacturing PMI", flag:"🇨🇳", region:"cn", cat:"macro", imp:"mid", desc:"财新中国制造业采购经理人指数，反映中小制造业企业景气度。", source:"财新/S&P Global", prev:"50.5", exp:"50.3", actual:"50.1", unit:"", assets:["A股","港股","人民币"] },
+  { id:3, day:5, time:"21:30", title:"美国12月非农就业报告", titleEn:"Non-Farm Payrolls", flag:"🇺🇸", region:"us", cat:"macro", imp:"high", desc:"美国劳工统计局发布的非农就业人数变化、失业率及薪资增速。美联储最关注的就业指标，直接影响降息预期。", source:"BLS 美国劳工统计局", prev:"+22.7万", exp:"+18.0万", actual:"+25.6万", unit:"万人", assets:["美元","美股","黄金","A股北向"], surprise:"pos", surpriseText:"大幅超预期 +42%" },
+  { id:4, day:5, time:"21:30", title:"美国12月失业率", titleEn:"Unemployment Rate", flag:"🇺🇸", region:"us", cat:"macro", imp:"high", desc:"与非农同步发布，反映劳动力市场松紧程度。", source:"BLS", prev:"4.2%", exp:"4.2%", actual:"4.1%", unit:"", assets:["美元","美股"], surprise:"neg" },
+  // Week 2
+  { id:5, day:7, time:"—", title:"中国12月外汇储备", titleEn:"FX Reserves", flag:"🇨🇳", region:"cn", cat:"macro", imp:"low", desc:"中国人民银行公布的外汇储备规模，反映央行干预汇率能力。", source:"中国人民银行", prev:"3.27万亿美元", exp:"3.28万亿美元", actual:"—", unit:"", assets:["人民币"] },
+  { id:6, day:8, time:"03:00", title:"美联储12月FOMC会议纪要", titleEn:"FOMC Minutes", flag:"🇺🇸", region:"us", cat:"monetary", imp:"mid", desc:"美联储12月议息会议的详细纪要，揭示委员对通胀、就业和未来利率路径的分歧与倾向。", source:"美联储", assets:["美元","美股","美债"], cat_label:"会议纪要" },
+  { id:7, day:9, time:"09:30", title:"中国12月CPI / PPI", titleEn:"CPI & PPI", flag:"🇨🇳", region:"cn", cat:"macro", imp:"high", desc:"国家统计局发布居民消费价格指数(CPI)和工业生产者出厂价格指数(PPI)。CPI反映终端通胀，PPI反映工业品出厂价格，二者剪刀差反映利润分配格局。", source:"国家统计局", prev:"CPI +0.2% / PPI -2.5%", exp:"CPI +0.1% / PPI -2.3%", actual:"—", unit:"", assets:["A股","国债","人民币"] },
+  { id:8, day:9, time:"15:00", title:"德国12月CPI终值", titleEn:"Germany CPI Final", flag:"🇪🇺", region:"eu", cat:"macro", imp:"low", desc:"德国联邦统计局发布的CPI终值，欧元区通胀的风向标。", source:"Destatis", prev:"+2.3%", exp:"+2.3%", actual:"—", unit:"", assets:["欧元"] },
+  { id:9, day:12, time:"21:30", title:"美国12月CPI", titleEn:"US CPI", flag:"🇺🇸", region:"us", cat:"macro", imp:"high", desc:"美国劳工统计局发布的消费者价格指数，含核心CPI(剔除食品能源)。美联储2%通胀目标的核心观测指标，直接影响降息时点判断。", source:"BLS", prev:"CPI +2.7% / 核心 +3.3%", exp:"CPI +2.6% / 核心 +3.1%", actual:"—", unit:"", assets:["美元","美股","黄金","美债","A股北向"] },
+  { id:10, day:13, time:"10:00", title:"中国12月进出口数据", titleEn:"Trade Balance", flag:"🇨🇳", region:"cn", cat:"macro", imp:"mid", desc:"海关总署发布的以美元计价的出口、进口同比增速及贸易顺差。出口反映外需强弱，进口反映内需复苏。", source:"海关总署", prev:"出口+6.7% / 进口-3.9%", exp:"出口+5.0% / 进口-2.0%", actual:"—", unit:"", assets:["A股","人民币"] },
+  { id:11, day:14, time:"21:30", title:"美国12月PPI", titleEn:"US PPI", flag:"🇺🇸", region:"us", cat:"macro", imp:"mid", desc:"美国生产者价格指数，CPI的先行指标，反映生产端通胀压力传导。", source:"BLS", prev:"+0.4%", exp:"+0.3%", actual:"—", unit:"", assets:["美元","美股"] },
+  { id:12, day:15, time:"09:20", title:"中国1月MLF操作", titleEn:"MLF Operation", flag:"🇨🇳", region:"cn", cat:"monetary", imp:"high", desc:"央行中期借贷便利(MLF)操作，关注投放量及利率是否调整。MLF利率是LPR的锚，调降即释放降息信号。", source:"中国人民银行", prev:"1.9万亿 / 利率2.0%", exp:"—", actual:"—", unit:"", assets:["A股","国债","人民币"] },
+  { id:13, day:15, time:"21:30", title:"美国12月零售销售", titleEn:"Retail Sales", flag:"🇺🇸", region:"us", cat:"macro", imp:"mid", desc:"美国普查局发布的零售销售数据，占美国GDP约70%的消费支出的直接观测指标。", source:"美国普查局", prev:"+0.3%", exp:"+0.2%", actual:"—", unit:"", assets:["美元","美股"] },
+  { id:14, day:16, time:"—", title:"中国12月社融 / M2", titleEn:"TSF & M2", flag:"🇨🇳", region:"cn", cat:"macro", imp:"high", desc:"央行发布社会融资规模增量及M2同比。社融反映实体经济融资需求，M2反映货币供应，是观察信用扩张与流动性的核心指标。", source:"中国人民银行", prev:"社融2.34万亿 / M2 +7.1%", exp:"—", actual:"—", unit:"", assets:["A股","国债","人民币"] },
+  // Week 3
+  { id:15, day:19, time:"—", title:"美国马丁·路德·金纪念日 休市", titleEn:"MLK Day Holiday", flag:"🇺🇸", region:"us", cat:"corporate", imp:"low", desc:"美股休市一日。", source:"NYSE", assets:["美股"], holiday:true },
+  { id:16, day:20, time:"09:15", title:"中国1月LPR报价", titleEn:"LPR Quote", flag:"🇨🇳", region:"cn", cat:"monetary", imp:"high", desc:"全国银行间同业拆借中心公布的贷款市场报价利率。1年期LPR影响企业贷款，5年期LPR是房贷利率基准。调降直接利好地产与消费。", source:"全国银行间同业拆借中心", prev:"1年期 3.10% / 5年期 3.60%", exp:"—", actual:"—", unit:"", assets:["A股","地产股","国债"] },
+  { id:17, day:20, time:"21:30", title:"美国初请失业金", titleEn:"Jobless Claims", flag:"🇺🇸", region:"us", cat:"macro", imp:"low", desc:"每周四发布的首次申请失业金人数，高频就业指标。", source:"DOL", prev:"20.1万", exp:"21.0万", actual:"—", unit:"万人", assets:["美元"] },
+  { id:18, day:22, time:"21:45", title:"欧央行利率决议", titleEn:"ECB Rate Decision", flag:"🇪🇺", region:"eu", cat:"monetary", imp:"high", desc:"欧洲央行公布存款便利利率、主要再融资利率。随后20:45行长拉加德召开新闻发布会。影响欧元汇率与全球流动性预期。", source:"ECB", prev:"存款利率 3.00%", exp:"—", actual:"—", unit:"", assets:["欧元","欧股","美元"] },
+  { id:19, day:22, time:"21:30", title:"美国当周初请失业金", titleEn:"Initial Jobless Claims", flag:"🇺🇸", region:"us", cat:"macro", imp:"low", desc:"劳工部每周发布的失业金申领数据。", source:"DOL", prev:"21.0万", exp:"22.0万", actual:"—", unit:"万人", assets:["美元"] },
+  // Week 4
+  { id:20, day:26, time:"—", title:"A股除夕前最后一交易日", titleEn:"Pre-CNY Trading", flag:"🇨🇳", region:"cn", cat:"corporate", imp:"mid", desc:"春节前最后一个交易日，关注资金面变化与节前持仓决策。", source:"沪深交易所", assets:["A股"] },
+  { id:21, day:27, time:"21:30", title:"美国12月PCE物价指数", titleEn:"PCE Price Index", flag:"🇺🇸", region:"us", cat:"macro", imp:"high", desc:"美联储最青睐的通胀指标——个人消费支出(PCE)物价指数，含核心PCE。与CPI相比更全面反映消费结构变化，是美联储2%目标的官方衡量标准。", source:"BEA", prev:"PCE +2.4% / 核心 +2.8%", exp:"PCE +2.3% / 核心 +2.7%", actual:"—", unit:"", assets:["美元","美股","黄金","美债"] },
+  { id:22, day:28, time:"03:00", title:"美联储FOMC利率决议", titleEn:"FOMC Rate Decision", flag:"🇺🇸", region:"us", cat:"monetary", imp:"high", desc:"美联储联邦公开市场委员会公布联邦基金利率目标区间。同时发布经济预测摘要(SEP)与点阵图。03:30主席鲍威尔召开新闻发布会。全年最重磅事件之一。", source:"美联储", prev:"4.50%-4.75%", exp:"—", actual:"—", unit:"", assets:["美元","美股","黄金","美债","A股北向"], cat_label:"含点阵图" },
+  { id:23, day:28, time:"10:00", title:"中国12月工业增加值 / 固投 / 社零", titleEn:"Industrial Output / FAI / Retail", flag:"🇨🇳", region:"cn", cat:"macro", imp:"mid", desc:"国家统计局发布的月度经济活动数据。工业增加值反映生产端，固定资产投资反映投资端，社零反映消费端，三者共同勾勒经济基本面全貌。", source:"国家统计局", prev:"工业+5.4% / 固投+3.3% / 社零+3.0%", exp:"—", actual:"—", unit:"", assets:["A股","人民币"] },
+  { id:24, day:29, time:"—", title:"中国12月规模以上工业企业利润", titleEn:"Industrial Profits", flag:"🇨🇳", region:"cn", cat:"macro", imp:"mid", desc:"国家统计局发布的工业企业利润累计同比，反映企业盈利状况。", source:"国家统计局", prev:"-4.3%", exp:"—", actual:"—", unit:"", assets:["A股"] },
+  { id:25, day:30, time:"09:00", title:"中国1月官方制造业PMI", titleEn:"Official Manufacturing PMI", flag:"🇨🇳", region:"cn", cat:"macro", imp:"high", desc:"国家统计局与物流采购联合会发布的制造业PMI。50为荣枯线，反映大型制造业企业景气度。与财新PMI形成互补。", source:"国家统计局", prev:"50.1", exp:"50.0", actual:"—", unit:"", assets:["A股","港股","人民币"] },
+  // 财报季
+  { id:26, day:16, time:"美股盘后", title:"台积电(TSM)四季度财报", titleEn:"TSMC Q4 Earnings", flag:"🇺🇸", region:"us", cat:"earnings", imp:"high", desc:"全球最大芯片代工厂财报，是半导体行业景气度风向标，影响全球科技股与AI产业链。", source:"台积电", assets:["美股半导体","A股半导体","港股科技"], cat_label:"财报季" },
+  { id:27, day:23, time:"美股盘后", title:"特斯拉(TSLA)四季度财报", titleEn:"Tesla Q4 Earnings", flag:"🇺🇸", region:"us", cat:"earnings", imp:"high", desc:"特斯拉财报与交付量数据，影响新能源车产业链与科技股情绪。", source:"Tesla", assets:["美股","新能源车板块"], cat_label:"财报季" },
+  { id:28, day:29, time:"美股盘后", title:"微软(MSFT) / Meta(META) 财报", titleEn:"MSFT & META Earnings", flag:"🇺🇸", region:"us", cat:"earnings", imp:"high", desc:"微软与Meta同日发布财报，AI资本开支与云业务增长是核心看点，直接影响科技股板块。", source:"微软 / Meta", assets:["美股科技","AI产业链"], cat_label:"财报季" },
+  // IPO & 解禁
+  { id:29, day:13, time:"09:30", title:"某科技公司新股申购", titleEn:"IPO Subscription", flag:"🇨🇳", region:"cn", cat:"ipo", imp:"mid", desc:"拟上市公司网上/网下申购日，申购资金将冻结。", source:"交易所", assets:["A股"] },
+  { id:30, day:20, time:"—", title:"某新能源公司限售股解禁", titleEn:"Lock-up Expiry", flag:"🇨🇳", region:"cn", cat:"corporate", imp:"mid", desc:"首发原股东限售股解禁，解禁规模约50亿元，关注股东减持意愿。", source:"交易所公告", assets:["A股个股"], cat_label:"解禁" },
+  { id:31, day:23, time:"—", title:"沪深300指数半年度调整生效", titleEn:"CSI 300 Rebalance", flag:"🇨🇳", region:"cn", cat:"index", imp:"mid", desc:"沪深300指数成分股半年度评审结果生效日，被动指数基金集中调仓。", source:"中证指数公司", assets:["沪深300 ETF","成分股"], cat_label:"指数调整" },
+
+  // ===== 2026年7月 =====
+  { id:100, day:1, time:"09:45", title:"6月财新制造业PMI", titleEn:"Caixin Manufacturing PMI", flag:"🇨🇳", region:"cn", cat:"macro", imp:"mid", desc:"财新中国制造业采购经理人指数，反映中小制造业企业景气度。荣枯线50。", source:"财新/S&P Global", prev:"50.1", exp:"50.3", actual:"—", unit:"", assets:["A股","港股","人民币"] },
+  { id:101, day:1, time:"16:00", title:"欧元区6月制造业PMI终值", titleEn:"Eurozone Manufacturing PMI Final", flag:"🇪🇺", region:"eu", cat:"macro", imp:"low", desc:"欧元区制造业PMI终值，反映欧洲制造业景气度。", source:"S&P Global", prev:"49.4", exp:"49.4", actual:"—", unit:"", assets:["欧元"] },
+  { id:102, day:3, time:"20:30", title:"美国6月非农就业报告", titleEn:"Non-Farm Payrolls", flag:"🇺🇸", region:"us", cat:"macro", imp:"high", desc:"美国劳工统计局发布的非农就业人数变化、失业率及薪资增速。美联储最关注的就业指标，直接影响降息预期。", source:"BLS 美国劳工统计局", prev:"+25.6万", exp:"+18.0万", actual:"—", unit:"万人", assets:["美元","美股","黄金","A股北向"] },
+  { id:103, day:3, time:"20:30", title:"美国6月失业率", titleEn:"Unemployment Rate", flag:"🇺🇸", region:"us", cat:"macro", imp:"high", desc:"与非农同步发布，反映劳动力市场松紧程度。", source:"BLS", prev:"4.1%", exp:"4.1%", actual:"—", unit:"", assets:["美元","美股"] },
+  { id:104, day:4, time:"全天", title:"美国独立日 休市", titleEn:"Independence Day Holiday", flag:"🇺🇸", region:"us", cat:"corporate", imp:"low", desc:"美股休市一日。", source:"NYSE", assets:["美股"], holiday:true },
+  { id:105, day:7, time:"—", title:"中国6月外汇储备", titleEn:"FX Reserves", flag:"🇨🇳", region:"cn", cat:"macro", imp:"low", desc:"中国人民银行公布的外汇储备规模。", source:"中国人民银行", prev:"3.28万亿美元", exp:"—", actual:"—", unit:"", assets:["人民币"] },
+  { id:106, day:8, time:"09:30", title:"中国6月CPI / PPI", titleEn:"CPI & PPI", flag:"🇨🇳", region:"cn", cat:"macro", imp:"high", desc:"国家统计局发布居民消费价格指数(CPI)和工业生产者出厂价格指数(PPI)。CPI反映终端通胀，PPI反映工业品出厂价格。", source:"国家统计局", prev:"CPI +0.1% / PPI -2.3%", exp:"CPI +0.1% / PPI -2.1%", actual:"—", unit:"", assets:["A股","国债","人民币"] },
+  { id:107, day:9, time:"10:00", title:"中国6月进出口数据", titleEn:"Trade Balance", flag:"🇨🇳", region:"cn", cat:"macro", imp:"mid", desc:"海关总署发布的以美元计价的出口、进口同比增速及贸易顺差。出口反映外需强弱。", source:"海关总署", prev:"出口+5.0% / 进口-2.0%", exp:"出口+4.5% / 进口-1.5%", actual:"—", unit:"", assets:["A股","人民币"] },
+  { id:108, day:10, time:"20:30", title:"美国6月CPI", titleEn:"US CPI", flag:"🇺🇸", region:"us", cat:"macro", imp:"high", desc:"美国劳工统计局发布的消费者价格指数，含核心CPI。美联储2%通胀目标的核心观测指标，直接影响降息时点判断。", source:"BLS", prev:"CPI +2.6% / 核心 +3.1%", exp:"CPI +2.5% / 核心 +3.0%", actual:"—", unit:"", assets:["美元","美股","黄金","美债","A股北向"] },
+  { id:109, day:14, time:"20:30", title:"美国6月PPI", titleEn:"US PPI", flag:"🇺🇸", region:"us", cat:"macro", imp:"mid", desc:"美国生产者价格指数，CPI的先行指标。", source:"BLS", prev:"+0.3%", exp:"+0.2%", actual:"—", unit:"", assets:["美元","美股"] },
+  { id:110, day:15, time:"09:20", title:"中国7月MLF操作", titleEn:"MLF Operation", flag:"🇨🇳", region:"cn", cat:"monetary", imp:"high", desc:"央行中期借贷便利操作，关注投放量及利率是否调整。MLF利率是LPR的锚，调降即释放降息信号。", source:"中国人民银行", prev:"利率2.0%", exp:"—", actual:"—", unit:"", assets:["A股","国债","人民币"] },
+  { id:111, day:15, time:"10:00", title:"中国二季度GDP / 6月经济数据", titleEn:"Q2 GDP & June Activity Data", flag:"🇨🇳", region:"cn", cat:"macro", imp:"high", desc:"国家统计局发布二季度GDP、6月工业增加值、固定资产投资、社会消费品零售总额。全年最重要的经济数据之一。", source:"国家统计局", prev:"GDP +5.1% / 工业+5.4% / 社零+3.0%", exp:"GDP +5.0%", actual:"—", unit:"", assets:["A股","港股","人民币"] },
+  { id:112, day:15, time:"20:30", title:"美国6月零售销售", titleEn:"Retail Sales", flag:"🇺🇸", region:"us", cat:"macro", imp:"mid", desc:"美国普查局发布的零售销售数据，占美国GDP约70%的消费支出直接观测指标。", source:"美国普查局", prev:"+0.2%", exp:"+0.1%", actual:"—", unit:"", assets:["美元","美股"] },
+  { id:113, day:16, time:"—", title:"中国6月社融 / M2", titleEn:"TSF & M2", flag:"🇨🇳", region:"cn", cat:"macro", imp:"high", desc:"央行发布社会融资规模增量及M2同比。社融反映实体经济融资需求，M2反映货币供应。", source:"中国人民银行", prev:"社融2.34万亿 / M2 +7.1%", exp:"—", actual:"—", unit:"", assets:["A股","国债","人民币"] },
+  { id:114, day:17, time:"02:00", title:"美联储6月FOMC会议纪要", titleEn:"FOMC Minutes", flag:"🇺🇸", region:"us", cat:"monetary", imp:"mid", desc:"美联储6月议息会议的详细纪要，揭示委员对通胀、就业和未来利率路径的分歧。", source:"美联储", assets:["美元","美股","美债"] },
+  { id:115, day:20, time:"09:15", title:"中国7月LPR报价", titleEn:"LPR Quote", flag:"🇨🇳", region:"cn", cat:"monetary", imp:"high", desc:"全国银行间同业拆借中心公布的贷款市场报价利率。1年期影响企业贷款，5年期是房贷利率基准。", source:"全国银行间同业拆借中心", prev:"1年期 3.10% / 5年期 3.60%", exp:"—", actual:"—", unit:"", assets:["A股","地产股","国债"] },
+  { id:116, day:22, time:"—", title:"欧元区7月利率决议", titleEn:"ECB Rate Decision", flag:"🇪🇺", region:"eu", cat:"monetary", imp:"high", desc:"欧洲央行公布利率决议，随后行长拉加德召开新闻发布会。影响欧元汇率与全球流动性预期。", source:"ECB", prev:"存款利率 3.00%", exp:"—", actual:"—", unit:"", assets:["欧元","欧股","美元"] },
+  { id:117, day:23, time:"21:30", title:"美国当周初请失业金", titleEn:"Initial Jobless Claims", flag:"🇺🇸", region:"us", cat:"macro", imp:"low", desc:"劳工部每周发布的失业金申领数据。", source:"DOL", prev:"22.0万", exp:"22.5万", actual:"—", unit:"万人", assets:["美元"] },
+  { id:118, day:28, time:"—", title:"MSCI指数季度调整生效", titleEn:"MSCI Quarterly Review", flag:"🇨🇳", region:"cn", cat:"index", imp:"mid", desc:"MSCI指数季度评审结果生效日，外资被动资金集中调仓。", source:"MSCI", assets:["A股","港股","外资流向"], cat_label:"指数调整" },
+  { id:119, day:29, time:"—", title:"苹果(AAPL)三季度财报", titleEn:"Apple Q3 Earnings", flag:"🇺🇸", region:"us", cat:"earnings", imp:"high", desc:"苹果财报，iPhone销售与服务收入增长是核心看点，影响果链与消费电子板块。", source:"Apple", assets:["美股","A股果链","港股科技"], cat_label:"财报季" },
+  { id:120, day:30, time:"02:00", title:"美联储FOMC利率决议", titleEn:"FOMC Rate Decision", flag:"🇺🇸", region:"us", cat:"monetary", imp:"high", desc:"美联储联邦公开市场委员会公布联邦基金利率目标区间。同时发布经济预测摘要(SEP)与点阵图。02:30主席鲍威尔召开新闻发布会。", source:"美联储", prev:"4.50%-4.75%", exp:"—", actual:"—", unit:"", assets:["美元","美股","黄金","美债","A股北向"], cat_label:"含点阵图" },
+  { id:121, day:30, time:"09:00", title:"中国7月官方制造业PMI", titleEn:"Official Manufacturing PMI", flag:"🇨🇳", region:"cn", cat:"macro", imp:"high", desc:"国家统计局与物流采购联合会发布的制造业PMI。50为荣枯线，反映大型制造业企业景气度。", source:"国家统计局", prev:"50.0", exp:"49.9", actual:"—", unit:"", assets:["A股","港股","人民币"] },
+  { id:122, day:31, time:"20:30", title:"美国6月PCE物价指数", titleEn:"PCE Price Index", flag:"🇺🇸", region:"us", cat:"macro", imp:"high", desc:"美联储最青睐的通胀指标——个人消费支出(PCE)物价指数，含核心PCE。是美联储2%目标的官方衡量标准。", source:"BEA", prev:"PCE +2.3% / 核心 +2.7%", exp:"PCE +2.2% / 核心 +2.6%", actual:"—", unit:"", assets:["美元","美股","黄金","美债"] },
+  { id:123, day:31, time:"—", title:"中国7月财新制造业PMI", titleEn:"Caixin Manufacturing PMI", flag:"🇨🇳", region:"cn", cat:"macro", imp:"mid", desc:"财新中国制造业PMI，反映中小制造业企业景气度，与官方PMI形成互补。", source:"财新/S&P Global", prev:"50.3", exp:"50.2", actual:"—", unit:"", assets:["A股","港股"] },
+  { id:124, day:15, time:"美股盘后", title:"台积电(TSM)二季度财报", titleEn:"TSMC Q2 Earnings", flag:"🇺🇸", region:"us", cat:"earnings", imp:"high", desc:"全球最大芯片代工厂财报，半导体行业景气度风向标，影响AI产业链。", source:"台积电", assets:["美股半导体","A股半导体","港股科技"], cat_label:"财报季" },
+  { id:125, day:22, time:"美股盘后", title:"特斯拉(TSLA)二季度财报", titleEn:"Tesla Q2 Earnings", flag:"🇺🇸", region:"us", cat:"earnings", imp:"high", desc:"特斯拉财报与交付量数据，影响新能源车产业链。", source:"Tesla", assets:["美股","新能源车板块"], cat_label:"财报季" },
+  { id:126, day:30, time:"美股盘后", title:"微软(MSFT) / Meta(META) 财报", titleEn:"MSFT & META Earnings", flag:"🇺🇸", region:"us", cat:"earnings", imp:"high", desc:"微软与Meta同日发布财报，AI资本开支与云业务增长是核心看点。", source:"微软 / Meta", assets:["美股科技","AI产业链"], cat_label:"财报季" },
+  { id:127, day:10, time:"09:30", title:"某半导体公司新股申购", titleEn:"IPO Subscription", flag:"🇨🇳", region:"cn", cat:"ipo", imp:"mid", desc:"拟上市公司网上/网下申购日，申购资金将冻结。", source:"交易所", assets:["A股"] },
+  { id:128, day:18, time:"—", title:"某医药公司限售股解禁", titleEn:"Lock-up Expiry", flag:"🇨🇳", region:"cn", cat:"corporate", imp:"mid", desc:"首发原股东限售股解禁，解禁规模约35亿元，关注股东减持意愿。", source:"交易所公告", assets:["A股个股"], cat_label:"解禁" },
+];
+
+// 月份/年份标记：1月事件(month=0)，7月事件(month=6)
+EVENTS.forEach(e => {
+  if (e.id >= 100) { e.month = 6; e.year = 2026; }  // 7月
+  else { e.month = 0; e.year = 2026; }               // 1月
+});
+
+const CAT_LABELS = {
+  macro:"宏观经济", monetary:"央行政策", meeting:"重要会议", earnings:"财报",
+  ipo:"新股申购", corporate:"公司事件", index:"指数调整"
+};
+
+const REGION_LABELS = { cn:"中国", us:"美国", eu:"欧元区", jp:"日本", global:"全球" };
+
+// ===== State =====
+// 用真实今天初始化，默认显示当天数据
+let today0 = new Date();
+let currentDate = new Date(today0);          // 选中日 = 今天
+let viewDate = new Date(today0.getFullYear(), today0.getMonth(), 1);  // 查看月 = 今天所在月
+let filters = { imp: ["high","mid","low"], region: ["cn","us","eu","jp","global"], cat: ["macro","monetary","meeting","earnings","ipo","corporate","index"] };
+
+// ===== Helpers =====
+const MONTHS_CN = ["1月","2月","3月","4月","5月","6月","7月","8月","9月","10月","11月","12月"];
+const WEEKDAYS_CN = ["周日","周一","周二","周三","周四","周五","周六"];
+
+function getFilteredEvents() {
+  const y = viewDate.getFullYear();
+  const m = viewDate.getMonth();
+  return EVENTS.filter(e =>
+    filters.imp.includes(e.imp) &&
+    filters.region.includes(e.region) &&
+    filters.cat.includes(e.cat) &&
+    e.year === y && e.month === m
+  );
+}
+
+function getEventsByDay(day) {
+  return getFilteredEvents().filter(e => e.day === day).sort((a,b) => {
+    const ta = a.time.replace(/[^0-9:]/g,"").split(":")[0] || "99";
+    const tb = b.time.replace(/[^0-9:]/g,"").split(":")[0] || "99";
+    return (ta==="") - (tb==="") || ta.localeCompare(tb);
+  });
+}
+
+// ===== Render Calendar =====
+function renderCalendar() {
+  const year = viewDate.getFullYear();
+  const month = viewDate.getMonth();
+  document.getElementById("monthName").textContent = MONTHS_CN[month];
+  document.getElementById("yearName").textContent = year;
+
+  const firstDay = new Date(year, month, 1);
+  let startWeekday = firstDay.getDay(); // 0=Sun
+  if (startWeekday === 0) startWeekday = 7; // make Monday=0
+  startWeekday -= 1;
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  const prevMonthDays = new Date(year, month, 0).getDate();
+
+  const calBody = document.getElementById("calBody");
+  calBody.innerHTML = "";
+
+  const today = new Date();
+
+  // Build 6 weeks (42 cells)
+  for (let i = 0; i < 42; i++) {
+    const cell = document.createElement("div");
+    cell.className = "cal-day";
+
+    let dayNum, out = false;
+    if (i < startWeekday) {
+      dayNum = prevMonthDays - startWeekday + i + 1;
+      out = true;
+    } else if (i >= startWeekday + daysInMonth) {
+      dayNum = i - startWeekday - daysInMonth + 1;
+      out = true;
+    } else {
+      dayNum = i - startWeekday + 1;
+    }
+
+    if (out) cell.classList.add("out");
+    const weekday = (i % 7); // 0=Mon
+    if (weekday >= 5) cell.classList.add("we");
+
+    // Today highlight (用真实今天，仅当查看的月份包含今天时高亮)
+    if (!out && year === today.getFullYear() && month === today.getMonth() && dayNum === today.getDate()) {
+      cell.classList.add("today");
+    }
+    // Selected
+    if (!out && year === currentDate.getFullYear() && month === currentDate.getMonth() && dayNum === currentDate.getDate()) {
+      cell.classList.add("selected");
+    }
+
+    const numEl = document.createElement("div");
+    numEl.className = "day-num";
+    numEl.textContent = dayNum;
+    cell.appendChild(numEl);
+
+    if (!out) {
+      const dayEvents = getEventsByDay(dayNum);
+      dayEvents.slice(0, 4).forEach(ev => {
+        const evEl = document.createElement("div");
+        evEl.className = `ev ev-${ev.imp} ev-${ev.region}`;
+        const timeStr = ev.time.match(/\d{2}:\d{2}/) ? ev.time.match(/\d{2}:\d{2}/)[0] : (ev.time.length > 6 ? "" : ev.time);
+        evEl.innerHTML = `${timeStr ? `<span class="ev-time">${timeStr}</span>` : ""}<span class="ev-title">${ev.flag} ${ev.title.replace(/^中国|^美国|^德国/, "")}</span>`;
+        evEl.onclick = (e) => { e.stopPropagation(); selectDay(dayNum); };
+        cell.appendChild(evEl);
+      });
+      if (dayEvents.length > 4) {
+        const more = document.createElement("div");
+        more.className = "ev-more";
+        more.textContent = `+${dayEvents.length - 4} 更多`;
+        cell.appendChild(more);
+      }
+      if (dayEvents.some(e => e.holiday)) {
+        const hm = document.createElement("div");
+        hm.className = "holiday-mark";
+        hm.textContent = "休";
+        cell.appendChild(hm);
+      }
+      cell.onclick = () => selectDay(dayNum);
+    }
+
+    calBody.appendChild(cell);
+  }
+
+  renderStats();
+}
+
+// ===== Render Stats =====
+function renderStats() {
+  const all = getFilteredEvents();
+  const high = all.filter(e => e.imp === "high");
+  const cn = all.filter(e => e.region === "cn");
+  const intl = all.filter(e => e.region !== "cn");
+
+  document.getElementById("statStrip").innerHTML = `
+    <div class="stat-card">
+      <div class="stat-icon s-total">📊</div>
+      <div class="stat-info"><div class="stat-num">${all.length}</div><div class="stat-label">本月事件总数</div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon s-high">🔴</div>
+      <div class="stat-info"><div class="stat-num">${high.length}</div><div class="stat-label">高影响事件</div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon s-cn">🇨🇳</div>
+      <div class="stat-info"><div class="stat-num">${cn.length}</div><div class="stat-label">国内事件</div></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon s-intl">🌍</div>
+      <div class="stat-info"><div class="stat-num">${intl.length}</div><div class="stat-label">国际事件</div></div>
+    </div>
+  `;
+}
+
+// ===== Select Day & Render Detail =====
+function selectDay(day) {
+  currentDate = new Date(viewDate.getFullYear(), viewDate.getMonth(), day);
+  renderCalendar();
+  renderDetail();
+}
+
+// 切月后校正选中日：若选中日不在当前查看月，则取该月1号或今天(若同月)
+function syncCurrentDateToView() {
+  const vy = viewDate.getFullYear(), vm = viewDate.getMonth();
+  if (currentDate.getFullYear() !== vy || currentDate.getMonth() !== vm) {
+    const t = new Date();
+    if (vy === t.getFullYear() && vm === t.getMonth()) {
+      currentDate = new Date(t);
+    } else {
+      currentDate = new Date(vy, vm, 1);
+    }
+  }
+}
+
+function renderDetail() {
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth();
+  const weekday = currentDate.getDay();
+  const events = getEventsByDay(day);
+
+  document.getElementById("dpDay").textContent = day;
+  document.getElementById("dpMonth").textContent = `${MONTHS_CN[month]} · ${WEEKDAYS_CN[weekday]}`;
+  document.getElementById("dpWeekday").textContent = "";
+
+  const highCount = events.filter(e => e.imp === "high").length;
+  document.getElementById("dpSummary").innerHTML = `当日共 <b>${events.length}</b> 个事件，其中高影响 <b>${highCount}</b> 个`;
+
+  const body = document.getElementById("dpBody");
+  if (events.length === 0) {
+    body.innerHTML = `<div class="dp-empty"><div class="icon">📭</div><div>当日无匹配事件</div><div style="font-size:12px;margin-top:6px;">尝试调整筛选条件</div></div>`;
+    return;
+  }
+
+  body.innerHTML = events.map(ev => {
+    const vals = (ev.prev || ev.exp || ev.actual) ? `
+      <div class="ec-values">
+        ${ev.prev ? `<div class="ec-val"><div class="lbl">前值</div><div class="num">${ev.prev}</div></div>` : ""}
+        ${ev.exp ? `<div class="ec-val"><div class="lbl">预期</div><div class="num">${ev.exp}</div></div>` : ""}
+        ${ev.actual ? `<div class="ec-val"><div class="lbl">实际</div><div class="num ${ev.surprise || ""}">${ev.actual}</div></div>` : `<div class="ec-val"><div class="lbl">实际</div><div class="num" style="color:var(--text-light)">待发布</div></div>`}
+      </div>` : "";
+
+    const surprise = ev.surprise ? `<div class="ec-surprise ${ev.surprise}">${ev.surprise === "pos" ? "⚠️" : "✅"} ${ev.surpriseText || (ev.surprise === "pos" ? "超预期" : "不及预期")}</div>` : "";
+
+    const assets = ev.assets ? `
+      <div class="ec-assets">
+        <span class="lbl">关联资产：</span>
+        ${ev.assets.map(a => `<span class="asset-tag">${a}</span>`).join("")}
+      </div>` : "";
+
+    return `
+      <div class="event-card ${ev.imp}">
+        <div class="ec-top">
+          <span class="ec-time">${ev.time}</span>
+          <span class="ec-flag">${ev.flag}</span>
+          <span class="ec-badge ${ev.imp}">${ev.imp === "high" ? "高影响" : ev.imp === "mid" ? "中影响" : "低影响"}</span>
+          <span class="ec-cat">${ev.cat_label || CAT_LABELS[ev.cat] || ""}</span>
+        </div>
+        <div class="ec-title">${ev.title}</div>
+        ${ev.titleEn ? `<div style="font-size:11px;color:var(--text-light);margin-bottom:6px;">${ev.titleEn}</div>` : ""}
+        <div class="ec-desc">${ev.desc}</div>
+        ${vals}
+        ${surprise}
+        ${assets}
+        <div class="ec-source">📌 来源：${ev.source}</div>
+      </div>
+    `;
+  }).join("");
+}
+
+// ===== Render List View =====
+function renderListView() {
+  const all = getFilteredEvents();
+  const container = document.getElementById("listView");
+
+  if (all.length === 0) {
+    container.innerHTML = `<div class="lv-empty"><div class="icon">📭</div><div>无匹配事件</div><div style="font-size:12px;margin-top:6px;">尝试调整筛选条件</div></div>`;
+    return;
+  }
+
+  // Group by day, sorted
+  const byDay = {};
+  all.forEach(ev => {
+    if (!byDay[ev.day]) byDay[ev.day] = [];
+    byDay[ev.day].push(ev);
+  });
+  const days = Object.keys(byDay).map(Number).sort((a, b) => a - b);
+
+  const weekdayFull = ["周日","周一","周二","周三","周四","周五","周六"];
+  const month = viewDate.getMonth();
+
+  container.innerHTML = days.map(day => {
+    const events = byDay[day].sort((a, b) => {
+      const ta = a.time.replace(/[^0-9:]/g,"").split(":")[0] || "99";
+      const tb = b.time.replace(/[^0-9:]/g,"").split(":")[0] || "99";
+      return (ta==="") - (tb==="") || ta.localeCompare(tb);
+    });
+    const highCount = events.filter(e => e.imp === "high").length;
+    const dateObj = new Date(viewDate.getFullYear(), month, day);
+    const wd = dateObj.getDay();
+    const isToday = (function() {
+      const t = new Date();
+      return viewDate.getFullYear() === t.getFullYear() && month === t.getMonth() && day === t.getDate();
+    })();
+    const isWeekend = wd === 0 || wd === 6;
+
+    const rows = events.map(ev => {
+      const prevVal = ev.prev ? `<div class="lv-val"><span class="lbl">前值</span><span class="num">${ev.prev}</span></div>` : "";
+      const expVal = ev.exp ? `<div class="lv-val"><span class="lbl">预期</span><span class="num">${ev.exp}</span></div>` : "";
+      const actVal = ev.actual && ev.actual !== "—"
+        ? `<div class="lv-val"><span class="lbl">实际</span><span class="num ${ev.surprise || ""}">${ev.actual}</span></div>`
+        : `<div class="lv-val"><span class="lbl">实际</span><span class="num pending">待发布</span></div>`;
+      const surprise = ev.surprise ? `<span class="lv-surprise ${ev.surprise}">${ev.surprise === "pos" ? "↑超预期" : "↓不及预期"}</span>` : "";
+
+      return `
+        <div class="lv-event-row ${ev.imp}" onclick="selectDay(${day})">
+          <div class="lv-ev-time">${ev.time}</div>
+          <div class="lv-ev-imp"><span class="imp-dot ${ev.imp}"></span></div>
+          <div class="lv-ev-main">
+            <div class="lv-ev-title"><span class="lv-ev-flag">${ev.flag}</span>${ev.title}${surprise}</div>
+            <div class="lv-ev-desc">${ev.desc}</div>
+          </div>
+          <div class="lv-ev-vals">${prevVal}${expVal}${actVal}</div>
+          <div class="lv-ev-tags">
+            <span class="lv-tag cat">${ev.cat_label || CAT_LABELS[ev.cat] || ""}</span>
+            ${ev.assets ? ev.assets.slice(0,2).map(a => `<span class="lv-tag">${a}</span>`).join("") : ""}
+            ${ev.assets && ev.assets.length > 2 ? `<span class="lv-tag">+${ev.assets.length - 2}</span>` : ""}
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    return `
+      <div class="lv-group" id="lvGroup-${day}">
+        <div class="lv-group-header" onclick="toggleListGroup(${day})">
+          <div class="lv-date-box ${isToday ? "today" : ""}">
+            <span class="d">${day}</span>
+            <span class="m">${MONTHS_CN[month]}</span>
+          </div>
+          <div class="lv-date-info">
+            <span class="full">${viewDate.getFullYear()}年${MONTHS_CN[month]}${day}日</span>
+            <span class="weekday ${isWeekend ? "we" : ""}">${weekdayFull[wd]}</span>
+          </div>
+          <div class="lv-group-count">
+            共 ${events.length} 个事件
+            ${highCount > 0 ? `<span class="lv-count-badge high">🔴 ${highCount} 高影响</span>` : ""}
+          </div>
+          <span class="lv-toggle">▾</span>
+        </div>
+        <div class="lv-group-body">${rows}</div>
+      </div>
+    `;
+  }).join("");
+}
+
+function toggleListGroup(day) {
+  const g = document.getElementById("lvGroup-" + day);
+  if (g) g.classList.toggle("collapsed");
+}
+
+// ===== View Switch =====
+let currentView = "calendar";
+function switchView(view) {
+  currentView = view;
+  const calView = document.getElementById("calView");
+  const listView = document.getElementById("listView");
+  const detailPanel = document.getElementById("detailPanel");
+  const calLayout = document.getElementById("calLayout");
+  const legendTip = document.getElementById("legendTip");
+  const btnCal = document.getElementById("btnCalView");
+  const btnList = document.getElementById("btnListView");
+
+  if (view === "list") {
+    calView.classList.add("hidden");
+    listView.classList.add("active");
+    detailPanel.classList.add("hidden");
+    calLayout.classList.add("list-mode");
+    btnCal.classList.remove("active");
+    btnList.classList.add("active");
+    legendTip.textContent = "💡 点击事件行可查看完整详情 · 点击分组标题可折叠/展开";
+    renderListView();
+  } else {
+    calView.classList.remove("hidden");
+    listView.classList.remove("active");
+    detailPanel.classList.remove("hidden");
+    calLayout.classList.remove("list-mode");
+    btnCal.classList.add("active");
+    btnList.classList.remove("active");
+    legendTip.textContent = "💡 点击日期查看当日事件详情 · 点击事件查看完整信息";
+    renderCalendar();
+  }
+}
+
+// ===== Filter Logic =====
+document.querySelectorAll(".chip").forEach(chip => {
+  chip.addEventListener("click", () => {
+    const filter = chip.dataset.filter;
+    const val = chip.dataset.val;
+    const idx = filters[filter].indexOf(val);
+    if (idx > -1) {
+      filters[filter].splice(idx, 1);
+      chip.classList.remove("active");
+    } else {
+      filters[filter].push(val);
+      chip.classList.add("active");
+    }
+    renderCalendar();
+    if (currentView === "list") renderListView();
+    renderDetail();
+  });
+});
+
+// ===== View Switch Buttons =====
+document.getElementById("btnCalView").addEventListener("click", () => switchView("calendar"));
+document.getElementById("btnListView").addEventListener("click", () => switchView("list"));
+
+// ===== Month Navigation =====
+document.getElementById("prevMonth").addEventListener("click", () => {
+  viewDate.setMonth(viewDate.getMonth() - 1);
+  syncCurrentDateToView();
+  renderCalendar();
+  if (currentView === "list") renderListView();
+  renderDetail();
+});
+document.getElementById("nextMonth").addEventListener("click", () => {
+  viewDate.setMonth(viewDate.getMonth() + 1);
+  syncCurrentDateToView();
+  renderCalendar();
+  if (currentView === "list") renderListView();
+  renderDetail();
+});
+document.getElementById("todayBtn").addEventListener("click", () => {
+  const today = new Date();
+  viewDate = new Date(today.getFullYear(), today.getMonth(), 1);
+  currentDate = new Date(today);
+  renderCalendar();
+  if (currentView === "list") renderListView();
+  renderDetail();
+});
+
+// ===== Init =====
+renderCalendar();
+renderDetail();
+</script>
+</body>
+</html>

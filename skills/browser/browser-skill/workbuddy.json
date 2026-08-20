@@ -1,0 +1,6 @@
+{
+  "display_name": "BrowserSkill",
+  "display_name_en": "BrowserSkill",
+  "description_zh": "BrowserSkill 是腾讯开源的一个智能浏览器自动化工具，让 WorkBuddy 能够像人一样操作网页——自动填表、点击、翻页、截图，完成任何需要浏览器的复杂任务。",
+  "description_en": "BrowserSkill is an open-source intelligent browser automation tool by Tencent that empowers WorkBuddy to interact with web pages like a human — auto-filling forms, clicking, scrolling, taking screenshots, and handling any complex browser-based task."
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "cybersecurity-skills-wrap",
+  "name": "Cybersecurity Skills 网络安全技能集",
+  "version": "1.0.0",
+  "installedAt": 1787229041284,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c5e5faab-b8e1-489d-a489-8b56ffc52c07.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c5e5faab-b8e1-489d-a489-8b56ffc52c07.png"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "alice-a-share-short-term-strategy-report",
+  "version": "1.0.3",
+  "description": "CLI: 调用万得 Alice Agent「A股短线策略报告」技能（A2A SSE），每日拉取涨停股、指数与行业数据，输出收盘综述、涨停板复盘与 AI 主线研判",
+  "type": "module",
+  "private": true,
+  "files": [
+    "SKILL.md",
+    "AGENT.md",
+    "package.json",
+    "_meta.json",
+    "scripts/"
+  ],
+  "scripts": {},
+  "bin": {
+    "alice-a-share-short-term-strategy-report": "./scripts/cli.mjs",
+    "aassr": "./scripts/cli.mjs"
+  }
+}

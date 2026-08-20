@@ -1,0 +1,12 @@
+{
+  "slug": "sbkj",
+  "name": "全国招标中标查询及企业分析【日更新30万数据】",
+  "version": "1.0.2",
+  "installedAt": 1787227483231,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png"
+}

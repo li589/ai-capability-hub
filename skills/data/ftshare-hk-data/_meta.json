@@ -1,0 +1,11 @@
+{
+  "owner": "shawn92",
+  "slug": "ftshare-hk-data",
+  "displayName": "Skills of HK-share data released by ft.tech.",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774441127852,
+    "commit": "https://github.com/openclaw/skills/commit/6ee8615dc795b429abd0f6fe212b2b5f069b2c3b"
+  },
+  "history": []
+}

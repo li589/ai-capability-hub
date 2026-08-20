@@ -1,0 +1,21 @@
+{
+  "name": "Flutter 开发",
+  "installedAt": 1785864395639,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081993476866048",
+  "examples_zh": [
+    "用 Riverpod 实现状态管理",
+    "帮我写一个 Flutter 底部导航栏",
+    "用 GoRouter 配置页面路由"
+  ],
+  "examples_en": [
+    "Implement state management with Riverpod",
+    "Build a bottom navigation bar in Flutter",
+    "Configure page routing with GoRouter"
+  ],
+  "description_zh": "Flutter 跨平台开发指南",
+  "description_en": "Flutter cross-platform dev guide (Riverpod, GoRouter)",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/flutter-dev.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/flutter-dev.svg"
+}

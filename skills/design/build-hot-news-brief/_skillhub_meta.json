@@ -1,0 +1,11 @@
+{
+  "name": "八爪鱼|热点快报",
+  "installedAt": 1787227604017,
+  "source": "marketplace",
+  "version": "1.4.4",
+  "skillId": "skill_2089292401779933184",
+  "description_zh": "输入公司、行业、产品、技术或商业主题，自动检索并筛选最近7天的公开新闻，直接在对话中推送1–3条简要总结及最多10条带来源、发布日期和原文链接的新闻。默认快速模式检索1批，适合关键词明确的主题；说“深度模式”“深度搜索”或“深搜”即可固定检索6批，适合行业、赛道等宽泛主题。支持新闻清单、决策快报、内容选题和综合模式；不足10条时按实际合格数量展示。",
+  "description_en": "Enter a company, industry, product, technology, or business topic to retrieve and filter relevant public news published within the last seven days. The Skill delivers 1–3 concise highlights and up to 10 verified news items directly in the conversation, each with its title, source, publication date, and original article link. Fast mode performs one search batch and is best for clear, specific keywords. Say “deep mode,” “deep search,” or “深搜” to run six fixed search batches for broader industries, sectors, or less specific topics. Output options include a news list, decision brief, content radar, or a combined brief. If fewer than 10 qualified items are found, only the verified results are shown.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24077250-00bd-4444-96f4-20c93799dce2/avatar/skill/au_863c69d6-7af.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24077250-00bd-4444-96f4-20c93799dce2/avatar/skill/au_863c69d6-7af.jpg"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "生涯测评",
+  "installedAt": 1787227728734,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089338317577322496",
+  "description_zh": "生成 10 道题的生涯方向测评，通过 6 选一答题方式分析用户在公考/央国企、自由职业、打工人、留学、保研/考研、躺平六大方向的倾向……",
+  "description_en": "Use when users mention career path assessment, college student life planning, or choices between public servant exam / central state-owned enterprises……",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,56 @@
+{
+  "name": "tavily",
+  "version": "0.4.0",
+  "description": "Search the web, extract page content, map sites, and crawl domains through Tavily's official remote MCP server.",
+  "i18n": {
+    "display_name": {
+      "en": "Tavily",
+      "zh-cn": "Tavily",
+      "ja": "Tavily"
+    },
+    "description": {
+      "en": "Search the web, extract page content, map sites, and crawl domains through Tavily's official remote MCP server.",
+      "zh-cn": "通过 Tavily 官方远程 MCP 服务搜索网页、提取页面内容、生成站点地图并抓取网站。",
+      "ja": "Tavily 公式リモート MCP サーバーを通じて、ウェブ検索、ページ内容の抽出、サイトマップ作成、サイトクロールを行います。"
+    }
+  },
+  "author": {
+    "name": "Tavily",
+    "url": "https://www.tavily.com"
+  },
+  "homepage": "https://www.tavily.com",
+  "repository": "https://github.com/tavily-ai/tavily-mcp",
+  "license": "MIT",
+  "keywords": [
+    "tavily",
+    "web-search",
+    "web-extraction",
+    "crawl",
+    "site-map",
+    "research",
+    "mcp"
+  ],
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "Tavily",
+    "shortDescription": "Search, extract, map, and crawl the web",
+    "longDescription": "Use Tavily's official remote MCP server to perform real-time web searches, extract clean content from URLs, map website structure, and crawl domains for research and analysis.",
+    "developerName": "Tavily",
+    "category": "Search & Discovery",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "websiteURL": "https://www.tavily.com",
+    "defaultPrompt": [
+      "Search the web for current information about a topic.",
+      "Extract the main content from a webpage.",
+      "Map or crawl a website to find relevant pages."
+    ],
+    "brandColor": "#1F1E1E",
+    "logo": "./assets/tavily.svg",
+    "composerIcon": "./assets/tavily.svg",
+    "screenshots": []
+  }
+}

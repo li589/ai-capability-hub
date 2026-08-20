@@ -1,0 +1,11 @@
+{
+  "owner": "lijie298",
+  "slug": "smart-reporter",
+  "displayName": "智能报告生成器",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773645499448,
+    "commit": "https://github.com/openclaw/skills/commit/f19fa02b2c3313ba7c24ef14f6204005afc87ff0"
+  },
+  "history": []
+}

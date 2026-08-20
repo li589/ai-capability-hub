@@ -1,0 +1,10 @@
+{
+  "name": "MES 智能问数助手",
+  "installedAt": 1787227785645,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089990240883851264",
+  "description_zh": "用自然语言查询 MES 生产数据（产量/稼动/故障/质量/工单/不良等），支持自动对比、归因推理与多轮追问。",
+  "description_en": "Query MES production data (output, OEE, downtime, quality, work orders, defects) in natural language, with comparison, attribution analysis and follow-up Q&A.",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "增值税税负分析",
+  "installedAt": 1787227505011,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2089229302657638400",
+  "description_zh": "分析企业增值税税负、数据勾稽关系和期间波动原因。",
+  "description_en": "Calculates and explains VAT burden metrics from filing and operating data, including reconciliation checks and period-over-period diagnostics.",
+  "iconSource": "letter:auto"
+}

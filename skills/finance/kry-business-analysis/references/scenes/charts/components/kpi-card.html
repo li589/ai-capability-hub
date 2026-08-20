@@ -1,0 +1,15 @@
+<!-- 组件: KPI 指标卡片 -->
+<!-- 用法: 复制整个 section 到 container 内，替换标题和卡片数据 -->
+<div class="section">
+  <div class="section-title"><!-- TITLE: 板块标题，如 "📊 核心经营指标" --></div>
+  <div class="section-sub"><!-- SUB: 副标题，如 "环比前日数据" --></div>
+  <div class="kpi-grid">
+    <!-- 重复以下结构，每个指标一个 kpi-card -->
+    <div class="kpi-card">
+      <div class="kpi-label"><!-- 指标名 --></div>
+      <div class="kpi-value"><!-- 数值 --><span style="font-size:13px;color:#6b7280;margin-left:4px"><!-- 单位 --></span></div>
+      <div class="kpi-delta"><span class="delta up"><!-- ↑/↓/→ 百分比% --></span></div>
+    </div>
+    <!-- delta class: up=涨(绿) / down=跌(红) / flat=持平(灰) -->
+  </div>
+</div>

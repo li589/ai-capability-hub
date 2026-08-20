@@ -1,0 +1,115 @@
+{
+  "aicoding.quest.workspaces": {
+    "schemaVersion": 1,
+    "folders": [
+      {
+        "path": "d:/temp_desktop/Proj/Comprehensive Geographic Data Analysis system",
+        "label": "Comprehensive Geographic Data Analysis system"
+      },
+      {
+        "path": "__virtual__",
+        "label": "Chats"
+      }
+    ],
+    "tasksByFolder": {
+      "d:/temp_desktop/Proj/Comprehensive Geographic Data Analysis system": [
+        {
+          "id": "task-e9c654207e4e48fc93a1",
+          "name": "项目结构理解",
+          "status": "Completed",
+          "updatedAtTimestamp": 1785178792959,
+          "createdAt": 1785169492987,
+          "executionSessionId": "task-e9c654207e4e48fc93a1.session.execution",
+          "query": "项目结构理解",
+          "filePath": "d:/temp_desktop/Proj/Comprehensive Geographic Data Analysis system"
+        }
+      ]
+    },
+    "updatedAt": "2026-07-28T02:09:31.991Z"
+  },
+  "aicoding.quest.sessions": {
+    "schemaVersion": 1,
+    "sessions": [
+      {
+        "taskId": "task-e9c654207e4e48fc93a1",
+        "sessionId": "task-e9c654207e4e48fc93a1.session.execution",
+        "title": "项目结构理解",
+        "status": "Completed",
+        "updatedAt": "2026-07-27T18:59:52.959Z",
+        "sessionFile": "quest:task-e9c654207e4e48fc93a1",
+        "promptPreview": "项目结构理解",
+        "messages": 0
+      }
+    ]
+  },
+  "aicoding.quest.kanban": {
+    "schemaVersion": 1,
+    "updatedAt": "2026-07-27T18:59:52.959Z",
+    "columns": {
+      "running": [],
+      "blocked": [],
+      "ready": [
+        {
+          "id": "task-e9c654207e4e48fc93a1",
+          "taskId": "task-e9c654207e4e48fc93a1",
+          "sessionId": "task-e9c654207e4e48fc93a1.session.execution",
+          "title": "项目结构理解",
+          "status": "Completed",
+          "workspace": "Comprehensive Geographic Data Analysis system",
+          "projectPath": "d:/temp_desktop/Proj/Comprehensive Geographic Data Analysis system",
+          "updatedAt": "2026-07-27T18:59:52.959Z",
+          "sessionFile": "quest:task-e9c654207e4e48fc93a1",
+          "promptPreview": "项目结构理解",
+          "source": "quest",
+          "messages": 0
+        }
+      ]
+    },
+    "taskReport": {
+      "total": 1,
+      "running": 0,
+      "blocked": 0,
+      "completed": 1,
+      "stopped": 0,
+      "pending": 0,
+      "last24h": 1,
+      "last7d": 1
+    },
+    "totalSessions": 1
+  },
+  "kanban.v1": {
+    "schemaVersion": 1,
+    "updatedAt": "2026-07-27T18:59:52.959Z",
+    "columns": {
+      "running": [],
+      "blocked": [],
+      "ready": [
+        {
+          "id": "task-e9c654207e4e48fc93a1",
+          "taskId": "task-e9c654207e4e48fc93a1",
+          "sessionId": "task-e9c654207e4e48fc93a1.session.execution",
+          "title": "项目结构理解",
+          "status": "Completed",
+          "workspace": "Comprehensive Geographic Data Analysis system",
+          "projectPath": "d:/temp_desktop/Proj/Comprehensive Geographic Data Analysis system",
+          "updatedAt": "2026-07-27T18:59:52.959Z",
+          "sessionFile": "quest:task-e9c654207e4e48fc93a1",
+          "promptPreview": "项目结构理解",
+          "source": "quest",
+          "messages": 0
+        }
+      ]
+    },
+    "taskReport": {
+      "total": 1,
+      "running": 0,
+      "blocked": 0,
+      "completed": 1,
+      "stopped": 0,
+      "pending": 0,
+      "last24h": 1,
+      "last7d": 1
+    },
+    "totalSessions": 1
+  }
+}

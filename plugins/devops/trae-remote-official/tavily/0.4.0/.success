@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:tavily",
+  "registry": "trae-remote-official",
+  "plugin_name": "tavily",
+  "version": "0.4.0",
+  "marketplace_plugin_id": "90ab5007-e1a3-4226-91f7-b17823aa320b",
+  "remote_installed_plugin_id": "PTNAXA9M6Z8GV1",
+  "checksum": "2dea3f44a9bd0bc6ab015aff6c79f24d0116000836cb4d471df445499665b472",
+  "file_size": 5545,
+  "installed_at": 1787227201958
+}

@@ -1,0 +1,11 @@
+{
+  "name": "空间转录组重配准与重分析",
+  "installedAt": 1787228529384,
+  "source": "marketplace",
+  "version": "1.2.3",
+  "skillId": "skill_2089265549833854976",
+  "description_zh": "DCS Cloud WDL「SAW-ST-V8-realign」(v1.2.2) 流程说明与填参指南：基于手动校正图像/IPR 或 Lasso GeoJSON 重做空间配准与下游（Cellbin、聚类、报告）。用户提到 SAW-ST-V8-realign、realign、Stereo-seq 重配准、手动配准后重分析，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"SAW-ST-V8-realign\" (v1.2.2) parameter guide: rerun spatial registration and downstream analysis (Cellbin, clustering, report) from manually corrected images/IPR or Lasso GeoJSON. Use when the user mentions SAW-ST-V8-realign, realign, Stereo-seq re-registration, manual-alignment reanalysis, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_2f8cf7ea-ff2.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_2f8cf7ea-ff2.png"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "cgxxxxxxxxxxxx",
+  "slug": "hk-financial-downloader",
+  "displayName": "Hk Financial Downloader",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1775994168879,
+    "commit": "https://github.com/openclaw/skills/commit/6a80549104013a66efec1498142fc5a13ba1ec66"
+  },
+  "history": []
+}

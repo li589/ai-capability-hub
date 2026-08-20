@@ -1,0 +1,20 @@
+{
+  "name": "Perplexity 搜索",
+  "installedAt": 1785784737040,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082581570363392",
+  "examples_zh": [
+    "用 Perplexity 搜索一下最新的 AI 行业动态",
+    "帮我查一下这个技术问题的最新解决方案",
+    "搜索并总结一下这个话题的最新新闻"
+  ],
+  "examples_en": [
+    "Search for the latest AI industry news",
+    "Find the most recent solution to this technical problem",
+    "Search and summarize the latest news on this topic"
+  ],
+  "description_zh": "通过 Perplexity API 进行 AI 联网搜索，返回带引用来源的答案，支持批量查询",
+  "description_en": "AI-powered web search via Perplexity API with cited answers and batch query support",
+  "iconSource": "letter:auto"
+}

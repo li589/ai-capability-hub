@@ -1,0 +1,11 @@
+{
+  "name": "特殊学生支持 · 新转学生",
+  "installedAt": 1787227534290,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084941628576579584",
+  "description_zh": "为教师生成针对新转学生的多维支持方案：课堂支持 + 作业调整 + 家校沟通 + IEP 个别化辅导计划；严守不诊断、不暴露隐私的红线。触发关键词：新转学生、转学、跨地区、跨学制、跨语言、入学适应、特殊需要学生支持、个别化辅导计划、IEP。",
+  "description_en": "Generates multi-dimensional support plans for teachers targeting new transfer students: classroom support + homework adjustments + home-school communication + IEP individualized support plan; strictly upholds red lines of not diagnosing and not disclosing privacy. Trigger keywords: new transfer student, transfer, cross-region, cross-system, cross-language, school-entry adaptation, special-needs student support, individualized education plan, IEP.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_b6978b93-4d6.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_b6978b93-4d6.png"
+}

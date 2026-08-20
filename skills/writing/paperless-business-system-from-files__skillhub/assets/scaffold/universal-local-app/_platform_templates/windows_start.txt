@@ -1,0 +1,23 @@
+@echo off
+setlocal
+cd /d "%~dp0"
+if exist "dist\{{SYSTEM_NAME}}.exe" (
+  start "" "dist\{{SYSTEM_NAME}}.exe"
+  exit /b 0
+)
+if exist "portable_runtime\python.exe" (
+  "portable_runtime\python.exe" launcher.py
+  pause
+  exit /b %errorlevel%
+)
+if exist ".venv_windows\Scripts\python.exe" (
+  ".venv_windows\Scripts\python.exe" launcher.py
+  pause
+  exit /b %errorlevel%
+)
+where py >nul 2>nul && (py -3 launcher.py & pause & exit /b %errorlevel%)
+where python >nul 2>nul && (python launcher.py & pause & exit /b %errorlevel%)
+echo [PB101] 未找到可用 Python/EXE/便携运行时。
+echo 处理：安装 Python 3.10+，或使用已验证的 EXE/portable_runtime 完整包。
+pause
+exit /b 1

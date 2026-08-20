@@ -1,0 +1,10 @@
+{
+  "name": "Nano Banana Pro 营销图片",
+  "installedAt": 1787227711620,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087509835197865984",
+  "description_zh": "基于 Nano Banana Pro 营销图片 的 AI 图片生成与编辑器，固定调用 Nano Banana Pro 的营销图片裸接口能力。当用户需要 Nano Banana Pro、NanoBanana Pro、NanoBananaPro、香蕉 Pro、Gemini 图片、营销图片、营销视觉、活动KV、推广图片、促销图、Campaign视觉、AI图片、AIGC图片 时使用此 Skill。",
+  "description_en": "Nano Banana Pro Marketing Image capability via AI Hive open API. Direct access without manual model selection. Use when users explicitly need this image capability.",
+  "iconSource": "letter:auto"
+}

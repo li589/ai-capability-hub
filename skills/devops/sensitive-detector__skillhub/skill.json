@@ -1,0 +1,49 @@
+{
+    "name": "sensitive-detector",
+    "version": "2.0.1",
+    "description": "敏感信息检测与可逆脱敏工具 - 文本可逆脱敏（用户无感知），图片拒绝处理。强制执行，不可绕过。支持映射持久化。",
+    "author": "Agent Assistant",
+    "tags": ["安全", "隐私保护", "敏感信息", "可逆脱敏"],
+    "entry_point": "process_user_message",
+    "restore_point": "restore_ai_response",
+    "main": "sensitive_detector.py",
+    "auto_load": true,
+    "enforced": true,
+    "no_bypass": true,
+    "capabilities": {
+        "text_desensitization": {
+            "enabled": true,
+            "reversible": true,
+            "persistence": true,
+            "types": ["手机号", "身份证号", "银行卡号", "邮箱", "QQ号", "微信号", "车牌号", "IP地址"]
+        },
+        "image_detection": {
+            "enabled": true,
+            "action": "refuse",
+            "types": ["证件比例检测", "卡片识别"]
+        },
+        "bypass_detection": {
+            "enabled": true,
+            "action": "refuse"
+        },
+        "injection_detection": {
+            "enabled": true,
+            "action": "refuse_high_risk"
+        },
+        "dangerous_command_detection": {
+            "enabled": true,
+            "action": "refuse_high_risk"
+        }
+    },
+    "behavior": {
+        "text_sensitive": "reversible_desensitize",
+        "image_sensitive": "refuse",
+        "bypass_attempt": "refuse",
+        "allow_bypass": false,
+        "exceptions": []
+    },
+    "persistence": {
+        "enabled": true,
+        "mapping_file": "sensitive_mappings.json"
+    }
+}

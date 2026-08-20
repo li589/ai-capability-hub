@@ -1,0 +1,20 @@
+{
+  "name": "BrowserWing",
+  "installedAt": 1785784733799,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081542393798656",
+  "examples_zh": [
+    "用 BrowserWing HTTP API 打开我们的测试登录页，填写账号表单，点击提交，并返回登录后页面的可访问性快照。",
+    "导航到产品列表页，批量点击每个详情按钮，提取标题、价格和库存字段，并保存一张页面截图。",
+    "在浏览器会话中执行一段 JavaScript 读取动态渲染的表格数据，再把提取结果整理成 JSON。"
+  ],
+  "examples_en": [
+    "Use the BrowserWing HTTP API to open our test login page, fill the account form, submit it, and return the post-login accessibility snapshot.",
+    "Navigate to the product listing page, click each detail button in batch, extract title, price, and stock fields, and save a screenshot.",
+    "Run JavaScript inside the browser session to read a dynamically rendered table, then return the extracted rows as JSON."
+  ],
+  "description_zh": "BrowserWing HTTP API 浏览器自动化（导航、交互、数据提取）",
+  "description_en": "BrowserWing HTTP API browser automation: navigate, interact, extract data",
+  "iconSource": "letter:auto"
+}

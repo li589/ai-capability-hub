@@ -1,0 +1,46 @@
+{
+  "client_only_params": [],
+  "description": "修改表单中指定ID的一条记录",
+  "display_name": "修改单条数据",
+  "domain": "数据",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/app/entry/data/update",
+  "method": "POST",
+  "name": "jdy_update_data",
+  "params": {
+    "app_id": {
+      "description": "应用ID",
+      "type": "string"
+    },
+    "data": {
+      "description": "要修改的字段内容，格式：{\"_widget_xxx\":{\"value\":值}}。子表单行需含_id字段以保留原行。各字段类型的value格式：\n- text/textarea: 字符串，如 {\"value\":\"文本\"}\n- number: 数字，如 {\"value\":100}\n- datetime: ISO字符串，如 {\"value\":\"2026-01-01T10:00:00.000Z\"}\n- radiogroup/combo(单选): 字符串，如 {\"value\":\"选项一\"}\n- checkboxgroup/combocheck(多选): 数组，如 {\"value\":[\"选项一\",\"选项二\"]}\n- phone(电话): 对象，如 {\"value\":{\"phone\":\"13800138000\"}}\n- address(地址): 对象，如 {\"value\":{\"province\":\"省\",\"city\":\"市\",\"district\":\"区\",\"detail\":\"详细地址\"}}\n- location(定位): 对象含lnglatXY，如 {\"value\":{\"province\":\"省\",\"city\":\"市\",\"district\":\"区\",\"detail\":\"地址\",\"lnglatXY\":[经度,纬度]}}\n- user(成员单选): username字符串，如 {\"value\":\"username\"}\n- usergroup(成员多选): username数组，如 {\"value\":[\"user1\",\"user2\"]}\n- dept(部门单选): dept_no数字，如 {\"value\":12}\n- deptgroup(部门多选): dept_no数组，如 {\"value\":[12,13]}\n- image/upload(图片/附件): 文件key数组，如 {\"value\":[\"file-key-1\",\"file-key-2\"]}\n- subform(子表单): 数组，每行含子字段，如 {\"value\":[{\"_widget_child\":{\"value\":\"值\"}}]}",
+      "type": "object"
+    },
+    "data_id": {
+      "description": "要修改的数据记录ID（_id字段）",
+      "type": "string"
+    },
+    "entry_id": {
+      "description": "表单ID",
+      "type": "string"
+    },
+    "is_start_trigger": {
+      "default": false,
+      "description": "是否触发智能助手（默认false）",
+      "type": "boolean"
+    },
+    "transaction_id": {
+      "default": "",
+      "description": "含附件修改时必填，需与文件上传时使用的transaction_id一致",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "app_id",
+    "entry_id",
+    "data_id",
+    "data"
+  ],
+  "risk": "write",
+  "source": "简道云工具包.zip"
+}

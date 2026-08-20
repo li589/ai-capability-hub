@@ -1,0 +1,16 @@
+{
+  "name": "supabase_apply_migration",
+  "description": "This tool allow you to run migration SQL on remote Supabase, which is connected to the project.\nYou should always get Supabase project first to ensure the Supabase project is successfully connected to local the project. This tool is guaranteed to fail if the current project is not successfully connected to Supabase.\nYou should always create the SQL file first, then you will be able to apply it.\nThe SQL file MUST be created under the `supabase/migrations` folder. Avoid using any timestamps in the SQL file name or content.\n",
+  "arguments": {
+    "properties": {
+      "file_path": {
+        "description": "The SQL file path you need to apply, you MUST set file path to absolute path.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "file_path"
+    ],
+    "type": "object"
+  }
+}

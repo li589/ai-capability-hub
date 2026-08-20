@@ -1,0 +1,11 @@
+{
+  "name": "简道云API",
+  "installedAt": 1787228605769,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089688597004996608",
+  "description_zh": "简道云 API 工具包是一个本地技能，通过 39 个脚本入口直接调用简道云官方 API，涵盖应用/表单探查、数据增删改查、流程审批、通讯录和审计等能力。它强调安全：API Key 只从本地读取、写操作先预览需批准后执行，接口疑问一律查官方文档而非猜测。",
+  "description_en": "The Jiandaoyun API Toolkit is a local skill that calls Jiandaoyun's official API directly through 39 script entry points, covering app/form discovery, data CRUD, workflow approvals, contacts, and audit capabilities. It emphasizes safety: API keys are read only from local sources, write operations require preview and approval before execution, and any API uncertainties are resolved by consulting official documentation rather than guessing.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/5efeefa5-0f2a-4b5e-bf5b-61c2845a570e/avatar/skill/au_c196b14c-213.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/5efeefa5-0f2a-4b5e-bf5b-61c2845a570e/avatar/skill/au_c196b14c-213.png"
+}

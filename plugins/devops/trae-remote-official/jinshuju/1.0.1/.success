@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:jinshuju",
+  "registry": "trae-remote-official",
+  "plugin_name": "jinshuju",
+  "version": "1.0.1",
+  "marketplace_plugin_id": "cc9e898f-ed2a-4e3c-9e52-abb25a239dc4",
+  "remote_installed_plugin_id": "Z156K2U5I8IY94",
+  "checksum": "a1cbdb7d015073aec9cba43e6f62f842f0ea254facd73faf85a015369ffc4d8b",
+  "file_size": 63813,
+  "installed_at": 1787227204882
+}

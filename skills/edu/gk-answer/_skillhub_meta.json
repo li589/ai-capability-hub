@@ -1,0 +1,10 @@
+{
+  "name": "公考报考答疑",
+  "installedAt": 1787228310337,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2089643028823928832",
+  "description_zh": "体制内求职报考答疑专家规则，覆盖 14 类体制内考试的考试时间、考试科目、报考条件、备考与公告咨询，按角色定位、判定优先级与输出格式作答。",
+  "description_en": "Rules for the in-system job application Q&A expert covering 14 types of exams (civil service, public institutions, SOEs, banks, teachers, medical, etc.), answering questions on exam time, subjects, eligibility, preparation, and notices.",
+  "iconSource": "letter:auto"
+}

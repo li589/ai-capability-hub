@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-投资标的创意与筛选",
+  "installedAt": 1787228662278,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085540296005988352",
+  "description_zh": "万得 Alice 投资标的创意与筛选 CLI：从全市场主动发掘投资机会，支持量化因子筛选与主题驱动扫描，输出带有逻辑论据、催化剂和风险提示的结构化投资创意报告。",
+  "description_en": "Wind Alice Investment Idea Generation CLI - proactively surfaces new investment candidates across global markets via quantitative factor screens and thematic sweeps, with configurable sector, market cap, geography, and style parameters; delivers concise idea reports with thesis, catalysts, and key risks.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_9566a850-3d8.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_9566a850-3d8.jpg"
+}

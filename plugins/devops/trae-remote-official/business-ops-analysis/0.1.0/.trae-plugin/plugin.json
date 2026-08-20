@@ -1,0 +1,39 @@
+{
+  "name": "business-ops-analysis",
+  "version": "0.1.0",
+  "displayName": "经营数据洞察引擎",
+  "displayNameEn": "Business Data Insight Engine",
+  "description": "从业务数据中提炼经营洞察，支持周期性经营汇报与管理决策",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "经营洞察",
+    "数据分析",
+    "运营分析",
+    "业务策略",
+    "管理报告",
+    "经营决策"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "经营数据洞察引擎",
+    "shortDescription": "从业务数据中提炼经营洞察，支持周期性经营汇报与管理决策",
+    "longDescription": "从业务数据中提炼经营洞察，支持周期性经营汇报与管理决策",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use business-ops-analysis to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

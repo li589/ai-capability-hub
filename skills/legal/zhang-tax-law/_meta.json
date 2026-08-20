@@ -1,0 +1,22 @@
+{
+  "owner": "sealawyer2026",
+  "slug": "zhang-tax-law",
+  "displayName": "九章-tax-law专家",
+  "latest": {
+    "version": "1.5.0",
+    "publishedAt": 1775095029272,
+    "commit": "https://github.com/openclaw/skills/commit/6b8af51a6863443f3601e73cf4ba83c2519c4d94"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1774666478958,
+      "commit": "https://github.com/openclaw/skills/commit/910f218410e4bd676fee437a75f63d2fb0e45c11"
+    },
+    {
+      "version": "1.4.0",
+      "publishedAt": 1774502204649,
+      "commit": "https://github.com/openclaw/skills/commit/c763f1446680ebdff22846648b627d831f9a90b1"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "name": "NotebookLM Studio",
+  "installedAt": 1787228474188,
+  "source": "marketplace",
+  "version": "2.1.3",
+  "skillId": "skill_2053083103859970048",
+  "examples_zh": [
+    "把 3 篇 Transformer 论文 PDF 和一段 YouTube 课程导入 NotebookLM，生成中文播客脚本、测验和思维导图。",
+    "导入竞品帮助中心 URL，生成 FAQ 学习卡片、功能对比表和客服培训测验。",
+    "根据会议纪要和设计文档生成学习型幻灯片、信息图和复习抽认卡。"
+  ],
+  "examples_en": [
+    "Import three Transformer paper PDFs and a YouTube lecture into NotebookLM, then generate a Chinese podcast script, quiz, and mind map.",
+    "Import competitor help-center URLs and create FAQ flashcards, a feature comparison table, and a support-training quiz.",
+    "Generate a study slide deck, infographic, and review flashcards from meeting notes and design documents."
+  ],
+  "description_zh": "NotebookLM 学习工作室：导入多种来源，生成播客、测验、抽认卡、思维导图等学习产物",
+  "description_en": "NotebookLM Studio: import sources and generate podcasts, quizzes, flashcards, mind maps and more",
+  "iconSource": "letter:auto"
+}

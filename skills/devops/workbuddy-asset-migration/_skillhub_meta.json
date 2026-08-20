@@ -1,0 +1,11 @@
+{
+  "name": "WorkBuddy 资产迁移",
+  "installedAt": 1787228680683,
+  "source": "marketplace",
+  "version": "0.8.3",
+  "skillId": "skill_2064192379807137792",
+  "description_zh": "在 WorkBuddy 国内版和海外版之间，或跨机器之间，迁移用户个人资产（skills、conversations、automations、sessions、MCP/connectors 配置、IDENTITY/SOUL/USER 等）。导出为主包（对话与配置）+ 产物包（所有对话目录下的文件资料），并把源端本地 Memory 记录附为 memory-export.md 参考文件；Memory 由云端同步，导入端不写本地 memory 文件。",
+  "description_en": "Migrate WorkBuddy personal assets (skills, conversations, automations, sessions, MCP/connectors config, IDENTITY/SOUL/USER profiles) between CN and AI editions, or across machines. Exports as main package (conversation/config) + workspace package, with local Memory records included only as a reference-only memory-export.md file. Import never writes local memory files because Memory is cloud-synced.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2064192379807137792/b8129dfbdf2f4bd5.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2064192379807137792/b8129dfbdf2f4bd5.png"
+}

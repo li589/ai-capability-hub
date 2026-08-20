@@ -1,0 +1,17 @@
+{
+  "owner": "sealawyer2026",
+  "slug": "zhang-gaming-law",
+  "displayName": "九章-游戏法律专家",
+  "latest": {
+    "version": "1.5.0",
+    "publishedAt": 1775098829190,
+    "commit": "https://github.com/openclaw/skills/commit/084a5cbfb1348adf80b27201d0784954671c60e0"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1774704796334,
+      "commit": "https://github.com/openclaw/skills/commit/d9d03cd1a1181eed84a9d7f7a69e3e0307e14614"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "gitee": {
+      "type": "http",
+      "url": "https://api.gitee.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${connector.gitee.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

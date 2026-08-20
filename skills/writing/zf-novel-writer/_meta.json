@@ -1,0 +1,17 @@
+{
+  "owner": "huangfeixia0101",
+  "slug": "zf-novel-writer",
+  "displayName": "ZF-novel-writer",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1775130887446,
+    "commit": "https://github.com/openclaw/skills/commit/931b789d3720dd75d1d33e7d01e34b1fd986241c"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1774970744210,
+      "commit": "https://github.com/openclaw/skills/commit/84da0b4fb425315616aa97b8f14a4e199af2da1d"
+    }
+  ]
+}

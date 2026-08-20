@@ -1,0 +1,10 @@
+{
+  "name": "Seedream 5.0 Lite 电商主图",
+  "installedAt": 1787227758686,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087510380461580288",
+  "description_zh": "基于 Seedream 5.0 Lite 电商主图 的 AI 图片生成与编辑器，固定调用 Seedream 5.0 Lite 的电商主图裸接口能力。当用户需要 Seedream 5.0 Lite、Seedream 5 Lite、Seedream5、即梦图片 5、字节图片模型、电商主图、商品主图、电商首图、白底图、SKU主图、平台主图、AI图片、AIGC图片 时使用此 Skill。",
+  "description_en": "Seedream 5.0 Lite Ecommerce Main Image capability via AI Hive open API. Direct access without manual model selection. Use when users explicitly need this image capability.",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,11 @@
+{
+  "slug": "corporate-governance-equity-expert-v3",
+  "name": "公司治理与股权设计专家",
+  "version": "1.1.0",
+  "installedAt": 1787228939948,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

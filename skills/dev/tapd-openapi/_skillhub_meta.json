@@ -1,0 +1,21 @@
+{
+  "name": "TAPD",
+  "installedAt": 1787227566817,
+  "source": "marketplace",
+  "version": "1.0.6",
+  "skillId": "skill_2053085043504316416",
+  "examples_zh": [
+    "在TAPD里新建一个需求：用户登录优化",
+    "搜索本周新增的Bug列表",
+    "查看当前迭代的任务完成情况"
+  ],
+  "examples_en": [
+    "Create a new story: user login optimization",
+    "Search for bugs filed this week",
+    "Show task completion for current iteration"
+  ],
+  "description_zh": "TAPD 项目管理平台操作（需求、缺陷、任务、迭代、Wiki）",
+  "description_en": "TAPD project management (stories, bugs, tasks, iterations, wiki)",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tapd-openapi.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tapd-openapi.png"
+}

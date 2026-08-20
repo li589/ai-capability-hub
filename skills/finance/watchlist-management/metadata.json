@@ -1,0 +1,23 @@
+
+  {
+    "name": "watchlist-management",
+    "displayName": "自选股管理",
+    "emoji": "⭐",
+    "skillKey": "watchlist-management",
+    "version": "3.0",
+    "author": "Huatai Securities",
+    "userInvocable": true,
+    "description": "金融市场自选股管理工具，支持**添加股票到自选**、**查询自选股列表**两类操作。TRIGGER when: 用户明确要求将股票加入自选、或查询自己的自选股/特定分组自选股列表。DO NOT TRIGGER when: 除添加、查询自选之外的其他股票相关请求（如删除自选、调整分组、股票分析、交易、个股行情查询等）。",
+    "requires": {
+      "bins": ["python3"]
+    },
+    "examples": [
+      "将华泰证券加入自选列表",
+      "将贵州茅台、紫金矿业加入白酒、有色分组",
+      "我的自选股有哪些",
+      "查看我自选股票",
+      "帮我把比亚迪加到新能源分组，再看看这个分组有啥"
+    ],
+    "note": "外部清单文件，仅供分发/展示用途；QoderWork 加载器只读 SKILL.md frontmatter。"
+  }
+

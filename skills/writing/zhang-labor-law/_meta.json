@@ -1,0 +1,27 @@
+{
+  "owner": "sealawyer2026",
+  "slug": "zhang-labor-law",
+  "displayName": "Zhang Labor Law",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775483091302,
+    "commit": "https://github.com/openclaw/skills/commit/3ab49a6ec3d29b4137b532f30b55b160a57bfc03"
+  },
+  "history": [
+    {
+      "version": "1.5.0",
+      "publishedAt": 1775098997160,
+      "commit": "https://github.com/openclaw/skills/commit/20ee4e0414486db58ead67b67502050a69f1c2d1"
+    },
+    {
+      "version": "1.2.0",
+      "publishedAt": 1774397945607,
+      "commit": "https://github.com/openclaw/skills/commit/ab00b0486eb2a3b3ff399093c060716b393ec374"
+    },
+    {
+      "version": "1.0.1",
+      "publishedAt": 1773915987928,
+      "commit": "https://github.com/openclaw/skills/commit/fa748089db7f1ab8e1770a932b8804b991458f87"
+    }
+  ]
+}

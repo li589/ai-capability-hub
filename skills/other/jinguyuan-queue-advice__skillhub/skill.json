@@ -1,0 +1,34 @@
+{
+  "name": "jinguyuan-queue-advice",
+  "display_name": "金谷园 AI 排队建议",
+  "description": "支付 0.01 元/次，获取一次金谷园到店排队风险与推荐时间段建议。建议仅供参考，不保证现场等待时长，不替代门店现场安排。",
+  "version": "1.0.0",
+  "author": "金谷园饺子馆",
+  "category": "生活服务",
+  "capability": "queue_advice",
+  "pricing": {
+    "model": "per_call",
+    "amount_fen": 1,
+    "currency": "CNY"
+  },
+  "keywords": [
+    "金谷园",
+    "jinguyuan",
+    "排队建议",
+    "到店建议",
+    "餐厅排队",
+    "微信支付",
+    "Agent Pay",
+    "北邮",
+    "五道口"
+  ],
+  "http_api": {
+    "base_url": "https://mcp.jinguyuan.cloud/pay",
+    "entrypoint": "POST /api/play"
+  },
+  "examples": [
+    "今天中午适合去金谷园吗？",
+    "今晚 6 点以后排队会不会很久？",
+    "我想带朋友去，帮我判断哪个时间段更稳。"
+  ]
+}

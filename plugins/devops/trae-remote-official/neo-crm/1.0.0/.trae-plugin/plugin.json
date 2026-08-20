@@ -1,0 +1,55 @@
+{
+  "name": "neo-crm",
+  "version": "1.0.0",
+  "description": "销售易CRM MCP集成，用自然语言查客户、推商机、盘线索、领公海、写跟进，一句话打通销售工作闭环。",
+  "i18n": {
+    "display_name": {
+      "en": "NeoCRM",
+      "zh-cn": "销售易CRM",
+      "ja": "NeoCRM"
+    },
+    "description": {
+      "en": "NeoCRM MCP integration for sales workflow automation: query customers, advance opportunities, review leads, claim from public pool, and log follow-ups in natural language.",
+      "zh-cn": "销售易CRM MCP集成，用自然语言查客户、推商机、盘线索、领公海、写跟进，一句话打通销售工作闭环。",
+      "ja": "NeoCRM MCP 統合。自然言語で顧客検索、商機推進、リード管理、公海受領、フォローアップ記録。ワンステップで営業ワークフローを完結。"
+    }
+  },
+  "author": {
+    "name": "销售易",
+    "url": "https://www.xiaoshouyi.com"
+  },
+  "homepage": "https://www.xiaoshouyi.com",
+  "license": "Proprietary",
+  "keywords": [
+    "neo-crm",
+    "crm",
+    "sales",
+    "xiaoshouyi",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "销售易CRM",
+    "shortDescription": "销售CRM，客户商机线索公海跟进",
+    "longDescription": "通过销售易CRM MCP接入，提供100+个业务工具，覆盖完整销售工作流：客户与联系人管理、商机推进、线索转化、公海管理、跟进与拜访、日程任务、审批、合同订单、报价单、工作报告、工作圈动态、数据查询等。",
+    "developerName": "销售易",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://www.xiaoshouyi.com",
+    "defaultPrompt": [
+      "我要去拜访XXX，帮我准备一下",
+      "把我名下超过30天没跟进的客户列出来",
+      "搜一下公海里制造业、上周新进的线索Top 10"
+    ],
+    "brandColor": "#1677ff",
+    "logo": "./assets/app-icon.svg",
+    "composerIcon": "./assets/app-icon.svg",
+    "screenshots": []
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "skills": "./skills/"
+}

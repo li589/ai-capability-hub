@@ -1,0 +1,11 @@
+{
+  "name": "Moka 员工档案维护",
+  "installedAt": 1787228705432,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089265864423440384",
+  "description_zh": "面向人事负责人维护员工档案信息。先用 Moka 的花名册按姓名或工号定位员工、确认当前值与可选范围，再更新或删除档案分组中的记录（任职信息、个人信息、合同、培训经历、家庭成员等），全程先预览后确认、写后读回验证。当用户要修改员工的工作地点、部门、职务等任职信息或其他档案字段，或删除某条档案记录时使用。",
+  "description_en": "Maintain employee profile records for HR owners. Locate the employee in Moka's roster by name or employee number and confirm current values and allowed options first, then update or delete records in profile sections (employment, personal info, contracts, training, family members, and more). Every write is previewed and confirmed before execution and verified by reading back afterwards. Use it when the user wants to change an employee's work location, department, position, or other profile fields, or delete a profile record.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_fe8bde8e-44f.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_fe8bde8e-44f.png"
+}

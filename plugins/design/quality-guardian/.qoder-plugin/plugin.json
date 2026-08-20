@@ -1,0 +1,34 @@
+{
+  "name": "quality-guardian",
+  "displayName": "质量工程师",
+  "version": "1.0.0",
+  "description": "A quality engineering toolkit for AI agents: reduces hallucinations with evidence-based reasoning, optimizes context quality via targeted file reading, eliminates AI-generated UI patterns, and enforces post-change verification with lint/typecheck/test/build.",
+  "descriptionZh": "AI 质量工程师：通过证据链推理降低幻觉，通过定向读取优化上下文质量，通过反模式检测消除 AI 感 UI，通过自动验证确保修改后可用。包含 4 个技能、1 个质量审查 Agent、实时反模式拦截 Hook 和一键质量检查命令。",
+  "author": {
+    "name": "Qoder Community"
+  },
+  "logo": "./assets/logo.png",
+  "keywords": [
+    "quality",
+    "hallucination",
+    "context",
+    "ui-design",
+    "verification",
+    "anti-ai",
+    "best-practices"
+  ],
+  "category": "developer-tools",
+  "tags": [
+    "skill",
+    "quality",
+    "best-practices"
+  ],
+  "qoderMarket": {
+    "source": "apphub",
+    "extensionType": "plugin",
+    "pluginId": "9e1f4772-2770-4d8b-9061-31168d7767b9",
+    "version": "1.0.0",
+    "contentUpdatedAt": 1787213165947,
+    "installedAt": 1787230736732
+  }
+}

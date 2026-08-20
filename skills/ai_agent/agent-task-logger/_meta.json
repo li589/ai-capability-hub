@@ -1,0 +1,11 @@
+{
+  "owner": "gerald-luo",
+  "slug": "agent-task-logger",
+  "displayName": "Agent Task Logger",
+  "latest": {
+    "version": "1.3.0",
+    "publishedAt": 1772619356222,
+    "commit": "https://github.com/openclaw/skills/commit/8db99853badb34f288c8c908eb9f878240800952"
+  },
+  "history": []
+}

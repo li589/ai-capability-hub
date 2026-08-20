@@ -1,0 +1,19 @@
+{
+  "name": "腾讯音乐人AI助手",
+  "installedAt": 1785864614265,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053084099028885504",
+  "examples_zh": [
+    "帮我分析最近7天的歌曲数据",
+    "帮我分析哪些歌曲值得宣推"
+  ],
+  "examples_en": [
+    "Analyze my song data for the last 7 days",
+    "Help me find which songs are worth promoting"
+  ],
+  "description_zh": "专门为腾讯音乐人打造的音乐智能体，提供智能数据分析、站外宣推建议等一站式服务",
+  "description_en": "AI assistant for Tencent musicians with data analysis and promotion diagnosis.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencent-musician-skills.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencent-musician-skills.png"
+}

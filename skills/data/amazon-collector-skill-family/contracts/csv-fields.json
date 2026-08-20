@@ -1,0 +1,8 @@
+{
+  "version": "1.0",
+  "encoding": "utf-8-sig",
+  "dialect": "RFC4180",
+  "list": ["search_rank", "keyword", "site", "asin", "product_name", "current_price", "original_price", "stars", "rating_count", "product_URL", "collection_status"],
+  "details": ["search_rank", "site", "asin", "title", "brand", "price", "maximum_Retail_Price", "availability_Status", "seller", "rating", "review_Count", "category", "bullet_Points", "product_Description", "specifications", "image_URL_List", "product_URL", "collection_status", "error"],
+  "reviews": ["search_rank", "site", "asin", "product_name", "product_stars", "rating_count", "review_rating", "review_title", "review_content", "reviewer_name", "is_verified", "helpful_count", "date", "country", "review_images", "review_URL", "collection_status", "error"]
+}

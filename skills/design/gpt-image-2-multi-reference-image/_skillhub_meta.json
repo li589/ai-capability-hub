@@ -1,0 +1,10 @@
+{
+  "name": "GPT Image 2 多参考图生成",
+  "installedAt": 1787227617373,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087496572788756480",
+  "description_zh": "基于 GPT Image 2 多参考图生成 的 AI 图片生成与编辑器，固定调用 GPT Image 2 的多参考图生成裸接口能力。当用户需要 GPT Image 2、GPT-Image-2、GPTImage2、OpenAI Image 2、ChatGPT Images、Image2、多参考图生成、多图融合、多参考图、多图合成、角色风格参考、素材合成、AI图片、AIGC图片 时使用此 Skill。",
+  "description_en": "GPT Image 2 Multi-Reference Image capability via AI Hive open API. Direct access without manual model selection. Use when users explicitly need this image capability.",
+  "iconSource": "letter:auto"
+}

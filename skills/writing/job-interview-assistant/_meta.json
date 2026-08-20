@@ -1,0 +1,11 @@
+{
+  "owner": "jiangtaoid",
+  "slug": "job-interview-assistant",
+  "displayName": "求职面试全能助手",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774514549359,
+    "commit": "https://github.com/openclaw/skills/commit/a70b5ec1fbf2b0c33917a8a4c69c277529e48d46"
+  },
+  "history": []
+}

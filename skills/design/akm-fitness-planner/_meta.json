@@ -1,0 +1,11 @@
+{
+  "owner": "sirsws",
+  "slug": "akm-fitness-planner",
+  "displayName": "AKM Fitness",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1774585106454,
+    "commit": "https://github.com/openclaw/skills/commit/719e1a6390966cdb05c41f7aa8cae84188c5b1de"
+  },
+  "history": []
+}

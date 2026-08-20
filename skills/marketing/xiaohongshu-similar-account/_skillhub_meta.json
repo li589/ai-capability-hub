@@ -1,0 +1,11 @@
+{
+  "name": "小红书相似账号推荐",
+  "installedAt": 1785864563116,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2082739653343801344",
+  "description_zh": "小红书对标账号匹配工具，推荐可直接复制的同阶对标和可参考的高阶标杆。",
+  "description_en": "Xiaohongshu benchmark account matcher. Recommends same-tier accounts to copy and higher-tier benchmarks to follow.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_85e51d7c-be4.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_85e51d7c-be4.svg"
+}

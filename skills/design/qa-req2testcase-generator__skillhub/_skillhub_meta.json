@@ -1,0 +1,12 @@
+{
+  "slug": "qa-req2testcase-generator",
+  "name": "qa需求理解与测试用例生成",
+  "version": "4.15.56",
+  "installedAt": 1787229101907,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/5a1e9830-80e4-4cbb-8d00-cee893ca9555.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/5a1e9830-80e4-4cbb-8d00-cee893ca9555.png"
+}

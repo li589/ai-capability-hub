@@ -1,0 +1,10 @@
+{
+  "name": "公众号贴图号爆款生成",
+  "installedAt": 1787228602900,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2088573615526055936",
+  "description_zh": "【零一数科·出品】公众号贴图号爆款生成（付费版）。输入选题、产品卖点、目标受众，一键生成可直接发布的贴图号/公众号爆款图文（封面图+内文配图+正文+候选标题，渲染成 Markdown）。贴图号生成、公众号图文生成、爆款图文生成。需要 python3 和技能目录下 config.json 中的 LY_API_KEY。",
+  "description_en": "[Lingyi Tech] Generate ready-to-publish viral WeChat article and sticker content (cover, inline images, body copy, candidate titles) from topic, product selling points and target audience.",
+  "iconSource": "letter:auto"
+}

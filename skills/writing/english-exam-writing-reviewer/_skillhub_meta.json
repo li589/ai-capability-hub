@@ -1,0 +1,20 @@
+{
+  "name": "英语作文批改",
+  "installedAt": 1787228501168,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443512613003264",
+  "examples_zh": [
+    "帮我批改这篇四级作文",
+    "按考研英一标准给这篇作文打分",
+    "这篇六级作文怎么升到11分档"
+  ],
+  "examples_en": [
+    "Grade my CET-4 essay",
+    "Score this essay by postgraduate English I standards",
+    "How can I improve this CET-6 essay to band 11"
+  ],
+  "description_zh": "覆盖四六级/考研英语作文，严格对齐官方档次制评分，逐句批注+升档建议+HTML批改报告",
+  "description_en": "Grade CET-4/6 & postgraduate English essays aligned with official rubrics, with sentence-level feedback & upgrade tips",
+  "iconSource": "letter:auto"
+}

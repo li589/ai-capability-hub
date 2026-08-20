@@ -1,0 +1,21 @@
+{
+  "name": "平安证券 ETF 筛选",
+  "installedAt": 1787227619057,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2079450703355867136",
+  "examples_zh": [
+    "低估值行业 ETF 有哪些",
+    "筛选规模最大的宽基 ETF",
+    "找费率低、规模超过 10 亿的红利 ETF"
+  ],
+  "examples_en": [
+    "List low-valuation industry ETFs",
+    "Find broad-based ETFs with the largest scale",
+    "Find low-fee dividend ETFs with scale above 1 billion yuan"
+  ],
+  "description_zh": "按分类、主题、跟踪指数、估值、规模、费率、流动性、收益和标签筛选场内 ETF。",
+  "description_en": "Screen listed ETFs by category, theme, index, valuation, scale, fee, liquidity, return, and tags.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079450703355867136/5616ea649d2d1692.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079450703355867136/5616ea649d2d1692.svg"
+}

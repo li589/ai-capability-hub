@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Acid Registry Dynamic UI companion</title>
+  <desc id="desc">Six pure-white modular procurement widget layouts with chartreuse focus blocks and black comparison anchors.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fff}.surface{fill:#f4f4f6}.ink{fill:#111}.muted{fill:#555661}.acid{fill:#d6f52a}.rule{stroke:#9293a1;fill:none}.black-line{stroke:#111;fill:none;stroke-linecap:round;stroke-linejoin:round}.label{font:800 12px 'Arial Narrow',Arial,sans-serif;letter-spacing:.8px}.display{font:900 24px 'Arial Narrow',Arial,sans-serif}.meta{font:400 9px Arial,sans-serif}.tiny{font:800 8px 'Arial Narrow',Arial,sans-serif;letter-spacing:.7px}
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="720"/>
+  <text x="24" y="28" class="ink label">ACID REGISTRY / DYNAMIC UI COMPOSITION PLATE</text>
+  <text x="936" y="28" text-anchor="end" class="muted meta">PURE WHITE · MODULAR SPANS</text>
+
+  <g transform="translate(24 54)">
+    <rect class="surface" width="444" height="190" rx="12" stroke="#9293a1"/>
+    <rect x="14" y="14" width="148" height="162" rx="10" class="acid"/><text x="28" y="38" class="tiny">01 / AWARD</text><text x="28" y="72" class="display">FRONTIER</text><text x="28" y="110" class="display">02</text><text x="28" y="130" class="meta">RECOMMENDED</text>
+    <rect x="176" y="14" width="254" height="116" rx="10" fill="#fff" stroke="#9293a1"/>
+    <path d="M194 112L236 102L278 88L326 66L410 38" class="black-line" stroke-width="2.5"/><circle cx="236" cy="102" r="5" class="ink"/><circle cx="278" cy="88" r="5" class="ink"/><circle cx="326" cy="66" r="8" class="acid" stroke="#111" stroke-width="2"/>
+    <rect x="176" y="142" width="76" height="34" rx="8" class="ink"/><rect x="262" y="142" width="76" height="34" rx="8" fill="#fff" stroke="#9293a1"/><rect x="348" y="142" width="82" height="34" rx="8" class="acid"/>
+  </g>
+
+  <g transform="translate(492 54)">
+    <rect class="surface" width="444" height="190" rx="12" stroke="#9293a1"/>
+    <text x="18" y="32" class="ink label">02 / PRICE PULSE</text><circle cx="414" cy="28" r="7" class="acid" stroke="#111"/>
+    <rect x="14" y="50" width="286" height="126" rx="10" fill="#fff" stroke="#9293a1"/>
+    <path d="M32 152C76 142 98 106 136 116S202 142 236 92S270 76 286 80" class="black-line" stroke-width="2.5"/><circle cx="236" cy="92" r="7" class="acid" stroke="#111" stroke-width="2"/>
+    <rect x="312" y="50" width="118" height="58" rx="10" class="acid"/><text x="326" y="74" class="tiny">INDEX</text><text x="326" y="98" class="display">108</text>
+    <rect x="312" y="120" width="118" height="56" rx="10" class="ink"/><text x="326" y="144" fill="#fff" class="tiny">LOCK</text><text x="326" y="162" fill="#fff" class="meta">JUL / 2026</text>
+  </g>
+
+  <g transform="translate(24 274)">
+    <rect class="surface" width="444" height="190" rx="12" stroke="#9293a1"/>
+    <rect x="14" y="14" width="126" height="74" rx="10" class="ink"/><text x="28" y="38" fill="#d6f52a" class="tiny">03 / RISK</text><text x="28" y="68" fill="#fff" class="display">4/6</text>
+    <rect x="152" y="14" width="278" height="162" rx="10" fill="#fff" stroke="#9293a1"/>
+    <g transform="translate(168 30)">
+      <rect width="52" height="38" rx="8" class="acid"/><rect x="60" width="52" height="38" rx="8" class="ink"/><rect x="120" width="52" height="38" rx="8" fill="#f4f4f6" stroke="#9293a1"/><rect x="180" width="52" height="38" rx="8" class="acid"/>
+      <rect y="46" width="112" height="38" rx="8" fill="#f4f4f6" stroke="#9293a1"/><rect x="120" y="46" width="112" height="38" rx="8" class="ink"/>
+      <rect y="92" width="72" height="38" rx="8" class="ink"/><rect x="80" y="92" width="72" height="38" rx="8" class="acid"/><rect x="160" y="92" width="72" height="38" rx="8" fill="#f4f4f6" stroke="#9293a1"/>
+    </g>
+    <rect x="14" y="100" width="126" height="76" rx="10" class="acid"/><text x="28" y="124" class="tiny">EVIDENCE</text><text x="28" y="150" class="display">01</text><text x="28" y="168" class="meta">UNKNOWN</text>
+  </g>
+
+  <g transform="translate(492 274)">
+    <rect class="surface" width="444" height="190" rx="12" stroke="#9293a1"/>
+    <rect x="14" y="14" width="180" height="162" rx="10" class="acid"/><text x="28" y="40" class="tiny">04 / EXCEPTION</text><text x="28" y="76" class="display">QUEUE</text><text x="28" y="116" class="display">03</text><text x="28" y="140" class="meta">OPEN ITEMS</text>
+    <rect x="206" y="14" width="224" height="48" rx="10" class="ink"/><text x="220" y="35" fill="#fff" class="meta">01 · COVERAGE</text><text x="416" y="35" text-anchor="end" fill="#d6f52a" class="tiny">02 AUG</text>
+    <rect x="206" y="70" width="224" height="48" rx="10" fill="#fff" stroke="#9293a1"/><text x="220" y="91" class="ink meta">02 · DELAY</text><text x="416" y="91" text-anchor="end" class="ink tiny">05 AUG</text>
+    <rect x="206" y="126" width="224" height="50" rx="10" fill="#fff" stroke="#9293a1"/><text x="220" y="148" class="ink meta">03 · MOQ</text><text x="416" y="148" text-anchor="end" class="ink tiny">09 AUG</text>
+  </g>
+
+  <g transform="translate(24 494)">
+    <rect class="surface" width="444" height="190" rx="12" stroke="#9293a1"/>
+    <text x="18" y="32" class="ink label">05 / LANDED FLOW</text><circle cx="414" cy="28" r="7" class="acid" stroke="#111"/>
+    <rect x="14" y="50" width="282" height="126" rx="10" class="ink"/>
+    <circle cx="46" cy="118" r="12" class="acid"/><circle cx="142" cy="92" r="12" fill="#fff"/><circle cx="142" cy="144" r="12" class="acid"/><circle cx="260" cy="118" r="15" fill="#fff"/>
+    <path d="M58 114C88 104 106 94 130 92M58 122C90 136 108 144 130 144M154 92C194 94 220 108 245 114M154 144C194 140 222 128 245 122" stroke="#d6f52a" fill="none" stroke-width="2"/>
+    <rect x="308" y="50" width="122" height="126" rx="10" fill="#fff" stroke="#9293a1"/><text x="322" y="76" class="tiny">TOTAL</text><text x="322" y="106" class="display">9.42</text><rect x="322" y="128" width="94" height="12" rx="6" class="acid"/><rect x="322" y="150" width="62" height="12" rx="6" class="ink"/>
+  </g>
+
+  <g transform="translate(492 494)">
+    <rect class="surface" width="444" height="190" rx="12" stroke="#9293a1"/>
+    <rect x="14" y="14" width="126" height="162" rx="10" class="ink"/><text x="28" y="40" fill="#d6f52a" class="tiny">06 / ACTION</text><text x="28" y="76" fill="#fff" class="display">ACT</text><text x="28" y="112" fill="#fff" class="display">04</text>
+    <path d="M170 56H408M170 94H408M170 132H408M170 170H408" class="rule"/>
+    <circle cx="182" cy="50" r="10" class="acid"/><circle cx="258" cy="88" r="10" class="ink"/><circle cx="334" cy="126" r="10" class="acid"/><circle cx="408" cy="164" r="10" class="ink"/>
+    <text x="198" y="53" class="ink meta">VERIFY</text><text x="274" y="91" class="ink meta">PILOT</text><text x="350" y="129" class="ink meta">AWARD</text><text x="320" y="167" class="ink meta">REVIEW</text>
+  </g>
+</svg>

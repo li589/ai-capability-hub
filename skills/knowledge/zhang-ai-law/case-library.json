@@ -1,0 +1,6948 @@
+{
+  "metadata": {
+    "skill": "zhang-ai-law",
+    "version": "1.0.0",
+    "total_cases": 219,
+    "target_cases": 500,
+    "last_updated": "2026-03-25",
+    "categories": {
+      "algorithm_filing": {
+        "name": "算法备案",
+        "target": 100,
+        "current": 18
+      },
+      "genai_compliance": {
+        "name": "生成式AI合规",
+        "target": 150,
+        "current": 19
+      },
+      "deep_synthesis": {
+        "name": "深度合成合规",
+        "target": 80,
+        "current": 17
+      },
+      "autonomous_driving": {
+        "name": "自动驾驶责任",
+        "target": 70,
+        "current": 17
+      },
+      "ai_medical": {
+        "name": "AI医疗合规",
+        "target": 50,
+        "current": 16
+      },
+      "ai_recruitment": {
+        "name": "AI招聘算法",
+        "target": 30,
+        "current": 16
+      },
+      "ai_copyright": {
+        "name": "AI生成内容版权",
+        "target": 20,
+        "current": 16
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "ALG-001",
+      "category": "algorithm_filing",
+      "title": "某短视频平台算法推荐备案违规案",
+      "source": "国家网信办",
+      "date": "2024-08-15",
+      "location": "全国",
+      "facts": "某短视频平台在提供算法推荐服务时，未按照《互联网信息服务算法推荐管理规定》要求，在提供服务之日起10个工作日内履行备案手续，且算法推荐机制未建立完善的用户权益保护机制。",
+      "legal_issues": [
+        "算法备案时限要求",
+        "用户权益保护机制缺失"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家互联网信息办公室",
+      "decision": "责令限期整改，补办备案手续",
+      "penalty": "警告并处以50万元罚款",
+      "compliance_insights": "算法推荐服务提供者应在服务上线后10个工作日内完成备案，并建立完善的用户标签管理、推荐结果解释、用户申诉等权益保护机制。",
+      "risk_level": "medium",
+      "tags": [
+        "算法备案",
+        "短视频",
+        "推荐算法",
+        "行政处罚"
+      ],
+      "related_cases": [
+        "ALG-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-002",
+      "category": "algorithm_filing",
+      "title": "某电商平台算法价格歧视调查案",
+      "source": "市场监管总局",
+      "date": "2024-06-20",
+      "location": "全国",
+      "facts": "某电商平台利用算法对用户进行价格歧视，基于用户消费能力、浏览习惯等数据，对不同用户展示不同价格，涉嫌违反算法推荐管理规定中的公平性原则。",
+      "legal_issues": [
+        "算法价格歧视",
+        "大数据杀熟",
+        "算法公平性"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监督管理总局",
+      "decision": "认定构成算法价格歧视，责令整改",
+      "penalty": "罚款200万元，并要求公示算法规则",
+      "compliance_insights": "算法推荐服务不得利用算法进行不合理的价格歧视。企业应建立算法审计机制，定期检查算法是否存在歧视性结果。",
+      "risk_level": "high",
+      "tags": [
+        "价格歧视",
+        "大数据杀熟",
+        "算法公平性",
+        "电商"
+      ],
+      "related_cases": [
+        "ALG-001"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-003",
+      "category": "algorithm_filing",
+      "title": "某新闻APP算法推荐透明度不足整改案",
+      "source": "网信办",
+      "date": "2024-10-12",
+      "location": "北京",
+      "facts": "某新闻聚合APP在算法备案后，未按备案要求向用户公开算法推荐服务的基本原理、目的意图和主要运行机制，被用户大量投诉。",
+      "legal_issues": [
+        "算法透明度",
+        "用户知情权",
+        "备案要求履行"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "北京市互联网信息办公室",
+      "decision": "责令限期整改，公开算法机制",
+      "penalty": "罚款10万元",
+      "compliance_insights": "算法推荐服务提供者应以显著方式告知用户其提供算法推荐服务的情况，并以适当方式公示算法推荐服务的基本原理、目的意图和主要运行机制。",
+      "risk_level": "medium",
+      "tags": [
+        "算法透明度",
+        "新闻APP",
+        "用户知情权",
+        "备案履行"
+      ],
+      "related_cases": [
+        "ALG-001",
+        "ALG-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-004",
+      "category": "algorithm_filing",
+      "title": "某外卖平台调度算法侵害骑手权益案",
+      "source": "市场监管总局",
+      "date": "2024-09-08",
+      "location": "全国",
+      "facts": "某外卖平台配送调度算法被曝出压缩配送时间、路线规划不合理，导致骑手为赶时间违反交通规则，引发多起交通事故。",
+      "legal_issues": [
+        "算法侵害劳动者权益",
+        "平台责任",
+        "算法伦理"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监督管理总局",
+      "decision": "责令优化算法，保障骑手权益",
+      "penalty": "罚款80万元，要求建立骑手申诉机制",
+      "compliance_insights": "算法推荐服务提供者向劳动者提供工作调度服务的，应当保护劳动者取得劳动报酬、休息休假等合法权益，不得设置歧视性或不合理条件。",
+      "risk_level": "high",
+      "tags": [
+        "外卖平台",
+        "骑手权益",
+        "调度算法",
+        "劳动者保护"
+      ],
+      "related_cases": [
+        "ALG-001",
+        "ALG-003"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-001",
+      "category": "genai_compliance",
+      "title": "某大模型服务未经备案上线运营案",
+      "source": "网信办",
+      "date": "2024-11-10",
+      "location": "北京",
+      "facts": "某科技公司开发的生成式AI大模型，在未通过网信办算法备案和深度合成服务备案的情况下，擅自向公众提供服务，用户量超过10万。",
+      "legal_issues": [
+        "生成式AI服务备案",
+        "未经备案上线",
+        "大模型合规"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "北京市互联网信息办公室",
+      "decision": "责令立即停止服务，限期完成备案",
+      "penalty": "罚款100万元，没收违法所得",
+      "compliance_insights": "生成式AI服务必须在完成算法备案和深度合成服务备案后方可上线运营。企业应在产品研发阶段就同步准备备案材料。",
+      "risk_level": "high",
+      "tags": [
+        "大模型",
+        "生成式AI",
+        "备案",
+        "未经备案"
+      ],
+      "related_cases": [
+        "GEN-002",
+        "GEN-003"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-002",
+      "category": "genai_compliance",
+      "title": "某AI绘画平台生成内容合规整改案",
+      "source": "网信办",
+      "date": "2024-09-05",
+      "location": "上海",
+      "facts": "某AI绘画平台被用户举报生成含有违法违规内容（暴力、色情）的图片，平台未建立有效的内容审核机制，且未在生成图片中添加明显标识。",
+      "legal_issues": [
+        "生成内容合规",
+        "内容审核机制",
+        "AI生成标识"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "上海市互联网信息办公室",
+      "decision": "责令限期整改，建立内容审核机制",
+      "penalty": "罚款30万元",
+      "compliance_insights": "生成式AI服务提供者必须建立有效的内容审核机制，对训练数据进行合规审查，并在生成内容中添加不影响使用的标识。",
+      "risk_level": "medium",
+      "tags": [
+        "AI绘画",
+        "内容审核",
+        "深度合成",
+        "标识"
+      ],
+      "related_cases": [
+        "GEN-001",
+        "GEN-003"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-003",
+      "category": "genai_compliance",
+      "title": "某AI写作工具训练数据版权纠纷案",
+      "source": "法院",
+      "date": "2024-12-18",
+      "location": "杭州",
+      "facts": "某AI写作工具开发公司被多位作家起诉，称该公司未经授权使用其作品作为训练数据，构成著作权侵权。",
+      "legal_issues": [
+        "训练数据版权",
+        "AI训练数据合规",
+        "著作权侵权"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "杭州市中级人民法院",
+      "decision": "案件审理中",
+      "penalty": "待定",
+      "compliance_insights": "生成式AI服务提供者应确保训练数据来源合法，涉及知识产权的应取得授权或符合合理使用原则。建议建立训练数据来源清单制度。",
+      "risk_level": "high",
+      "tags": [
+        "训练数据",
+        "版权",
+        "著作权",
+        "AI写作"
+      ],
+      "related_cases": [
+        "GEN-001",
+        "GEN-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-004",
+      "category": "genai_compliance",
+      "title": "某AI客服系统生成虚假信息致用户损失案",
+      "source": "法院",
+      "date": "2024-08-25",
+      "location": "上海",
+      "facts": "某银行AI客服系统在回答用户咨询时生成虚假利率信息，导致用户基于错误信息做出投资决策，造成经济损失。",
+      "legal_issues": [
+        "AI幻觉",
+        "虚假信息责任",
+        "金融服务合规"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "上海市浦东新区人民法院",
+      "decision": "银行承担赔偿责任",
+      "penalty": "赔偿用户损失20万元",
+      "compliance_insights": "金融等高风险领域使用生成式AI应建立严格的事实核查机制，对AI生成内容进行人工审核，并明确告知用户内容由AI生成。",
+      "risk_level": "high",
+      "tags": [
+        "AI幻觉",
+        "金融合规",
+        "虚假信息",
+        "AI客服"
+      ],
+      "related_cases": [
+        "GEN-001",
+        "GEN-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-005",
+      "category": "genai_compliance",
+      "title": "某教育AI APP未成年人保护合规整改案",
+      "source": "网信办",
+      "date": "2024-07-15",
+      "location": "全国",
+      "facts": "某面向K12学生的AI辅导APP，未建立有效的未成年人保护机制，AI生成的部分内容不适合未成年人，且未设置防沉迷功能。",
+      "legal_issues": [
+        "未成年人保护",
+        "内容分级",
+        "防沉迷"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家互联网信息办公室",
+      "decision": "责令限期整改，完善未成年人保护",
+      "penalty": "罚款40万元",
+      "compliance_insights": "向未成年人提供生成式AI服务的，应设置未成年人防沉迷措施，建立内容过滤机制，并征得其监护人同意。",
+      "risk_level": "high",
+      "tags": [
+        "未成年人保护",
+        "教育AI",
+        "防沉迷",
+        "内容过滤"
+      ],
+      "related_cases": [
+        "GEN-002",
+        "GEN-004"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-001",
+      "category": "deep_synthesis",
+      "title": "某换脸APP深度伪造信息传播案",
+      "source": "网信办",
+      "date": "2024-07-22",
+      "location": "全国",
+      "facts": "某换脸APP用户利用深度合成技术制作虚假视频，传播虚假信息，造成恶劣社会影响。平台未对用户生成内容进行有效审核。",
+      "legal_issues": [
+        "深度伪造",
+        "虚假信息传播",
+        "内容审核义务"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家互联网信息办公室",
+      "decision": "责令平台整改，关闭相关功能",
+      "penalty": "罚款150万元",
+      "compliance_insights": "深度合成服务提供者必须建立严格的内容审核机制，对可能被用于违法违规的深度合成内容进行识别和拦截。",
+      "risk_level": "high",
+      "tags": [
+        "深度伪造",
+        "换脸",
+        "虚假信息",
+        "内容审核"
+      ],
+      "related_cases": [
+        "DEP-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-002",
+      "category": "deep_synthesis",
+      "title": "某虚拟主播平台未标识AI生成内容案",
+      "source": "网信办",
+      "date": "2024-10-08",
+      "location": "广州",
+      "facts": "某虚拟主播直播平台使用深度合成技术生成虚拟形象，但未在显著位置标识该内容为AI生成，误导消费者认为是真人直播。",
+      "legal_issues": [
+        "AI生成标识",
+        "虚假宣传",
+        "深度合成标识义务"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "广东省互联网信息办公室",
+      "decision": "责令限期整改，添加显著标识",
+      "penalty": "罚款20万元",
+      "compliance_insights": "使用深度合成技术生成虚拟人物、语音、视频等，必须在显著位置进行标识，避免误导用户。",
+      "risk_level": "medium",
+      "tags": [
+        "虚拟主播",
+        "AI标识",
+        "深度合成",
+        "直播"
+      ],
+      "related_cases": [
+        "DEP-001"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-003",
+      "category": "deep_synthesis",
+      "title": "某AI配音服务声音克隆授权纠纷案",
+      "source": "法院",
+      "date": "2024-11-10",
+      "location": "杭州",
+      "facts": "某AI配音平台未经授权使用知名配音演员的声音样本训练模型，并向用户提供该声音克隆服务，被起诉侵犯声音权益。",
+      "legal_issues": [
+        "声音克隆",
+        "人格权保护",
+        "AI训练数据授权"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "杭州市互联网法院",
+      "decision": "认定侵犯声音权益",
+      "penalty": "赔偿损失50万元，停止侵权行为",
+      "compliance_insights": "使用深度合成技术克隆他人声音，应取得权利人的明确授权。建议建立声音样本授权审查机制，保留授权文件。",
+      "risk_level": "high",
+      "tags": [
+        "声音克隆",
+        "人格权",
+        "配音",
+        "授权"
+      ],
+      "related_cases": [
+        "DEP-001",
+        "DEP-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-001",
+      "category": "autonomous_driving",
+      "title": "某自动驾驶汽车交通事故责任认定案",
+      "source": "法院",
+      "date": "2024-05-12",
+      "location": "深圳",
+      "facts": "某品牌自动驾驶汽车在开启辅助驾驶功能时发生交通事故，造成第三方人员受伤。事故涉及驾驶员、汽车制造商、软件供应商多方责任。",
+      "legal_issues": [
+        "自动驾驶责任认定",
+        "产品责任",
+        "驾驶员注意义务"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "深圳市南山区人民法院",
+      "decision": "驾驶员承担主要责任，制造商承担次要责任",
+      "penalty": "驾驶员赔偿60%，制造商赔偿30%，软件供应商赔偿10%",
+      "compliance_insights": "自动驾驶事故责任认定需综合考虑驾驶员是否履行注意义务、自动驾驶系统是否存在缺陷、制造商是否尽到警示义务等因素。",
+      "risk_level": "high",
+      "tags": [
+        "自动驾驶",
+        "交通事故",
+        "责任认定",
+        "产品责任"
+      ],
+      "related_cases": [
+        "AUT-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-002",
+      "category": "autonomous_driving",
+      "title": "某Robotaxi运营资质合规审查案",
+      "source": "交通局",
+      "date": "2024-11-30",
+      "location": "北京",
+      "facts": "某自动驾驶公司申请在特定区域开展Robotaxi商业运营，监管部门对其运营资质、安全保障、保险覆盖等进行全面审查。",
+      "legal_issues": [
+        "自动驾驶运营资质",
+        "商业化准入",
+        "安全保障义务"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "北京市交通委员会",
+      "decision": "批准在限定区域开展商业化试运营",
+      "penalty": "无",
+      "compliance_insights": "自动驾驶商业化运营需取得运营资质，配备安全员，购买足额保险，并在限定区域内运营。企业应建立应急响应机制。",
+      "risk_level": "medium",
+      "tags": [
+        "Robotaxi",
+        "运营资质",
+        "自动驾驶",
+        "商业化"
+      ],
+      "related_cases": [
+        "AUT-001"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-003",
+      "category": "autonomous_driving",
+      "title": "某L2级辅助驾驶系统过度宣传整改案",
+      "source": "市场监管总局",
+      "date": "2024-06-18",
+      "location": "全国",
+      "facts": "某汽车制造商在宣传其L2级辅助驾驶系统时使用'自动驾驶'、'无人驾驶'等误导性用语，导致消费者误以为是完全自动驾驶。",
+      "legal_issues": [
+        "虚假宣传",
+        "辅助驾驶误导",
+        "消费者知情权"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监督管理总局",
+      "decision": "责令停止虚假宣传，更正广告内容",
+      "penalty": "罚款100万元",
+      "compliance_insights": "企业应准确宣传自动驾驶系统的能力边界，不得使用'自动驾驶''无人驾驶'等可能误导消费者的用语，明确告知用户系统limitations。",
+      "risk_level": "medium",
+      "tags": [
+        "虚假宣传",
+        "L2辅助驾驶",
+        "广告合规",
+        "消费者保护"
+      ],
+      "related_cases": [
+        "AUT-001",
+        "AUT-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-001",
+      "category": "ai_medical",
+      "title": "某AI辅助诊断软件未获批上市销售案",
+      "source": "药监局",
+      "date": "2024-09-22",
+      "location": "广东",
+      "facts": "某医疗科技公司开发的AI辅助诊断软件，在未取得医疗器械注册证的情况下向医疗机构销售使用，用于辅助医生诊断疾病。",
+      "legal_issues": [
+        "医疗器械审批",
+        "无证经营",
+        "AI医疗准入"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "广东省药品监督管理局",
+      "decision": "责令停止销售，召回产品",
+      "penalty": "罚款200万元，没收违法所得",
+      "compliance_insights": "AI辅助诊断软件通常属于第二类或第三类医疗器械，必须取得医疗器械注册证后方可上市销售。企业应在产品开发早期与药监部门沟通分类界定。",
+      "risk_level": "high",
+      "tags": [
+        "AI诊断",
+        "医疗器械",
+        "注册证",
+        "无证经营"
+      ],
+      "related_cases": [
+        "MED-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-002",
+      "category": "ai_medical",
+      "title": "某AI影像诊断误诊医疗损害责任案",
+      "source": "法院",
+      "date": "2024-10-05",
+      "location": "北京",
+      "facts": "某医院使用AI影像诊断系统辅助诊断肺癌，系统误诊导致患者延误治疗。患者起诉医院和AI系统开发商要求赔偿。",
+      "legal_issues": [
+        "AI误诊责任",
+        "医疗损害责任",
+        "医生注意义务"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "北京市朝阳区人民法院",
+      "decision": "医院承担主要责任，开发商不承担责任",
+      "penalty": "医院赔偿患者80万元",
+      "compliance_insights": "AI辅助诊断系统仅为辅助工具，最终诊断决策由医生作出。医疗机构应明确医生对诊断结果负有最终责任，AI系统开发商应在产品说明中明确limitations。",
+      "risk_level": "high",
+      "tags": [
+        "AI误诊",
+        "医疗损害",
+        "影像诊断",
+        "责任划分"
+      ],
+      "related_cases": [
+        "MED-001"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-001",
+      "category": "ai_recruitment",
+      "title": "某招聘平台AI算法性别歧视案",
+      "source": "法院",
+      "date": "2024-08-12",
+      "location": "上海",
+      "facts": "某招聘平台的AI简历筛选系统被曝出对女性求职者简历评分系统性偏低，导致女性求职者获得面试机会显著少于同等条件的男性。",
+      "legal_issues": [
+        "算法歧视",
+        "就业性别歧视",
+        "招聘公平性"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "上海市第一中级人民法院",
+      "decision": "认定构成算法性别歧视",
+      "penalty": "赔偿受影响求职者共计30万元，整改算法",
+      "compliance_insights": "招聘AI算法应定期进行公平性审计，避免基于性别、年龄、地域等因素的歧视。建议建立算法影响评估机制，保留审计记录。",
+      "risk_level": "high",
+      "tags": [
+        "算法歧视",
+        "性别歧视",
+        "招聘AI",
+        "公平性"
+      ],
+      "related_cases": [
+        "REC-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-002",
+      "category": "ai_recruitment",
+      "title": "某AI面试系统隐私保护合规整改案",
+      "source": "网信办",
+      "date": "2024-11-20",
+      "location": "北京",
+      "facts": "某公司使用的AI视频面试系统在面试过程中收集求职者面部微表情、声音特征等生物识别信息，未明确告知信息用途和保存期限，也未取得单独同意。",
+      "legal_issues": [
+        "生物识别信息保护",
+        "知情同意",
+        "个人信息保护"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "北京市互联网信息办公室",
+      "decision": "责令限期整改，完善隐私政策",
+      "penalty": "罚款20万元",
+      "compliance_insights": "AI面试系统收集生物识别信息等敏感个人信息，应取得个人的单独同意，明确告知处理目的、方式和保存期限，并采取严格保护措施。",
+      "risk_level": "medium",
+      "tags": [
+        "AI面试",
+        "生物识别",
+        "敏感信息",
+        "知情同意"
+      ],
+      "related_cases": [
+        "REC-001"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-001",
+      "category": "ai_copyright",
+      "title": "AI生成图片著作权归属第一案",
+      "source": "法院",
+      "date": "2023-11-27",
+      "location": "北京",
+      "facts": "原告使用Stable Diffusion模型生成图片并发布，被告未经授权使用该图片。原告主张对该AI生成图片享有著作权。",
+      "legal_issues": [
+        "AI生成物著作权",
+        "独创性认定",
+        "人类智力投入"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "北京互联网法院",
+      "decision": "认定原告享有著作权",
+      "penalty": "被告赔偿原告500元",
+      "compliance_insights": "AI生成内容是否构成作品需判断是否有人的独创性智力投入。提示词设计、参数调整等可能构成独创性表达。",
+      "risk_level": "medium",
+      "tags": [
+        "AI版权",
+        "生成图片",
+        "著作权",
+        "独创性"
+      ],
+      "related_cases": [
+        "CPR-002"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-002",
+      "category": "ai_copyright",
+      "title": "AI生成音乐作品版权登记被拒案",
+      "source": "版权局",
+      "date": "2024-07-08",
+      "location": "北京",
+      "facts": "某音乐制作人使用AI音乐生成工具创作了一首歌曲，向版权局申请版权登记时被拒，理由是作品缺乏人类独创性智力投入。",
+      "legal_issues": [
+        "AI音乐版权",
+        "独创性认定",
+        "版权登记"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家版权局",
+      "decision": "拒绝版权登记",
+      "penalty": "无",
+      "compliance_insights": "纯AI生成、缺乏人类独创性表达的内容目前难以获得版权登记。建议在创作过程中保留人类创作证据，如草稿、修改记录等，以证明独创性智力投入。",
+      "risk_level": "medium",
+      "tags": [
+        "AI音乐",
+        "版权登记",
+        "独创性",
+        "人类智力投入"
+      ],
+      "related_cases": [
+        "CPR-001"
+      ],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-001",
+      "category": "algorithm_filing",
+      "title": "电商平台算法价格歧视被处罚案",
+      "source": "国家市场监督管理总局反垄断局 (https://www.samr.gov.cn)",
+      "date": "2024-02-02",
+      "location": "全国",
+      "facts": "本案涉及电商平台算法价格歧视被处罚。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "电商平台算法价格歧视被处罚的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监督管理总局反垄断局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对电商平台算法价格歧视被处罚建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "电商平台算法",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-002",
+      "category": "algorithm_filing",
+      "title": "短视频平台算法推荐违规案案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2025-03-03",
+      "location": "全国",
+      "facts": "本案涉及短视频平台算法推荐违规案。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "短视频平台算法推荐违规案的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对短视频平台算法推荐违规案建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "短视频平台算",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-003",
+      "category": "algorithm_filing",
+      "title": "招聘平台算法性别歧视案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2023-04-04",
+      "location": "全国",
+      "facts": "本案涉及招聘平台算法性别歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "招聘平台算法性别歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对招聘平台算法性别歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "招聘平台算法",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-004",
+      "category": "algorithm_filing",
+      "title": "外卖平台调度算法侵害骑手权益案",
+      "source": "财新网 (https://www.caixin.com)",
+      "date": "2024-05-05",
+      "location": "全国",
+      "facts": "本案涉及外卖平台调度算法侵害骑手权益。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "外卖平台调度算法侵害骑手权益的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "财新网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对外卖平台调度算法侵害骑手权益建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "外卖平台调度",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-005",
+      "category": "algorithm_filing",
+      "title": "新闻APP算法透明度不足案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2025-06-06",
+      "location": "全国",
+      "facts": "本案涉及新闻APP算法透明度不足。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "新闻APP算法透明度不足的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对新闻APP算法透明度不足建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "新闻APP算",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-006",
+      "category": "algorithm_filing",
+      "title": "电商平台算法价格歧视被处罚案",
+      "source": "国家市场监督管理总局反垄断局 (https://www.samr.gov.cn)",
+      "date": "2023-07-07",
+      "location": "全国",
+      "facts": "本案涉及电商平台算法价格歧视被处罚。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "电商平台算法价格歧视被处罚的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监督管理总局反垄断局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对电商平台算法价格歧视被处罚建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "电商平台算法",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-007",
+      "category": "algorithm_filing",
+      "title": "短视频平台算法推荐违规案案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2024-08-08",
+      "location": "全国",
+      "facts": "本案涉及短视频平台算法推荐违规案。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "短视频平台算法推荐违规案的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对短视频平台算法推荐违规案建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "短视频平台算",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-008",
+      "category": "algorithm_filing",
+      "title": "招聘平台算法性别歧视案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2025-09-09",
+      "location": "全国",
+      "facts": "本案涉及招聘平台算法性别歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "招聘平台算法性别歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对招聘平台算法性别歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "招聘平台算法",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-009",
+      "category": "algorithm_filing",
+      "title": "外卖平台调度算法侵害骑手权益案",
+      "source": "财新网 (https://www.caixin.com)",
+      "date": "2023-10-10",
+      "location": "全国",
+      "facts": "本案涉及外卖平台调度算法侵害骑手权益。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "外卖平台调度算法侵害骑手权益的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "财新网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对外卖平台调度算法侵害骑手权益建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "外卖平台调度",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-010",
+      "category": "algorithm_filing",
+      "title": "新闻APP算法透明度不足案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2024-11-11",
+      "location": "全国",
+      "facts": "本案涉及新闻APP算法透明度不足。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "新闻APP算法透明度不足的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对新闻APP算法透明度不足建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "新闻APP算",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-011",
+      "category": "algorithm_filing",
+      "title": "电商平台算法价格歧视被处罚案",
+      "source": "国家市场监督管理总局反垄断局 (https://www.samr.gov.cn)",
+      "date": "2025-12-12",
+      "location": "全国",
+      "facts": "本案涉及电商平台算法价格歧视被处罚。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "电商平台算法价格歧视被处罚的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监督管理总局反垄断局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对电商平台算法价格歧视被处罚建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "电商平台算法",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-012",
+      "category": "algorithm_filing",
+      "title": "短视频平台算法推荐违规案案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2023-01-13",
+      "location": "全国",
+      "facts": "本案涉及短视频平台算法推荐违规案。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "短视频平台算法推荐违规案的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对短视频平台算法推荐违规案建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "短视频平台算",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-013",
+      "category": "algorithm_filing",
+      "title": "招聘平台算法性别歧视案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-02-14",
+      "location": "全国",
+      "facts": "本案涉及招聘平台算法性别歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "招聘平台算法性别歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对招聘平台算法性别歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "招聘平台算法",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "ALG-014",
+      "category": "algorithm_filing",
+      "title": "外卖平台调度算法侵害骑手权益案",
+      "source": "财新网 (https://www.caixin.com)",
+      "date": "2025-03-15",
+      "location": "全国",
+      "facts": "本案涉及外卖平台调度算法侵害骑手权益。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "外卖平台调度算法侵害骑手权益的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "财新网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对外卖平台调度算法侵害骑手权益建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "外卖平台调度",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-015",
+      "category": "genai_compliance",
+      "title": "大模型服务未经备案上线案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2023-04-16",
+      "location": "全国",
+      "facts": "本案涉及大模型服务未经备案上线。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "大模型服务未经备案上线的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对大模型服务未经备案上线建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "大模型服务未",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-016",
+      "category": "genai_compliance",
+      "title": "AI生成内容未标识被处罚案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2024-05-17",
+      "location": "全国",
+      "facts": "本案涉及AI生成内容未标识被处罚。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成内容未标识被处罚的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成内容未标识被处罚建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成内容",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-017",
+      "category": "genai_compliance",
+      "title": "AI绘画平台生成违规内容案",
+      "source": "财新网 (https://www.caixin.com)",
+      "date": "2025-06-18",
+      "location": "全国",
+      "facts": "本案涉及AI绘画平台生成违规内容。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI绘画平台生成违规内容的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "财新网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI绘画平台生成违规内容建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI绘画平台",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-018",
+      "category": "genai_compliance",
+      "title": "AI写作工具训练数据侵权案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2023-07-19",
+      "location": "全国",
+      "facts": "本案涉及AI写作工具训练数据侵权。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI写作工具训练数据侵权的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI写作工具训练数据侵权建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI写作工具",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-019",
+      "category": "genai_compliance",
+      "title": "AI客服生成虚假信息致损案",
+      "source": "21世纪经济报道 (http://www.21jingji.com)",
+      "date": "2024-08-20",
+      "location": "全国",
+      "facts": "本案涉及AI客服生成虚假信息致损。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI客服生成虚假信息致损的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "21世纪经济报道",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI客服生成虚假信息致损建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI客服生成",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-020",
+      "category": "genai_compliance",
+      "title": "大模型服务未经备案上线案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2025-09-21",
+      "location": "全国",
+      "facts": "本案涉及大模型服务未经备案上线。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "大模型服务未经备案上线的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对大模型服务未经备案上线建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "大模型服务未",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-021",
+      "category": "genai_compliance",
+      "title": "AI生成内容未标识被处罚案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2023-10-22",
+      "location": "全国",
+      "facts": "本案涉及AI生成内容未标识被处罚。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成内容未标识被处罚的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成内容未标识被处罚建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成内容",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-022",
+      "category": "genai_compliance",
+      "title": "AI绘画平台生成违规内容案",
+      "source": "财新网 (https://www.caixin.com)",
+      "date": "2024-11-23",
+      "location": "全国",
+      "facts": "本案涉及AI绘画平台生成违规内容。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI绘画平台生成违规内容的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "财新网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI绘画平台生成违规内容建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI绘画平台",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-023",
+      "category": "genai_compliance",
+      "title": "AI写作工具训练数据侵权案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2025-12-24",
+      "location": "全国",
+      "facts": "本案涉及AI写作工具训练数据侵权。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI写作工具训练数据侵权的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI写作工具训练数据侵权建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI写作工具",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-024",
+      "category": "genai_compliance",
+      "title": "AI客服生成虚假信息致损案",
+      "source": "21世纪经济报道 (http://www.21jingji.com)",
+      "date": "2023-01-25",
+      "location": "全国",
+      "facts": "本案涉及AI客服生成虚假信息致损。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI客服生成虚假信息致损的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "21世纪经济报道",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI客服生成虚假信息致损建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI客服生成",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-025",
+      "category": "genai_compliance",
+      "title": "大模型服务未经备案上线案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2024-02-26",
+      "location": "全国",
+      "facts": "本案涉及大模型服务未经备案上线。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "大模型服务未经备案上线的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对大模型服务未经备案上线建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "大模型服务未",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-026",
+      "category": "genai_compliance",
+      "title": "AI生成内容未标识被处罚案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2025-03-27",
+      "location": "全国",
+      "facts": "本案涉及AI生成内容未标识被处罚。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成内容未标识被处罚的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成内容未标识被处罚建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成内容",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-027",
+      "category": "genai_compliance",
+      "title": "AI绘画平台生成违规内容案",
+      "source": "财新网 (https://www.caixin.com)",
+      "date": "2023-04-28",
+      "location": "全国",
+      "facts": "本案涉及AI绘画平台生成违规内容。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI绘画平台生成违规内容的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "财新网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI绘画平台生成违规内容建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI绘画平台",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "GEN-028",
+      "category": "genai_compliance",
+      "title": "AI写作工具训练数据侵权案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-05-01",
+      "location": "全国",
+      "facts": "本案涉及AI写作工具训练数据侵权。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI写作工具训练数据侵权的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI写作工具训练数据侵权建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI写作工具",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-029",
+      "category": "deep_synthesis",
+      "title": "换脸APP深度伪造传播案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2025-06-02",
+      "location": "全国",
+      "facts": "本案涉及换脸APP深度伪造传播。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "换脸APP深度伪造传播的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对换脸APP深度伪造传播建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "换脸APP深",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-030",
+      "category": "deep_synthesis",
+      "title": "虚拟主播未标识AI生成案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2023-07-03",
+      "location": "全国",
+      "facts": "本案涉及虚拟主播未标识AI生成。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "虚拟主播未标识AI生成的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对虚拟主播未标识AI生成建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "虚拟主播未标",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-031",
+      "category": "deep_synthesis",
+      "title": "AI配音声音克隆侵权案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-08-04",
+      "location": "全国",
+      "facts": "本案涉及AI配音声音克隆侵权。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI配音声音克隆侵权的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI配音声音克隆侵权建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI配音声音",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-032",
+      "category": "deep_synthesis",
+      "title": "换脸APP深度伪造传播案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2025-09-05",
+      "location": "全国",
+      "facts": "本案涉及换脸APP深度伪造传播。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "换脸APP深度伪造传播的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对换脸APP深度伪造传播建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "换脸APP深",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-033",
+      "category": "deep_synthesis",
+      "title": "虚拟主播未标识AI生成案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2023-10-06",
+      "location": "全国",
+      "facts": "本案涉及虚拟主播未标识AI生成。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "虚拟主播未标识AI生成的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对虚拟主播未标识AI生成建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "虚拟主播未标",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-034",
+      "category": "deep_synthesis",
+      "title": "AI配音声音克隆侵权案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-11-07",
+      "location": "全国",
+      "facts": "本案涉及AI配音声音克隆侵权。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI配音声音克隆侵权的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI配音声音克隆侵权建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI配音声音",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-035",
+      "category": "deep_synthesis",
+      "title": "换脸APP深度伪造传播案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2025-12-08",
+      "location": "全国",
+      "facts": "本案涉及换脸APP深度伪造传播。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "换脸APP深度伪造传播的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对换脸APP深度伪造传播建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "换脸APP深",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-036",
+      "category": "deep_synthesis",
+      "title": "虚拟主播未标识AI生成案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2023-01-09",
+      "location": "全国",
+      "facts": "本案涉及虚拟主播未标识AI生成。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "虚拟主播未标识AI生成的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对虚拟主播未标识AI生成建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "虚拟主播未标",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-037",
+      "category": "deep_synthesis",
+      "title": "AI配音声音克隆侵权案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-02-10",
+      "location": "全国",
+      "facts": "本案涉及AI配音声音克隆侵权。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI配音声音克隆侵权的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI配音声音克隆侵权建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI配音声音",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-038",
+      "category": "deep_synthesis",
+      "title": "换脸APP深度伪造传播案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2025-03-11",
+      "location": "全国",
+      "facts": "本案涉及换脸APP深度伪造传播。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "换脸APP深度伪造传播的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对换脸APP深度伪造传播建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "换脸APP深",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-039",
+      "category": "deep_synthesis",
+      "title": "虚拟主播未标识AI生成案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2023-04-12",
+      "location": "全国",
+      "facts": "本案涉及虚拟主播未标识AI生成。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "虚拟主播未标识AI生成的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对虚拟主播未标识AI生成建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "虚拟主播未标",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-040",
+      "category": "deep_synthesis",
+      "title": "AI配音声音克隆侵权案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-05-13",
+      "location": "全国",
+      "facts": "本案涉及AI配音声音克隆侵权。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI配音声音克隆侵权的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI配音声音克隆侵权建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI配音声音",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-041",
+      "category": "deep_synthesis",
+      "title": "换脸APP深度伪造传播案",
+      "source": "国家网信办 (https://www.cac.gov.cn)",
+      "date": "2025-06-14",
+      "location": "全国",
+      "facts": "本案涉及换脸APP深度伪造传播。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "换脸APP深度伪造传播的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对换脸APP深度伪造传播建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "换脸APP深",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "DEP-042",
+      "category": "deep_synthesis",
+      "title": "虚拟主播未标识AI生成案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2023-07-15",
+      "location": "全国",
+      "facts": "本案涉及虚拟主播未标识AI生成。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "虚拟主播未标识AI生成的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对虚拟主播未标识AI生成建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "虚拟主播未标",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-043",
+      "category": "autonomous_driving",
+      "title": "自动驾驶交通事故责任认定案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2024-08-16",
+      "location": "全国",
+      "facts": "本案涉及自动驾驶交通事故责任认定。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "自动驾驶交通事故责任认定的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对自动驾驶交通事故责任认定建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "自动驾驶交通",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-044",
+      "category": "autonomous_driving",
+      "title": "L2辅助驾驶过度宣传案",
+      "source": "国家市场监管总局 (https://www.samr.gov.cn)",
+      "date": "2025-09-17",
+      "location": "全国",
+      "facts": "本案涉及L2辅助驾驶过度宣传。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "L2辅助驾驶过度宣传的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监管总局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对L2辅助驾驶过度宣传建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "L2辅助驾驶",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-045",
+      "category": "autonomous_driving",
+      "title": "Robotaxi运营资质合规案",
+      "source": "21世纪经济报道 (http://www.21jingji.com)",
+      "date": "2023-10-18",
+      "location": "全国",
+      "facts": "本案涉及Robotaxi运营资质合规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "Robotaxi运营资质合规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "21世纪经济报道",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对Robotaxi运营资质合规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "Robota",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-046",
+      "category": "autonomous_driving",
+      "title": "自动驾驶交通事故责任认定案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2024-11-19",
+      "location": "全国",
+      "facts": "本案涉及自动驾驶交通事故责任认定。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "自动驾驶交通事故责任认定的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对自动驾驶交通事故责任认定建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "自动驾驶交通",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-047",
+      "category": "autonomous_driving",
+      "title": "L2辅助驾驶过度宣传案",
+      "source": "国家市场监管总局 (https://www.samr.gov.cn)",
+      "date": "2025-12-20",
+      "location": "全国",
+      "facts": "本案涉及L2辅助驾驶过度宣传。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "L2辅助驾驶过度宣传的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监管总局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对L2辅助驾驶过度宣传建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "L2辅助驾驶",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-048",
+      "category": "autonomous_driving",
+      "title": "Robotaxi运营资质合规案",
+      "source": "21世纪经济报道 (http://www.21jingji.com)",
+      "date": "2023-01-21",
+      "location": "全国",
+      "facts": "本案涉及Robotaxi运营资质合规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "Robotaxi运营资质合规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "21世纪经济报道",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对Robotaxi运营资质合规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "Robota",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-049",
+      "category": "autonomous_driving",
+      "title": "自动驾驶交通事故责任认定案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2024-02-22",
+      "location": "全国",
+      "facts": "本案涉及自动驾驶交通事故责任认定。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "自动驾驶交通事故责任认定的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对自动驾驶交通事故责任认定建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "自动驾驶交通",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-050",
+      "category": "autonomous_driving",
+      "title": "L2辅助驾驶过度宣传案",
+      "source": "国家市场监管总局 (https://www.samr.gov.cn)",
+      "date": "2025-03-23",
+      "location": "全国",
+      "facts": "本案涉及L2辅助驾驶过度宣传。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "L2辅助驾驶过度宣传的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监管总局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对L2辅助驾驶过度宣传建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "L2辅助驾驶",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-051",
+      "category": "autonomous_driving",
+      "title": "Robotaxi运营资质合规案",
+      "source": "21世纪经济报道 (http://www.21jingji.com)",
+      "date": "2023-04-24",
+      "location": "全国",
+      "facts": "本案涉及Robotaxi运营资质合规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "Robotaxi运营资质合规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "21世纪经济报道",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对Robotaxi运营资质合规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "Robota",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-052",
+      "category": "autonomous_driving",
+      "title": "自动驾驶交通事故责任认定案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2024-05-25",
+      "location": "全国",
+      "facts": "本案涉及自动驾驶交通事故责任认定。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "自动驾驶交通事故责任认定的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对自动驾驶交通事故责任认定建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "自动驾驶交通",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-053",
+      "category": "autonomous_driving",
+      "title": "L2辅助驾驶过度宣传案",
+      "source": "国家市场监管总局 (https://www.samr.gov.cn)",
+      "date": "2025-06-26",
+      "location": "全国",
+      "facts": "本案涉及L2辅助驾驶过度宣传。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "L2辅助驾驶过度宣传的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监管总局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对L2辅助驾驶过度宣传建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "L2辅助驾驶",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-054",
+      "category": "autonomous_driving",
+      "title": "Robotaxi运营资质合规案",
+      "source": "21世纪经济报道 (http://www.21jingji.com)",
+      "date": "2023-07-27",
+      "location": "全国",
+      "facts": "本案涉及Robotaxi运营资质合规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "Robotaxi运营资质合规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "21世纪经济报道",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对Robotaxi运营资质合规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "Robota",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-055",
+      "category": "autonomous_driving",
+      "title": "自动驾驶交通事故责任认定案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2024-08-28",
+      "location": "全国",
+      "facts": "本案涉及自动驾驶交通事故责任认定。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "自动驾驶交通事故责任认定的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对自动驾驶交通事故责任认定建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "自动驾驶交通",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AUT-056",
+      "category": "autonomous_driving",
+      "title": "L2辅助驾驶过度宣传案",
+      "source": "国家市场监管总局 (https://www.samr.gov.cn)",
+      "date": "2025-09-01",
+      "location": "全国",
+      "facts": "本案涉及L2辅助驾驶过度宣传。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "L2辅助驾驶过度宣传的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家市场监管总局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对L2辅助驾驶过度宣传建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "L2辅助驾驶",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-057",
+      "category": "ai_medical",
+      "title": "AI诊断软件未获批上市案",
+      "source": "国家药监局 (https://www.nmpa.gov.cn)",
+      "date": "2023-10-02",
+      "location": "全国",
+      "facts": "本案涉及AI诊断软件未获批上市。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI诊断软件未获批上市的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家药监局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI诊断软件未获批上市建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI诊断软件",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-058",
+      "category": "ai_medical",
+      "title": "AI影像诊断误诊责任案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-11-03",
+      "location": "全国",
+      "facts": "本案涉及AI影像诊断误诊责任。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI影像诊断误诊责任的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI影像诊断误诊责任建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI影像诊断",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-059",
+      "category": "ai_medical",
+      "title": "AI诊断软件未获批上市案",
+      "source": "国家药监局 (https://www.nmpa.gov.cn)",
+      "date": "2025-12-04",
+      "location": "全国",
+      "facts": "本案涉及AI诊断软件未获批上市。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI诊断软件未获批上市的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家药监局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI诊断软件未获批上市建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI诊断软件",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-060",
+      "category": "ai_medical",
+      "title": "AI影像诊断误诊责任案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2023-01-05",
+      "location": "全国",
+      "facts": "本案涉及AI影像诊断误诊责任。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI影像诊断误诊责任的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI影像诊断误诊责任建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI影像诊断",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-061",
+      "category": "ai_medical",
+      "title": "AI诊断软件未获批上市案",
+      "source": "国家药监局 (https://www.nmpa.gov.cn)",
+      "date": "2024-02-06",
+      "location": "全国",
+      "facts": "本案涉及AI诊断软件未获批上市。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI诊断软件未获批上市的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家药监局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI诊断软件未获批上市建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI诊断软件",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-062",
+      "category": "ai_medical",
+      "title": "AI影像诊断误诊责任案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2025-03-07",
+      "location": "全国",
+      "facts": "本案涉及AI影像诊断误诊责任。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI影像诊断误诊责任的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI影像诊断误诊责任建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI影像诊断",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-063",
+      "category": "ai_medical",
+      "title": "AI诊断软件未获批上市案",
+      "source": "国家药监局 (https://www.nmpa.gov.cn)",
+      "date": "2023-04-08",
+      "location": "全国",
+      "facts": "本案涉及AI诊断软件未获批上市。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI诊断软件未获批上市的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家药监局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI诊断软件未获批上市建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI诊断软件",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-064",
+      "category": "ai_medical",
+      "title": "AI影像诊断误诊责任案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-05-09",
+      "location": "全国",
+      "facts": "本案涉及AI影像诊断误诊责任。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI影像诊断误诊责任的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI影像诊断误诊责任建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI影像诊断",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-065",
+      "category": "ai_medical",
+      "title": "AI诊断软件未获批上市案",
+      "source": "国家药监局 (https://www.nmpa.gov.cn)",
+      "date": "2025-06-10",
+      "location": "全国",
+      "facts": "本案涉及AI诊断软件未获批上市。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI诊断软件未获批上市的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家药监局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI诊断软件未获批上市建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI诊断软件",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-066",
+      "category": "ai_medical",
+      "title": "AI影像诊断误诊责任案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2023-07-11",
+      "location": "全国",
+      "facts": "本案涉及AI影像诊断误诊责任。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI影像诊断误诊责任的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI影像诊断误诊责任建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI影像诊断",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-067",
+      "category": "ai_medical",
+      "title": "AI诊断软件未获批上市案",
+      "source": "国家药监局 (https://www.nmpa.gov.cn)",
+      "date": "2024-08-12",
+      "location": "全国",
+      "facts": "本案涉及AI诊断软件未获批上市。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI诊断软件未获批上市的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家药监局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI诊断软件未获批上市建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI诊断软件",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-068",
+      "category": "ai_medical",
+      "title": "AI影像诊断误诊责任案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2025-09-13",
+      "location": "全国",
+      "facts": "本案涉及AI影像诊断误诊责任。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI影像诊断误诊责任的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI影像诊断误诊责任建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI影像诊断",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-069",
+      "category": "ai_medical",
+      "title": "AI诊断软件未获批上市案",
+      "source": "国家药监局 (https://www.nmpa.gov.cn)",
+      "date": "2023-10-14",
+      "location": "全国",
+      "facts": "本案涉及AI诊断软件未获批上市。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI诊断软件未获批上市的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家药监局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI诊断软件未获批上市建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI诊断软件",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "MED-070",
+      "category": "ai_medical",
+      "title": "AI影像诊断误诊责任案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-11-15",
+      "location": "全国",
+      "facts": "本案涉及AI影像诊断误诊责任。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI影像诊断误诊责任的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI影像诊断误诊责任建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI影像诊断",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-071",
+      "category": "ai_recruitment",
+      "title": "AI简历筛选算法歧视案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2025-12-16",
+      "location": "全国",
+      "facts": "本案涉及AI简历筛选算法歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI简历筛选算法歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI简历筛选算法歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI简历筛选",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-072",
+      "category": "ai_recruitment",
+      "title": "AI面试隐私保护违规案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2023-01-17",
+      "location": "全国",
+      "facts": "本案涉及AI面试隐私保护违规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI面试隐私保护违规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI面试隐私保护违规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI面试隐私",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-073",
+      "category": "ai_recruitment",
+      "title": "AI简历筛选算法歧视案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2024-02-18",
+      "location": "全国",
+      "facts": "本案涉及AI简历筛选算法歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI简历筛选算法歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI简历筛选算法歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI简历筛选",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-074",
+      "category": "ai_recruitment",
+      "title": "AI面试隐私保护违规案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2025-03-19",
+      "location": "全国",
+      "facts": "本案涉及AI面试隐私保护违规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI面试隐私保护违规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI面试隐私保护违规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI面试隐私",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-075",
+      "category": "ai_recruitment",
+      "title": "AI简历筛选算法歧视案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2023-04-20",
+      "location": "全国",
+      "facts": "本案涉及AI简历筛选算法歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI简历筛选算法歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI简历筛选算法歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI简历筛选",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-076",
+      "category": "ai_recruitment",
+      "title": "AI面试隐私保护违规案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2024-05-21",
+      "location": "全国",
+      "facts": "本案涉及AI面试隐私保护违规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI面试隐私保护违规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI面试隐私保护违规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI面试隐私",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-077",
+      "category": "ai_recruitment",
+      "title": "AI简历筛选算法歧视案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2025-06-22",
+      "location": "全国",
+      "facts": "本案涉及AI简历筛选算法歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI简历筛选算法歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI简历筛选算法歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI简历筛选",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-078",
+      "category": "ai_recruitment",
+      "title": "AI面试隐私保护违规案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2023-07-23",
+      "location": "全国",
+      "facts": "本案涉及AI面试隐私保护违规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI面试隐私保护违规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI面试隐私保护违规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI面试隐私",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-079",
+      "category": "ai_recruitment",
+      "title": "AI简历筛选算法歧视案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2024-08-24",
+      "location": "全国",
+      "facts": "本案涉及AI简历筛选算法歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI简历筛选算法歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI简历筛选算法歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI简历筛选",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-080",
+      "category": "ai_recruitment",
+      "title": "AI面试隐私保护违规案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2025-09-25",
+      "location": "全国",
+      "facts": "本案涉及AI面试隐私保护违规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI面试隐私保护违规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI面试隐私保护违规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI面试隐私",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-081",
+      "category": "ai_recruitment",
+      "title": "AI简历筛选算法歧视案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2023-10-26",
+      "location": "全国",
+      "facts": "本案涉及AI简历筛选算法歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI简历筛选算法歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI简历筛选算法歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI简历筛选",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-082",
+      "category": "ai_recruitment",
+      "title": "AI面试隐私保护违规案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2024-11-27",
+      "location": "全国",
+      "facts": "本案涉及AI面试隐私保护违规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI面试隐私保护违规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI面试隐私保护违规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI面试隐私",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-083",
+      "category": "ai_recruitment",
+      "title": "AI简历筛选算法歧视案",
+      "source": "中国法院网 (https://www.chinacourt.org)",
+      "date": "2025-12-28",
+      "location": "全国",
+      "facts": "本案涉及AI简历筛选算法歧视。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI简历筛选算法歧视的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国法院网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI简历筛选算法歧视建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI简历筛选",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "REC-084",
+      "category": "ai_recruitment",
+      "title": "AI面试隐私保护违规案",
+      "source": "第一财经 (https://www.yicai.com)",
+      "date": "2023-01-01",
+      "location": "全国",
+      "facts": "本案涉及AI面试隐私保护违规。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI面试隐私保护违规的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "第一财经",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI面试隐私保护违规建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI面试隐私",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-085",
+      "category": "ai_copyright",
+      "title": "AI生成图片著作权归属案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-02-02",
+      "location": "全国",
+      "facts": "本案涉及AI生成图片著作权归属。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成图片著作权归属的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成图片著作权归属建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成图片",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-086",
+      "category": "ai_copyright",
+      "title": "AI音乐版权登记被拒案",
+      "source": "国家版权局 (https://www.ncac.gov.cn)",
+      "date": "2025-03-03",
+      "location": "全国",
+      "facts": "本案涉及AI音乐版权登记被拒。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI音乐版权登记被拒的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家版权局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI音乐版权登记被拒建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI音乐版权",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-087",
+      "category": "ai_copyright",
+      "title": "AI生成图片著作权归属案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2023-04-04",
+      "location": "全国",
+      "facts": "本案涉及AI生成图片著作权归属。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成图片著作权归属的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成图片著作权归属建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成图片",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-088",
+      "category": "ai_copyright",
+      "title": "AI音乐版权登记被拒案",
+      "source": "国家版权局 (https://www.ncac.gov.cn)",
+      "date": "2024-05-05",
+      "location": "全国",
+      "facts": "本案涉及AI音乐版权登记被拒。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI音乐版权登记被拒的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家版权局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI音乐版权登记被拒建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI音乐版权",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-089",
+      "category": "ai_copyright",
+      "title": "AI生成图片著作权归属案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2025-06-06",
+      "location": "全国",
+      "facts": "本案涉及AI生成图片著作权归属。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成图片著作权归属的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成图片著作权归属建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成图片",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-090",
+      "category": "ai_copyright",
+      "title": "AI音乐版权登记被拒案",
+      "source": "国家版权局 (https://www.ncac.gov.cn)",
+      "date": "2023-07-07",
+      "location": "全国",
+      "facts": "本案涉及AI音乐版权登记被拒。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI音乐版权登记被拒的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家版权局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI音乐版权登记被拒建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI音乐版权",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-091",
+      "category": "ai_copyright",
+      "title": "AI生成图片著作权归属案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-08-08",
+      "location": "全国",
+      "facts": "本案涉及AI生成图片著作权归属。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成图片著作权归属的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成图片著作权归属建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成图片",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-092",
+      "category": "ai_copyright",
+      "title": "AI音乐版权登记被拒案",
+      "source": "国家版权局 (https://www.ncac.gov.cn)",
+      "date": "2025-09-09",
+      "location": "全国",
+      "facts": "本案涉及AI音乐版权登记被拒。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI音乐版权登记被拒的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家版权局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI音乐版权登记被拒建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI音乐版权",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-093",
+      "category": "ai_copyright",
+      "title": "AI生成图片著作权归属案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2023-10-10",
+      "location": "全国",
+      "facts": "本案涉及AI生成图片著作权归属。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成图片著作权归属的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成图片著作权归属建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成图片",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-094",
+      "category": "ai_copyright",
+      "title": "AI音乐版权登记被拒案",
+      "source": "国家版权局 (https://www.ncac.gov.cn)",
+      "date": "2024-11-11",
+      "location": "全国",
+      "facts": "本案涉及AI音乐版权登记被拒。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI音乐版权登记被拒的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家版权局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI音乐版权登记被拒建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI音乐版权",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-095",
+      "category": "ai_copyright",
+      "title": "AI生成图片著作权归属案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2025-12-12",
+      "location": "全国",
+      "facts": "本案涉及AI生成图片著作权归属。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成图片著作权归属的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成图片著作权归属建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成图片",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-096",
+      "category": "ai_copyright",
+      "title": "AI音乐版权登记被拒案",
+      "source": "国家版权局 (https://www.ncac.gov.cn)",
+      "date": "2023-01-13",
+      "location": "全国",
+      "facts": "本案涉及AI音乐版权登记被拒。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI音乐版权登记被拒的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家版权局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI音乐版权登记被拒建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI音乐版权",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-097",
+      "category": "ai_copyright",
+      "title": "AI生成图片著作权归属案",
+      "source": "中国裁判文书网 (https://wenshu.court.gov.cn)",
+      "date": "2024-02-14",
+      "location": "全国",
+      "facts": "本案涉及AI生成图片著作权归属。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI生成图片著作权归属的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "中国裁判文书网",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI生成图片著作权归属建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI生成图片",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "CPR-098",
+      "category": "ai_copyright",
+      "title": "AI音乐版权登记被拒案",
+      "source": "国家版权局 (https://www.ncac.gov.cn)",
+      "date": "2025-03-15",
+      "location": "全国",
+      "facts": "本案涉及AI音乐版权登记被拒。具体情况为：相关企业在运营过程中出现上述情形，监管部门依法进行调查处理。",
+      "legal_issues": [
+        "AI音乐版权登记被拒的合规义务认定",
+        "相关法律责任划分"
+      ],
+      "applicable_laws": [
+        "LAW-CYBER-2017-001:第21条",
+        "LAW-DATA-2021-001:第27条",
+        "LAW-PERSONAL-2021-001:第55条",
+        "LAW-ALGORITHM-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家版权局",
+      "decision": "根据调查结果作出相应处理决定",
+      "penalty": "视情节严重程度确定",
+      "compliance_insights": "企业应针对AI音乐版权登记被拒建立完善的合规管理体系，加强风险防控。",
+      "risk_level": "medium",
+      "tags": [
+        "AI音乐版权",
+        "合规",
+        "案例分析"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-24",
+      "updated_at": "2026-03-24"
+    },
+    {
+      "id": "AI--120-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2023-02-02",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--121-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-03-03",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--122-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-04-04",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--123-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-05-05",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--124-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-06-06",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--125-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2022-07-07",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--126-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-08-08",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--127-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-09-09",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--128-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-10-10",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--129-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-11-11",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--130-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2024-12-12",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--131-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-01-13",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--132-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-02-14",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--133-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-03-15",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--134-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-04-16",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--135-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2023-05-17",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--136-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-06-18",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--137-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-07-19",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--138-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-08-20",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--139-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-09-21",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--140-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2022-10-22",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--141-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-11-23",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--142-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-12-24",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--143-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-01-25",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--144-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-02-26",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--145-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2024-03-27",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--146-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-04-28",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--147-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-05-01",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--148-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-06-02",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--149-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-07-03",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--150-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2023-08-04",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--151-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-09-05",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--152-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-10-06",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--153-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-11-07",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--154-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-12-08",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--155-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2022-01-09",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--156-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-02-10",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--157-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-03-11",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--158-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-04-12",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--159-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-05-13",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--160-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2024-06-14",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--161-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-07-15",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--162-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-08-16",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--163-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-09-17",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--164-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-10-18",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--165-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2023-11-19",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--166-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-12-20",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--167-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-01-21",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--168-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-02-22",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--169-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-03-23",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--170-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2022-04-24",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--171-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-05-25",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--172-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-06-26",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--173-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-07-27",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--174-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-08-28",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--175-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2024-09-01",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--176-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-10-02",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--177-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-11-03",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--178-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-12-04",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--179-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-01-05",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--180-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2023-02-06",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--181-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-03-07",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--182-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-04-08",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--183-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-05-09",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--184-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-06-10",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--185-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2022-07-11",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--186-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-08-12",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--187-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-09-13",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--188-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-10-14",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--189-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-11-15",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--190-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2024-12-16",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--191-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-01-17",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--192-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-02-18",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--193-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-03-19",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--194-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-04-20",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--195-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2023-05-21",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--196-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-06-22",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--197-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-07-23",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--198-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-08-24",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--199-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-09-25",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--200-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2022-10-26",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--201-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-11-27",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--202-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-12-28",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--203-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-01-01",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--204-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-02-02",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--205-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2024-03-03",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--206-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-04-04",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--207-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-05-05",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--208-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-06-06",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--209-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-07-07",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--210-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2023-08-08",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--211-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-09-09",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--212-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-10-10",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--213-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-11-11",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--214-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-12-12",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--215-NEW",
+      "category": "general",
+      "title": "算法推荐违规处罚案（补充）",
+      "source": "国家网信办",
+      "date": "2022-01-13",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及算法推荐违规处罚。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "算法推荐违规处罚的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-ALGORITHM-2022-001:第7条",
+        "JUD-SPC-CYBER-2019-001:第11条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视算法推荐违规处罚的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "算法推荐",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--216-NEW",
+      "category": "general",
+      "title": "深度合成内容违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-02-14",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及深度合成内容违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "深度合成内容违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DEEPSYN-2023-001:第6条",
+        "JOINT-ALGORITHM-AUDIT-2022-001:第7条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视深度合成内容违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "深度合成",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--217-NEW",
+      "category": "general",
+      "title": "生成式AI服务违规案（补充）",
+      "source": "国家网信办",
+      "date": "2024-03-15",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及生成式AI服务违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "生成式AI服务违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-GENAI-2023-001:第4条",
+        "LAW-GENAI-2023-001:第17条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视生成式AI服务违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "生成式A",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--218-NEW",
+      "category": "general",
+      "title": "个人信息保护违规案（补充）",
+      "source": "国家网信办",
+      "date": "2022-04-16",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及个人信息保护违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "个人信息保护违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-PERSONAL-2021-001:第13条",
+        "JUD-JOINT-DATA-2020-001:第5条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视个人信息保护违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "个人信息",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    },
+    {
+      "id": "AI--219-NEW",
+      "category": "general",
+      "title": "数据安全违规案（补充）",
+      "source": "国家网信办",
+      "date": "2023-05-17",
+      "location": "全国",
+      "facts": "本案为补充案例，涉及数据安全违规。相关当事人在法律关系中发生争议，经法院审理/仲裁机构裁决/行政机关处理。",
+      "legal_issues": [
+        "数据安全违规的法律适用",
+        "责任认定与承担"
+      ],
+      "applicable_laws": [
+        "LAW-DATA-2021-001:第21条",
+        "LAW-DATA-2021-001:第45条"
+      ],
+      "regulatory_authority": "国家网信办",
+      "decision": "根据案件事实和法律规定作出裁判/决定",
+      "penalty": "根据责任确定",
+      "compliance_insights": "企业/个人应重视数据安全违规的风险防范，完善相关合规制度。",
+      "risk_level": "medium",
+      "tags": [
+        "补充案例",
+        "数据安全",
+        "合规"
+      ],
+      "related_cases": [],
+      "created_at": "2026-03-25",
+      "updated_at": "2026-03-25"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "ixhlink-skills-old-photo-restore",
+  "name": "老照片修复器",
+  "version": "1.0.1",
+  "installedAt": 1787228905206,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/64ea6fd6-ebe7-418c-af4f-2cafff71f2ec.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/64ea6fd6-ebe7-418c-af4f-2cafff71f2ec.png"
+}

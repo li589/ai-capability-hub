@@ -1,0 +1,20 @@
+{
+  "name": "flight-tracker",
+  "installedAt": 1787228459911,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2053081971342372864",
+  "examples_zh": [
+    "查询现在瑞士上空有哪些航班，并列出呼号、高度和速度。",
+    "帮我用呼号 SWR123 追踪这架飞机的实时位置。",
+    "查一下今天从 JFK 到 LHR 的航班时刻和可用航班信息。"
+  ],
+  "examples_en": [
+    "Show live flights currently over Switzerland with callsign, altitude, and speed.",
+    "Track callsign SWR123 and report its current OpenSky position.",
+    "Search today's flight schedule from JFK to LHR and list available flights."
+  ],
+  "description_zh": "实时航班追踪，支持按地区、呼号、机场查询航班动态与时刻",
+  "description_en": "Real-time flight tracking and schedule search via OpenSky Network",
+  "iconSource": "letter:auto"
+}

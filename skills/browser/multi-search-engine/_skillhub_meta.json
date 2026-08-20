@@ -1,0 +1,20 @@
+{
+  "name": "多引擎搜索",
+  "installedAt": 1785784642669,
+  "source": "marketplace",
+  "version": "2.1.3",
+  "skillId": "skill_2053082413554933760",
+  "examples_zh": [
+    "用百度搜索人工智能最新进展",
+    "同时在多个搜索引擎搜索某关键词",
+    "用必应搜索技术文档"
+  ],
+  "examples_en": [
+    "Search for AI latest developments with Baidu",
+    "Search a keyword across multiple engines simultaneously",
+    "Use Bing to search technical documentation"
+  ],
+  "description_zh": "集成 17 个搜索引擎（8 国内 + 9 国际），无需 API",
+  "description_en": "Multi search engine integration with 16 engines (7 CN + 9 Global). Supports adva...",
+  "iconSource": "letter:auto"
+}

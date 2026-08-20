@@ -1,0 +1,12 @@
+{
+  "slug": "sbkj-official-en",
+  "name": "招投标行业情报分析【世舶科技】",
+  "version": "1.0.2",
+  "installedAt": 1787227491217,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7920727c-4e7d-496a-9223-d9c6673e9e53.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7920727c-4e7d-496a-9223-d9c6673e9e53.png"
+}

@@ -1,0 +1,2 @@
+#!/usr/bin/env sh
+exec python3 "$CODEBUDDY_PLUGIN_ROOT/scripts/xunpanyun_cli.py" "$@"

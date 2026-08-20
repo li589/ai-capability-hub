@@ -1,0 +1,42 @@
+name: wechat-article-branding
+display_name: "微信公众号文章品牌化"
+version: "0.1.0"
+entrypoint: lovstudio-wechat-article-branding
+modules:
+  - id: article-access
+    skill: lovstudio-wechat-branding-article-access
+    path: references/module-article-access.md
+  - id: content-intelligence
+    skill: lovstudio-wechat-branding-content-intelligence
+    path: references/module-content-intelligence.md
+  - id: cover-direction
+    skill: lovstudio-wechat-branding-cover-direction
+    path: references/module-cover-direction.md
+  - id: brand-application
+    skill: lovstudio-wechat-branding-brand-application
+    path: references/module-brand-application.md
+  - id: quality-gate
+    skill: lovstudio-wechat-branding-quality-gate
+    path: references/module-quality-gate.md
+pipelines:
+  full:
+    - article-access
+    - content-intelligence
+    - cover-direction
+    - brand-application
+    - quality-gate
+  content:
+    - article-access
+    - content-intelligence
+    - quality-gate
+  cover:
+    - article-access
+    - cover-direction
+    - quality-gate
+  brand:
+    - article-access
+    - brand-application
+    - quality-gate
+  audit:
+    - article-access
+    - quality-gate

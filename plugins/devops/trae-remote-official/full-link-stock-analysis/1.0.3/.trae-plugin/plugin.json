@@ -1,0 +1,25 @@
+{
+  "name": "full-link-stock-analysis",
+  "version": "1.0.3",
+  "displayName": "全链路个股分析助手",
+  "description": "覆盖从实时盘面、盯盘择时、事件归因到深度研究报告的完整链路，支持 A股 / 港股 / 美股 / 基金。提供实时行情速览、异动归因、技术面研判、DCF 与可比估值、三表建模、竞争格局与产业链、首次覆盖报告、财报解读与多空推介等能力。实时数据统一走金融数据源，取数标注来源与时效，缺失如实标注、绝不编造。",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "logo": "./assets/icon.svg",
+  "keywords": [
+    "个股分析",
+    "研究报告",
+    "估值建模",
+    "财报分析",
+    "盯盘异动",
+    "A股",
+    "港股",
+    "美股",
+    "基金"
+  ],
+  "skills": "./skills/",
+  "mcp": "./.mcp.json",
+  "connector": "./connector.json"
+}

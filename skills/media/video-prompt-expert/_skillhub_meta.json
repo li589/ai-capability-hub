@@ -1,0 +1,11 @@
+{
+  "name": "视频生成提示词专家",
+  "installedAt": 1787227585087,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087461957160706048",
+  "description_zh": "帮助编写专业级AI视频提示词，支持多种创作场景与问题诊断，写完直接生成视频",
+  "description_en": "Craft professional AI video prompts and generate MP4 videos directly.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_0450c373-9e8.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_0450c373-9e8.svg"
+}

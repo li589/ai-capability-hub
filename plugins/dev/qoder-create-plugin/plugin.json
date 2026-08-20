@@ -1,0 +1,8 @@
+{
+  "name": "qoder-create-plugin",
+  "version": "0.1.0",
+  "description": "Scaffold and create new Qoder marketplace plugins",
+  "marketplaceName": "qoder-bundler",
+  "defaultEnabled": true,
+  "visibility": "hidden"
+}

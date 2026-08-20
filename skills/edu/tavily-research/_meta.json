@@ -1,0 +1,11 @@
+{
+  "owner": "evanydl",
+  "slug": "tavily-research",
+  "displayName": "Tavily Research",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773164859582,
+    "commit": "https://github.com/openclaw/skills/commit/0117b78721c24e7b64da3301043066a71528aaaf"
+  },
+  "history": []
+}

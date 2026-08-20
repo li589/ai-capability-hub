@@ -1,0 +1,55 @@
+{
+  "server": {
+    "host": "",
+    "port": 20201
+  },
+  "apis": {
+    "workstation_data": "/open-api/bp/erp_ws",
+    "eq_data": "/open-api/bp/erp_eq",
+    "factory_data": "/open-api/bp/erp_fb",
+    "material_data": "/open-api/bp/erp_mb",
+    "me_op_data": "/open-api/bp/erp_ob",
+    "mo_data": "/open-api/bp/erpInsertMoid",
+    "process_route_data": "/open-api/bp/erp_prb",
+    "order_data": "/open-api/bp/erp_sod",
+    "process_route_detail_data": "/open-api/bp/erp_mrd",
+    "warehouse_data": "/open-api/bp/erp_wb",
+    "pqc_data": "/open-api/bp/erp_ipd",
+    "mold_data": "/open-api/bp/erp_mold",
+    "emcheck_data": "/open-api/bp/erp_emcheck",
+    "customer_data": "/open-api/bp/erp_customer",
+    "qc_item_data": "/open-api/bp/erp_qcitem",
+    "collection_data": "/open-api/bp/erp_collect",
+    "bom_data": "/open-api/bp/erp_bom",
+    "wage_data": "/open-api/bp/erp_wage"
+  },
+  "default_batch_size": 500,
+  "timeout_seconds": 30,
+  "max_retries": 2,
+  "auth": {
+    "enabled": true,
+    "mode": "account",
+    "account": {
+      "login_endpoint": "/account/v1/login",
+      "user_name": "",
+      "password": "",
+      "language": "zh_CN",
+      "platform": "PC"
+    },
+    "sso": {
+      "code_endpoint": "/sso/v1/code",
+      "token_endpoint": "/sso/v1/token",
+      "user_no": "",
+      "app_id": "",
+      "app_secret": "",
+      "language": "zh_CN",
+      "env_type": "sMES",
+      "mode": "Url",
+      "appNo": "",
+      "platform": "PC"
+    },
+    "token_field": "result.token.accessToken",
+    "token_header": "Authorization",
+    "token_prefix": "Bearer "
+  }
+}

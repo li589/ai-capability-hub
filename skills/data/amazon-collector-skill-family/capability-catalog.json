@@ -1,0 +1,83 @@
+{
+  "schema_version": "1.0",
+  "package": "amazon-collector-skill-family",
+  "display_name": "Amazon 商品采集 Skill 家族",
+  "execution": {
+    "mode": "direct-mcp",
+    "server": "bazhuayu",
+    "endpoint": "https://mcp.bazhuayu.com",
+    "credential": "由客户在平台安全配置中提供 API Key",
+    "creates_cloud_tasks": true
+  },
+  "result_first_summary": "输入关键词、商品数量和亚马逊站点后，输出商品列表、完整详情和每个商品最多100条评论的CSV文件。也支持按ASIN独立采集详情或评论，以及对已有阶段数据单独导出CSV。",
+  "supported_sites": ["AU", "CA", "UK", "US", "IN", "DE", "SE", "NL", "BE", "JP", "IT", "FR", "ES", "PL", "TR", "MX", "AE", "SA", "IE", "SG", "BR", "EG"],
+  "capabilities": [
+    {
+      "skill": "amazon-keyword-collector",
+      "display_name": "关键词完整采集",
+      "intent": "采集某站点关键词下指定数量商品的列表、详情和评论",
+      "input_contract": "contracts/keyword-request.schema.json",
+      "required_inputs": ["keyword", "quantity", "site"],
+      "outputs": ["list.csv", "details.csv", "reviews.csv", "run-state.json"],
+      "example_request": "采集英国站关键词 cup 前30个商品的详情和评论"
+    },
+    {
+      "skill": "amazon-product-list",
+      "display_name": "关键词商品列表",
+      "intent": "只采集某站点关键词下指定数量的商品列表",
+      "input_contract": "contracts/keyword-request.schema.json",
+      "required_inputs": ["keyword", "quantity", "site"],
+      "outputs": ["list-stage.json"],
+      "example_request": "只采集美国站 cup 前30个商品列表"
+    },
+    {
+      "skill": "amazon-product-details",
+      "display_name": "ASIN商品详情",
+      "intent": "按一个或多个ASIN采集指定站点的商品详情",
+      "input_contract": "contracts/asin-request.schema.json",
+      "required_inputs": ["asins", "site"],
+      "outputs": ["details-stage.json"],
+      "example_request": "采集英国站 ASIN B0CP9YB3Q4 的商品详情"
+    },
+    {
+      "skill": "amazon-product-reviews",
+      "display_name": "ASIN商品评论",
+      "intent": "按一个或多个ASIN采集指定站点的商品评论",
+      "input_contract": "contracts/asin-request.schema.json",
+      "required_inputs": ["asins", "site"],
+      "optional_inputs": {
+        "review_limit": 100,
+        "review_start_date": {
+          "applies_to": "all-supported-sites",
+          "format": "yyyy-mm-dd",
+          "default": "request_date_minus_one_calendar_year"
+        }
+      },
+      "outputs": ["reviews-stage.json"],
+      "example_request": "采集日本站 ASIN B0CP9YB3Q4 的前50条评论"
+    },
+    {
+      "skill": "amazon-csv-export",
+      "display_name": "CSV结果导出",
+      "intent": "将已有列表、详情和评论阶段数据合并、去重、校验并导出CSV",
+      "required_inputs": ["run_id_or_run_directory"],
+      "outputs": ["list.csv", "details.csv", "reviews.csv"],
+      "example_request": "把这个Amazon采集运行目录导出成CSV"
+    }
+  ],
+  "operational_guards": [
+    "首次MCP调用前提示：免费版与个人版每周最多2000条，团队版不限条数",
+    "每次运行先读取模板最新inputSchema和sourceTree",
+    "阶段交接使用版本化JSON契约",
+    "失败状态只报告PARTIAL或FAILED",
+    "API Key不进入日志、状态文件和CSV",
+    "恢复运行不重复创建已完成阶段任务",
+    "每个采集阶段只创建一个模板任务，所有已暴露的步长字段固定为1000",
+    "US和JP在客户未指定评论数量时，任务最多运行30分钟后停止"
+  ],
+  "preview_status": {
+    "capability_contract": "ready",
+    "workbuddy_import_format": "ready",
+    "qwen_office_import_format": "pending-platform-confirmation"
+  }
+}

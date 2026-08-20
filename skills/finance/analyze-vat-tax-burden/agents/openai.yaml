@@ -1,0 +1,4 @@
+interface:
+  display_name: "增值税税负分析"
+  short_description: "计算增值税税负、校验申报数据并拆解各期间波动原因"
+  default_prompt: "Use $analyze-vat-tax-burden to calculate my VAT burden, check data reconciliation, and explain period-over-period changes."

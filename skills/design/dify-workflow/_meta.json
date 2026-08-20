@@ -1,0 +1,11 @@
+{
+  "owner": "arn0ld87",
+  "slug": "dify-workflow",
+  "displayName": "Dify Workflow DSL Expert",
+  "latest": {
+    "version": "1.3.0",
+    "publishedAt": 1774108628390,
+    "commit": "https://github.com/openclaw/skills/commit/1d9248e78097f6a1f6b1aaaac9ea028b8923d8bf"
+  },
+  "history": []
+}

@@ -1,0 +1,12 @@
+{
+  "source": "tdxclaw-preinstalled",
+  "slug": "tdx-asset-allocation-rotation",
+  "version": "1.0.0",
+  "installedAt": "2026-07-17T00:00:00+08:00",
+  "transport": {
+    "type": "skill",
+    "loader": "skill-md"
+  },
+  "supportedMethods": [],
+  "notDirectMcpMethods": []
+}

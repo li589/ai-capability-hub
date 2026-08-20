@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg-blue-smart-outsourcing-assistant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5DA3E8"/>
+      <stop offset="100%" stop-color="#165296"/>
+    </linearGradient>
+    <linearGradient id="bg-orange-smart-outsourcing-assistant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A93C"/>
+      <stop offset="100%" stop-color="#DD7B2C"/>
+    </linearGradient>
+    <clipPath id="clip-smart-outsourcing-assistant">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-smart-outsourcing-assistant)">
+    <rect width="64" height="44" fill="url(#bg-blue-smart-outsourcing-assistant)"/>
+    <rect y="44" width="64" height="20" fill="url(#bg-orange-smart-outsourcing-assistant)"/>
+    <g fill="#FFFFFF" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+
+<circle cx="31" cy="14" r="5.5" fill="#FFFFFF"/>
+<circle cx="16" cy="34" r="5" fill="#FFFFFF"/>
+<circle cx="46" cy="34" r="5" fill="#FFFFFF"/>
+<line x1="27" y1="18" x2="19" y2="30" stroke="#FFFFFF" stroke-width="2.5"/>
+<line x1="35" y1="18" x2="43" y2="30" stroke="#FFFFFF" stroke-width="2.5"/>
+<path d="M31 8 v3 M28 14 h-3 M34 14 h3" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+
+    </g>
+    <text x="32" y="58" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">eMES</text>
+  </g>
+</svg>

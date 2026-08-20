@@ -1,0 +1,11 @@
+{
+  "name": "海外跨平台热文搜索",
+  "installedAt": 1785864583104,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084175997491912704",
+  "description_zh": "输入关键词（中英文均可），一次搜索 X / TikTok / YouTube 三平台热门内容，每平台 Top N 统一字段列表（平台/标题/作者/播放/点赞/评论/发布时间），中文关键词优先中文内容、英文关键词优先英文内容，终端分组表格 + CSV + 交互式 HTML 报告（卡片/表格双视图），适合热点追踪、跨平台对比与素材采集。",
+  "description_en": "Search any keyword (Chinese or English) across X / TikTok / YouTube and get each platform's Top N trending posts in one unified list (platform/title/author/views/likes/comments/date). Language-aware ranking: a Chinese keyword surfaces Chinese content first, an English keyword surfaces English content first, other languages as fallback. Grouped terminal table + CSV export + interactive HTML report (card/table views) — ideal for trend tracking, cross-platform comparison and content research.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_3bf78786-4c9.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_3bf78786-4c9.svg"
+}

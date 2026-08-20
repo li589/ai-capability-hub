@@ -1,0 +1,11 @@
+{
+  "owner": "llcsamih",
+  "slug": "ssl-setup",
+  "displayName": "SSL + Nginx Setup",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775627067162,
+    "commit": "https://github.com/openclaw/skills/commit/e01b3922a0fa95263d7ba9902e3f6c73a0742ff1"
+  },
+  "history": []
+}

@@ -1,0 +1,10 @@
+{
+  "name": "outbound-engine",
+  "installedAt": 1785864385390,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053082541772902400",
+  "description_zh": "自动化外拓邮件引擎，从 ICP 定义到邮件入站全流程",
+  "description_en": "Automated cold outbound engine from ICP definition to inbox delivery",
+  "iconSource": "letter:auto"
+}

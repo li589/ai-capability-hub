@@ -1,0 +1,1 @@
+import{homedir as r}from"node:os";import{join as o}from"node:path";const t=o(r(),".wind-alice");export function resolveDataDir(r){const n=process.env.ALICE_DATA_DIR,i=n&&String(n).trim()?String(n).trim():t;return r?o(i,r):i}

@@ -1,0 +1,11 @@
+{
+  "owner": "oct16",
+  "slug": "tickhub",
+  "displayName": "TickHub",
+  "latest": {
+    "version": "0.0.1",
+    "publishedAt": 1775203201126,
+    "commit": "https://github.com/openclaw/skills/commit/e7153b0dff383ab6917fc27fdfb6479e774f9de8"
+  },
+  "history": []
+}

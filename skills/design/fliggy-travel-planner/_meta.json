@@ -1,0 +1,17 @@
+{
+  "owner": "nodermachine",
+  "slug": "fliggy-travel-planner",
+  "displayName": "travel planner",
+  "latest": {
+    "version": "1.0.7",
+    "publishedAt": 1774430961322,
+    "commit": "https://github.com/openclaw/skills/commit/da0301509b734e954ae6a91e8b4bdb3f10a3a40d"
+  },
+  "history": [
+    {
+      "version": "1.0.4",
+      "publishedAt": 1773660020414,
+      "commit": "https://github.com/openclaw/skills/commit/e6a44f7e8c6d3770b077d65fc4b7d6d4a9df36cf"
+    }
+  ]
+}

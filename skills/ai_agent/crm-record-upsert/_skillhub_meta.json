@@ -1,0 +1,11 @@
+{
+  "name": "CRM建档更新",
+  "installedAt": 1787228620278,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088537049613733888",
+  "description_zh": "受控新增或编辑lead、customer、contact，执行字段发现、格式校验、查重、预览、确认和回查。适用于用户要求CRM建档更新、生成相关结果或检查执行边界时。",
+  "description_en": "CRM Record Upsert workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_385518f9-418.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_385518f9-418.png"
+}

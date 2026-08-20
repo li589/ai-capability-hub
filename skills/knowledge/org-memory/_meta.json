@@ -1,0 +1,27 @@
+{
+  "owner": "dcprevere",
+  "slug": "org-memory",
+  "displayName": "org-memory",
+  "latest": {
+    "version": "0.3.1",
+    "publishedAt": 1772112963448,
+    "commit": "https://github.com/openclaw/skills/commit/119a62ff5f87465da20b9e3aee00af435c1dada7"
+  },
+  "history": [
+    {
+      "version": "0.2.1",
+      "publishedAt": 1771600262202,
+      "commit": "https://github.com/openclaw/skills/commit/54eb60bf6541ad785846cce1b490f16dec0af94f"
+    },
+    {
+      "version": "0.1.4",
+      "publishedAt": 1771240129322,
+      "commit": "https://github.com/openclaw/skills/commit/1b9ddced64d129900904fc5a98a48fad0b954853"
+    },
+    {
+      "version": "0.1.3",
+      "publishedAt": 1770826759585,
+      "commit": "https://github.com/openclaw/skills/commit/b7ced53b9bfa8a45cf20a6e1432f911d4d4f4c85"
+    }
+  ]
+}

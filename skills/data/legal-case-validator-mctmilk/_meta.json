@@ -1,0 +1,11 @@
+{
+  "owner": "mctmilk",
+  "slug": "legal-case-validator-mctmilk",
+  "displayName": "类案检索验证",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774324283786,
+    "commit": "https://github.com/openclaw/skills/commit/8415a36ee0baf76bd6b869bc88099981d0d3e8b1"
+  },
+  "history": []
+}

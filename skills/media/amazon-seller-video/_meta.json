@@ -1,0 +1,11 @@
+{
+  "owner": "peand-rover",
+  "slug": "amazon-seller-video",
+  "displayName": "Amazon Seller Video",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775090161287,
+    "commit": "https://github.com/openclaw/skills/commit/e4224dc5ac6183110d76cd99f1a43cbfd3a19d19"
+  },
+  "history": []
+}

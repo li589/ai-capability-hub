@@ -1,0 +1,27 @@
+{
+  "name": "ai-legal-assistant-pro",
+  "version": "1.0.0",
+  "description": "Chinese legal-assistance skill for contract risk scanning, lawsuit-cost estimation, and structured legal drafting skeletons.",
+  "keywords": [
+    "openclaw",
+    "skill",
+    "legal",
+    "contract",
+    "lawsuit",
+    "labor"
+  ],
+  "author": "jianghaidong",
+  "license": "MIT",
+  "openclaw": {
+    "skill": true,
+    "category": "legal",
+    "triggers": [
+      "合同风险",
+      "合同审查",
+      "诉讼费",
+      "被辞退赔偿",
+      "起诉状",
+      "答辩状"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools==75.8.2", "wheel==0.45.1"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fund-advisor"
+version = "10.1.0"
+description = "基金投资智能顾问 - 投顾/投后/配置/量化回测/因子/情景/经理对话/跟仓/行为画像/定制报告/自进化学习(v10)"
+requires-python = ">=3.8"
+# 零依赖:core skill 只需要 Python 3.8+ 标准库
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/example/fund-advisor"
+Documentation = "https://github.com/example/fund-advisor/blob/main/SKILL.md"
+"Bug Tracker" = "https://github.com/example/fund-advisor/issues"
+
+[project.scripts]
+fund-advisor = "fund_advisor.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["scripts*", "fund_advisor*"]
+
+[tool.setuptools.package-data]
+"scripts" = ["py.typed"]
+"fund_advisor" = [
+    "data/*.json",
+    "data/clients/.gitkeep",
+]

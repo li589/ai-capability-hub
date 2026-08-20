@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Product Stage Dynamic UI companion</title>
+  <desc id="desc">Six spacious procurement widget layouts built from a large focal stage and a few named supporting objects.</desc>
+  <defs>
+    <style>
+      .bg{fill:#fff}.panel{fill:#f5f7fc;stroke:#d8dfee}.ink{fill:#162033}.muted{fill:#657086}.blue{fill:#2b63e8}.dark{fill:#162033}.rule{stroke:#d8dfee;fill:none}.blue-line{stroke:#2b63e8;fill:none;stroke-linecap:round;stroke-linejoin:round}.label{font:600 11px Arial,sans-serif;letter-spacing:1px}.meta{font:400 9px Arial,sans-serif}.tiny{font:600 8px Arial,sans-serif}.metric{font:700 20px Arial,sans-serif}
+    </style>
+  </defs>
+  <rect class="bg" width="960" height="720"/>
+  <text x="24" y="28" class="ink label">PRODUCT STAGE / DYNAMIC UI COMPOSITION PLATE</text>
+  <text x="936" y="28" text-anchor="end" class="muted meta">ONE FOCAL PLANE · GENEROUS GAPS</text>
+
+  <g transform="translate(24 54)">
+    <rect class="panel" width="444" height="190" rx="18"/>
+    <rect x="18" y="18" width="265" height="154" rx="16" fill="#fff" stroke="#d8dfee"/>
+    <text x="36" y="42" class="ink label">01 · AWARD FRONTIER</text>
+    <path d="M42 140L88 130L132 112L184 88L238 60" class="blue-line" stroke-width="3"/>
+    <circle cx="88" cy="130" r="6" class="dark"/><circle cx="132" cy="112" r="6" class="dark"/><circle cx="184" cy="88" r="8" class="blue"/><circle cx="238" cy="60" r="6" class="dark"/>
+    <rect x="300" y="18" width="126" height="82" rx="16" class="blue"/><text x="318" y="42" fill="#fff" class="tiny">RECOMMENDED</text><text x="318" y="73" fill="#fff" class="metric">02</text>
+    <rect x="300" y="116" width="126" height="56" rx="16" class="dark"/><text x="318" y="140" fill="#fff" class="meta">LOCK SUPPLIER</text><text x="318" y="158" fill="#fff" class="tiny">CLICK / ENTER</text>
+  </g>
+
+  <g transform="translate(492 54)">
+    <rect class="panel" width="444" height="190" rx="18"/>
+    <text x="18" y="28" class="ink label">02 · PRICE PULSE</text>
+    <rect x="18" y="44" width="408" height="100" rx="16" fill="#fff" stroke="#d8dfee"/>
+    <path d="M40 118C88 108 108 76 152 88S212 114 258 76S326 62 402 72" class="blue-line" stroke-width="3"/>
+    <circle cx="258" cy="76" r="7" class="blue"/><circle cx="402" cy="72" r="7" class="dark"/>
+    <rect x="18" y="158" width="174" height="14" rx="7" class="blue"/><rect x="202" y="158" width="84" height="14" rx="7" fill="#b7c8f2"/><rect x="296" y="158" width="130" height="14" rx="7" class="dark"/>
+  </g>
+
+  <g transform="translate(24 274)">
+    <rect class="panel" width="444" height="190" rx="18"/>
+    <rect x="18" y="18" width="160" height="154" rx="16" class="dark"/><text x="36" y="44" fill="#fff" class="label">03 · RISK</text><text x="36" y="82" fill="#fff" class="metric">4 / 6</text><text x="36" y="104" fill="#fff" class="meta">GATES VERIFIED</text>
+    <rect x="194" y="18" width="232" height="154" rx="16" fill="#fff" stroke="#d8dfee"/>
+    <g transform="translate(214 40)">
+      <rect width="42" height="42" rx="9" class="blue"/><rect x="50" width="42" height="42" rx="9" fill="#dfe7fb"/><rect x="100" width="42" height="42" rx="9" class="dark"/><rect x="150" width="42" height="42" rx="9" fill="#dfe7fb"/>
+      <rect y="50" width="42" height="42" rx="9" fill="#dfe7fb"/><rect x="50" y="50" width="42" height="42" rx="9" class="dark"/><rect x="100" y="50" width="42" height="42" rx="9" class="blue"/><rect x="150" y="50" width="42" height="42" rx="9" fill="#dfe7fb"/>
+      <rect y="100" width="92" height="12" rx="6" class="blue"/><rect x="100" y="100" width="92" height="12" rx="6" class="dark"/>
+    </g>
+  </g>
+
+  <g transform="translate(492 274)">
+    <rect class="panel" width="444" height="190" rx="18"/>
+    <text x="18" y="28" class="ink label">04 · EXCEPTION QUEUE</text>
+    <rect x="18" y="44" width="408" height="52" rx="16" class="blue"/><text x="38" y="66" fill="#fff" class="tiny">01 · STOCKOUT WINDOW</text><text x="38" y="84" fill="#fff" class="meta">02 AUG · OWNER A</text><circle cx="398" cy="70" r="8" fill="#fff"/>
+    <rect x="18" y="108" width="194" height="64" rx="16" fill="#fff" stroke="#d8dfee"/><text x="36" y="134" class="ink meta">02 · LATE SUPPLY</text><text x="36" y="154" class="muted tiny">05 AUG</text>
+    <rect x="228" y="108" width="198" height="64" rx="16" class="dark"/><text x="246" y="134" fill="#fff" class="meta">03 · MOQ GAP</text><text x="246" y="154" fill="#fff" class="tiny">09 AUG</text>
+  </g>
+
+  <g transform="translate(24 494)">
+    <rect class="panel" width="444" height="190" rx="18"/>
+    <text x="18" y="28" class="ink label">05 · LANDED FLOW</text>
+    <rect x="18" y="44" width="270" height="128" rx="16" fill="#fff" stroke="#d8dfee"/>
+    <circle cx="54" cy="108" r="14" class="blue"/><circle cx="150" cy="82" r="14" class="dark"/><circle cx="150" cy="134" r="14" fill="#dfe7fb"/><circle cx="252" cy="108" r="16" class="blue"/>
+    <path d="M68 104C96 94 112 84 136 82M68 112C98 124 112 132 136 134M164 82C196 84 216 96 236 104M164 134C198 132 216 120 236 112" class="blue-line" stroke-width="2"/>
+    <rect x="304" y="44" width="122" height="128" rx="16" class="dark"/><text x="322" y="70" fill="#fff" class="tiny">LANDED TOTAL</text><text x="322" y="102" fill="#fff" class="metric">¥ 9.42</text><text x="322" y="130" fill="#fff" class="meta">COST / UNIT</text>
+  </g>
+
+  <g transform="translate(492 494)">
+    <rect class="panel" width="444" height="190" rx="18"/>
+    <text x="18" y="28" class="ink label">06 · EXECUTION TRACK</text>
+    <rect x="18" y="44" width="408" height="128" rx="16" fill="#fff" stroke="#d8dfee"/>
+    <path d="M64 100H380" class="rule" stroke-width="3"/>
+    <circle cx="74" cy="100" r="18" class="blue"/><circle cx="176" cy="100" r="18" class="dark"/><circle cx="278" cy="100" r="18" fill="#dfe7fb"/><circle cx="380" cy="100" r="18" class="blue"/>
+    <text x="74" y="104" text-anchor="middle" fill="#fff" class="tiny">01</text><text x="176" y="104" text-anchor="middle" fill="#fff" class="tiny">02</text><text x="278" y="104" text-anchor="middle" class="ink tiny">03</text><text x="380" y="104" text-anchor="middle" fill="#fff" class="tiny">04</text>
+    <text x="74" y="140" text-anchor="middle" class="muted meta">VERIFY</text><text x="176" y="140" text-anchor="middle" class="muted meta">PILOT</text><text x="278" y="140" text-anchor="middle" class="muted meta">AWARD</text><text x="380" y="140" text-anchor="middle" class="muted meta">REVIEW</text>
+  </g>
+</svg>

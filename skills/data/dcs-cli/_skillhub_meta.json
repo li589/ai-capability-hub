@@ -1,0 +1,11 @@
+{
+  "name": "DCS Cloud生命科学研究智能平台",
+  "installedAt": 1787228624523,
+  "source": "marketplace",
+  "version": "1.1.1",
+  "skillId": "skill_2089258641844535296",
+  "description_zh": "通过本机 dcs CLI 操作 华大生信分析云平台 DCS Cloud 全平台能力：登录配置、项目片区、数据、表格、在线容器、WDL 流程、离线任务、计费等。用户提到 华大、DCS、云平台、Files、容器、workflow、任务投递时使用。",
+  "description_en": "Operate the full DCS Cloud platform via the local dcs CLI: login and config, projects/regions, data, tables, online containers, WDL workflows, offline tasks, billing, and more. Use when the user mentions DCS, the cloud platform, Files, containers, workflows, or task submission.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_586a9673-dcc.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_586a9673-dcc.png"
+}

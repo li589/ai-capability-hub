@@ -1,0 +1,11 @@
+{
+  "owner": "songxf1024",
+  "slug": "arxiv-paper-searcher",
+  "displayName": "arxiv-paper-searcher",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773720754476,
+    "commit": "https://github.com/openclaw/skills/commit/675149f5f7823016c675b97e60dda050fd6d8fbb"
+  },
+  "history": []
+}

@@ -1,0 +1,25 @@
+{
+    "id": "local-ocr-npu-001",
+    "turns": [
+        {
+            "input": "识别这张图片里的文字 C:\\Users\\user\\Desktop\\invoice.jpg",
+            "answer": "recognized text lines from the image with confidence scores, followed by timing summary"
+        },
+        {
+            "input": "帮我OCR一下这个截图",
+            "answer": "recognized text lines from the image"
+        },
+        {
+            "input": "提取图片中的文字内容",
+            "answer": "recognized text lines from the image"
+        },
+        {
+            "input": "读取这张发票上的所有文字",
+            "answer": "recognized text lines from the image"
+        },
+        {
+            "input": "scan all images in this folder C:\\invoices",
+            "answer": "recognized text lines from all images in the directory"
+        }
+    ]
+}

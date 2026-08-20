@@ -1,0 +1,11 @@
+{
+  "owner": "xaiohuangningde",
+  "slug": "cache-cleanup",
+  "displayName": "Cache Cleanup",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772364199180,
+    "commit": "https://github.com/openclaw/skills/commit/a31b48370f7d45893473c4bb946311ec53674a09"
+  },
+  "history": []
+}

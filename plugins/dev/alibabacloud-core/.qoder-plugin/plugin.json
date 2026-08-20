@@ -1,0 +1,26 @@
+{
+  "name": "alibabacloud-core",
+  "version": "1.0.20",
+  "description": "Core Alibaba Cloud plugin for OpenAPI SDK code generation through a constrained MCP server.",
+  "displayName": "Alibaba Cloud Core",
+  "author": {
+    "name": "Alibaba Cloud"
+  },
+  "keywords": [
+    "alibabacloud",
+    "aliyun"
+  ],
+  "homepage": "https://github.com/aliyun/alibabacloud-agent-toolkit",
+  "repository": "https://github.com/aliyun/alibabacloud-agent-toolkit",
+  "license": "Apache-2.0",
+  "hooks": "./hooks/qoderwork-hooks.json",
+  "mcpServers": "./.mcp.json",
+  "qoderMarket": {
+    "source": "apphub",
+    "extensionType": "plugin",
+    "pluginId": "ab08743a-1870-4d40-a956-1b6b4a627539",
+    "version": "1.0.20",
+    "contentUpdatedAt": 1787047159796,
+    "installedAt": 1787230718638
+  }
+}

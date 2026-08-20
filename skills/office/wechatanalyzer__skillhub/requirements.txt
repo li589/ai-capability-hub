@@ -1,0 +1,56 @@
+# 微信聊天分析助手 - Python 依赖
+# v2.0.0
+
+# ===== 必须依赖（核心功能）=====
+
+# 中文分词（v2.0.0 新增）
+jieba>=0.42.1
+
+# Web 服务（v1.2.0 保留）
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# 数据处理
+numpy>=1.24.0
+
+# 报告生成
+python-docx>=1.1.0
+python-pptx>=0.6.23
+jinja2>=3.1.0
+
+# 调度
+apscheduler>=3.10.0
+
+# LLM API (v1.2.0 可选，v2.0.0 默认关闭)
+openai>=1.12.0
+
+# 可视化
+plotly>=5.18.0
+
+# 配置/工具
+python-dateutil>=2.8.0
+tqdm>=4.66.0
+Pillow>=10.0.0
+
+# ===== v2.0.0 RAG 引擎（本地检索增强，可选）=====
+# pip install -r requirements-rag.txt
+# sentence-transformers>=2.2.2
+# chromadb>=0.4.22
+
+# ===== v2.0.0 Web 仪表盘（FastAPI + Vue3，v2.1.0 路线图）=====
+# pip install -r requirements-web.txt
+# fastapi>=0.104.0
+# uvicorn>=0.24.0
+# python-multipart>=0.0.6
+# websockets>=12.0
+
+# ===== 可选依赖 =====
+
+# MiroFish 群体智能引擎（v1.2.0 高级功能，可选）
+# pip install -r scripts/mirofish/requirements.txt
+
+# 音频转文字（语音消息分析，可选）
+# openai-whisper>=20231117
+
+# OCR（图片文字提取，可选）
+# easyocr>=1.7.0

@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>申论素材 - {{主题词}}</title>
+<style>
+  :root {
+    /* 粉笔品牌色系 */
+    --fenbi-primary: #00C1CE;       /* 品牌青 */
+    --fenbi-primary-dark: #00A8B5;  /* 深青 */
+    --fenbi-primary-light: #E6F8F9; /* 浅青底 */
+    --fenbi-text: #333333;          /* 主文字 */
+    --fenbi-text-sub: #666666;      /* 次文字 */
+    --fenbi-text-hint: #999999;    /* 辅助文字 */
+    --fenbi-bg: #F5F7FA;            /* 页面背景 */
+    --fenbi-card-bg: #ffffff;       /* 卡片背景 */
+
+    --bg: var(--fenbi-bg);
+    --card-bg: var(--fenbi-card-bg);
+    --card-radius: 14px;
+    --card-shadow: 0 2px 16px rgba(0,0,0,0.06);
+
+    /* Header - 粉笔品牌青渐变 */
+    --header-bg: linear-gradient(135deg, #00C1CE 0%, #00A8B5 50%, #008B96 100%);
+    --header-text: #ffffff; --header-sub: rgba(255,255,255,0.9);
+
+    --section-title: var(--fenbi-text);
+    --divider: #ECECEC;
+
+    /* 多色系 - 对应不同板块（保留差异化色彩） */
+    --color-policy: #E8553E;        /* 官方金句 - 红 */
+    --color-classic: #D4A017;      /* 古文引用 - 金 */
+    --color-parallel: #8B7355;    /* 排比句式 - 棕 */
+    --color-case: #27AE60;        /* 经典案例 - 绿 */
+    --color-tip: #00A8B5;         /* 使用技巧 - 粉笔青蓝 */
+
+    --quote-bg: #FAFCFC;
+    --quote-text: var(--fenbi-text);
+    --source-text: var(--fenbi-text-hint);
+    --usage-bg: #F5F7FA;
+    --usage-text: var(--fenbi-text-sub);
+
+    --badge-bg: var(--fenbi-primary-light); --badge-text: #008B96;
+    --tag-bg: #F0F7F7; --tag-text: #008B96;
+
+    --takeaway-bg: linear-gradient(135deg, #F0F9F9 0%, #E6F8F9 100%);
+    --takeaway-text: var(--fenbi-text);
+    --case-quote-bg: #FFFCF0;
+    --case-quote-border: #D4A017;
+    --case-quote-text: #8A6D00;
+
+    --tip-bg: #F0FAFB;
+    --tip-border: var(--fenbi-primary);
+    --tip-text: var(--fenbi-text);
+
+    --footer-text: var(--fenbi-text-hint);
+
+    /* 引导卡 - 粉笔品牌青底 */
+    --guide-bg: var(--fenbi-primary-light);
+    --guide-title: #006978;
+    --guide-text: #008B96;
+    --guide-tag-bg: #ffffff;
+    --guide-tag-border: #B8E8ED;
+    --guide-tag-text: #008B96;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --fenbi-primary: #00C1CE;
+      --fenbi-primary-dark: #00A8B5;
+      --fenbi-primary-light: #0A3A3E;
+      --fenbi-text: #E0E0E0;
+      --fenbi-text-sub: #B0B0B0;
+      --fenbi-text-hint: #888888;
+      --fenbi-bg: #1A1A1A;
+      --fenbi-card-bg: #1E1E1E;
+
+      --bg: var(--fenbi-bg);
+      --card-bg: var(--fenbi-card-bg);
+      --card-shadow: 0 2px 16px rgba(0,0,0,0.2);
+      --header-bg: linear-gradient(135deg, #006B70 0%, #005A5E 50%, #004A4E 100%);
+      --header-text: #E0E0E0; --header-sub: rgba(255,255,255,0.75);
+      --section-title: var(--fenbi-text);
+      --divider: #2A2A2A;
+      --color-policy: #FF6B5A;
+      --color-classic: #F0C040;
+      --color-parallel: #A89880;
+      --color-case: #2ECC71;
+      --color-tip: #00D5DE;
+      --quote-bg: #1E2525;
+      --quote-text: #DDD;
+      --source-text: #888;
+      --usage-bg: #1E2828;
+      --usage-text: #A0B0B0;
+      --badge-bg: #0A2A2C; --badge-text: #00D5DE;
+      --tag-bg: #0A2A2C; --tag-text: #00D5DE;
+      --takeaway-bg: linear-gradient(135deg, #0A2A2C 0%, #0E3032 100%);
+      --takeaway-text: #C0D0D0;
+      --case-quote-bg: #2A2820;
+      --case-quote-border: #D4A017;
+      --case-quote-text: #D4B860;
+      --tip-bg: #0A2A2C;
+      --tip-border: #00D5DE;
+      --tip-text: #C0D8D8;
+      --footer-text: #777;
+      --guide-bg: #0A2A2C; --guide-title: #00D5DE; --guide-text: #00B0B8;
+      --guide-tag-bg: #1A2A2C; --guide-tag-border: #1A4A4E; --guide-tag-text: #00D5DE;
+    }
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:var(--bg);
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    font-size:14px; line-height:1.8; color:var(--quote-text);
+    padding:20px;
+    display:flex; justify-content:center;
+  }
+
+  .card {
+    width:100%; max-width:640px;
+    background:var(--card-bg);
+    border-radius:var(--card-radius);
+    overflow:hidden;
+    box-shadow:var(--card-shadow);
+  }
+
+  /* Header */
+  .header {
+    background:var(--header-bg);
+    padding:28px 24px 24px;
+    text-align:center;
+    position:relative;
+  }
+  .header .title {
+    font-size:22px; font-weight:700; color:var(--header-text);
+    letter-spacing:3px; margin-bottom:6px;
+  }
+  .header .subtitle {
+    font-size:13px; color:var(--header-sub); line-height:1.6;
+  }
+  .header .badge {
+    display:inline-block;
+    background:rgba(255,255,255,0.15);
+    border:1px solid rgba(255,255,255,0.3);
+    padding:3px 14px; border-radius:20px;
+    font-size:12px; color:var(--header-sub);
+    margin-top:12px;
+  }
+
+  /* Body */
+  .body { padding:24px; }
+
+  /* Sections */
+  .section { margin-bottom:28px; }
+  .section:last-child { margin-bottom:0; }
+  .section-title {
+    display:flex; align-items:center; gap:8px;
+    font-size:16px; font-weight:700; color:var(--section-title);
+    margin-bottom:16px; padding-bottom:10px;
+    border-bottom:2px solid var(--divider);
+  }
+  .section-title .icon { font-size:20px; }
+
+  /* 金句卡片（通用） */
+  .quote-card {
+    background:var(--card-bg);
+    border-radius:10px;
+    padding:16px 20px;
+    margin-bottom:12px;
+    box-shadow:0 1px 6px rgba(0,0,0,0.05);
+    border-left:4px solid var(--color-policy);
+  }
+  .quote-card:last-child { margin-bottom:0; }
+  .quote-card.classic { border-left-color:var(--color-classic); }
+  .quote-card .tag {
+    display:inline-block;
+    font-size:11px; padding:2px 10px;
+    border-radius:4px; margin-bottom:8px;
+    font-weight:600;
+  }
+  .quote-card .tag.policy { background:#FDEDEA; color:var(--color-policy); }
+  .quote-card .tag.classic-tag { background:#FEF6E0; color:var(--color-classic); }
+  .quote-card .quote-text {
+    font-size:15px; line-height:1.9;
+    color:var(--quote-text); font-weight:500;
+  }
+  .quote-card .quote-source {
+    font-size:12px; color:var(--source-text);
+    margin-top:6px; font-style:italic;
+  }
+  .quote-card .usage-tip {
+    margin-top:10px; padding:8px 12px;
+    background:var(--usage-bg); border-radius:6px;
+    font-size:12px; color:var(--usage-text); line-height:1.7;
+  }
+  .usage-tip strong { color:var(--color-policy); }
+  .quote-card.classic .usage-tip strong { color:var(--color-classic); }
+
+  /* 排比句式 */
+  .parallel-group { margin-bottom:14px; }
+  .parallel-group:last-child { margin-bottom:0; }
+  .parallel-badge {
+    display:inline-block; background:var(--badge-bg);
+    color:var(--badge-text); font-size:11px; font-weight:600;
+    padding:2px 10px; border-radius:10px; margin-bottom:6px;
+  }
+  .parallel-text {
+    font-size:14px; color:var(--quote-text);
+    line-height:1.8; padding-left:4px;
+  }
+
+  /* 案例卡片 */
+  .case-card {
+    background:var(--card-bg);
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:14px;
+    box-shadow:0 1px 6px rgba(0,0,0,0.05);
+    border-left:4px solid var(--color-case);
+  }
+  .case-card:last-child { margin-bottom:0; }
+  .case-header {
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:12px; flex-wrap:wrap;
+  }
+  .case-name {
+    font-size:16px; font-weight:700; color:var(--section-title);
+  }
+  .case-tags { display:flex; gap:6px; flex-wrap:wrap; }
+  .case-tag {
+    font-size:11px; padding:2px 10px;
+    border-radius:4px;
+    background:var(--tag-bg); color:var(--tag-text);
+  }
+  .case-body { font-size:14px; line-height:1.9; color:var(--quote-text); }
+  .case-body p { margin-bottom:8px; }
+  .case-body strong { color:var(--color-policy); }
+  .case-takeaway {
+    margin-top:12px; padding:12px 16px;
+    background:var(--takeaway-bg); border-radius:8px;
+    font-size:13px; line-height:1.8;
+    border-left:3px solid var(--color-case);
+    color:var(--takeaway-text);
+  }
+  .case-takeaway strong { color:var(--color-policy); }
+  .case-quote {
+    margin-top:10px; padding:10px 14px;
+    background:var(--case-quote-bg);
+    border:1px dashed var(--case-quote-border);
+    border-radius:6px;
+    font-size:13px; color:var(--case-quote-text);
+    font-style:italic;
+  }
+
+  /* 大白话转换 */
+  .plain-table { width:100%; border-collapse:collapse; }
+  .plain-table td {
+    padding:10px 14px; font-size:13px;
+    vertical-align:top; line-height:1.7;
+  }
+  .plain-table td:first-child { color:var(--source-text); width:40%; border-right:1px solid var(--divider); }
+  .plain-table td:last-child { color:var(--quote-text); }
+  .plain-table tr { border-bottom:1px solid var(--divider); }
+  .plain-table tr:last-child { border-bottom:none; }
+
+  /* 使用技巧 */
+  .tip-card {
+    background:var(--tip-bg);
+    border-radius:8px;
+    padding:14px 18px;
+    margin-bottom:10px;
+    border-left:3px solid var(--tip-border);
+    font-size:13px; line-height:1.8;
+    color:var(--tip-text);
+  }
+  .tip-card:last-child { margin-bottom:0; }
+  .tip-card strong { color:var(--tip-border); }
+
+  /* 学习引导卡 */
+  .guide-card {
+    background:var(--guide-bg);
+    border-radius:12px;
+    padding:16px 18px;
+    margin-top:8px;
+  }
+  .guide-title {
+    font-size:15px; font-weight:700; color:var(--guide-title);
+    margin-bottom:8px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .guide-title .icon { font-size:18px; }
+  .guide-desc {
+    font-size:13px; color:var(--guide-text);
+    line-height:1.7; margin-bottom:12px;
+  }
+  .guide-tags { display:flex; flex-wrap:wrap; gap:8px; }
+  .guide-tag {
+    display:inline-block;
+    background:var(--guide-tag-bg);
+    color:var(--guide-tag-text);
+    border:1px solid var(--guide-tag-border);
+    font-size:12px; font-weight:600;
+    padding:5px 12px; border-radius:20px;
+  }
+  .guide-qr { text-align:center; margin-top:14px; }
+  .guide-qr img { width:120px; height:120px; border-radius:8px; }
+  .guide-qr-text { font-size:11px; color:var(--guide-text); margin-top:6px; }
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- Header -->
+  <div class="header">
+    <div class="title">{{主题词}}</div>
+    <div class="subtitle">{{主题解读}}</div>
+    <div class="badge">适用于国考 / 省考 / 事业单位申论</div>
+  </div>
+
+  <div class="body">
+
+    <!-- 一、官方权威金句 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">📋</span>一、官方权威金句</div>
+
+      <div class="quote-card">
+        <span class="tag policy">政策原文</span>
+        <div class="quote-text">「{{金句原文1}}」</div>
+        <div class="quote-source">—— {{出处1}}</div>
+        <div class="usage-tip"><strong>适用场景：</strong>{{说明适合用在文章哪个位置、对应什么类型题目}}</div>
+      </div>
+
+      <div class="quote-card">
+        <span class="tag policy">政策原文</span>
+        <div class="quote-text">「{{金句原文2}}」</div>
+        <div class="quote-source">—— {{出处2}}</div>
+        <div class="usage-tip"><strong>适用场景：</strong>{{适用场景说明}}</div>
+      </div>
+
+      <div class="quote-card">
+        <span class="tag policy">政策原文</span>
+        <div class="quote-text">「{{金句原文3}}」</div>
+        <div class="quote-source">—— {{出处3}}</div>
+        <div class="usage-tip"><strong>适用场景：</strong>{{适用场景说明}}</div>
+      </div>
+      <!-- 可追加第4、5条 -->
+    </div>
+
+    <!-- 二、古文引用金句 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">📜</span>二、古文引用金句</div>
+
+      <div class="quote-card classic">
+        <span class="tag classic-tag">古文引用</span>
+        <div class="quote-text">「{{古文原文1}}」</div>
+        <div class="quote-source">—— {{古文出处1}}</div>
+        <div class="usage-tip"><strong>适用场景：</strong>{{说明如何在申论中化用此古文，搭配什么论点}}</div>
+      </div>
+
+      <div class="quote-card classic">
+        <span class="tag classic-tag">古文引用</span>
+        <div class="quote-text">「{{古文原文2}}」</div>
+        <div class="quote-source">—— {{古文出处2}}</div>
+        <div class="usage-tip"><strong>适用场景：</strong>{{适用场景说明}}</div>
+      </div>
+      <!-- 可追加第3条 -->
+    </div>
+
+    <!-- 三、排比对仗句式 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">📐</span>三、排比对仗句式</div>
+
+      <div class="parallel-group">
+        <div class="parallel-badge">开头点题</div>
+        <div class="parallel-text">{{开头排比句式}}</div>
+      </div>
+      <div class="parallel-group">
+        <div class="parallel-badge">论证段落</div>
+        <div class="parallel-text">{{论证排比句式}}</div>
+      </div>
+      <div class="parallel-group">
+        <div class="parallel-badge">结尾升华</div>
+        <div class="parallel-text">{{结尾排比句式}}</div>
+      </div>
+    </div>
+
+    <!-- 四、经典案例 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">📌</span>四、经典案例</div>
+
+      <div class="case-card">
+        <div class="case-header">
+          <span class="case-name">{{案例一名称}}</span>
+          <div class="case-tags">
+            <span class="case-tag">{{适用主题1}}</span>
+            <span class="case-tag">{{适用主题2}}</span>
+            <span class="case-tag">{{适用主题3}}</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <p><strong>背景：</strong>{{案例背景}}</p>
+          <p><strong>做法：</strong>{{核心做法}}</p>
+          <p><strong>成效：</strong>{{主要成效}}</p>
+        </div>
+        <div class="case-takeaway"><strong>申论启示：</strong>{{从案例中提炼的写作角度和论证逻辑}}</div>
+        <div class="case-quote">金句匹配：「{{最适合搭配使用的金句}}」</div>
+      </div>
+      <!-- 可追加案例二 -->
+    </div>
+
+    <!-- 五、大白话→申论（仅大白话场景，否则删除此 section） -->
+    <div class="section">
+      <div class="section-title"><span class="icon">💬</span>五、大白话 → 申论</div>
+      <table class="plain-table">
+        <tr>
+          <td>{{大白话原文}}</td>
+          <td>{{申论标准表达}}</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- 六、使用技巧 -->
+    <div class="section">
+      <div class="section-title"><span class="icon">💡</span>{{序号}}、使用技巧</div>
+
+      <div class="tip-card">
+        <strong>1. 金句的位置有讲究。</strong>{{结合本主题说明：政策金句适合放哪里、古文引用适合放哪里、排比句式适合放哪里}}
+      </div>
+      <div class="tip-card">
+        <strong>2. 案例使用要"精"不要"多"。</strong>一篇文章用2-3个案例即可，先讲案例事实，再提炼启示，最后回扣论点。切忌堆砌案例而缺乏分析。
+      </div>
+      <div class="tip-card">
+        <strong>3. 金句与案例要"配对"使用。</strong>每个案例搭配一句对应主题的金句作为收束，形成"案例+金句+启示"的完整论证链条。
+      </div>
+      <div class="tip-card">
+        <strong>4. {{结合本主题的具体建议}}</strong>{{例如：按"五个振兴"框架组织分论点 / 注意金句的原创性改写 / 优先使用近3年新案例等}}
+      </div>
+    </div>
+
+    <!-- 学习引导卡（仅导流场景，否则删除 guide-card） -->
+    <div class="guide-card">
+      <div class="guide-title"><span class="icon">📱</span>告别申论大白话，上粉笔App进阶</div>
+      <div class="guide-desc">日更时政金句解决没句子写，智能批改让表达更规范有厚度。</div>
+      <div class="guide-tags">
+        <span class="guide-tag">申论范文</span>
+        <span class="guide-tag">金句速记</span>
+        <span class="guide-tag">智能批改</span>
+        <span class="guide-tag">热点素材</span>
+      </div>
+      <div class="guide-qr">
+        <img src="https://fb.fbstatic.cn/api/ape-images/1a00ee7f9776fc7.png" alt="粉笔App下载二维码">
+        <div class="guide-qr-text">扫码下载粉笔App</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

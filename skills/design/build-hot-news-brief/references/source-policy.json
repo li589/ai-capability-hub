@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "strategy": "zh_first",
+  "decision_tier_a": ["gov.cn", "miit.gov.cn", "ndrc.gov.cn", "samr.gov.cn", "mofcom.gov.cn", "stats.gov.cn", "pbc.gov.cn", "xinhuanet.com", "people.com.cn", "chinanews.com.cn", "cctv.com", "cnr.cn", "ce.cn", "stcn.com", "cs.com.cn", "cls.cn", "yicai.com"],
+  "decision_tier_b": ["jiemian.com", "nbd.com.cn", "thepaper.cn", "chinadaily.com.cn", "36kr.com", "eeo.com.cn", "eastmoney.com", "stockstar.com", "ithome.com", "autohome.com.cn"],
+  "content_platforms": ["weixin.qq.com", "xiaohongshu.com", "zhihu.com", "toutiao.com", "baijiahao.baidu.com", "sohu.com", "163.com"],
+  "international_tier_a": ["reuters.com", "apnews.com", "bloomberg.com", "channelnewsasia.com", "theguardian.com"],
+  "blocked_domains": ["360doc.com", "book118.com"],
+  "max_items_per_domain": 2,
+  "near_duplicate_threshold": 0.82,
+  "freshness_days": 7,
+  "notes": "每次运行先用 list_platforms 验证域名仍受 MCP 支持。内容平台可以支持选题判断，但不得单独支撑企业高影响事实结论。"
+}

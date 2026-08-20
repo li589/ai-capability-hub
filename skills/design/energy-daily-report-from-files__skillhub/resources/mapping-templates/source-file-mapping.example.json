@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "generated_at": null,
+  "sources": [
+    {"source_id": "source-001", "path": "原始电子档.xlsx", "sha256": null, "format": "xlsx", "read_only": true}
+  ],
+  "mappings": [
+    {"source_id": "source-001", "location": "Sheet1!A:A", "source_field": "日期", "entity": "production_report", "target_field": "report_date", "data_type": "date", "unit": null, "transform": "parse_local_date", "confidence": "candidate", "confirmed_by": null, "missing_policy": "reject_row"}
+  ],
+  "unmapped_fields": [],
+  "conflicts": [],
+  "confirmation_required": true
+}

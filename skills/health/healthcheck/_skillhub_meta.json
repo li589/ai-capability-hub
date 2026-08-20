@@ -1,0 +1,20 @@
+{
+  "name": "健康打卡",
+  "installedAt": 1787228420270,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053082080398471168",
+  "examples_zh": [
+    "记录今天喝了2000ml水",
+    "今晚睡了7小时，记录一下",
+    "查看本周的健康打卡数据"
+  ],
+  "examples_en": [
+    "Log that I drank 2000ml of water today",
+    "Record 7 hours of sleep last night",
+    "Show my health tracking data for this week"
+  ],
+  "description_zh": "追踪每日饮水和睡眠记录",
+  "description_en": "Track daily water intake and sleep",
+  "iconSource": "letter:auto"
+}

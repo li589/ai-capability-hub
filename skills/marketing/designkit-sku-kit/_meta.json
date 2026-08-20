@@ -1,0 +1,11 @@
+{
+  "owner": "joywenxu100",
+  "slug": "designkit-sku-kit",
+  "displayName": "DesignKit SKU 套图生成器",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1775208128588,
+    "commit": "https://github.com/openclaw/skills/commit/8c536eb3e0e959a5f8d918e101ec1f7557e2e869"
+  },
+  "history": []
+}

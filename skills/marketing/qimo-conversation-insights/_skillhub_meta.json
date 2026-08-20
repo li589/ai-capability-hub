@@ -1,0 +1,20 @@
+{
+  "name": "七陌会话洞察",
+  "installedAt": 1787228384103,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2074429126233796608",
+  "examples_zh": [
+    "帮我看看最近一周客服会话总量和满意度分布",
+    "分析下最近的高频客户问题和投诉风险，给出可跟进建议",
+    "哪个渠道的会话量最大？转人工和留资情况怎么样？"
+  ],
+  "examples_en": [
+    "Show last week's conversation volume and satisfaction distribution",
+    "Analyze recent top customer issues and complaint risks with follow-up suggestions",
+    "Which channel has the most conversations? How about transfer-to-agent and lead capture?"
+  ],
+  "description_zh": "基于七陌客服会话数据做会话总览、问题发现、风险识别、服务质量分析与业务结果归因。通过只读 SQL 查询 Doris，识别高频问题、VOC 反馈、投诉风险与典型会话，输出可跟进的业务洞察与报告。",
+  "description_en": "Analyze Qimo customer-service conversation data for overview, issue discovery, risk detection, service-quality analysis and business attribution. Runs read-only SQL over Doris to surface top issues, VOC, complaint risks and representative conversations, producing actionable insights and reports.",
+  "iconSource": "letter:auto"
+}

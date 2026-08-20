@@ -1,0 +1,21 @@
+{
+  "name": "极睿视频分析",
+  "installedAt": 1787227573634,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2082384890961707008",
+  "examples_zh": [
+    "分析这个商品视频的脚本、风格、卖点和爆款公式",
+    "帮我拆解这个品牌视频的视觉风格和叙事结构",
+    "从这个视频提取可复用的生成提示词"
+  ],
+  "examples_en": [
+    "Analyze this product video's script, style, selling points, and viral formula",
+    "Break down this brand video's visual style and narrative structure",
+    "Extract a reusable generation prompt from this video"
+  ],
+  "description_zh": "对用户主动提供的视频执行结构化拆解，安全调用分析任务并交付脚本、风格、卖点、爆款结构和可复用的视频生成提示词。",
+  "description_en": "Run a structured breakdown of a user-supplied video: safely call the analysis task and deliver the script, visual style, selling points, viral structure, and a reusable video generation prompt, with explicit separate billing authorization before any billable call.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082384890961707008/2e252988896b2849.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082384890961707008/2e252988896b2849.png"
+}

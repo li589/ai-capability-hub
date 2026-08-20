@@ -1,0 +1,40 @@
+{
+  "name": "agent-earth",
+  "version": "1.0.1",
+  "displayName": "AgentEarth",
+  "displayNameEn": "AgentEarth",
+  "description": "通过 AgentEarth 统一工具市场发现并调用 1400+ 专业 API，轻松获取实时金融行情、电商与社媒数据、学术论文与专利信息、地图信息等，并完成 AI 图片与视频生成等任务。用户只需连接一次 AgentEarth，TRAE 智能体即可根据自然语言需求自动选择并调用合适的工具，无需逐一配置各类服务。",
+  "descriptionEn": "In TRAE, users can discover and access more than 1,400 professional APIs through the AgentEarth unified tool marketplace to retrieve real-time financial market data, e-commerce and social media insights, academic papers and patent information, mapping data, as well as generate AI images and videos. With a single connection to AgentEarth, TRAE agents can automatically select and invoke the right tools based on natural-language requests, eliminating the need to configure each third-party service individually.",
+  "author": {
+    "name": "TRAE"
+  },
+  "license": "Proprietary",
+  "logo": "./icon.png",
+  "keywords": [
+    "AgentEarth",
+    "MCP",
+    "API",
+    "financial data",
+    "e-commerce data",
+    "social media data",
+    "AI generation",
+    "academic research",
+    "maps",
+    "travel"
+  ],
+  "i18n": {
+    "display_name": {
+      "en": "AgentEarth",
+      "zh-cn": "AgentEarth",
+      "ja": "AgentEarth"
+    },
+    "description": {
+      "en": "In TRAE, users can discover and access more than 1,400 professional APIs through the AgentEarth unified tool marketplace to retrieve real-time financial market data, e-commerce and social media insights, academic papers and patent information, mapping data, as well as generate AI images and videos. With a single connection to AgentEarth, TRAE agents can automatically select and invoke the right tools based on natural-language requests, eliminating the need to configure each third-party service individually.",
+      "zh-cn": "通过 AgentEarth 统一工具市场发现并调用 1400+ 专业 API，轻松获取实时金融行情、电商与社媒数据、学术论文与专利信息、地图信息等，并完成 AI 图片与视频生成等任务。用户只需连接一次 AgentEarth，TRAE 智能体即可根据自然语言需求自动选择并调用合适的工具，无需逐一配置各类服务。",
+      "ja": "TRAE で AgentEarth 統合ツールマーケットプレイスを通じて 1,400 以上の専門 API を発見・利用できます。リアルタイム金融データ、EC・ソーシャルメディア情報、論文・特許情報、地図データの取得に加え、AI による画像・動画生成にも対応します。AgentEarth に一度接続するだけで、TRAE エージェントが自然言語の要求に応じて適切なツールを自動的に選択・呼び出すため、各サービスを個別に設定する必要はありません。"
+    }
+  },
+  "skills": "./skills/",
+  "mcp": "./.mcp.json",
+  "connector": "./connector.json"
+}

@@ -1,0 +1,53 @@
+AgentEarth TRAE Plugin — License
+
+Copyright (c) 2026 AgentEarth. All rights reserved.
+
+This package (the "Package") contains the plugin manifest, MCP and Connector
+configuration, Skill definitions, documentation, and brand assets of AgentEarth.
+
+PERMITTED
+
+  - Installing and using the Package within TRAE to access AgentEarth services.
+
+NOT PERMITTED without the prior written permission of AgentEarth
+
+  - Copying, publishing, or redistributing the Package or any part of it,
+    whether modified or unmodified.
+  - Modifying or adapting the Package, or creating derivative works from it.
+  - Using the AgentEarth name, logo, or other brand assets contained in the
+    Package outside of the Package as distributed.
+
+Use of the AgentEarth service through this Package is additionally governed by
+the AgentEarth Terms of Service published at https://agentearth.ai.
+
+THE PACKAGE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+AGENTEARTH BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE PACKAGE OR THE USE OR OTHER DEALINGS IN THE
+PACKAGE.
+
+---
+
+AgentEarth TRAE 插件 — 许可声明
+
+版权所有 (c) 2026 AgentEarth，保留所有权利。
+
+本插件包（下称"本包"）包含 AgentEarth 的插件清单、MCP 与 Connector 配置、
+Skill 定义、文档及品牌资产。
+
+允许
+
+  - 在 TRAE 中安装并使用本包，以访问 AgentEarth 服务。
+
+未经 AgentEarth 书面许可，不得
+
+  - 复制、发布或再分发本包或其任何部分（无论是否修改）。
+  - 修改、改编本包，或基于本包制作衍生作品。
+  - 在本包分发形态之外使用本包所含的 AgentEarth 名称、标识或其他品牌资产。
+
+通过本包使用 AgentEarth 服务，同时受 https://agentearth.ai 公布的
+AgentEarth 服务条款约束。
+
+本包按"现状"提供，不附带任何明示或默示的担保。在任何情况下，AgentEarth 均不
+就因本包或本包的使用而产生的任何索赔、损害或其他责任承担责任。

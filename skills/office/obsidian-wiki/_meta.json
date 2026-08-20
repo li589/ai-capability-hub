@@ -1,0 +1,17 @@
+{
+  "owner": "jerome-benoit",
+  "slug": "obsidian-wiki",
+  "displayName": "Obsidian Wiki",
+  "latest": {
+    "version": "1.2.2",
+    "publishedAt": 1776532279035,
+    "commit": "https://github.com/openclaw/skills/commit/1df6bac08be22fb75f873ff6a65a8cc8fd4ae15d"
+  },
+  "history": [
+    {
+      "version": "1.1.6",
+      "publishedAt": 1776085351011,
+      "commit": "https://github.com/openclaw/skills/commit/27c40145deec1d5f4a34f4d059fb734aa5f6812c"
+    }
+  ]
+}

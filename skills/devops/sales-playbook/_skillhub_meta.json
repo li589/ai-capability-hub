@@ -1,0 +1,10 @@
+{
+  "name": "sales-playbook",
+  "installedAt": 1787228469519,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053082874605412352",
+  "description_zh": "基于价值的定价与销售剧本，通话分析与报价打包",
+  "description_en": "Value-based pricing playbook with call analysis and tiered packaging",
+  "iconSource": "letter:auto"
+}

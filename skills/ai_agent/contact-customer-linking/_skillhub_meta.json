@@ -1,0 +1,11 @@
+{
+  "name": "联系人关联",
+  "installedAt": 1787228545938,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088536933355175936",
+  "description_zh": "新增/编辑contact并按租户实际关联字段绑定customer。适用于用户要求联系人关联、生成相关结果或检查执行边界时。",
+  "description_en": "Contact Customer Linking workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_c85c9fbd-1c2.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_c85c9fbd-1c2.png"
+}

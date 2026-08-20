@@ -1,0 +1,98 @@
+{
+  "template_name": "database-server",
+  "version": "3.0.0",
+  "description": "数据库服务器安全加固模板",
+  "use_cases": ["MySQL服务器", "PostgreSQL服务器", "Redis服务器", "MongoDB服务器"],
+  "target_environment": "production",
+  "performance_profile": "balanced",
+  "security_level": "high",
+  
+  "system_requirements": {
+    "min_memory_gb": 8,
+    "recommended_memory_gb": 16,
+    "min_cores": 4,
+    "recommended_cores": 8,
+    "disk_type": "SSD",
+    "min_disk_iops": 3000
+  },
+  
+  "sysctl_overrides": {
+    "vm.swappiness": 1,
+    "vm.dirty_ratio": 40,
+    "vm.dirty_background_ratio": 10,
+    "vm.vfs_cache_pressure": 50,
+    "kernel.sched_migration_cost_ns": 5000000,
+    "kernel.sched_autogroup_enabled": 0,
+    "net.ipv4.tcp_tw_reuse": 0,
+    "net.ipv4.tcp_tw_recycle": 0
+  },
+  
+  "security_settings": {
+    "file_descriptor_limit": 65535,
+    "core_dump_disabled": true,
+    "exec_shield": true,
+    "randomize_va_space": 2,
+    "tcp_timestamps": 0
+  },
+  
+  "firewall_rules": {
+    "allowed_ports": [3306, 5432, 6379, 27017],
+    "port_comments": {
+      "3306": "MySQL",
+      "5432": "PostgreSQL", 
+      "6379": "Redis",
+      "27017": "MongoDB"
+    },
+    "access_restriction": "仅限应用服务器IP",
+    "rate_limiting": {
+      "enabled": true,
+      "connections_per_minute": 60
+    }
+  },
+  
+  "database_hardening": {
+    "mysql": {
+      "bind_address": "127.0.0.1",
+      "skip_networking": false,
+      "local_infile": 0,
+      "symbolic_links": 0,
+      "secure_file_priv": "/var/lib/mysql-files",
+      "max_connections": 500,
+      "max_connect_errors": 10
+    },
+    "postgresql": {
+      "listen_addresses": "localhost",
+      "ssl": "on",
+      "password_encryption": "scram-sha-256",
+      "shared_buffers": "25%",
+      "max_connections": 200
+    }
+  },
+  
+  "backup_requirements": {
+    "automated_backups": true,
+    "backup_frequency": "daily",
+    "retention_days": 30,
+    "encryption": "required",
+    "offsite_storage": "recommended"
+  },
+  
+  "monitoring_alerts": {
+    "disk_usage_threshold": 80,
+    "query_slow_threshold": 1000,
+    "connection_usage_threshold": 80,
+    "replication_lag_threshold": 5
+  },
+  
+  "performance_impact": {
+    "security_overhead": "3-5%",
+    "recommended_for": ["生产数据库", "主从复制", "集群节点"],
+    "not_recommended_for": ["开发环境", "测试数据库"]
+  },
+  
+  "compliance_notes": {
+    "iso27001": "符合数据保护和访问控制要求",
+    "等级保护": "符合三级系统数据安全要求",
+    "pci_dss": "符合数据库访问控制要求"
+  }
+}

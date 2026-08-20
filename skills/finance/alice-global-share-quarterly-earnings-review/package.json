@@ -1,0 +1,19 @@
+{
+  "name": "alice-global-share-quarterly-earnings-review",
+  "version": "1.0.5",
+  "description": "CLI: 调用万得 Alice Agent「全球上市公司季报点评」技能（A2A SSE），为全球上市公司生成卖方研究风格财报点评",
+  "type": "module",
+  "private": true,
+  "files": [
+    "SKILL.md",
+    "AGENT.md",
+    "package.json",
+    "_meta.json",
+    "scripts/"
+  ],
+  "scripts": {},
+  "bin": {
+    "alice-global-share-quarterly-earnings-review": "./scripts/cli.mjs",
+    "agsqer": "./scripts/cli.mjs"
+  }
+}

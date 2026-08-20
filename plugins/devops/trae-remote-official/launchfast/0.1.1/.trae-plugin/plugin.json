@@ -1,0 +1,51 @@
+{
+  "name": "launchfast",
+  "version": "0.1.1",
+  "description": "LaunchFast Amazon seller research plugin for Codex with bundled FBA workflows and the LaunchFast MCP server.",
+  "author": {
+    "name": "Launch Fast",
+    "url": "https://launchfastlegacyx.com"
+  },
+  "homepage": "https://launchfastlegacyx.com",
+  "repository": "https://github.com/BlockchainHB/launchfast_codex_plugin",
+  "license": "MIT",
+  "keywords": [
+    "amazon-fba",
+    "product-research",
+    "keyword-research",
+    "supplier-sourcing",
+    "ppc",
+    "trademark",
+    "patent"
+  ],
+  "skills": "./skills/",
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "LaunchFast",
+    "shortDescription": "Amazon seller research tools for Codex",
+    "longDescription": "Connect Codex to the production LaunchFast MCP server and bundle reusable Amazon FBA workflows for product research, PPC planning, supplier sourcing, and IP risk checks. Authentication uses Codex's MCP OAuth flow against LaunchFast, including expected localhost or 127.0.0.1 loopback callbacks during authorization.",
+    "developerName": "Launch Fast",
+    "category": "development_tools",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://launchfastlegacyx.com",
+    "privacyPolicyURL": "https://launchfastlegacyx.com/privacy",
+    "termsOfServiceURL": "https://launchfastlegacyx.com/terms",
+    "defaultPrompt": [
+      "Research this Amazon keyword with LaunchFast",
+      "Run a full FBA opportunity report for this niche",
+      "Find supplier and PPC angles for this product"
+    ],
+    "brandColor": "#111111",
+    "screenshots": [
+      "./assets/screenshot1.png",
+      "./assets/screenshot2.png",
+      "./assets/screenshot3.png"
+    ],
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png"
+  }
+}

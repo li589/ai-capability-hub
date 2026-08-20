@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:ecom-video-generation",
+  "registry": "trae-remote-official",
+  "plugin_name": "ecom-video-generation",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "db4f882f-1b96-4abb-89fc-051cb2e77b59",
+  "remote_installed_plugin_id": "UWI10BOD9Y544_",
+  "checksum": "035ec96f39a36645be99ddd7290a6c68cd67ae5dcf132baaf599be505f933e48",
+  "file_size": 35216,
+  "installed_at": 1787227203621
+}

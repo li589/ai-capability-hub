@@ -1,0 +1,39 @@
+name: "anti-fraud-drill"
+agents_dir: "agents"
+inputs:
+  - name: scam_type
+    required: true
+    description: "要演练的骗局类型（与 scam-knowledge.md 36 类标题完全一致）：冒充公检法 / 冒充客服退款/理赔 / 冒充熟人/领导/老板 / 刷单返利 / 杀猪盘（网恋诱导投资） / 虚假投资理财/荐股 / 虚假贷款/校园贷 / 钓鱼链接/伪基站 / 中奖/补贴诈骗 / 游戏交易/账号诈骗 / 机票/车票退改签 / 招聘诈骗/培训贷 / 保健品/养生诈骗（神药/体验店/直播间/会销） / 免费诱饵引流（免费礼品/旅游/体检/讲座） / 以房养老骗局 / 冒充社保/医保 / 冒充亲属急事/AI 语音克隆 / 冒充反诈中心/官方机构\"保护账户\" / 收藏品/纪念品骗局 / App/小程序恶意诈骗 / AI 换脸/拟声诈骗 / AI 数字人冒充客服/Facetime 冒充客服（百万保障） / 虚假购物/服务类（低价代购/二手平台/直播带货/特殊服务） / 演唱会门票/演出票务诈骗 / 注销校园贷/征信修复诈骗 / 跑分/帮信/\"电诈工具人\" / 教育缴费/家长群诈骗 / 资金盘/庞氏骗局（互助盘/拆分盘/分红盘/挖矿盘/众筹盘等） / 0元购/消费全返资金盘（含变异0元购） / 虚拟币/数字货币/变种币骗局（稳定币/空气币/传销币/假交易所/RWA等） / 免费/低价旅游骗局（购物团/养生游/旅游理财/出境甩团/旅游杀猪盘） / 追星/粉丝群/直播间诱导打赏诈骗 / 升学/留学/境外诈骗（高考特招/留学中介/境外高薪/虚拟绑架/换汇） / 仿冒反诈官方渠道（仿冒反诈 App/96110 改号/假民警上门）" / 裸聊/色情敲诈（sextortion） / 冒充军警/消防/部队采购诈骗"
+  - name: user_level
+    required: false
+    default: "general"
+    description: "受众水平：beginner（老年人/防骗新手，话术简单）/ general（普通用户）。应与 target_group 保持一致：beginner 对应老年人/学生，general 对应通用/财务人员/新入职员工"
+  - name: target_group
+    required: false
+    default: "通用"
+    description: "受众画像：通用 / 老年人 / 学生 / 财务人员 / 新入职员工，用于导师点评时对齐高发场景。应与 user_level 保持一致（beginner 对应老年人/学生，general 对应通用/财务人员/新入职员工）"
+steps:
+  - id: fraudster_attack
+    role: "security/fraudster"
+    task: "你是诈骗者，请生成一段「{{scam_type}}」骗局的逼真诱导话术。要求：1) 面向{{user_level}}水平受众；2) 话术完整还原该类骗局的典型套路（身份包装、事由、施压方式）；3) 控制在 150 字以内；4) 不要真的索要用户真实信息，只做模拟。（受 fraudster.md 用途边界约束：仅教育模拟、不生成真实联系方式、不细化可操作作案步骤）"
+    output: attack_script
+  - id: user_response
+    role: "user"
+    task: "现在你面对以上诈骗话术，请模拟{{target_group}}用户的真实应对，回复你会怎么做。"
+    output: user_reply
+  - id: fraudster_pressure
+    role: "security/fraudster"
+    task: "你是诈骗者。看到用户以上的应对后，生成一段针对性的二次施压/反击话术（80 字以内）：1) 回应或化解用户的拒绝理由；2) 继续施压（制造紧迫感/权威感/信任感）；3) 不要真的索要用户真实信息，只做模拟。（受 fraudster.md 用途边界约束：仅教育模拟、不生成真实联系方式）"
+    output: pressure_script
+  - id: mentor_review
+    role: "security/mentor"
+    task: "你是反诈导师。请点评用户在整轮对抗（首次话术 + 二次施压）中的应对（针对{{target_group}}人群）：1) 识别出了哪些诈骗特征（对照六个维度：身份核实/转账/验证码/链接/施压/冷静程度）；2) 还有哪些风险点没注意到，特别是二次施压环节是否被诱导动摇；3) 以{{target_group}}人群能听懂的方式给出改进建议。"
+    output: mentor_feedback
+  - id: evaluator_score
+    role: "security/evaluator"
+    task: "你是反诈评估员。基于以上演练，对用户的应对打分（0-100），输出：1) 总分与分项得分（六个维度，与导师点评一致：身份核实/拒绝转账/验证码保护/链接识别/施压应对/冷静程度）；2) 用户表现出的关键错误（若有）；3) 三条具体改进建议；4) 若用户做出了红色危险动作（转账/告知验证码/共享屏幕），必须用【红色警报】醒目标注并强调正确做法。"
+    output: evaluation_report
+  - id: drill_summary
+    role: "security/mentor"
+    task: "你是反诈教育教练。演练结束，请做知识复盘：1) 对照 scam-knowledge.md 中「{{scam_type}}」条目，提炼该骗局的 3 条核心识别要点；2) 给出适合{{target_group}}人群的一句话防骗口诀；3) 提示如需深入学习可查看知识库对应条目。"
+    output: drill_summary

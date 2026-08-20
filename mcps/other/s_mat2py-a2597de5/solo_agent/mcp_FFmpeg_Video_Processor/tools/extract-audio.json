@@ -1,0 +1,33 @@
+{
+  "name": "extract-audio",
+  "description": "Extract audio from a video file",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "videoPath": {
+        "type": "string",
+        "description": "Path to the video file to extract audio from"
+      },
+      "format": {
+        "type": "string",
+        "enum": [
+          "mp3",
+          "aac",
+          "wav",
+          "ogg"
+        ],
+        "default": "mp3",
+        "description": "Audio format to extract"
+      },
+      "outputDir": {
+        "type": "string",
+        "description": "Optional directory to save the output file (defaults to a temporary directory)"
+      }
+    },
+    "required": [
+      "videoPath"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

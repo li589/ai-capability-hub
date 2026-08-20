@@ -1,0 +1,11 @@
+{
+  "name": "龙虎榜掘金",
+  "installedAt": 1787227700165,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2085676252468027392",
+  "description_zh": "深度拆解龙虎榜明细与席位博弈，识别机构 / 北向 / 游资真实意图，输出买卖力量评分、游资追踪、三日榜\"边拉边撤\"预警。适合关注资金面与席位行为的用户。",
+  "description_en": "Deep-dive analysis of Dragon Tiger Board (longhubang) details and seat-level trading dynamics. Identify the real intentions of institutions, northbound capital, and hot-money retail traders. Output buy-sell power scores, hot-money tracking, and three-day board pull-and-dump warnings.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/c0c8b4b5-88b6-4952-a193-4c84115f2a91/avatar/skill/au_d3e378a7-dd8.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/c0c8b4b5-88b6-4952-a193-4c84115f2a91/avatar/skill/au_d3e378a7-dd8.png"
+}

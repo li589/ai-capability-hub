@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d">
+  <title id="t">Evidence Object layout guide</title>
+  <desc id="d">Asymmetric claim and artifact composition with numbered evidence annotations.</desc>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <g fill="#171412"><rect x="64" y="52" width="160" height="12"/><rect x="64" y="126" width="420" height="52"/><rect x="64" y="194" width="330" height="52"/><rect x="64" y="300" width="390" height="16"/><rect x="64" y="340" width="250" height="12"/></g>
+  <rect x="548" y="72" width="666" height="460" rx="28" fill="#6557d8"/>
+  <rect x="586" y="382" width="300" height="112" rx="14" fill="#ff5b3a"/>
+  <g fill="#dfff3f"><circle cx="650" cy="180" r="22"/><circle cx="1058" cy="268" r="22"/><circle cx="822" cy="420" r="22"/></g>
+  <g fill="#171412"><rect x="64" y="574" width="1150" height="2"/><rect x="64" y="608" width="290" height="42"/><rect x="388" y="608" width="290" height="42"/><rect x="712" y="608" width="290" height="42"/></g>
+</svg>

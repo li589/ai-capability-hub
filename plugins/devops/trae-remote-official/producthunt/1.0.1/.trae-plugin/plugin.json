@@ -1,0 +1,56 @@
+{
+  "name": "producthunt",
+  "version": "1.0.1",
+  "description": "Product Hunt integration for discovering, searching, and analyzing products, topics, collections, and user profiles via the Product Hunt GraphQL API.",
+  "i18n": {
+    "display_name": {
+      "en": "Product Hunt",
+      "zh-cn": "Product Hunt",
+      "ja": "Product Hunt"
+    },
+    "description": {
+      "en": "Product Hunt integration for discovering, searching, and analyzing products, topics, collections, and user profiles via the Product Hunt GraphQL API.",
+      "zh-cn": "Product Hunt 集成，通过 GraphQL API 发现、搜索和分析产品、主题、合集与用户信息。",
+      "ja": "Product Hunt GraphQL API を通じて製品、トピック、コレクション、ユーザー情報の検索・分析を行う統合プラグインです。"
+    }
+  },
+  "author": {
+    "name": "Product Hunt",
+    "url": "https://www.producthunt.com/"
+  },
+  "homepage": "https://www.producthunt.com",
+  "license": "MIT",
+  "keywords": [
+    "producthunt",
+    "product-discovery",
+    "startup",
+    "graphql",
+    "tech-products"
+  ],
+  "interface": {
+    "displayName": "Product Hunt",
+    "shortDescription": "Discover and analyze tech products",
+    "longDescription": "Search and analyze products, topics, collections, and user profiles on Product Hunt. Supports trending products, topic-based filtering, date-range queries, and detailed product insights including votes, comments, and maker information.",
+    "developerName": "Product Hunt",
+    "category": "Data & Analytics",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "websiteURL": "https://www.producthunt.com",
+    "defaultPrompt": [
+      "Show me today's top products on Product Hunt",
+      "Search for AI tools launched this week on Product Hunt",
+      "Get details about a specific product on Product Hunt"
+    ],
+    "brandColor": "#DA552F",
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg",
+    "screenshots": []
+  },
+  "connector": "./connector.json",
+  "env": {
+    "PRODUCTHUNT_TOKEN": "${connector.producthunt.ACCESS_TOKEN}"
+  },
+  "skills": "./skills/"
+}

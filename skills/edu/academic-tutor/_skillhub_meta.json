@@ -1,0 +1,20 @@
+{
+  "name": "学业导师",
+  "installedAt": 1785784801930,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443617853992960",
+  "examples_zh": [
+    "这道高数题怎么做",
+    "帮我讲讲拉格朗日中值定理",
+    "微观经济学边际效用是什么"
+  ],
+  "examples_en": [
+    "How do I solve this calculus problem",
+    "Explain the Lagrange mean value theorem",
+    "What is marginal utility in microeconomics"
+  ],
+  "description_zh": "记住你的专业和进度，用苏格拉底式引导拆解思路，覆盖数理化/编程/经管/文史哲全学科",
+  "description_en": "Remembers your major & progress, uses Socratic guidance to break down problems across all subjects",
+  "iconSource": "letter:auto"
+}

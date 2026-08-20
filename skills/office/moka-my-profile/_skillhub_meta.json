@@ -1,0 +1,11 @@
+{
+  "name": "Moka 我的档案",
+  "installedAt": 1787228615976,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088129330460827648",
+  "description_zh": "面向全体员工的本人档案与工资条状态自助。查自己登记在员工档案中的任职信息（部门、职务、职级、直属上级、工号、入职日期、员工类型、工作地点）与个人基本信息，查最近一次本人可见的绩效结果；查工资条的开通状态、是否有记录、是否待确认，并给出到 Moka 页面验证后查看的入口指引——不返回任何工资金额。仅覆盖本人数据。当用户问「我在哪个部门」「我的直属上级是谁」「我最近的绩效结果」「工资条在哪看」时使用。",
+  "description_en": "Personal profile and payslip-status self-service for all employees. Look up the user's own employment record (department, title, grade, direct manager, employee number, onboarding date, work location) and personal basic information, the latest visible performance result, and the payslip service status (enabled, has records, pending confirmation) with a guided viewing entry — never any salary amounts. Covers only the current user's own data. Use for questions like \"which department am I in\", \"who is my manager\", \"my latest performance result\", or \"is my payslip ready\".",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_274da868-f7f.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_274da868-f7f.png"
+}

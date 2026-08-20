@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-市场规模测算与战略建模",
+  "installedAt": 1787228662934,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085540701224067072",
+  "description_zh": "万得 Alice 市场规模测算与战略建模 CLI：Top-down / Bottom-up 双路径交叉验证，结合多情景预测与敏感性分析，输出 Excel 市场规模模型与结构化研究报告。",
+  "description_en": "Wind Alice Market Sizing & Strategic Modeling CLI - builds structured, defensible market sizing models via top-down and bottom-up triangulation, with historical backfill, forward growth forecasts, scenario analysis, and sensitivity testing for strategic planning, due diligence, and investment evaluation.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_e13e97e6-a23.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_e13e97e6-a23.jpg"
+}

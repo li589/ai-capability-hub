@@ -1,0 +1,11 @@
+{
+  "name": "WGS 短串联重复扩增检测",
+  "installedAt": 1787228530391,
+  "source": "marketplace",
+  "version": "1.1.1",
+  "skillId": "skill_2089264824257019904",
+  "description_zh": "DCS Cloud WDL「ExpansionHunter_WGS_STR」(v1.1.0) 流程说明与填参指南：基于 BAM 做 WGS 短串联重复(STR)扩增检测与性别感知基因分型。用户提到 ExpansionHunter、ExpansionHunter_WGS_STR、WGS STR、短串联重复、三联体扩增病，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"ExpansionHunter_WGS_STR\" (v1.1.0) parameter guide: detect short tandem repeat (STR) expansions from WGS BAM with sex-aware genotyping. Use when the user mentions ExpansionHunter, ExpansionHunter_WGS_STR, WGS STR, short tandem repeats, triplet-repeat disorders, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_1a3bb3ec-d01.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_1a3bb3ec-d01.png"
+}

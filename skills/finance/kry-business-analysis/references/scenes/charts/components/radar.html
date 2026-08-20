@@ -1,0 +1,30 @@
+<!-- 组件: 雷达图 -->
+<!-- 用法: 复制到 container 内，替换 chartId、indicator、data -->
+<div class="section">
+  <div class="section-title"><!-- TITLE: 如 "🎯 门店多维对比" --></div>
+  <div class="section-sub"><!-- SUB: 如 "各维度综合评分" --></div>
+  <div id="<!-- CHART_ID: 唯一ID如 chart-radar -->" class="chart-box"></div>
+</div>
+<script>
+(function(){
+  var chart = echarts.init(document.getElementById('/* CHART_ID */'));
+  chart.setOption({
+    tooltip: {},
+    legend: { top: 10 },
+    radar: {
+      indicator: [
+        /* DATA: 雷达轴，格式: { name: '维度名', max: 最大值 } */
+      ],
+      shape: 'polygon',
+      splitArea: { areaStyle: { opacity: 0.05 } }
+    },
+    series: [{
+      type: 'radar',
+      data: [
+        /* DATA: 各对象数据，格式: { value: [v1,v2,v3,...], name: '对象名' } */
+      ],
+      areaStyle: { opacity: 0.15 }
+    }]
+  });
+})();
+</script>

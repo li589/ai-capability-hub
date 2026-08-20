@@ -1,0 +1,34 @@
+{
+  "name": "personal-workbench",
+  "version": "0.1.0",
+  "description": "一键打造专属个人工作台，灵活整合日程管理、待办清单、运动健康与复盘记录等功能，清晰掌握各项事务进展。支持个性化配置与本地数据存储，让生活和工作更有条理、更高效。",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "personal-workbench",
+    "internal",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "personal-workbench",
+    "shortDescription": "一键打造专属个人工作台，灵活整合日程管理、待办清单、运动健康与复盘记录等功能，清晰掌握各项事务进展。支持个性化配置与本地数据存储，让生活和工作更有条理、更高效。",
+    "longDescription": "一键打造专属个人工作台，灵活整合日程管理、待办清单、运动健康与复盘记录等功能，清晰掌握各项事务进展。支持个性化配置与本地数据存储，让生活和工作更有条理、更高效。",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use personal-workbench to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

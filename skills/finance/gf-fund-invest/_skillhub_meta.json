@@ -1,0 +1,11 @@
+{
+  "name": "基金定投计算器",
+  "installedAt": 1787228656999,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2083074622743240704",
+  "description_zh": "基于广发证券接口，支持多种定投策略回测，测算基金历史定投收益，用于定投方案回测与策略对比。",
+  "description_en": "GF Securities fund investment calculator, supporting multi-strategy DCA (Dollar Cost Averaging) backtesting to calculate historical fund investment returns. Suitable for investment plan backtesting and strategy comparison.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_c79ff677-15e.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_c79ff677-15e.png"
+}

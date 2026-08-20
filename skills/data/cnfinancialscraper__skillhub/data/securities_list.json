@@ -1,0 +1,669 @@
+{
+ "type": "证券公司",
+ "type_name": "证券公司",
+ "count": 132,
+ "data_source": "中国证券业协会公开名录",
+ "update_time": "2026-08-15",
+ "institutions": [
+  {
+   "name": "万和证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "万联证券",
+   "code": "WLZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "世纪证券",
+   "code": "SJZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "东亚前海证券",
+   "code": "DYQH",
+   "type": "证券公司"
+  },
+  {
+   "name": "东兴证券",
+   "code": "DXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "东北证券",
+   "code": "DBZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "东吴证券",
+   "code": "DWZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "东方证券",
+   "code": "DFZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "东方财富证券",
+   "code": "DFCF",
+   "type": "证券公司"
+  },
+  {
+   "name": "东海证券",
+   "code": "DHZQ2",
+   "type": "证券公司"
+  },
+  {
+   "name": "东莞证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "中信建投证券",
+   "code": "ZXJT",
+   "type": "证券公司"
+  },
+  {
+   "name": "中信证券",
+   "code": "ZXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "中信证券",
+   "code": "ZXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "中原证券",
+   "code": "ZYGQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "中国银河证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "中天国富证券",
+   "code": "ZTGF",
+   "type": "证券公司"
+  },
+  {
+   "name": "中天证券",
+   "code": "ZTZQ2",
+   "type": "证券公司"
+  },
+  {
+   "name": "中山证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "中汇证券",
+   "code": "ZHZQ2",
+   "type": "证券公司"
+  },
+  {
+   "name": "中泰证券",
+   "code": "ZTZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "中禾证券",
+   "code": "ZHZQ3",
+   "type": "证券公司"
+  },
+  {
+   "name": "中航证券",
+   "code": "ZHZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "中证天鉴证券",
+   "code": "ZZTJ",
+   "type": "证券公司"
+  },
+  {
+   "name": "中邮证券",
+   "code": "ZYGQ2",
+   "type": "证券公司"
+  },
+  {
+   "name": "中金公司",
+   "code": "ZJ",
+   "type": "证券公司"
+  },
+  {
+   "name": "中金财富证券",
+   "code": "ZJCF",
+   "type": "证券公司"
+  },
+  {
+   "name": "中银国际证券",
+   "code": "ZYGJ",
+   "type": "证券公司"
+  },
+  {
+   "name": "中银证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "五矿证券",
+   "code": "WKZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "信达证券",
+   "code": "XDZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "光大证券",
+   "code": "GDZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "兴业证券",
+   "code": "XYZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "北京证券",
+   "code": "BJZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "华元证券",
+   "code": "HYZQ2",
+   "type": "证券公司"
+  },
+  {
+   "name": "华兴证券",
+   "code": "HXZQ2",
+   "type": "证券公司"
+  },
+  {
+   "name": "华创证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "华安证券",
+   "code": "HAZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "华宝证券",
+   "code": "HBZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "华林证券",
+   "code": "HLZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "华泰联合证券",
+   "code": "HTLH",
+   "type": "证券公司"
+  },
+  {
+   "name": "华泰证券",
+   "code": "HTZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "华海证券",
+   "code": "HHZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "华源证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "华福证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "华融证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "华西证券",
+   "code": "HXXQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "华金证券",
+   "code": "HJZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "华鑫证券",
+   "code": "HXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "华龙证券",
+   "code": "HLZQ2",
+   "type": "证券公司"
+  },
+  {
+   "name": "南京证券",
+   "code": "NJZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "嘉信证券",
+   "code": "JXZ",
+   "type": "证券公司"
+  },
+  {
+   "name": "国信证券",
+   "code": "GXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "国元证券",
+   "code": "GYZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "国开证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "国新证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "国泰君安证券",
+   "code": "GTJA",
+   "type": "证券公司"
+  },
+  {
+   "name": "国海证券",
+   "code": "GHZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "国盛证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "国联民生证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "国联证券",
+   "code": "GLZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "国融证券",
+   "code": "GRZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "国都证券",
+   "code": "GDZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "国金证券",
+   "code": "GJZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "大同证券",
+   "code": "DTZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "大和证券",
+   "code": "DHZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "大和证券(中国)",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "天风证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "太平洋证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "安信证券",
+   "code": "AXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "宏信证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "山西证券",
+   "code": "SXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "川财证券",
+   "code": "CCZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "平安证券",
+   "code": "PAZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "广发证券",
+   "code": "GFZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "开源证券",
+   "code": "KYZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "德邦证券",
+   "code": "DBZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "恒昌证券",
+   "code": "HCZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "恒泰证券",
+   "code": "HTZQ3",
+   "type": "证券公司"
+  },
+  {
+   "name": "招商证券",
+   "code": "ZSZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "摩根士丹利华鑫证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "摩根士丹利证券",
+   "code": "MGSDL",
+   "type": "证券公司"
+  },
+  {
+   "name": "摩根士丹利证券(中国)",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "摩根大通证券",
+   "code": "MGDT",
+   "type": "证券公司"
+  },
+  {
+   "name": "新时代证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "方正证券",
+   "code": "FZZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "星展证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "星展证券(中国)",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "民生证券",
+   "code": "MSZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "汇丰前海证券",
+   "code": "HFQH",
+   "type": "证券公司"
+  },
+  {
+   "name": "江海证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "法巴证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "法巴证券(中国)",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "浙商证券",
+   "code": "ZSZQ2",
+   "type": "证券公司"
+  },
+  {
+   "name": "海通证券",
+   "code": "HTS",
+   "type": "证券公司"
+  },
+  {
+   "name": "海银证券",
+   "code": "HYZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "渣打证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "渣打证券(中国)",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "爱建证券",
+   "code": "AJZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "瑞信证券",
+   "code": "RXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "瑞信证券(中国)",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "瑞银证券",
+   "code": "RYZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "甬兴证券",
+   "code": "YXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "申万宏源证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "申港证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "盛业证券",
+   "code": "SYZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "第一创业证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "粤开证券",
+   "code": "YKZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "红塔证券",
+   "code": "HTZQ4",
+   "type": "证券公司"
+  },
+  {
+   "name": "网信证券",
+   "code": "WXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "美林证券",
+   "code": "MLZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "联储证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "花旗证券",
+   "code": "HQZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "英大证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "西南证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "西部证券",
+   "code": "XBQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "诚通证券",
+   "code": "CTZQ2",
+   "type": "证券公司"
+  },
+  {
+   "name": "财信证券",
+   "code": "CXZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "财达证券",
+   "code": "CDZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "财通证券",
+   "code": "CTZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "野村东方国际证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "野村证券",
+   "code": "YQZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "金元证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "金圆统一证券",
+   "code": "JYYT",
+   "type": "证券公司"
+  },
+  {
+   "name": "银河证券",
+   "code": "YHZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "银泰证券",
+   "code": "YTZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "长城国瑞证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "长城证券",
+   "code": "CCZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "长江证券",
+   "code": "CJZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "首创证券",
+   "code": "SCZQ",
+   "type": "证券公司"
+  },
+  {
+   "name": "高盛(中国)证券",
+   "code": "",
+   "type": "证券公司"
+  },
+  {
+   "name": "高盛高华证券",
+   "code": "GSGH",
+   "type": "证券公司"
+  }
+ ]
+}

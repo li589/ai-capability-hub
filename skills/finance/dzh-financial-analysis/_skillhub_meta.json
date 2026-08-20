@@ -1,0 +1,11 @@
+{
+  "name": "大智慧财务分析",
+  "installedAt": 1787227742250,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084544383282974720",
+  "description_zh": "解读营收、利润、ROE、现金流等核心财务指标，识别公司盈利质量与财务风险，适用于中长期选股与价值分析。",
+  "description_en": "Interprets core financial metrics such as revenue, profits, ROE, and cash flow. Identifies earnings quality and financial risks. Suitable for medium-to-long-term stock selection and value analysis.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_9b4a3399-4c2.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_9b4a3399-4c2.png"
+}

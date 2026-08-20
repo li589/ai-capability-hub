@@ -1,0 +1,21 @@
+{
+  "name": "平安证券股友圈查询",
+  "installedAt": 1787227665417,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2079450892529614848",
+  "examples_zh": [
+    "股友圈有哪些半导体圈子",
+    "这个圈子里最近在讨论什么",
+    "半导体圈子热门持仓股票有哪些"
+  ],
+  "examples_en": [
+    "Find semiconductor communities in Stock Friends Circle",
+    "What are people discussing in this community recently?",
+    "Show popular holdings in the semiconductor community"
+  ],
+  "description_zh": "查询平安证券股友圈相关圈子、圈内热点内容和授权聚合的热门持仓股票。",
+  "description_en": "Search Stock Friends Circle communities, hot posts, and aggregated popular holdings.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079450892529614848/5616ea649d2d1692.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079450892529614848/5616ea649d2d1692.svg"
+}

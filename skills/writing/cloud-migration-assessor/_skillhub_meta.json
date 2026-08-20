@@ -1,0 +1,21 @@
+{
+  "name": "云迁移工作量评估",
+  "installedAt": 1787228690201,
+  "source": "marketplace",
+  "version": "4.1.0",
+  "skillId": "skill_2077241466461368320",
+  "examples_zh": [
+    "我有10台CVM 8C16G、3个MySQL、2个Redis，帮我评估迁移工作量",
+    "把团队改成3人重新算，风险缓冲调到20%",
+    "导出Word报告"
+  ],
+  "examples_en": [
+    "I have 10 CVM 8C16G, 3 MySQL, 2 Redis, help me estimate migration workload",
+    "Change team to 3 people and recalculate with 20% risk buffer",
+    "Export Word report"
+  ],
+  "description_zh": "公有云迁移工作量智能评估专家。输入资源清单即可秒出专业评估报告，覆盖14种云资源类型、6个迁移阶段、AI效率分析和风险矩阵。支持自然语言输入、交互式参数调整和Word/Excel报告导出。",
+  "description_en": "Intelligent cloud migration workload estimator. Input resource inventory to get professional assessment reports covering 14 cloud resource types, 6 migration phases, AI efficiency analysis, and risk matrix.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077241466461368320/241f13f968c91a7f.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077241466461368320/241f13f968c91a7f.svg"
+}

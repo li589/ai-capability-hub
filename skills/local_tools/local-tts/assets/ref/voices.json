@@ -1,0 +1,17 @@
+{
+  "default": {
+    "folder": "default",
+    "keywords": ["默认", "default", "normal"],
+    "description": "默认音色"
+  },
+  "dongbei": {
+    "folder": "dongbeihua",
+    "keywords": ["东北", "dongbei", "dongbeihua", "东北话", "大连", "东北口音"],
+    "description": "东北话/大连话"
+  },
+  "sichuan": {
+    "folder": "sichuanhua",
+    "keywords": ["四川", "sichuan", "sichuanhua", "四川口音", "四川方言"],
+    "description": "四川话"
+  }
+}

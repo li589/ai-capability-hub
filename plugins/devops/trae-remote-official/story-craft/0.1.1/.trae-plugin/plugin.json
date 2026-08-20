@@ -1,0 +1,39 @@
+{
+  "name": "story-craft",
+  "version": "0.1.1",
+  "displayName": "小说剧本创作",
+  "displayNameEn": "Story-Craft",
+  "description": "为剧情故事创作打造的助手，覆盖原创小说、同人、剧本剧情与世界观构建。以【人物灵魂设定 + 反AI味文笔】为核心，写出有张力、有区分度、可长篇连载的故事。",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "小说写作助手",
+    "剧本创作",
+    "同人创作",
+    "世界观构建",
+    "网文连载",
+    "剧情故事"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "小说剧本创作",
+    "shortDescription": "为剧情故事创作打造的助手，覆盖原创小说、同人、剧本剧情与世界观构建。以【人物灵魂设定 + 反AI味文笔】为核心，写出有张力、有区分度、可长篇连载的故事。",
+    "longDescription": "A creative fiction assistant built for narrative storytelling — covering original novels, fanfiction, screenplays, and worldbuilding. Core philosophy: soul-deep character design + anti-AI writing style, producing stories with tension, distinctiveness, and serial potential.",
+    "developerName": "Trae",
+    "category": "内容创作",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use story-craft to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

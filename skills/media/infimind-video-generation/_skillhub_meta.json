@@ -1,0 +1,21 @@
+{
+  "name": "极睿视频生成",
+  "installedAt": 1785864569305,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2082384803715817472",
+  "examples_zh": [
+    "用这张商品图生成一段10秒的竖屏展示视频",
+    "用首尾两张图片生成一段自然过渡的视频",
+    "用两张人物参考图生成10秒9:16走秀视频"
+  ],
+  "examples_en": [
+    "Create a 10-second vertical product video from this image",
+    "Generate a smooth transition video from these first and last frames",
+    "Generate a 10-second vertical runway video from two reference photos"
+  ],
+  "description_zh": "根据用户提供的文本、图片、视频或音频素材，完成视频生成的预检、单独费用授权、任务创建与状态跟踪，支持文生视频、图生视频、首尾帧、多模态参考和视频编辑。",
+  "description_en": "Drive Infimind Video generation from user-supplied text, images, video, or audio: preflight the request, obtain separate billing authorization, then create the task and track its status. Supports text-to-video, image-to-video, first/last-frame, multimodal references, and video editing.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082384803715817472/2e252988896b2849.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2082384803715817472/2e252988896b2849.png"
+}

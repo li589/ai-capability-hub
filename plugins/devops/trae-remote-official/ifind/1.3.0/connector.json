@@ -1,0 +1,40 @@
+{
+  "connectors": {
+    "ifind": {
+      "type": "manual_token",
+      "auth_policy": "ON_INVOKE",
+      "interface": {
+        "title": "iFinD Authorization",
+        "description": "Enter your iFinD API key or access token.",
+        "docUrl": "https://mcp.51ifind.com/",
+        "docLabel": "How to get an API key?",
+        "fields": [
+          {
+            "key": "ACCESS_TOKEN",
+            "label": "API Key",
+            "type": "password",
+            "required": true,
+            "description": "Paste the iFinD token used to authorize MCP requests."
+          }
+        ]
+      },
+      "i18n": {
+        "title": {
+          "en": "iFinD Authorization",
+          "zh-cn": "同花顺 iFinD 授权配置",
+          "ja": "iFinD 認証設定"
+        },
+        "description": {
+          "en": "Enter your iFinD API key or access token.",
+          "zh-cn": "输入你的同花顺 iFinD API Key 或访问令牌。",
+          "ja": "iFinD の API Key またはアクセストークンを入力してください。"
+        },
+        "docLabel": {
+          "en": "How to get an API key?",
+          "zh-cn": "如何获取 API Key？",
+          "ja": "API Key の取得方法"
+        }
+      }
+    }
+  }
+}

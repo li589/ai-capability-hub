@@ -1,0 +1,10 @@
+{
+  "name": "客户资料查询",
+  "installedAt": 1787227558849,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087078752245129216",
+  "description_zh": "查询客户资料和客户列表，支持按身份信息检索，并按消费、积分、余额及企微关系等条件筛选。",
+  "description_en": "Search customer profiles and lists by identity details, then filter by spending, points, balance, and WeCom relationship criteria.",
+  "iconSource": "letter:auto"
+}

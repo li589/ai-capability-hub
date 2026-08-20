@@ -1,0 +1,10 @@
+{
+  "slug": "academic-docx-toolkit",
+  "name": "学术DOCX工具包",
+  "version": "2.0.10",
+  "installedAt": 1787228850177,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

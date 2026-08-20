@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:data-processing",
+  "registry": "trae-remote-official",
+  "plugin_name": "data-processing",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "27b9d3c3-294e-4497-b3f8-ff9b84646612",
+  "remote_installed_plugin_id": "IN_2WR-.HPHK-A",
+  "checksum": "89377ad84550a685f739eed346471d566d101708f0d38cac81cd7c227706502f",
+  "file_size": 25833,
+  "installed_at": 1787227204743
+}

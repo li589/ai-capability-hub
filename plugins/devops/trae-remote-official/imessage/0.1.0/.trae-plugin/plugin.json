@@ -1,0 +1,33 @@
+{
+  "name": "imessage",
+  "version": "0.1.0",
+  "description": "iMessage channel for Claude Code — reads chat.db directly, sends via AppleScript. Built-in access control; manage pairing, allowlists, and policy via /imessage:access.",
+  "author": {
+    "name": "Imessage"
+  },
+  "repository": "https://github.com/openai/plugins",
+  "license": "Apache-2.0",
+  "keywords": [
+    "imessage",
+    "messaging",
+    "channel",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcp": ".mcp.json",
+  "interface": {
+    "displayName": "Imessage",
+    "shortDescription": "iMessage channel for Claude Code — reads chat.db directly, sends via AppleScript. Built-in access control; manage pairing, allowlists, and policy via /imessage:access.",
+    "longDescription": "iMessage channel for Claude Code — reads chat.db directly, sends via AppleScript. Built-in access control; manage pairing, allowlists, and policy via /imessage:access.",
+    "developerName": "Imessage",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [],
+    "brandColor": "#4A90D9",
+    "screenshots": []
+  }
+}

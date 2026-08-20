@@ -1,0 +1,11 @@
+{
+  "name": "豆包 WebSearch",
+  "installedAt": 1785864581246,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2083024182803230720",
+  "description_zh": "基于红狐 API 调用豆包联网搜索，提交查询后自动轮询等待结果，支持获取实时信息与 AI 摘要回答",
+  "description_en": "AI-powered web search via Doubao. Submit a query and get results automatically with built-in polling.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_0a057ff2-3c2.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_0a057ff2-3c2.svg"
+}

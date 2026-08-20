@@ -1,0 +1,62 @@
+{
+  "_meta": {
+    "description": "数据回测验证规则 v1.0",
+    "version": "4.5.0",
+    "last_update": "2026-07-29"
+  },
+  "freshness": {
+    "max_age_days": 7,
+    "stale_threshold_days": 14,
+    "future_time_grace_days": 1
+  },
+  "cross_source": {
+    "similarity_threshold": 0.7,
+    "min_other_sources": 1,
+    "weighted_score": {
+      "title_similarity": 0.4,
+      "unique_source_count": 0.3,
+      "source_credibility": 0.3
+    }
+  },
+  "snapshot_compare": {
+    "lookback_count": 5,
+    "newly_emerged_penalty": 0.3
+  },
+  "numeric": {
+    "year_range": [1990, 2030],
+    "max_inconsistencies_allowed": 3,
+    "amount_unit_consistency_check": true,
+    "amount_ratio_threshold": [9, 11]
+  },
+  "scoring": {
+    "weights": {
+      "freshness": 0.35,
+      "cross_source": 0.30,
+      "snapshot_compare": 0.15,
+      "numeric": 0.20
+    },
+    "pass_threshold": 0.6,
+    "critical_issue_penalty": 0.2
+  },
+  "required_fields": [
+    "title",
+    "url",
+    "source",
+    "published_at",
+    "content"
+  ],
+  "categories": {
+    "listed_company": {
+      "max_age_days": 3,
+      "min_other_sources": 2
+    },
+    "fund_company": {
+      "max_age_days": 7,
+      "min_other_sources": 1
+    },
+    "regulatory": {
+      "max_age_days": 30,
+      "min_other_sources": 1
+    }
+  }
+}

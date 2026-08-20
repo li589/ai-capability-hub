@@ -1,0 +1,10 @@
+{
+  "name": "会员活动策划",
+  "installedAt": 1787228614699,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2088573867167518720",
+  "description_zh": "【零一数科·出品】会员活动策划（免费版）。面向品牌、零售、消费品与会员运营的会员活动策划执行落地技能，适合在会员体系与活动方案已有之后，把全年节点排成节奏管理工具、把单场活动拆成跨部门能照着做的执行手册、把活动权益配成不与等级常驻权益打架、把复盘做成不是流水账。",
+  "description_en": "Orchestrates year-round member activity cadence and drives execution — outputs an annual marketing-node calendar, a per-campaign execution playbook (with RACI/Gantt/contingency), a campaign-benefit config (with overlap-check vs. standing tier benefits), and a structured post-mortem. Use after the membership system and campaign plan exist, to turn scattered planning and WeChat-group execution into a repeatable, reviewable closed loop.",
+  "iconSource": "letter:auto"
+}

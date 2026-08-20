@@ -1,0 +1,13 @@
+{
+  "slug": "taobao-1688-fetcher",
+  "name": "淘宝/天猫/1688 商品素材拉取",
+  "version": "1.0.2",
+  "installedAt": 1787228933096,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png"
+}

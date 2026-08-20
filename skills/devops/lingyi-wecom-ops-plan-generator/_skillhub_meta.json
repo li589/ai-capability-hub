@@ -1,0 +1,10 @@
+{
+  "name": "企微运营方案生成",
+  "installedAt": 1787228541320,
+  "source": "marketplace",
+  "version": "0.2.0",
+  "skillId": "skill_2088576887048347648",
+  "description_zh": "【零一数科·出品】企微运营方案生成（免费版）。把企微分层客户翻译成符合官方频次/合规约束的触达动作，产出分人群触点编排矩阵、话术填充表、频次排程表、合规折叠校验清单四件套。适用于企微1v1私聊触达SOP、朋友圈分人群发、群发精准触达、触达动作落版、企微频次额度分配、防折叠防封号。免登录免 Key、纯本地方法论产出。",
+  "description_en": "[Lingyi Tech] Translates segmented WeCom customers into compliant, frequency-aware reach actions via a four-part toolkit: touchpoint matrix, script, frequency schedule, and fold-risk checklist.",
+  "iconSource": "letter:auto"
+}

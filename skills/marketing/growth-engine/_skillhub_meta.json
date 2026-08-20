@@ -1,0 +1,10 @@
+{
+  "name": "growth-engine",
+  "installedAt": 1785864384291,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053083260174336000",
+  "description_zh": "自主营销实验引擎，自动运行、度量与优化增长实验",
+  "description_en": "Autonomous marketing experiment engine that runs, measures, and optimizes growth",
+  "iconSource": "letter:auto"
+}

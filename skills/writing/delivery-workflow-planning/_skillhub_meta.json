@@ -1,0 +1,10 @@
+{
+  "name": "鼎华eMES 智能交付助手-流程规划",
+  "installedAt": 1787228539295,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089991429890797568",
+  "description_zh": "智能交付前置调研：由调研问卷模板、售前交接文档、调研素材生成客户专属调研问卷、调研报告与实施流程规划（含风险预警）。",
+  "description_en": "Pre-delivery survey generator: turn survey templates, handover docs and research materials into customer-specific questionnaires, survey reports and implementation plans with risk alerts.",
+  "iconSource": "letter:auto"
+}

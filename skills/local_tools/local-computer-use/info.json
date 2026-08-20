@@ -1,0 +1,18 @@
+{
+    "venv_name": "asr-cu",
+    "python_version": "3.11",
+    "mem_need_gb": 4,
+    "server_alive_timeout": 300,
+    "models": [
+        {
+            "model_id": "aiplayground/paraphrase-multilingual-MiniLM-L12-v2-ov-int8",
+            "dir_name": "paraphrase-multilingual-MiniLM-L12-v2-ov-int8",
+            "required_files": ["openvino_model.xml", "openvino_model.bin"]
+        },
+        {
+            "model_id": "aiplayground/qwen3-4b-r0.8-awq-int4-ov",
+            "dir_name": "qwen3-4b-r0.8-awq-int4-ov",
+            "required_files": ["openvino_model.xml", "openvino_model.bin"]
+        }
+    ]
+}

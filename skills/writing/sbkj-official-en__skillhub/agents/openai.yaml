@@ -1,0 +1,4 @@
+interface:
+  display_name: "招投标行业数据分析"
+  short_description: "按行业、地区、时间、金额和信息类型统计招投标市场变化与结构"
+  default_prompt: "使用 $baobiao-analyze-bid-industry 分析指定行业的招投标市场。"

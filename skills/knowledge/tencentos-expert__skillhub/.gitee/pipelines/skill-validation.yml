@@ -1,0 +1,111 @@
+# Gitee Go 流水线配置
+# 文档: https://gitee.com/help/articles/4295
+
+name: skill-validation
+displayName: Skill 验证流水线
+
+triggers:                           # 触发条件
+  push:
+    branches:
+      include:
+        - main
+        - master
+        - develop
+  pull_request:
+    branches:
+      include:
+        - main
+        - master
+
+stages:
+  - name: validate
+    displayName: 验证文档和脚本格式
+    strategy: naturally
+    trigger: auto
+    steps:
+      - step: checkout@1
+        name: checkout
+        displayName: 检出代码
+
+      - step: shell@1
+        name: validate_structure
+        displayName: 验证项目结构
+        script: |
+          echo "=========================================="
+          echo "  TencentOS Expert Skills 结构验证"
+          echo "=========================================="
+
+          ERRORS=0
+
+          # 检查必要文件
+          for f in SKILL.md README.md LICENSE CONTRIBUTING.md; do
+            if [ ! -f "$f" ]; then
+              echo "❌ 缺少必要文件: $f"
+              ERRORS=$((ERRORS + 1))
+            else
+              echo "✅ $f 存在"
+            fi
+          done
+
+          # 检查 SKILL.md 中引用的 references 文件是否存在
+          echo ""
+          echo "检查 references/ 文件引用..."
+          REFS=$(grep -oP 'references/[a-z0-9\-]+\.md' SKILL.md | sort -u)
+          for ref in $REFS; do
+            if [ ! -f "$ref" ]; then
+              echo "❌ SKILL.md 引用了不存在的文件: $ref"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+          echo "✅ references/ 引用检查完成"
+
+          # 检查 SKILL.md 中引用的 scripts 文件是否存在
+          echo ""
+          echo "检查 scripts/ 文件引用..."
+          SCRIPTS=$(grep -oP 'scripts/[a-z_\-]+\.(sh|py|txt)' SKILL.md | sort -u)
+          for s in $SCRIPTS; do
+            if [ ! -f "$s" ]; then
+              echo "❌ SKILL.md 引用了不存在的脚本: $s"
+              ERRORS=$((ERRORS + 1))
+            fi
+          done
+          echo "✅ scripts/ 引用检查完成"
+
+          echo ""
+          echo "=========================================="
+          if [ $ERRORS -gt 0 ]; then
+            echo "  ❌ 验证失败，共 $ERRORS 个错误"
+            exit 1
+          else
+            echo "  ✅ 验证通过"
+          fi
+          echo "=========================================="
+
+  - name: test
+    displayName: 运行测试
+    strategy: naturally
+    trigger: auto
+    dependsOn: validate
+    steps:
+      - step: checkout@1
+        name: checkout
+        displayName: 检出代码
+
+      - step: shell@1
+        name: run_tests
+        displayName: 运行测试用例
+        script: |
+          echo "=========================================="
+          echo "  运行测试"
+          echo "=========================================="
+
+          if [ -f "tests/test.sh" ]; then
+            chmod +x tests/test.sh
+            bash tests/test.sh
+          else
+            echo "⚠️ 未找到 tests/test.sh，跳过测试"
+          fi
+
+          echo "=========================================="
+          echo "  测试完成"
+          echo "=========================================="

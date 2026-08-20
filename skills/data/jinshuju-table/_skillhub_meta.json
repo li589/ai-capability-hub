@@ -1,0 +1,21 @@
+{
+  "name": "金数据AI表格",
+  "installedAt": 1787227733042,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2081640630148075520",
+  "examples_zh": [
+    "帮我在金数据上建一个项目管理表，有任务名、负责人、状态、截止日期这几列",
+    "帮我把金数据表格里所有状态为进行中的行更新为已完成",
+    "帮我在金数据表格里加一个公式列自动计算完成率"
+  ],
+  "examples_en": [
+    "Create a project management table on Jinshuju with task name, owner, status, and deadline columns",
+    "Batch update all in-progress rows to done in a Jinshuju table",
+    "Add a formula column to calculate completion rate in a Jinshuju table"
+  ],
+  "description_zh": "通过金数据 MCP 用自然语言管理数据表格：创建/编辑数据表与列、增删改查行数据、批量操作、公式列自动计算，替代登录后台手动操作。",
+  "description_en": "Manage data tables on Jinshuju via MCP: create/edit tables and columns, CRUD rows, batch operations, formula columns for auto-calculation.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2081640630148075520/e1b2f498993c9ff6.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2081640630148075520/e1b2f498993c9ff6.svg"
+}

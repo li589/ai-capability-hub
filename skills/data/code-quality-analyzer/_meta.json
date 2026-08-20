@@ -1,0 +1,11 @@
+{
+  "owner": "a1ucard2q",
+  "slug": "code-quality-analyzer",
+  "displayName": "Code Quality Analyzer",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772521691382,
+    "commit": "https://github.com/openclaw/skills/commit/f49cca9fe594a14cd64cda04d3fb3d90e9ff8413"
+  },
+  "history": []
+}

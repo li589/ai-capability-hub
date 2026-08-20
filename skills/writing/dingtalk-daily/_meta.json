@@ -1,0 +1,11 @@
+{
+  "owner": "bigint1",
+  "slug": "dingtalk-daily",
+  "displayName": "dingtalk-daily",
+  "latest": {
+    "version": "0.9.4",
+    "publishedAt": 1775124530402,
+    "commit": "https://github.com/openclaw/skills/commit/52b48013a039829faa105c9e6ebf79b9dcdd46b9"
+  },
+  "history": []
+}

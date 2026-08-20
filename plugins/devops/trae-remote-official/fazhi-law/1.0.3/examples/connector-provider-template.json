@@ -1,0 +1,46 @@
+{
+  "type": "manual_token",
+  "auth_policy": "ON_INVOKE",
+  "interface": {
+    "title": "法智法律数据 MCP 配置",
+    "description": "请输入从法智数据平台获取的 API Key。凭证仅保存在您的本机，由客户端在连接法智 MCP 时注入请求头；云端不存储、不接收该凭证。",
+    "fields": [
+      {
+        "key": "ACCESS_TOKEN",
+        "label": "法智 API Key",
+        "type": "password",
+        "required": true,
+        "placeholder": "请粘贴从法智数据平台获取的 API Key",
+        "docUrl": "https://open.kuaicha365.com/lawskills",
+        "docLabel": "获取法智 API Key"
+      }
+    ]
+  },
+  "i18n": {
+    "title": {
+      "en": "Fazhi Legal Data MCP Configuration",
+      "zh-cn": "法智法律数据 MCP 配置",
+      "ja": "法智法律データ MCP 設定"
+    },
+    "description": {
+      "en": "Enter the API Key obtained from the Fazhi data platform. The credential is stored only on your device and injected into the request header when the client connects to the Fazhi MCP; the cloud does not store or receive it.",
+      "zh-cn": "请输入从法智数据平台获取的 API Key。凭证仅保存在您的本机，由客户端在连接法智 MCP 时注入请求头；云端不存储、不接收该凭证。",
+      "ja": "法智データプラットフォームから取得した API キーを入力してください。資格情報はお使いの端末にのみ保存され、クライアントが法智 MCP に接続する際にリクエストヘッダーへ注入されます。クラウドには保存・送信されません。"
+    },
+    "fields.ACCESS_TOKEN.label": {
+      "en": "Fazhi API Key",
+      "zh-cn": "法智 API Key",
+      "ja": "法智 API キー"
+    },
+    "fields.ACCESS_TOKEN.placeholder": {
+      "en": "Paste the API Key obtained from the Fazhi data platform",
+      "zh-cn": "请粘贴从法智数据平台获取的 API Key",
+      "ja": "法智データプラットフォームから取得した API キーを貼り付けてください"
+    },
+    "fields.ACCESS_TOKEN.docLabel": {
+      "en": "Get a Fazhi API Key",
+      "zh-cn": "获取法智 API Key",
+      "ja": "法智 API キーの取得"
+    }
+  }
+}

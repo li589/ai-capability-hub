@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:ifind",
+  "registry": "trae-remote-official",
+  "plugin_name": "ifind",
+  "version": "1.3.0",
+  "marketplace_plugin_id": "dd558f24-43fe-4786-a10b-a6442e05a220",
+  "remote_installed_plugin_id": "Y6LKB7A97QPM3T",
+  "checksum": "18863ea903b0249268c7001c9a61760d5e9a22df684a6ed53d7413fca20e19b1",
+  "file_size": 48784,
+  "installed_at": 1787227203871
+}

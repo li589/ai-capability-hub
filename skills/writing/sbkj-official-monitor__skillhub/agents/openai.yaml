@@ -1,0 +1,4 @@
+interface:
+  display_name: "投标监测与竞品跟踪"
+  short_description: "持续跟踪目标企业的招标、中标、合同、合作客户及竞争动态变化"
+  default_prompt: "使用 $baobiao-monitor-competitors 跟踪这些企业的投标与竞品动态。"

@@ -1,0 +1,55 @@
+{
+  "name": "zsxq",
+  "version": "1.0.0",
+  "description": "知识星球 MCP 集成，支持浏览星球、搜索主题、发帖评论、管理笔记、查看用户信息。",
+  "i18n": {
+    "display_name": {
+      "en": "Zsxq",
+      "zh-cn": "知识星球",
+      "ja": "Zsxq"
+    },
+    "description": {
+      "en": "Zsxq (知识星球) MCP integration — browse groups, post topics, comment, search, manage notes, and view user profile.",
+      "zh-cn": "知识星球 MCP 集成，支持浏览星球、搜索主题、发帖评论、管理笔记、查看用户信息。",
+      "ja": "Zsxq（知識星球）MCP 統合。グループ閲覧、トピック投稿、コメント、検索、ノート管理、ユーザー情報の表示に対応。"
+    }
+  },
+  "author": {
+    "name": "知识星球",
+    "url": "https://wx.zsxq.com"
+  },
+  "homepage": "https://wx.zsxq.com",
+  "license": "Proprietary",
+  "keywords": [
+    "zsxq",
+    "知识星球",
+    "knowledge",
+    "community",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "知识星球",
+    "shortDescription": "知识星球内容浏览与管理",
+    "longDescription": "通过知识星球 MCP 访问星球内容，支持浏览星球、搜索主题、发帖评论、管理笔记、查看用户信息等操作。",
+    "developerName": "知识星球",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://wx.zsxq.com",
+    "defaultPrompt": [
+      "列出我加入的星球",
+      "搜索星球里的内容",
+      "查看我的用户信息"
+    ],
+    "brandColor": "#16B998",
+    "logo": "./assets/app-icon.svg",
+    "composerIcon": "./assets/app-icon.svg",
+    "screenshots": []
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "skills": "./skills/"
+}

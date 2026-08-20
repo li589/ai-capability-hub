@@ -1,0 +1,12 @@
+{
+  "slug": "fundadvisor",
+  "name": "基金投资组合配置+顾问",
+  "version": "1.0.39",
+  "installedAt": 1787228852620,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/0c9b068f-f22e-44e2-96fe-d2b6f5b43b07.png"
+}

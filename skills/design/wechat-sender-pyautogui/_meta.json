@@ -1,0 +1,11 @@
+{
+  "owner": "anananangela",
+  "slug": "wechat-sender-pyautogui",
+  "displayName": "Wechat Sender",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1776069222255,
+    "commit": "https://github.com/openclaw/skills/commit/1c1d0c65a0d536f87f79171cf0cf42d2591badd7"
+  },
+  "history": []
+}

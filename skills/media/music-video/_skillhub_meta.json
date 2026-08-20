@@ -1,0 +1,11 @@
+{
+  "name": "Flova 音乐MV（需上传音乐）",
+  "installedAt": 1787228346695,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2089554055786733568",
+  "description_zh": "音乐上传、段落、情绪弧、画幅与视觉方向，在关键阶段等待用户确认。",
+  "description_en": "Use the matching live Flova Skill to plan, review, and deliver this video workflow.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/4f3019d4-c642-437f-ab0b-ea884d0e1f25/avatar/skill/au_af5c772a-49c.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/4f3019d4-c642-437f-ab0b-ea884d0e1f25/avatar/skill/au_af5c772a-49c.png"
+}

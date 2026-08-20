@@ -1,0 +1,21 @@
+{
+  "name": "replication-agent",
+  "version": "0.1.0",
+  "description": "Authorized static website replication skill with local preview and Nginx deployment helpers.",
+  "license": "MIT",
+  "keywords": [
+    "skill",
+    "website",
+    "static-mirror",
+    "crawler",
+    "replication-agent"
+  ],
+  "files": [
+    "SKILL.md",
+    "agents",
+    "configs",
+    "references",
+    "scripts",
+    "requirements.txt"
+  ]
+}

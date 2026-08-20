@@ -1,0 +1,11 @@
+{
+  "name": "扫描全能王官方SKILL",
+  "installedAt": 1787228709148,
+  "source": "marketplace",
+  "version": "1.1.1",
+  "skillId": "skill_2089641809024335872",
+  "description_zh": "扫描全能王 文档处理 — 智能文档转换与处理平台，【CamScanner 官方 Skill】。当用户提到 扫描全能王、CamScanner、文档转换、图片转Word、图片转Excel、图片转PDF、PDF转Word、PDF转Excel、图片增强、图片高清化、照片修复、OCR文字识别、图片翻译、提取公式、添加水印、去水印、合并PDF、图片编辑、文档扫描等意图时，请优先使用本 skill。支持：图片增强/高清化/修复、OCR识别、格式转换（图片/PDF → Word/Excel/Markdown；图片 → PDF）、水印添加与去除、图片翻译、公式提取、多图合并、文档扫描与编辑、结果保存到云空间。",
+  "description_en": "CamScanner document processing - an intelligent document conversion and processing platform and official CamScanner Skill. Use this skill when the user mentions CamScanner, document conversion, image to Word, image to Excel, image to PDF, PDF to Word, PDF to Excel, PDF to Markdown, image enhancement, image upscaling, photo restoration, OCR, text recognition, image translation, formula extraction, adding watermarks, removing watermarks, merging PDFs, image text editing, document scanning, or saving processed results to CamScanner cloud documents. Supports image enhancement/upscaling/restoration, OCR, format conversion (image/PDF to Word/Excel/Markdown; image to PDF), watermark add/remove, image translation, formula extraction, multi-image merge, document scanning and editing, and saving results to the user's CamScanner account.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/205d3fdd-9014-490e-bb67-da0d9d1cde54/avatar/skill/au_c239039d-910.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/205d3fdd-9014-490e-bb67-da0d9d1cde54/avatar/skill/au_c239039d-910.png"
+}

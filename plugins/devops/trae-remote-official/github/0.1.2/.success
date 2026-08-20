@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:github",
+  "registry": "trae-remote-official",
+  "plugin_name": "github",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "b679bee3-4ce9-423b-af9e-5186dfb47834",
+  "remote_installed_plugin_id": "052HXESMJMVL-A",
+  "checksum": "a56dfaef0316f0f4f0c8c5a5ebd0d73911bed3d4488e658fa0fe5097c40eccd6",
+  "file_size": 76752,
+  "installed_at": 1787227203823
+}

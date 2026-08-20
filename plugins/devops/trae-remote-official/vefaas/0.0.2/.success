@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:vefaas",
+  "registry": "trae-remote-official",
+  "plugin_name": "vefaas",
+  "version": "0.0.2",
+  "marketplace_plugin_id": "ca08d3e0-f917-474d-b211-b43e0e991bf5",
+  "remote_installed_plugin_id": "JF9GYA9HB9NW_R",
+  "checksum": "897e6907ac5f37a3e62dcc1459c26ee27f54c7df48fe2ec57abbf4da5bdf83ea",
+  "file_size": 24496,
+  "installed_at": 1787227202062
+}

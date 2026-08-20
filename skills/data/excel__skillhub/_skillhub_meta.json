@@ -1,0 +1,10 @@
+{
+  "slug": "excel",
+  "name": "Excel",
+  "version": "1.0.2",
+  "installedAt": 1787228850840,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

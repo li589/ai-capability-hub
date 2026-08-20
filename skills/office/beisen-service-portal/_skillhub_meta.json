@@ -1,0 +1,11 @@
+{
+  "name": "北森办事入口",
+  "installedAt": 1787227701075,
+  "source": "marketplace",
+  "version": "2.2.1",
+  "skillId": "skill_2087176333445742592",
+  "description_zh": "北森 HR 业务办理导航入口。根据用户意图智能匹配业务菜单，一键唤起入职办理、转正申请、调动流程、离职手续等 HR 业务操作页面。让办事不再迷路。",
+  "description_en": "Smart navigation portal for Beisen HR services. Automatically matches service menus based on user intent — onboarding, confirmation, transfer, offboarding, and more. Never get lost in HR workflows again.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_44758029-0eb.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_44758029-0eb.png"
+}

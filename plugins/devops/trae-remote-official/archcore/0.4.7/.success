@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:archcore",
+  "registry": "trae-remote-official",
+  "plugin_name": "archcore",
+  "version": "0.4.7",
+  "marketplace_plugin_id": "9e2b215e-7a42-4aed-8bfc-e6e2225650d1",
+  "remote_installed_plugin_id": "CK6NY0M1CV0GB6",
+  "checksum": "6a3a37c1369ae11ab866bfc96118a9fca7bfc7c9e75feb38af8d7422e439ecbd",
+  "file_size": 114069,
+  "installed_at": 1787227203272
+}

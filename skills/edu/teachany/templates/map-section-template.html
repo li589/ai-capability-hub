@@ -1,0 +1,82 @@
+<!--
+================================================================
+地图段模板 v8.0（标准模块声明式 · Web Mercator 对齐）
+================================================================
+用法：粘贴到 course-skeleton-v2.html 的地图占位处。
+填充变量：
+  {{MAP_ID}}            地图 DOM id（默认 "history-map"）
+  {{MAP_SCOPE}}         "china" 或 "world"
+  {{MAP_TITLE}}         地图标题（如 "唐朝至清朝疆域变迁"）
+  {{ERAS_JSON}}         eras 数组的 JSON（见下方示例）
+  {{CENTER_LAT}}        中心纬度（中国默认 34）
+  {{CENTER_LNG}}        中心经度（中国默认 108）
+  {{ZOOM}}              初始缩放（中国默认 4）
+
+⭐ v8.0 投影与对齐（强制，详见 topics/historical-maps-projection.md）：
+  - CRS：Leaflet 默认 EPSG:3857（Web Mercator）
+  - 底图：由 teachany-historical-map.js 加载 Carto XYZ + Esri 地形瓦片（同为 Mercator）
+  - 禁止：config 中的 hillshade、课件内 L.imageOverlay 全球 JPG、手写 Leaflet
+  - 禁止：ECharts geo / Canvas / SVG / D3 自造地图
+  - 疆域 GeoJSON：[lng, lat]；城市 cities：[lat, lng, 中文, 英文, 说明]
+  - fitBounds：[[南纬, 西经], [北纬, 东经]]
+
+发布前自检：
+  - <head> 已引入 leaflet.css + leaflet.js + teachany-historical-map.css
+  - </body> 前已引入 teachany-historical-map.js
+  - config 无 "hillshade" 字段
+  - GeoJSON 优先走课件 ./assets/maps/；未打包时模块按 teachany.cn → GitHub 回退
+-->
+
+<section class="ta-standard-section" id="{{MAP_ID}}">
+  <h2 style="text-align:center;margin-bottom:16px;">🗺️ {{MAP_TITLE}}</h2>
+
+  <div data-teachany-map="{{MAP_ID}}"
+       data-teachany-map-scope="{{MAP_SCOPE}}"
+       data-teachany-map-title="{{MAP_TITLE}}">
+    <script type="application/json" data-teachany-map-config>
+    {
+      "eras": {{ERAS_JSON}},
+      "center": [{{CENTER_LAT}}, {{CENTER_LNG}}],
+      "zoom": {{ZOOM}},
+      "fitBounds": [[18, 72], [52, 140]]
+    }
+    </script>
+  </div>
+</section>
+
+<!--
+================================================================
+示例：唐朝单时期地图
+================================================================
+
+<section class="ta-standard-section" id="tang-map">
+  <h2 style="text-align:center;margin-bottom:16px;">🗺️ 唐朝疆域</h2>
+
+  <div data-teachany-map="tang-map"
+       data-teachany-map-scope="china"
+       data-teachany-map-title="唐朝疆域 (618-907)">
+    <script type="application/json" data-teachany-map-config>
+    {
+      "eras": [
+        {
+          "id": "tang",
+          "label": "唐 (618-907)",
+          "file": "tang-dynasty.geojson",
+          "fill": "#dc2626",
+          "stroke": "#991b1b",
+          "desc": "唐朝是中国古代最强盛的王朝之一，疆域东至大海，西达葱岭，北逾贝加尔湖，南至越南北部。",
+          "cities": [
+            [34.27, 108.95, "长安", "Chang'an", "唐都，世界第一大都市，人口超百万"],
+            [34.62, 112.46, "洛阳", "Luoyang", "唐东都，与长安并称两京"],
+            [30.65, 104.07, "成都", "Chengdu", "西南重镇，丝绸之路南端"]
+          ]
+        }
+      ],
+      "center": [34, 108],
+      "zoom": 4,
+      "fitBounds": [[18, 72], [52, 140]]
+    }
+    </script>
+  </div>
+</section>
+-->

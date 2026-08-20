@@ -1,0 +1,17 @@
+{
+  "owner": "agents365-ai",
+  "slug": "drawio-pro-skill",
+  "displayName": "Drawio Skill",
+  "latest": {
+    "version": "1.2.0",
+    "publishedAt": 1776581756123,
+    "commit": "https://github.com/openclaw/skills/commit/c685290189226a6489da1e4bd99e5780488290b6"
+  },
+  "history": [
+    {
+      "version": "1.1.1",
+      "publishedAt": 1775456190814,
+      "commit": "https://github.com/openclaw/skills/commit/037cca396eda29cf4832457055a316c7acad32ad"
+    }
+  ]
+}

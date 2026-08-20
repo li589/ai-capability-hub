@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d">
+  <title id="t">Swiss Trace layout guide</title>
+  <desc id="d">Strict grid with open title field, blue focus trace, and dense source index.</desc>
+  <rect width="1280" height="720" fill="#fafafa"/>
+  <g fill="#0d0e10"><rect x="48" y="42" width="1184" height="2"/><rect x="48" y="72" width="140" height="10"/><rect x="48" y="128" width="720" height="62"/><rect x="1002" y="128" width="230" height="14"/><rect x="48" y="232" width="1184" height="2"/></g>
+  <g stroke="#0d0e10" stroke-width="2" fill="none"><rect x="48" y="264" width="1184" height="220"/><path d="M344 264v220M640 264v220M936 264v220M48 374h1184"/></g>
+  <path d="M84 438L276 318L460 398L666 300L850 350L1178 286" fill="none" stroke="#2357ff" stroke-width="8"/>
+  <g fill="#0d0e10"><circle cx="276" cy="318" r="9"/><circle cx="666" cy="300" r="9"/><circle cx="1178" cy="286" r="9"/><rect x="48" y="528" width="1184" height="2"/></g>
+  <g fill="#dedede"><rect x="48" y="556" width="270" height="46"/><rect x="342" y="556" width="270" height="46"/><rect x="636" y="556" width="270" height="46"/><rect x="930" y="556" width="302" height="46"/><rect x="48" y="622" width="1184" height="46"/></g>
+</svg>

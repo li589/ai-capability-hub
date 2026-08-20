@@ -1,0 +1,12 @@
+{
+  "slug": "speedtest-online-skill",
+  "name": "测网速",
+  "version": "1.0.0",
+  "installedAt": 1787229012777,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png"
+}

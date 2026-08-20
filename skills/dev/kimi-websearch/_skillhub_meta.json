@@ -1,0 +1,11 @@
+{
+  "name": "Kimi WebSearch",
+  "installedAt": 1785784717712,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2082737881203937280",
+  "description_zh": "Kimi联网搜索工具，提交查询后自动轮询返回实时搜索结果。",
+  "description_en": "Kimi WebSearch tool. Submits a query and automatically polls until real-time search results are returned.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_56932f6b-e51.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_56932f6b-e51.svg"
+}

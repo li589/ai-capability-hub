@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "sorftime": {
+      "type": "http",
+      "url": "https://mcp.sorftime.com?key=${connector.sorftime.ACCESS_TOKEN}"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:langfuse",
+  "registry": "trae-remote-official",
+  "plugin_name": "langfuse",
+  "version": "0.9.1",
+  "marketplace_plugin_id": "adc3f040-1ad1-402c-ac32-e66212593977",
+  "remote_installed_plugin_id": "7G_J2_AK1Y--KV",
+  "checksum": "2850d24ebb4d1d1d7f802918266c900f6e012a7fbbfde8010e4516420ea4f5a9",
+  "file_size": 21536,
+  "installed_at": 1787227204696
+}

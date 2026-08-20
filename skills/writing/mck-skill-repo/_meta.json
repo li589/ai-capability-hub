@@ -1,0 +1,11 @@
+{
+  "owner": "likaku",
+  "slug": "mck-skill-repo",
+  "displayName": "Mck Skill Repo",
+  "latest": {
+    "version": "1.6.1",
+    "publishedAt": 1772974776814,
+    "commit": "https://github.com/openclaw/skills/commit/58e9033db41c64269c557a01fd7ef4798591a724"
+  },
+  "history": []
+}

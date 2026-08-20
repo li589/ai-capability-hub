@@ -1,0 +1,10 @@
+{
+  "name": "鼎华eMES 智能交付助手-视频生成操作手册",
+  "installedAt": 1787227517359,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089991686921728000",
+  "description_zh": "根据操作录屏视频（.mp4）和文字描述，自动生成带截图的 Word 版操作手册/SOP，适用于系统实施、运维、技术支持场景。",
+  "description_en": "Generate Word operation manuals/SOPs with embedded screenshots from screen-recorded videos (.mp4) and step descriptions. For implementation, IT ops and technical support.",
+  "iconSource": "letter:auto"
+}

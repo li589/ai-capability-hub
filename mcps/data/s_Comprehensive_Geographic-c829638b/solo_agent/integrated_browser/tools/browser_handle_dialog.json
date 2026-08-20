@@ -1,0 +1,24 @@
+{
+  "name": "browser_handle_dialog",
+  "description": "Configure how native browser dialogs (alert, confirm, prompt) are handled. Dialogs are non-blocking in this environment - they return immediately without showing a visible dialog. Use this tool BEFORE triggering an action that shows a dialog to configure what value it should return. Also returns recent dialog history.\n",
+  "arguments": {
+    "properties": {
+      "accept": {
+        "description": "For confirm() dialogs: true to simulate clicking OK (returns true), false to simulate clicking Cancel (returns false). Default behavior is true.",
+        "type": "boolean"
+      },
+      "promptText": {
+        "description": "For prompt() dialogs: the text value to return. If not specified, prompt() returns the default value provided by the page.",
+        "type": "string"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "accept"
+    ],
+    "type": "object"
+  }
+}

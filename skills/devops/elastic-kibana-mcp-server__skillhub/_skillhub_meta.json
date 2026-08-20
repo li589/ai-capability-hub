@@ -1,0 +1,10 @@
+{
+  "slug": "elastic-kibana-mcp-server",
+  "name": "Elastic / Kibana MCP 服务器",
+  "version": "1.0.0",
+  "installedAt": 1787229025428,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

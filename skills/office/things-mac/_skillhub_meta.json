@@ -1,0 +1,21 @@
+{
+  "name": "Things任务",
+  "installedAt": 1787228704587,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082983325106176",
+  "examples_zh": [
+    "在Things里添加一个今天要做的任务",
+    "查看我Things收件箱里的所有任务",
+    "把这个任务标记为已完成"
+  ],
+  "examples_en": [
+    "Add a task to Things for today",
+    "Show all tasks in my Things inbox",
+    "Mark this task as completed in Things"
+  ],
+  "description_zh": "管理 Things 3 任务和项目",
+  "description_en": "Manage Things 3 tasks and projects",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/things-mac.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/things-mac.png"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "DesignKit 电商内容创作",
+  "installedAt": 1785864390599,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2083145038500409344",
+  "description_zh": "上传商品图，即可生成适用于 Amazon、Temu、TikTok Shop 等平台的电商商品套图，或制作适用于 TikTok、Reels 的营销短视频。支持爆款视频生成与复刻、UGC 种草、产品口播、产品演示，以及可复用的定制 AI 模特。Skill 会引导用户确认商品信息和生成选项，提交前展示价格，自动跟进长任务，并在对话中直接展示生成结果；仅在用户明确要求时下载到本地。",
+  "description_en": "Create ecommerce listing image sets and short-form marketing videos from product images. Supports Amazon, Temu, TikTok Shop, TikTok, and Reels workflows, including product image kits, viral video generation or recreation, UGC videos, product demos, and reusable custom AI models. The Skill guides users through product details and generation options, shows pricing before submission, tracks long-running jobs, renders generated media directly in chat, and downloads files only when requested.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/2202d28d-910f-4c97-9c2e-6c8a67e90b7e/avatar/skill/au_ca4c78de-340.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/2202d28d-910f-4c97-9c2e-6c8a67e90b7e/avatar/skill/au_ca4c78de-340.svg"
+}

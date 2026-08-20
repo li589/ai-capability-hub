@@ -1,0 +1,11 @@
+{
+  "owner": "wwek",
+  "slug": "restaurant-evaluator",
+  "displayName": "餐饮创业选址与开店评估专家系统",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1772777800611,
+    "commit": "https://github.com/openclaw/skills/commit/8bca185cf1c4e3fe54482876ff26f31f334cae92"
+  },
+  "history": []
+}

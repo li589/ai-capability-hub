@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:progress-management-workbench",
+  "registry": "trae-remote-official",
+  "plugin_name": "progress-management-workbench",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "4304dc56-e9b4-4508-a494-cafcd7bc496d",
+  "remote_installed_plugin_id": "QHC8XMWSEIXV0.",
+  "checksum": "a5c19a09d1edb0c461cfadce3541f723542b41d6582a272d5c5f61bbd520dde8",
+  "file_size": 15229,
+  "installed_at": 1787227203525
+}

@@ -1,0 +1,20 @@
+{
+  "name": "目标拆解与打卡助手",
+  "installedAt": 1787228501651,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443557317259264",
+  "examples_zh": [
+    "帮我把考研计划拆解成每日任务",
+    "今天的任务完成了，打个卡",
+    "看看我这周的学习热力图"
+  ],
+  "examples_en": [
+    "Break down my exam prep into daily tasks",
+    "I finished today's tasks, check in",
+    "Show my study heatmap for this week"
+  ],
+  "description_zh": "每日任务提醒+完成打卡+进度可视化+AI预警，支持ABC三档任务和游戏化激励",
+  "description_en": "Daily task reminders, check-ins, progress visualization & AI alerts with ABC three-tier tasks and gamified motivation",
+  "iconSource": "letter:auto"
+}

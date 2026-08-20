@@ -1,0 +1,74 @@
+/* Optional report-local recipe. Uses html-report's canonical theme tokens. */
+:root {
+  --motion-duration: 160ms;
+  --motion-curve: cubic-bezier(0.2, 0, 0, 1);
+}
+
+[data-report-section] {
+  scroll-margin-top: 32px;
+}
+
+[data-report-nav] a,
+[data-signal-trigger] {
+  transition:
+    color var(--motion-duration) var(--motion-curve),
+    border-color var(--motion-duration) var(--motion-curve),
+    background-color var(--motion-duration) var(--motion-curve),
+    opacity var(--motion-duration) var(--motion-curve);
+}
+
+[data-report-nav] a {
+  color: var(--muted);
+  text-decoration-color: transparent;
+  text-underline-offset: 0.3em;
+}
+
+[data-report-nav] a:hover,
+[data-report-nav] a:focus-visible,
+[data-report-nav] a[aria-current="location"] {
+  color: var(--ink);
+  text-decoration-color: currentColor;
+}
+
+[data-card-role="signal"] {
+  border: 1px solid var(--rule);
+  background: var(--bg);
+  transition:
+    color var(--motion-duration) var(--motion-curve),
+    border-color var(--motion-duration) var(--motion-curve),
+    background-color var(--motion-duration) var(--motion-curve),
+    opacity var(--motion-duration) var(--motion-curve),
+    box-shadow var(--motion-duration) var(--motion-curve);
+}
+
+[data-card-role="signal"]:hover,
+[data-card-role="signal"]:focus-within {
+  border-color: var(--ink);
+}
+
+[data-card-role="signal"].is-selected,
+[data-card-role="signal"]:has([data-signal-trigger][aria-pressed="true"]) {
+  color: var(--bg);
+  border-color: var(--ink);
+  background: var(--ink);
+}
+
+[data-signal-trigger]:focus-visible,
+[data-report-nav] a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion-duration: 0ms;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "connectors": {
+    "qichacha": {
+      "type": "remote_mcp",
+      "mcp_server": "qcc-regulation",
+      "auth_policy": "ON_INVOKE"
+    }
+  }
+}

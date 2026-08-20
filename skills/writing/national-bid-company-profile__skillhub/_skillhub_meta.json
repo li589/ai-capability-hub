@@ -1,0 +1,12 @@
+{
+  "slug": "national-bid-company-profile",
+  "name": "全国招中标查询与企业画像",
+  "version": "1.0.1",
+  "installedAt": 1787228749449,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/2d8152d9-7618-454e-9d87-2487f1b4457f.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/2d8152d9-7618-454e-9d87-2487f1b4457f.png"
+}

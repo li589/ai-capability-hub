@@ -1,0 +1,11 @@
+{
+  "owner": "1kalin",
+  "slug": "afrexai-vendor-risk",
+  "displayName": "Vendor Risk Assessment",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771613111015,
+    "commit": "https://github.com/openclaw/skills/commit/5c849f05ee976089b5fed9e7a1b3723a51233bc9"
+  },
+  "history": []
+}

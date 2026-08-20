@@ -1,0 +1,12 @@
+{
+  "slug": "familiar-person-recognition-analysis",
+  "name": "Acquaintance Recognition & Analysis Skill | 熟人识别分析技能",
+  "version": "1.0.10",
+  "installedAt": 1787229049228,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/5a1e9830-80e4-4cbb-8d00-cee893ca9555.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/5a1e9830-80e4-4cbb-8d00-cee893ca9555.png"
+}

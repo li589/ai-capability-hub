@@ -1,0 +1,11 @@
+{
+  "name": "B站关键词搜账号",
+  "installedAt": 1787228316200,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087459755215740928",
+  "description_zh": "根据关键词查询B站账号，支持综合与粉丝数排序，返回粉丝数、等级、简介等信息",
+  "description_en": "Search Bilibili accounts by keyword with follower counts and profile details.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_ca3d5ff5-b7b.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_ca3d5ff5-b7b.svg"
+}

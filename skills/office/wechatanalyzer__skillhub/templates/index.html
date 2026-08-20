@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>微信聊天分析助手</title>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft YaHei", Arial, sans-serif; background: #f0f2f5; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px 30px; }
+        .header h1 { font-size: 24px; margin-bottom: 5px; }
+        .header .subtitle { opacity: 0.9; font-size: 14px; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+        .card h2 { color: #333; font-size: 18px; margin-bottom: 15px; border-left: 4px solid #667eea; padding-left: 10px; }
+        .input-area { width: 100%; min-height: 200px; border: 1px solid #e9ecef; border-radius: 8px; padding: 15px; font-size: 14px; resize: vertical; font-family: inherit; }
+        .btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; padding: 12px 30px; border-radius: 8px; cursor: pointer; font-size: 16px; margin-top: 15px; }
+        .btn:hover { opacity: 0.9; }
+        .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .stat-item { background: #f8f9fa; padding: 15px; border-radius: 8px; text-align: center; }
+        .stat-item .value { font-size: 28px; font-weight: bold; color: #667eea; }
+        .stat-item .label { font-size: 12px; color: #666; margin-top: 5px; }
+        .mbti-result { display: flex; align-items: center; gap: 20px; }
+        .mbti-type { font-size: 48px; font-weight: bold; color: #667eea; }
+        .bigfive { display: flex; gap: 15px; flex-wrap: wrap; }
+        .bigfive-item { flex: 1; min-width: 100px; }
+        .bigfive-item .label { font-size: 12px; color: #666; }
+        .bigfive-item .bar { height: 6px; background: #e9ecef; border-radius: 3px; margin-top: 5px; }
+        .bigfive-item .bar .fill { height: 100%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 3px; }
+        .bigfive-item .value { font-size: 16px; font-weight: bold; color: #333; margin-top: 5px; }
+        .risk-alert { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 8px; margin-bottom: 10px; }
+        .risk-alert.high { background: #f8d7da; border-color: #dc3545; }
+        .risk-alert.medium { background: #fff3cd; border-color: #ffc107; }
+        .risk-alert h3 { color: #333; font-size: 14px; margin-bottom: 5px; }
+        .risk-alert p { color: #666; font-size: 12px; margin-bottom: 5px; }
+        .response-options { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+        .response-btn { padding: 8px 15px; border-radius: 15px; font-size: 12px; cursor: pointer; border: 1px solid #ddd; background: white; }
+        .response-btn.defensive { border-color: #28a745; color: #28a745; }
+        .response-btn.offensive { border-color: #dc3545; color: #dc3545; }
+        .response-btn.diplomatic { border-color: #007bff; color: #007bff; }
+        .tabs { display: flex; gap: 10px; margin-bottom: 15px; }
+        .tab { padding: 8px 20px; border-radius: 20px; cursor: pointer; background: #e9ecef; color: #666; }
+        .tab.active { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .event-item { display: flex; align-items: center; padding: 10px; border-bottom: 1px solid #e9ecef; }
+        .event-item:last-child { border-bottom: none; }
+        .event-date { width: 60px; text-align: center; background: #f8f9fa; padding: 8px; border-radius: 8px; }
+        .event-date .day { font-size: 20px; font-weight: bold; color: #667eea; }
+        .event-date .month { font-size: 10px; color: #666; }
+        .event-info { flex: 1; margin-left: 15px; }
+        .event-info .title { font-size: 14px; color: #333; }
+        .event-info .meta { font-size: 12px; color: #999; margin-top: 3px; }
+        .importance-high { color: #dc3545; }
+        .importance-medium { color: #ffc107; }
+        .importance-low { color: #28a745; }
+        .prediction { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 20px; border-radius: 8px; }
+        .prediction h3 { margin-bottom: 10px; }
+        .prediction .quote { font-size: 18px; font-style: italic; }
+        .scenario-tags { display: flex; gap: 10px; margin-bottom: 15px; }
+        .scenario-tag { padding: 5px 15px; border-radius: 15px; font-size: 12px; background: #e9ecef; color: #666; }
+        .scenario-tag.primary { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; }
+        .word-cloud { display: flex; flex-wrap: wrap; gap: 8px; }
+        .word-cloud span { padding: 4px 10px; border-radius: 12px; font-size: 11px; color: white; }
+        .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 5px; }
+        .calendar-day { text-align: center; padding: 8px; border-radius: 8px; font-size: 12px; }
+        .calendar-day.has-event { background: #667eea; color: white; }
+        .calendar-day.today { border: 2px solid #667eea; }
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>微信聊天分析助手</h1>
+        <div class="subtitle">智能分析聊天记录 | MBTI+心理分析 | 风险预警 | 日历提醒</div>
+    </div>
+
+    <div class="container">
+        <div class="grid">
+            <div class="card">
+                <h2>输入聊天记录</h2>
+                <a href="/how_to_export" target="_blank" style="display:inline-block;margin:10px 0;padding:10px 20px;background:#07c160;color:white;border-radius:8px;text-decoration:none;font-size:14px">📥 如何导出微信聊天记录</a>
+<textarea id="chatInput" class="input-area" placeholder="请粘贴聊天记录，格式示例：
+[2024-01-01 10:30:00] 张三: 你好呀，最近忙吗？
+[2024-01-01 10:32:00] 李四: 还好，项目快结束了
+[2024-01-01 10:33:00] 张三: 那太好了，周五一起吃饭吧
+...
+
+或者直接粘贴无时间的纯文本格式"></textarea>
+                <button class="btn" onclick="analyzeChat()">开始分析</button>
+                <button class="btn" style="background: #28a745; margin-left: 10px;" onclick="uploadScreenshot()">📷 上传截图</button>
+                <input type="file" id="screenshotInput" accept="image/*" style="display: none;" onchange="handleScreenshot(this)">
+            </div>
+
+            <div class="card">
+                <h2>分析结果</h2>
+                <div id="resultsArea" class="hidden">
+                    <div class="stats-grid" id="statsGrid"></div>
+
+                    <div style="margin-top: 20px;">
+                        <div class="tabs">
+                            <div class="tab active" onclick="showTab('mbti')">MBTI分析</div>
+                            <div class="tab" onclick="showTab('risk')">风险预警</div>
+                            <div class="tab" onclick="showTab('calendar')">日历</div>
+                            <div class="tab" onclick="showTab('words')">高频词</div>
+                        </div>
+
+                        <div id="tabContent"></div>
+                    </div>
+                </div>
+                <div id="loadingArea" style="text-align: center; padding: 50px; color: #999;">
+                    等待分析中...
+                </div>
+            </div>
+        </div>
+
+        <div class="grid" style="margin-top: 20px;">
+            <div class="card">
+                <h2>对话预测</h2>
+                <div id="predictionArea" class="hidden"></div>
+            </div>
+
+            <div class="card">
+                <h2>即将到来的日程</h2>
+                <div id="eventsArea">
+                    <p style="color: #999; text-align: center;">暂无日程</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentResults = null;
+
+        async function analyzeChat() {
+            const text = document.getElementById('chatInput').value.trim();
+            if (!text) {
+                alert('请输入聊天记录');
+                return;
+            }
+
+            document.getElementById('loadingArea').style.display = 'block';
+            document.getElementById('resultsArea').classList.add('hidden');
+
+            try {
+                const response = await fetch('/api/analyze', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ text })
+                });
+
+                const data = await response.json();
+                if (data.success) {
+                    currentResults = data.results;
+                    displayResults(data.results);
+                    displayEvents(data.events);
+                } else {
+                    alert('分析失败');
+                }
+            } catch (error) {
+                console.error(error);
+                alert('分析失败: ' + error.message);
+            }
+
+            document.getElementById('loadingArea').style.display = 'none';
+            document.getElementById('resultsArea').classList.remove('hidden');
+        }
+
+        function displayResults(results) {
+            // 显示统计数据
+            const stats = results.stats || {};
+            document.getElementById('statsGrid').innerHTML = `
+                <div class="stat-item"><div class="value">${stats.total_messages || 0}</div><div class="label">总消息</div></div>
+                <div class="stat-item"><div class="value">${stats.self_messages || 0}</div><div class="label">我的消息</div></div>
+                <div class="stat-item"><div class="value">${stats.other_messages || 0}</div><div class="label">对方消息</div></div>
+                <div class="stat-item"><div class="value">${stats.conversation_duration_days || 0}</div><div class="label">对话天数</div></div>
+            `;
+
+            // 默认显示MBTI
+            showTab('mbti');
+
+            // 显示预测
+            if (results.prediction) {
+                document.getElementById('predictionArea').innerHTML = `
+                    <div class="prediction">
+                        <h3>对方可能会说：</h3>
+                        <div class="quote">"${results.prediction.next_message}"</div>
+                    </div>
+                `;
+                document.getElementById('predictionArea').classList.remove('hidden');
+            }
+
+            // 加载即将到来的事件
+            loadUpcomingEvents();
+        }
+
+        function showTab(tabName) {
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            let html = '';
+            switch (tabName) {
+                case 'mbti':
+                    html = displayMBTI(currentResults);
+                    break;
+                case 'risk':
+                    html = displayRisk(currentResults);
+                    break;
+                case 'calendar':
+                    html = displayCalendar();
+                    break;
+                case 'words':
+                    html = displayWords(currentResults);
+                    break;
+            }
+            document.getElementById('tabContent').innerHTML = html;
+        }
+
+        function displayMBTI(results) {
+            if (!results || !results.mbti) return '<p>暂无MBTI数据</p>';
+
+            const mbti = results.mbti;
+            const bigFive = results.big_five || {};
+
+            return `
+                <div class="mbti-result">
+                    <div class="mbti-type">${mbti.type || '???'}</div>
+                    <div>
+                        <div style="font-size: 20px;">${mbti.name || '未知'}</div>
+                        <div style="color: #666;">${mbti.description || ''}</div>
+                        <div style="color: #999; margin-top: 5px;">置信度: ${mbti.confidence || 0}%</div>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 20px;">大五人格</h3>
+                <div class="bigfive">
+                    <div class="bigfive-item">
+                        <div class="label">开放性</div>
+                        <div class="bar"><div class="fill" style="width: ${bigFive.openness || 50}%"></div></div>
+                        <div class="value">${bigFive.openness || 50}%</div>
+                    </div>
+                    <div class="bigfive-item">
+                        <div class="label">尽责性</div>
+                        <div class="bar"><div class="fill" style="width: ${bigFive.conscientiousness || 50}%"></div></div>
+                        <div class="value">${bigFive.conscientiousness || 50}%</div>
+                    </div>
+                    <div class="bigfive-item">
+                        <div class="label">外向性</div>
+                        <div class="bar"><div class="fill" style="width: ${bigFive.extraversion || 50}%"></div></div>
+                        <div class="value">${bigFive.extraversion || 50}%</div>
+                    </div>
+                    <div class="bigfive-item">
+                        <div class="label">宜人性</div>
+                        <div class="bar"><div class="fill" style="width: ${bigFive.agreeableness || 50}%"></div></div>
+                        <div class="value">${bigFive.agreeableness || 50}%</div>
+                    </div>
+                    <div class="bigfive-item">
+                        <div class="label">神经质</div>
+                        <div class="bar"><div class="fill" style="width: ${bigFive.neuroticism || 50}%"></div></div>
+                        <div class="value">${bigFive.neuroticism || 50}%</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        function displayRisk(results) {
+            const risks = results?.risks || {};
+
+            if (risks.no_risk_detected) {
+                return '<p style="color: #28a745;">✓ 暂未检测到明显风险</p>';
+            }
+
+            let html = '';
+            const riskNames = {
+                work_shirt: '职场甩锅',
+                pig_butcher: '杀猪盘',
+                hr_bad: 'HR不当人',
+                teammate_trouble: '猪队友'
+            };
+
+            for (const [type, data] of Object.entries(risks)) {
+                if (type === 'no_risk_detected') continue;
+
+                html += `
+                    <div class="risk-alert ${data.risk_level || 'low'}">
+                        <h3>⚠️ ${riskNames[type] || type}</h3>
+                        <p>${data.description || ''}</p>
+                        <p>匹配关键词: ${(data.matched_keywords || []).join(', ')}</p>
+                        <div class="response-options">
+                            <p style="width:100%;margin-bottom:5px;font-size:11px;color:#999;">点击复制应对话术：</p>
+                `;
+
+                const strategies = data.response_strategies || {};
+                for (const [style, options] of Object.entries(strategies)) {
+                    for (const opt of options) {
+                        html += `<span class="response-btn ${style}" onclick="copyText('${opt}')">${opt}</span>`;
+                    }
+                }
+
+                html += '</div></div>';
+            }
+
+            return html;
+        }
+
+        function displayCalendar() {
+            return '<p style="color:#999;">点击"日历"标签查看完整日历视图</p>';
+        }
+
+        function displayWords(results) {
+            const words = results?.word_frequency || [];
+            if (!words.length) return '<p>暂无词频数据</p>';
+
+            const colors = ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe', '#00f2fe', '#43e97b', '#38f9d7'];
+
+            return `
+                <div class="word-cloud">
+                    ${words.slice(0, 30).map(([word, count], i) => `
+                        <span style="background: ${colors[i % colors.length]}; opacity: ${1 - i * 0.02};">
+                            ${word} (${count})
+                        </span>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        async function loadUpcomingEvents() {
+            try {
+                const response = await fetch('/api/events/upcoming?days=14');
+                const data = await response.json();
+
+                if (data.success && data.events.length) {
+                    document.getElementById('eventsArea').innerHTML = data.events.map(event => {
+                        const date = new Date(event.event_date);
+                        return `
+                            <div class="event-item">
+                                <div class="event-date">
+                                    <div class="day">${date.getDate()}</div>
+                                    <div class="month">${date.getMonth() + 1}月</div>
+                                </div>
+                                <div class="event-info">
+                                    <div class="title">${event.title}</div>
+                                    <div class="meta">
+                                        <span class="importance-${event.importance}">${event.importance}</span>
+                                        · ${event.event_type}
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+                    }).join('');
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('已复制: ' + text);
+            });
+        }
+
+        function uploadScreenshot() {
+            document.getElementById('screenshotInput').click();
+        }
+
+        function handleScreenshot(input) {
+            const file = input.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = async function(e) {
+                const imageData = e.target.result;
+
+                document.getElementById('loadingArea').style.display = 'block';
+                document.getElementById('resultsArea').classList.add('hidden');
+
+                try {
+                    const response = await fetch('/api/upload/screenshot', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ image_data: imageData })
+                    });
+
+                    const data = await response.json();
+                    if (data.success) {
+                        currentResults = data.results;
+                        document.getElementById('chatInput').value = '[截图分析] ' + data.messages.map(m => m.content).join('\n');
+                        displayResults(data.results);
+                        displayEvents(data.events);
+                    } else {
+                        alert('截图分析失败: ' + data.error);
+                    }
+                } catch (error) {
+                    alert('截图分析失败: ' + error.message);
+                }
+
+                document.getElementById('loadingArea').style.display = 'none';
+                document.getElementById('resultsArea').classList.remove('hidden');
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function displayEvents(events) {
+            if (!events || !events.length) return;
+
+            document.getElementById('eventsArea').innerHTML = events.map(event => {
+                const date = new Date(event.event_date);
+                return `
+                    <div class="event-item">
+                        <div class="event-date">
+                            <div class="day">${date.getDate()}</div>
+                            <div class="month">${date.getMonth() + 1}月</div>
+                        </div>
+                        <div class="event-info">
+                            <div class="title">${event.title}</div>
+                            <div class="meta">
+                                <span class="importance-${event.importance}">${event.importance}</span>
+                                · ${event.event_type}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+    </script>
+</body>
+</html>

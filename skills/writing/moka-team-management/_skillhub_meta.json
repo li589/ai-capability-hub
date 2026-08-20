@@ -1,0 +1,11 @@
+{
+  "name": "Moka 团队管理",
+  "installedAt": 1787228586491,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088127907856072704",
+  "description_zh": "面向部门负责人与有汇报下属的管理者（非人事角色）的团队查询。查自己管理范围内的部门层级与成员名单、某位成员的档案（任职、个人信息、履历、合同、绩效结果等按权限开放的信息域），以及团队出勤三视角——出勤概况（按日或按月）、某天某一类的具体名单（谁迟到、谁请假、谁未排班）、按月逐个成员的考勤指标对比。可见范围恒为「所选部门及其子部门 ∩ 本人管理范围」，全部只读。当用户问「我管的部门有哪些」「销售部有哪些人」「今天谁没来」「这个月谁迟到最多」时使用。",
+  "description_en": "Team queries for department managers and leaders with direct reports (not an HR role). Browse the departments under the user's management scope and member rosters, read a member's profile (employment, resume, contract, performance results — whatever the account may see), and check team attendance in three views: daily or monthly overview, the exact list of who was late / on leave / unscheduled on a given day, and per-member monthly statistics. Visibility is always the selected department subtree intersected with the user's authorized scope; everything is read-only. Use for questions like \"which departments do I manage\", \"who is on my team\", \"who was late today\", or \"who worked the most overtime this month\".",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_bb4519d0-c72.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_bb4519d0-c72.png"
+}

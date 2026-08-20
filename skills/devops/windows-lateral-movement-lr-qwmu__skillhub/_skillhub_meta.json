@@ -1,0 +1,10 @@
+{
+  "slug": "windows-lateral-movement-lr-qwmu",
+  "name": "Windows横向移动",
+  "version": "1.0.0",
+  "installedAt": 1787229024577,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

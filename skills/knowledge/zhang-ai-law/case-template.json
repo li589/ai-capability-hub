@@ -1,0 +1,39 @@
+{
+  "metadata": {
+    "skill": "zhang-ai-law",
+    "version": "1.0.0",
+    "total_cases": 0,
+    "target_cases": 500,
+    "last_updated": "2026-03-24",
+    "categories": {
+      "algorithm_filing": { "name": "算法备案", "target": 100, "current": 0 },
+      "genai_compliance": { "name": "生成式AI合规", "target": 150, "current": 0 },
+      "deep_synthesis": { "name": "深度合成合规", "target": 80, "current": 0 },
+      "autonomous_driving": { "name": "自动驾驶责任", "target": 70, "current": 0 },
+      "ai_medical": { "name": "AI医疗合规", "target": 50, "current": 0 },
+      "ai_recruitment": { "name": "AI招聘算法", "target": 30, "current": 0 },
+      "ai_copyright": { "name": "AI生成内容版权", "target": 20, "current": 0 }
+    }
+  },
+  "case_schema": {
+    "id": "string (ALG-001格式)",
+    "category": "string (对应categories的key)",
+    "title": "string (案例标题)",
+    "source": "string (案例来源)",
+    "date": "string (YYYY-MM-DD)",
+    "location": "string (适用地区)",
+    "facts": "string (案情描述)",
+    "legal_issues": ["string (法律问题列表)"],
+    "applicable_laws": ["string (适用法律条文)"],
+    "regulatory_authority": "string (监管机构)",
+    "decision": "string (裁决/处理结果)",
+    "penalty": "string (处罚措施，如有)",
+    "compliance_insights": "string (合规启示)",
+    "risk_level": "enum: high/medium/low",
+    "tags": ["string (关键词标签)"],
+    "related_cases": ["string (关联案例ID)"],
+    "created_at": "string (录入时间)",
+    "updated_at": "string (更新时间)"
+  },
+  "cases": []
+}

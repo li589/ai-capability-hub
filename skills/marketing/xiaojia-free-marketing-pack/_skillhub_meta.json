@@ -1,0 +1,21 @@
+{
+  "name": "小加同学",
+  "installedAt": 1785864381314,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2060316799974969344",
+  "examples_zh": [
+    "帮我做一组新店开业的小红书内容方向",
+    "查一下今天有什么节日热点",
+    "帮我生成一张大字报封面"
+  ],
+  "examples_en": [
+    "Help me brainstorm Xiaohongshu content ideas for a new store opening",
+    "What are today's holiday hotspots?",
+    "Generate a poster screenshot for my note cover"
+  ],
+  "description_zh": "免费营销辅助技能包，支持技能创意匹配、节日热点查询、大字报截图生成和三平台内容营销方法指导。",
+  "description_en": "Free marketing helper pack for skill idea matching, holiday hotspot queries, poster screenshot generation, and content marketing guidance for Xiaohongshu, WeChat, and Douyin.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060316799974969344/c2e55cd3ad9e96b7.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060316799974969344/c2e55cd3ad9e96b7.png"
+}

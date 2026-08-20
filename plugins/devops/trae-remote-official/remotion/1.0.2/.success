@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:remotion",
+  "registry": "trae-remote-official",
+  "plugin_name": "remotion",
+  "version": "1.0.2",
+  "marketplace_plugin_id": "69303221-6a6d-4620-b21d-e8820daee776",
+  "remote_installed_plugin_id": "VCLVZMM5T3DWUJ",
+  "checksum": "7ba6e3ef3d66c4ac6e6f1e736326e1deffb9385b30e65664d40a6aa6845fa720",
+  "file_size": 117940,
+  "installed_at": 1787227201337
+}

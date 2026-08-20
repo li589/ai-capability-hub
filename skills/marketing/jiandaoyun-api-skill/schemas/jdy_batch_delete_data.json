@@ -1,0 +1,36 @@
+{
+  "client_only_params": [],
+  "description": "批量删除表单中多条记录（最多100条/次）",
+  "display_name": "批量删除数据",
+  "domain": "数据",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/app/entry/data/batch_delete",
+  "method": "POST",
+  "name": "jdy_batch_delete_data",
+  "params": {
+    "app_id": {
+      "description": "应用ID",
+      "type": "string"
+    },
+    "data_ids": {
+      "description": "要删除的记录ID列表，最多100条",
+      "type": "array"
+    },
+    "entry_id": {
+      "description": "表单ID",
+      "type": "string"
+    },
+    "is_start_trigger": {
+      "default": false,
+      "description": "是否触发智能助手（默认false）",
+      "type": "boolean"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "app_id",
+    "entry_id",
+    "data_ids"
+  ],
+  "risk": "destructive",
+  "source": "简道云工具包.zip"
+}

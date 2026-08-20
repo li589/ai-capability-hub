@@ -1,0 +1,11 @@
+{
+  "owner": "brucezhu888",
+  "slug": "dingtalk-workspace",
+  "displayName": "Dingtalk Workspace",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1775035003941,
+    "commit": "https://github.com/openclaw/skills/commit/535fcb483dfe6066ea15e001f47ebbbbd962bfae"
+  },
+  "history": []
+}

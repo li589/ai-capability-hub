@@ -1,0 +1,10 @@
+{
+  "name": "股市复盘",
+  "installedAt": 1787227594894,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084563282829729792",
+  "description_zh": "通过实时拉取指数行情、个股K线和涨停跌停数据，自动计算市场环境评分、情绪周期、个股趋势评分，并生成内容丰富的复盘总结。",
+  "description_en": "By pulling real-time index quotes, individual stock K-line data, and limit-up/limit-down statistics, the system automatically computes a market environment score, sentiment cycle, and per-stock trend score, then generates a detailed post-session review.",
+  "iconSource": "letter:auto"
+}

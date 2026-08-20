@@ -1,0 +1,16 @@
+interface:
+  display_name: "热点快报（八爪鱼）"
+  short_description: "新闻查询优先触发；深度模式固定6批，推送近7天标题链接"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+  brand_color: "#1269C7"
+  default_prompt: "使用 $build-hot-news-brief 在当前对话直接生成热点快报，并优先处理所有近期新闻、热点、动态和趋势查询，即使用户未提 Skill 名；“深度模式/深度搜索/深度检索/深搜/deep mode/deep search”必须强制触发并固定6批，缺少主题时只追问主题且不搜索，不得改用通用搜索。新对话首次触发时，必须在任何MCP调用前逐项发送SKILL.md中的固定《热点快报模式提醒》，只替换检索模式和输出模式，不得缩写；发送后设置onboarding_acknowledged=true。同一对话后续只声明本次模式。每批固定count=30、summary=false。正常响应不得调用终端、脚本或创建文件；若宿主自动返回超大响应文件，整个请求只允许一次内置compact_search_result.mjs读取全部文件，禁止jq、Python、查看头尾或多轮探测。快速模式搜索1次，深度模式固定6次并发优先；随后直接输出1–3条短总结及最多10条可点击新闻标题和原文链接。"
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "bazhuayu-hot-news-brief"
+      description: "八爪鱼近七天公开新闻搜索，只开放平台枚举和内容搜索两个只读工具"
+      transport: "streamable_http"
+      url: "https://mcp.bazhuayu.com/?includeTools=search_platform_content,list_platforms"
+policy:
+  allow_implicit_invocation: true

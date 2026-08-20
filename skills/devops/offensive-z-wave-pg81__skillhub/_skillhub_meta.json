@@ -1,0 +1,10 @@
+{
+  "slug": "offensive-z-wave-pg81",
+  "name": "攻击性Z-Wave",
+  "version": "1.0.0",
+  "installedAt": 1787229006044,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

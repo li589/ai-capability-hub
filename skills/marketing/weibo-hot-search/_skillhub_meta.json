@@ -1,0 +1,11 @@
+{
+  "name": "微博热搜",
+  "installedAt": 1787227540798,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087427665359572992",
+  "description_zh": "获取微博当前热搜榜单，按排名展示热搜标题及链接，并提供创作灵感分析",
+  "description_en": "Fetch Weibo trending topics with rankings, links, and creative inspiration analysis",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_32b2887a-459.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_32b2887a-459.svg"
+}

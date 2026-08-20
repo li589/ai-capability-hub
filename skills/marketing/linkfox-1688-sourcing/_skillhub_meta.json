@@ -1,0 +1,11 @@
+{
+  "name": "Linkfox 1688货源",
+  "installedAt": 1787227564115,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2077703804589895680",
+  "description_zh": "1688 货源一站式工具集：店雷达商品搜索与热销榜单（关键词/链接/ID 检索、周榜月榜、多维筛选排序、批发价/代发价/销量与供应商资质）、1688 以图搜图（图片 URL/Base64/imageId 视觉检索同款货源，含本地图片上传）、1688 已授权采购全流程（OAuth 授权检查、SKU/收货地址、下单预览、创建订单、支付链接、订单状态、物流轨迹、取消订单、确认收货）。当用户需要 1688 找货源、找供应商、批发选品、热销榜单、以图找同款、跨境找工厂或已授权采购下单与物流跟踪时触发。各子能力完整参数见 references/ 对应文件，脚本见 scripts/。",
+  "description_en": "One-stop 1688 sourcing AI toolkit: store-radar product search and bestseller billboards (keyword/URL/ID retrieval, weekly/monthly rankings, multi-dimensional filters and sorting, wholesale/dropship price, sales and supplier qualifications), 1688 image search (visual retrieval of same-style sourcing by image URL/Base64/imageId, with local image upload), and end-to-end authorized 1688 procurement (OAuth checks, SKU/address, order preview, order creation, payment URL, order status, logistics tracking, cancellation, receipt confirmation). Triggered when the user needs 1688 sourcing, supplier discovery, wholesale product selection, bestseller rankings, image-based same-product search, cross-border factory sourcing, or authorized 1688 procurement ordering and logistics tracking. Full params per sub-capability are in references/, executable scripts in scripts/.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077703804589895680/be14a6f84fe1b2bd.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077703804589895680/be14a6f84fe1b2bd.png"
+}

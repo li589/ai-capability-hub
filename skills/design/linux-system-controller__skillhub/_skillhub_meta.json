@@ -1,0 +1,12 @@
+{
+  "slug": "linux-system-controller",
+  "name": "Linux System Controller",
+  "version": "1.0.1",
+  "installedAt": 1787229072028,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "职业锚测评",
+  "installedAt": 1787227639662,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089337733810339840",
+  "description_zh": "评估技术职能、管理、自主独立、安全稳定、创业创造等职业价值取向，并输出职业锚类型解读。",
+  "description_en": "Use when users mention career anchors, work values, or long-term development orientations to identify core career values.",
+  "iconSource": "letter:auto"
+}

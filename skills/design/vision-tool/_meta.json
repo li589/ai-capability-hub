@@ -1,0 +1,11 @@
+{
+  "owner": "huruilizhen",
+  "slug": "vision-tool",
+  "displayName": "Vision Tool",
+  "latest": {
+    "version": "1.1.3",
+    "publishedAt": 1776023049664,
+    "commit": "https://github.com/openclaw/skills/commit/fa2c1c342e7a02a647a72aa4d0601dfd62950043"
+  },
+  "history": []
+}

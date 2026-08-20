@@ -1,0 +1,34 @@
+{
+  "name": "marketing-toolkit",
+  "version": "0.1.0",
+  "description": "服务于营销全链路的专业操盘者，核心覆盖市场、运营、增长等角色；支持竞品分析、活动策划、文案与社媒/邮件运营、转化优化、效果归因与合规审计等场景。面向市场营销场景的技能包，辅助营销文案撰写、活动策划、渠道内容生成与投放素材整理。",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "marketing-toolkit",
+    "internal",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "marketing-toolkit",
+    "shortDescription": "服务于营销全链路的专业操盘者，核心覆盖市场、运营、增长等角色；支持竞品分析、活动策划、文案与社媒/邮件运营、转化优化、效果归因与合规审计等场景。",
+    "longDescription": "服务于营销全链路的专业操盘者，核心覆盖市场、运营、增长等角色；支持竞品分析、活动策划、文案与社媒/邮件运营、转化优化、效果归因与合规审计等场景。",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use marketing-toolkit to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

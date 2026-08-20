@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# 虚拟环境
+venv/
+.venv/
+env/
+
+# 测试/构建产物
+.pytest_cache/
+.cache/
+.coverage
+htmlcov/
+
+# Claude Code 本地配置（不上传到分享仓库）
+.claude/
+
+# 运行时数据（用户聊天记录 / 报告输出）
+data/sessions/
+data/uploads/
+data/reports/
+data/sentiment_snapshots/
+
+# 运行时 SQLite 数据库（data_manager/calendar/scheduler 生成，不随包分发）
+data/*.db
+data/*.sqlite
+data/*.sqlite3
+
+# 环境/密钥
+.env
+.env.*
+*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 临时文件
+*.log
+*.tmp
+*.bak
+
+# 测试样本（保留 test_sample_chat.txt 在版本控制，但屏蔽其他样本）
+tests/fixtures/private/

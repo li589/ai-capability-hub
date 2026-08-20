@@ -1,0 +1,5 @@
+{
+  "webServiceKey": "your_amap_webservice_key_here",
+  "overseasWebServiceKey": "your_overseas_amap_webservice_key_here",
+  "appname": "gaode-map-lbs"
+}

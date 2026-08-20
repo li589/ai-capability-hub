@@ -1,0 +1,99 @@
+{
+  "schema_version": "1.0",
+  "package": "build-hot-news-brief",
+  "display_name": "热点快报 Skill 家族",
+  "execution": {
+    "mode": "direct-mcp",
+    "server": "bazhuayu-hot-news-brief",
+    "endpoint": "https://mcp.bazhuayu.com",
+    "credential": "由客户在平台安全配置中提供 API Key",
+    "creates_cloud_tasks": false
+  },
+  "result_first_summary": "输入主题后检索严格近7天的公开新闻，输出1–3条短总结和最多10条可点击新闻标题与原文链接；支持快速模式（1批）与深度模式（固定6批），并可按需追加新闻清单、决策快报、内容选题或综合输出。",
+  "capabilities": [
+    {
+      "skill": "ensure-hot-news-connector",
+      "display_name": "连接就绪检查",
+      "intent": "在 initialized 阶段检查八爪鱼连接及两个只读工具是否可用",
+      "required_inputs": ["mcp_connection_ready"],
+      "outputs": ["connector_ready_state"]
+    },
+    {
+      "skill": "plan-hot-news-request",
+      "display_name": "请求规划",
+      "intent": "解析主题、检索模式、输出模式与深度6批查询角色，并执行敏感范围守卫",
+      "required_inputs": ["topic", "search_mode", "output_mode"],
+      "outputs": ["plan_state"]
+    },
+    {
+      "skill": "collect-hot-news-data",
+      "display_name": "新闻采集",
+      "intent": "调用八爪鱼 search_platform_content 完成唯一采集，快速模式1批、深度模式固定6批并发优先",
+      "required_inputs": ["topic", "search_mode"],
+      "optional_inputs": {
+        "count": 30,
+        "freshness": "oneWeek",
+        "summary": false,
+        "needCount": false
+      },
+      "outputs": ["collected_state"]
+    },
+    {
+      "skill": "clean-rank-hot-news",
+      "display_name": "清洗去重",
+      "intent": "将原始结果清洗为严格近7天、去重、可信且最多40条的候选池",
+      "required_inputs": ["collected_state"],
+      "outputs": ["cleaned_candidate_pool"]
+    },
+    {
+      "skill": "evaluate-hot-news-value",
+      "display_name": "价值排序",
+      "intent": "从候选池选择并排序最多10条高价值新闻",
+      "required_inputs": ["cleaned_candidate_pool"],
+      "outputs": ["ranked_news"]
+    },
+    {
+      "skill": "summarize-hot-news",
+      "display_name": "短总结",
+      "intent": "只基于最终入选新闻生成1–3条有证据的中文短总结",
+      "required_inputs": ["ranked_news"],
+      "outputs": ["short_summaries"]
+    },
+    {
+      "skill": "analyze-decision-brief",
+      "display_name": "决策快报",
+      "intent": "在 decision_brief 或 both 模式生成最多3条有证据的企业决策提示",
+      "required_inputs": ["ranked_news"],
+      "outputs": ["decision_brief"]
+    },
+    {
+      "skill": "analyze-content-radar",
+      "display_name": "内容选题",
+      "intent": "在 content_radar 或 both 模式生成最多3个有证据的内容选题",
+      "required_inputs": ["ranked_news"],
+      "outputs": ["content_radar"]
+    },
+    {
+      "skill": "render-hot-news-brief",
+      "display_name": "结果渲染",
+      "intent": "将最终新闻、短总结与专业提示直接渲染到当前对话",
+      "required_inputs": ["ranked_news", "short_summaries"],
+      "outputs": ["conversation_reply"]
+    }
+  ],
+  "operational_guards": [
+    "每个新对话首次触发必须先逐项发送固定《热点快报模式提醒》再调用任何 MCP 工具",
+    "快速模式恰好1次搜索；深度模式固定6批并发优先，不增加第7批",
+    "每批固定 count=30、freshness=oneWeek、summary=false、needCount=false",
+    "只处理大小写准确的 webPages.value，必须有标题、HTTP(S)链接和有效 datePublished",
+    "规范 URL 并去重转载，每域名最多2条，最终最多10条",
+    "标题、URL、来源和日期必须逐字来自 MCP 记录",
+    "API Key 不进入回复，鉴权或额度错误立即停止且不显示凭证或原始响应",
+    "正常响应不调用终端、脚本或创建文件；超大响应最多执行一次内置压缩器"
+  ],
+  "preview_status": {
+    "capability_contract": "ready",
+    "workbuddy_import_format": "ready",
+    "qwen_office_import_format": "pending-platform-confirmation"
+  }
+}

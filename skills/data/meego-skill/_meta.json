@@ -1,0 +1,11 @@
+{
+  "owner": "longsasasasasa",
+  "slug": "meego-skill",
+  "displayName": "meego-skill",
+  "latest": {
+    "version": "2.2.0",
+    "publishedAt": 1774768134036,
+    "commit": "https://github.com/openclaw/skills/commit/11b23cdc885516e94e79e97454babb28b6be7d0d"
+  },
+  "history": []
+}

@@ -1,0 +1,21 @@
+{
+  "name": "平安证券行情查询",
+  "installedAt": 1787227509404,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2079451059395805184",
+  "examples_zh": [
+    "帮我查一下贵州茅台现在涨跌幅",
+    "半导体板块今天表现怎么样",
+    "看一下平安银行最近 20 个交易日 K 线"
+  ],
+  "examples_en": [
+    "Check the latest price change of Kweichow Moutai",
+    "How is the semiconductor sector performing today?",
+    "Show the last 20 trading days of Ping An Bank K-line data"
+  ],
+  "description_zh": "查询 A 股个股、股指、ETF、板块、主力资金流向和历史 K 线等证券行情数据。",
+  "description_en": "Query A-share quotes, sector performance, sector constituents, fund flows, and daily K-line data.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079451059395805184/5616ea649d2d1692.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079451059395805184/5616ea649d2d1692.svg"
+}

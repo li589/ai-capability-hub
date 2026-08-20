@@ -1,0 +1,11 @@
+{
+  "owner": "oicqren",
+  "slug": "hermes-agent-yuhu",
+  "displayName": "Hermes Agent",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1775992423428,
+    "commit": "https://github.com/openclaw/skills/commit/17040a6a32c5c63ae5128a27969ef9f3c842644e"
+  },
+  "history": []
+}

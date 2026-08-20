@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <symbol id="gate" viewBox="0 0 24 24">
+    <path d="M4 21V5h16v16M8 21v-7h8v7M3 5h18" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+  <symbol id="quote" viewBox="0 0 24 24">
+    <path d="M6 3h9l4 4v14H6zM15 3v5h5M9 12h7M9 16h5" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+  <symbol id="supplier" viewBox="0 0 24 24">
+    <path d="M4 21v-9l8-4 8 4v9M9 21v-5h6v5M8 7V3h8v4" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+  <symbol id="stock" viewBox="0 0 24 24">
+    <path d="M4 8l8-4 8 4-8 4zM4 8v8l8 4 8-4V8M12 12v8" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+  <symbol id="route" viewBox="0 0 24 24">
+    <circle cx="5" cy="18" r="2" fill="none" stroke="currentColor" stroke-width="2"/>
+    <circle cx="19" cy="6" r="2" fill="none" stroke="currentColor" stroke-width="2"/>
+    <path d="M7 18c8 0 2-12 10-12" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"/>
+  </symbol>
+  <symbol id="evidence" viewBox="0 0 24 24">
+    <path d="M5 3h14v18H5zM8 8h8M8 12h8M8 16h5" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+  <symbol id="warning" viewBox="0 0 24 24">
+    <path d="M12 3l10 18H2zM12 9v5M12 18h.01" fill="none" stroke="currentColor" stroke-width="2"/>
+  </symbol>
+</svg>

@@ -1,0 +1,69 @@
+{
+  "type": "股份制商业银行",
+  "type_name": "股份制商业银行",
+  "count": 12,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-05-24",
+  "institutions": [
+    {
+      "name": "招商银行",
+      "code": "CMB",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "浦发银行",
+      "code": "SPD",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "中信银行",
+      "code": "CITIC",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "中国光大银行",
+      "code": "CEB",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "华夏银行",
+      "code": "HXB",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "中国民生银行",
+      "code": "CMBC",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "广发银行",
+      "code": "GFB",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "兴业银行",
+      "code": "CIB",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "平安银行",
+      "code": "PA",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "浙商银行",
+      "code": "ZSB",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "恒丰银行",
+      "code": "HF",
+      "type": "股份制商业银行"
+    },
+    {
+      "name": "渤海银行",
+      "code": "BOHB",
+      "type": "股份制商业银行"
+    }
+  ]
+}

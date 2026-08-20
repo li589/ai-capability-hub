@@ -1,0 +1,20 @@
+{
+  "name": "Agent Team Orchestration",
+  "installedAt": 1787228688032,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053079579940413440",
+  "examples_zh": [
+    "帮我搭建一个前后端分离的多智能体开发团队",
+    "设计一个代码开发、评审、测试的多Agent协作流程",
+    "项目太大了，帮我拆分任务分配给多个Agent并行处理"
+  ],
+  "examples_en": [
+    "Set up a multi-agent team for building a full-stack app",
+    "Design a workflow where one agent codes and another reviews",
+    "Break this large project into parallel tasks for multiple agents"
+  ],
+  "description_zh": "多智能体团队编排：角色定义、任务流转、交接协议与质量门禁",
+  "description_en": "Orchestrate multi-agent teams with roles, task lifecycles, handoffs, and review workflows",
+  "iconSource": "letter:auto"
+}

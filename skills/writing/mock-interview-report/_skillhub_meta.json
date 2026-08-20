@@ -1,0 +1,10 @@
+{
+  "name": "模拟面试报告",
+  "installedAt": 1787227646812,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089548413733220352",
+  "description_zh": "模拟面试抽题与评估报告生成，支持按岗位生成结构化面试间。通过 mcp 工具 draw_questions 按岗位（如「银行销售岗位」「公务员/省考/山东」）一次性抽取最多 3 道面试题，一次性展示题目并收集用户全部回答后，生成单题评分与面试辅导建议，并聚合并输出 HTML 分析报告。当用户要求「生成面试间」「结构化面试」「模拟面试」「抽面试题」「面试题分析报告」「评估我的面试回答」「面试辅导建议」，或要求针对某岗位（如银行销售）生成模拟面试并给出辅导建议时使用。",
+  "description_en": "Generates mock-interview question-drawing and evaluation reports, supporting structured-interview-room generation by job position. Uses the draw_questions MCP tool to draw up to 3 interview questions at once for a given position (e.g. \"bank sales\", \"civil servant/shandong\"), presents all questions together and collects the user's full answers, then produces per-question scores and interview coaching advice, and aggregates the results into an HTML analysis report. Use when the user asks to generate an interview room, run a structured mock interview, draw interview questions, get an interview-question analysis report, evaluate their interview answers, or get coaching advice for a specific position such as bank sales.",
+  "iconSource": "letter:auto"
+}

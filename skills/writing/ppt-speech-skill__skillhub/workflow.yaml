@@ -1,0 +1,199 @@
+id: ppt_speech_generator_pro_v2
+name: PPT生成讲稿（带备注+文本+上下文）
+description: 上传PPT生成逐页讲稿，写入备注，同时输出完整讲稿文本
+
+inputs:
+  - name: file
+    type: file
+    required: true
+
+  - name: audience
+    type: string
+    default: 客户
+
+  - name: style
+    type: string
+    default: 销售型
+
+nodes:
+
+  # 1️⃣ 解析PPT
+  - id: parse_ppt
+    type: python
+    name: 解析PPT
+    params:
+      code: |
+        from pptx import Presentation
+
+        prs = Presentation(inputs["file"])
+        slides = []
+
+        for i, slide in enumerate(prs.slides):
+            title = ""
+            content = ""
+
+            for shape in slide.shapes:
+                if hasattr(shape, "text"):
+                    text = shape.text.strip()
+                    if not title:
+                        title = text
+                    else:
+                        content += text + "\n"
+
+            slides.append({
+                "page": i + 1,
+                "title": title,
+                "content": content
+            })
+
+        return slides
+
+
+  # 2️⃣ 初始化上下文
+  - id: init_context
+    type: set_variable
+    name: 初始化上下文
+    params:
+      prev_summary: ""
+
+
+  # 3️⃣ 循环生成讲稿（带上下文🔥）
+  - id: loop_slides
+    type: loop
+    name: 逐页生成讲稿
+    params:
+      iterator: parse_ppt
+      steps:
+
+        # 生成讲稿
+        - id: gen_speech
+          type: llm
+          name: 生成讲稿
+          params:
+            prompt: |
+              你是一名专业演讲顾问，请生成演讲稿。
+
+              【听众】
+              {{inputs.audience}}
+
+              【风格】
+              {{inputs.style}}
+
+              【上一页总结】
+              {{prev_summary}}
+
+              【当前页】
+              标题：{{item.title}}
+              内容：
+              {{item.content}}
+
+              【要求】
+              - 不复述PPT，而是讲解
+              - 语言自然、像真人说话
+              - 有逻辑：引入 → 解释 → 小结
+              - 30~50秒
+
+              【风格增强】
+              - 销售型：强调价值、吸引客户
+              - 汇报型：逻辑清晰、偏正式
+              - 培训型：通俗易懂、带解释
+
+              【特殊规则】
+              - 第一页：自然开场
+              - 最后一页：强化总结
+
+              输出一段完整演讲稿
+
+        # 生成摘要（用于下一页）
+        - id: gen_summary
+          type: llm
+          name: 提取摘要
+          params:
+            prompt: |
+              请用一句话总结以下演讲内容：
+              {{gen_speech}}
+
+        # 更新上下文（关键🔥）
+        - id: update_context
+          type: set_variable
+          name: 更新上下文
+          params:
+            prev_summary: "{{gen_summary}}"
+
+        # 输出结构化
+        - id: format_output
+          type: python
+          name: 格式化结果
+          params:
+            code: |
+              return {
+                "page": item["page"],
+                "speech": gen_speech
+              }
+
+
+  # 4️⃣ 写入PPT备注
+  - id: write_back_ppt
+    type: python
+    name: 写入PPT备注
+    params:
+      code: |
+        from pptx import Presentation
+
+        prs = Presentation(inputs["file"])
+        speeches = loop_slides
+
+        for i, slide in enumerate(prs.slides):
+            if i < len(speeches):
+                speech = speeches[i]["speech"]
+
+                notes_slide = slide.notes_slide
+                text_frame = notes_slide.notes_text_frame
+                text_frame.text = speech
+
+        output_path = "/tmp/ppt_with_notes.pptx"
+        prs.save(output_path)
+
+        return output_path
+
+
+  # 5️⃣ 生成完整文本讲稿（第二个输出🔥）
+  - id: merge_text
+    type: python
+    name: 汇总文本讲稿
+    params:
+      code: |
+        speeches = loop_slides
+
+        full_text = ""
+        for s in speeches:
+            full_text += f"第{s['page']}页：\n{s['speech']}\n\n"
+
+        return full_text
+
+
+  # 6️⃣ 全局优化（提升连贯性🔥）
+  - id: optimize_text
+    type: llm
+    name: 优化全文讲稿
+    params:
+      prompt: |
+        请优化以下整套演讲稿：
+
+        {{merge_text}}
+
+        要求：
+        1. 去除重复
+        2. 增强连贯性
+        3. 更自然流畅
+        4. 更符合{{inputs.style}}风格
+
+        输出优化后的完整讲稿
+
+
+outputs:
+  - name: ppt_file
+    value: write_back_ppt
+
+  - name: speech_text
+    value: optimize_text

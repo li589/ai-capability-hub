@@ -1,0 +1,11 @@
+{
+  "name": "member-campaign-analysis",
+  "display_name": "营销活动分析",
+  "description": "使用固定 marketing_crm CLI 分析营销活动状态数量、发券、收益、用券、券核销率与活动列表。适用于问活动效果、ROI、发券用券核销等场景。",
+  "version": "1.0.0",
+  "locale": "zh-CN",
+  "author": "shanglong-skill-creator",
+  "mode": "ai",
+  "skill_type": "business",
+  "related_skills": []
+}

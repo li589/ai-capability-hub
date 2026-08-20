@@ -1,0 +1,11 @@
+{
+  "name": "ETF筛选",
+  "installedAt": 1787227712624,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2083072957841248256",
+  "description_zh": "本Skill基于广发证券权威数据接口构建，支持按收益率、回撤、夏普、估值温度、规模、赛道、交易属性等多维条件筛选ETF。适用于寻找特定主题ETF、做收益与风险条件过滤、构建ETF候选池的场景，提供权威实时ETF筛选数据。",
+  "description_en": "GF Securities ETF screening tool, supporting multi-dimensional ETF filtering by return rate, drawdown, Sharpe ratio, valuation temperature, scale, sector, and trading attributes. Ideal for discovering thematic ETFs, filtering by return/risk criteria, and building ETF candidate pools.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_04907025-f26.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_04907025-f26.png"
+}

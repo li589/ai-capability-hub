@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Module Map — Authentication Architecture</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #555770;
+  --color-text-tertiary: #8b8da3;
+  --color-border-tertiary: #e2e4e9;
+  --color-border-secondary: #c8ccd4;
+  --color-border-primary: #9ca0ab;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.12);
+  --color-sky-1: #e8f4fd; --color-sky-2: #c5e4f9; --color-sky-3: #93ccf3;
+  --color-sky-4: #5db0eb; --color-sky-5: #2e96e0; --color-sky-6: #1a7cc7;
+  --color-sky-7: #1564a3; --color-sky-8: #104d7e; --color-sky-9: #0b3659;
+  --color-sky-10: #061f34;
+  --color-indigo-1: #edf0ff; --color-indigo-2: #d4daff; --color-indigo-3: #b0bbff;
+  --color-indigo-4: #8594ff; --color-indigo-5: #5e6ff7; --color-indigo-6: #4555e0;
+  --color-indigo-7: #3544b8; --color-indigo-8: #283490; --color-indigo-9: #1c2568;
+  --color-indigo-10: #101540;
+  --color-mint-1: #e6faf5; --color-mint-2: #b8f0e0; --color-mint-3: #80e4c8;
+  --color-mint-4: #45d4ac; --color-mint-5: #1abc90; --color-mint-6: #0fa07a;
+  --color-mint-7: #078363; --color-mint-8: #03664d; --color-mint-9: #014a37;
+  --color-mint-10: #002e22;
+  --color-amber-1: #fff7e6; --color-amber-2: #ffecbf; --color-amber-3: #ffd980;
+  --color-amber-4: #ffc440; --color-amber-5: #f0a800; --color-amber-6: #d49200;
+  --color-amber-7: #a87300; --color-amber-8: #7d5500; --color-amber-9: #523800;
+  --color-amber-10: #271b00;
+  --color-coral-1: #fff0ed; --color-coral-2: #ffd9d2; --color-coral-3: #ffb4a8;
+  --color-coral-4: #ff8a78; --color-coral-5: #f0614e; --color-coral-6: #d44637;
+  --color-coral-7: #af3427; --color-coral-8: #8a2519; --color-coral-9: #65180e;
+  --color-coral-10: #400d06;
+  --color-violet-1: #f3edff; --color-violet-2: #e0d2ff; --color-violet-3: #c5adff;
+  --color-violet-4: #a682ff; --color-violet-5: #875af7; --color-violet-6: #6e3fe0;
+  --color-violet-7: #5630b8; --color-violet-8: #402390; --color-violet-9: #2c1768;
+  --color-violet-10: #190d40;
+  --color-slate-1: #f4f5f7; --color-slate-2: #e8eaee; --color-slate-3: #d4d7de;
+  --color-slate-4: #b8bcc6; --color-slate-5: #9ca0ab; --color-slate-6: #7f8391;
+  --color-slate-7: #636776; --color-slate-8: #494d5a; --color-slate-9: #31343f;
+  --color-slate-10: #1a1c24;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  height: 100vh;
+}
+
+/* Left — SVG area */
+.map-area {
+  padding: 24px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-area .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--color-indigo-6);
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.map-area h1 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.svg-wrap {
+  flex: 1;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--color-border-tertiary);
+  box-shadow: var(--shadow-md);
+  padding: 20px;
+  min-height: 480px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.svg-wrap svg { width: 100%; height: auto; }
+
+/* Legend */
+.legend {
+  display: flex;
+  gap: 20px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+.legend-dot {
+  width: 12px; height: 12px;
+  border-radius: 3px;
+}
+
+/* Right sidebar */
+.sidebar {
+  background: var(--color-background-primary);
+  border-left: 1px solid var(--color-border-tertiary);
+  padding: 24px 20px;
+  overflow-y: auto;
+}
+
+.sidebar .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--color-sky-6);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.sidebar h2 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.entry-point {
+  border-left: 3px solid var(--color-sky-4);
+  padding: 10px 14px;
+  margin-bottom: 12px;
+  background: var(--color-sky-1);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+}
+.entry-point .ep-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-sky-8);
+  margin-bottom: 4px;
+}
+.entry-point .ep-desc {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.sidebar h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var(--color-text-primary);
+}
+
+.hot-note {
+  background: var(--color-coral-1);
+  border-left: 3px solid var(--color-coral-5);
+  border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+.hot-note .eyebrow { color: var(--color-coral-7); margin-bottom: 4px; }
+.hot-note p { font-size: 12px; color: var(--color-coral-9); line-height: 1.5; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 16px;
+}
+.stat-card {
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 12px;
+  text-align: center;
+}
+.stat-card .num {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--color-indigo-6);
+}
+.stat-card .label {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  letter-spacing: 0.5px;
+}
+</style>
+</head>
+<body>
+<div class="panel">
+  <!-- Left: Map -->
+  <div class="map-area">
+    <div class="eyebrow">Architecture · Authentication Module</div>
+    <h1>Module Dependency Map</h1>
+    <div class="svg-wrap">
+      <svg viewBox="0 0 720 440" xmlns="http://www.w3.org/2000/svg" font-family="var(--font-sans)">
+        <defs>
+          <marker id="arrow" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 3.5 L 0 7 z" fill="var(--color-slate-5)"/>
+          </marker>
+          <marker id="arrow-hot" viewBox="0 0 10 7" refX="10" refY="3.5" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 3.5 L 0 7 z" fill="var(--color-coral-5)"/>
+          </marker>
+        </defs>
+
+        <!-- Layer labels -->
+        <text x="16" y="28" font-size="10" fill="var(--color-text-tertiary)" font-family="var(--font-mono)" text-transform="uppercase" letter-spacing="1">API LAYER</text>
+        <text x="16" y="148" font-size="10" fill="var(--color-text-tertiary)" font-family="var(--font-mono)" text-transform="uppercase" letter-spacing="1">SERVICE LAYER</text>
+        <text x="16" y="278" font-size="10" fill="var(--color-text-tertiary)" font-family="var(--font-mono)" text-transform="uppercase" letter-spacing="1">STORAGE LAYER</text>
+        <text x="16" y="388" font-size="10" fill="var(--color-text-tertiary)" font-family="var(--font-mono)" text-transform="uppercase" letter-spacing="1">UTILS</text>
+
+        <!-- Dashed layer lines -->
+        <line x1="10" y1="38" x2="710" y2="38" stroke="var(--color-border-tertiary)" stroke-dasharray="4,4"/>
+        <line x1="10" y1="134" x2="710" y2="134" stroke="var(--color-border-tertiary)" stroke-dasharray="4,4"/>
+        <line x1="10" y1="264" x2="710" y2="264" stroke="var(--color-border-tertiary)" stroke-dasharray="4,4"/>
+        <line x1="10" y1="374" x2="710" y2="374" stroke="var(--color-border-tertiary)" stroke-dasharray="4,4"/>
+
+        <!-- API boxes (sky) -->
+        <rect x="80" y="52" width="150" height="60" rx="8" fill="var(--color-sky-1)" stroke="var(--color-sky-4)" stroke-width="1.5"/>
+        <text x="155" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-sky-8)">AuthController</text>
+        <text x="155" y="96" text-anchor="middle" font-size="10" fill="var(--color-sky-6)">/api/auth/*</text>
+
+        <rect x="300" y="52" width="150" height="60" rx="8" fill="var(--color-sky-1)" stroke="var(--color-sky-4)" stroke-width="1.5"/>
+        <text x="375" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-sky-8)">OAuthController</text>
+        <text x="375" y="96" text-anchor="middle" font-size="10" fill="var(--color-sky-6)">/api/oauth/*</text>
+
+        <rect x="520" y="52" width="150" height="60" rx="8" fill="var(--color-sky-1)" stroke="var(--color-sky-4)" stroke-width="1.5"/>
+        <text x="595" y="78" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-sky-8)">SessionMiddleware</text>
+        <text x="595" y="96" text-anchor="middle" font-size="10" fill="var(--color-sky-6)">middleware</text>
+
+        <!-- Service boxes (indigo) -->
+        <rect x="60" y="155" width="150" height="60" rx="8" fill="var(--color-indigo-1)" stroke="var(--color-indigo-4)" stroke-width="1.5"/>
+        <text x="135" y="181" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-indigo-8)">AuthService</text>
+        <text x="135" y="199" text-anchor="middle" font-size="10" fill="var(--color-indigo-6)">login · register · verify</text>
+
+        <rect x="280" y="155" width="150" height="60" rx="8" fill="var(--color-indigo-1)" stroke="var(--color-indigo-4)" stroke-width="1.5"/>
+        <text x="355" y="181" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-indigo-8)">TokenService</text>
+        <text x="355" y="199" text-anchor="middle" font-size="10" fill="var(--color-indigo-6)">JWT sign · refresh · revoke</text>
+
+        <rect x="500" y="155" width="160" height="60" rx="8" fill="var(--color-indigo-1)" stroke="var(--color-indigo-4)" stroke-width="1.5"/>
+        <text x="580" y="181" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-indigo-8)">PermissionService</text>
+        <text x="580" y="199" text-anchor="middle" font-size="10" fill="var(--color-indigo-6)">RBAC · policy check</text>
+
+        <!-- Storage boxes (mint) -->
+        <rect x="100" y="282" width="150" height="56" rx="8" fill="var(--color-mint-1)" stroke="var(--color-mint-4)" stroke-width="1.5"/>
+        <text x="175" y="306" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-mint-8)">UserRepository</text>
+        <text x="175" y="322" text-anchor="middle" font-size="10" fill="var(--color-mint-6)">PostgreSQL</text>
+
+        <rect x="320" y="282" width="150" height="56" rx="8" fill="var(--color-mint-1)" stroke="var(--color-mint-4)" stroke-width="1.5"/>
+        <text x="395" y="306" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-mint-8)">SessionStore</text>
+        <text x="395" y="322" text-anchor="middle" font-size="10" fill="var(--color-mint-6)">Redis</text>
+
+        <rect x="540" y="282" width="140" height="56" rx="8" fill="var(--color-mint-1)" stroke="var(--color-mint-4)" stroke-width="1.5"/>
+        <text x="610" y="306" text-anchor="middle" font-size="13" font-weight="600" fill="var(--color-mint-8)">RoleStore</text>
+        <text x="610" y="322" text-anchor="middle" font-size="10" fill="var(--color-mint-6)">PostgreSQL</text>
+
+        <!-- Utils boxes (amber) -->
+        <rect x="200" y="392" width="130" height="40" rx="8" fill="var(--color-amber-1)" stroke="var(--color-amber-4)" stroke-width="1.5"/>
+        <text x="265" y="417" text-anchor="middle" font-size="12" font-weight="600" fill="var(--color-amber-8)">crypto-utils</text>
+
+        <rect x="400" y="392" width="130" height="40" rx="8" fill="var(--color-amber-1)" stroke="var(--color-amber-4)" stroke-width="1.5"/>
+        <text x="465" y="417" text-anchor="middle" font-size="12" font-weight="600" fill="var(--color-amber-8)">logger</text>
+
+        <!-- Normal arrows -->
+        <line x1="155" y1="112" x2="135" y2="155" stroke="var(--color-slate-4)" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="375" y1="112" x2="355" y2="155" stroke="var(--color-slate-4)" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="595" y1="112" x2="580" y2="155" stroke="var(--color-slate-4)" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+        <line x1="135" y1="215" x2="175" y2="282" stroke="var(--color-slate-4)" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="355" y1="215" x2="395" y2="282" stroke="var(--color-slate-4)" stroke-width="1.2" marker-end="url(#arrow)"/>
+        <line x1="580" y1="215" x2="610" y2="282" stroke="var(--color-slate-4)" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+        <!-- Cross-deps -->
+        <line x1="210" y1="185" x2="280" y2="185" stroke="var(--color-slate-3)" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+        <line x1="430" y1="185" x2="500" y2="185" stroke="var(--color-slate-3)" stroke-width="1" stroke-dasharray="5,3" marker-end="url(#arrow)"/>
+
+        <!-- Utils arrows -->
+        <line x1="135" y1="215" x2="265" y2="392" stroke="var(--color-slate-3)" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+        <line x1="355" y1="215" x2="265" y2="392" stroke="var(--color-slate-3)" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)"/>
+
+        <!-- HOT PATH: AuthController → AuthService → TokenService → SessionStore -->
+        <line x1="155" y1="112" x2="135" y2="152" stroke="var(--color-coral-5)" stroke-width="3" marker-end="url(#arrow-hot)"/>
+        <line x1="210" y1="182" x2="278" y2="182" stroke="var(--color-coral-5)" stroke-width="3" marker-end="url(#arrow-hot)"/>
+        <line x1="355" y1="215" x2="395" y2="280" stroke="var(--color-coral-5)" stroke-width="3" marker-end="url(#arrow-hot)"/>
+
+        <!-- Hot path label -->
+        <rect x="150" y="232" width="80" height="20" rx="4" fill="var(--color-coral-5)"/>
+        <text x="190" y="246" text-anchor="middle" font-size="9" fill="white" font-weight="700" letter-spacing="0.5">HOT PATH</text>
+      </svg>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item"><div class="legend-dot" style="background:var(--color-sky-4)"></div>API Layer</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--color-indigo-4)"></div>Service Layer</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--color-mint-4)"></div>Storage Layer</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--color-amber-4)"></div>Utilities</div>
+      <div class="legend-item"><div class="legend-dot" style="background:var(--color-coral-5);border-radius:0;height:3px;width:20px;margin-top:4px"></div>Hot Path</div>
+    </div>
+  </div>
+
+  <!-- Right sidebar -->
+  <div class="sidebar">
+    <div class="eyebrow">Entry Points</div>
+    <h2>Public API Surface</h2>
+
+    <div class="entry-point">
+      <div class="ep-name">POST /api/auth/login</div>
+      <div class="ep-desc">Primary login flow. Accepts email+password, returns JWT access & refresh tokens. <strong>Hot path</strong> — 12k rpm peak.</div>
+    </div>
+    <div class="entry-point">
+      <div class="ep-name">POST /api/auth/register</div>
+      <div class="ep-desc">User registration with email verification. Sends async verification email via job queue.</div>
+    </div>
+    <div class="entry-point">
+      <div class="ep-name">POST /api/oauth/authorize</div>
+      <div class="ep-desc">OAuth2 authorization code flow. Supports Google, GitHub, GitLab providers.</div>
+    </div>
+    <div class="entry-point">
+      <div class="ep-name">POST /api/auth/refresh</div>
+      <div class="ep-desc">Token refresh using rotating refresh tokens. Invalidates old token on use.</div>
+    </div>
+    <div class="entry-point">
+      <div class="ep-name">SessionMiddleware</div>
+      <div class="ep-desc">Express middleware. Validates JWT on every request, attaches <code>req.user</code> context.</div>
+    </div>
+
+    <div class="hot-note">
+      <div class="eyebrow">Hot Path</div>
+      <p>The login flow (AuthController → AuthService → TokenService → SessionStore) handles 12k rpm at peak. The Redis session store is the bottleneck — p99 latency spikes to 45ms under load.</p>
+    </div>
+
+    <h3>Module Stats</h3>
+    <div class="stats-grid">
+      <div class="stat-card"><div class="num">8</div><div class="label">Modules</div></div>
+      <div class="stat-card"><div class="num">14</div><div class="label">Edges</div></div>
+      <div class="stat-card"><div class="num">5</div><div class="label">Entry Pts</div></div>
+      <div class="stat-card"><div class="num">3</div><div class="label">Layers</div></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

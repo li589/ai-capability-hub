@@ -1,0 +1,15 @@
+
+{
+    "name": "a-share-paper-trading",
+    "displayName": "A股模拟交易",
+    "emoji": "📈",
+    "skillKey": "a-share-paper-trading",
+    "version": "1.0",
+    "author": "Huatai Securities",
+    "userInvocable": true,
+    "description": "A 股模拟交易。支持行情查询、账户/持仓查询、买卖下单、撤单、委托与成交查询。仅 A 股，仅模拟盘，不涉及真实资金。",
+    "requires": {
+      "bins": ["python3"]
+    },
+    "note": "外部清单文件，仅供分发/展示用途；QoderWork 加载器只读 SKILL.md frontmatter。"
+  }

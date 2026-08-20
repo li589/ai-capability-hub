@@ -1,0 +1,11 @@
+{
+  "name": "腾讯会议",
+  "installedAt": 1787227440773,
+  "source": "marketplace",
+  "version": "1.0.12",
+  "skillId": "skill_2053084099650080768",
+  "description_zh": "腾讯会议管理助手，支持预约/创建/修改/取消会议、查询录制与转写、获取AI智能纪要",
+  "description_en": "Tencent Meeting assistant for scheduling, managing meetings, querying recordings, transcripts & AI summaries",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_d4207f5d-0e7.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_d4207f5d-0e7.png"
+}

@@ -1,0 +1,33 @@
+<!-- 组件: 四象限散点图 -->
+<!-- 用法: 复制到 container 内，替换 chartId、散点数据、中位线 -->
+<div class="section">
+  <div class="section-title"><!-- TITLE: 如 "🎯 菜品毛利四象限" --></div>
+  <div class="section-sub"><!-- SUB: 如 "X=销量 Y=毛利率，右上=明星/左下=瘦狗" --></div>
+  <div id="<!-- CHART_ID: 唯一ID如 chart-scatter -->" class="chart-box tall"></div>
+</div>
+<script>
+(function(){
+  var chart = echarts.init(document.getElementById('/* CHART_ID */'));
+  chart.setOption({
+    tooltip: { formatter: function(p) { return p.data[2] + '<br/>销量: ' + p.data[0] + '<br/>毛利率: ' + p.data[1] + '%'; } },
+    grid: { top: 30, right: 30, bottom: 40, left: 60, containLabel: true },
+    xAxis: { name: '销量', splitLine: { show: true } },
+    yAxis: { name: '毛利率(%)', splitLine: { show: true } },
+    series: [{
+      type: 'scatter',
+      symbolSize: 12,
+      data: [
+        /* DATA: 三元组数组 [销量, 毛利率, '菜品名'] */
+      ],
+      markLine: {
+        silent: true,
+        lineStyle: { type: 'dashed', color: '#999' },
+        data: [
+          { xAxis: /* DATA: 销量中位数 */ 0 },
+          { yAxis: /* DATA: 毛利率中位数 */ 0 }
+        ]
+      }
+    }]
+  });
+})();
+</script>

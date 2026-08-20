@@ -1,0 +1,50 @@
+{
+  "name": "@ali/security-scan",
+  "version": "0.8.1",
+  "description": "Automated security review for Qoder. Pattern-based warnings on edits, cloud-backed diff review on Stop, and agentic commit/push review with SHA tracking.",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "CodeSec Team"
+  },
+  "keywords": [
+    "security",
+    "security-review",
+    "sast",
+    "code-review",
+    "vulnerability",
+    "diff-review",
+    "qoder",
+    "qoder-plugin"
+  ],
+  "homepage": "https://code.alibaba-inc.com/ngwf/krypton",
+  "repository": {
+    "type": "git",
+    "url": "git+https://code.alibaba-inc.com/ngwf/krypton.git",
+    "directory": "plugins/qoder"
+  },
+  "publishConfig": {
+    "registry": "https://registry.anpm.alibaba-inc.com"
+  },
+  "files": [
+    "README.md",
+    ".qoder-plugin/",
+    "assets/",
+    "bin/",
+    "skills/",
+    "config.yaml.example",
+    "security-patterns.yaml.example",
+    "scripts/postinstall.sh"
+  ],
+  "scripts": {
+    "postinstall": "sh scripts/postinstall.sh",
+    "prepublishOnly": "node scripts/prepublish.js"
+  },
+  "os": [
+    "darwin",
+    "linux",
+    "win32"
+  ],
+  "engines": {
+    "node": ">=14"
+  }
+}

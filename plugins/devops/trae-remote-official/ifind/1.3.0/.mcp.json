@@ -1,0 +1,53 @@
+{
+  "mcpServers": {
+    "hexin-ifind-ds-stock-mcp": {
+      "headers": {
+        "Authorization": "${connector.ifind.ACCESS_TOKEN}"
+      },
+      "type": "streamablehttp",
+      "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-stock-mcp"
+    },
+    "hexin-ifind-ds-fund-mcp": {
+      "headers": {
+        "Authorization": "${connector.ifind.ACCESS_TOKEN}"
+      },
+      "type": "streamablehttp",
+      "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-fund-mcp"
+    },
+    "hexin-ifind-ds-edb-mcp": {
+      "headers": {
+        "Authorization": "${connector.ifind.ACCESS_TOKEN}"
+      },
+      "type": "streamablehttp",
+      "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-edb-mcp"
+    },
+    "hexin-ifind-ds-news-mcp": {
+      "headers": {
+        "Authorization": "${connector.ifind.ACCESS_TOKEN}"
+      },
+      "type": "streamablehttp",
+      "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-news-mcp"
+    },
+    "hexin-ifind-ds-bond-mcp": {
+      "headers": {
+        "Authorization": "${connector.ifind.ACCESS_TOKEN}"
+      },
+      "type": "streamablehttp",
+      "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-bond-mcp"
+    },
+    "hexin-ifind-ds-global-stock-mcp": {
+      "headers": {
+        "Authorization": "${connector.ifind.ACCESS_TOKEN}"
+      },
+      "type": "streamablehttp",
+      "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-global-stock-mcp"
+    },
+    "hexin-ifind-ds-index-mcp": {
+      "headers": {
+        "Authorization": "${connector.ifind.ACCESS_TOKEN}"
+      },
+      "type": "streamablehttp",
+      "url": "https://api-mcp.51ifind.com:8643/ds-mcp-servers/hexin-ifind-ds-index-mcp"
+    }
+  }
+}

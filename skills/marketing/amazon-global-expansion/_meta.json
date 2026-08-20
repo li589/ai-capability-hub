@@ -1,0 +1,11 @@
+{
+  "owner": "mguozhen",
+  "slug": "amazon-global-expansion",
+  "displayName": "Amazon Global Expansion",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774070140217,
+    "commit": "https://github.com/openclaw/skills/commit/2fb4190df1ef5d5d749f2ac6a50007416ea8c983"
+  },
+  "history": []
+}

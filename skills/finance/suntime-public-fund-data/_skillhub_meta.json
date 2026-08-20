@@ -1,0 +1,10 @@
+{
+  "name": "朝阳永续-AI-公募基金数据",
+  "installedAt": 1787227587488,
+  "source": "marketplace",
+  "version": "0.0.12",
+  "skillId": "skill_2082416863614332928",
+  "description_zh": "朝阳永续公募基金数据查询与专业分析技能，覆盖基金档案、费率、净值业绩、收益风险、持仓配置、风格归因、多基金对比、基金经理、基金公司和公告检索。",
+  "description_en": "Suntime Public Fund Data provides professional mutual-fund data and analysis covering fund profiles and fees, NAV and performance, risk metrics and rankings, holdings and asset allocation, style and industry attribution, multi-fund comparisons, manager screening and profiles, fund companies, and announcement retrieval. Use it to query, compare, screen, and analyze public funds, managers, organizations, portfolios, or disclosure documents.",
+  "iconSource": "letter:auto"
+}

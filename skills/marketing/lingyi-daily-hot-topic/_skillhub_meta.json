@@ -1,0 +1,10 @@
+{
+  "name": "每日热点选题【零一数科·出品】",
+  "installedAt": 1787227636631,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2085651629571022848",
+  "description_zh": "【零一数科·出品】：每日热点选题——每天获取抖音、小红书等平台今日热榜，结合你指定行业/品牌关键词，匹配出可跟进的热点选题（含切入角度、文案方向、形式建议、风险提示、排期建议），把当天热点跟你产品结合出选题，一键出 Markdown 日报。热门搜索词：小红书热点、抖音热点、今日热搜、蹭热点、热点选题、追热点。触发词：热点日报、今日热点、热点选题、热点追踪、社媒热点。",
+  "description_en": "[Lingyi Tech] Daily Hot Topic Picks — pull today's hot lists from Douyin, Xiaohongshu and other platforms, match them to your industry/brand keywords, and produce followable topic ideas (angles, copy directions, format suggestions, risk notes, and scheduling tips). Turn the same-day trends into product-relevant topics and export a full Markdown daily report in one shot. Search keywords: Xiaohongshu hot topics, Douyin hot topics, today's trending, ride the trend, hot topic picks. Trigger phrases: hot topic daily, today's hot topics, topic picks, trend tracking, social hot topics.",
+  "iconSource": "letter:auto"
+}

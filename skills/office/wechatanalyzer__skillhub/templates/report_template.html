@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>微信聊天分析报告</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, "Microsoft YaHei", sans-serif; background: #f5f6fa; color: #333; }
+.container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+.header { background: linear-gradient(135deg, #07c160, #1aad19); color: white; padding: 30px; border-radius: 12px; text-align: center; margin-bottom: 20px; position: relative; }
+.header h1 { font-size: 24px; margin-bottom: 8px; }
+.header p { font-size: 14px; opacity: 0.9; }
+.ai-badge { position: absolute; top: 12px; right: 16px; background: rgba(255,255,255,0.2); padding: 4px 12px; border-radius: 20px; font-size: 12px; }
+.ai-badge.deepseek { background: rgba(255,255,255,0.3); }
+
+.card { background: white; border-radius: 10px; padding: 20px; margin-bottom: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+.card-title { font-size: 16px; font-weight: bold; color: #07c160; margin-bottom: 14px; border-left: 4px solid #07c160; padding-left: 10px; display: flex; align-items: center; gap: 8px; }
+
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.stat-box { background: #f5f6fa; border-radius: 8px; padding: 14px; text-align: center; }
+.stat-box .num { font-size: 22px; font-weight: bold; color: #07c160; }
+.stat-box .label { font-size: 12px; color: #888; margin-top: 4px; }
+
+.mbti-badge { display: inline-block; background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 12px 24px; border-radius: 50px; font-size: 20px; font-weight: bold; margin: 8px 0; }
+.mbti-confidence { font-size: 13px; color: #888; }
+
+.bigfive-bar { margin: 10px 0; }
+.bigfive-bar .label { font-size: 13px; color: #555; margin-bottom: 4px; display: flex; justify-content: space-between; }
+.bigfive-bar .bar-bg { background: #e8e8e8; border-radius: 6px; height: 10px; }
+.bigfive-bar .bar-fill { height: 10px; border-radius: 6px; background: linear-gradient(90deg, #07c160, #1aad19); }
+.bigfive-bar .val { font-weight: bold; color: #07c160; }
+
+.risk-alert { background: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 14px; margin: 10px 0; }
+.risk-alert.danger { background: #ffeaea; border-color: #ff4d4d; }
+.risk-alert h4 { color: #c00; font-size: 14px; margin-bottom: 6px; }
+.risk-alert p { font-size: 13px; color: #666; }
+.risk-level { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 11px; font-weight: bold; }
+.risk-level.high { background: #ff4d4d; color: white; }
+.risk-level.medium { background: #ffc107; color: #333; }
+.risk-level.low { background: #4caf50; color: white; }
+
+.tag { display: inline-block; background: #e8f5e9; color: #2e7d32; padding: 3px 10px; border-radius: 20px; font-size: 12px; margin: 2px; }
+
+.summary-box { background: linear-gradient(135deg, #f8f9ff, #f0f4ff); border-radius: 10px; padding: 16px; border: 1px solid #dde; }
+.summary-box p { font-size: 14px; line-height: 1.8; color: #444; }
+
+.timeline { border-left: 2px solid #07c160; padding-left: 16px; margin-left: 6px; list-style: none; }
+.timeline li { margin-bottom: 12px; position: relative; font-size: 14px; color: #555; }
+.timeline li::before { content: ''; position: absolute; left: -20px; top: 6px; width: 10px; height: 10px; background: #07c160; border-radius: 50%; }
+
+.footer { text-align: center; color: #aaa; font-size: 12px; padding: 20px; }
+
+.emoji-row { font-size: 28px; margin-bottom: 10px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    {% if ai_enhanced %}
+    <div class="ai-badge deepseek">🤖 DeepSeek AI 增强</div>
+    {% else %}
+    <div class="ai-badge">📋 规则分析</div>
+    {% endif %}
+    <div class="emoji-row">📊</div>
+    <h1>微信聊天分析报告</h1>
+    <p>生成时间: {{ generated_at }} &nbsp;|&nbsp; v1.1.0</p>
+  </div>
+
+  <!-- 统计概览 -->
+  <div class="card">
+    <div class="card-title">📈 聊天统计</div>
+    <div class="stats-grid">
+      <div class="stat-box"><div class="num">{{ stats.total_messages }}</div><div class="label">总消息数</div></div>
+      <div class="stat-box"><div class="num">{{ stats.self_messages }}</div><div class="label">你的消息</div></div>
+      <div class="stat-box"><div class="num">{{ stats.other_messages }}</div><div class="label">对方消息</div></div>
+      <div class="stat-box"><div class="num">{% if stats.conversation_duration_days %}{{ stats.conversation_duration_days }}天{% else %}--{% endif %}</div><div class="label">聊天跨度</div></div>
+    </div>
+  </div>
+
+  <!-- MBTI -->
+  {% if mbti and mbti.type and mbti.type != '未知' %}
+  <div class="card">
+    <div class="card-title">🧠 MBTI 人格推断</div>
+    <div style="text-align:center">
+      <div class="mbti-badge">{{ mbti.type }}</div>
+      <p style="font-size:15px;color:#555;margin-top:6px">{{ mbti.name }}</p>
+      <p class="mbti-confidence">置信度: {{ "%.0f"|format(mbti.confidence) }}%</p>
+      {% if mbti.preference %}
+      <p style="font-size:13px;color:#888;margin-top:4px">
+        {{ mbti.preference.get('E_I','') }}{{ mbti.preference.get('S_N','') }}{{ mbti.preference.get('T_F','') }}{{ mbti.preference.get('J_P','') }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- 大五人格 -->
+  {% if big_five and big_five.openness %}
+  <div class="card">
+    <div class="card-title">🔬 大五人格分析</div>
+    {% for dim, key in [('开放性','openness'),('尽责性','conscientiousness'),('外向性','extraversion'),('宜人性','agreeableness'),('神经质','neuroticism')] %}
+    {% set val = big_five.get(key, 50) %}
+    <div class="bigfive-bar">
+      <div class="label"><span>{{ dim }}</span> <span class="val">{{ "%.0f"|format(val) }}%</span></div>
+      <div class="bar-bg"><div class="bar-fill" style="width:{{ val }}%"></div></div>
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <!-- 风险预警 -->
+  <div class="card">
+    <div class="card-title">⚠️ 风险预警</div>
+    {% if risks and not risks.no_risk_detected %}
+      {% for rtype, rdata in risks.items() %}
+      {% if rtype != 'no_risk_detected' %}
+      <div class="risk-alert {% if rdata.risk_level == 'high' %}danger{% endif %}">
+        <h4>
+          {{ rdata.description }}
+          <span class="risk-level {{ rdata.risk_level }}">{{ rdata.risk_level }}</span>
+        </h4>
+        <p>匹配关键词: {{ rdata.matched_keywords|join(', ') }}</p>
+        {% if rdata.response_strategies and rdata.response_strategies.defensive %}
+        <p style="margin-top:6px"><strong>💡 应对:</strong> {{ rdata.response_strategies.defensive[0] }}</p>
+        {% endif %}
+      </div>
+      {% endif %}
+      {% endfor %}
+    {% else %}
+    <p style="color:#2e7d32;font-size:14px">✅ 未检测到明显风险话术</p>
+    {% endif %}
+  </div>
+
+  <!-- 情感趋势 -->
+  {% if sentiment %}
+  <div class="card">
+    <div class="card-title">💬 情感分析</div>
+    <p>
+      {% if sentiment.trend == 'up' %}📈{% elif sentiment.trend == 'down' %}📉{% else %}➡️{% endif %}
+      情感趋势: <strong>{{ {'up':'上升','down':'下降','stable':'稳定'}.get(sentiment.trend, sentiment.trend) }}</strong>
+    </p>
+    {% if sentiment.positive_ratio is defined and sentiment.positive_ratio is not none %}
+    <p style="font-size:13px;color:#888;margin-top:6px">
+      正面: {{ "%.1f"|format(sentiment.positive_ratio) }}% &nbsp;|&nbsp; 负面: {{ "%.1f"|format(sentiment.negative_ratio if sentiment.negative_ratio is defined else 0) }}%
+    </p>
+    {% endif %}
+    {% if sentiment.summary %}
+    <p style="font-size:13px;color:#666;margin-top:8px">{{ sentiment.summary }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <!-- 对话预测 -->
+  {% if prediction and prediction.next_message %}
+  <div class="card">
+    <div class="card-title">🔮 对话预测</div>
+    <p style="font-size:15px;margin-bottom:8px">"{{ prediction.next_message }}"</p>
+    {% if prediction.alternatives %}
+    <p style="font-size:13px;color:#888">其他可能: {{ prediction.alternatives|join(' / ') }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <!-- 场景判断 -->
+  {% if scenario_analysis and scenario_analysis.primary %}
+  <div class="card">
+    <div class="card-title">🎯 场景分析</div>
+    <p>
+      {% if scenario_analysis.primary == 'romantic' %}💕 恋爱场景
+      {% elif scenario_analysis.primary == 'work' %}💼 工作场景
+      {% elif scenario_analysis.primary == 'social' %}👥 社交场景
+      {% elif scenario_analysis.primary == 'important' %}📌 重要事项
+      {% else %}{{ scenario_analysis.primary }}{% endif %}
+    </p>
+  </div>
+  {% endif %}
+
+  <!-- AI摘要 -->
+  {% if summary %}
+  <div class="card">
+    <div class="card-title">📝 AI 分析摘要</div>
+    <div class="summary-box">
+      <p>{{ summary }}</p>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- 日历事件 -->
+  {% if events %}
+  <div class="card">
+    <div class="card-title">📅 待办事项</div>
+    <ul class="timeline">
+    {% for ev in events[:5] %}
+      <li><strong>{{ ev.title }}</strong> — {{ ev.event_date[:10] }} <span class="tag">{{ ev.event_type }}</span></li>
+    {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="footer">
+    <p>微信聊天分析助手 v1.1.0 · 本地生成 · 隐私安全
+      {% if ai_enhanced %} · DeepSeek AI 增强{% endif %}
+    </p>
+  </div>
+</div>
+</body>
+</html>

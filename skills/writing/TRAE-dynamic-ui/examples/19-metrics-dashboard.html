@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>API Metrics Dashboard</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #9ca3af;
+  --color-border-tertiary: #e5e7eb;
+  --color-border-secondary: #d1d5db;
+  --color-border-primary: #374151;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --color-sky-1: #f0f9ff;
+  --color-sky-2: #e0f2fe;
+  --color-sky-3: #bae6fd;
+  --color-sky-5: #0ea5e9;
+  --color-sky-6: #0284c7;
+  --color-sky-7: #0369a1;
+  --color-mint-1: #ecfdf5;
+  --color-mint-3: #6ee7b7;
+  --color-mint-5: #10b981;
+  --color-mint-6: #059669;
+  --color-mint-7: #047857;
+  --color-coral-1: #fff1f2;
+  --color-coral-3: #fda4af;
+  --color-coral-5: #f43f5e;
+  --color-coral-6: #e11d48;
+  --color-coral-7: #be123c;
+  --color-amber-1: #fffbeb;
+  --color-amber-3: #fde68a;
+  --color-amber-5: #f59e0b;
+  --color-amber-6: #d97706;
+  --color-indigo-5: #6366f1;
+  --color-indigo-6: #4f46e5;
+  --color-violet-5: #8b5cf6;
+  --color-teal-5: #14b8a6;
+  --color-slate-2: #e2e8f0;
+  --color-slate-3: #cbd5e1;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-sans); background: var(--color-background-tertiary); padding: 24px; color: var(--color-text-primary); }
+
+.panel {
+  max-width: 900px; margin: 0 auto;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg); overflow: hidden;
+}
+
+.header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 24px; border-bottom: 1px solid var(--color-border-tertiary);
+}
+.header h1 { font-size: 17px; font-weight: 700; }
+.eyebrow { font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; }
+
+select {
+  padding: 6px 12px; border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border-secondary); font-size: 12px;
+  font-family: var(--font-sans); background: var(--color-background-primary); cursor: pointer;
+}
+
+.kpi-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding: 20px 24px; }
+
+.kpi-card {
+  padding: 16px; border-radius: var(--border-radius-lg);
+  border: 1px solid var(--color-border-tertiary); position: relative; overflow: hidden;
+}
+.kpi-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; }
+.kpi-card:nth-child(1)::before { background: var(--color-sky-5); }
+.kpi-card:nth-child(2)::before { background: var(--color-coral-5); }
+.kpi-card:nth-child(3)::before { background: var(--color-mint-5); }
+.kpi-card:nth-child(4)::before { background: var(--color-indigo-5); }
+
+.kpi-label { font-size: 11px; font-family: var(--font-mono); text-transform: uppercase; color: var(--color-text-tertiary); letter-spacing: 0.05em; margin-bottom: 6px; }
+.kpi-value { font-size: 26px; font-weight: 800; }
+.kpi-card:nth-child(1) .kpi-value { color: var(--color-sky-6); }
+.kpi-card:nth-child(2) .kpi-value { color: var(--color-coral-6); }
+.kpi-card:nth-child(3) .kpi-value { color: var(--color-mint-6); }
+.kpi-card:nth-child(4) .kpi-value { color: var(--color-indigo-5); }
+
+.kpi-delta { font-size: 11px; font-weight: 600; margin-top: 4px; }
+.delta-good { color: var(--color-mint-6); }
+.delta-bad { color: var(--color-coral-6); }
+
+.charts { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; padding: 0 24px 24px; }
+
+.chart-card {
+  padding: 16px; border-radius: var(--border-radius-lg);
+  background: var(--color-background-secondary); border: 1px solid var(--color-border-tertiary);
+}
+.chart-title { font-size: 12px; font-weight: 700; color: var(--color-text-secondary); margin-bottom: 12px; }
+
+svg { width: 100%; height: auto; display: block; }
+
+.table-mini { width: 100%; border-collapse: collapse; font-size: 12px; }
+.table-mini th { text-align: left; font-size: 10px; font-family: var(--font-mono); text-transform: uppercase; color: var(--color-text-tertiary); padding: 4px 0; border-bottom: 1px solid var(--color-border-tertiary); }
+.table-mini td { padding: 6px 0; border-bottom: 1px solid var(--color-border-tertiary); }
+.table-mini td:last-child { width: 40%; }
+.bar-bg { height: 6px; background: var(--color-slate-2); border-radius: 3px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 3px; background: var(--color-coral-5); }
+</style>
+</head>
+<body>
+<div class="panel">
+  <div class="header">
+    <h1>📊 API Performance</h1>
+    <select id="timeFilter">
+      <option>Last 1h</option>
+      <option selected>Last 6h</option>
+      <option>Last 24h</option>
+      <option>Last 7d</option>
+    </select>
+  </div>
+
+  <div class="kpi-row">
+    <div class="kpi-card">
+      <div class="kpi-label">P95 Latency</div>
+      <div class="kpi-value">187ms</div>
+      <div class="kpi-delta delta-good">↓ 12ms from prev</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Error Rate</div>
+      <div class="kpi-value">0.42%</div>
+      <div class="kpi-delta delta-bad">↑ 0.08% from prev</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Throughput</div>
+      <div class="kpi-value">2.4k</div>
+      <div class="kpi-delta delta-good">↑ 340 req/s</div>
+    </div>
+    <div class="kpi-card">
+      <div class="kpi-label">Active Conns</div>
+      <div class="kpi-value">847</div>
+      <div class="kpi-delta delta-good">↓ 53 from peak</div>
+    </div>
+  </div>
+
+  <div class="charts">
+    <!-- Area Chart: Latency over time -->
+    <div class="chart-card">
+      <div class="chart-title">Latency Over Time (ms)</div>
+      <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--color-sky-3)" stop-opacity="0.6"/>
+            <stop offset="100%" stop-color="var(--color-sky-1)" stop-opacity="0.1"/>
+          </linearGradient>
+        </defs>
+        <path d="M0,80 L30,72 60,85 90,60 120,55 150,70 180,45 210,50 240,42 270,48 300,38 L300,120 L0,120Z" fill="url(#skyGrad)"/>
+        <polyline points="0,80 30,72 60,85 90,60 120,55 150,70 180,45 210,50 240,42 270,48 300,38" fill="none" stroke="var(--color-sky-5)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="0" y1="110" x2="300" y2="110" stroke="var(--color-border-tertiary)" stroke-width="0.5"/>
+        <text x="0" y="118" font-size="8" fill="var(--color-text-tertiary)" font-family="var(--font-mono)">0h</text>
+        <text x="145" y="118" font-size="8" fill="var(--color-text-tertiary)" font-family="var(--font-mono)">3h</text>
+        <text x="290" y="118" font-size="8" fill="var(--color-text-tertiary)" font-family="var(--font-mono)">6h</text>
+      </svg>
+    </div>
+
+    <!-- Bar Chart: Requests per endpoint -->
+    <div class="chart-card">
+      <div class="chart-title">Requests by Endpoint</div>
+      <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+        <text x="0" y="14" font-size="9" fill="var(--color-text-secondary)" font-family="var(--font-mono)">/api/chat</text>
+        <rect x="80" y="6" width="200" height="12" rx="3" fill="var(--color-mint-5)"/>
+        <text x="0" y="36" font-size="9" fill="var(--color-text-secondary)" font-family="var(--font-mono)">/api/auth</text>
+        <rect x="80" y="28" width="160" height="12" rx="3" fill="var(--color-teal-5)"/>
+        <text x="0" y="58" font-size="9" fill="var(--color-text-secondary)" font-family="var(--font-mono)">/api/files</text>
+        <rect x="80" y="50" width="120" height="12" rx="3" fill="var(--color-sky-5)"/>
+        <text x="0" y="80" font-size="9" fill="var(--color-text-secondary)" font-family="var(--font-mono)">/api/sync</text>
+        <rect x="80" y="72" width="90" height="12" rx="3" fill="var(--color-amber-5)"/>
+        <text x="0" y="102" font-size="9" fill="var(--color-text-secondary)" font-family="var(--font-mono)">/api/billing</text>
+        <rect x="80" y="94" width="50" height="12" rx="3" fill="var(--color-coral-5)"/>
+      </svg>
+    </div>
+
+    <!-- Donut Chart: Error breakdown -->
+    <div class="chart-card">
+      <div class="chart-title">Error Breakdown</div>
+      <svg viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(70,60)">
+          <!-- Donut segments (approximated) -->
+          <circle cx="0" cy="0" r="40" fill="none" stroke="var(--color-coral-5)" stroke-width="14" stroke-dasharray="100 151" stroke-dashoffset="0"/>
+          <circle cx="0" cy="0" r="40" fill="none" stroke="var(--color-amber-5)" stroke-width="14" stroke-dasharray="80 171" stroke-dashoffset="-100"/>
+          <circle cx="0" cy="0" r="40" fill="none" stroke="var(--color-mint-5)" stroke-width="14" stroke-dasharray="71 180" stroke-dashoffset="-180"/>
+          <circle cx="0" cy="0" r="22" fill="var(--color-background-secondary)"/>
+          <text x="0" y="4" text-anchor="middle" font-size="11" font-weight="700" fill="var(--color-text-primary)">342</text>
+        </g>
+        <!-- Legend -->
+        <g transform="translate(150, 30)">
+          <rect x="0" y="0" width="10" height="10" rx="2" fill="var(--color-coral-5)"/>
+          <text x="16" y="9" font-size="10" fill="var(--color-text-secondary)">5xx Server (40%)</text>
+          <rect x="0" y="22" width="10" height="10" rx="2" fill="var(--color-amber-5)"/>
+          <text x="16" y="31" font-size="10" fill="var(--color-text-secondary)">4xx Client (32%)</text>
+          <rect x="0" y="44" width="10" height="10" rx="2" fill="var(--color-mint-5)"/>
+          <text x="16" y="53" font-size="10" fill="var(--color-text-secondary)">Timeout (28%)</text>
+        </g>
+      </svg>
+    </div>
+
+    <!-- Mini Table: Slowest endpoints -->
+    <div class="chart-card">
+      <div class="chart-title">Top 5 Slowest Endpoints</div>
+      <table class="table-mini">
+        <thead><tr><th>Endpoint</th><th>P95</th><th>Bar</th></tr></thead>
+        <tbody>
+          <tr><td>/api/reports/generate</td><td>845ms</td><td><div class="bar-bg"><div class="bar-fill" style="width:100%"></div></div></td></tr>
+          <tr><td>/api/export/csv</td><td>612ms</td><td><div class="bar-bg"><div class="bar-fill" style="width:72%"></div></div></td></tr>
+          <tr><td>/api/search/full</td><td>423ms</td><td><div class="bar-bg"><div class="bar-fill" style="width:50%"></div></div></td></tr>
+          <tr><td>/api/sync/delta</td><td>298ms</td><td><div class="bar-bg"><div class="bar-fill" style="width:35%"></div></div></td></tr>
+          <tr><td>/api/auth/refresh</td><td>187ms</td><td><div class="bar-bg"><div class="bar-fill" style="width:22%"></div></div></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

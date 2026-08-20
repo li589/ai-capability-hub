@@ -1,0 +1,17 @@
+{
+  "owner": "afengzi",
+  "slug": "jianying-auto-editor",
+  "displayName": "Jianying Auto Editor",
+  "latest": {
+    "version": "0.1.1",
+    "publishedAt": 1773835325123,
+    "commit": "https://github.com/openclaw/skills/commit/d199eeef71f859bb397593d39419f190e7ebee91"
+  },
+  "history": [
+    {
+      "version": "0.1.0",
+      "publishedAt": 1773818814320,
+      "commit": "https://github.com/openclaw/skills/commit/11b326182f249307cbe1aac47e6ffe37a0743b12"
+    }
+  ]
+}

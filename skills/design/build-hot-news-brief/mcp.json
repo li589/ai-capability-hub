@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "bazhuayu-hot-news-brief": {
+      "type": "streamableHttp",
+      "url": "https://mcp.bazhuayu.com/?includeTools=search_platform_content,list_platforms",
+      "headers": { "X-API-Key": "${OPENPLANT_API_KEY}" },
+      "enabledTools": ["list_platforms", "search_platform_content"],
+      "timeout": 30000
+    }
+  }
+}

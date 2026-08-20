@@ -1,0 +1,20 @@
+{
+  "name": "tmux",
+  "installedAt": 1787228678962,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082991709519872",
+  "examples_zh": [
+    "在tmux里新建一个会话",
+    "列出所有活跃的tmux会话",
+    "向tmux面板发送一条命令"
+  ],
+  "examples_en": [
+    "Create a new tmux session",
+    "List all active tmux sessions",
+    "Send a command to a tmux pane"
+  ],
+  "description_zh": "远程控制 tmux 交互式终端会话",
+  "description_en": "Remote-control tmux terminal sessions",
+  "iconSource": "letter:auto"
+}

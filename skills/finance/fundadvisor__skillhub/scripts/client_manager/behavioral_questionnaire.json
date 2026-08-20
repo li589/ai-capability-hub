@@ -1,0 +1,106 @@
+{
+  "version": "1.0",
+  "intro": "10 道行为问卷，用于识别投资心理偏差（损失厌恶/处置效应/过度自信/从众追涨/频繁交易/短视）。无对错之分，按真实情况作答即可。",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "持有的基金亏损 15% 时，你的第一反应是？",
+      "options": [
+        {"text": "立刻赎回止损", "bias": "loss_aversion", "score": 3},
+        {"text": "等回本了再卖", "bias": "loss_aversion", "score": 2},
+        {"text": "继续持有，分析是市场还是基金的问题", "bias": "loss_aversion", "score": 0},
+        {"text": "低位加仓摊薄成本", "bias": "overconfidence", "score": 2}
+      ]
+    },
+    {
+      "id": "q2",
+      "text": "持有的基金涨了 20%，你会怎么做？",
+      "options": [
+        {"text": "马上全部止盈落袋", "bias": "disposition_effect", "score": 3},
+        {"text": "先卖掉一半，落袋一部分", "bias": "disposition_effect", "score": 2},
+        {"text": "继续持有，看长期目标", "bias": "disposition_effect", "score": 0},
+        {"text": "追加买入，感觉还能涨", "bias": "overconfidence", "score": 2}
+      ]
+    },
+    {
+      "id": "q3",
+      "text": "你觉得自己挑选基金/股票的能力如何？",
+      "options": [
+        {"text": "不如专业人士，多听建议", "bias": "overconfidence", "score": 0},
+        {"text": "一般般，偶尔靠运气", "bias": "overconfidence", "score": 1},
+        {"text": "还不错，多数时候选得对", "bias": "overconfidence", "score": 2},
+        {"text": "很厉害，我选的都能涨", "bias": "overconfidence", "score": 3}
+      ]
+    },
+    {
+      "id": "q4",
+      "text": "朋友/大V 推荐了一只热门基金，你会？",
+      "options": [
+        {"text": "自己先研究清楚再决定", "bias": "herding", "score": 0},
+        {"text": "先小仓位试试水", "bias": "herding", "score": 1},
+        {"text": "直接跟着买", "bias": "herding", "score": 2},
+        {"text": "重仓跟进，怕错过行情", "bias": "herding", "score": 3}
+      ]
+    },
+    {
+      "id": "q5",
+      "text": "你一般多久操作一次账户？",
+      "options": [
+        {"text": "很少操作，买了就拿着", "bias": "overtrading", "score": 0},
+        {"text": "一个季度调几次", "bias": "overtrading", "score": 1},
+        {"text": "每月都会买卖几次", "bias": "overtrading", "score": 2},
+        {"text": "每周甚至每天都要动一动", "bias": "overtrading", "score": 3}
+      ]
+    },
+    {
+      "id": "q6",
+      "text": "市场突然大跌（单日 -3%），你第一时间想？",
+      "options": [
+        {"text": "看看长期逻辑有没有变化，没变就拿着", "bias": "myopia", "score": 0},
+        {"text": "先等等，反弹了再说", "bias": "myopia", "score": 1},
+        {"text": "赶紧卖一部分，怕继续跌", "bias": "loss_aversion", "score": 2},
+        {"text": "机会来了，加仓抄底", "bias": "overconfidence", "score": 2}
+      ]
+    },
+    {
+      "id": "q7",
+      "text": "你能接受的最大回撤（浮亏）是多少？",
+      "options": [
+        {"text": "5% 以内，多了睡不着", "bias": "loss_aversion", "score": 3},
+        {"text": "10% 左右，再多就受不了", "bias": "loss_aversion", "score": 2},
+        {"text": "20% 以内可以接受", "bias": "loss_aversion", "score": 0},
+        {"text": "无所谓，长期能赚回来就行", "bias": "myopia", "score": 0}
+      ]
+    },
+    {
+      "id": "q8",
+      "text": "听说某个板块涨疯了（如 AI），你？",
+      "options": [
+        {"text": "不追，涨太多风险大", "bias": "herding", "score": 0},
+        {"text": "先观察，等回调再说", "bias": "herding", "score": 1},
+        {"text": "小仓位追一点", "bias": "herding", "score": 2},
+        {"text": "赶紧重仓上车，错过就亏了", "bias": "herding", "score": 3}
+      ]
+    },
+    {
+      "id": "q9",
+      "text": "你平时会复盘自己的投资操作吗？",
+      "options": [
+        {"text": "从不复盘，卖了就忘", "bias": "overtrading", "score": 2},
+        {"text": "偶尔想起来看看", "bias": "overtrading", "score": 1},
+        {"text": "定期复盘盈亏原因", "bias": "overtrading", "score": 0},
+        {"text": "每次都记录并总结教训", "bias": "overconfidence", "score": 0}
+      ]
+    },
+    {
+      "id": "q10",
+      "text": "投资时你更看重哪个？",
+      "options": [
+        {"text": "短期一个月内的涨跌", "bias": "myopia", "score": 3},
+        {"text": "一年内的收益", "bias": "myopia", "score": 2},
+        {"text": "三到五年的回报", "bias": "myopia", "score": 0},
+        {"text": "长期复利，不在乎短期波动", "bias": "myopia", "score": 0}
+      ]
+    }
+  ]
+}

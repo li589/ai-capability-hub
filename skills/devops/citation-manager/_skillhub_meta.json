@@ -1,0 +1,20 @@
+{
+  "name": "学术引用管理",
+  "installedAt": 1785784738979,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081456646492160",
+  "examples_zh": [
+    "为这篇论文添加APA格式的参考文献",
+    "自动补全这篇毕业论文的引用标注",
+    "把参考文献列表转换为MLA格式"
+  ],
+  "examples_en": [
+    "Add APA-formatted references to this paper",
+    "Auto-complete citations in this thesis",
+    "Convert reference list to MLA format"
+  ],
+  "description_zh": "学术引用管理，为论文添加真实参考文献并规范引用标注",
+  "description_en": "Academic citation manager for papers and theses with CrossRef integration",
+  "iconSource": "letter:auto"
+}

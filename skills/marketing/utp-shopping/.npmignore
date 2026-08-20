@@ -1,0 +1,16 @@
+# 开发文件
+Makefile
+.github/
+.idea/
+
+# 内网调试（不随公网 Skill 发布）
+internal/
+
+# 知识库（不随 Skill 发布）
+.qoder/
+
+# 构建/分发产物
+bin/
+scripts/*.zip
+scripts/*.tgz
+*.tgz

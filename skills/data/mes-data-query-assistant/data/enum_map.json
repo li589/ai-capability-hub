@@ -1,0 +1,8 @@
+{
+ "generated": "2026-08-05",
+ "note": "枚举字典：da_collection_data(收集项/组) + da_collection_choice_detail(选项)。ID->名称映射用于翻译 BAD_REASON/原因ID 等。",
+ "collection_data": [],
+ "choice_detail": [],
+ "id_to_name": {},
+ "collection_type_usage": {}
+}

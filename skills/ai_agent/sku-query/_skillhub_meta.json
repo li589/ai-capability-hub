@@ -1,0 +1,11 @@
+{
+  "name": "SKU查询",
+  "installedAt": 1787227680953,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088538710485975040",
+  "description_zh": "只读查询stockKeepingUnit字段和记录，为产品清单、订单校验和销售分析提供数据。适用于用户要求SKU查询、生成相关结果或检查执行边界时。",
+  "description_en": "SKU Query workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_94c3131a-fdc.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_94c3131a-fdc.png"
+}

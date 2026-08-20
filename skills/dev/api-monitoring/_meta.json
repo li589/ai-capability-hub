@@ -1,0 +1,11 @@
+{
+  "owner": "nexscope",
+  "slug": "api-monitoring",
+  "displayName": "API Monitoring",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774584330519,
+    "commit": "https://github.com/openclaw/skills/commit/e41ee8fd5070925835c7cbb319fc38ea1d71407b"
+  },
+  "history": []
+}

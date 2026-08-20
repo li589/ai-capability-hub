@@ -1,0 +1,11 @@
+{
+  "owner": "sunnyfo",
+  "slug": "sina-stock",
+  "displayName": "Sina Stock",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1772457594944,
+    "commit": "https://github.com/openclaw/skills/commit/8b0d83cc4263dcd8af9509c6f932b497cde7755b"
+  },
+  "history": []
+}

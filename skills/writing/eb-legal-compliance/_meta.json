@@ -1,0 +1,11 @@
+{
+  "owner": "emersonbraun",
+  "slug": "eb-legal-compliance",
+  "displayName": "Legal Compliance",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775529365627,
+    "commit": "https://github.com/openclaw/skills/commit/409e263746d74816cb6619bffcd6ea673ab96b0f"
+  },
+  "history": []
+}

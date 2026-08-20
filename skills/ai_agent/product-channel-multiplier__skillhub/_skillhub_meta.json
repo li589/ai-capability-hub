@@ -1,0 +1,11 @@
+{
+  "slug": "product-channel-multiplier",
+  "name": "资料方向整理助手",
+  "version": "1.0.2",
+  "installedAt": 1787228958602,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "sirutong",
+  "slug": "admin-skills",
+  "displayName": "hr-admin-assistant",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773744138482,
+    "commit": "https://github.com/openclaw/skills/commit/519def8e10f6c3f6096b1f3e319c27b721768753"
+  },
+  "history": []
+}

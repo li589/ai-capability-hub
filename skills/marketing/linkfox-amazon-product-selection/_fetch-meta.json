@@ -1,0 +1,11 @@
+{
+  "skill_name": "linkfox-amazon-product-selection",
+  "internal_skill": true,
+  "source_metadata_waived": true,
+  "source_type": "internal",
+  "data_channel": "internal",
+  "upload_type": "new",
+  "waiver_reason": "内部 skill，用户明确确认跳过外部来源元数据（B17 豁免）",
+  "waived_by": "yaoyuan",
+  "waived_at": "2026-07-14"
+}

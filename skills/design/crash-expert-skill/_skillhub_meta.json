@@ -1,0 +1,21 @@
+{
+  "name": "TencentOS宕机分析助手",
+  "installedAt": 1787228692986,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081515915517952",
+  "examples_zh": [
+    "帮我分析这个 vmcore，系统发生了内核 panic",
+    "内核出现 soft lockup，怎么排查根因？",
+    "OOM 导致系统崩溃，帮我看看 crash dump"
+  ],
+  "examples_en": [
+    "Analyze this vmcore, the system had a kernel panic",
+    "Kernel soft lockup occurred, help me find the root cause",
+    "OOM crash dump analysis needed"
+  ],
+  "description_zh": "Linux 内核 vmcore 分析专家，诊断 panic/死锁/OOM 根因",
+  "description_en": "Linux kernel vmcore expert for panic, deadlock, and OOM diagnosis",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/crash-expert-skill.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/crash-expert-skill.png"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "templates": [
+    {
+      "source": "windows_start.txt",
+      "output": "start_windows.bat"
+    },
+    {
+      "source": "windows_stop.txt",
+      "output": "stop_windows.bat"
+    },
+    {
+      "source": "windows_diagnose.txt",
+      "output": "诊断_一键诊断.bat"
+    },
+    {
+      "source": "windows_acceptance.txt",
+      "output": "验收_目标电脑.bat"
+    },
+    {
+      "source": "pyinstaller_spec.txt",
+      "output": "app.spec"
+    }
+  ]
+}

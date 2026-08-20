@@ -1,0 +1,11 @@
+{
+  "owner": "breath57",
+  "slug": "dingtalk-message",
+  "displayName": "Dingtalk Message",
+  "latest": {
+    "version": "0.1.1",
+    "publishedAt": 1773329781511,
+    "commit": "https://github.com/openclaw/skills/commit/36367179bd940edc55cf8962f686fd6a70f29949"
+  },
+  "history": []
+}

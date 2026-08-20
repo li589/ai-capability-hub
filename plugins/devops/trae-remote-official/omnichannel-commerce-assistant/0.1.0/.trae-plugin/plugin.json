@@ -1,0 +1,41 @@
+{
+  "name": "omnichannel-commerce-assistant",
+  "version": "0.1.0",
+  "displayName": "全域电商经营助手",
+  "displayNameEn": "Omnichannel Commerce Assistant",
+  "description": "服务多平台、多渠道经营的品牌和商家，统一分析不同平台的商品结构、流量表现、转化效率、促销策略和用户运营，帮助经营者建立全域经营视角。",
+  "descriptionEn": "Unify product, traffic, conversion, promotion, and customer analysis across platforms and channels to build an omnichannel operating view.",
+  "author": {
+    "name": "trae-work"
+  },
+  "license": "UNLICENSED",
+  "logo": "./assets/icon.png",
+  "keywords": [
+    "全域电商",
+    "多平台运营",
+    "品牌电商",
+    "渠道运营",
+    "跨境电商",
+    "经营分析"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "全域电商经营助手",
+    "shortDescription": "跨越平台看经营，统一视角做增长。",
+    "longDescription": "服务多平台、多渠道经营的品牌和商家，统一分析不同平台的商品结构、流量表现、转化效率、促销策略和用户运营，帮助经营者建立全域经营视角。",
+    "developerName": "trae-work",
+    "category": "Data Analysis",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use omnichannel-commerce-assistant to complete this task."
+    ],
+    "brandColor": "#2456E8",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "screenshots": []
+  }
+}

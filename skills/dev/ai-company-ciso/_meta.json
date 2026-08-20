@@ -1,0 +1,17 @@
+{
+  "owner": "johnsmithfan",
+  "slug": "ai-company-ciso",
+  "displayName": "AI Company CISO (EN)",
+  "latest": {
+    "version": "2.5.0-en2",
+    "publishedAt": 1776678476075,
+    "commit": "https://github.com/openclaw/skills/commit/e22b727153bd971e88f67d710c5f8b6afc87b350"
+  },
+  "history": [
+    {
+      "version": "2.0.0",
+      "publishedAt": 1776126355753,
+      "commit": "https://github.com/openclaw/skills/commit/1011b1157441471e4b164b49d22fc324159a93dc"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "fund-advisor",
+  "version": "10.1.0",
+  "description": "基金投资智能顾问 - 组合配置/投后检视/投资分析/自进化学习",
+  "author": "社区开发者",
+  "license": "MIT"
+}

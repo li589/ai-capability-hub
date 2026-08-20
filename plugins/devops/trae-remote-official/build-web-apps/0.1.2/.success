@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:build-web-apps",
+  "registry": "trae-remote-official",
+  "plugin_name": "build-web-apps",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "76f96f9d-23d6-4b6d-a2c5-5d08ca93a842",
+  "remote_installed_plugin_id": "Q-1NZF3OUOXBC5",
+  "checksum": "734d8e055be8bf6c877d290d11a96867e1e3a24974db59b34023503791ff92f4",
+  "file_size": 199527,
+  "installed_at": 1787227204511
+}

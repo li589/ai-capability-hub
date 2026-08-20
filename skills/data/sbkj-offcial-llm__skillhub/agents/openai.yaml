@@ -1,0 +1,4 @@
+interface:
+  display_name: "招投标文本结构化与项目甄别"
+  short_description: "甄别项目文本类型、推理招投标分类并抽取标准化业务字段结果"
+  default_prompt: "使用 $baobiao-structure-bid-text 甄别并结构化这段招投标文本。"

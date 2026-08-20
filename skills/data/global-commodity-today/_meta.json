@@ -1,0 +1,11 @@
+{
+  "owner": "m0dzer0",
+  "slug": "global-commodity-today",
+  "displayName": "Global Commodity Today",
+  "latest": {
+    "version": "0.1.1",
+    "publishedAt": 1773996828433,
+    "commit": "https://github.com/openclaw/skills/commit/869422ca8bd4741ac800079db3010654af3f95a5"
+  },
+  "history": []
+}

@@ -1,0 +1,10 @@
+{
+  "name": "订单与售后管理",
+  "installedAt": 1787227648595,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087081152876433408",
+  "description_zh": "查询订单和售后单的列表与详情，支持按时间、状态、支付、配送方式及关键词进行筛选。",
+  "description_en": "Search order and after-sales lists or details using filters for time range, status, payment, delivery method, and keywords.",
+  "iconSource": "letter:auto"
+}

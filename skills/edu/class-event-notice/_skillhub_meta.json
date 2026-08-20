@@ -1,0 +1,11 @@
+{
+  "name": "班级活动通知",
+  "installedAt": 1787227519859,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084940611129589760",
+  "description_zh": "为班主任生成班级层面活动的通知文本：出游 / 亲子 / 演出 / 志愿活动等，含目标、流程、装备、家长配合、回执；与班级活动方案 Skill 配套使用。触发关键词：班级活动通知、出游通知、亲子活动通知、班级研学、演出通知、班级志愿活动通知。",
+  "description_en": "Generates notice text for class-level events for homeroom teachers: outings / parent-child / performances / volunteer activities, including objectives, procedures, equipment, parent cooperation, and reply slips; used together with the Class Activity Planner skill. Trigger keywords: class event notice, outing notice, parent-child activity notice, class study trip, performance notice, class volunteer activity notice.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_f12b664b-64d.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_f12b664b-64d.png"
+}

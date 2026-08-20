@@ -1,0 +1,11 @@
+{
+  "owner": "bingbox",
+  "slug": "wecom-deep-op",
+  "displayName": "Wecom Deep Op",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774145131282,
+    "commit": "https://github.com/openclaw/skills/commit/9b5e9891ceffb341d6c6dd1a7c189df2e2c0d4c0"
+  },
+  "history": []
+}

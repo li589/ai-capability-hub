@@ -1,0 +1,11 @@
+{
+  "name": "腾讯云实时文档抽取",
+  "installedAt": 1787228320425,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2059984354835099648",
+  "description_zh": "调用腾讯云实时文档抽取Agent接口，支持从图片/PDF中按自定义字段名称进行结构化信息抽取。支持KV对和表格字段两种抽取类型，可通过字段提示词提升准确性。适用于合同、发票、报告等文档的自动信息提取。",
+  "description_en": "Tencent Cloud ExtractDocAgent API for structured information extraction from images/PDFs. Supports custom field names with KV-pair and table field extraction types. Ideal for contracts, invoices, and reports.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984354835099648/d7670df8c1a40049.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059984354835099648/d7670df8c1a40049.png"
+}

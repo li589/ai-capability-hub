@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "amazon-collector/asin-request/1.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["asins", "site"],
+  "properties": {
+    "asins": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {"type": "string", "pattern": "^[A-Z0-9]{10}$"}
+    },
+    "site": {"type": "string", "minLength": 2, "maxLength": 32},
+    "review_limit": {"type": "integer", "minimum": 1, "maximum": 100, "default": 100},
+    "review_start_date": {"type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"}
+  }
+}

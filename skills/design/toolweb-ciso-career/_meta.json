@@ -1,0 +1,11 @@
+{
+  "owner": "krishnakumarmahadevan-cmd",
+  "slug": "toolweb-ciso-career",
+  "displayName": "CISO Career",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774699824290,
+    "commit": "https://github.com/openclaw/skills/commit/fa085139c21db283af40387465637eed6662f20e"
+  },
+  "history": []
+}

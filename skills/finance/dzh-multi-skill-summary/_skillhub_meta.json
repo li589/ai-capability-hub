@@ -1,0 +1,11 @@
+{
+  "name": "大智慧多纬度分析",
+  "installedAt": 1787227733729,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084550150092820480",
+  "description_zh": "追踪公告、新闻、研报与舆情变化，提炼市场关注重点与潜在影响，适用于事件驱动与信息跟踪。",
+  "description_en": "Tracks announcements, news, research reports, and market sentiment. Extracts key market focus points and potential impacts. Suitable for event-driven strategies and information monitoring.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_6e1d0c41-b41.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_6e1d0c41-b41.png"
+}

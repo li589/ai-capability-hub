@@ -1,0 +1,10 @@
+{
+  "name": "autoresearch",
+  "installedAt": 1785864368979,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053081361722249216",
+  "description_zh": "Karpathy 风格内容优化，50+ 变体 + 专家评分 + 进化迭代",
+  "description_en": "Karpathy-style content optimization with 50+ variants, expert scoring, and evolution",
+  "iconSource": "letter:auto"
+}

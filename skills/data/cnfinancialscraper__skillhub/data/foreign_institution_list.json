@@ -1,0 +1,368 @@
+{
+  "type": "外资金融机构",
+  "type_name": "外资金融机构",
+  "count": 60,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-05-24",
+  "institutions": [
+    {
+      "name": "汇丰银行",
+      "name_en": "HSBC Holdings plc",
+      "code": "HSBC",
+      "type": "外资银行"
+    },
+    {
+      "name": "渣打银行",
+      "name_en": "Standard Chartered plc",
+      "code": "SC",
+      "type": "外资银行"
+    },
+    {
+      "name": "花旗银行",
+      "name_en": "Citibank N.A.",
+      "code": "Citi",
+      "type": "外资银行"
+    },
+    {
+      "name": "摩根大通银行",
+      "name_en": "JPMorgan Chase & Co.",
+      "code": "JPM",
+      "type": "外资银行"
+    },
+    {
+      "name": "摩根士丹利",
+      "name_en": "Morgan Stanley",
+      "code": "MS",
+      "type": "外资银行"
+    },
+    {
+      "name": "高盛集团",
+      "name_en": "Goldman Sachs Group Inc.",
+      "code": "GS",
+      "type": "外资银行"
+    },
+    {
+      "name": "德意志银行",
+      "name_en": "Deutsche Bank AG",
+      "code": "DB",
+      "type": "外资银行"
+    },
+    {
+      "name": "瑞士银行",
+      "name_en": "UBS Group AG",
+      "code": "UBS",
+      "type": "外资银行"
+    },
+    {
+      "name": "法国巴黎银行",
+      "name_en": "BNP Paribas SA",
+      "code": "BNP",
+      "type": "外资银行"
+    },
+    {
+      "name": "法兴银行",
+      "name_en": "Société Générale SA",
+      "code": "SG",
+      "type": "外资银行"
+    },
+    {
+      "name": "东方汇理银行",
+      "name_en": "Crédit Agricole CIB",
+      "code": "CA",
+      "type": "外资银行"
+    },
+    {
+      "name": "瑞穗银行",
+      "name_en": "Mizuho Financial Group",
+      "code": "MZ",
+      "type": "外资银行"
+    },
+    {
+      "name": "三菱日联金融",
+      "name_en": "Mitsubishi UFJ Financial Group",
+      "code": "MUFG",
+      "type": "外资银行"
+    },
+    {
+      "name": "三井住友金融",
+      "name_en": "Sumitomo Mitsui Financial Group",
+      "code": "SMFG",
+      "type": "外资银行"
+    },
+    {
+      "name": "友利银行",
+      "name_en": "Woori Bank",
+      "code": "WB",
+      "type": "外资银行"
+    },
+    {
+      "name": "韩亚银行",
+      "name_en": "Hana Bank",
+      "code": "HB",
+      "type": "外资银行"
+    },
+    {
+      "name": "新韩银行",
+      "name_en": "Shinhan Bank",
+      "code": "SHB",
+      "type": "外资银行"
+    },
+    {
+      "name": "星展银行",
+      "name_en": "DBS Bank",
+      "code": "DBS",
+      "type": "外资银行"
+    },
+    {
+      "name": "华侨银行",
+      "name_en": "OCBC Bank",
+      "code": "OCBC",
+      "type": "外资银行"
+    },
+    {
+      "name": "大华银行",
+      "name_en": "UOB Bank",
+      "code": "UOB",
+      "type": "外资银行"
+    },
+    {
+      "name": "东亚银行",
+      "name_en": "Bank of East Asia",
+      "code": "BEA",
+      "type": "外资银行"
+    },
+    {
+      "name": "南洋商业银行",
+      "name_en": "Nanyang Commercial Bank",
+      "code": "NCB",
+      "type": "外资银行"
+    },
+    {
+      "name": "恒生银行",
+      "name_en": "Hang Seng Bank",
+      "code": "HSB",
+      "type": "外资银行"
+    },
+    {
+      "name": "永亨银行",
+      "name_en": "Bank of East Asia",
+      "code": "WHB",
+      "type": "外资银行"
+    },
+    {
+      "name": "中国工商银行",
+      "code": "ICBC",
+      "type": "外资银行"
+    },
+    {
+      "name": "安盛保险",
+      "name_en": "AXA SA",
+      "code": "AXA",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "安联保险",
+      "name_en": "Allianz SE",
+      "code": "AL",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "忠利保险",
+      "name_en": "Generali Group",
+      "code": "G",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "保德信保险",
+      "name_en": "Prudential Financial Inc.",
+      "code": "PFI",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "大都会保险",
+      "name_en": "MetLife Inc.",
+      "code": "MET",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "友邦保险",
+      "name_en": "AIA Group Limited",
+      "code": "AIA",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "宏利保险",
+      "name_en": "Manulife Financial",
+      "code": "MFC",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "安达保险",
+      "name_en": "Chubb Limited",
+      "code": "CHB",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "信利保险",
+      "name_en": "Zurich Insurance Group",
+      "code": "ZUR",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "苏黎世保险",
+      "name_en": "Zurich Insurance",
+      "code": "ZUR2",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "英杰华保险",
+      "name_en": "Aviva",
+      "code": "AV",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "耆卫保险",
+      "name_en": "Old Mutual",
+      "code": "OM",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "日本生命保险",
+      "name_en": "Nippon Life Insurance",
+      "code": "NLI",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "第一生命保险",
+      "name_en": "Dai-ichi Life Insurance",
+      "code": "DLI",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "明治安田保险",
+      "name_en": "Meiji Yasuda Life Insurance",
+      "code": "MYL",
+      "type": "外资保险公司"
+    },
+    {
+      "name": "野村证券",
+      "name_en": "Nomura Holdings Inc.",
+      "code": "NMR",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "大和证券",
+      "name_en": "Daiwa Securities Group Inc.",
+      "code": "Daiwa",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "瑞穗证券",
+      "name_en": "Mizuho Securities",
+      "code": "MZ2",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "三菱日联证券",
+      "name_en": "Mitsubishi UFJ Securities",
+      "code": "MUS",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "摩根士丹利华鑫证券",
+      "name_en": "Morgan Stanley Huaxin",
+      "code": "MSHX",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "高盛高华证券",
+      "name_en": "Goldman Sachs Gao Hua",
+      "code": "GSGH",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "瑞银证券",
+      "name_en": "UBS Securities",
+      "code": "UBSS",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "汇丰前海证券",
+      "name_en": "HSBC Qianhai Securities",
+      "code": "HSBCQS",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "法巴证券",
+      "name_en": "BNP Paribas Securities",
+      "code": "BNPS",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "法兴证券",
+      "name_en": "Société Générale Securities",
+      "code": "SGS",
+      "type": "外资证券公司"
+    },
+    {
+      "name": "东方汇理期货",
+      "name_en": "Crédit Agricole CIB Futures",
+      "code": "CAF",
+      "type": "外资期货公司"
+    },
+    {
+      "name": "瑞银期货",
+      "name_en": "UBS Futures",
+      "code": "UBSF",
+      "type": "外资期货公司"
+    },
+    {
+      "name": "汇丰资产管理",
+      "name_en": "HSBC Global Asset Management",
+      "code": "HSBCAM",
+      "type": "外资资产管理公司"
+    },
+    {
+      "name": "瑞银资产管理",
+      "name_en": "UBS Asset Management",
+      "code": "UBSAM",
+      "type": "外资资产管理公司"
+    },
+    {
+      "name": "摩根资产管理",
+      "name_en": "JPMorgan Asset Management",
+      "code": "JPMAM",
+      "type": "外资资产管理公司"
+    },
+    {
+      "name": "贝莱德资产管理",
+      "name_en": "BlackRock",
+      "code": "BLK",
+      "type": "外资资产管理公司"
+    },
+    {
+      "name": "道富环球投资管理",
+      "name_en": "State Street Global Advisors",
+      "code": "SSGA",
+      "type": "外资资产管理公司"
+    },
+    {
+      "name": "富达国际资产管理",
+      "name_en": "Fidelity International",
+      "code": "FID",
+      "type": "外资资产管理公司"
+    },
+    {
+      "name": "景顺资产管理",
+      "name_en": "Invesco",
+      "code": "INV",
+      "type": "外资资产管理公司"
+    },
+    {
+      "name": "安联资产管理",
+      "name_en": "Allianz Global Investors",
+      "code": "AGI",
+      "type": "外资资产管理公司"
+    }
+  ]
+}

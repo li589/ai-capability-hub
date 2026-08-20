@@ -1,0 +1,11 @@
+{
+  "name": "价格查询助手",
+  "installedAt": 1787228422101,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2060644353695141888",
+  "description_zh": "慢慢买官方 MCP，按关键词搜索全网商品的参考好价、实时价格与隐藏优惠券，并基于返回数据判断当前价是否真实划算、识别先涨后降的虚假促销。纯只读，不替用户下单或领券；导购/返利链接如实披露。",
+  "description_en": "Wraps the Manmanbuy MCP to search reference deal prices, real-time prices and hidden coupons across Chinese e-commerce, then judges whether a current price is a genuine low or a fake 'raise-then-cut' promotion. Read-only, with full disclosure of affiliate links.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060644353695141888/946b954698c22bac.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060644353695141888/946b954698c22bac.png"
+}

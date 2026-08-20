@@ -1,0 +1,11 @@
+{
+  "name": "WhatsApp会话摘要",
+  "installedAt": 1787227791085,
+  "source": "marketplace",
+  "version": "1.3.0",
+  "skillId": "skill_2088539033473884160",
+  "description_zh": "按账号和联系人聚合已保存的WhatsApp消息，提取采购要素、意向信号、摘要和待办。适用于用户要求WhatsApp会话摘要、生成相关结果或检查执行边界时。",
+  "description_en": "WhatsApp Conversation Summary workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_a7e2eb47-565.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_a7e2eb47-565.png"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "666-v2",
+  "name": "ppt",
+  "version": "1.0.0",
+  "installedAt": 1787227490538,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c0bd7863-2689-46f1-941c-e45be1317e90.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/c0bd7863-2689-46f1-941c-e45be1317e90.png"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "alice-fund-screening-investment-advisory",
+  "version": "1.0.5",
+  "description": "CLI: 调用万得 Alice Agent「基金筛选与投资建议」技能（A2A SSE），为投资顾问生成专业的基金筛选、对比分析和个性化投资建议",
+  "type": "module",
+  "private": true,
+  "files": [
+    "SKILL.md",
+    "AGENT.md",
+    "package.json",
+    "_meta.json",
+    "scripts/"
+  ],
+  "scripts": {},
+  "bin": {
+    "alice-fund-screening-investment-advisory": "./scripts/cli.mjs",
+    "afsia": "./scripts/cli.mjs"
+  }
+}

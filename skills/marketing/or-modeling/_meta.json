@@ -1,0 +1,11 @@
+{
+  "owner": "go-own-way",
+  "slug": "or-modeling",
+  "displayName": "Operations Research Modeling",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774169712987,
+    "commit": "https://github.com/openclaw/skills/commit/89c77b1c99394d4e9c61d587ba2267c7f58fd035"
+  },
+  "history": []
+}

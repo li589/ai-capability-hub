@@ -1,0 +1,11 @@
+{
+  "owner": "cellinlab",
+  "slug": "cell-book-material-miner",
+  "displayName": "拆书素材提炼",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1775751680961,
+    "commit": "https://github.com/openclaw/skills/commit/ecac4cdd2119d0020f948f73f055d8f54ee53e90"
+  },
+  "history": []
+}

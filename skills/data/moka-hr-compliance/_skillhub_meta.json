@@ -1,0 +1,11 @@
+{
+  "name": "Moka 档案合规",
+  "installedAt": 1787228544666,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088130600565686272",
+  "description_zh": "面向人事合规角色的档案与审计查询（含薪酬档案等敏感数据，普通员工账号无相应权限）。使用当前平台提供的 Moka 连接器查询指定员工的薪资档案、参保档案、黑名单记录三类专项档案，电子签记录与签署状态（按人员汇总、按流程查文件、签署中心列表），以及员工信息的操作日志（谁在何时改了哪些字段）。当用户核查员工档案、跟进文件签署进度或做变更审计时使用。",
+  "description_en": "Archive and audit queries for HR compliance roles (includes sensitive data such as salary archives; regular employee accounts lack the required permissions). Uses the Moka Connector available on the current platform to query an employee's special archives (salary, social insurance, blacklist), e-signature records and signing status (per-person aggregation, files by flow, signing-center lists), and operation logs of employee data changes (who changed which fields and when). Use it for archive checks, signing progress follow-ups, or change audits.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_a416ddbb-c12.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_a416ddbb-c12.png"
+}

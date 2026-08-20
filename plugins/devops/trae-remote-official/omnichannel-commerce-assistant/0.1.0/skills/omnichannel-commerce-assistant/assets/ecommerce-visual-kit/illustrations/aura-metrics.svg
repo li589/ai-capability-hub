@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Fused ecommerce metric fields</title>
+  <desc id="desc">Warm yellow, coral, and charcoal metric fields sit beside compact operating cells.</desc>
+  <defs>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="16"/></filter>
+  </defs>
+  <rect width="1200" height="720" rx="64" fill="#FFFFFF"/>
+  <rect x="70" y="64" width="1060" height="592" rx="44" fill="#F4F5F2"/>
+  <rect x="112" y="112" width="626" height="314" rx="32" fill="#E8EBE7"/>
+  <circle cx="548" cy="255" r="126" fill="#FFD633" opacity=".88" filter="url(#glow)"/>
+  <circle cx="408" cy="320" r="86" fill="#FF6B5D" opacity=".82" filter="url(#glow)"/>
+  <circle cx="330" cy="205" r="58" fill="#22272B" opacity=".92" filter="url(#glow)"/>
+  <g fill="none" stroke="#1D2226" stroke-width="2">
+    <rect x="780" y="112" width="306" height="314" rx="32" fill="#22272B"/>
+    <circle cx="844" cy="182" r="24" stroke="#FFD633" stroke-width="10"/>
+    <circle cx="916" cy="182" r="24" stroke="#A9AAA4" stroke-width="10"/>
+    <circle cx="988" cy="182" r="24" stroke="#FF6B5D" stroke-width="10"/>
+    <path d="M824 264h214M824 300h164M824 336h192" stroke="#F7F4ED" opacity=".72" stroke-width="12" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="112" y="464" width="304" height="142" rx="28" fill="#FFFFFF"/>
+    <path d="M152 560h224" stroke="#D9D6CF" stroke-width="10" stroke-linecap="round"/>
+    <path d="M152 560h142" stroke="#FF6B5D" stroke-width="10" stroke-linecap="round"/>
+    <rect x="448" y="464" width="638" height="142" rx="28" fill="#FFFFFF"/>
+    <g fill="#FF6B5D"><rect x="494" y="534" width="16" height="34" rx="8"/><rect x="520" y="518" width="16" height="50" rx="8"/><rect x="546" y="526" width="16" height="42" rx="8"/><rect x="572" y="504" width="16" height="64" rx="8"/></g>
+    <path d="M644 548h388" stroke="#D9D6CF" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

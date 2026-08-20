@@ -1,0 +1,11 @@
+{
+  "name": "X(Twitter)作品搜索",
+  "installedAt": 1787228307285,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087461944615731200",
+  "description_zh": "关键词搜索X作品，支持热门、最新、媒体等五种类型筛选，返回结构化结果",
+  "description_en": "Search X (Twitter) posts by keyword with five precise filter types.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_3c1bfc47-09a.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_3c1bfc47-09a.svg"
+}

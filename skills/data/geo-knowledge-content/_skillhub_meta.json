@@ -1,0 +1,11 @@
+{
+  "name": "GEO知识内容",
+  "installedAt": 1787228565717,
+  "source": "marketplace",
+  "version": "1.3.0",
+  "skillId": "skill_2088537573880446976",
+  "description_zh": "生成定义、问答、对比和选型指南，并组织可追溯的证据结构。适用于用户要求GEO知识内容、生成相关结果或检查执行边界时。",
+  "description_en": "GEO Knowledge Content workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_015ea870-edd.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_015ea870-edd.png"
+}

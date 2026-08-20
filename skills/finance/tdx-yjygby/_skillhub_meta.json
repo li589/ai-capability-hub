@@ -1,0 +1,11 @@
+{
+  "name": "业绩博弈",
+  "installedAt": 1787228651732,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2085675767450804224",
+  "description_zh": "聚焦事件驱动下的财报博弈：分析业绩发布前后市场如何交易、超预期是否还能涨、利空出尽能否反弹，输出预期差、股价位置、博弈路径与多情景推演。",
+  "description_en": "Focus on event-driven earnings trading around performance announcements — analyze how the market trades before and after earnings releases, whether beats can continue to rally, and whether bad news is fully priced in for a rebound. Output expectation gaps, price positioning, game-theory paths, and multi-scenario projections.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/c0c8b4b5-88b6-4952-a193-4c84115f2a91/avatar/skill/au_3b56857d-535.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/c0c8b4b5-88b6-4952-a193-4c84115f2a91/avatar/skill/au_3b56857d-535.png"
+}

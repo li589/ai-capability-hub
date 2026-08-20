@@ -1,0 +1,12 @@
+{
+  "slug": "tencent-ads-assistant",
+  "name": "腾讯营销妙问",
+  "version": "1.0.7",
+  "installedAt": 1787228846659,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/27205dc2-3c4b-4854-85b1-8902f05745a3.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/27205dc2-3c4b-4854-85b1-8902f05745a3.png"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "平安证券资讯查询",
+  "installedAt": 1787227523473,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2079451206686916608",
+  "examples_zh": [
+    "澜起科技最近有什么消息",
+    "半导体板块最近有哪些报道",
+    "查一下科创芯片 ETF 的相关新闻"
+  ],
+  "examples_en": [
+    "Find recent news about Montage Technology",
+    "Search recent reports about the semiconductor sector",
+    "Find related news about the STAR chip ETF"
+  ],
+  "description_zh": "按股票、公司、行业、ETF、概念或市场主题检索相关新闻、快讯和财经报道。",
+  "description_en": "Search financial news, alerts, and market reports by stock, company, industry, ETF, or topic.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079451206686916608/5616ea649d2d1692.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2079451206686916608/5616ea649d2d1692.svg"
+}

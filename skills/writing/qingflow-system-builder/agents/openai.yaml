@@ -1,0 +1,4 @@
+interface:
+  display_name: "轻流系统搭建"
+  short_description: "按固定应用、流程、门户看板和打印模板规范搭建轻流系统"
+  default_prompt: "Use $qingflow-system-builder as the only map entry, load only the directly linked reference modules needed for the task, and verify every write by readback. Use system numbering, four-column ordinary-field layouts, exactly table-board-card business views, one row of three fuzzy query fields, real record IDs for downstream buttons and Q-Robot updates, and complete per-node field permissions. Portals have no shortcut grids, exactly one full-width contains filter, table views only, at most four metric cards in one PC row by default, and chartConfig.beingShowTitle=false. Word templates use verified placeholders and render checks. After final verification, retain 3-5 realistic business records per business app without mock, test, or virtual labels."

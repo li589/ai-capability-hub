@@ -1,0 +1,10 @@
+{
+  "name": "促销活动管理",
+  "installedAt": 1787228471645,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087081184924991488",
+  "description_zh": "校验活动权限并创建、查询、预览或修改促销活动，覆盖折扣、满减、满赠、拼团、秒杀等类型。",
+  "description_en": "Validate permissions and create, query, preview, or modify promotion campaigns, including discounts, threshold offers, gifts, group buying, and flash sales.",
+  "iconSource": "letter:auto"
+}

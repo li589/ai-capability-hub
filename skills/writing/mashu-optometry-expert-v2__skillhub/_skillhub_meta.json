@@ -1,0 +1,13 @@
+{
+  "slug": "mashu-optometry-expert-v2",
+  "name": "少儿近视马叔视光技能（付费版）",
+  "version": "1.4.3",
+  "installedAt": 1787228927281,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png"
+}

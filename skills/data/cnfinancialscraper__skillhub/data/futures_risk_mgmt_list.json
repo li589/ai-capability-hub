@@ -1,0 +1,484 @@
+{
+  "type": "期货风险管理子公司",
+  "type_name": "期货风险管理子公司",
+  "count": 98,
+  "data_source": "中国期货业协会",
+  "update_time": "2026-06-26",
+  "institutions": [
+    {
+      "name": "中信期货风险管理",
+      "code": "ZXQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "永安期货风险管理",
+      "code": "YAQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "银河期货风险管理",
+      "code": "YHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "国泰君安期货风险管理",
+      "code": "GTJQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "海通期货风险管理",
+      "code": "HTSQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "华泰期货风险管理",
+      "code": "HTQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "广发期货风险管理",
+      "code": "GFQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "招商期货风险管理",
+      "code": "ZSQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中粮期货风险管理",
+      "code": "ZLQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "光大期货风险管理",
+      "code": "GDQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "鲁证期货风险管理",
+      "code": "LZQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "瑞达期货风险管理",
+      "code": "RDQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "南华期货风险管理",
+      "code": "NHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "新湖期货风险管理",
+      "code": "XHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "弘业期货风险管理",
+      "code": "HYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "东证期货风险管理",
+      "code": "DZQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "方正中期期货风险管理",
+      "code": "FZQQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "申银万国期货风险管理",
+      "code": "SYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中信建投期货风险管理",
+      "code": "ZXJTQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "国投安信期货风险管理",
+      "code": "GTAXQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "五矿期货风险管理",
+      "code": "WKQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "金瑞期货风险管理",
+      "code": "JRQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中大期货风险管理",
+      "code": "ZDQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "上海中期期货风险管理",
+      "code": "SHZQQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中银国际期货风险管理",
+      "code": "ZYGJQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "宏源期货风险管理",
+      "code": "HYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "建信期货风险管理",
+      "code": "JXQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "信达期货风险管理",
+      "code": "XDQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "国海良时期货风险管理",
+      "code": "GHLSQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "华安期货风险管理",
+      "code": "HAQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "东海期货风险管理",
+      "code": "DHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "格林大华期货风险管理",
+      "code": "GLDHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "国元期货风险管理",
+      "code": "GYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "华西期货风险管理",
+      "code": "HXQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "长江期货风险管理",
+      "code": "CJQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "宝城期货风险管理",
+      "code": "BCQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中投期货风险管理",
+      "code": "ZTQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "首创期货风险管理",
+      "code": "SCQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "迈科期货风险管理",
+      "code": "MKQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "一德期货风险管理",
+      "code": "YDQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "英大期货风险管理",
+      "code": "YDQHFX2",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "美尔雅期货风险管理",
+      "code": "MEYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "大有期货风险管理",
+      "code": "DYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中融汇信期货风险管理",
+      "code": "ZRHXQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "通惠期货风险管理",
+      "code": "THQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "天风期货风险管理",
+      "code": "TFQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "华融期货风险管理",
+      "code": "HRQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "国信期货风险管理",
+      "code": "GXQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "安粮期货风险管理",
+      "code": "ALQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "华龙期货风险管理",
+      "code": "HLQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "华联期货风险管理",
+      "code": "HLQHFX2",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "西南期货风险管理",
+      "code": "XNQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "华创期货风险管理",
+      "code": "HCQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "创元期货风险管理",
+      "code": "CYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "道通期货风险管理",
+      "code": "DTQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "金元期货风险管理",
+      "code": "JYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "红塔期货风险管理",
+      "code": "HTQHFX2",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "华鑫期货风险管理",
+      "code": "HXQHFX2",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "恒泰期货风险管理",
+      "code": "HTQHFX3",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中航期货风险管理",
+      "code": "ZHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "锦泰期货风险管理",
+      "code": "JTQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "国金期货风险管理",
+      "code": "GJQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "长安期货风险管理",
+      "code": "CAQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "国联期货风险管理",
+      "code": "GLQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "渤海期货风险管理",
+      "code": "BHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中辉期货风险管理",
+      "code": "ZHHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "福能期货风险管理",
+      "code": "FNQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "德盛期货风险管理",
+      "code": "DSQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "华闻期货风险管理",
+      "code": "HWQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "物产中大期货风险管理",
+      "code": "WCZDQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "东方汇金期货风险管理",
+      "code": "DFHJQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "海航期货风险管理",
+      "code": "HHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "招金期货风险管理",
+      "code": "ZJQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "前海期货风险管理",
+      "code": "QHQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "恒力期货风险管理",
+      "code": "HLQHFX3",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "海证期货风险管理",
+      "code": "HZQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "先融期货风险管理",
+      "code": "XRQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "新纪元期货风险管理",
+      "code": "XJYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中电投先融期货风险管理",
+      "code": "ZDTXQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "倍特期货风险管理",
+      "code": "BTQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中天期货风险管理",
+      "code": "ZTQHFX2",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "财达期货风险管理",
+      "code": "CDQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "集成期货风险管理",
+      "code": "JCQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "瑞银期货风险管理",
+      "code": "RYQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "国都期货风险管理",
+      "code": "GDQHFX2",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "瑞奇期货风险管理",
+      "code": "RQQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中州期货风险管理",
+      "code": "ZZQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "国富期货风险管理",
+      "code": "GFQHFX2",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "汇鑫期货风险管理",
+      "code": "HXQHFX3",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "金鹏期货风险管理",
+      "code": "JPQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "乾坤期货风险管理",
+      "code": "QKQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "中融汇信期货风险管理",
+      "code": "ZRHXQHFX2",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "和合期货风险管理",
+      "code": "HHQHFX2",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "上海大陆期货风险管理",
+      "code": "SHDLQHFX",
+      "type": "期货风险管理子公司"
+    },
+    {
+      "name": "江苏东华期货风险管理",
+      "code": "JSDHQHFX",
+      "type": "期货风险管理子公司"
+    }
+  ]
+}

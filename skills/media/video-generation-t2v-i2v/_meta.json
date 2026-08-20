@@ -1,0 +1,11 @@
+{
+  "owner": "gentleyo",
+  "slug": "video-generation-t2v-i2v",
+  "displayName": "Video Generation (t2v & i2v)",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773548996886,
+    "commit": "https://github.com/openclaw/skills/commit/0512081de2b2004e867b0a77cb791df08a30b879"
+  },
+  "history": []
+}

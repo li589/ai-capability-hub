@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Incident Report — SEV-2 Elevated 502s</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #555770;
+  --color-text-tertiary: #8b8da3;
+  --color-border-tertiary: #e2e4e9;
+  --color-border-secondary: #c8cad0;
+  --color-border-primary: #6e6e80;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Georgia', serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 2px 8px rgba(0,0,0,.08);
+  --shadow-lg: 0 4px 16px rgba(0,0,0,.12);
+  --color-coral-1: #fff5f5; --color-coral-2: #ffe3e3; --color-coral-3: #ffc9c9;
+  --color-coral-4: #ffa8a8; --color-coral-5: #ff8787; --color-coral-6: #ff6b6b;
+  --color-coral-7: #fa5252; --color-coral-8: #f03e3e; --color-coral-9: #e03131;
+  --color-coral-10: #c92a2a;
+  --color-amber-1: #fff9db; --color-amber-2: #fff3bf; --color-amber-3: #ffec99;
+  --color-amber-4: #ffe066; --color-amber-5: #ffd43b; --color-amber-6: #fcc419;
+  --color-amber-7: #fab005; --color-amber-8: #f59f00; --color-amber-9: #f08c00;
+  --color-amber-10: #e67700;
+  --color-sky-1: #e0f7ff; --color-sky-2: #b8ecff; --color-sky-3: #8adeff;
+  --color-sky-4: #5ccfff; --color-sky-5: #33c0ff; --color-sky-6: #15aaf0;
+  --color-sky-7: #0d94d8; --color-sky-8: #0980be; --color-sky-9: #066ba0;
+  --color-sky-10: #045682;
+  --color-mint-1: #e6fcf5; --color-mint-2: #c3fae8; --color-mint-3: #96f2d7;
+  --color-mint-4: #63e6be; --color-mint-5: #38d9a9; --color-mint-6: #20c997;
+  --color-mint-7: #12b886; --color-mint-8: #0ca678; --color-mint-9: #099268;
+  --color-mint-10: #087f5b;
+  --color-indigo-1: #edf2ff; --color-indigo-2: #dbe4ff; --color-indigo-3: #bac8ff;
+  --color-indigo-6: #5c7cfa; --color-indigo-9: #3b5bdb;
+  --color-violet-1: #f3f0ff; --color-violet-6: #845ef7; --color-violet-9: #6741d9;
+  --color-slate-1: #f8f9fa; --color-slate-2: #f1f3f5; --color-slate-3: #e9ecef;
+  --color-slate-4: #dee2e6; --color-slate-5: #ced4da; --color-slate-6: #adb5bd;
+  --color-slate-7: #868e96; --color-slate-8: #495057; --color-slate-9: #343a40;
+  --color-slate-10: #212529;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-sans); background: var(--color-background-tertiary);
+  color: var(--color-text-primary); line-height: 1.6;
+}
+.panel {
+  max-width: 880px; margin: 24px auto;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg); overflow: hidden;
+}
+.eyebrow {
+  font-family: var(--font-mono); font-size: 11px; text-transform: uppercase;
+  letter-spacing: 1.5px; font-weight: 600;
+}
+header { padding: 28px 32px 20px; border-bottom: 1px solid var(--color-border-tertiary); }
+header .eyebrow { color: var(--color-coral-8); }
+header .title-row { display: flex; align-items: center; gap: 12px; margin-top: 6px; }
+header h1 { font-size: 22px; }
+.sev-badge {
+  display: inline-block; padding: 3px 12px; border-radius: 20px;
+  background: var(--color-coral-6); color: #fff; font-size: 12px;
+  font-weight: 700; font-family: var(--font-mono);
+}
+.metrics-row {
+  display: flex; gap: 24px; margin-top: 12px;
+}
+.metric { font-size: 13px; }
+.metric .label { color: var(--color-text-tertiary); font-size: 11px; font-family: var(--font-mono);
+  text-transform: uppercase; letter-spacing: .5px; }
+.metric .val { font-weight: 700; }
+
+.content { padding: 24px 32px 32px; }
+
+/* Timeline */
+.timeline { position: relative; margin: 20px 0 28px 20px; padding-left: 28px;
+  border-left: 2px solid var(--color-border-tertiary); }
+.tl-item { position: relative; margin-bottom: 20px; }
+.tl-dot {
+  position: absolute; left: -35px; top: 4px; width: 14px; height: 14px;
+  border-radius: 50%; border: 2px solid var(--color-background-primary);
+}
+.tl-item .time { font-family: var(--font-mono); font-size: 11px; color: var(--color-text-tertiary); }
+.tl-item .desc { font-size: 14px; margin-top: 2px; }
+.tl-item .phase {
+  display: inline-block; font-size: 10px; font-weight: 600; font-family: var(--font-mono);
+  text-transform: uppercase; letter-spacing: 1px; margin-left: 8px; padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* Log block */
+.log-block {
+  background: var(--color-slate-10); color: var(--color-slate-3);
+  border-radius: var(--border-radius-md); padding: 16px 20px;
+  font-family: var(--font-mono); font-size: 12px; line-height: 1.8;
+  overflow-x: auto; margin: 20px 0;
+}
+.log-block .log-warn { color: var(--color-amber-5); }
+.log-block .log-err { color: var(--color-coral-5); }
+.log-block .log-info { color: var(--color-sky-4); }
+.log-block .log-ts { color: var(--color-slate-6); }
+
+/* Root cause card */
+.root-cause {
+  border-left: 4px solid var(--color-coral-6); border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+  background: var(--color-coral-1); padding: 18px 20px; margin: 20px 0;
+}
+.root-cause h3 { font-size: 14px; margin-bottom: 8px; color: var(--color-coral-10); }
+.diff {
+  background: var(--color-slate-10); color: var(--color-slate-3);
+  border-radius: 6px; padding: 12px 16px; font-family: var(--font-mono);
+  font-size: 12px; line-height: 1.7; margin-top: 10px;
+}
+.diff .del { color: var(--color-coral-5); }
+.diff .add { color: var(--color-mint-4); }
+
+/* Action items */
+.actions { margin-top: 24px; }
+.action-item {
+  display: flex; align-items: flex-start; gap: 10px; padding: 10px 0;
+  border-bottom: 1px solid var(--color-border-tertiary);
+}
+.action-item:last-child { border-bottom: none; }
+.checkbox {
+  width: 18px; height: 18px; border-radius: 4px;
+  border: 2px solid var(--color-border-secondary); flex-shrink: 0;
+  margin-top: 2px; cursor: pointer; display: flex; align-items: center;
+  justify-content: center; transition: all .15s;
+}
+.checkbox.checked { background: var(--color-mint-6); border-color: var(--color-mint-6); }
+.checkbox.checked::after { content: '✓'; color: #fff; font-size: 12px; font-weight: 700; }
+.action-text { flex: 1; font-size: 13px; }
+.action-text.done { text-decoration: line-through; color: var(--color-text-tertiary); }
+.owner-pill {
+  display: inline-block; padding: 2px 8px; border-radius: 12px;
+  background: var(--color-indigo-1); color: var(--color-indigo-9);
+  font-size: 11px; font-family: var(--font-mono); font-weight: 600;
+}
+.priority-badge {
+  display: inline-block; padding: 2px 8px; border-radius: 12px;
+  font-size: 10px; font-weight: 700; font-family: var(--font-mono); text-transform: uppercase;
+}
+.p-high { background: var(--color-coral-1); color: var(--color-coral-9); }
+.p-med { background: var(--color-amber-1); color: var(--color-amber-10); }
+.p-low { background: var(--color-sky-1); color: var(--color-sky-9); }
+</style>
+</head>
+<body>
+<div class="panel">
+  <header>
+    <div class="eyebrow">Post-Mortem Report</div>
+    <div class="title-row">
+      <h1>Elevated 502s on Sync API</h1>
+      <span class="sev-badge">SEV-2</span>
+    </div>
+    <div class="metrics-row">
+      <div class="metric"><div class="label">Duration</div><div class="val">47 minutes</div></div>
+      <div class="metric"><div class="label">Impact</div><div class="val">~12% of sync requests failed</div></div>
+      <div class="metric"><div class="label">Incident Owner</div><div class="val">@chen.wei</div></div>
+      <div class="metric"><div class="label">Date</div><div class="val">2025-03-12</div></div>
+    </div>
+  </header>
+
+  <div class="content">
+    <!-- Timeline -->
+    <div class="eyebrow" style="color:var(--color-sky-8);margin-bottom:8px;">Incident Timeline</div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--color-amber-5);"></div>
+        <div class="time">14:03 UTC</div>
+        <div class="desc">PagerDuty alert fires: 502 rate > 5% on <code>sync-api</code> cluster.
+          <span class="phase" style="background:var(--color-amber-1);color:var(--color-amber-10);">Detect</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--color-coral-6);"></div>
+        <div class="time">14:07 UTC</div>
+        <div class="desc">Error rate climbs to 12%. Customer-facing impact confirmed.
+          <span class="phase" style="background:var(--color-coral-1);color:var(--color-coral-9);">Impact</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--color-sky-6);"></div>
+        <div class="time">14:12 UTC</div>
+        <div class="desc">On-call identifies connection pool exhaustion on upstream <code>doc-store</code>.
+          <span class="phase" style="background:var(--color-sky-1);color:var(--color-sky-9);">Investigate</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--color-sky-6);"></div>
+        <div class="time">14:24 UTC</div>
+        <div class="desc">Root cause traced to deploy at 13:58 that removed connection timeout.
+          <span class="phase" style="background:var(--color-sky-1);color:var(--color-sky-9);">Investigate</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--color-mint-6);"></div>
+        <div class="time">14:35 UTC</div>
+        <div class="desc">Rollback deployed. Connection pool drains. 502 rate returns to baseline.
+          <span class="phase" style="background:var(--color-mint-1);color:var(--color-mint-9);">Resolve</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-dot" style="background:var(--color-mint-6);"></div>
+        <div class="time">14:50 UTC</div>
+        <div class="desc">All-clear. Monitoring confirmed stable for 15 min. Incident closed.
+          <span class="phase" style="background:var(--color-mint-1);color:var(--color-mint-9);">Resolve</span></div>
+      </div>
+    </div>
+
+    <!-- Log Excerpt -->
+    <div class="eyebrow" style="color:var(--color-slate-7);margin-bottom:8px;">Log Excerpt — sync-api pod-3a7f</div>
+    <div class="log-block">
+<span class="log-ts">14:03:12.441Z</span> <span class="log-warn">WARN</span>  pool: active=248/250 queue=37 wait_ms=4200<br>
+<span class="log-ts">14:04:01.092Z</span> <span class="log-err">ERROR</span> upstream connect timeout: doc-store:5432 after 5000ms<br>
+<span class="log-ts">14:04:01.093Z</span> <span class="log-err">ERROR</span> handler returned 502: sync.PatchDocument<br>
+<span class="log-ts">14:05:22.718Z</span> <span class="log-warn">WARN</span>  pool: active=250/250 queue=104 wait_ms=8900<br>
+<span class="log-ts">14:06:11.330Z</span> <span class="log-err">ERROR</span> circuit breaker OPEN for doc-store (failures=52/60)<br>
+<span class="log-ts">14:07:00.005Z</span> <span class="log-info">INFO</span>  health-check: status=degraded reason=upstream_cb_open
+    </div>
+
+    <!-- Root Cause -->
+    <div class="root-cause">
+      <h3>Root Cause</h3>
+      <p style="font-size:13px;">Deploy <code>sync-api@v2.14.1</code> at 13:58 removed the <code>idle_timeout</code> parameter from the connection pool config, causing connections to leak under sustained load.</p>
+      <div class="diff">
+<span class="del">- idle_timeout: 30s</span><br>
+<span class="del">- max_lifetime: 300s</span><br>
+<span class="add">+ # timeout handled by upstream</span><br>
+<span class="add">+ max_lifetime: 300s</span>
+      </div>
+    </div>
+
+    <!-- Action Items -->
+    <div class="actions">
+      <div class="eyebrow" style="color:var(--color-violet-9);margin-bottom:12px;">Action Items</div>
+      <div class="action-item">
+        <div class="checkbox checked" onclick="toggle(this)"></div>
+        <div class="action-text done">Revert PR #4821 and redeploy</div>
+        <span class="owner-pill">@chen.wei</span>
+        <span class="priority-badge p-high">P0</span>
+      </div>
+      <div class="action-item">
+        <div class="checkbox" onclick="toggle(this)"></div>
+        <div class="action-text">Add connection pool metric to default dashboard</div>
+        <span class="owner-pill">@zhao.lin</span>
+        <span class="priority-badge p-high">P0</span>
+      </div>
+      <div class="action-item">
+        <div class="checkbox" onclick="toggle(this)"></div>
+        <div class="action-text">Add integration test for pool exhaustion scenario</div>
+        <span class="owner-pill">@liu.fang</span>
+        <span class="priority-badge p-med">P1</span>
+      </div>
+      <div class="action-item">
+        <div class="checkbox" onclick="toggle(this)"></div>
+        <div class="action-text">Create deploy gate: config diff review for infra params</div>
+        <span class="owner-pill">@wang.jun</span>
+        <span class="priority-badge p-med">P1</span>
+      </div>
+      <div class="action-item">
+        <div class="checkbox" onclick="toggle(this)"></div>
+        <div class="action-text">Document connection pool tuning best practices</div>
+        <span class="owner-pill">@chen.wei</span>
+        <span class="priority-badge p-low">P2</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggle(el) {
+  el.classList.toggle('checked');
+  const text = el.nextElementSibling;
+  text.classList.toggle('done');
+}
+</script>
+</body>
+</html>

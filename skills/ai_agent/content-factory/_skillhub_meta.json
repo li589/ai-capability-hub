@@ -1,0 +1,20 @@
+{
+  "name": "内容工厂",
+  "installedAt": 1785864378932,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081490234478592",
+  "examples_zh": [
+    "把这篇文章拆解成微博、微信、邮件等多种格式",
+    "把这个产品发布稿改写成5种不同的内容形式",
+    "用内容工厂批量生产这个主题的内容"
+  ],
+  "examples_en": [
+    "Repurpose this article into multiple formats",
+    "Rewrite this press release into 5 different content forms",
+    "Mass-produce content on this topic"
+  ],
+  "description_zh": "多智能体内容生产系统，一份素材生成多种格式",
+  "description_en": "Multi-agent content production system, one source to many formats",
+  "iconSource": "letter:auto"
+}

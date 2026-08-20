@@ -1,0 +1,11 @@
+{
+  "name": "WGS 拷贝数变异检测",
+  "installedAt": 1787228548695,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2089263851212046336",
+  "description_zh": "DCS Cloud WDL「CNVpytor_WGS_CNV」(v1.0.0) 流程说明与填参指南：基于 BAM 做 WGS 拷贝数变异(CNV)检测。用户提到 CNVpytor、CNVpytor_WGS_CNV、WGS CNV、拷贝数变异检测，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"CNVpytor_WGS_CNV\" (v1.0.0) parameter guide: detect copy-number variation (CNV) from WGS BAM. Use when the user mentions CNVpytor, CNVpytor_WGS_CNV, WGS CNV, copy-number variation, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_d6315dec-dba.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_d6315dec-dba.png"
+}

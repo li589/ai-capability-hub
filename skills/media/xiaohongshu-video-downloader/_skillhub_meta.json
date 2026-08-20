@@ -1,0 +1,11 @@
+{
+  "name": "小红书视频下载",
+  "installedAt": 1787228306151,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087462783476531200",
+  "description_zh": "粘贴小红书视频链接，一键解析返回无水印视频下载链接",
+  "description_en": "Paste a Xiaohongshu video link to get a watermark-free download URL.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_013fe909-0d6.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_013fe909-0d6.svg"
+}

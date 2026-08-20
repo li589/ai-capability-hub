@@ -1,0 +1,10 @@
+{
+  "slug": "skill-vetter-user7e25a48a",
+  "name": "Skill Vetter",
+  "version": "1.0.0",
+  "installedAt": 1787229082158,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

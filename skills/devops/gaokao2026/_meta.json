@@ -1,0 +1,11 @@
+{
+  "owner": "jackgl-hk",
+  "slug": "gaokao2026",
+  "displayName": "高考志愿",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1776178560034,
+    "commit": "https://github.com/openclaw/skills/commit/bca4bcea933cb11dc9ec2213a7507debeb96c7db"
+  },
+  "history": []
+}

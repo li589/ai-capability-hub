@@ -1,0 +1,11 @@
+{
+  "name": "Moka 招聘需求",
+  "installedAt": 1787228588598,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088133582681640960",
+  "description_zh": "面向招聘负责人与人事伙伴的招聘需求查询。一边是招聘系统的招聘需求：清单、各状态数量、名额进度（HC 需求人数/已招/剩余）与单个需求详情；另一边是人事系统内的招聘需求业务单据：列表、详情与同步结果。两者是完全独立的两套业务数据。当用户问「我有哪些进行中的招聘需求」「需求都在什么状态、各有多少个」「这个需求还剩多少 HC」「人事里的招聘需求单据有哪些」时使用。",
+  "description_en": "Headcount lookup for recruiting owners and HR partners. On one side, headcounts in the recruiting system - the list, per-status counts, progress (needed/hired/remaining) and single-headcount details; on the other, headcount business forms inside the HR system - list, details and sync results. The two are completely independent datasets. Use it for questions like \"which of my headcounts are in progress\", \"how many headcounts are in each status\", or \"what headcount forms exist in the HR system\".",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_011e6cb1-85c.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_011e6cb1-85c.png"
+}

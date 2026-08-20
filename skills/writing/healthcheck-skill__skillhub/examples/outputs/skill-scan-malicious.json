@@ -1,0 +1,68 @@
+{
+  "timestamp": "2026-03-29T10:30:00Z",
+  "total_scanned": 15,
+  "malicious_count": 1,
+  "suspicious_count": 2,
+  "clean_count": 12,
+  "results": [
+    {
+      "skill": "youtube-summarize-pro",
+      "status": "malicious",
+      "risk": "植入Atomic Stealer木马",
+      "campaign": "ClawHavoc",
+      "threat_level": "critical",
+      "action": "immediate_removal",
+      "details": "Known malicious skill that steals browser data and cryptocurrency wallets"
+    },
+    {
+      "skill": "custom-tool-1",
+      "status": "suspicious",
+      "patterns": "External download link detected",
+      "risk_level": "medium",
+      "action": "manual_review",
+      "details": "Skill downloads executable from external URL"
+    },
+    {
+      "skill": "custom-tool-2",
+      "status": "suspicious",
+      "patterns": "High privilege requests",
+      "risk_level": "medium",
+      "action": "manual_review",
+      "details": "Requests excessive permissions including exec without restrictions"
+    },
+    {"skill": "weather", "status": "clean"},
+    {"skill": "backup", "status": "clean"},
+    {"skill": "web-search", "status": "clean"},
+    {"skill": "pdf-reader", "status": "clean"},
+    {"skill": "image-analysis", "status": "clean"},
+    {"skill": "healthcheck", "status": "clean"},
+    {"skill": "cron-manager", "status": "clean"},
+    {"skill": "log-analyzer", "status": "clean"},
+    {"skill": "system-monitor", "status": "clean"},
+    {"skill": "file-manager", "status": "clean"}
+  ],
+  "summary": {
+    "risk_level": "high",
+    "immediate_action_required": true,
+    "compromise_possible": true,
+    "affected_credentials": ["browser passwords", "cryptocurrency wallets"]
+  },
+  "recommended_actions": [
+    "🚨 IMMEDIATE: Remove malicious skill: openclaw skills remove youtube-summarize-pro",
+    "1. Stop OpenClaw service",
+    "2. Delete skill directory: rm -rf ~/.openclaw/skills/youtube-summarize-pro",
+    "3. Rotate all API keys",
+    "4. Check browser saved passwords",
+    "5. Check cryptocurrency wallet transactions",
+    "6. Run full system scan",
+    "7. Review custom-tool-1 and custom-tool-2 before keeping",
+    "8. Only install from official ClawHub"
+  ],
+  "prevention_tips": [
+    "Never install skills from untrusted sources",
+    "Review SKILL.md before installation",
+    "Avoid skills with 'crypto', 'wallet', 'download' in name",
+    "Be cautious of skills requiring 'curl | bash'",
+    "Enable automatic skill updates"
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-基金对比分析",
+  "installedAt": 1787227685804,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085539121578807296",
+  "description_zh": "万得 Alice 基金对比分析 CLI：对多只基金做业绩、风险、持仓、管理四维度对比分析，支持客观中立与主观倾向性分析，输出含核心结论、优势、风险、投资建议的结构化报告。",
+  "description_en": "Wind Alice Fund Compare CLI - comprehensive comparative analysis of multiple funds across performance, risk, portfolio structure, and management assessment, supporting both objective neutral and subjective preference modes, for fund selection, replacement evaluation, portfolio optimization, due diligence, and investment education.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_efe639cb-4b4.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_efe639cb-4b4.jpg"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "保险产品配置",
+  "installedAt": 1787227647362,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084118715515785216",
+  "description_zh": "根据已确认的需求诊断结果、客户预算和外部产品库资料，完成产品筛选、主附险组合搭建、条款对比、保费测算、合规校验和推荐理由说明。支持从外部产品库读取费率数据（默认路径可配置），按产品代码、年龄、性别、保额、缴费期精确算价，自动校验组合规则和主附险搭配约束。输出可调整的方案决策供代理人确认，再转入建议书生成。不替代正式核保、投保或出单。",
+  "description_en": "Configures insurance products based on confirmed needs diagnosis, client budget, and external product library data: product screening, main-rider portfolio building, term comparison, premium calculation, compliance validation, and recommendation rationale. Reads rate data from an external product library (default path configurable), calculates precise premiums by product code, age, gender, sum assured, and payment term, and auto-validates combination rules and main-rider pairing constraints. Outputs adjustable plan decisions for agent confirmation before proposal generation. Does not replace formal underwriting, application, or policy issuance.",
+  "iconSource": "letter:auto"
+}

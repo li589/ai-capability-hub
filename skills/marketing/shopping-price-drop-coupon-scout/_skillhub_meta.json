@@ -1,0 +1,20 @@
+{
+  "name": "价格优惠监控助手",
+  "installedAt": 1787228420693,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2060644459761856512",
+  "examples_zh": [
+    "帮我监控这个商品的价格变动",
+    "查找这个商品当前可用的优惠码",
+    "设置目标价提醒，降到 XX 元通知我"
+  ],
+  "examples_en": [
+    "Monitor the price of this product for me",
+    "Find currently available coupons for this item",
+    "Alert me when it drops to my target price"
+  ],
+  "description_zh": "为用户指定的商品提供只读的价格监控与优惠券汇总：设置目标价与提醒频率，输出价格监控清单、可用优惠券/促销码和降价提醒文案。全程不登录账号、不加购物车、不下单、不处理支付。",
+  "description_en": "Read-only price monitoring and coupon roundup for the products you specify: set a target price and alert cadence, get a watch list, available coupons/promo codes and ready-to-use price-drop alerts. Never logs in, adds to cart, checks out or handles payment.",
+  "iconSource": "letter:auto"
+}

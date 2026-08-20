@@ -1,0 +1,28 @@
+{
+    "venv_name": "mineru",
+    "python_version": "3.11",
+    "mem_need_gb": 4.0,
+    "server_alive_timeout": 600,
+    "models": [
+        {
+            "model_id": "Crystal2020/mineru-ov-models",
+            "dir_name": "mineru-ov-models",
+            "required_files": [
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_language_model.xml",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_language_model.bin",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_text_embeddings_model.xml",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_text_embeddings_model.bin",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_vision_embeddings_model.xml",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_vision_embeddings_model.bin",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_vision_embeddings_merger_model.xml",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_vision_embeddings_merger_model.bin",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_tokenizer.xml",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_tokenizer.bin",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_detokenizer.xml",
+                "MinerU2.5-Pro-2605-1.2B-int4/openvino_detokenizer.bin",
+                "MinerU2.5-Pro-2605-1.2B-int4/config.json",
+                "MinerU2.5-Pro-2605-1.2B-int4/tokenizer_config.json"
+            ]
+        }
+    ]
+}

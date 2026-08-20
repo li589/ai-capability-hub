@@ -1,0 +1,17 @@
+{
+  "owner": "meterlong",
+  "slug": "tripo-3d-generation",
+  "displayName": "Tripo 3d",
+  "latest": {
+    "version": "1.4.1",
+    "publishedAt": 1772422934314,
+    "commit": "https://github.com/openclaw/skills/commit/1d621bc0caf5239cd50f58d8499014c5208c9609"
+  },
+  "history": [
+    {
+      "version": "1.2.1",
+      "publishedAt": 1772341195938,
+      "commit": "https://github.com/openclaw/skills/commit/24aae4eaa95c8e3b57d075f91041fac2c286b013"
+    }
+  ]
+}

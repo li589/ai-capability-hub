@@ -1,0 +1,20 @@
+{
+  "name": "MBTI人格诊断",
+  "installedAt": 1787228479066,
+  "source": "marketplace",
+  "version": "0.1.1",
+  "skillId": "skill_2053078992749547520",
+  "examples_zh": [
+    "诊断一下当前Agent的MBTI人格类型",
+    "我希望Agent更主动，帮我调整配置",
+    "测试Agent的沟通风格偏向哪种类型"
+  ],
+  "examples_en": [
+    "Diagnose the current Agent's MBTI personality type",
+    "I want the Agent to be more proactive, adjust its config",
+    "Test which personality type the Agent's style fits"
+  ],
+  "description_zh": "基于 MBTI 框架的 AI Agent 人格诊断与配置系统",
+  "description_en": "AI Agent personality diagnosis and configuration based on MBTI framework",
+  "iconSource": "letter:auto"
+}

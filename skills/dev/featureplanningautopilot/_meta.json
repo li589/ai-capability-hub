@@ -1,0 +1,11 @@
+{
+  "owner": "naname-zz",
+  "slug": "featureplanningautopilot",
+  "displayName": "FeaturePlanningAutoPilot",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773387549379,
+    "commit": "https://github.com/openclaw/skills/commit/655f1a2693600455432f61edfdfbfb2b8ab448ec"
+  },
+  "history": []
+}

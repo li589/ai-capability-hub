@@ -1,0 +1,12 @@
+{
+  "slug": "lingyi-wx-video-script-creator-plus",
+  "name": "视频号挂车爆单短视频脚本生成【零一数科·出品】",
+  "version": "0.5.0",
+  "installedAt": 1787228744012,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png"
+}

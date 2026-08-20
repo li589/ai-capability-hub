@@ -1,0 +1,52 @@
+{
+  "active_env": "PROD",
+  "base_urls": {
+    "prod": "https://zx.app.gtja.com:8443/"
+  },
+  "gateway_paths": {
+    "market": "mcp/marketdata",
+    "mqtt": "mcp/mqtt",
+    "codeName": "mcp/codeName"
+  },
+  "gateways": {
+    "market": "https://zx.app.gtja.com:8443/mcp/marketdata",
+    "mqtt": "https://zx.app.gtja.com:8443/mcp/mqtt",
+    "codeName": "https://zx.app.gtja.com:8443/mcp/codeName"
+  },
+  "known_domains": [
+    "market",
+    "mqtt",
+    "codeName"
+  ],
+  "stock_map": {
+    "version_url": "https://apicdn2.app.gtht.com/operation/hq/01e5b3e5331eb97fca83bb9551496121.txt",
+    "gateway": "codeName",
+    "tool_name": "get_codeName"
+  },
+  "discovered_tools": [
+    {
+      "domain": "market",
+      "gateway": "market",
+      "toolName": "marketdata-tool",
+      "description": "自定义榜单功能，可以获得证券的行情",
+      "label": "行情",
+      "params": [
+        "code",
+        "market_data_mask",
+        "product_mask"
+      ],
+      "callExample": "node skill-entry.js call market marketdata-tool code= market_data_mask= product_mask="
+    },
+    {
+      "domain": "codeName",
+      "gateway": "codeName",
+      "toolName": "get_codeName",
+      "description": "查询证券码表",
+      "label": "行情",
+      "params": []
+    }
+  ],
+  "learned_at": "2026-03-20T10:51:20.965Z",
+  "last_updated": "2026-03-20T10:51:20.966Z",
+  "version": "1.2.0"
+}

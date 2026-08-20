@@ -1,0 +1,11 @@
+{
+  "owner": "0xhyperdan",
+  "slug": "stock-watchlist",
+  "displayName": "stock watch",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1772790014145,
+    "commit": "https://github.com/openclaw/skills/commit/64855e3beff5d09d348d35271ef1370c93706d9f"
+  },
+  "history": []
+}

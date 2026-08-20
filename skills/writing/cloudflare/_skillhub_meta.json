@@ -1,0 +1,11 @@
+{
+  "name": "Cloudflare",
+  "installedAt": 1787228405223,
+  "source": "marketplace",
+  "version": "1.0.4",
+  "skillId": "skill_2057443968384217088",
+  "description_zh": "Cloudflare 平台开发与部署指南，覆盖 Workers、Pages、存储、AI 与安全",
+  "description_en": "Build and deploy on Cloudflare Workers, Pages, storage, AI and security",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_e466af2c-c81.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_e466af2c-c81.svg"
+}

@@ -1,0 +1,41 @@
+{
+  "name": "analyze-procurement",
+  "version": "0.1.0",
+  "displayName": "采购分析",
+  "displayNameEn": "Supply Chain & Procurement Insights",
+  "description": "围绕采购、供应商、原材料价格、库存和供给数据，识别成本变化、供应风险和降本机会，支持采购与供应链决策。",
+  "descriptionEn": "Analyzes procurement, supplier, raw-material pricing, inventory, and supply data to identify cost changes, supplier risks, and cost-reduction opportunities.",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "logo": "./assets/icon.png",
+  "keywords": [
+    "采购分析",
+    "供应商管理",
+    "原材料价格",
+    "供应链风险",
+    "库存协同",
+    "降本增效"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "采购分析",
+    "shortDescription": "看清采购价格与供应风险，找到真正的降本机会。",
+    "longDescription": "围绕采购、供应商、原材料价格、库存和供给数据，识别成本变化、供应风险和降本机会，支持采购与供应链决策。",
+    "developerName": "Trae",
+    "category": "Data Analysis",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use analyze-procurement to complete this task."
+    ],
+    "brandColor": "#0A2A5E",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
+    "screenshots": []
+  }
+}

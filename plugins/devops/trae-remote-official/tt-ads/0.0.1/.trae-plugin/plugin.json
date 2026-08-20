@@ -1,0 +1,56 @@
+{
+  "name": "tt-ads",
+  "version": "0.0.1",
+  "description": "TikTok Ads MCP 插件，通过 TikTok for Business Agentic Hub 管理广告投放全流程。",
+  "i18n": {
+    "display_name": {
+      "en": "TikTok Ads",
+      "zh-cn": "TikTok 广告",
+      "ja": "TikTok 広告"
+    },
+    "description": {
+      "en": "TikTok Ads MCP plugin. Manage the full advertising workflow through TikTok for Business Agentic Hub.",
+      "zh-cn": "TikTok Ads MCP 插件，通过 TikTok for Business Agentic Hub 管理广告投放全流程。",
+      "ja": "TikTok Ads MCP プラグイン。TikTok for Business Agentic Hub を通じて広告運用の全フローを管理します。"
+    }
+  },
+  "author": {
+    "name": "TikTok for Business",
+    "url": "https://business.tiktok.com"
+  },
+  "homepage": "https://ads.tiktok.com",
+  "license": "Proprietary",
+  "keywords": [
+    "tiktok",
+    "ads",
+    "advertising",
+    "marketing",
+    "mcp",
+    "agentic-hub"
+  ],
+  "interface": {
+    "displayName": "TikTok 广告",
+    "shortDescription": "TikTok Ads Agentic Hub MCP",
+    "longDescription": "通过 TikTok for Business Agentic Hub MCP 连接 TikTok 广告账户，支持广告计划管理、创意制作与优化、受众定向、出价策略调整、投放数据监控、效果报表生成等全流程自动化操作。",
+    "developerName": "TikTok for Business",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://ads.tiktok.com",
+    "defaultPrompt": [
+      "查看我今天的 TikTok 广告投放数据",
+      "帮我优化正在投放的广告出价",
+      "创建一个新的 TikTok 广告计划",
+      "查看最近7天的广告效果报表"
+    ],
+    "brandColor": "#000000",
+    "logo": "./assets/app-icon.svg",
+    "composerIcon": "./assets/app-icon.svg",
+    "screenshots": []
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json"
+}

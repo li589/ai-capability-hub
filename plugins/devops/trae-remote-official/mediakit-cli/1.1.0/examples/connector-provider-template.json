@@ -1,0 +1,46 @@
+{
+  "type": "manual_token",
+  "auth_policy": "ON_INVOKE",
+  "interface": {
+    "title": "MediaKit API Key Authorization",
+    "description": "Connect to Volcengine MediaKit with an API key to run cloud capabilities.",
+    "fields": [
+      {
+        "key": "ACCESS_TOKEN",
+        "label": "API Key",
+        "type": "password",
+        "required": true,
+        "placeholder": "Paste your MediaKit API key",
+        "docUrl": "https://console.volcengine.com/imp/ai-mediakit/settings",
+        "docLabel": "How to get an API key?"
+      }
+    ]
+  },
+  "i18n": {
+    "title": {
+      "en": "MediaKit API Key Authorization",
+      "zh-cn": "MediaKit API Key 授权配置",
+      "ja": "MediaKit API キー認証設定"
+    },
+    "description": {
+      "en": "Connect to Volcengine MediaKit with an API key to run cloud capabilities.",
+      "zh-cn": "通过 API Key 连接火山引擎 MediaKit 云端能力。",
+      "ja": "API キーを使用して Volcengine MediaKit のクラウド機能に接続します。"
+    },
+    "fields.ACCESS_TOKEN.label": {
+      "en": "API Key",
+      "zh-cn": "API Key",
+      "ja": "API キー"
+    },
+    "fields.ACCESS_TOKEN.placeholder": {
+      "en": "Paste your MediaKit API key",
+      "zh-cn": "粘贴你的 MediaKit API Key",
+      "ja": "MediaKit API キーを貼り付けてください"
+    },
+    "fields.ACCESS_TOKEN.docLabel": {
+      "en": "How to get an API key?",
+      "zh-cn": "如何获取 API Key？",
+      "ja": "API キーの取得方法"
+    }
+  }
+}

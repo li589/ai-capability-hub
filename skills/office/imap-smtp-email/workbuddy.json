@@ -1,0 +1,6 @@
+{
+  "display_name": "IMAP/SMTP邮件",
+  "display_name_en": "Imap Smtp Email",
+  "description_zh": "通过 IMAP/SMTP 收发邮件，支持多账户和附件",
+  "description_en": "Read and send email via IMAP/SMTP with multi-account and attachment support"
+}

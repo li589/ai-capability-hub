@@ -1,0 +1,10 @@
+{
+  "name": "设备智能报修助手",
+  "installedAt": 1787228545059,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089990062552330240",
+  "description_zh": "工人说设备+故障，AI 匹配设备、语音选择故障原因后自动生成维修单；支持查询维修单、开始维修、结束维修并按维修项目提醒填写。",
+  "description_en": "Worker reports a faulty machine in voice; AI matches the equipment, picks the fault reason and creates a repair order. Supports query, start/finish repair and repair-item reminders.",
+  "iconSource": "letter:auto"
+}

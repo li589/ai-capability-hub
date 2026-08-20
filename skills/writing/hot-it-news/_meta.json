@@ -1,0 +1,17 @@
+{
+  "owner": "lushi516",
+  "slug": "hot-it-news",
+  "displayName": "hot-it-news",
+  "latest": {
+    "version": "1.1.2",
+    "publishedAt": 1776170268802,
+    "commit": "https://github.com/openclaw/skills/commit/1186ddcac644846730b449f880c027958d06f9e7"
+  },
+  "history": [
+    {
+      "version": "0.1.1",
+      "publishedAt": 1776063886068,
+      "commit": "https://github.com/openclaw/skills/commit/8b171688e8be0bd6537e657a383f294403c85ee1"
+    }
+  ]
+}

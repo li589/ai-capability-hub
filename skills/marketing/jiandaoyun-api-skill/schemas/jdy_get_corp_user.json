@@ -1,0 +1,22 @@
+{
+  "client_only_params": [],
+  "description": "根据 username 获取成员基础资料。此接口不能判断成员是否为普通成员、管理员或企业创建者，也不能证明其数据权限；禁止依据本结果推断权限身份。",
+  "display_name": "获取成员信息",
+  "domain": "通讯录",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/corp/user/get",
+  "method": "POST",
+  "name": "jdy_get_corp_user",
+  "params": {
+    "username": {
+      "description": "成员编号（username）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "username"
+  ],
+  "result_notice": "本结果仅包含成员基础资料，不能据此判断普通成员、管理员、企业创建者、应用管理权限或数据权限。",
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

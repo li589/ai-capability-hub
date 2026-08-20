@@ -1,0 +1,21 @@
+{
+  "name": "瑞幸咖啡下单助手",
+  "installedAt": 1787228411969,
+  "source": "marketplace",
+  "version": "0.8.4",
+  "skillId": "skill_2065077964911206400",
+  "examples_zh": [
+    "帮我查附近的瑞幸门店",
+    "我想在瑞幸点一杯生椰拿铁",
+    "帮我查询瑞幸订单状态"
+  ],
+  "examples_en": [
+    "Find nearby Luckin Coffee stores",
+    "Order a Coconut Latte for pickup",
+    "Check my Luckin Coffee order status"
+  ],
+  "description_zh": "帮助用户查询瑞幸咖啡门店和商品、预览订单优惠、生成到店自取支付二维码，并支持查询或取消订单。",
+  "description_en": "Helps users find Luckin Coffee stores and products, preview order discounts, create pickup payment QR codes, and query or cancel orders.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2065077964911206400/0050ac2db5c1a9de.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2065077964911206400/0050ac2db5c1a9de.png"
+}

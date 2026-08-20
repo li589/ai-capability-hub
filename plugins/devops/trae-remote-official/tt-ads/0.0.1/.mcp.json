@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "tt-ads": {
+      "type": "streamableHttp",
+      "url": "https://business-api.tiktok.com/open_mcp/tt-ads-mcp-layer",
+      "headers": {
+        "Authorization": "Bearer ${connector.tt-ads.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

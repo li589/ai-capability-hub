@@ -1,0 +1,22 @@
+{
+  "owner": "jaredforreal",
+  "slug": "glm-image-gen",
+  "displayName": "GLM-Image-Gen",
+  "latest": {
+    "version": "1.0.4",
+    "publishedAt": 1776255788302,
+    "commit": "https://github.com/openclaw/skills/commit/05f46137df01d67457c44acd38bb8c35ea69a80c"
+  },
+  "history": [
+    {
+      "version": "1.0.3",
+      "publishedAt": 1774434678286,
+      "commit": "https://github.com/openclaw/skills/commit/525dbb41a6ea3cff3201d544b61d333f173680e2"
+    },
+    {
+      "version": "1.0.1",
+      "publishedAt": 1773922165570,
+      "commit": "https://github.com/openclaw/skills/commit/72afb2a5749456452313e0c564b6942688eae9aa"
+    }
+  ]
+}

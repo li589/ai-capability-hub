@@ -1,0 +1,13 @@
+{
+  "slug": "ixhlink-skills-ecom-scene-main",
+  "name": "电商场景主图",
+  "version": "1.0.0",
+  "installedAt": 1787228896948,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/27205dc2-3c4b-4854-85b1-8902f05745a3.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/27205dc2-3c4b-4854-85b1-8902f05745a3.png"
+}

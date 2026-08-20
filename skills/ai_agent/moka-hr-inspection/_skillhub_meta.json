@@ -1,0 +1,11 @@
+{
+  "name": "Moka 人事巡检",
+  "installedAt": 1787227790408,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088130558605869056",
+  "description_zh": "面向人事负责人等人事管理角色的例行巡检（普通员工账号无相应权限）。使用当前平台提供的 Moka 连接器，按场景展开一组只读查询、按口径判定异常并聚合成跟进名单，覆盖入职准备、合同续签、试用期管理、离职管理、异动管理、考勤异常与本人待办等场景。当用户说巡检、排查风险、查一查需要跟进的入职/合同/试用期/离职/异动/考勤事项时使用。",
+  "description_en": "Routine inspections for HR owners and HR admin roles (regular employee accounts lack the required permissions). Uses the Moka Connector available on the current platform to run a set of read-only queries per scenario, flag anomalies against defined criteria, and aggregate them into a follow-up list, covering onboarding preparation, contract renewal, probation, offboarding, job changes, attendance anomalies, and the user's own approvals. Use it when the user asks to inspect, check risks, or find HR items that need follow-up.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_328ee505-634.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_328ee505-634.png"
+}

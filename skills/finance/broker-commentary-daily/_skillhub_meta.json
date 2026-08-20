@@ -1,0 +1,11 @@
+{
+  "name": "进门-券商点评助手",
+  "installedAt": 1787228655702,
+  "source": "marketplace",
+  "version": "2.2.2",
+  "skillId": "skill_2087918276524851200",
+  "description_zh": "依赖进门 MCP 获取卖方点评数据，生成券商段子/点评日报，或按点评做多轮问答。支持全面版、大板块、行业、公司与闲聊模式。在用户提到券商点评、券商段子、卖方日报、晨会总结、科技/周期等板块梳理、按行业或公司总结点评、点评问答时使用。",
+  "description_en": "Requires the Comein MCP to retrieve sell-side commentary, then generates broker commentary digests or daily commentary reports and supports multi-turn question answering based on the commentary. It provides full-market, major-sector, industry, company, and chat modes. Use it for requests involving broker commentary, broker digests, sell-side daily reports, morning-meeting summaries, technology or cyclical sector reviews, industry or company commentary summaries, and commentary-based question answering.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_10f35004-2f7.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_10f35004-2f7.png"
+}

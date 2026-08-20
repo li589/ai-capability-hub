@@ -1,0 +1,12 @@
+{
+  "slug": "workbuddy-guide",
+  "name": "WorkBuddy使用指南",
+  "version": "2.3.0",
+  "installedAt": 1787228754394,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/520766/d6c4753fbe2348ecbaf9c72b01d97c21.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/520766/d6c4753fbe2348ecbaf9c72b01d97c21.png"
+}

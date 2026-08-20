@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:chrome-devtools",
+  "registry": "trae-remote-official",
+  "plugin_name": "chrome-devtools",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "468680f9-b06e-42bb-aa9b-f121bdb269b7",
+  "remote_installed_plugin_id": "VD1V-ZVYCMHD4I",
+  "checksum": "54d5fa112464bf21c6cf39213f5016f75101ca659bade00180b6d52e47e58a94",
+  "file_size": 6790,
+  "installed_at": 1787227204556
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "billchen1020",
+  "slug": "verilog-design",
+  "displayName": "Verilog Design Flow",
+  "latest": {
+    "version": "1.2.0",
+    "publishedAt": 1775311545997,
+    "commit": "https://github.com/openclaw/skills/commit/cd5c119f2ce3b5aba2896dfefebbc47863ff651a"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1774888172647,
+      "commit": "https://github.com/openclaw/skills/commit/e75dec04a10dd1ed748cf0bfa257d2d6bffa401d"
+    }
+  ]
+}

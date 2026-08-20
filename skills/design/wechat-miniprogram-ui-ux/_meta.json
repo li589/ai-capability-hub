@@ -1,0 +1,11 @@
+{
+  "owner": "go-goll",
+  "slug": "wechat-miniprogram-ui-ux",
+  "displayName": "Wechat Miniprogram Ui Ux",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1774440035066,
+    "commit": "https://github.com/openclaw/skills/commit/4aff21caf5c5c28733bbccc57140b4ff292ae653"
+  },
+  "history": []
+}

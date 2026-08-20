@@ -1,0 +1,17 @@
+{
+  "owner": "mguozhen",
+  "slug": "voc-amazon-reviews",
+  "displayName": "VOC AI — Amazon Review Intelligence",
+  "latest": {
+    "version": "1.0.4",
+    "publishedAt": 1773082966661,
+    "commit": "https://github.com/openclaw/skills/commit/a930493ac0e5f66982bbebd78224968e8e07fef4"
+  },
+  "history": [
+    {
+      "version": "1.0.3",
+      "publishedAt": 1772927020733,
+      "commit": "https://github.com/openclaw/skills/commit/0a0052606516609477c4a18a1ede79a1bc90e999"
+    }
+  ]
+}

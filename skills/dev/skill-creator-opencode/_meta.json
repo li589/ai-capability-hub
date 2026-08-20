@@ -1,0 +1,11 @@
+{
+  "owner": "pwu0125",
+  "slug": "skill-creator-opencode",
+  "displayName": "Skill Creator (Opencode)",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773682769985,
+    "commit": "https://github.com/openclaw/skills/commit/39b79d2edc08f7f3ee825650328e4cf5554f5452"
+  },
+  "history": []
+}

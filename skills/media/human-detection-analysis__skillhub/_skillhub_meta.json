@@ -1,0 +1,12 @@
+{
+  "slug": "human-detection-analysis",
+  "name": "Regional Humanoid Detection Skill | 区域人形检测技能",
+  "version": "1.0.5",
+  "installedAt": 1787229062158,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/cab3c5ed-3acd-4936-a59b-5f0c5f5dab1b.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/cab3c5ed-3acd-4936-a59b-5f0c5f5dab1b.png"
+}

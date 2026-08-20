@@ -1,0 +1,11 @@
+{
+  "owner": "capt-marbles",
+  "slug": "task-router-skill",
+  "displayName": "Task Router Skill",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771277304106,
+    "commit": "https://github.com/openclaw/skills/commit/07627acae197bd83395a5ebfeb3c41f48cd9b7ad"
+  },
+  "history": []
+}

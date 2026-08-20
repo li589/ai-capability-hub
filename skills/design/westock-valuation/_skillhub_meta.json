@@ -1,0 +1,11 @@
+{
+  "name": "腾讯自选股·估值分析",
+  "installedAt": 1787228657710,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089686402880253952",
+  "description_zh": "帮你判断一只股票现在是贵了还是便宜。它会对比当前股价与公司的历史估值水平、同行水平，并推算\"现在的股价其实已经假设了公司要涨多少\"，告诉你有没有低估或修复的机会。想知道\"这个价位能不能买\"时问它。",
+  "description_en": "It helps you determine whether a stock is currently expensive or cheap. It compares the current share price against the company's historical valuation and that of its peers, calculates the growth expectations already priced into the stock, and identifies potential opportunities for undervaluation or a valuation correction. Consult it when you want to know whether a stock is a good buy at its current price.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_49b8bb44-c08.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_49b8bb44-c08.png"
+}

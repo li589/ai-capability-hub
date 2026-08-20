@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Acid Registry report direction preview</title>
+  <desc id="desc">An original pure-white procurement registry with acid-chartreuse focal fields, black comparison blocks, compact modules, and bold numeric hierarchy.</desc>
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <g font-family="Arial Narrow,Arial,sans-serif" fill="#111111">
+    <text x="64" y="66" font-size="16" font-weight="700" letter-spacing="2">PROCUREMENT REGISTRY / 10</text>
+    <text x="1290" y="66" font-size="16">AS OF 2026-07-31</text>
+  </g>
+  <rect x="64" y="108" width="920" height="256" rx="16" fill="#F4F4F6"/>
+  <g font-family="Arial Narrow,Arial,sans-serif" fill="#111111">
+    <text x="98" y="164" font-size="18" font-weight="700" letter-spacing="2">AWARD SIGNAL</text>
+    <text x="98" y="244" font-size="64" font-weight="700">CAPABILITY</text>
+    <text x="98" y="312" font-size="64" font-weight="700">BEATS LOWEST BID</text>
+  </g>
+  <rect x="1008" y="108" width="528" height="256" rx="16" fill="#D6F52A"/>
+  <g font-family="Arial Narrow,Arial,sans-serif" fill="#111111">
+    <text x="1042" y="160" font-size="16" font-weight="700">RECOMMENDED</text>
+    <text x="1042" y="250" font-size="82" font-weight="700">02</text>
+    <text x="1042" y="318" font-size="28" font-weight="700">CONDITIONAL AWARD</text>
+  </g>
+  <g transform="translate(64 404)" font-family="Arial Narrow,Arial,sans-serif">
+    <rect width="392" height="220" rx="14" fill="#111111"/>
+    <text x="28" y="48" font-size="16" font-weight="700" fill="#D6F52A">COST POSITION</text>
+    <text x="28" y="128" font-size="68" font-weight="700" fill="#F4F4F6">−8.7%</text>
+    <text x="28" y="182" font-size="18" fill="#F4F4F6">versus normalized baseline</text>
+    <rect x="420" width="252" height="220" rx="14" fill="#F4F4F6"/>
+    <text x="448" y="48" font-size="16" font-weight="700" fill="#111111">CAPACITY</text>
+    <text x="448" y="128" font-size="62" font-weight="700" fill="#111111">92</text>
+    <text x="448" y="180" font-size="18" fill="#111111">weighted score</text>
+    <rect x="700" width="772" height="220" rx="14" fill="#F4F4F6"/>
+    <text x="728" y="48" font-size="16" font-weight="700" fill="#111111">DECISION FRONTIER</text>
+    <line x1="760" y1="178" x2="1400" y2="178" stroke="#111111" stroke-opacity=".28" stroke-width="2"/>
+    <circle cx="820" cy="144" r="12" fill="#111111"/><circle cx="1010" cy="112" r="12" fill="#111111"/>
+    <circle cx="1210" cy="76" r="18" fill="#D6F52A" stroke="#111111" stroke-width="4"/>
+    <path d="M820 144L1010 112 1210 76" fill="none" stroke="#111111" stroke-width="5"/>
+  </g>
+  <g transform="translate(64 668)" font-family="Arial Narrow,Arial,sans-serif">
+    <rect width="1472" height="248" rx="16" fill="#F4F4F6"/>
+    <text x="28" y="48" font-size="16" font-weight="700" fill="#111111">GATE REGISTRY</text>
+    <g font-size="20" fill="#111111">
+      <text x="28" y="104">01 · SECURITY REVIEW</text><text x="910" y="104">VERIFIED</text>
+      <text x="28" y="154">02 · LOAD TEST</text><text x="910" y="154">PENDING</text>
+      <text x="28" y="204">03 · EXIT SUPPORT</text><text x="910" y="204">VERIFIED</text>
+    </g>
+    <rect x="1276" y="74" width="140" height="48" rx="8" fill="#D6F52A"/>
+    <rect x="1276" y="124" width="140" height="48" rx="8" fill="#111111"/>
+    <rect x="1276" y="174" width="140" height="48" rx="8" fill="#D6F52A"/>
+  </g>
+</svg>

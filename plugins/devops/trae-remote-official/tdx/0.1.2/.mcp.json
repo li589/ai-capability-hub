@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "tdx": {
+      "url": "https://txmcp.tdx.com.cn:3001/traemcp",
+      "headers": {
+        "Authorization": "Bearer ${connector.tdx.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

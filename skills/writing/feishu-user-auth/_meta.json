@@ -1,0 +1,11 @@
+{
+  "owner": "abigale-cyber",
+  "slug": "feishu-user-auth",
+  "displayName": "Feishu User Auth",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775571726925,
+    "commit": "https://github.com/openclaw/skills/commit/52169e5028365a217a417ff72f21e81468d3908f"
+  },
+  "history": []
+}

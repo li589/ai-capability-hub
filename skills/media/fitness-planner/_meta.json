@@ -1,0 +1,11 @@
+{
+  "owner": "devioslang",
+  "slug": "fitness-planner",
+  "displayName": "Fitness Planner",
+  "latest": {
+    "version": "1.4.1",
+    "publishedAt": 1774246859244,
+    "commit": "https://github.com/openclaw/skills/commit/0f00c79a27b745e4543e264e006c55a5f83ac77f"
+  },
+  "history": []
+}

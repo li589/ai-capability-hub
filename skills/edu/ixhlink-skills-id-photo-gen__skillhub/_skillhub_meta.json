@@ -1,0 +1,13 @@
+{
+  "slug": "ixhlink-skills-id-photo-gen",
+  "name": "证件照生成器",
+  "version": "1.0.0",
+  "installedAt": 1787228898240,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png"
+}

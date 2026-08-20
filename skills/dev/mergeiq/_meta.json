@@ -1,0 +1,11 @@
+{
+  "owner": "larryfang",
+  "slug": "mergeiq",
+  "displayName": "MergeIQ: Automatically Score & Prioritise PR Complexity for GitLab and GitHub",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773035899806,
+    "commit": "https://github.com/openclaw/skills/commit/c8c11c8152d80ebb21e347c2afa143527b187943"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:personal-workbench",
+  "registry": "trae-remote-official",
+  "plugin_name": "personal-workbench",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "1eb6e97f-f903-44cb-87f3-cfbe9313fd7b",
+  "remote_installed_plugin_id": "54JQP-8O6ISV-G",
+  "checksum": "a56e78f6dd13a614344c8a98c7cf739b7346a30468a2ebe5180a8da24080515d",
+  "file_size": 1097205,
+  "installed_at": 1787227202634
+}

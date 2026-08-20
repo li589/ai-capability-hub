@@ -1,0 +1,12 @@
+{
+  "slug": "taitoubiao-proposal-smart-assistant",
+  "name": "钛投标标书智能助手",
+  "version": "1.0.1",
+  "installedAt": 1787228755353,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png"
+}

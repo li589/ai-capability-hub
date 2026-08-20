@@ -1,0 +1,155 @@
+{
+  "goods_recommend": {
+    "name": "商品推荐",
+    "emoji": "🔥",
+    "description": "推荐单个商品，带图片和链接",
+    "format": "link",
+    "title_template": "🔥 {商品名}",
+    "text_template": "💰 价格: {价格}\n⭐ 亮点: {亮点}\n\n{描述}",
+    "example": {
+      "商品名": "伯希和徒步鞋",
+      "价格": "¥560",
+      "亮点": "Vibram防滑大底",
+      "描述": "户外徒步必备",
+      "图片URL": "https://...",
+      "商品链接": "https://item.taobao.com/..."
+    }
+  },
+  "price_alert": {
+    "name": "降价提醒",
+    "emoji": "📉",
+    "description": "商品降价通知",
+    "format": "link",
+    "title_template": "📉 降价提醒: {商品名}",
+    "text_template": "📉 原价: ~~{原价}~~\n💰 现价: **{现价}**\n📉 降幅: {降幅}\n\n⏰ 限时优惠，速抢！",
+    "example": {
+      "商品名": "iPhone 15",
+      "原价": "6999",
+      "现价": "5999",
+      "降幅": "1000元",
+      "图片URL": "https://...",
+      "商品链接": "https://..."
+    }
+  },
+  "goods_list": {
+    "name": "商品列表",
+    "emoji": "📋",
+    "description": "多个商品推荐列表",
+    "format": "feedCard",
+    "example": {
+      "商品": [
+        {"名称": "商品1", "图片": "https://...", "链接": "https://...", "价格": "99"},
+        {"名称": "商品2", "图片": "https://...", "链接": "https://...", "价格": "199"}
+      ]
+    }
+  },
+  "task_report": {
+    "name": "任务报告",
+    "emoji": "📋",
+    "description": "任务完成情况报告",
+    "format": "markdown",
+    "title_template": "📋 任务完成报告",
+    "text_template": "### 📋 任务完成报告\n\n**时间**: {时间}\n\n---\n\n| 任务 | 状态 | 备注 |\n|------|------|------|\n{任务表格}\n\n---\n\n**总计**: 完成 {完成数}/{总数} 个任务\n\n> 💡 {总结}",
+    "example": {
+      "时间": "2026-03-18",
+      "任务表格": "| 安装技能 | ✅ 完成 | 4个 |",
+      "完成数": "1",
+      "总数": "1",
+      "总结": "所有任务顺利完成"
+    }
+  },
+  "order_status": {
+    "name": "订单状态",
+    "emoji": "📦",
+    "description": "订单状态更新通知",
+    "format": "markdown",
+    "title_template": "📦 订单状态更新",
+    "text_template": "### 📦 订单状态更新\n\n**订单号**: {订单号}\n**商品**: {商品名}\n**状态**: {状态}\n\n---\n\n📦 物流信息:\n{物流信息}\n\n---\n\n> ⏰ 更新时间: {时间}",
+    "example": {
+      "订单号": "TB123456",
+      "商品名": "iPhone 15",
+      "状态": "已发货",
+      "物流信息": "顺丰快递 SF123456",
+      "时间": "2026-03-18 16:00"
+    }
+  },
+  "daily_summary": {
+    "name": "每日总结",
+    "emoji": "📊",
+    "description": "每日工作总结",
+    "format": "markdown",
+    "title_template": "📊 每日总结 - {日期}",
+    "text_template": "### 📊 每日总结\n\n**日期**: {日期}\n\n---\n\n#### ✅ 已完成\n\n{已完成}\n\n#### ⏳ 进行中\n\n{进行中}\n\n#### 📌 待办\n\n{待办}\n\n---\n\n**统计**: 完成 {完成数} 项，进行中 {进行中数} 项",
+    "example": {
+      "日期": "2026-03-18",
+      "已完成": "- 任务A\n- 任务B",
+      "进行中": "- 任务C",
+      "待办": "- 任务D",
+      "完成数": "2",
+      "进行中数": "1"
+    }
+  },
+  "meeting_notice": {
+    "name": "会议通知",
+    "emoji": "📅",
+    "description": "会议提醒通知",
+    "format": "actionCard_single",
+    "title_template": "📅 会议提醒",
+    "text_template": "### 📅 会议提醒\n\n**主题**: {主题}\n**时间**: {时间}\n**地点**: {地点}\n\n**参会人**: {参会人}",
+    "button_title": "查看详情",
+    "example": {
+      "主题": "项目评审会",
+      "时间": "2026-03-18 14:00",
+      "地点": "会议室A",
+      "参会人": "张三、李四、王五",
+      "链接": "https://meeting.dingtalk.com/..."
+    }
+  },
+  "confirm_action": {
+    "name": "操作确认",
+    "emoji": "❓",
+    "description": "需要用户确认的操作",
+    "format": "actionCard_multi",
+    "title_template": "❓ {标题}",
+    "text_template": "### 操作确认\n\n{描述}",
+    "example": {
+      "标题": "确认下单?",
+      "描述": "**商品**: iPhone 15\n**价格**: ¥5999",
+      "按钮1标题": "确认下单",
+      "按钮1URL": "https://...",
+      "按钮2标题": "取消",
+      "按钮2URL": "https://...",
+      "按钮排列": "1"
+    }
+  },
+  "alert_notify": {
+    "name": "告警通知",
+    "emoji": "⚠️",
+    "description": "系统告警通知（可@相关人员）",
+    "format": "markdown",
+    "title_template": "⚠️ {标题}",
+    "text_template": "### ⚠️ 告警通知\n\n**类型**: {类型}\n**级别**: {级别}\n\n---\n\n**详情**:\n{内容}\n\n---\n\n> ⏰ 时间: {时间}\n\n@{手机号}",
+    "example": {
+      "标题": "服务器告警",
+      "类型": "CPU告警",
+      "级别": "严重",
+      "内容": "CPU使用率超过90%",
+      "时间": "2026-03-18 16:00",
+      "手机号": "138xxxx"
+    }
+  },
+  "shopping_cart": {
+    "name": "购物车提醒",
+    "emoji": "🛒",
+    "description": "购物车商品汇总",
+    "format": "markdown",
+    "title_template": "🛒 购物车提醒",
+    "text_template": "### 🛒 购物车提醒\n\n您购物车中有 **{商品数}** 件商品，总计 **¥{总金额}**\n\n---\n\n| 商品 | 价格 | 数量 |\n|------|------|------|\n{商品表格}\n\n---\n\n> 💡 {优惠}",
+    "example": {
+      "商品数": "5",
+      "总金额": "1999",
+      "商品表格": "| iPhone | 5999 | 1 |\n| 手机壳 | 99 | 1 |",
+      "优惠": "满200减20优惠券即将过期"
+    }
+  }
+}

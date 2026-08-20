@@ -1,0 +1,11 @@
+{
+  "owner": "deathknightorg",
+  "slug": "req-to-testcase",
+  "displayName": "req-to-testcase",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775613080424,
+    "commit": "https://github.com/openclaw/skills/commit/2b8fe3faf25f7f1f3d2c55a2659d718666f35ffc"
+  },
+  "history": []
+}

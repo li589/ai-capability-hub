@@ -1,0 +1,222 @@
+{
+  "models": {
+    "deepseek-chat": {
+      "name": "DeepSeek Chat",
+      "provider": "deepseek",
+      "type": ["llm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.002,
+      "price_per_1k_output_token": 0.008
+    },
+    "deepseek-reasoner": {
+      "name": "DeepSeek Reasoner",
+      "provider": "deepseek",
+      "type": ["llm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.004,
+      "price_per_1k_output_token": 0.016
+    },
+    "gpt-4o": {
+      "name": "GPT-4o",
+      "provider": "openai",
+      "type": ["llm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.01813,
+      "price_per_1k_output_token": 0.0725
+    },
+    "gpt-4": {
+      "name": "GPT-4",
+      "provider": "openai",
+      "type": ["llm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.02175,
+      "price_per_1k_output_token": 0.087
+    },
+    "gpt-5": {
+      "name": "GPT-5",
+      "provider": "openai",
+      "type": ["llm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.01813,
+      "price_per_1k_output_token": 0.10875
+    },
+    "gpt-5.1": {
+      "name": "GPT-5.1",
+      "provider": "openai",
+      "type": ["llm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.01813,
+      "price_per_1k_output_token": 0.10875
+    },
+    "o3": {
+      "name": "OpenAI o3",
+      "provider": "openai",
+      "type": ["llm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.0145,
+      "price_per_1k_output_token": 0.058
+    },
+    "qwen3.5-plus": {
+      "name": "Qwen 3.5 Plus",
+      "provider": "qwen",
+      "type": ["llm", "vlm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.0008,
+      "price_per_1k_output_token": 0.002
+    },
+    "qwen3.5-max": {
+      "name": "Qwen 3.5 Max",
+      "provider": "qwen",
+      "type": ["llm", "vlm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.006,
+      "price_per_1k_output_token": 0.024
+    },
+    "qwen-vl-plus": {
+      "name": "Qwen VL Plus",
+      "provider": "qwen",
+      "type": ["vlm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.0008,
+      "price_per_1k_output_token": 0.002
+    },
+    "gemini-3-flash-preview": {
+      "name": "Gemini 3 Flash Preview",
+      "provider": "gemini",
+      "type": ["llm", "vlm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.00181,
+      "price_per_1k_output_token": 0.01088
+    },
+    "gemini-3-pro-preview": {
+      "name": "Gemini 3 Pro Preview",
+      "provider": "gemini",
+      "type": ["llm", "vlm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.0145,
+      "price_per_1k_output_token": 0.087
+    },
+    "gemini-2.5-flash-image": {
+      "name": "Gemini 2.5 Flash Image",
+      "provider": "gemini",
+      "type": ["vlm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.00218,
+      "price_per_1k_output_token": 0.01813
+    },
+    "gemini-2.5-pro-image": {
+      "name": "Gemini 2.5 Pro Image",
+      "provider": "gemini",
+      "type": ["vlm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.00906,
+      "price_per_1k_output_token": 0.0725
+    },
+    "gemini-3-pro-image-preview": {
+      "name": "Gemini 3 Pro Image Preview",
+      "provider": "gemini",
+      "type": ["vlm"],
+      "concurrency": 10,
+      "price_per_1k_input_token": 0.0145,
+      "price_per_1k_output_token": 0.087
+    },
+    "jimeng_t2i_v40": {
+      "name": "JiMeng T2I V4.0",
+      "provider": "jimeng",
+      "type": ["t2i", "i2i"],
+      "concurrency": 1,
+      "price_per_image": 0.22
+    },
+    "wan2.6-t2i": {
+      "name": "Wan 2.6 T2I",
+      "provider": "dashscope",
+      "type": ["t2i"],
+      "concurrency": 5,
+      "price_per_image": 0.2
+    },
+    "wan2.6-image": {
+      "name": "Wan 2.6 Image",
+      "provider": "dashscope",
+      "type": ["i2i"],
+      "concurrency": 5,
+      "price_per_second": 0.2
+    },
+    "doubao-seedream-5-0-260128": {
+      "name": "Seedream 5.0",
+      "provider": "seedream",
+      "type": ["t2i", "i2i"],
+      "concurrency": 10,
+      "price_per_image": 0.22
+    },
+    "doubao-seedream-4-5-251128": {
+      "name": "Seedream 4.5",
+      "provider": "seedream",
+      "type": ["t2i", "i2i"],
+      "concurrency": 10,
+      "price_per_image": 0.25
+    },
+    "doubao-seedream-4-0-250828": {
+      "name": "Seedream 4.0",
+      "provider": "seedream",
+      "type": ["t2i", "i2i"],
+      "concurrency": 10,
+      "price_per_image": 0.2
+    },
+    "sora_image": {
+      "name": "Sora Image",
+      "provider": "openai",
+      "type": ["t2i"],
+      "concurrency": 3,
+      "price_per_image": 1.45
+    },
+    "gpt-image-1.5": {
+      "name": "GPT Image 1.5",
+      "provider": "openai",
+      "type": ["t2i"],
+      "concurrency": 3,
+      "price_per_image": 1.09
+    },
+    "wan2.6-i2v-flash": {
+      "name": "Wan 2.6 I2V Flash",
+      "provider": "dashscope",
+      "type": ["video"],
+      "concurrency": 3,
+      "price_per_second": 0.6
+    },
+    "wan2.6-i2v": {
+      "name": "Wan 2.6 I2V",
+      "provider": "dashscope",
+      "type": ["video"],
+      "concurrency": 3,
+      "price_per_second": 0.6
+    },
+    "jimeng_ti2v_v30_pro": {
+      "name": "JiMeng Ti2V V30 Pro",
+      "provider": "jimeng",
+      "type": ["video"],
+      "concurrency": 3,
+      "price_per_second": 0.4
+    },
+    "kling-v3": {
+      "name": "Kling V3",
+      "provider": "kling",
+      "type": ["video"],
+      "concurrency": 3,
+      "price_per_second": 1.0
+    },
+    "kling-v2-6": {
+      "name": "Kling V2.6",
+      "provider": "kling",
+      "type": ["video"],
+      "concurrency": 3,
+      "price_per_second": 0.5
+    },
+    "kling-v2-5-turbo": {
+      "name": "Kling V2.5 Turbo",
+      "provider": "kling",
+      "type": ["video"],
+      "concurrency": 3,
+      "price_per_second": 0.3
+    }
+  }
+}

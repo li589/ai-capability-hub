@@ -1,0 +1,55 @@
+{
+  "name": "global-market-entry-navigator",
+  "version": "0.1.0",
+  "displayName": "出海导航 / Global Market Entry Navigator",
+  "displayNameEn": "Global Market Entry Navigator",
+  "displayNameJa": "海外市場参入ナビゲーター",
+  "description": "帮助企业评估不同国家和区域市场，从市场空间、客户需求、竞争格局、渠道、价格、政策和本地化要求出发，形成市场选择与分阶段进入建议。",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "global-market-entry-navigator",
+    "internal",
+    "skills"
+  ],
+  "targetAudience": [
+    "出海创业者",
+    "国际化业务负责人",
+    "战略规划团队",
+    "投资机构"
+  ],
+  "capabilities": [
+    "5 种输出路由（轻量/标准/完整/单国深评/再评估）自动匹配用户需求复杂度",
+    "7 维度加权评分 + CAGE 距离修正",
+    "Go/No-Go 判定 + Counter-Thesis 翻转条件",
+    "6 种进入模式决策树",
+    "Bottom-up 投入估算 + Unit Economics（break-even + sensitivity）",
+    "分阶段路线图 + 信号监控（Green/Amber/Red）",
+    "退出成本矩阵 + Stay/Pivot/Exit 再评估",
+    "能力缺口评估 + 类比案例",
+    "4 大行业自适应（SaaS/消费品/金融/医疗）+ 通用 fallback",
+    "地缘政治 5 项必答检查"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "global-market-entry-navigator",
+    "shortDescription": "帮助企业评估不同国家和区域市场，从市场空间、客户需求、竞争格局、渠道、价格、政策和本地化要求出发，形成市场选择与分阶段进入建议。",
+    "longDescription": "帮助企业评估不同国家和区域市场，从市场空间、客户需求、竞争格局、渠道、价格、政策和本地化要求出发，形成市场选择与分阶段进入建议。",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use global-market-entry-navigator to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

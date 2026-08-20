@@ -1,0 +1,11 @@
+{
+  "owner": "alan1112223331",
+  "slug": "multi-robot-skill",
+  "displayName": "Multi Robot Skill",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1774429472081,
+    "commit": "https://github.com/openclaw/skills/commit/723f4a074c175e9e3b698ea1dfde0d33c342c3ea"
+  },
+  "history": []
+}

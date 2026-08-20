@@ -1,0 +1,11 @@
+{
+  "name": "小鹅通线索打标",
+  "installedAt": 1787227786914,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089688231605186560",
+  "description_zh": "管理小鹅通CRM标签体系，包括企微标签、店铺标签的查询、创建和编辑，以及客户打标操作。帮助运营和客服更好地分类管理客户线索，提升精准营销能力。",
+  "description_en": "Manage Xiaoe CRM tag system including querying, creating, and editing WeCom and shop tags, as well as tagging customers. Helps operations and customer service better categorize and manage customer leads for precision marketing.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/70f8ec50-1fce-4990-8b38-75c3506712b8/avatar/skill/au_0d298015-6ba.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/70f8ec50-1fce-4990-8b38-75c3506712b8/avatar/skill/au_0d298015-6ba.png"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "meeting-and-brief",
+  "name": "会议纪要",
+  "version": "2.0.0",
+  "installedAt": 1787227493987,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/532747/909a6d9d56ff4bdcbe89ebc2c34c59c2.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/532747/909a6d9d56ff4bdcbe89ebc2c34c59c2.png"
+}

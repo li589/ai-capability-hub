@@ -1,0 +1,20 @@
+{
+  "name": "学习规划师",
+  "installedAt": 1787228506310,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443739048407040",
+  "examples_zh": [
+    "帮我制定30天雅思6.5备考计划",
+    "考研还有120天，帮我排每日任务",
+    "期末考试下周，帮我做个突击计划"
+  ],
+  "examples_en": [
+    "Create a 30-day IELTS 6.5 study plan",
+    "I have 120 days until the postgraduate exam, plan my daily tasks",
+    "Finals are next week, make a crash study plan"
+  ],
+  "description_zh": "输入目标+截止日+每日时长，输出分阶段学习计划和每日任务清单，支持打卡和进度追踪",
+  "description_en": "Input your goal, deadline & daily hours to get a phased study plan with daily tasks, check-ins & progress tracking",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,101 @@
+examples:
+  - id: facebook-ads
+    title:
+      zh: Facebook广告竞品分析
+      en: Facebook Ads Competitive Analysis
+    description:
+      zh: 提取和分析Facebook上的竞争对手广告策略
+      en: Extract and analyze competitor advertising strategies on Facebook
+    prompt:
+      zh: |-
+        我需要分析教育科技行业的Facebook广告竞品策略。
+
+        分析目标：
+        - 主要竞争对手：VIPKID、猿辅导、作业帮
+        - 广告类型：获客广告、品牌宣传、产品推广
+        - 分析维度：文案策略、视觉设计、目标受众、投放时间
+
+        具体需求：
+        1. 提取近3个月的广告样本
+        2. 分析广告文案的情感倾向和卖点
+        3. 识别高频使用的关键词和短语
+        4. 统计广告投放频率和时段规律
+        5. 总结成功广告的共同特征
+
+        请帮我：
+        1. 设计竞品分析框架
+        2. 提取和整理广告数据
+        3. 进行情感和内容分析
+        4. 制作对比分析报告
+        5. 提供优化建议
+      en: |-
+        I need to analyze competitor advertising strategies on Facebook in the edtech industry.
+
+        Analysis targets:
+        - Main competitors: VIPKID, Yuanfudao, Zuoyebang
+        - Ad types: Customer acquisition, brand promotion, product marketing
+        - Analysis dimensions: Copy strategy, visual design, target audience, posting time
+
+        Specific needs:
+        1. Extract ad samples from the past 3 months
+        2. Analyze ad copy sentiment and selling points
+        3. Identify frequently used keywords and phrases
+        4. Statistically analyze ad posting frequency and timing patterns
+        5. Summarize common characteristics of successful ads
+
+        Please help me:
+        1. Design competitive analysis framework
+        2. Extract and organize ad data
+        3. Conduct sentiment and content analysis
+        4. Create comparative analysis reports
+        5. Provide optimization recommendations
+  - id: linkedin-ads
+    title:
+      zh: LinkedIn B2B广告分析
+      en: LinkedIn B2B Ads Analysis
+    description:
+      zh: 分析LinkedIn平台上的B2B广告策略
+      en: Analyze B2B advertising strategies on the LinkedIn platform
+    prompt:
+      zh: |-
+        我要研究SaaS行业的LinkedIn广告营销策略。
+
+        研究范围：
+        - 目标公司：Salesforce、HubSpot、Monday.com
+        - 广告形式：赞助内容、信息流广告、招聘广告
+        - 受众定位：决策者、IT管理者、营销人员
+
+        分析重点：
+        1. 价值主张传达方式
+        2. 内容营销策略
+        3. 转化路径设计
+        4. A/B测试模式
+        5. ROI优化手段
+
+        请帮我：
+        1. 收集不同类型广告样本
+        2. 分析专业受众响应模式
+        3. 评估内容质量和相关性
+        4. 识别最佳实践案例
+        5. 制定借鉴策略
+      en: |-
+        I want to study LinkedIn advertising marketing strategies in the SaaS industry.
+
+        Research scope:
+        - Target companies: Salesforce, HubSpot, Monday.com
+        - Ad formats: Sponsored content, feed ads, recruitment ads
+        - Audience targeting: Decision makers, IT managers, marketing personnel
+
+        Analysis focus:
+        1. Value proposition delivery methods
+        2. Content marketing strategies
+        3. Conversion path design
+        4. A/B testing patterns
+        5. ROI optimization methods
+
+        Please help me:
+        1. Collect samples of different ad types
+        2. Analyze professional audience response patterns
+        3. Evaluate content quality and relevance
+        4. Identify best practice cases
+        5. Develop借鉴 strategies

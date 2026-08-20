@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Acid Registry support kit</title>
+  <desc id="desc">Original acid-chartreuse registry markers, modular pattern, black focus field, and compact chart marks.</desc>
+  <defs>
+    <pattern id="route-pattern" width="18" height="18" patternUnits="userSpaceOnUse">
+      <rect width="8" height="8" rx="2" fill="#D6F52A" opacity=".34"/>
+    </pattern>
+    <g id="route-marker"><rect width="22" height="14" rx="3" fill="#D6F52A"/><circle cx="17" cy="7" r="2.5" fill="#111111"/></g>
+    <g id="route-chart-mark"><circle cx="8" cy="20" r="8" fill="#D6F52A"/><circle cx="28" cy="11" r="6" fill="#111111"/><circle cx="44" cy="24" r="4" fill="#D6F52A"/></g>
+  </defs>
+  <rect width="320" height="180" fill="#FFFFFF"/>
+  <rect x="16" y="16" width="132" height="72" rx="8" fill="#F4F4F6"/>
+  <rect x="30" y="30" width="104" height="44" fill="url(#route-pattern)"/>
+  <rect id="route-focus-field" x="164" y="16" width="140" height="72" rx="8" fill="#D6F52A"/>
+  <path d="M180 34h76M180 48h100M180 62h58" stroke="#111111" stroke-width="6"/>
+  <g transform="translate(16 122)"><use href="#route-marker"/></g>
+  <g transform="translate(240 118)"><use href="#route-chart-mark"/></g>
+</svg>

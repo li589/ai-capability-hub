@@ -1,0 +1,17 @@
+{
+  "owner": "followaf",
+  "slug": "fanqie-publisher-skill",
+  "displayName": "番茄小说自动发布",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1775620086017,
+    "commit": "https://github.com/openclaw/skills/commit/624a5b0ca200a437691920801b742a70232ef981"
+  },
+  "history": [
+    {
+      "version": "1.0.1",
+      "publishedAt": 1775489032040,
+      "commit": "https://github.com/openclaw/skills/commit/fa4da70d8bb96c13d31d2a858b89a235f47a128f"
+    }
+  ]
+}

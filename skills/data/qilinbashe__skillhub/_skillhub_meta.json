@@ -1,0 +1,12 @@
+{
+  "slug": "qilinbashe",
+  "name": "律师助手",
+  "version": "5.0.11",
+  "installedAt": 1787228833843,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/597846/4f128d6a53e54baea6f8da5cbf577248.jpg",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/597846/4f128d6a53e54baea6f8da5cbf577248.jpg"
+}

@@ -1,0 +1,20 @@
+type: educational
+
+overrides:
+  educational_poster:
+    prompt_append: >
+      ADDITIONAL FOR EDUCATIONAL POSTERS:
+      - SCANNABILITY IS KING: A viewer should be able to extract the 3 main points
+        by scanning for 5 seconds. If they need to read every word to understand
+        the structure, the visual hierarchy has failed.
+      - Information architecture should be VISIBLE: numbered sections, colored zones,
+        clear visual dividers. The organization itself is a teaching tool.
+      - Icons and illustrations should be SIMPLE and LITERAL — a lightbulb means
+        "idea," a magnifying glass means "examine." No abstract metaphors that
+        require interpretation. Clarity over cleverness.
+      - Color coding must be CONSISTENT: if section 1 is blue, blue means section 1
+        everywhere. Never reuse a section color for a different purpose.
+      - Consider viewing distance: this may hang on a classroom wall or in a hallway.
+        Body text should be readable from 2 meters. Title from 5 meters.
+      - The overall feeling: "I can learn this." Not intimidating, not dumbed-down.
+        Respectful of the viewer's intelligence while lowering the barrier to understanding.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "销售获客线索发现"
+  short_description: "从招中标项目、采购主体和企业资料中识别可持续跟进的销售线索"
+  default_prompt: "使用 $baobiao-find-sales-leads 查找符合目标客户条件的销售线索。"

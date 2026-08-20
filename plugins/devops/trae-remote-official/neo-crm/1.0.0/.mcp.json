@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "neo-crm": {
+      "type": "streamableHttp",
+      "url": "https://mcp.xiaoshouyi.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${connector.neo-crm.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "CloudQ",
+  "installedAt": 1787228679388,
+  "source": "marketplace",
+  "version": "1.9.0",
+  "skillId": "skill_2053084907377135616",
+  "description_zh": "多云统一管理与智能顾问，支持架构可视化、风险评估与 AI 运维问答",
+  "description_en": "Multi-cloud management & smart advisor with architecture visualization, risk assessment & AI-powered O&M",
+  "iconSource": "letter:auto"
+}

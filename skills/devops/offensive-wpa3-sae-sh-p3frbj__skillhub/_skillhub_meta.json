@@ -1,0 +1,10 @@
+{
+  "slug": "offensive-wpa3-sae-sh-p3frbj",
+  "name": "攻击性WPA3-SAE",
+  "version": "1.0.0",
+  "installedAt": 1787229028684,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

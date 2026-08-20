@@ -1,0 +1,11 @@
+{
+  "owner": "frozenarctic",
+  "slug": "funasr-nano-transcribe",
+  "displayName": "Fun ASR Nano Transcribe",
+  "latest": {
+    "version": "1.0.6",
+    "publishedAt": 1773502655612,
+    "commit": "https://github.com/openclaw/skills/commit/1dc315bffe46a3c6910a85e7ec98fab119aa8ca4"
+  },
+  "history": []
+}

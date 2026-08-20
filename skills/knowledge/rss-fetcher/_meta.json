@@ -1,0 +1,11 @@
+{
+  "owner": "noah-1106",
+  "slug": "rss-fetcher",
+  "displayName": "RSS采集器 | RSS Fetcher",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1773612673856,
+    "commit": "https://github.com/openclaw/skills/commit/ad7cede3c558a79c3969b201b55e5f877e64fe16"
+  },
+  "history": []
+}

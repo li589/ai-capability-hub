@@ -1,0 +1,11 @@
+{
+  "name": "特殊学生支持 · 阅读困难学生",
+  "installedAt": 1787227536938,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084941638570704896",
+  "description_zh": "为教师生成针对阅读困难学生的多维支持方案：课堂支持 + 作业调整 + 家校沟通 + IEP 个别化辅导计划；严守不诊断、不暴露隐私的红线。触发关键词：阅读困难、识字慢、读字漏字、阅读流畅度低、阅读障碍、特殊需要学生支持、个别化辅导计划、IEP。",
+  "description_en": "Generates multi-dimensional support plans for teachers targeting students with reading difficulties: classroom support + homework adjustments + home-school communication + IEP individualized support plan; strictly upholds red lines of not diagnosing and not disclosing privacy. Trigger keywords: reading difficulty, slow at character recognition, skipping/missing characters when reading, low reading fluency, reading disorder, special-needs student support, individualized education plan, IEP.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_5110a93f-9af.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_5110a93f-9af.png"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "品牌设计风格专家",
+  "installedAt": 1785864389822,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081374617444352",
+  "examples_zh": [
+    "帮我做一个像 Stripe 风格的落地页",
+    "我想要 Linear 那种极简设计风格",
+    "给项目生成一个 Vercel 风格的 DESIGN.md"
+  ],
+  "examples_en": [
+    "Build me a landing page that looks like Stripe",
+    "I want a clean minimal design like Linear",
+    "Generate a Vercel-style DESIGN.md for my project"
+  ],
+  "description_zh": "54 个知名网站设计系统模板，一键复用品牌级 UI 风格",
+  "description_en": "54 ready-to-use DESIGN.md files from top websites for instant brand-quality UI",
+  "iconSource": "letter:auto"
+}

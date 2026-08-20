@@ -1,0 +1,11 @@
+{
+  "name": "班级活动方案",
+  "installedAt": 1787227512739,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084940068339097600",
+  "description_zh": "为班主任生成完整的班级活动方案：节日庆祝、主题班会、团建、研学、毕业季等，含目标、流程、资源、安全预案、反思框架；强调全员参与与教育意义。触发关键词：班级活动方案、节日活动、主题班会、团建活动、研学活动、运动会方案、活动策划。",
+  "description_en": "Generates complete class activity plans for homeroom teachers: festival celebrations, themed class meetings, team-building, study trips, graduation season, etc., including objectives, procedures, resources, safety plans, and reflection frameworks; emphasizes full participation and educational value. Trigger keywords: class activity plan, festival activity, themed class meeting, team-building activity, study trip, sports meet plan, event planning.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_c68194f3-dbc.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_c68194f3-dbc.png"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "abigale-cyber",
+  "slug": "content-system-generate-image",
+  "displayName": "Generate Image",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1775622401879,
+    "commit": "https://github.com/openclaw/skills/commit/4b7bc8c670e5dc6a5849dd29bd46b8b55192a1f8"
+  },
+  "history": []
+}

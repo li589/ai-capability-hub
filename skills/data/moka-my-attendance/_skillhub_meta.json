@@ -1,0 +1,11 @@
+{
+  "name": "Moka 我的出勤",
+  "installedAt": 1787228570346,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088130487307431936",
+  "description_zh": "面向全体员工的本人假勤自助查询。查每种假期的可用余额、请假单位与过期提醒；按天看打卡明细与请假/加班/出差/补卡等单据状态，按月看出勤月报统计，查本人加班记录与结算说明。仅覆盖本人数据，不回答团队或他人考勤。当用户问「我还有几天年假」「我今天打卡了吗」「我这个月考勤怎么样」「我的加班怎么结算」时使用。",
+  "description_en": "Personal leave and attendance self-service for all employees. Check each leave type's balance, unit and expiry notice; view daily clock-in details with request status, monthly attendance reports, and personal overtime records with settlement notes. Covers only the current user's own data, never team or other people's attendance. Use for questions like \"how many annual leave days do I have left\", \"did I clock in today\", or \"how is my attendance this month\".",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_eb361fe2-b80.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_eb361fe2-b80.png"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "openLesson",
+  "installedAt": 1787228473869,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053082508263616512",
+  "examples_zh": [
+    "为\"贝叶斯推断入门\"生成苏格拉底式学习计划，用有向图标出先修概念和练习节点。",
+    "开启一节音频对话式辅导课，围绕线性代数特征值连续追问并记录我的推理漏洞。",
+    "分析我提交的概率题解题过程，指出条件独立判断中的推理差距并安排下一轮提问。"
+  ],
+  "examples_en": [
+    "Generate a Socratic learning plan for \"introductory Bayesian inference,\" using a directed graph for prerequisites and practice nodes.",
+    "Start an audio tutoring session on linear algebra eigenvalues, ask follow-up questions, and record my reasoning gaps.",
+    "Analyze my probability problem solution, identify gaps in conditional-independence reasoning, and plan the next questioning round."
+  ],
+  "description_zh": "苏格拉底式 AI 辅导：生成学习计划、音频对话式教学、诊断推理差距",
+  "description_en": "Socratic AI tutoring: generate learning plans, audio sessions, reasoning gap analysis",
+  "iconSource": "letter:auto"
+}

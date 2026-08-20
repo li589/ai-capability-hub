@@ -1,0 +1,11 @@
+{
+  "name": "北森员工档案",
+  "installedAt": 1787227632314,
+  "source": "marketplace",
+  "version": "1.0.10",
+  "skillId": "skill_2087175423332040704",
+  "description_zh": "查询员工完整档案信息。涵盖基本信息、任职记录、教育背景、专业技能、项目经历、工作履历、考核结果、证书执照、表彰奖励和晋升记录。一站式掌握员工成长轨迹。",
+  "description_en": "Query complete employee profiles. Covers basic info, employment history, education, professional skills, project experience, work history, performance reviews, certifications, awards, and promotion records.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_a540d222-250.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_a540d222-250.png"
+}

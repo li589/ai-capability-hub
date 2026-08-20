@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:dev-skills",
+  "registry": "trae-remote-official",
+  "plugin_name": "dev-skills",
+  "version": "0.8.0",
+  "marketplace_plugin_id": "476f7b65-9a54-4b81-af09-446e3a638f3b",
+  "remote_installed_plugin_id": "WCQ8UJ_M2UWMZQ",
+  "checksum": "af4e89c6f493ee2cf1d8706c0ea75ee2c695b03a646966cededccd2da7c02686",
+  "file_size": 1538186,
+  "installed_at": 1787227204187
+}

@@ -1,0 +1,36 @@
+{
+  "name": "resize-video",
+  "description": "Resize a video to one or more standard resolutions",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "videoPath": {
+        "type": "string",
+        "description": "Path to the video file to resize"
+      },
+      "resolutions": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "enum": [
+            "360p",
+            "480p",
+            "720p",
+            "1080p"
+          ]
+        },
+        "description": "Resolutions to convert the video to"
+      },
+      "outputDir": {
+        "type": "string",
+        "description": "Optional directory to save the output files (defaults to a temporary directory)"
+      }
+    },
+    "required": [
+      "videoPath",
+      "resolutions"
+    ],
+    "additionalProperties": false,
+    "$schema": "http://json-schema.org/draft-07/schema#"
+  }
+}

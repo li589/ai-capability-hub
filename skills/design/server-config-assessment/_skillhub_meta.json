@@ -1,0 +1,10 @@
+{
+  "name": "鼎华eMES 智能交付助手-服务器配置评估",
+  "installedAt": 1787228532148,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089991597654568960",
+  "description_zh": "eMES 及配套系统（IIOT/ESB/iPaaS）服务器配置评估：根据出货/部署需求输出服务器配置要求，或评估客户现有配置是否满足安装要求并给出建议。",
+  "description_en": "Assess server configuration for eMES and companion systems (IIOT/ESB/iPaaS): map deployment needs to config requirements, or evaluate existing hardware against installation criteria.",
+  "iconSource": "letter:auto"
+}

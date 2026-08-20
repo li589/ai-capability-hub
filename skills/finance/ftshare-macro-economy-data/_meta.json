@@ -1,0 +1,11 @@
+{
+  "owner": "shawn92",
+  "slug": "ftshare-macro-economy-data",
+  "displayName": "Skills of macro economy data released by ft.tech.",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1773840561896,
+    "commit": "https://github.com/openclaw/skills/commit/12721d7108609f4b008db7b35dacc8b9206c0bbf"
+  },
+  "history": []
+}

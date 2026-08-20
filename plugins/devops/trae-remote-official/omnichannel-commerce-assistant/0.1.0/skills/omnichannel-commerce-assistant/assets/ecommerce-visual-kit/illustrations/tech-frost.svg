@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Light technology evidence field</title>
+  <desc id="desc">Frosted technical panels, orbital lines, and cyan signals present hardware and technology evidence.</desc>
+  <defs>
+    <linearGradient id="field" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#F8FBFC"/><stop offset="1" stop-color="#EAF3F5"/></linearGradient>
+    <filter id="glass" x="-30%" y="-30%" width="160%" height="180%"><feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#2E7380" flood-opacity=".14"/></filter>
+    <pattern id="grid" width="34" height="34" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="2" fill="#7CB4BE" opacity=".22"/></pattern>
+  </defs>
+  <rect width="1200" height="720" rx="64" fill="url(#field)"/>
+  <rect x="64" y="58" width="1072" height="604" fill="url(#grid)"/>
+  <g fill="none" stroke="#0E6675" opacity=".22">
+    <ellipse cx="842" cy="360" rx="236" ry="236"/><ellipse cx="842" cy="360" rx="174" ry="174"/><ellipse cx="842" cy="360" rx="108" ry="108"/>
+  </g>
+  <circle cx="842" cy="360" r="62" fill="#B9E5EA" stroke="#0E6675" stroke-width="5"/>
+  <circle cx="964" cy="222" r="16" fill="#4CB7C5"/><circle cx="674" cy="476" r="12" fill="#0E6675"/>
+  <g filter="url(#glass)">
+    <rect x="110" y="126" width="420" height="190" rx="28" fill="#FFFFFF" fill-opacity=".82"/>
+    <rect x="110" y="344" width="420" height="190" rx="28" fill="#FFFFFF" fill-opacity=".82"/>
+  </g>
+  <path d="M158 260 230 214l64 26 74-68 102 38" fill="none" stroke="#0E6675" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#4CB7C5"><rect x="162" y="446" width="32" height="44" rx="8"/><rect x="212" y="418" width="32" height="72" rx="8"/><rect x="262" y="438" width="32" height="52" rx="8"/><rect x="312" y="392" width="32" height="98" rx="8"/></g>
+  <path d="M382 470h94M382 438h68M382 406h82" stroke="#7E9CA2" stroke-width="9" stroke-linecap="round"/>
+</svg>

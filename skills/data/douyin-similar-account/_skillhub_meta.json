@@ -1,0 +1,11 @@
+{
+  "name": "抖音相似账号推荐",
+  "installedAt": 1787227689177,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2085649524039950336",
+  "description_zh": "输入抖音账号智能匹配对标账号与头部标杆，深度分析共通点并提供优化建议",
+  "description_en": "Smart matching for similar Douyin accounts with benchmarking and gap analysis",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_da383130-a0d.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_da383130-a0d.svg"
+}

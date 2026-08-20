@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "bazhuayu-amazon-collector": {
+      "type": "streamableHttp",
+      "url": "https://mcp.bazhuayu.com/?includeTools=search_templates,execute_task,get_task_status,start_or_stop_task,export_data",
+      "headers": {
+        "X-API-Key": "YOUR_BAZHUAYU_API_KEY"
+      },
+      "timeout": 30000
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Team Ops",
+  "installedAt": 1787228707340,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2053083016875343872",
+  "description_zh": "团队绩效审计与会议行动项提取，识别 A/B/C 员工",
+  "description_en": "Team performance audit and meeting action extraction, identify A/B/C players.",
+  "iconSource": "letter:auto"
+}

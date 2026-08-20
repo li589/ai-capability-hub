@@ -1,0 +1,11 @@
+{
+  "owner": "andeymei",
+  "slug": "chrome-devtools-mcp-manager",
+  "displayName": "Chrome DevTools MCP Manager",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774161709705,
+    "commit": "https://github.com/openclaw/skills/commit/682d66dff84c2ff2f1692c8d0d5986f49ee9f127"
+  },
+  "history": []
+}

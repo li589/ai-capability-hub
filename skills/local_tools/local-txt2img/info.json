@@ -1,0 +1,15 @@
+{
+    "venv_name": "t2i-tts",
+    "python_version": "3.11",
+    "mem_need_gb": 8.5,
+    "server_alive_timeout": 300,
+    "models": [
+        {
+            "model_id": "snake7gun/Z-Image-Turbo-int4-ov",
+            "dir_name": "z-image-turbo-int4-ov",
+            "required_files": [
+                "model_index.json"
+            ]
+        }
+    ]
+}

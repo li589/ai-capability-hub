@@ -1,0 +1,11 @@
+{
+  "owner": "1688aiinfra",
+  "slug": "ozon-product-selection",
+  "displayName": "ozon-product-selection",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774260396244,
+    "commit": "https://github.com/openclaw/skills/commit/324db75698e8227294f006eb002afd27223705c2"
+  },
+  "history": []
+}

@@ -1,0 +1,20 @@
+{
+  "name": "任务对齐",
+  "installedAt": 1785784789060,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083178275758080",
+  "examples_zh": [
+    "帮我把这个想法梳理成一个清晰的任务",
+    "我想做一个用户中心，先和你对齐一下范围和验收",
+    "这个需求有点模糊，先讨论清楚再动手"
+  ],
+  "examples_en": [
+    "Help me turn this idea into a well-defined task",
+    "Let's align scope and acceptance before I hand this off",
+    "This request is fuzzy — talk it through with me first"
+  ],
+  "description_zh": "把模糊想法对齐成可独立交付的任务契约",
+  "description_en": "Turn a rough idea into an alignment-grade task contract",
+  "iconSource": "letter:auto"
+}

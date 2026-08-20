@@ -1,0 +1,12 @@
+{
+  "slug": "lingyi-wx-video-decomposer-plus",
+  "name": "视频号爆款短视频拆解（付费版：全能）【零一数科·出品】",
+  "version": "0.4.0",
+  "installedAt": 1787227472444,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png"
+}

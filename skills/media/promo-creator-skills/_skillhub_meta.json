@@ -1,0 +1,21 @@
+{
+  "name": "Promo Creator",
+  "installedAt": 1787228341023,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2054903400115404800",
+  "examples_zh": [
+    "帮我做一个产品宣传片",
+    "用这个 GitHub 仓库做一个 60 秒 launch video",
+    "帮我写分镜脚本"
+  ],
+  "examples_en": [
+    "Create a product promo video from this website",
+    "Make a 60-second launch video for my GitHub project",
+    "Write a storyboard for my product"
+  ],
+  "description_zh": "产品宣传片全流程制作，涵盖简报、分镜、素材、剪辑、配乐到交付",
+  "description_en": "End-to-end product promo video creation: brief, storyboard, assets, editing, BGM, and delivery",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_3b12702c-231.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_3b12702c-231.png"
+}

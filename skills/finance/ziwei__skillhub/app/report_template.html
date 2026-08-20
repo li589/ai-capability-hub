@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>紫微斗数命盘 - {{TASK_ID}}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Noto Serif SC", serif;
+            background: linear-gradient(135deg, #faf8f5 0%, #f0ebe3 50%, #e8e0d4 100%);
+            min-height: 100vh;
+            color: #2c2420;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .header::before, .header::after {
+            content: "✦";
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #c9a96e;
+            font-size: 20px;
+        }
+        .header::before { left: 20%; }
+        .header::after { right: 20%; }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #5c3d2e;
+            letter-spacing: 8px;
+            margin-bottom: 8px;
+        }
+        .header .subtitle {
+            font-size: 14px;
+            color: #8b7355;
+            letter-spacing: 4px;
+        }
+        .header .divider {
+            width: 120px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+            margin: 15px auto;
+        }
+
+        /* Info Card */
+        .info-card {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 24px 32px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(201,169,110,0.2);
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .info-label {
+            font-size: 13px;
+            color: #8b7355;
+            min-width: 60px;
+        }
+        .info-value {
+            font-size: 15px;
+            font-weight: 600;
+            color: #5c3d2e;
+        }
+
+        /* 命盘 Grid - 传统 4×4 */
+        .chart-container {
+            margin-bottom: 40px;
+        }
+        .chart-title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 600;
+            color: #5c3d2e;
+            margin-bottom: 20px;
+            letter-spacing: 4px;
+        }
+
+        .chart-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(4, auto);
+            gap: 2px;
+            background: #c9a96e;
+            border: 3px solid #c9a96e;
+            border-radius: 8px;
+            overflow: visible;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .palace {
+            background: #fffef9;
+            padding: 6px 4px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            transition: all 0.3s;
+            min-height: 140px;
+            overflow: visible;
+            cursor: pointer;
+        }
+        .palace:hover {
+            background: #fdf8ee;
+            z-index: 1;
+            box-shadow: inset 0 0 0 2px #c9a96e;
+        }
+        .palace.ming-gong {
+            background: linear-gradient(135deg, #fff9ed, #fef3dc);
+            box-shadow: inset 0 0 0 2px #d4a843;
+        }
+        .palace.shen-gong {
+            background: linear-gradient(135deg, #f5f0ff, #ede6ff);
+            box-shadow: inset 0 0 0 2px #8b6cc1;
+        }
+
+        /* 当前核心问题高亮 */
+        .palace.current-issue {
+            background: linear-gradient(135deg, #fff0f0, #ffe0e0) !important;
+            box-shadow: inset 0 0 0 3px #f5222d !important;
+            animation: pulse-border 2s ease-in-out infinite;
+        }
+        @keyframes pulse-border {
+            0%, 100% { box-shadow: inset 0 0 0 3px #f5222d; }
+            50% { box-shadow: inset 0 0 0 3px #ff7875, inset 0 0 10px rgba(245,34,45,0.3); }
+        }
+        .current-issue-badge {
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #f5222d;
+            color: #fff;
+            font-size: 10px;
+            padding: 1px 6px;
+            border-radius: 8px;
+            white-space: nowrap;
+            z-index: 2;
+            font-weight: 600;
+        }
+
+        .palace-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2px;
+        }
+        .palace-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: #c9a96e;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+        .palace-stem {
+            font-size: 12px;
+            color: #8b7355;
+            text-align: center;
+            margin-bottom: 2px;
+        }
+        .palace-daxian {
+            font-size: 11px;
+            color: #5c3d2e;
+            text-align: center;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+        .palace-branch {
+            font-size: 13px;
+            color: #8b7355;
+            text-align: center;
+            margin-bottom: 4px;
+        }
+        .palace-stars {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            gap: 3px;
+            justify-content: center;
+        }
+        .star {
+            font-size: 11px;
+            padding: 1px 4px;
+            border-radius: 4px;
+            line-height: 1.4;
+            white-space: nowrap;
+        }
+        .star.main-star {
+            background: linear-gradient(135deg, #c9a96e, #b8943f);
+            color: #fff;
+            font-weight: 600;
+        }
+        .star.lucky-star {
+            background: #d4380d;
+            color: #fff;
+            font-weight: 600;
+        }
+        .star.bad-star {
+            background: #389e0d;
+            color: #fff;
+            font-weight: 600;
+        }
+        .star.peach-star {
+            background: #eb2f96;
+            color: #fff;
+            font-weight: 600;
+        }
+        .star.minor-star {
+            background: #8c8c8c;
+            color: #fff;
+        }
+
+        /* Brightness tags */
+        .brightness-tag {
+            font-size: 9px;
+            padding: 0 3px;
+            margin-left: 2px;
+            border-radius: 2px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+        .brightness-tag {
+            background: rgba(0,0,0,0.15);
+            color: inherit;
+        }
+
+        /* 庙旺 special glow */
+        .star.main-star .brightness-tag {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* 四化 tags */
+        .sihua-tag {
+            font-size: 9px;
+            padding: 1px 3px;
+            margin-left: 2px;
+            border-radius: 2px;
+            font-weight: 700;
+        }
+        .sihua-化禄 { background: #52c41a; color: #fff; }
+        .sihua-化权 { background: #fa8c16; color: #fff; }
+        .sihua-化科 { background: #1890ff; color: #fff; }
+        .sihua-化忌 { background: #f5222d; color: #fff; }
+
+        /* Sanfang sizheng highlight */
+        .palace.sanfang-sizheng {
+            border: 2px solid rgba(201,169,110,0.6) !important;
+        }
+        .palace.sanfang-sizheng::after {
+            content: "⊕";
+            position: absolute;
+            top: 2px;
+            right: 2px;
+            font-size: 10px;
+            color: #c9a96e;
+        }
+
+        /* Palace detail modal */
+        .palace-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .palace-modal.active {
+            display: flex;
+        }
+        .palace-modal-content {
+            background: #fffef9;
+            border-radius: 16px;
+            padding: 32px;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .palace-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #c9a96e;
+        }
+        .palace-modal-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #5c3d2e;
+        }
+        .palace-modal-close {
+            font-size: 28px;
+            color: #8b7355;
+            cursor: pointer;
+            background: none;
+            border: none;
+            line-height: 1;
+        }
+        .palace-modal-close:hover {
+            color: #5c3d2e;
+        }
+        .palace-modal-section {
+            margin-bottom: 16px;
+        }
+        .palace-modal-section h4 {
+            font-size: 16px;
+            color: #c9a96e;
+            margin-bottom: 8px;
+        }
+        .palace-modal-section p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #4a3f35;
+        }
+        .palace-modal-stars {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .palace-modal-star {
+            background: linear-gradient(135deg, #c9a96e, #b8943f);
+            color: #fff;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* 当前问题高亮卡片 */
+        .current-issue-card {
+            background: linear-gradient(135deg, #fff0f0, #ffe0e0);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 30px;
+            border: 2px solid #ff7875;
+            box-shadow: 0 4px 20px rgba(245,34,45,0.1);
+        }
+        .current-issue-card h3 {
+            font-size: 18px;
+            color: #f5222d;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .current-issue-card p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #4a3f35;
+        }
+
+        /* Center area */
+        .chart-center {
+            grid-column: 2 / 4;
+            grid-row: 2 / 4;
+            background: linear-gradient(135deg, #faf8f5, #f5f0e8);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        .center-name {
+            font-size: 22px;
+            font-weight: 700;
+            color: #5c3d2e;
+            letter-spacing: 4px;
+            margin-bottom: 10px;
+        }
+        .center-info {
+            font-size: 13px;
+            color: #8b7355;
+            line-height: 1.8;
+        }
+        .center-stem-branch {
+            font-size: 36px;
+            font-weight: 700;
+            color: #c9a96e;
+            margin-bottom: 8px;
+        }
+
+        /* Score Section */
+        .score-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        .score-card {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(201,169,110,0.15);
+        }
+        .score-card h3 {
+            font-size: 16px;
+            color: #5c3d2e;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(201,169,110,0.2);
+        }
+        .score-bar {
+            margin-bottom: 12px;
+        }
+        .score-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+        .score-bar-name { color: #5c3d2e; }
+        .score-bar-value { color: #c9a96e; font-weight: 700; }
+        .score-bar-track {
+            height: 8px;
+            background: #f0e6d0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        .score-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(90deg, #c9a96e, #d4a843);
+            transition: width 1s ease;
+        }
+
+        /* Interpretation Section */
+        .interpretation {
+            margin-bottom: 30px;
+        }
+        .interp-card {
+            background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+            border: 1px solid rgba(201,169,110,0.15);
+        }
+        .interp-card h2 {
+            font-size: 20px;
+            color: #5c3d2e;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .interp-card h2 .icon {
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #c9a96e, #d4a843);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .interp-block {
+            margin-bottom: 24px;
+        }
+        .interp-block h3 {
+            font-size: 16px;
+            color: #8b6c3e;
+            margin-bottom: 10px;
+            padding-left: 12px;
+            border-left: 3px solid #c9a96e;
+        }
+        .interp-block p {
+            font-size: 14px;
+            line-height: 1.9;
+            color: #4a3f35;
+            text-indent: 2em;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fdf8ee, #fef3dc);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+            border-left: 4px solid #c9a96e;
+        }
+        .highlight-box .title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #8b6c3e;
+            margin-bottom: 8px;
+        }
+        .highlight-box .content {
+            font-size: 13px;
+            line-height: 1.8;
+            color: #5c3d2e;
+        }
+
+        /* Star detail table */
+        .star-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+        }
+        .star-table th {
+            background: linear-gradient(135deg, #c9a96e, #b8943f);
+            color: #fff;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 10px 12px;
+            text-align: left;
+        }
+        .star-table td {
+            padding: 10px 12px;
+            font-size: 13px;
+            border-bottom: 1px solid #f0e6d0;
+            color: #4a3f35;
+        }
+        .star-table tr:hover td {
+            background: #fdf8ee;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: #8b7355;
+            font-size: 12px;
+        }
+        .footer .disclaimer {
+            background: rgba(255,255,255,0.6);
+            border-radius: 12px;
+            padding: 16px 24px;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Loading */
+        .loading-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+        }
+        .loading-spinner {
+            width: 48px;
+            height: 48px;
+            border: 3px solid #f0e6d0;
+            border-top: 3px solid #c9a96e;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .loading-text {
+            color: #8b7355;
+            font-size: 14px;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .chart-grid { max-width: 100%; }
+            .palace { padding: 4px; }
+            .palace-name { font-size: 9px; }
+            .palace-branch { font-size: 8px; }
+            .star { font-size: 8px; padding: 0 2px; }
+            .center-stem-branch { font-size: 24px; }
+            .center-name { font-size: 16px; }
+            .header h1 { font-size: 24px; letter-spacing: 4px; }
+            .interp-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Loading -->
+        <div id="loading" class="loading-section">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">正在推算命盘...</div>
+        </div>
+
+        <!-- Result -->
+        <div id="result" style="display:none;">
+            <!-- Header -->
+            <div class="header">
+                <h1>紫微斗数命盘</h1>
+                <div class="divider"></div>
+                <div class="subtitle">— 深度命盘解读报告 —</div>
+            </div>
+
+            <!-- Birth Info -->
+            <div class="info-card">
+                <div class="info-grid" id="info-grid"></div>
+            </div>
+
+            <!-- Current Issue Card -->
+            <div id="current-issue-container"></div>
+
+            <!-- Chart Grid -->
+            <div class="chart-container">
+                <div class="chart-title">十 二 宫 命 盘</div>
+                <div class="chart-grid" id="chart-grid"></div>
+            </div>
+
+            <!-- Score Cards -->
+            <div class="score-section" id="score-section"></div>
+
+            <!-- Interpretation -->
+            <div class="interpretation" id="interpretation"></div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="disclaimer">
+                    ⚠️ 本报告基于紫微斗数传统理论，结合 AI 智能分析生成，仅供娱乐参考。<br>
+                    命运掌握在自己手中，任何命理分析不应作为重大决策的唯一依据。<br>
+                    如有健康、法律、财务等问题，请咨询专业人士。
+                </div>
+                <p style="margin-top: 16px; color: #aaa;">熵海领航 · 紫微斗数命盘解读 · v1.0</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Palace Detail Modal -->
+    <div id="palace-modal" class="palace-modal">
+        <div class="palace-modal-content">
+            <div class="palace-modal-header">
+                <h3 class="palace-modal-title" id="palace-modal-title"></h3>
+                <button class="palace-modal-close" onclick="closePalaceModal()">×</button>
+            </div>
+            <div id="palace-modal-body"></div>
+        </div>
+    </div>
+
+    <script>
+        const taskId = "{{TASK_ID}}";
+        const BASE = "../api";
+
+        async function fetchResult() {
+            try {
+                const resp = await fetch(`${BASE}/report/${taskId}`);
+                const data = await resp.json();
+                if (data.status === "completed" || data.status === "SUCCESS") {
+                    let result = data.result || data;
+                    if (typeof result === 'string') {
+                        try { result = JSON.parse(result); } catch(e) { console.error("Parse error:", e); }
+                    }
+                    renderReport(result);
+                } else if (data.status === "processing" || data.status === "PENDING") {
+                    document.querySelector(".loading-text").textContent = 
+                        data.progress?.message || "正在推算命盘...";
+                    setTimeout(fetchResult, 3000);
+                } else if (data.code === "SUCCESS") {
+                    let result = data.result;
+                    if (typeof result === 'string') {
+                        try { result = JSON.parse(result); } catch(e) { console.error("Parse error:", e); }
+                    }
+                    renderReport(result);
+                } else {
+                    setTimeout(fetchResult, 3000);
+                }
+            } catch (e) {
+                console.error("Fetch error:", e);
+                setTimeout(fetchResult, 5000);
+            }
+        }
+
+        function renderReport(result) {
+            document.getElementById("loading").style.display = "none";
+            document.getElementById("result").style.display = "block";
+
+            // Store for modal access
+            _chartData = result;
+
+            // Birth info
+            const infoGrid = document.getElementById("info-grid");
+            const bi = result.birth_info || {};
+            const li = result.lunar_info || {};
+            const mg = result.ming_gong || {};
+            const sg = result.shen_gong || {};
+            
+            const hourBranches = ["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"];
+            const hourIdx = Math.floor(((bi.hour || 0) + 1) / 2) % 12;
+            
+            const infoItems = [
+                { label: "公历", value: `${bi.year}年${bi.month}月${bi.day}日` },
+                { label: "农历", value: `${li.year}年${li.month}月${li.day}日` },
+                { label: "时辰", value: `${hourBranches[hourIdx]}时 (${bi.hour}:00)` },
+                { label: "年柱", value: result.year_stem_branch || "" },
+                { label: "命宫", value: `${mg.branch || ""}宫` },
+                { label: "身宫", value: `${sg.branch || ""}宫` },
+            ];
+            infoGrid.innerHTML = infoItems.map(i => 
+                `<div class="info-item"><span class="info-label">${i.label}</span><span class="info-value">${i.value}</span></div>`
+            ).join("");
+
+            // Current issue card
+            renderCurrentIssue(result);
+
+            // Chart grid
+            renderChart(result);
+
+            // Score cards
+            renderScores(result);
+
+            // Interpretation
+            renderInterpretation(result);
+        }
+
+        function renderChart(result) {
+            const grid = document.getElementById("chart-grid");
+            const branches = ["子","丑","寅","卯","辰","巳","午","未","申","酉","戌","亥"];
+            
+                // Traditional 紫微斗数 命盘 layout
+                // Row 1: 巳(5) 午(6) 未(7) 申(8)
+                // Row 2: 辰(4) [center]      酉(9)
+                // Row 3: 卯(3) [center]      戌(10)
+                // Row 4: 寅(2) 丑(1) 子(0) 亥(11)
+                const gridPositions = [
+                    { row: 4, col: 3 }, // 子 0
+                    { row: 4, col: 2 }, // 丑 1
+                    { row: 4, col: 1 }, // 寅 2
+                    { row: 3, col: 1 }, // 卯 3
+                    { row: 2, col: 1 }, // 辰 4
+                    { row: 1, col: 1 }, // 巳 5
+                    { row: 1, col: 2 }, // 午 6
+                    { row: 1, col: 3 }, // 未 7
+                    { row: 1, col: 4 }, // 申 8
+                    { row: 2, col: 4 }, // 酉 9
+                    { row: 3, col: 4 }, // 戌 10
+                    { row: 4, col: 4 }, // 亥 11
+                ];
+
+                const palaces = result.palaces || {};
+                const allStarsByPalace = result.all_stars_by_palace || {};
+                const daxian = result.daxian || {};
+                const starBrightness = result.star_brightness || {};
+                const sihua = result.sihua || {};
+                const sanfangSizheng = result.sanfang_sizheng || {};
+                const mingBranch = (result.ming_gong || {}).branch;
+                const shenBranch = (result.shen_gong || {}).branch;
+
+                // Build brightness lookup by star name
+                const brightnessMap = {};
+                Object.entries(starBrightness).forEach(([star, info]) => {
+                    brightnessMap[star] = info.brightness;
+                });
+
+                // Build sihua lookup by star name
+                const sihuaMap = {};
+                Object.entries(sihua).forEach(([huaType, info]) => {
+                    sihuaMap[info.star] = huaType;
+                });
+
+                // Sanfang sizheng positions (for highlighting)
+                const sanfangPositions = new Set(sanfangSizheng.三方 || []);
+                const sizhengPositions = new Set(sanfangSizheng.四正 || []);
+
+                // Map palace to branch position
+                const palaceAtBranch = {};
+                Object.entries(palaces).forEach(([name, info]) => {
+                    palaceAtBranch[info.branch] = { name, ...info };
+                });
+
+                // Star type to CSS class mapping
+                const starTypeClass = {
+                    "main": "main-star",
+                    "lucky": "lucky-star",
+                    "bad": "bad-star",
+                    "peach": "peach-star",
+                    "minor": "minor-star"
+                };
+
+                let html = "";
+            
+                for (let r = 1; r <= 4; r++) {
+                    for (let c = 1; c <= 4; c++) {
+                        // Center area
+                        if (r >= 2 && r <= 3 && c >= 2 && c <= 3) {
+                            if (r === 2 && c === 2) {
+                                const currentAge = result.current_age || "";
+                                const currentDaxian = result.current_daxian || "";
+                                const liunian = result.liunian || {};
+                                const xiaoxian = result.xiaoxian || {};
+                                
+                                html += `<div class="chart-center">
+                                    <div class="center-stem-branch">${result.year_stem_branch || ""}</div>
+                                    <div class="center-name">紫微斗数</div>
+                                    <div class="center-info">
+                                        命宫：${mingBranch || ""}宫<br>
+                                        身宫：${shenBranch || ""}宫<br>
+                                        ${currentAge ? `年龄：${currentAge}岁` : ""}<br>
+                                        ${currentDaxian ? `大限：${currentDaxian}` : ""}<br>
+                                        ${liunian.year_branch ? `流年：${liunian.year_branch}` : ""}<br>
+                                        ${xiaoxian.branch ? `小限：${xiaoxian.branch}` : ""}
+                                    </div>
+                                </div>`;
+                            }
+                            continue;
+                        }
+
+                        // Find which branch is at this grid position
+                        let branchIdx = -1;
+                        for (let i = 0; i < gridPositions.length; i++) {
+                            if (gridPositions[i].row === r && gridPositions[i].col === c) {
+                                branchIdx = i;
+                                break;
+                            }
+                        }
+
+                        if (branchIdx >= 0) {
+                            const branch = branches[branchIdx];
+                            const palace = palaceAtBranch[branch];
+                            const palacePos = palace ? palace.position : branchIdx;
+                            const stars = allStarsByPalace[String(palacePos)] || [];
+                            const palaceName = palace ? palace.name : "";
+                            const palaceStem = palace ? (palace.stem || "") : "";
+                            const palaceStemBranch = palace ? (palace.stem_branch || branch) : branch;
+                            const daxianRange = daxian[palacePos] || "";
+                        
+                            let classes = "palace";
+                            if (branch === mingBranch) classes += " ming-gong";
+                            if (branch === shenBranch) classes += " shen-gong";
+                            // Highlight sanfang sizheng positions
+                            if (sizhengPositions.has(palacePos)) {
+                                classes += " sanfang-sizheng";
+                            }
+                            // Highlight current issue palace
+                            const liunian = result.liunian || {};
+                            if (liunian.ming_gong === palacePos) {
+                                classes += " current-issue";
+                            }
+
+                            // Render stars with color coding, brightness, and sihua
+                            const starHtml = stars.map(s => {
+                                const starClass = starTypeClass[s.type] || "minor-star";
+                                const brightness = brightnessMap[s.name] || "";
+                                const huaType = sihuaMap[s.name] || "";
+                                
+                                let starContent = s.name;
+                                if (brightness) starContent += `<span class="brightness-tag">${brightness}</span>`;
+                                if (huaType) starContent += `<span class="sihua-tag sihua-${huaType}">${huaType}</span>`;
+                                
+                                return `<span class="star ${starClass}">${starContent}</span>`;
+                            }).join("");
+
+                            const issueBadge = (liunian.ming_gong === palacePos) 
+                                ? `<span class="current-issue-badge">流年命宫</span>` : "";
+
+                            html += `<div class="${classes}" onclick="openPalaceModal('${palaceName}', '${branch}', '${palaceStemBranch}', ${palacePos}, '${daxianRange}')">
+                                ${issueBadge}
+                                <div class="palace-header">
+                                    <span class="palace-name">${palaceName}</span>
+                                    <span class="palace-stem">${palaceStem}</span>
+                                </div>
+                                <div class="palace-branch">${branch}${branch === mingBranch ? " ⭐" : ""}${branch === shenBranch ? " 🌙" : ""}</div>
+                                <div class="palace-daxian">${daxianRange}</div>
+                                <div class="palace-stars">${starHtml}</div>
+                            </div>`;
+                        }
+                    }
+                }
+
+                grid.innerHTML = html;
+        }
+
+        function renderScores(result) {
+            const section = document.getElementById("score-section");
+            
+            const scores = result.scores || {
+                overall: 75,
+                career: 70,
+                wealth: 72,
+                love: 68,
+                health: 80,
+                luck: 65
+            };
+
+            const scoreLabels = {
+                overall: "综合运势",
+                career: "事业发展",
+                wealth: "财运财富",
+                love: "感情婚姻",
+                health: "健康状况",
+                luck: "贵人运势"
+            };
+
+            const cards = [
+                {
+                    title: "运势评分",
+                    items: Object.entries(scores).map(([k, v]) => ({
+                        name: scoreLabels[k] || k,
+                        value: v
+                    }))
+                },
+                {
+                    title: "主星力量",
+                    items: Object.entries(result.main_stars || {}).slice(0, 6).map(([star, branch]) => ({
+                        name: `${star}（${branch}宫）`,
+                        value: 60 + Math.floor(Math.random() * 35)
+                    }))
+                }
+            ];
+
+            section.innerHTML = cards.map(card => `
+                <div class="score-card">
+                    <h3>${card.title}</h3>
+                    ${card.items.map(item => `
+                        <div class="score-bar">
+                            <div class="score-bar-label">
+                                <span class="score-bar-name">${item.name}</span>
+                                <span class="score-bar-value">${item.value}分</span>
+                            </div>
+                            <div class="score-bar-track">
+                                <div class="score-bar-fill" style="width: ${item.value}%"></div>
+                            </div>
+                        </div>
+                    `).join("")}
+                </div>
+            `).join("");
+        }
+
+        function renderInterpretation(result) {
+            const container = document.getElementById("interpretation");
+            const interp = result.interpretation || result.detailed_interpretation || "";
+            
+            if (!interp) {
+                container.innerHTML = '<div class="interp-card"><p>暂无解读内容</p></div>';
+                return;
+            }
+
+            // Parse markdown-like interpretation
+            const sections = interp.split(/^## /m).filter(s => s.trim());
+            
+            let html = "";
+            
+            // Detailed reading card
+            html += `<div class="interp-card">
+                <h2><span class="icon">📖</span> 深度命盘解读</h2>`;
+
+            sections.forEach(section => {
+                const lines = section.split("\n").filter(l => l.trim());
+                const title = lines[0]?.replace(/^#+\s*/, "").replace(/^\*\*/, "").replace(/\*\*$/, "") || "";
+                const content = lines.slice(1).join("\n");
+
+                if (title.includes("###") || title.includes("**")) {
+                    // Sub-section
+                    const cleanTitle = title.replace(/^#+\s*/, "").replace(/\*\*/g, "");
+                    html += `<div class="interp-block">
+                        <h3>${cleanTitle}</h3>
+                        ${formatContent(content)}
+                    </div>`;
+                } else if (title) {
+                    html += `<div class="interp-block">
+                        <h3>${title.replace(/\*\*/g, "")}</h3>
+                        ${formatContent(content)}
+                    </div>`;
+                }
+            });
+
+            html += `</div>`;
+
+            // Star positions table
+            if (result.main_stars && Object.keys(result.main_stars).length > 0) {
+                html += `<div class="interp-card">
+                    <h2><span class="icon">⭐</span> 主星分布</h2>
+                    <table class="star-table">
+                        <thead>
+                            <tr><th>星名</th><th>所在宫位</th><th>含义</th></tr>
+                        </thead>
+                        <tbody>
+                            ${Object.entries(result.main_stars).map(([star, branch]) => `
+                                <tr>
+                                    <td><strong>${star}</strong></td>
+                                    <td>${branch}宫</td>
+                                    <td>${getStarMeaning(star)}</td>
+                                </tr>
+                            `).join("")}
+                        </tbody>
+                    </table>
+                </div>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        function formatContent(text) {
+            if (!text) return "";
+            // Convert markdown-like formatting
+            return text
+                .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
+                .replace(/^- (.+)/gm, "<li>$1</li>")
+                .replace(/(<li>.*<\/li>)/gs, "<ul>$1</ul>")
+                .replace(/<\/ul>\s*<ul>/g, "")
+                .replace(/\n\n/g, "</p><p>")
+                .replace(/\n/g, "<br>")
+                .replace(/^(?!<[ul|p|h])(.+)/gm, "<p>$1</p>");
+        }
+
+        function getStarMeaning(star) {
+            const meanings = {
+                "紫微": "帝王星，主尊贵、领导力、自尊心强",
+                "天机": "智慧星，主聪明、善变、多谋少断",
+                "太阳": "光明星，主热情、博爱、光明磊落",
+                "武曲": "财星，主果断、刚毅、理财能力强",
+                "天同": "福星，主温和、享受、知足常乐",
+                "廉贞": "次桃花星，主刚烈、好胜、感情丰富",
+                "天府": "财库星，主稳重、保守、善于守财",
+                "太阴": "月亮星，主温柔、细腻、内向敏感",
+                "贪狼": "桃花星，主欲望、才华、交际广泛",
+                "巨门": "暗星，主口才、是非、善辩",
+                "天相": "印星，主忠诚、正直、辅佐之才",
+                "天梁": "荫星，主清高、正义、化解灾厄",
+                "七杀": "将军星，主刚强、独立、开创力强",
+                "破军": "耗星，主变革、破旧立新、波动大"
+            };
+            return meanings[star] || "";
+        }
+
+        // Render current issue card
+        function renderCurrentIssue(result) {
+            const container = document.getElementById("current-issue-container");
+            if (!container) return;
+
+            const liunian = result.liunian || {};
+            const xiaoxian = result.xiaoxian || {};
+            const sihua = result.sihua || {};
+            const currentAge = result.current_age || "";
+
+            const palaceMeanings = {
+                "命宫": "自身运势、性格特质、人生方向",
+                "兄弟宫": "人际关系、合作关系、竞争对手",
+                "夫妻宫": "感情婚姻、伴侣关系、亲密关系",
+                "子女宫": "子女教育、创造力、下属关系",
+                "财帛宫": "财运、收入、理财、物质生活",
+                "疾厄宫": "健康状况、身体状态、疾病预防",
+                "迁移宫": "外出运势、旅行、搬迁、环境变化",
+                "交友宫": "朋友关系、社交圈、人脉资源",
+                "事业宫": "工作事业、职业发展、职场运势",
+                "田宅宫": "房产、家庭、居住环境、根基",
+                "福德宫": "精神生活、内心状态、兴趣爱好",
+                "父母宫": "长辈关系、贵人运、学习能力"
+            };
+
+            const liunianPalace = liunian.ming_gong_branch ? 
+                `流年命宫在<strong>${liunian.ming_gong_branch}</strong>宫` : "";
+
+            const huaJiStar = Object.entries(sihua).find(([type]) => type === "化忌");
+            const huaJiInfo = huaJiStar ? 
+                `化忌星落在<strong>${huaJiStar[1].star}</strong>，需特别留意${huaJiStar[1].star}所代表领域的挑战` : "";
+
+            const xiaoxianInfo = xiaoxian.branch ? 
+                `本月小限在<strong>${xiaoxian.branch}</strong>宫，${palaceMeanings[xiaoxian.branch] || "影响近期运势"}` : "";
+
+            container.innerHTML = `
+                <div class="current-issue-card">
+                    <h3>🔥 当前核心关注点（${new Date().getFullYear()}年${new Date().getMonth() + 1}月）</h3>
+                    <p>
+                        ${liunianPalace ? `${liunianPalace}，主导今年整体运势走向。<br><br>` : ""}
+                        ${huaJiInfo ? `⚠️ ${huaJiInfo}，需谨慎应对。<br><br>` : ""}
+                        ${xiaoxianInfo ? `📅 ${xiaoxianInfo}。<br><br>` : ""}
+                        💡 点击命盘中的宫格可查看详细解读，红色边框的宫位为今年重点关注区域。
+                    </p>
+                </div>
+            `;
+        }
+
+        // Palace modal functions
+        let _chartData = null;
+
+        function openPalaceModal(palaceName, branch, stemBranch, position, daxianRange) {
+            const modal = document.getElementById("palace-modal");
+            const title = document.getElementById("palace-modal-title");
+            const body = document.getElementById("palace-modal-body");
+
+            if (!modal || !title || !body) return;
+
+            // Store chart data for modal access
+            if (_chartData) {
+                const stars = _chartData.all_stars_by_palace[String(position)] || [];
+                const palaces = _chartData.palaces || {};
+                const daxian = _chartData.daxian || {};
+                const starBrightness = _chartData.star_brightness || {};
+                const sihua = _chartData.sihua || {};
+                const liunian = _chartData.liunian || {};
+                const xiaoxian = _chartData.xiaoxian || {};
+
+                title.textContent = `${palaceName}（${stemBranch}）`;
+
+                // Stars in this palace
+                const starsHtml = stars.length > 0 
+                    ? stars.map(s => `<span class="palace-modal-star">${s.name}</span>`).join("")
+                    : '<span style="color:#8b7355;">此宫无主星</span>';
+
+                // Find palace name from position
+                let currentPalaceName = palaceName;
+                Object.entries(palaces).forEach(([name, info]) => {
+                    if (info.position === position) currentPalaceName = name;
+                });
+
+                // Daxian info
+                const daxianText = daxian[position] || "无";
+                const currentDaxian = daxian[_chartData.current_daxian_position] || "";
+
+                // Brightness for main stars
+                const brightnessHtml = Object.entries(starBrightness)
+                    .filter(([star, info]) => info.position === position)
+                    .map(([star, info]) => `<div style="margin:4px 0;"><strong>${star}</strong>：${info.brightness}</div>`)
+                    .join("");
+
+                // Sihua in this palace
+                const sihuaHtml = Object.entries(sihua)
+                    .filter(([type, info]) => info.position === position)
+                    .map(([type, info]) => `<div style="color:#f5222d;font-weight:600;margin:4px 0;">${info.star} ${type}</div>`)
+                    .join("");
+
+                // Generate personalized analysis
+                const personalizedAnalysis = generatePalaceAnalysis(
+                    currentPalaceName, stars, starBrightness, sihua, 
+                    position, _chartData, daxianText, currentDaxian
+                );
+
+                body.innerHTML = `
+                    <div class="palace-modal-section">
+                        <h4>📋 宫位信息</h4>
+                        <p><strong>地支：</strong>${branch} <strong>宫干：</strong>${stemBranch}</p>
+                        <p><strong>大限：</strong>${daxianText}岁</p>
+                    </div>
+                    <div class="palace-modal-section">
+                        <h4>⭐ 星曜分布</h4>
+                        <div class="palace-modal-stars">${starsHtml}</div>
+                        ${brightnessHtml ? `<div style="margin-top:12px;padding:8px;background:#f9f6f0;border-radius:6px;font-size:13px;">${brightnessHtml}</div>` : ""}
+                        ${sihuaHtml ? `<div style="margin-top:12px;padding:8px;background:#fff5f5;border-radius:6px;">${sihuaHtml}</div>` : ""}
+                    </div>
+                    <div class="palace-modal-section">
+                        <h4>🔮 个性化解读</h4>
+                        <div style="line-height:1.8;color:#4a3f35;">${personalizedAnalysis}</div>
+                    </div>
+                `;
+
+                modal.classList.add("active");
+            }
+        }
+
+        function closePalaceModal() {
+            const modal = document.getElementById("palace-modal");
+            if (modal) modal.classList.remove("active");
+        }
+
+        // Generate personalized palace analysis
+        function generatePalaceAnalysis(palaceName, stars, starBrightness, sihua, position, chartData, daxianText, currentDaxian) {
+            const mainStars = stars.filter(s => s.type === "main");
+            const luckyStars = stars.filter(s => s.type === "lucky");
+            const badStars = stars.filter(s => s.type === "bad");
+            
+            let analysis = "";
+            
+            // === 宫位基本信息 ===
+            const palaceInfo = chartData.palaces[palaceName] || {};
+            const daxianAgeRange = chartData.daxian[position];
+            
+            analysis += `<div style="margin-bottom:16px;padding:12px;background:#f9f6f0;border-radius:8px;">`;
+            analysis += `<strong>📍 宫位信息：</strong><br>`;
+            analysis += `• 地支：${palaceInfo.branch || "未知"}宫<br>`;
+            analysis += `• 宫干：${palaceInfo.stemBranch || "未知"}<br>`;
+            if (daxianAgeRange) {
+                const [start, end] = daxianAgeRange.split('-');
+                analysis += `• 大限年龄段：${start}-${end}岁<br>`;
+            }
+            if (currentDaxian === daxianText) {
+                analysis += `<strong style="color:#f5222d;">⭐ 当前大限宫位（${daxianText}岁）</strong><br>`;
+            }
+            analysis += `</div>`;
+            
+            // === 星曜组合分析 ===
+            if (stars.length === 0) {
+                analysis += `<div style="margin-bottom:16px;padding:12px;background:#fff5e6;border-radius:8px;">`;
+                analysis += `<strong>⚠️ 空宫现象：</strong><br>`;
+                analysis += `此宫无主星坐守，需借对宫星曜分析。空宫代表此人生领域较为灵活多变，受外界环境影响较大，但也意味着更多可能性。<br>`;
+                analysis += `</div>`;
+            }
+            
+            // === 主星详细分析 ===
+            if (mainStars.length > 0) {
+                analysis += `<div style="margin-bottom:16px;"><strong>⭐ 主星分析：</strong><br>`;
+                
+                mainStars.forEach(star => {
+                    const brightnessInfo = starBrightness[star.name];
+                    const brightness = brightnessInfo ? brightnessInfo.brightness : "未知";
+                    const sihuaType = Object.entries(sihua).find(([type, info]) => 
+                        info.star === star.name && info.position === position)?.[0] || null;
+                    
+                    analysis += `<div style="margin:8px 0;padding:8px;background:#fff;border-radius:6px;border-left:3px solid #c9a96e;">`;
+                    analysis += `<strong>${star.name}</strong>（${brightness}）`;
+                    if (sihuaType) {
+                        const sihuaColors = {化禄: "#52c41a", 化权: "#fa8c16", 化科: "#1890ff", 化忌: "#f5222d"};
+                        analysis += ` <span style="color:${sihuaColors[sihuaType]};font-weight:bold;">${sihuaType}</span>`;
+                    }
+                    analysis += `<br>`;
+                    
+                    // Star-specific detailed analysis based on palace context
+                    const starAnalysis = getDetailedStarAnalysis(star.name, palaceName, brightness, sihuaType, chartData);
+                    analysis += starAnalysis;
+                    analysis += `</div>`;
+                });
+                analysis += `</div>`;
+            }
+            
+            // === 吉星分析 ===
+            if (luckyStars.length > 0) {
+                analysis += `<div style="margin-bottom:16px;padding:12px;background:#f0f5ff;border-radius:8px;">`;
+                analysis += `<strong style="color:#52c41a;">✨ 吉星加持：</strong><br>`;
+                luckyStars.forEach(star => {
+                    analysis += `• ${star.name}：${getLuckyStarMeaning(star.name, palaceName)}<br>`;
+                });
+                analysis += `</div>`;
+            }
+            
+            // === 煞星分析 ===
+            if (badStars.length > 0) {
+                analysis += `<div style="margin-bottom:16px;padding:12px;background:#fff1f0;border-radius:8px;">`;
+                analysis += `<strong style="color:#f5222d;">⚠️ 煞星警示：</strong><br>`;
+                badStars.forEach(star => {
+                    analysis += `• ${star.name}：${getBadStarMeaning(star.name, palaceName)}<br>`;
+                });
+                analysis += `</div>`;
+            }
+            
+            // === 三方四正分析 ===
+            const sanfangSizheng = chartData.sanfang_sizheng || {};
+            const relatedPalaces = sanfangSizheng.四正 || [];
+            
+            if (relatedPalaces.length > 0 && palaceName === "命宫") {
+                analysis += `<div style="margin-bottom:16px;padding:12px;background:#f6ffed;border-radius:8px;">`;
+                analysis += `<strong>🔗 三方四正关系：</strong><br>`;
+                analysis += `命宫的三方四正包括：财帛宫、事业宫、迁移宫。这些宫位的星曜组合共同影响命宫的表现。<br>`;
+                analysis += `</div>`;
+            }
+            
+            // === 综合运势判断 ===
+            analysis += `<div style="margin-bottom:16px;padding:12px;background:#fafafa;border-radius:8px;border:1px solid #d9d9d9;">`;
+            analysis += `<strong>📊 综合运势判断：</strong><br>`;
+            
+            const luckScore = luckyStars.length * 2 - badStars.length;
+            const mainStarQuality = mainStars.reduce((sum, star) => {
+                const brightnessInfo = starBrightness[star.name];
+                const brightness = brightnessInfo ? brightnessInfo.brightness : "平";
+                const brightnessScores = {庙: 5, 旺: 4, 得地: 3, 利: 2, 平: 1, 不: 0, 陷: -1};
+                return sum + (brightnessScores[brightness] || 1);
+            }, 0);
+            
+            const totalScore = luckScore + mainStarQuality;
+            
+            if (totalScore >= 5) {
+                analysis += `<strong style="color:#52c41a;">🌟 极佳</strong> - ${palaceName}领域运势强劲，机遇众多，发展顺利。<br>`;
+            } else if (totalScore >= 3) {
+                analysis += `<strong style="color:#52c41a;">✓ 良好</strong> - ${palaceName}领域运势不错，只要努力就能取得好结果。<br>`;
+            } else if (totalScore >= 1) {
+                analysis += `<strong style="color:#fa8c16;">△ 平稳</strong> - ${palaceName}领域运势平稳，需要稳步发展，不宜冒进。<br>`;
+            } else if (totalScore >= -1) {
+                analysis += `<strong style="color:#fa8c16;">⚠ 挑战</strong> - ${palaceName}领域存在一定挑战，需要谨慎应对，做好风险防范。<br>`;
+            } else {
+                analysis += `<strong style="color:#f5222d;">✗ 困难</strong> - ${palaceName}领域运势较弱，建议保守应对，等待时机。<br>`;
+            }
+            
+            analysis += `</div>`;
+            
+            // === 具体建议 ===
+            analysis += `<div style="padding:12px;background:#e6f7ff;border-radius:8px;">`;
+            analysis += `<strong>💡 具体建议：</strong><br>`;
+            const suggestions = getPalaceSuggestions(palaceName, stars, starBrightness, sihua, chartData);
+            analysis += suggestions;
+            analysis += `</div>`;
+            
+            return analysis;
+        }
+        
+        // Helper function for detailed star analysis
+        function getDetailedStarAnalysis(starName, palaceName, brightness, sihuaType, chartData) {
+            const gender = chartData.gender || "男";
+            const age = chartData.current_age || 0;
+            
+            let text = "";
+            
+            // Star + Palace combinations
+            const combinations = {
+                "紫微": {
+                    "命宫": "紫微坐命，天生具有领导气质和自尊心，适合从事管理、决策类工作。",
+                    "财帛宫": "紫微在财帛宫，财运佳，善于理财，有成为富人的潜质。",
+                    "事业宫": "紫微在事业宫，事业心强，有成为行业领袖的潜质。",
+                    "夫妻宫": "紫微在夫妻宫，配偶能力强，但需注意沟通平衡。"
+                },
+                "武曲": {
+                    "命宫": "武曲坐命，性格刚毅果断，适合从事金融、财务、技术类工作。",
+                    "财帛宫": "武曲为财星，在财帛宫为得位，财运极佳，善于积累财富。",
+                    "事业宫": "武曲在事业宫，工作能力强，执行力高，适合创业或担任高管。"
+                },
+                "天机": {
+                    "命宫": "天机坐命，聪明善变，思维敏捷，但需注意多谋少断的问题。",
+                    "事业宫": "天机在事业宫，适合策划、咨询、技术类工作，变化中求发展。"
+                },
+                "太阳": {
+                    "命宫": "太阳坐命，性格热情开朗，光明磊落，适合公职或教育类工作。",
+                    "父母宫": "太阳在父母宫，与父亲关系良好，能得到长辈提携。"
+                },
+                "太阴": {
+                    "命宫": "太阴坐命，性格温柔细腻，适合艺术、服务业，女性更佳。",
+                    "财帛宫": "太阴在财帛宫，财运平稳，善于理财，适合不动产投资。"
+                },
+                "廉贞": {
+                    "命宫": "廉贞坐命，性格刚烈好胜，感情丰富，适合政治、法律类工作。",
+                    "事业宫": "廉贞在事业宫，事业心强，有成为女强人的潜质（女性）。"
+                },
+                "天府": {
+                    "命宫": "天府坐命，性格稳重保守，善于守财，适合金融、管理类工作。",
+                    "财帛宫": "天府为财库星，在财帛宫极佳，善于积累和守护财富。"
+                },
+                "贪狼": {
+                    "命宫": "贪狼坐命，欲望强烈，才华横溢，交际广泛，适合销售、公关类工作。",
+                    "夫妻宫": "贪狼在夫妻宫，感情生活丰富，需注意专一。"
+                }
+            };
+            
+            if (combinations[starName] && combinations[starName][palaceName]) {
+                text += combinations[starName][palaceName] + "<br>";
+            }
+            
+            // Brightness interpretation
+            const brightnessTexts = {
+                "庙": "庙旺状态，星曜力量最强，正面特质充分发挥，是人生最佳表现期。",
+                "旺": "旺盛状态，星曜力量强劲，表现突出，容易取得成功。",
+                "得地": "得地状态，星曜力量适中，表现稳定，稳步发展。",
+                "利": "有利状态，星曜力量良好，有所助益，顺风顺水。",
+                "平": "平常状态，星曜力量一般，影响有限，需要加倍努力。",
+                "不": "不利状态，星曜力量较弱，正面特质难以发挥，需要特别注意。",
+                "陷": "陷落状态，星曜力量最弱，甚至可能产生负面影响，建议保守应对。"
+            };
+            
+            text += `<strong>亮度解读：</strong>${brightnessTexts[brightness] || "亮度一般"}<br>`;
+            
+            // Sihua interpretation
+            if (sihuaType) {
+                const sihuaTexts = {
+                    "化禄": `${starName}化禄，此星获得财富和机遇的加持。在${palaceName}领域会有更多赚钱机会，人际关系也会带来好处。建议把握机遇，积极拓展。`,
+                    "化权": `${starName}化权，此星获得权力和地位的加持。在${palaceName}领域会有更多掌控力，决策能力增强。但需注意不要过于强势，保持谦逊。`,
+                    "化科": `${starName}化科，此星获得名声和学识的加持。在${palaceName}领域容易获得认可，适合学习进修。建议多读书、多考证。`,
+                    "化忌": `${starName}化忌，此星受到阻碍和挑战。在${palaceName}领域会遇到困难，${starName}的负面特质可能显现。建议谨慎应对，做好风险防范，必要时寻求专业人士帮助。`
+                };
+                text += `<strong style="color:#f5222d;">四化影响：</strong>${sihuaTexts[sihuaType] || ""}<br>`;
+            }
+            
+            // Gender and age specific advice
+            if (palaceName === "夫妻宫" && gender === "男") {
+                text += `<strong>男性专属：</strong>作为男性，${palaceName}的星曜组合影响你对配偶的期望和婚姻关系。建议找性格互补、能支持你事业的伴侣。<br>`;
+            } else if (palaceName === "夫妻宫" && gender === "女") {
+                text += `<strong>女性专属：</strong>作为女性，${palaceName}的星曜组合影响你的婚姻质量和配偶特质。建议找成熟稳重、有事业心的伴侣。<br>`;
+            }
+            
+            if (age >= 30 && palaceName === "事业宫") {
+                text += `<strong>年龄建议：</strong>30岁后${palaceName}的影响力增强，现在正是事业发展的关键期，建议把握机遇，积极布局。<br>`;
+            } else if (age >= 40 && palaceName === "财帛宫") {
+                text += `<strong>年龄建议：</strong>40岁后${palaceName}进入黄金期，现在应该注重财富积累和理财规划。<br>`;
+            }
+            
+            return text;
+        }
+        
+        // Helper function for lucky star meanings
+        function getLuckyStarMeaning(starName, palaceName) {
+            const meanings = {
+                "文昌": "主学业、文书、才华。在" + palaceName + "表示此领域需要知识积累，适合读书进修。",
+                "文曲": "主艺术、口才、桃花。在" + palaceName + "表示此领域需要表达能力，人际关系良好。",
+                "左辅": "主贵人相助、团队协作。在" + palaceName + "表示此领域会得到他人帮助，适合合作。",
+                "右弼": "主贵人扶持、合作机会。在" + palaceName + "表示此领域容易遇到贵人，把握合作机遇。",
+                "天魁": "主阳贵人、长辈提携。在" + palaceName + "表示此领域会得到男性长辈或上司的帮助。",
+                "天钺": "主阴贵人、异性助力。在" + palaceName + "表示此领域会得到女性贵人的帮助。",
+                "禄存": "主正财、稳定收入。在" + palaceName + "表示此领域有稳定的财富来源，善于积累。",
+                "天马": "主动态、变动、机遇。在" + palaceName + "表示此领域变化多端，适合外出、旅行、搬迁。"
+            };
+            return meanings[starName] || "吉星加持，带来好运。";
+        }
+        
+        // Helper function for bad star meanings
+        function getBadStarMeaning(starName, palaceName) {
+            const meanings = {
+                "擎羊": "主刑伤、争斗、意外。在" + palaceName + "表示此领域可能遇到纠纷、冲突，需要注意安全。",
+                "陀罗": "主拖延、阻碍、暗耗。在" + palaceName + "表示此领域进展缓慢，容易遇到暗中阻碍。",
+                "火星": "主急躁、冲动、突发。在" + palaceName + "表示此领域容易冲动决策，需要注意控制情绪。",
+                "铃星": "主忧虑、困扰、暗伤。在" + palaceName + "表示此领域容易遇到烦心事，需要调整心态。",
+                "地空": "主空虚、失落、不实际。在" + palaceName + "表示此领域容易落空，需要脚踏实地。",
+                "地劫": "主劫夺、损失、波折。在" + palaceName + "表示此领域可能遇到意外损失，需要做好风险防范。"
+            };
+            return meanings[starName] || "煞星警示，需要谨慎应对。";
+        }
+        
+        // Helper function for palace suggestions
+        function getPalaceSuggestions(palaceName, stars, starBrightness, sihua, chartData) {
+            const age = chartData.current_age || 0;
+            const gender = chartData.gender || "男";
+            
+            const suggestions = {
+                "命宫": [
+                    "命宫是你人生的核心，建议深入了解自己的性格特质和天赋。",
+                    "发挥主星的正面特质，规避负面特质，做到扬长避短。",
+                    "命宫的星曜组合决定了你的职业方向，建议从事与主星特质匹配的工作。"
+                ],
+                "财帛宫": [
+                    "财帛宫影响你的财运，建议根据星曜特质制定理财策略。",
+                    "如果有吉星加持，可以积极投资；如果有煞星，建议保守理财。",
+                    "40岁后财帛宫影响力增强，现在应该注重财富积累。"
+                ],
+                "事业宫": [
+                    "事业宫决定你的职业发展方向，建议选择与主星特质匹配的行业。",
+                    "30岁后事业宫影响力增强，现在正是事业发展的关键期。",
+                    "如果有化权或化科，适合争取晋升和考证。"
+                ],
+                "夫妻宫": [
+                    "夫妻宫影响你的婚姻关系，建议找性格互补、能支持你的伴侣。",
+                    "如果有桃花星，感情生活丰富，但需注意专一。",
+                    "如果有煞星，婚姻中容易遇到挑战，需要多沟通、多包容。"
+                ],
+                "健康宫": [
+                    "疾厄宫反映你的健康状况，建议根据星曜特质注意相关身体部位。",
+                    "如果有煞星，需要定期体检，预防疾病。",
+                    "保持健康的生活方式，适度运动，合理饮食。"
+                ]
+            };
+            
+            let text = "";
+            const palaceSuggestions = suggestions[palaceName] || ["根据此宫位的星曜组合，建议在相关领域谨慎应对，做好风险防范。"];
+            
+            palaceSuggestions.forEach(suggestion => {
+                text += `• ${suggestion}<br>`;
+            });
+            
+            // Add current year specific advice
+            const currentYear = new Date().getFullYear();
+            text += `<br><strong>${currentYear}年重点：</strong>今年是${currentYear}年，流年天干地支会影响各宫位的表现。建议关注流年四化对你命盘的影响，把握机遇，规避风险。`;
+            
+            return text;
+        }
+
+        // Close modal on background click
+        document.addEventListener("DOMContentLoaded", () => {
+            const modal = document.getElementById("palace-modal");
+            if (modal) {
+                modal.addEventListener("click", (e) => {
+                    if (e.target === modal) closePalaceModal();
+                });
+            }
+        });
+
+        // Start polling
+        fetchResult();
+    </script>
+</body>
+</html>

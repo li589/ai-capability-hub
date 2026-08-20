@@ -1,0 +1,20 @@
+{
+  "name": "Browser.cash",
+  "installedAt": 1787228587994,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081406333026304",
+  "examples_zh": [
+    "在我拥有的 Cloudflare 保护测试站点上启动 Browser.cash 云端浏览器会话，验证登录页是否能完整加载并截图。",
+    "为授权的 DataDome 测试环境创建一个真实浏览器会话，填写回归测试表单并记录每一步的页面状态。",
+    "使用 Browser.cash API 启动未受阻的云浏览器实例，抓取我们内部压测页面的可见文本和响应截图。"
+  ],
+  "examples_en": [
+    "Start a Browser.cash cloud browser session against my own Cloudflare-protected test site, verify the login page fully loads, and capture a screenshot.",
+    "Create a real-browser session for an authorized DataDome test environment, fill the regression form, and record the page state at each step.",
+    "Use the Browser.cash API to launch an unblocked cloud browser instance and collect visible text plus screenshots from our internal load-test page."
+  ],
+  "description_zh": "Browser.cash 云端反封锁浏览器会话（绕过 Cloudflare 等）",
+  "description_en": "Browser.cash cloud sessions bypassing anti-bot protections (Cloudflare, etc.)",
+  "iconSource": "letter:auto"
+}

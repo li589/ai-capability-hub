@@ -1,0 +1,11 @@
+{
+  "owner": "hal-9909",
+  "slug": "llm-wikimind-mcp",
+  "displayName": "LLM-WikiMind MCP Setup",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1776166007318,
+    "commit": "https://github.com/openclaw/skills/commit/552171361f2f276df954b60db3fba0af41ab6002"
+  },
+  "history": []
+}

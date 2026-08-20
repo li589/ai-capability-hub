@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:context-pack",
+  "registry": "trae-remote-official",
+  "plugin_name": "context-pack",
+  "version": "0.3.2",
+  "marketplace_plugin_id": "a28e989a-ac11-4d0f-a1fc-9a328e00b03e",
+  "remote_installed_plugin_id": "K007VFRESFL26-",
+  "checksum": "65dd891bcbf2db92193a6346121200471c9fb2410b0544ab99e67b57581f7b07",
+  "file_size": 13251,
+  "installed_at": 1787227204996
+}

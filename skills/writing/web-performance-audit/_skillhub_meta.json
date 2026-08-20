@@ -1,0 +1,11 @@
+{
+  "name": "Web Performance Audit",
+  "installedAt": 1787228401497,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2057443344790511616",
+  "description_zh": "部署后网站性能审计，检查核心指标与加载瓶颈",
+  "description_en": "Audit deployed site performance, Core Web Vitals and loading bottlenecks",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_7c253e0e-1ab.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_7c253e0e-1ab.svg"
+}

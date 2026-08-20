@@ -1,0 +1,17 @@
+{
+  "owner": "imo14reifey",
+  "slug": "animated-video-maker",
+  "displayName": "Animated Video Maker",
+  "latest": {
+    "version": "5.0.1",
+    "publishedAt": 1774847364069,
+    "commit": "https://github.com/openclaw/skills/commit/67560a7b4c97353e93cea22a602dbe494047720d"
+  },
+  "history": [
+    {
+      "version": "1.0.1",
+      "publishedAt": 1774502529367,
+      "commit": "https://github.com/openclaw/skills/commit/fd1556d812c2d7aa2ee949299258b04b673563a7"
+    }
+  ]
+}

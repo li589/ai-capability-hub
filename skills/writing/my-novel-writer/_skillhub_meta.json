@@ -1,0 +1,20 @@
+{
+  "name": "小说创作助手",
+  "installedAt": 1785864575570,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082412937510912",
+  "examples_zh": [
+    "为一部架空武侠长篇创建主角、反派和师门人物卡，并给出前三卷主线冲突",
+    "整理我的都市异能小说世界观，建立势力、能力等级和关键伏笔清单",
+    "根据已有大纲续写第12章，保持人物关系和前文剧情线索一致"
+  ],
+  "examples_en": [
+    "Create character cards for the protagonist, rival, and mentor in a fantasy novel and outline the first three arcs",
+    "Build a world template for my urban supernatural series, including factions, power levels, and hidden plot threads",
+    "Draft chapter 12 from my outline while preserving the existing character relationships and plot threads"
+  ],
+  "description_zh": "辅助创作长篇小说，支持人物设定、世界观管理和分章生成",
+  "description_en": "Novel writing with character management, worldbuilding & chapter generation",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,6 @@
+{
+  "display_name": "outbound-engine",
+  "display_name_en": "Outbound Engine",
+  "description_zh": "自动化外拓邮件引擎，从 ICP 定义到邮件入站全流程",
+  "description_en": "Automated cold outbound engine from ICP definition to inbox delivery"
+}

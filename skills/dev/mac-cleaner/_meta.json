@@ -1,0 +1,11 @@
+{
+  "owner": "apprithm",
+  "slug": "mac-cleaner",
+  "displayName": "Mac Cleaner - Because your Mac shouldn't have more baggage than your ex.",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772313146511,
+    "commit": "https://github.com/openclaw/skills/commit/e859cc9ddb1586fd168ea4217fc5c9b45ddab641"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "name": "北森考勤休假",
+  "installedAt": 1787227673860,
+  "source": "marketplace",
+  "version": "1.1.1",
+  "skillId": "skill_2087174928399294464",
+  "description_zh": "查询考勤与休假数据。支持查看假期余额、考勤打卡记录、排班信息、加班、公出、出差、休假记录和调休假余额。随时掌握出勤状态。",
+  "description_en": "Query attendance and leave data. View leave balances, clock-in/out records, shift schedules, overtime, business trips, leave history, and compensatory leave. Stay on top of attendance at all times.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_cf7e2ced-9a0.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_cf7e2ced-9a0.png"
+}

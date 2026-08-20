@@ -1,0 +1,19 @@
+{
+  "name": "alice-futures-research-opinion",
+  "version": "1.0.5",
+  "description": "CLI: 调用万得 Alice Agent「期货研报观点」技能（A2A SSE），聚合国内商品期货机构研报观点、Wind 情绪评分与观点统计",
+  "type": "module",
+  "private": true,
+  "files": [
+    "SKILL.md",
+    "AGENT.md",
+    "package.json",
+    "_meta.json",
+    "scripts/"
+  ],
+  "scripts": {},
+  "bin": {
+    "alice-futures-research-opinion": "./scripts/cli.mjs",
+    "afro": "./scripts/cli.mjs"
+  }
+}

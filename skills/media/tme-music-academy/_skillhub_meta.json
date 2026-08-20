@@ -1,0 +1,20 @@
+{
+  "name": "TME音乐学堂",
+  "installedAt": 1787228497398,
+  "source": "marketplace",
+  "version": "1.2.0",
+  "skillId": "skill_2086645578974855168",
+  "examples_zh": [
+    "我是零基础的新手，想学编曲，推荐一些适合入门的课程。",
+    "每周有4小时学习时间，想用3个月系统学完混音，帮我规划一下。",
+    "我已经学完四大件编曲了，接下来应该学什么？"
+  ],
+  "examples_en": [
+    "I'm a complete beginner and want to learn music arranging. Recommend some beginner-friendly courses.",
+    "I have 4 hours per week and want to systematically learn mixing in 3 months. Help me plan."
+  ],
+  "description_zh": "你的音乐成长规划与辅助学习小助手。帮你规划学习路径、推荐课程、解答疑问，陪伴你在音乐学习的每一个阶段。",
+  "description_en": "Your music growth planning and learning companion. Maps out learning paths, recommends courses, answers questions, and stays with you at every stage of your music journey.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2086645578974855168/7bd90c01d9673092.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2086645578974855168/7bd90c01d9673092.png"
+}

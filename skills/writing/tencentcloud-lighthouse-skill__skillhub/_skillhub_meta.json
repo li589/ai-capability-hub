@@ -1,0 +1,12 @@
+{
+  "slug": "tencentcloud-lighthouse-skill",
+  "name": "Tencent Cloud Lighthouse",
+  "version": "1.0.2",
+  "installedAt": 1787228976331,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7920727c-4e7d-496a-9223-d9c6673e9e53.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7920727c-4e7d-496a-9223-d9c6673e9e53.png"
+}

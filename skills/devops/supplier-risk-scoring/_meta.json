@@ -1,0 +1,11 @@
+{
+  "owner": "flynndavid",
+  "slug": "supplier-risk-scoring",
+  "displayName": "supplier-risk-scoring",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772576511077,
+    "commit": "https://github.com/openclaw/skills/commit/9023f0ed8d0d7ba23c3757856a0c6e0c803928af"
+  },
+  "history": []
+}

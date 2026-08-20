@@ -1,0 +1,11 @@
+{
+  "name": "公益行业慈善法修订内容解读助手",
+  "installedAt": 1787228336964,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2088460209906302976",
+  "description_zh": "生成新旧法规/合同条款逐条对比表（Excel），以新文为主轴逐条对齐旧文，自动做词语级差异高亮（新增/修改标红加粗，删除加删除线），并汇总未被保留的旧条款去向。当用户需要：(1) 对比新旧法规、政策文件、管理办法的条文差异，(2) 对比新旧合同/协议版本的条款差异，(3) 制作类似\"修订前后对比表\"\"逐条对比表\"的交付成果，(4) 提到\"最新修订的XX法/办法/条例\"\"XX法新版\"\"XX最新版本\"并希望了解/查看/对比其变化内容——即使用户没有直接说\"新旧对比\"或\"对比表\"，只要涉及某部法规/办法的\"最新修订版\"，也隐含着与其上一版本对比的需求，应主动触发本技能而非仅返回法规解读或摘要时，使用本技能。",
+  "description_en": "Automatically generates a clause-by-clause comparison table (Excel) between the old and new versions of charity-sector regulations (such as the Charity Law and its implementing rules) — aligning the old text against the new as the primary axis, highlighting additions, edits, and deletions at the word level, and summarizing where superseded clauses have gone. Helps organizations quickly grasp what actually changed and assess compliance impact, without manual line-by-line comparison.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/b104c3ba-4dc0-4aa0-8f67-d8f253f69ba1/avatar/skill/au_191b96f9-6ee.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/b104c3ba-4dc0-4aa0-8f67-d8f253f69ba1/avatar/skill/au_191b96f9-6ee.png"
+}

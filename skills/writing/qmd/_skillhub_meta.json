@@ -1,0 +1,20 @@
+{
+  "name": "笔记搜索",
+  "installedAt": 1787228321293,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082622976532480",
+  "examples_zh": [
+    "搜索我本地笔记里包含'OKR'的文件",
+    "列出最近修改的Markdown文件",
+    "在笔记中全文搜索某个关键词"
+  ],
+  "examples_en": [
+    "Search local notes for files containing OKR",
+    "List recently modified Markdown files",
+    "Full-text search notes for a keyword"
+  ],
+  "description_zh": "本地 Markdown 笔记搜索引擎",
+  "description_en": "Local search engine for Markdown notes",
+  "iconSource": "letter:auto"
+}

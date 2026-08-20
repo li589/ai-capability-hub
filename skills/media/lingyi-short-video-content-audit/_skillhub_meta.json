@@ -1,0 +1,10 @@
+{
+  "name": "短视频内容审核（文案/画面/声音）",
+  "installedAt": 1787228611950,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2088572336278011904",
+  "description_zh": "【零一数科·出品】短视频内容审核（文案/画面/声音）（付费版）。视频发布前内容合规质检。支持口播文本或本地视频上传；文本层实质质检+画面声音人工复核清单+总判定。触发词：短视频内容审核、口播合规、发布前违禁词、广告法视频。",
+  "description_en": "[Lingyi Tech] Pre-publish short-video compliance audit covering text-level violations, a visual/audio manual checklist, and an overall verdict.",
+  "iconSource": "letter:auto"
+}

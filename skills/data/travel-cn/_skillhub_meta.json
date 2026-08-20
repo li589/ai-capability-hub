@@ -1,0 +1,20 @@
+{
+  "name": "travel-cn",
+  "installedAt": 1787228410882,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083000434532352",
+  "examples_zh": [
+    "帮我在去哪儿、携程、飞猪上比较 6 月 20 日上海到成都的机票价格和起飞时间。",
+    "查杭州西湖附近 7 月 5 日入住两晚的酒店，按携程和飞猪价格对比。",
+    "查询北京到西安明天的高铁票和兵马俑景区门票信息。"
+  ],
+  "examples_en": [
+    "Compare June 20 flight prices and departure times from Shanghai to Chengdu across Qunar, Ctrip, and Fliggy.",
+    "Search hotels near West Lake in Hangzhou for two nights from July 5 and compare Ctrip and Fliggy prices.",
+    "Check tomorrow's Beijing to Xi'an high-speed train tickets and Terracotta Warriors attraction ticket options."
+  ],
+  "description_zh": "聚合去哪儿、携程、飞猪，查机票、酒店、火车票、景点门票",
+  "description_en": "Search flights, hotels and train tickets via Qunar, Ctrip and Fliggy",
+  "iconSource": "letter:auto"
+}

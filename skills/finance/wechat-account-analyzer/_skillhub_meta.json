@@ -1,0 +1,11 @@
+{
+  "name": "公众号账号诊断",
+  "installedAt": 1787227611934,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2085649851187273728",
+  "description_zh": "四维度量化评分诊断公众号健康度，对标行业生成优化建议",
+  "description_en": "Diagnose WeChat account health with 4-dimensional scoring and optimization tips",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_9c55b101-02a.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_9c55b101-02a.svg"
+}

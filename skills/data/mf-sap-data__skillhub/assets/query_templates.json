@@ -1,0 +1,300 @@
+{
+    "templates": {
+        "material_query": {
+            "name": "物料查询模板",
+            "description": "物料主数据查询模板",
+            "table_name": "MARA",
+            "fields": ["MATNR", "MAKTX", "MEINS", "MATKL", "ERSDA", "LAEDA"],
+            "default_filters": [
+                {
+                    "FieldName": "MATKL",
+                    "Calculation": "Equal",
+                    "Lower": "ROH"
+                }
+            ],
+            "default_orders": [
+                {
+                    "FieldName": "MATNR",
+                    "Direction": "Ascend"
+                }
+            ],
+            "page_size": 1000,
+            "language_table": "MAKT",
+            "examples": [
+                {
+                    "name": "查询原材料",
+                    "description": "查询所有原材料物料",
+                    "filters": [
+                        {
+                            "FieldName": "MATKL",
+                            "Calculation": "Equal",
+                            "Lower": "ROH"
+                        }
+                    ]
+                },
+                {
+                    "name": "查询最近创建的物料",
+                    "description": "查询最近30天创建的物料",
+                    "filters": [
+                        {
+                            "FieldName": "ERSDA",
+                            "Calculation": "GreatEqual",
+                            "Lower": "20240101"
+                        }
+                    ],
+                    "orders": [
+                        {
+                            "FieldName": "ERSDA",
+                            "Direction": "Descend"
+                        }
+                    ]
+                }
+            ]
+        },
+        "production_order_query": {
+            "name": "生产订单查询模板",
+            "description": "生产订单数据查询模板",
+            "table_name": "AUFK",
+            "fields": ["AUFNR", "KTEXT", "GAMNG", "GLTRP", "FTRMI", "WERKS", "AUART", "STAT"],
+            "default_filters": [
+                {
+                    "FieldName": "AUART",
+                    "Calculation": "Equal",
+                    "Lower": "PP01"
+                }
+            ],
+            "default_orders": [
+                {
+                    "FieldName": "AUFNR",
+                    "Direction": "Descend"
+                }
+            ],
+            "page_size": 1000,
+            "examples": [
+                {
+                    "name": "查询进行中的生产订单",
+                    "description": "查询状态为进行中的生产订单",
+                    "filters": [
+                        {
+                            "FieldName": "STAT",
+                            "Calculation": "Like",
+                            "Lower": "%REL%"
+                        }
+                    ]
+                },
+                {
+                    "name": "查询指定工厂的生产订单",
+                    "description": "查询指定工厂的生产订单",
+                    "filters": [
+                        {
+                            "FieldName": "WERKS",
+                            "Calculation": "Equal",
+                            "Lower": "1000"
+                        }
+                    ]
+                }
+            ]
+        },
+        "sales_order_query": {
+            "name": "销售订单查询模板",
+            "description": "销售订单数据查询模板",
+            "table_name": "VBAK",
+            "fields": ["VBELN", "ERDAT", "NETWR", "WAERK", "VKORG", "VTWEG", "SPART", "KUNNR"],
+            "default_filters": [
+                {
+                    "FieldName": "VKORG",
+                    "Calculation": "Equal",
+                    "Lower": "1000"
+                }
+            ],
+            "default_orders": [
+                {
+                    "FieldName": "ERDAT",
+                    "Direction": "Descend"
+                }
+            ],
+            "page_size": 1000,
+            "examples": [
+                {
+                    "name": "查询最近销售订单",
+                    "description": "查询最近30天的销售订单",
+                    "filters": [
+                        {
+                            "FieldName": "ERDAT",
+                            "Calculation": "GreatEqual",
+                            "Lower": "20240101"
+                        }
+                    ]
+                },
+                {
+                    "name": "查询大额销售订单",
+                    "description": "查询金额大于10000的销售订单",
+                    "filters": [
+                        {
+                            "FieldName": "NETWR",
+                            "Calculation": "Great",
+                            "Lower": "10000"
+                        }
+                    ]
+                }
+            ]
+        },
+        "material_description_query": {
+            "name": "物料描述查询模板",
+            "description": "物料描述多语言查询模板",
+            "table_name": "MAKT",
+            "fields": ["MATNR", "SPRAS", "MAKTX", "MAKTG"],
+            "default_filters": [
+                {
+                    "FieldName": "SPRAS",
+                    "Calculation": "Equal",
+                    "Lower": "ZH"
+                }
+            ],
+            "default_orders": [
+                {
+                    "FieldName": "MATNR",
+                    "Direction": "Ascend"
+                }
+            ],
+            "page_size": 1000,
+            "examples": [
+                {
+                    "name": "查询中文物料描述",
+                    "description": "查询中文物料描述",
+                    "filters": [
+                        {
+                            "FieldName": "SPRAS",
+                            "Calculation": "Equal",
+                            "Lower": "ZH"
+                        }
+                    ]
+                },
+                {
+                    "name": "查询物料描述包含关键词",
+                    "description": "查询描述包含特定关键词的物料",
+                    "filters": [
+                        {
+                            "FieldName": "MAKTX",
+                            "Calculation": "Like",
+                            "Lower": "%原材料%"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "common_filters": {
+        "date_range": {
+            "name": "日期范围过滤",
+            "description": "按日期范围过滤",
+            "template": [
+                {
+                    "Logic": "And",
+                    "FieldName": "{date_field}",
+                    "Calculation": "Between",
+                    "Lower": "{start_date}",
+                    "Hights": "{end_date}"
+                }
+            ],
+            "parameters": {
+                "date_field": "日期字段名",
+                "start_date": "开始日期 (YYYYMMDD)",
+                "end_date": "结束日期 (YYYYMMDD)"
+            }
+        },
+        "text_search": {
+            "name": "文本搜索",
+            "description": "文本字段模糊搜索",
+            "template": [
+                {
+                    "FieldName": "{text_field}",
+                    "Calculation": "Like",
+                    "Lower": "%{keyword}%"
+                }
+            ],
+            "parameters": {
+                "text_field": "文本字段名",
+                "keyword": "搜索关键词"
+            }
+        },
+        "value_range": {
+            "name": "数值范围",
+            "description": "按数值范围过滤",
+            "template": [
+                {
+                    "FieldName": "{value_field}",
+                    "Calculation": "Between",
+                    "Lower": "{min_value}",
+                    "Hights": "{max_value}"
+                }
+            ],
+            "parameters": {
+                "value_field": "数值字段名",
+                "min_value": "最小值",
+                "max_value": "最大值"
+            }
+        },
+        "multiple_values": {
+            "name": "多值过滤",
+            "description": "在多个值中过滤",
+            "template": [
+                {
+                    "FieldName": "{field_name}",
+                    "Calculation": "In",
+                    "Hights": ["{value1}", "{value2}", "{value3}"]
+                }
+            ],
+            "parameters": {
+                "field_name": "字段名",
+                "values": "值列表"
+            }
+        }
+    },
+    "field_mappings": {
+        "MARA": {
+            "MATNR": {"display_name": "物料号", "type": "CHAR", "length": 18, "is_key": true},
+            "MAKTX": {"display_name": "物料描述", "type": "CHAR", "length": 40, "is_key": false},
+            "MEINS": {"display_name": "基本单位", "type": "CHAR", "length": 3, "is_key": false},
+            "MATKL": {"display_name": "物料组", "type": "CHAR", "length": 9, "is_key": false},
+            "ERSDA": {"display_name": "创建日期", "type": "DATS", "length": 8, "is_key": false},
+            "LAEDA": {"display_name": "最后更改日期", "type": "DATS", "length": 8, "is_key": false}
+        },
+        "AUFK": {
+            "AUFNR": {"display_name": "生产订单", "type": "CHAR", "length": 12, "is_key": true},
+            "KTEXT": {"display_name": "订单描述", "type": "CHAR", "length": 40, "is_key": false},
+            "GAMNG": {"display_name": "订单数量", "type": "QUAN", "length": 13, "is_key": false},
+            "GLTRP": {"display_name": "基本完成日期", "type": "DATS", "length": 8, "is_key": false},
+            "FTRMI": {"display_name": "实际完成日期", "type": "DATS", "length": 8, "is_key": false},
+            "WERKS": {"display_name": "工厂", "type": "CHAR", "length": 4, "is_key": false},
+            "AUART": {"display_name": "订单类型", "type": "CHAR", "length": 4, "is_key": false},
+            "STAT": {"display_name": "订单状态", "type": "CHAR", "length": 5, "is_key": false}
+        },
+        "VBAK": {
+            "VBELN": {"display_name": "销售订单", "type": "CHAR", "length": 10, "is_key": true},
+            "ERDAT": {"display_name": "创建日期", "type": "DATS", "length": 8, "is_key": false},
+            "NETWR": {"display_name": "净价值", "type": "CURR", "length": 15, "is_key": false},
+            "WAERK": {"display_name": "货币", "type": "CUKY", "length": 5, "is_key": false},
+            "VKORG": {"display_name": "销售组织", "type": "CHAR", "length": 4, "is_key": false},
+            "VTWEG": {"display_name": "分销渠道", "type": "CHAR", "length": 2, "is_key": false},
+            "SPART": {"display_name": "产品组", "type": "CHAR", "length": 2, "is_key": false},
+            "KUNNR": {"display_name": "客户", "type": "CHAR", "length": 10, "is_key": false}
+        }
+    },
+    "usage_examples": {
+        "python": {
+            "basic_query": "skill.query_table(table_name='MARA', fields=['MATNR', 'MAKTX'], page_size=100)",
+            "with_filters": "skill.query_table(table_name='MARA', fields=['MATNR', 'MAKTX'], filters=[{'FieldName': 'MATKL', 'Calculation': 'Equal', 'Lower': 'ROH'}])",
+            "with_orders": "skill.query_table(table_name='MARA', fields=['MATNR', 'MAKTX'], orders=[{'FieldName': 'MATNR', 'Direction': 'Ascend'}])",
+            "intelligent_query": "skill.intelligent_query(table_name='MARA', query_intent='查询2024年创建的原材料物料')"
+        },
+        "cli": {
+            "quick_test": "python -c \"from sap_data_query_skill import SAPDataQuerySkill; s=SAPDataQuerySkill(); print(s.get_status())\"",
+            "test_auth": "python -c \"from sap_data_query_skill import SAPDataQuerySkill; s=SAPDataQuerySkill(); print(s.authenticate())\"",
+            "simple_query": "python -c \"from sap_data_query_skill import SAPDataQuerySkill; s=SAPDataQuerySkill(); s.authenticate(); r=s.query_table('MARA', page_size=5); print(r['statistics'])\""
+        }
+    },
+    "version": "1.0.0",
+    "last_updated": "2024-04-22",
+    "author": "明辉集团 IT 部门"
+}

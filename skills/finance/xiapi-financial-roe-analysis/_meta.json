@@ -1,0 +1,17 @@
+{
+  "owner": "ksky521",
+  "slug": "xiapi-financial-roe-analysis",
+  "displayName": "虾皮财务分析大师",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1775985703190,
+    "commit": "https://github.com/openclaw/skills/commit/3633ffcbbe4302f52645a0f524f62e7bc2bc066e"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1775621112397,
+      "commit": "https://github.com/openclaw/skills/commit/3f436763fd4100988f7bebed5db38d96d19cf2df"
+    }
+  ]
+}

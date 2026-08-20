@@ -1,0 +1,19 @@
+# SAP 数据查询 Skill 依赖包
+
+# 核心依赖
+requests>=2.28.0
+pandas>=1.5.0
+openpyxl>=3.0.0
+python-dotenv>=0.21.0
+
+# 开发依赖
+pytest>=7.0.0
+black>=22.0.0
+flake8>=5.0.0
+mypy>=0.991
+
+# 可选依赖（用于高级功能）
+# xlrd>=2.0.0  # Excel读取
+# xlsxwriter>=3.0.0  # Excel写入
+# sqlalchemy>=1.4.0  # 数据库支持
+# redis>=4.5.0  # 缓存支持

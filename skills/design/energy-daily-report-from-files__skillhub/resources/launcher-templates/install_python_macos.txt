@@ -1,0 +1,39 @@
+#!/bin/bash
+set -u
+
+PROJECT_DIR="${1:-$(cd "$(dirname "$0")" && pwd)}"
+CONFIG="$PROJECT_DIR/config/python-runtime.json"
+CACHE="$PROJECT_DIR/.runtime-cache"
+
+fail() {
+  printf '[%s] %s\n处理建议：%s\n' "$1" "$2" "$3"
+  exit 2
+}
+
+[ -f "$CONFIG" ] || fail "PYTHON_RUNTIME_CONFIG_MISSING" "缺少 Python 运行时配置。" "重新解压完整系统 ZIP。"
+
+FILE_NAME="$(/usr/bin/plutil -extract macos.installer_file raw -o - "$CONFIG" 2>/dev/null)" || fail "PYTHON_RUNTIME_CONFIG_INVALID" "运行时配置无法读取。" "重新生成完整系统 ZIP。"
+EXPECTED_SHA256="$(/usr/bin/plutil -extract macos.sha256 raw -o - "$CONFIG" 2>/dev/null)" || fail "PYTHON_RUNTIME_CONFIG_INVALID" "运行时配置无法读取。" "重新生成完整系统 ZIP。"
+PUBLISHER="$(/usr/bin/plutil -extract macos.publisher raw -o - "$CONFIG" 2>/dev/null)" || fail "PYTHON_RUNTIME_CONFIG_INVALID" "运行时配置无法读取。" "重新生成完整系统 ZIP。"
+
+case "$FILE_NAME" in
+  */*|*\\*|"") fail "PYTHON_INSTALLER_NAME_INVALID" "安装包文件名不安全。" "仅填写不含目录的官方 PKG 文件名。" ;;
+  *.pkg) ;;
+  *) fail "PYTHON_INSTALLER_NAME_INVALID" "安装包必须是 PKG 文件。" "使用 Python 官方 macOS PKG。" ;;
+esac
+printf '%s' "$EXPECTED_SHA256" | /usr/bin/grep -Eq '^[A-Fa-f0-9]{64}$' || fail "PYTHON_INSTALLER_HASH_MISSING" "安装包 SHA-256 未固定。" "由管理员核对并填写官方哈希。"
+[ "$PUBLISHER" = "Python Software Foundation" ] || fail "PYTHON_INSTALLER_PUBLISHER_INVALID" "安装包发布者配置不正确。" "发布者必须是 Python Software Foundation。"
+
+PKG="$CACHE/$FILE_NAME"
+[ -f "$PKG" ] || fail "PYTHON_INSTALLER_NOT_PROVIDED" "未发现经过批准的 Python 安装包。" "请由 IT 管理员从 Python 官方渠道获取文件并放入 .runtime-cache；此脚本不会联网下载。"
+
+ACTUAL_SHA256="$(/usr/bin/shasum -a 256 "$PKG" | /usr/bin/awk '{print $1}')"
+[ "$ACTUAL_SHA256" = "$EXPECTED_SHA256" ] || fail "PYTHON_INSTALLER_HASH_MISMATCH" "Python 安装包哈希不匹配，已停止。" "不要运行该文件；联系 IT 管理员重新获取。"
+
+/usr/sbin/pkgutil --check-signature "$PKG" > /dev/null 2>&1 || fail "PYTHON_INSTALLER_SIGNATURE_INVALID" "Python 安装包签名验证失败，已停止。" "不要运行该文件；联系 IT 管理员。"
+/usr/sbin/pkgutil --check-signature "$PKG" 2>&1 | /usr/bin/grep -q "Python Software Foundation" || fail "PYTHON_INSTALLER_PUBLISHER_INVALID" "Python 安装包发布者不正确，已停止。" "不要运行该文件。"
+
+printf '[PYTHON_INSTALLER_VERIFIED] 安装包哈希和数字签名验证通过。\n'
+printf '安全策略：本脚本不会下载、运行安装器或申请管理员权限。\n'
+printf '下一步：请由用户或 IT 管理员手动检查并安装：%s\n' "$PKG"
+exit 0

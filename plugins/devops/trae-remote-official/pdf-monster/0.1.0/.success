@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:pdf-monster",
+  "registry": "trae-remote-official",
+  "plugin_name": "pdf-monster",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "6482521e-0c34-4b40-85ae-39dbb18f0c5d",
+  "remote_installed_plugin_id": "DTS-WJPB6C4Z7J",
+  "checksum": "09304c1a6f2bfd63799cfb6548a565053af273b4888f1f8825eac201aca21dd7",
+  "file_size": 15371,
+  "installed_at": 1787227202484
+}

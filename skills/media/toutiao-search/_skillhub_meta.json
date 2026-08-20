@@ -1,0 +1,11 @@
+{
+  "name": "今日头条爆款内容查询",
+  "installedAt": 1785864564238,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2082738705387094016",
+  "description_zh": "今日头条爆款内容查询工具，关键词搜索最新作品，支持排序筛选、CSV导出与HTML报告。",
+  "description_en": "Toutiao hot content search tool. Search the latest works by keyword with sorting, time filters, CSV export and HTML report.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_3de43356-bf5.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_3de43356-bf5.svg"
+}

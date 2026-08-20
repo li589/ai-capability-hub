@@ -1,0 +1,17 @@
+{
+  "owner": "chris1wang3",
+  "slug": "competitive-product-research",
+  "displayName": "competitive-product-research",
+  "latest": {
+    "version": "1.3.1",
+    "publishedAt": 1775637199200,
+    "commit": "https://github.com/openclaw/skills/commit/a7471f76345d847af9808472f9606c9756e259a0"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1775215759778,
+      "commit": "https://github.com/openclaw/skills/commit/6d957a8646d310591d754ef96b39aa482bb98948"
+    }
+  ]
+}

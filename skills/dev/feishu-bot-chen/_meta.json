@@ -1,0 +1,11 @@
+{
+  "owner": "jason-aka-chen",
+  "slug": "feishu-bot-chen",
+  "displayName": "Feishu Bot",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774159569737,
+    "commit": "https://github.com/openclaw/skills/commit/645a788db5126ed8398a30e163170e1a9d0956d6"
+  },
+  "history": []
+}

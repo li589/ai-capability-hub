@@ -1,0 +1,11 @@
+{
+  "owner": "nexscope",
+  "slug": "amazon-product-photography-skill",
+  "displayName": "Amazon Product Photography",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774404576620,
+    "commit": "https://github.com/openclaw/skills/commit/4509ab8acae0fa6e8dffdaadf68973293e532f7d"
+  },
+  "history": []
+}

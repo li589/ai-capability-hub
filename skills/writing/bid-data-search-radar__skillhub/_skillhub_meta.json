@@ -1,0 +1,12 @@
+{
+  "slug": "bid-data-search-radar",
+  "name": "招投标数据搜雷达",
+  "version": "1.0.0",
+  "installedAt": 1787228892838,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/629785/f062c9c9977445a2b3373ed8b2b4d6de.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/629785/f062c9c9977445a2b3373ed8b2b4d6de.png"
+}

@@ -1,0 +1,9 @@
+{
+  "name": "supabase_get_project",
+  "description": "This tool allow you to get the project information from Supabase integration.\nIf you need to setup a Supabase connection, you **MUST** always call this tool to get anon_key, service_role_key and URL from project integration.\n",
+  "arguments": {
+    "additionalProperties": false,
+    "properties": {},
+    "type": "object"
+  }
+}

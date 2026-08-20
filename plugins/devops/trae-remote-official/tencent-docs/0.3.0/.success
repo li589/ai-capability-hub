@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:tencent-docs",
+  "registry": "trae-remote-official",
+  "plugin_name": "tencent-docs",
+  "version": "0.3.0",
+  "marketplace_plugin_id": "df05c328-ffe2-4352-bae8-8192187fb72e",
+  "remote_installed_plugin_id": "JNFQMHELZ1Y407",
+  "checksum": "b5b1b846f7721bdbbb5f80a6d7f4bb4800942dcce5be912b5dbd5edbc84c8e51",
+  "file_size": 395283,
+  "installed_at": 1787227204056
+}

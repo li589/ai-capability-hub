@@ -1,0 +1,10 @@
+{
+  "name": "eMES 蓝图规划助手",
+  "installedAt": 1787228543502,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089989731007475712",
+  "description_zh": "基于调研报告/实施报告/售前方案生成客户专属蓝图规划 PPT（22-28 页），覆盖范围界定、8大透明、验收条件、主流程、核心子流程、差异、效益、风险、下阶段工作九大重点。",
+  "description_en": "Generate a customer-specific blueprint planning PPT (22-28 pages) from survey/implementation reports, covering scope, transparency, acceptance, main & sub processes, gaps, benefits, risks, next steps.",
+  "iconSource": "letter:auto"
+}

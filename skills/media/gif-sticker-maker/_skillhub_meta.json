@@ -1,0 +1,21 @@
+{
+  "name": "GIF 贴纸制作",
+  "installedAt": 1787228355423,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082023176130560",
+  "examples_zh": [
+    "把这张照片做成表情包",
+    "把我的宠物照片转成 GIF 贴纸",
+    "生成4个带字幕的动态表情"
+  ],
+  "examples_en": [
+    "Turn this photo into a GIF sticker pack",
+    "Convert my pet photo to animated stickers",
+    "Generate 4 GIF stickers with captions from this image"
+  ],
+  "description_zh": "照片转动态 GIF 贴纸",
+  "description_en": "Convert photos to 4 animated GIF stickers with captions",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/gif-sticker-maker.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/gif-sticker-maker.svg"
+}

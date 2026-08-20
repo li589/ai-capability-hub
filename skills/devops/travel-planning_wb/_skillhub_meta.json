@@ -1,0 +1,20 @@
+{
+  "name": "travel-planning",
+  "installedAt": 1787228418926,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053083345834008576",
+  "examples_zh": [
+    "为我规划东京、京都、大阪 8 天路线，控制人均预算 9000 元并减少换酒店次数。",
+    "做一份带小孩去新加坡 5 天的每日行程、交通安排和亲子景点清单。",
+    "我要 10 月去意大利 12 天，请生成签证准备时间表、打包清单和城市间路线。"
+  ],
+  "examples_en": [
+    "Plan an 8-day Tokyo, Kyoto, and Osaka itinerary under $1,300 per person with minimal hotel changes.",
+    "Create a 5-day family trip to Singapore with daily plans, transport logistics, and kid-friendly attractions.",
+    "Build a 12-day Italy plan for October with visa timeline, packing list, and intercity routing."
+  ],
+  "description_zh": "行程规划：多城市路线、预算优化、打包清单、签证时间表",
+  "description_en": "Plan trips with itineraries, multi-city routing, budget optimization and packing lists",
+  "iconSource": "letter:auto"
+}

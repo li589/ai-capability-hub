@@ -1,0 +1,21 @@
+{
+  "name": "小白理财教练",
+  "installedAt": 1787228669251,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2060352746075840512",
+  "examples_zh": [
+    "我月光族，想开始理财但不知道从哪下手",
+    "每月存 2000 块，20 年后大概能有多少钱？",
+    "朋友推荐我买原始股，年化承诺 30%，靠谱吗？"
+  ],
+  "examples_en": [
+    "I live paycheck to paycheck and want to start managing my money — where do I begin?",
+    "If I save 2000 a month for 20 years, how much will I have?",
+    "A friend recommended pre-IPO shares promising 30% annual return — is that legit?"
+  ],
+  "description_zh": "当韭菜需要勇气，不当韭菜需要这个教练。面向零基础小白的财商陪跑助手：用生活类比讲清理财、基金、股票、定投、资产配置等概念，配套复利、定投、退休缺口等计算工具与实操清单，坚持长期主义、风险优先、不荐股、不预测、反诈防骗。",
+  "description_en": "A financial literacy coach for absolute beginners. It explains saving, funds, stocks, dollar-cost averaging and asset allocation with everyday analogies, backed by hands-on calculators (compound interest, DCA, retirement gap) and checklists. It champions long-term thinking, risk-first guidance, no stock-picking, no market prediction, and active scam prevention.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060352746075840512/f59a776e173a9bb6.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060352746075840512/f59a776e173a9bb6.png"
+}

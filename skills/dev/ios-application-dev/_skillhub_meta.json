@@ -1,0 +1,21 @@
+{
+  "name": "iOS 应用开发",
+  "installedAt": 1785864410698,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082181124681728",
+  "examples_zh": [
+    "用 SwiftUI 实现一个设置页面",
+    "检查我的 UIKit 代码是否符合 Apple HIG",
+    "帮我写一个自定义 iOS 导航栏"
+  ],
+  "examples_en": [
+    "Build a settings screen with SwiftUI",
+    "Review my UIKit code for Apple HIG compliance",
+    "Create a custom iOS navigation bar"
+  ],
+  "description_zh": "iOS 应用开发指南",
+  "description_en": "iOS development guide (UIKit, SnapKit, SwiftUI)",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/ios-application-dev.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/ios-application-dev.svg"
+}

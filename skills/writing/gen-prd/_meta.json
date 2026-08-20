@@ -1,0 +1,11 @@
+{
+  "owner": "lf951515851",
+  "slug": "gen-prd",
+  "displayName": "Gen Prd",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774797255821,
+    "commit": "https://github.com/openclaw/skills/commit/41cf3b50715cfd40e5cfbd5e1abda0d0007cc950"
+  },
+  "history": []
+}

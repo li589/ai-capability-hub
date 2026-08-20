@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Precision Ledger report direction preview</title>
+  <desc id="desc">A white procurement ledger with cobalt comparison marks, rust exceptions, asymmetric evidence columns, and a dominant cost bridge.</desc>
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <rect x="64" y="52" width="1472" height="2" fill="#172033" opacity=".16"/>
+  <g font-family="Arial, sans-serif" fill="#172033">
+    <text x="64" y="102" font-size="18" font-weight="700" letter-spacing="3" fill="#2856A3">REFERENCE 02 / COBALT FORGE</text>
+    <text x="64" y="190" font-size="68" font-weight="600">报价不是总成本</text>
+    <text x="64" y="236" font-size="22" fill="#172033" opacity=".64">归一口径后，方案 B 的年度暴露降低 12.4%</text>
+  </g>
+  <rect x="1130" y="92" width="406" height="164" rx="2" fill="#172033"/>
+  <g font-family="Arial, sans-serif" fill="#FFFFFF">
+    <text x="1164" y="132" font-size="15" letter-spacing="2">DECISION</text>
+    <text x="1164" y="188" font-size="34" font-weight="600">条件授标 B</text>
+    <text x="1164" y="224" font-size="16" fill="#FFFFFF" opacity=".78">以容量验证为生效门槛</text>
+  </g>
+  <g transform="translate(64 320)" font-family="Arial, sans-serif">
+    <text x="0" y="0" font-size="16" font-weight="700" fill="#172033" opacity=".64" letter-spacing="2">TCO BRIDGE / RMB · 年</text>
+    <line x1="0" y1="410" x2="960" y2="410" stroke="#172033" stroke-opacity=".16" stroke-width="2"/>
+    <rect x="0" y="110" width="170" height="300" fill="#2856A3"/>
+    <rect x="210" y="210" width="170" height="200" fill="#2856A3" opacity=".55"/>
+    <rect x="420" y="266" width="170" height="144" fill="#2856A3" opacity=".25"/>
+    <rect x="630" y="302" width="170" height="108" fill="#C44D32"/>
+    <rect x="840" y="80" width="120" height="330" fill="#172033"/>
+    <g fill="#172033" font-size="15">
+      <text x="0" y="442">报价</text><text x="210" y="442">运维</text><text x="420" y="442">切换</text>
+      <text x="630" y="442">风险</text><text x="840" y="442">年度 TCO</text>
+    </g>
+  </g>
+  <g transform="translate(1100 336)" font-family="Arial, sans-serif">
+    <text x="0" y="0" font-size="16" font-weight="700" fill="#172033" opacity=".64" letter-spacing="2">EVIDENCE RAIL</text>
+    <g transform="translate(0 46)">
+      <rect width="436" height="94" rx="2" fill="#172033" opacity=".035"/>
+      <text x="24" y="34" font-size="14" font-weight="700" fill="#2856A3">OBS · 采购报价</text>
+      <text x="24" y="68" font-size="18" fill="#172033">同一用量阶梯、未税口径</text>
+    </g>
+    <g transform="translate(0 158)">
+      <rect width="436" height="94" rx="2" fill="#172033" opacity=".035"/>
+      <text x="24" y="34" font-size="14" font-weight="700" fill="#2856A3">DRV · 年度用量</text>
+      <text x="24" y="68" font-size="18" fill="#172033">基准 / 高需求双情景</text>
+    </g>
+    <g transform="translate(0 270)">
+      <rect width="436" height="126" rx="2" fill="#C44D32" opacity=".08"/>
+      <text x="24" y="34" font-size="14" font-weight="700" fill="#C44D32">GATE · 容量验证</text>
+      <text x="24" y="68" font-size="18" fill="#172033">连续 14 天达到目标吞吐</text>
+      <text x="24" y="100" font-size="15" fill="#172033" opacity=".64">失败则回退至 60/40 分配</text>
+    </g>
+  </g>
+</svg>

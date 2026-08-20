@@ -1,0 +1,11 @@
+{
+  "owner": "misolith",
+  "slug": "agent-memory-journal",
+  "displayName": "Agent Memory Journal",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1774889006117,
+    "commit": "https://github.com/openclaw/skills/commit/a4185e9be5e66cdda4fa393f5c9dcdb06683ace6"
+  },
+  "history": []
+}

@@ -1,0 +1,21 @@
+{
+  "name": "什么值得买购物管家",
+  "installedAt": 1787228410267,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2061810811874226176",
+  "examples_zh": [
+    "帮我推荐一款适合通勤的降噪耳机",
+    "iPhone 16 值得买吗？帮我总结优缺点",
+    "帮我比较一下这两款扫地机器人哪款更适合养宠家庭"
+  ],
+  "examples_en": [
+    "Recommend noise-cancelling headphones for commuting.",
+    "Is the iPhone 16 worth buying? Summarize its pros and cons.",
+    "Compare these two robot vacuums and tell me which is better for a home with pets."
+  ],
+  "description_zh": "值得买开发的海纳购物管家，一款专业为用户提供来自全网与兴趣高度相关的、公允的AI消费决策支持工具。它支持四种消费决策模式：商品推荐、商品总结、商品对比、优惠好价。",
+  "description_en": "Zhidemai's HaiNa Shopping Assistant, an AI consumer decision-support tool that provides fair and relevant shopping insights from across the web. It supports four decision modes: product recommendation, product summary, product comparison, and best-price discovery.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2061810811874226176/32d3ca65bbfdf462.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2061810811874226176/32d3ca65bbfdf462.png"
+}

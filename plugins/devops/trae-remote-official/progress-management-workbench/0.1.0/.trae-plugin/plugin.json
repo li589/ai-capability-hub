@@ -1,0 +1,34 @@
+{
+  "name": "progress-management-workbench",
+  "version": "0.1.0",
+  "description": "轻量级项目管理看板工具，生成可在浏览器中直接使用的单文件 HTML 应用；支持工作项列表与看板两种视图，提供统计概览、筛选搜索、优先级管理与拖拽流转，数据保存在浏览器本地，无需构建或后端。",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "progress-management-workbench",
+    "internal",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "progress-management-workbench",
+    "shortDescription": "轻量级项目管理看板工具，生成可在浏览器中直接使用的单文件 HTML 应用；支持工作项列表与看板两种视图，提供统计概览、筛选搜索、优先级管理与拖拽流转，数据保存在浏览器本地，无需构建或后端。",
+    "longDescription": "轻量级项目管理看板工具，生成可在浏览器中直接使用的单文件 HTML 应用；支持工作项列表与看板两种视图，提供统计概览、筛选搜索、优先级管理与拖拽流转，数据保存在浏览器本地，无需构建或后端。",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use progress-management-workbench to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

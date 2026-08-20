@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:cloudflare",
+  "registry": "trae-remote-official",
+  "plugin_name": "cloudflare",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "01cbd230-e938-423d-8f12-a4ed03d6bfdc",
+  "remote_installed_plugin_id": "_EZ.W7OR6B311J",
+  "checksum": "2a6ce359b5a9f0652b0a3e7e4d20b1a10c9bf55f628ad52283ef22577ab046ff",
+  "file_size": 752339,
+  "installed_at": 1787227205249
+}

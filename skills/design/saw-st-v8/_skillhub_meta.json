@@ -1,0 +1,11 @@
+{
+  "name": "空间转录组/多组学主分析",
+  "installedAt": 1787228623808,
+  "source": "marketplace",
+  "version": "1.2.5",
+  "skillId": "skill_2089265151395954688",
+  "description_zh": "DCS Cloud WDL「SAW-ST-V8」(v1.2.4) 流程说明与填参指南：Stereo-seq 空间转录组/多组学主分析（比对、空间定量、细胞分割、聚类与报告）。用户提到 SAW-ST-V8、SAW、Stereo-seq、STOmics、空间转录组主流程，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"SAW-ST-V8\" (v1.2.4) parameter guide: Stereo-seq spatial transcriptomics / multi-omics main analysis (alignment, spatial quantification, cell segmentation, clustering, and reporting). Use when the user mentions SAW-ST-V8, SAW, Stereo-seq, STOmics, the spatial transcriptomics main workflow, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_686f1a14-870.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_686f1a14-870.png"
+}

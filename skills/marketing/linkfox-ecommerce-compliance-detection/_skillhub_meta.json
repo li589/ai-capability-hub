@@ -1,0 +1,11 @@
+{
+  "name": "Linkfox 电商合规检测",
+  "installedAt": 1787227634280,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2077711662985637888",
+  "description_zh": "电商知产与合规检测工具集，整合睿观（ruiguan_ip_detection）与智慧芽（zhihuiya_patent）2 类底层工具、22 项子能力。睿观覆盖图片版权、图形/文字商标、外观专利、实用新型专利、图片政策合规检测，返回相似度、权利人、TRO 与雷达侵权判定，支持 25+ 国家/地区。智慧芽覆盖专利核心/详细著录、标题摘要/权利要求/说明书及翻译、附图、法律状态、专利家族、引用分析、PDF 下载及外观/实用新型以图搜图。当用户需上架前版权/商标/专利侵权排查、TRO 风险评估、图片合规审查、专利查询翻译或以图搜专利时触发。参数见 references/，脚本见 scripts/。",
+  "description_en": "One-stop e-commerce IP & compliance detection AI toolkit integrating 22 sub-capabilities across 2 tool families — Ruiguan (ruiguan_ip_detection: image copyright, graphic & text trademark, design & utility-model patent, and policy/compliance detection with similarity, rights owner, TRO litigation history and radar infringement verdicts across 25+ countries) and PatSnap/Zhihuiya (zhihuiya_patent: patent core/detailed bibliography, title-abstract translation, claims & translation, description & translation, abstract/fulltext drawings, legal status & event history, patent family, forward & back citations, PDF download, and design/utility-model patent image search). Triggered when the user needs pre-launch copyright/trademark/patent infringement checks, TRO risk assessment, product image compliance review, patent detail lookup & translation, or image-based patent search. Full params per sub-capability are in references/, executable scripts in scripts/.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077711662985637888/be14a6f84fe1b2bd.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077711662985637888/be14a6f84fe1b2bd.png"
+}

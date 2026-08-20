@@ -1,0 +1,20 @@
+{
+  "name": "知识框架梳理",
+  "installedAt": 1785784781729,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443722237636608",
+  "examples_zh": [
+    "帮我把大学英语梳理成知识框架图",
+    "这本书的目录给你，帮我画成思维导图",
+    "帮我整理高等数学的核心知识点和依赖关系"
+  ],
+  "examples_en": [
+    "Create a knowledge map for my college English course",
+    "Turn this textbook table of contents into a mind map",
+    "Organize the key concepts and dependencies for calculus"
+  ],
+  "description_zh": "输入课程名或教材资料，生成结构化知识框架图，支持三档深度和多格式导出",
+  "description_en": "Input a course or textbook to generate structured knowledge maps with three depth levels and multi-format export",
+  "iconSource": "letter:auto"
+}

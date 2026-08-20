@@ -1,0 +1,20 @@
+{
+  "name": "diagnose",
+  "installedAt": 1785784719267,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443344813191168",
+  "examples_zh": [
+    "帮我诊断这个 bug",
+    "这个接口报错了，帮我 debug",
+    "性能退化了，排查一下"
+  ],
+  "examples_en": [
+    "diagnose this bug",
+    "debug this failing test",
+    "investigate this performance regression"
+  ],
+  "description_zh": "系统化调试：重现 → 假设 → 验证 → 修复 → 回归测试",
+  "description_en": "Disciplined diagnosis loop: reproduce, hypothesise, instrument, fix, regression-test",
+  "iconSource": "letter:auto"
+}

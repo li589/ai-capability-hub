@@ -1,0 +1,344 @@
+{
+  "type": "信托公司",
+  "type_name": "信托公司",
+  "count": 68,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-05-24",
+  "institutions": [
+    {
+      "name": "中信信托",
+      "code": "ZXXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "平安信托",
+      "code": "PAXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "中融信托",
+      "code": "ZRXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "华润信托",
+      "code": "HRXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "华能信托",
+      "code": "HNXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "中诚信托",
+      "code": "ZXXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "国投信托",
+      "code": "GTXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "外贸信托",
+      "code": "WMXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "云南信托",
+      "code": "YNXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "兴业信托",
+      "code": "XYXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "民生信托",
+      "code": "MSXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "山东信托",
+      "code": "SDXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "中粮信托",
+      "code": "ZLXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "光大信托",
+      "code": "GDXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "建信信托",
+      "code": "JXXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "交银信托",
+      "code": "JYXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "上海信托",
+      "code": "SHXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "华宝信托",
+      "code": "HBXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "华鑫信托",
+      "code": "HXXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "江苏信托",
+      "code": "JSXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "浙江信托",
+      "code": "ZJXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "安徽信托",
+      "code": "AHXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "江西信托",
+      "code": "JXXT2",
+      "type": "信托公司"
+    },
+    {
+      "name": "湖南信托",
+      "code": "HNXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "湖北信托",
+      "code": "HBXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "河南信托",
+      "code": "HNNT",
+      "type": "信托公司"
+    },
+    {
+      "name": "四川信托",
+      "code": "SCXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "重庆信托",
+      "code": "CQXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "陕西信托",
+      "code": "SXXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "甘肃信托",
+      "code": "GSXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "新疆信托",
+      "code": "XJXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "西藏信托",
+      "code": "XZXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "广东信托",
+      "code": "GDXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "广州信托",
+      "code": "GZXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "深圳信托",
+      "code": "SZXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "福建信托",
+      "code": "FJXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "厦门信托",
+      "code": "XMXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "山西信托",
+      "code": "SXXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "内蒙古信托",
+      "code": "NMXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "辽宁信托",
+      "code": "LNXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "吉林信托",
+      "code": "JLXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "黑龙江信托",
+      "code": "HLJXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "长安信托",
+      "code": "CAXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "国民信托",
+      "code": "GMXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "昆仑信托",
+      "code": "KLXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "渤海信托",
+      "code": "BHXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "新时代信托",
+      "code": "XSDXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "北方信托",
+      "code": "BFXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "英大信托",
+      "code": "YDXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "国联信托",
+      "code": "GLXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "紫金信托",
+      "code": "ZJXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "中铁信托",
+      "code": "ZTXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "中江信托",
+      "code": "ZJXT2",
+      "type": "信托公司"
+    },
+    {
+      "name": "百瑞信托",
+      "code": "BRXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "中原信托",
+      "code": "ZYXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "华信信托",
+      "code": "HXXT2",
+      "type": "信托公司"
+    },
+    {
+      "name": "华澳信托",
+      "code": "HAXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "华融信托",
+      "code": "HRXT2",
+      "type": "信托公司"
+    },
+    {
+      "name": "大业信托",
+      "code": "DYXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "金谷信托",
+      "code": "JGTX",
+      "type": "信托公司"
+    },
+    {
+      "name": "中泰信托",
+      "code": "ZTX",
+      "type": "信托公司"
+    },
+    {
+      "name": "华海信托",
+      "code": "HHXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "中金信托",
+      "code": "ZJXT3",
+      "type": "信托公司"
+    },
+    {
+      "name": "华润信托",
+      "code": "HRXT2",
+      "type": "信托公司"
+    },
+    {
+      "name": "华鑫信托",
+      "code": "HXXT3",
+      "type": "信托公司"
+    },
+    {
+      "name": "长城信托",
+      "code": "CCXT",
+      "type": "信托公司"
+    },
+    {
+      "name": "五矿信托",
+      "code": "WKXT",
+      "type": "信托公司"
+    }
+  ]
+}

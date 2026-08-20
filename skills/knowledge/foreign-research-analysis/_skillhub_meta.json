@@ -1,0 +1,11 @@
+{
+  "name": "进门-外资研报助手",
+  "installedAt": 1787228648222,
+  "source": "marketplace",
+  "version": "5.4.5",
+  "skillId": "skill_2087919752909148160",
+  "description_zh": "依赖进门 MCP 查询外资投行研报并梳理机构观点（高盛、大摩、摩根大通等）。可查公司研报与观点变化、按行业/机构/地区/主题检索、深度分析共识与分歧、生成行业日报与机构日报。",
+  "description_en": "Requires the Comein MCP to search research reports from foreign investment banks, such as Goldman Sachs, Morgan Stanley, and JPMorgan, and summarize their views. It can find company reports and changes in opinion, search by industry, institution, region, or topic, analyze consensus and disagreements in depth, and generate industry or institution daily reports.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_f39fe995-267.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/186e73f1-9d04-4b2a-b28d-bd4bac8945a1/avatar/skill/au_f39fe995-267.png"
+}

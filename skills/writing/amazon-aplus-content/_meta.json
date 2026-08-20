@@ -1,0 +1,11 @@
+{
+  "owner": "mguozhen",
+  "slug": "amazon-aplus-content",
+  "displayName": "Amazon Aplus Content",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774076515772,
+    "commit": "https://github.com/openclaw/skills/commit/70da5f937cc8027f618dbfd08908d3e9005ca81a"
+  },
+  "history": []
+}

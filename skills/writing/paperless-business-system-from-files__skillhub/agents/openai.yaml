@@ -1,0 +1,13 @@
+interface:
+  display_name: "纸质表单电子化系统生成器"
+  short_description: "用户只需上传业务提示词和对应资料，即可自动生成可填写、查询、导入导出和部署的电子化业务系统"
+  default_prompt: "用户只需提供“业务提示词 + 对应业务资料”。使用 $paperless-business-system-from-files 自动完成：读取提示词与附件、识别业务、梳理字段和规则、生成系统、测试验收并交付 ZIP。当前纸质表单对应的 Excel、CSV、Word、PDF、JSON、TXT、ZIP 或已有系统资料均可作为业务资料：先只读盘点字段、规则和资料缺口，再按证据生成可填写、可查询、可导入导出、可本地或局域网部署的业务系统，并完成真实运行测试、严格验收、安全升级差异检查和 ZIP 交付。不要把命令行步骤留给用户；对免 Python、完全离线、EXE 即用、局域网实测等能力必须区分支持、验收通过和目标机实测。"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/icon.svg"
+policy:
+  products:
+    - "chatgpt"
+    - "codex"
+    - "api"
+    - "atlas"
+  allow_implicit_invocation: true

@@ -1,0 +1,37 @@
+{
+  "name": "litigation-assistant",
+  "version": "0.1.6",
+  "description": "诉讼案件分析、策略规划与法律文书生成助手，支持判例检索与证据梳理",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "litigation-assistant",
+    "internal",
+    "skills",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "案件咨询",
+    "shortDescription": "诉讼案件分析、策略规划与法律文书生成助手，支持判例检索与证据梳理",
+    "longDescription": "诉讼案件分析、策略规划与法律文书生成助手，支持判例检索与证据梳理",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use litigation-assistant to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "chain-enterprise-bid-ai-generato",
+  "name": "链企标书AI生成器",
+  "version": "1.0.1",
+  "installedAt": 1787228787016,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png"
+}

@@ -1,0 +1,36 @@
+{
+  "client_only_params": [],
+  "description": "撤回已提交的流程待办任务",
+  "display_name": "流程待办撤回",
+  "domain": "流程",
+  "endpoint": "https://api.jiandaoyun.com/api/v2/workflow/task/revoke",
+  "method": "POST",
+  "name": "jdy_withdraw_flow_task",
+  "params": {
+    "comment": {
+      "default": "",
+      "description": "撤回理由（选填）",
+      "type": "string"
+    },
+    "instance_id": {
+      "description": "流程实例ID，即数据的_id（必填）",
+      "type": "string"
+    },
+    "task_id": {
+      "default": "",
+      "description": "需要撤回的待办实例ID（选填，不传默认撤回发起节点）",
+      "type": "string"
+    },
+    "username": {
+      "description": "处理待办对应的用户名（必填）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "instance_id",
+    "username"
+  ],
+  "risk": "write",
+  "source": "简道云工具包.zip"
+}

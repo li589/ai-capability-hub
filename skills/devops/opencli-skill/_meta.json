@@ -1,0 +1,11 @@
+{
+  "owner": "aaronwang1980",
+  "slug": "opencli-skill",
+  "displayName": "opencli",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774593081311,
+    "commit": "https://github.com/openclaw/skills/commit/11a5d40dc0fe190a2768635d637d6837f5503091"
+  },
+  "history": []
+}

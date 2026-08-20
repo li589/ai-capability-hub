@@ -1,0 +1,11 @@
+{
+  "owner": "bjdenglun",
+  "slug": "financial-market-data",
+  "displayName": "financial-market-data",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1775351265157,
+    "commit": "https://github.com/openclaw/skills/commit/886a3511fc819503952a80975cb80991bd7c150c"
+  },
+  "history": []
+}

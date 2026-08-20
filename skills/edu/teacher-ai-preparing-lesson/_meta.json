@@ -1,0 +1,11 @@
+{
+  "owner": "ahao2001",
+  "slug": "teacher-ai-preparing-lesson",
+  "displayName": "中小学教师智能备课助手",
+  "latest": {
+    "version": "2.1.1",
+    "publishedAt": 1774927855975,
+    "commit": "https://github.com/openclaw/skills/commit/c85ee986f3e946039f1dc6ae07845fd6670bf680"
+  },
+  "history": []
+}

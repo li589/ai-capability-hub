@@ -1,0 +1,11 @@
+{
+  "name": "股票分析专家",
+  "installedAt": 1787227577267,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087461504194789376",
+  "description_zh": "基于5位公众号股票大V蒸馏风格画像，AI实现复盘、选股、财报点评等多模式分析",
+  "description_en": "AI style-mimicking stock analysis distilled from five top finance bloggers.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_2857097e-ed3.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_2857097e-ed3.svg"
+}

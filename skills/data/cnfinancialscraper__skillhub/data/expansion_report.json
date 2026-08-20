@@ -1,0 +1,27 @@
+{
+ "_meta": {
+  "version": "7.0.0",
+  "date": "2026-08-18",
+  "total_institutions": 6,
+  "total_types": 3
+ },
+ "categories": {
+  "fund_company": {
+   "type": "基金管理公司",
+   "added": 2,
+   "total": 3,
+   "source": "天天基金/公开资料"
+  },
+  "private_bank": {
+   "type": "民营银行",
+   "added": 2,
+   "total": 2,
+   "source": "公开资料整理"
+  }
+ },
+ "type_counts": {
+  "基金管理公司": 3,
+  "证券公司": 1,
+  "民营银行": 2
+ }
+}

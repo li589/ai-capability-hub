@@ -1,0 +1,20 @@
+{
+  "name": "营销技能库",
+  "installedAt": 1785864621190,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053084540171059200",
+  "examples_zh": [
+    "帮我设计一个产品发布的营销方案",
+    "我的落地页转化率很低，给我做个 CRO 诊断",
+    "写一篇 SEO 优化的博客文章大纲"
+  ],
+  "examples_en": [
+    "Design a marketing plan for our product launch",
+    "My landing page conversion is low — give me a CRO audit",
+    "Create an SEO-optimized blog post outline"
+  ],
+  "description_zh": "23个营销模块：CRO、SEO、文案、分析、投放、产品发布、社交媒体，含检查清单和即用模板",
+  "description_en": "23 marketing playbooks: CRO, SEO, copywriting, ads, social media — checklists and ready-to-use templates",
+  "iconSource": "letter:auto"
+}

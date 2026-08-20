@@ -1,0 +1,21 @@
+{
+  "name": "药品说明书检索",
+  "installedAt": 1787228425171,
+  "source": "marketplace",
+  "version": "1.0.4",
+  "skillId": "skill_2053082694639550464",
+  "examples_zh": [
+    "查询阿莫西林胶囊说明书中的适应症、禁忌、用法用量和常见不良反应",
+    "根据\"发热、咽痛\"检索相关药品说明书，并列出每种药的主要成分和注意事项",
+    "帮我查布洛芬缓释胶囊的规格、生产厂家、禁忌人群和用药注意事项"
+  ],
+  "examples_en": [
+    "Search the amoxicillin capsule label for indications, contraindications, dosage, and common adverse reactions",
+    "Find drug labels related to fever and sore throat and list each medicine's main ingredients and precautions",
+    "Look up ibuprofen sustained-release capsules for strength, manufacturer, contraindicated populations, and medication precautions"
+  ],
+  "description_zh": "药品说明书与用药信息检索：支持自然语言查询适应症、禁忌、用法用量、不良反应、注意事项、成分、规格与厂家等；也可根据症状或疾病查找相关药品。",
+  "description_en": "Drug labeling & medication info search: natural-language queries for indications, contraindications, dosage, adverse reactions, precautions, ingredients, strength, and manufacturers; or find candidate drugs by symptom or disease.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/sino-drug-instructions-search.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/sino-drug-instructions-search.svg"
+}

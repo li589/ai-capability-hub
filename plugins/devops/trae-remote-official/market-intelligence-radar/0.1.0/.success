@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:market-intelligence-radar",
+  "registry": "trae-remote-official",
+  "plugin_name": "market-intelligence-radar",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "5f0d30a2-884a-44db-902c-41601fdf8a6c",
+  "remote_installed_plugin_id": "VNN7MZTZFD.RKS",
+  "checksum": "339503c026c2e054f5d9c2fce945fdf0f8bf7182834e481802b21ce6b221a119",
+  "file_size": 104007,
+  "installed_at": 1787227201817
+}

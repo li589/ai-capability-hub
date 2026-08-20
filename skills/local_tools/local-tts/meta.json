@@ -1,0 +1,24 @@
+{
+  "author": "Github",
+  "author_icon": "https://static.marvis.qq.com/wupload/skill-author-icons/1778639349473_GitHub.png",
+  "description": "|",
+  "detail_describe": "把文字内容转成 wav 语音文件\n支持中英日韩多语种朗读\n内置默认、东北、四川等参考音色\n支持上传参考音频克隆任意音色\n首次自动下载模型并修复运行环境",
+  "display_description": "基于本地AI大模型的文字转语音，支持东北话四川话等克隆音色(仅限英特尔AIPC平台)",
+  "display_name": "本地文字转语音",
+  "download_count": 3,
+  "download_url": "https://down.marvis.qq.com/wupload2/skill-packages/1779112538110_local-tts.zip",
+  "icon": "https://static.marvis.qq.com/wupload/skill-icons/1779112519708_03_local-text-to-speech.png?imageMogr2/thumbnail/224x/format/webp",
+  "id": 358,
+  "is_downloaded": false,
+  "name": "local-tts",
+  "scope": [
+    "main"
+  ],
+  "type": "英特尔用户专区",
+  "use_cases": [
+    "用东北口音去朗读：当身穿校服的王凯突然出现，全班瞬间沸腾。",
+    "用四川口音生成语音：受国际燃油价格波动影响，今年五一机票价格已达近年高点。",
+    "把这段话读出来：孩子们从各自的座位上弹跳起来，争先恐后地涌向门口。"
+  ],
+  "version": "1.0.3"
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "zlbx-bidding-payskill",
+  "name": "全网招中标数据查询（按次版）",
+  "version": "1.0.3",
+  "installedAt": 1787228894005,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png"
+}

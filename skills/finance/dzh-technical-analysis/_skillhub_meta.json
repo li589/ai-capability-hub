@@ -1,0 +1,11 @@
+{
+  "name": "大智慧股票技术分析",
+  "installedAt": 1787227605425,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084542487461568512",
+  "description_zh": "分析估值水平、历史分位与同行对比，判断股票高估或低估状态，适用于价值投资与仓位决策。",
+  "description_en": "Analyzes valuation levels, historical percentiles, and peer comparisons to determine whether a stock is overvalued or undervalued. Suitable for value investing and position sizing decisions.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_bf9b163a-02a.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/624098d9-5d9c-4b51-9128-e44483b35860/avatar/skill/au_bf9b163a-02a.png"
+}

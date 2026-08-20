@@ -1,0 +1,594 @@
+# 代码模板参考
+
+本文件提供**一个开箱即用**的合并模板。AI 在执行技能时直接复制此模板，填入实际数据即可。模板已包含完整 HTML + CSS + JS，无需再写代码框架。
+
+**合并模板**：生成完整 HTML 文件用 `present_files` 呈现（完整文档，含 DOCTYPE）——上半部分是**热点详情卡片**（展开/收起 + 分类筛选），下半部分是**答题 + 做题报告**（JSON 注入 + 点选即反馈 + 自动出报告 + 针对性粉笔推送），默认 3 道题。
+
+---
+
+## 合并模板：热点详情 + 答题报告 HTML 文件（present_files 用）
+
+**用途**：生成一个完整的 HTML 文件，用户在右侧预览面板同时看到本周热点详情卡片和 3 道相关单选题。上半部分可点击展开卡片详情、按类别筛选；下半部分可点击选项作答，答完最后一题自动出做题报告 + 针对性粉笔推送。**无需与用户交互是否出题**。
+
+**关键特性**：
+1. ✅ **热点卡片展开/收起**：点击"展开详情"按钮，展开显示详细解读 + 官方来源链接
+2. ✅ **分类筛选**：顶部标签栏，点击可按类别筛选卡片
+3. ✅ **答题点击交互**：用户点击选项 → 即时变绿/变红 + 显示答案 + 解析 + 知识点速记
+4. ✅ **自动出报告**：最后一题答完 → 1.2 秒后自动 `renderResult()`（不显示"查看报告"按钮，零额外操作）
+5. ✅ **针对性粉笔推送**：JS 根据各类正确率自动选择推送内容（整体<60%推全真模考 / 单类薄弱推对应专项 / 全部≥80%不推）
+
+**使用方式**：AI 用 Write 工具将下方完整代码写入 `outputs/时政热点_YYYYMMDD.html`，然后 `present_files` 呈现。
+
+**数据填入位置（两处）**：
+
+### ① 热点卡片数据
+
+直接在 HTML 的 `<div id="card-list">` 区域填入实际卡片，每条热点一个 `<div class="card">` 块。
+
+| 字段 | 说明 |
+|------|------|
+| data-cat | 分类标识（economy/policy/tech/diplomacy/law/livelihood/culture） |
+| card-tag | 分类显示名（经济/政策/科技/外交/法律/民生/文化） |
+| card-date | 日期（如"7月17日"） |
+| card-title | 事件标题（≤30字） |
+| card-summary | 2-3 句概括（收起时显示，CSS 截断为 2 行） |
+| card-detail | 展开时显示的详细解读（含关键数据、背景、意义） |
+| card-source | 来源机构名 + 官方来源链接 |
+
+### ② 题目数据
+
+写入 `<script type="application/json" id="qdata">` 节点（合法 JSON 数组），JS 用 `JSON.parse` 读取。**不要**把题目写进 `<script>` 内的 JS 数组字面量（中文引号会破坏脚本导致空白页）。
+
+| 字段 | 类型 | 说明 |
+|------|------|------|
+| category | string | 分类名（经济/科技/外交/法律/民生/政策/文化/综合） |
+| bg | string | 新闻背景（1-2 句） |
+| stem | string | 题干 |
+| options | string[4] | 4 个选项（A/B/C/D） |
+| answer | number(0-3) | 正确答案索引（0=A, 1=B, 2=C, 3=D） |
+| analysis | string | 详细解析（正确项理由 + 各干扰项错误 + 拓展） |
+| memo | string | 知识点速记（≤25 字） |
+
+### 完整模板代码
+
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>时政热点详情与答题练习 · YYYY年M月D日-M月D日</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+      background: #f0f2f5; color: #1a1a1a; line-height: 1.7; padding: 24px 20px 60px;
+    }
+    .container { max-width: 680px; margin: 0 auto; }
+
+    /* ===== 热点卡片区 ===== */
+    .header {
+      text-align: center; padding: 32px 20px 28px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 14px; color: #fff; margin-bottom: 24px;
+      box-shadow: 0 4px 20px rgba(102, 126, 234, 0.25);
+    }
+    .header h1 { font-size: 22px; font-weight: 700; letter-spacing: 1px; }
+    .header .date-range { font-size: 14px; opacity: 0.9; margin-top: 6px; }
+    .header .stats { margin-top: 16px; display: flex; justify-content: center; gap: 28px; }
+    .header .stat-item { text-align: center; }
+    .header .stat-num { font-size: 28px; font-weight: 800; }
+    .header .stat-label { font-size: 12px; opacity: 0.85; margin-top: 2px; }
+
+    .filter-bar { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; justify-content: center; }
+    .filter-tag {
+      padding: 5px 14px; border-radius: 20px; font-size: 12px; font-weight: 600;
+      cursor: pointer; border: 1.5px solid transparent; transition: all 0.2s;
+    }
+    .filter-tag.active { color: #fff; }
+    .filter-tag:not(.active) { background: #fff; border-color: #e0e0e0; color: #666; }
+    .filter-tag:not(.active):hover { border-color: #aaa; }
+
+    .card {
+      background: #fff; border-radius: 10px; margin-bottom: 14px; overflow: hidden;
+      box-shadow: 0 1.5px 6px rgba(0,0,0,0.07); transition: box-shadow 0.25s, transform 0.25s;
+      border-left: 4px solid #ccc;
+    }
+    .card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.12); transform: translateY(-1px); }
+    .card-body { padding: 16px 18px 14px; }
+    .card-top { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+    .card-tag { font-size: 11px; font-weight: 700; padding: 2px 10px; border-radius: 10px; color: #fff; white-space: nowrap; }
+    .card-date { font-size: 12px; color: #999; }
+    .card-title { font-size: 16px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; line-height: 1.5; }
+    .card-summary {
+      font-size: 14px; color: #555; line-height: 1.65;
+      display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+      transition: -webkit-line-clamp 0.3s;
+    }
+    .card.expanded .card-summary { -webkit-line-clamp: unset; }
+    .card-extra { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, margin-top 0.35s ease; }
+    .card.expanded .card-extra { max-height: 500px; margin-top: 12px; }
+    .card-detail {
+      font-size: 13.5px; color: #444; line-height: 1.7; padding: 12px 14px;
+      background: #f8f9fa; border-radius: 8px; border-left: 3px solid #e0e0e0;
+    }
+    .card-detail strong { color: #333; }
+    .card-source { margin-top: 10px; display: flex; align-items: center; gap: 6px; font-size: 12px; color: #999; }
+    .card-source a { color: #4a90d9; text-decoration: none; font-weight: 600; }
+    .card-source a:hover { text-decoration: underline; }
+    .card-toggle {
+      margin-top: 10px; display: inline-flex; align-items: center; gap: 4px;
+      font-size: 13px; color: #4a90d9; cursor: pointer; font-weight: 600;
+      user-select: none; transition: color 0.2s;
+    }
+    .card-toggle:hover { color: #2d70b0; }
+    .card-toggle .arrow { display: inline-block; transition: transform 0.3s; font-size: 10px; }
+    .card.expanded .card-toggle .arrow { transform: rotate(180deg); }
+
+    .cat-economy { border-left-color: #f39c12; } .cat-economy .card-tag { background: #f39c12; }
+    .cat-policy { border-left-color: #3498db; } .cat-policy .card-tag { background: #3498db; }
+    .cat-tech { border-left-color: #9b59b6; } .cat-tech .card-tag { background: #9b59b6; }
+    .cat-diplomacy { border-left-color: #16a085; } .cat-diplomacy .card-tag { background: #16a085; }
+    .cat-law { border-left-color: #e74c3c; } .cat-law .card-tag { background: #e74c3c; }
+    .cat-livelihood { border-left-color: #27ae60; } .cat-livelihood .card-tag { background: #27ae60; }
+    .cat-culture { border-left-color: #d35400; } .cat-culture .card-tag { background: #d35400; }
+
+    .ft-economy.active { background: #f39c12; } .ft-policy.active { background: #3498db; }
+    .ft-tech.active { background: #9b59b6; } .ft-diplomacy.active { background: #16a085; }
+    .ft-law.active { background: #e74c3c; } .ft-livelihood.active { background: #27ae60; }
+    .ft-culture.active { background: #d35400; } .ft-all.active { background: #333; }
+
+    /* ===== 分隔区 ===== */
+    .section-divider {
+      text-align: center; margin: 36px 0 24px; position: relative;
+    }
+    .section-divider::before {
+      content: ''; position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: #d0d0d0;
+    }
+    .section-divider span {
+      position: relative; background: #f0f2f5; padding: 0 20px; font-size: 15px; font-weight: 700; color: #555;
+    }
+
+    /* ===== 答题区 ===== */
+    .quiz-header {
+      text-align: center; padding: 20px; margin-bottom: 20px;
+      background: linear-gradient(135deg, #4a90e2, #357abd); color: #fff; border-radius: 12px;
+    }
+    .quiz-header h2 { font-size: 20px; font-weight: 700; }
+    .quiz-header .sub { font-size: 13px; opacity: 0.9; margin-top: 4px; }
+
+    .progress-bar { width: 100%; height: 6px; background: #e0e0e0; border-radius: 3px; overflow: hidden; margin-bottom: 6px; }
+    .progress-fill { height: 100%; background: linear-gradient(90deg, #4a90e2, #357abd); transition: width 0.3s; }
+    .progress-text { font-size: 12px; color: #888; margin-bottom: 16px; text-align: right; }
+    .tag { display: inline-block; font-size: 11px; padding: 2px 8px; border-radius: 4px; background: #f0f0f0; color: #555; margin-bottom: 8px; }
+    .news-bg { background: #f8f9fa; padding: 10px 12px; border-radius: 6px; font-size: 13px; color: #555; margin: 10px 0; line-height: 1.6; }
+    .stem { font-size: 16px; font-weight: 600; color: #1a1a1a; margin: 12px 0 16px 0; line-height: 1.6; }
+    .option { display: flex; align-items: flex-start; padding: 12px 14px; background: #fff; border: 1.5px solid #e0e0e0; border-radius: 8px; margin-bottom: 8px; cursor: pointer; transition: all 0.2s; font-size: 14px; line-height: 1.5; }
+    .option:hover:not(.disabled) { border-color: #4a90e2; background: #f0f7ff; }
+    .option.disabled { cursor: not-allowed; }
+    .option.correct { border-color: #27ae60; background: #eafaf1; }
+    .option.wrong { border-color: #e74c3c; background: #fdedec; }
+    .option .label { display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; background: #4a90e2; color: #fff; border-radius: 50%; font-size: 12px; font-weight: 600; margin-right: 10px; flex-shrink: 0; }
+    .option.correct .label { background: #27ae60; }
+    .option.wrong .label { background: #e74c3c; }
+    .feedback { margin-top: 12px; padding: 14px 16px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #4a90e2; }
+    .feedback.correct { border-left-color: #27ae60; background: #eafaf1; }
+    .feedback.wrong { border-left-color: #e74c3c; background: #fdedec; }
+    .feedback .verdict { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .feedback .answer-line { font-size: 13px; color: #555; margin-bottom: 10px; }
+    .feedback .analysis { font-size: 13px; color: #333; line-height: 1.7; margin-bottom: 10px; }
+    .feedback .memo { font-size: 12px; color: #357abd; background: #fff; padding: 6px 10px; border-radius: 4px; display: inline-block; }
+    .next-btn { display: block; width: 100%; padding: 12px; margin-top: 14px; background: linear-gradient(135deg, #4a90e2, #357abd); color: #fff; border: none; border-radius: 8px; font-size: 14px; font-weight: 600; cursor: pointer; transition: opacity 0.2s; }
+    .next-btn:hover { opacity: 0.9; }
+    .auto-next-hint { text-align: center; font-size: 12px; color: #888; margin-top: 10px; }
+
+    /* ===== 做题报告 ===== */
+    .report-header { background: linear-gradient(135deg, #4a90e2, #357abd); color: #fff; padding: 24px; border-radius: 12px; text-align: center; margin-bottom: 16px; }
+    .report-header .label { font-size: 13px; opacity: 0.9; }
+    .report-header .score { font-size: 42px; font-weight: 700; margin: 6px 0; }
+    .report-header .rate { font-size: 16px; }
+    .report-section { background: #fff; border: 1px solid #e8e8e8; border-radius: 8px; padding: 16px 18px; margin-bottom: 12px; }
+    .report-section h3 { margin: 0 0 14px 0; font-size: 15px; color: #1a1a1a; }
+    .bar-row { display: flex; align-items: center; margin-bottom: 10px; }
+    .bar-label { width: 70px; font-size: 13px; color: #555; flex-shrink: 0; }
+    .bar-track { flex: 1; height: 18px; background: #f0f0f0; border-radius: 9px; overflow: hidden; margin: 0 10px; }
+    .bar-fill { height: 100%; border-radius: 9px; transition: width 0.6s; }
+    .bar-fill.good { background: #27ae60; }
+    .bar-fill.warn { background: #e67e22; }
+    .bar-fill.bad { background: #e74c3c; }
+    .bar-pct { width: 60px; text-align: right; font-size: 13px; font-weight: 600; flex-shrink: 0; }
+    .weak-area { background: #fdedec; border-left: 4px solid #e74c3c; padding: 10px 12px; border-radius: 6px; margin-bottom: 8px; font-size: 13px; color: #c0392b; }
+    .review-item { border-bottom: 1px solid #eee; padding: 12px 0; }
+    .review-item:last-child { border-bottom: none; }
+    .review-head { display: flex; align-items: center; justify-content: space-between; }
+    .review-head .q-num { font-size: 13px; color: #555; }
+    .review-head .result { font-size: 13px; }
+    .memo-list { padding-left: 0; margin: 0; list-style: none; counter-reset: memo-counter; }
+    .memo-list li { font-size: 13px; line-height: 1.8; color: #333; border-left: 3px solid #4a90e2; padding: 6px 0 6px 12px; margin-bottom: 6px; background: #f8f9fa; border-radius: 0 4px 4px 0; counter-increment: memo-counter; }
+    .memo-list li::before { content: counter(memo-counter) ". "; font-weight: 600; color: #4a90e2; }
+
+    /* ===== 粉笔推送区 ===== */
+    .fenbi-card { background: linear-gradient(135deg, #e3f2fd, #bbdefb); border-radius: 10px; padding: 20px; margin-top: 14px; }
+    .fenbi-card .fenbi-title { font-size: 16px; font-weight: 600; color: #1565c0; margin-bottom: 8px; }
+    .fenbi-card .fenbi-desc { font-size: 13px; color: #555; margin-bottom: 14px; line-height: 1.7; }
+    .fenbi-card .fenbi-modules { margin-bottom: 14px; }
+    .fenbi-card .fenbi-module { display: inline-block; font-size: 12px; padding: 4px 10px; background: #fff; border: 1px solid #90caf9; border-radius: 4px; margin: 0 4px 4px 0; color: #1565c0; }
+    .fenbi-card .fenbi-qr { margin-top: 16px; text-align: center; }
+    .fenbi-card .fenbi-qr img { width: 130px; height: 130px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); display: block; margin: 0 auto; }
+    .fenbi-card .fenbi-qr .qr-label { margin-top: 8px; font-size: 12px; color: #666; }
+    .fenbi-card .fenbi-qr .qr-label strong { color: #1565c0; }
+  </style>
+</head>
+<body>
+
+<!-- ===== 第一部分：热点详情卡片 ===== -->
+<div class="container">
+
+  <div class="header">
+    <h1>时政热点详情</h1>
+    <div class="date-range">YYYY年M月D日 — M月D日</div>
+    <div class="stats">
+      <div class="stat-item"><div class="stat-num">10</div><div class="stat-label">核心热点</div></div>
+      <div class="stat-item"><div class="stat-num">7</div><div class="stat-label">覆盖类别</div></div>
+      <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">官方信源</div></div>
+    </div>
+  </div>
+
+  <div class="filter-bar">
+    <span class="filter-tag ft-all active" onclick="filterCards('all')">全部</span>
+    <span class="filter-tag ft-policy" onclick="filterCards('policy')">政策</span>
+    <span class="filter-tag ft-economy" onclick="filterCards('economy')">经济</span>
+    <span class="filter-tag ft-tech" onclick="filterCards('tech')">科技</span>
+    <span class="filter-tag ft-diplomacy" onclick="filterCards('diplomacy')">外交</span>
+    <span class="filter-tag ft-law" onclick="filterCards('law')">法律</span>
+    <span class="filter-tag ft-livelihood" onclick="filterCards('livelihood')">民生</span>
+    <span class="filter-tag ft-culture" onclick="filterCards('culture')">文化</span>
+  </div>
+
+  <div id="card-list">
+    <!-- 【AI 在此填入实际热点卡片，每条一个 card div，示例如下】 -->
+    <div class="card cat-tech" data-cat="tech">
+      <div class="card-body">
+        <div class="card-top">
+          <span class="card-tag">科技</span>
+          <span class="card-date">7月17日</span>
+        </div>
+        <div class="card-title">事件标题（≤30字）</div>
+        <div class="card-summary">2-3 句概括，收起时 CSS 截断为 2 行显示...</div>
+        <div class="card-extra">
+          <div class="card-detail">
+            展开时显示的详细解读，含关键数据、背景、意义。<strong>重要数据加粗</strong>。
+          </div>
+          <div class="card-source">
+            来源：<a href="https://..." target="_blank">官方机构名</a>
+          </div>
+        </div>
+        <span class="card-toggle" onclick="toggleCard(this)">展开详情 <span class="arrow">&#9660;</span></span>
+      </div>
+    </div>
+    <!-- 更多卡片... -->
+  </div>
+
+</div>
+
+<!-- ===== 分隔线 ===== -->
+<div class="section-divider"><span>✏️ 时政热点练习</span></div>
+
+<!-- ===== 第二部分：答题 + 做题报告 ===== -->
+<div class="container">
+
+  <div class="quiz-header">
+    <h2>本周时政答题练习</h2>
+    <div class="sub">共 3 题 · 点击选项即时查看解析 · 答完自动出报告</div>
+  </div>
+
+  <div id="quiz-app"></div>
+
+  <!-- ===== 题目数据（合法 JSON 数组）===== -->
+  <!-- 规则：键名和字符串值一律用双引号；值内双引号写 \"、换行写 \n；禁止出现 </script> 字样 -->
+  <!-- AI 在此填入实际题目，默认 3 道，删除下方示例条目 -->
+  <script type="application/json" id="qdata">
+    [
+      {"category":"经济","bg":"国家统计局发布2026年二季度GDP数据","stem":"关于本次GDP数据，下列说法正确的是","options":["A选项","B选项","C选项","D选项"],"answer":0,"analysis":"A项正确；B项错在...；C项错在...；D项错在...","memo":"2026Q2 GDP 同比+5.0%"},
+      {"category":"科技","bg":"力箭一号遥十五火箭成功发射","stem":"关于此次发射，下列说法正确的是","options":["A选项","B选项","C选项","D选项"],"answer":1,"analysis":"B项正确；A项错在...；C项错在...；D项错在...","memo":"力箭一号累计发射卫星XX颗"},
+      {"category":"外交","bg":"王毅出席中国—东盟外长会","stem":"关于本次会议，下列说法正确的是","options":["A选项","B选项","C选项","D选项"],"answer":2,"analysis":"C项正确；A项错在...；B项错在...；D项错在...","memo":"中国—东盟建立对话关系XX周年"}
+    ]
+  </script>
+
+  <script>
+    function escapeHtml(s) {
+      if (!s) return '';
+      return String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
+    }
+
+    // ===== 热点卡片交互 =====
+    function toggleCard(el) {
+      var card = el.closest('.card');
+      card.classList.toggle('expanded');
+      var label = el.childNodes[0];
+      label.textContent = card.classList.contains('expanded') ? '收起 ' : '展开详情 ';
+    }
+
+    function filterCards(cat) {
+      document.querySelectorAll('.filter-tag').forEach(function(t) { t.classList.remove('active'); });
+      event.target.classList.add('active');
+      document.querySelectorAll('.card').forEach(function(c) {
+        c.style.display = (cat === 'all' || c.dataset.cat === cat) ? '' : 'none';
+      });
+    }
+
+    // ===== 答题逻辑 =====
+    // 从 JSON 节点读取题目数据；解析失败时显示明确错误提示（而非空白页）
+    let questions = [];
+    try {
+      questions = JSON.parse(document.getElementById('qdata').textContent.trim());
+      if (!Array.isArray(questions) || questions.length === 0) {
+        throw new Error('qdata 内容不是非空 JSON 数组');
+      }
+    } catch(e) {
+      document.getElementById('quiz-app').innerHTML =
+        '<div style="padding:24px;color:#c0392b;background:#fff;border-radius:8px;margin:20px 0;line-height:1.8">' +
+        '<strong>⚠ 题目数据解析失败，无法显示题目</strong><br>' +
+        '错误信息：' + escapeHtml(e.message) + '<br><br>' +
+        '请检查 <code>&lt;script id="qdata"&gt;</code> 内是否为合法 JSON：<br>' +
+        '① 键名和字符串值都用双引号包裹<br>' +
+        '② 值内的双引号转义为 \\&quot;<br>' +
+        '③ 数组和对象最后一项后不要加逗号<br>' +
+        '④ 不要出现反引号、<code>&lt;/script&gt;</code> 字样</div>';
+    }
+
+    let currentIndex = 0;
+    const answers = [];
+    const app = document.getElementById('quiz-app');
+
+    function render() {
+      if (!Array.isArray(questions) || questions.length === 0) return;
+      if (currentIndex >= questions.length) {
+        renderResult();
+        return;
+      }
+      const q = questions[currentIndex];
+      const progressPct = (currentIndex / questions.length) * 100;
+      app.innerHTML = `
+        <div class="progress-bar"><div class="progress-fill" style="width:${progressPct}%"></div></div>
+        <div class="progress-text">第 ${currentIndex + 1} / ${questions.length} 题</div>
+        <span class="tag">${escapeHtml(q.category)}</span>
+        <div class="news-bg">📰 ${escapeHtml(q.bg)}</div>
+        <div class="stem">${escapeHtml(q.stem)}</div>
+        <div id="options">
+          ${q.options.map((o, i) => `
+            <div class="option" onclick="selectAnswer(${i})">
+              <span class="label">${'ABCD'[i]}</span>
+              <span>${escapeHtml(o)}</span>
+            </div>
+          `).join('')}
+        </div>
+        <div id="feedback"></div>
+      `;
+      app.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function selectAnswer(idx) {
+      const q = questions[currentIndex];
+      answers[currentIndex] = idx;
+      const isCorrect = idx === q.answer;
+      const isLast = currentIndex === questions.length - 1;
+
+      const opts = document.querySelectorAll('.option');
+      opts.forEach((opt, i) => {
+        opt.classList.add('disabled');
+        opt.onclick = null;
+        if (i === q.answer) opt.classList.add('correct');
+        if (i === idx && !isCorrect) opt.classList.add('wrong');
+      });
+
+      const fb = document.getElementById('feedback');
+      fb.innerHTML = `
+        <div class="feedback ${isCorrect ? 'correct' : 'wrong'}">
+          <div class="verdict">${isCorrect ? '✅ 答对了' : '❌ 答错了'}</div>
+          <div class="answer-line">正确答案：<strong>${'ABCD'[q.answer]}. ${escapeHtml(q.options[q.answer])}</strong></div>
+          <div class="analysis">${escapeHtml(q.analysis)}</div>
+          <div class="memo">📌 速记：${escapeHtml(q.memo)}</div>
+        </div>
+      `;
+
+      if (isLast) {
+        fb.innerHTML += `<div class="auto-next-hint">⏳ 正在生成做题报告...</div>`;
+        setTimeout(() => {
+          currentIndex++;
+          render();
+        }, 1200);
+      } else {
+        fb.innerHTML += `<button class="next-btn" onclick="nextQuestion()">下一题 →</button>`;
+      }
+
+      fb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function nextQuestion() {
+      currentIndex++;
+      render();
+    }
+
+    function renderResult() {
+      const total = questions.length;
+      const correct = answers.filter((a, i) => a === questions[i].answer).length;
+      const rate = total ? Math.round(correct / total * 100) : 0;
+
+      const catStats = {};
+      questions.forEach((q, i) => {
+        if (!catStats[q.category]) catStats[q.category] = { total: 0, correct: 0 };
+        catStats[q.category].total++;
+        if (answers[i] === q.answer) catStats[q.category].correct++;
+      });
+
+      const barRows = Object.entries(catStats).map(([cat, s]) => {
+        const r = Math.round(s.correct / s.total * 100);
+        const cls = r >= 80 ? 'good' : r >= 60 ? 'warn' : 'bad';
+        return `<div class="bar-row">
+          <div class="bar-label">${escapeHtml(cat)}</div>
+          <div class="bar-track"><div class="bar-fill ${cls}" style="width:${r}%"></div></div>
+          <div class="bar-pct">${s.correct}/${s.total} (${r}%)</div>
+        </div>`;
+      }).join('');
+
+      const weakAreas = Object.entries(catStats)
+        .filter(([cat, s]) => s.correct / s.total < 0.6)
+        .map(([cat, s]) => `<div class="weak-area"><strong>${escapeHtml(cat)}</strong> 正确率仅 ${Math.round(s.correct / s.total * 100)}%，建议重点复习该类时政热点。</div>`)
+        .join('');
+
+      const reviewItems = questions.map((q, i) => {
+        const ok = answers[i] === q.answer;
+        const userAns = answers[i] !== undefined ? `${'ABCD'[answers[i]]}` : '未答';
+        return `<div class="review-item">
+          <div class="review-head">
+            <span class="q-num">${i + 1}. ${escapeHtml(q.stem.slice(0, 35))}${q.stem.length > 35 ? '...' : ''}</span>
+            <span class="result">${ok ? '✅' : '❌'} 你答 <strong>${userAns}</strong> · 正确 <strong>${'ABCD'[q.answer]}</strong></span>
+          </div>
+        </div>`;
+      }).join('');
+
+      const memoItems = questions.map((q, i) => `<li>${escapeHtml(q.memo)}</li>`).join('');
+
+      const fenbiMap = {
+        '经济': { module: '经济常识专项题库', desc: '经济类时政是薄弱项' },
+        '法律': { module: '法条速记+历年真题', desc: '法律类时政需加强' },
+        '科技': { module: '科技成就专项', desc: '科技类时政掌握不足' },
+        '外交': { module: '外交动态专项', desc: '外交类时政还需提升' },
+        '民生': { module: '民生政策专项', desc: '民生类时政是薄弱项' },
+        '政策': { module: '时政专区+常识专项', desc: '政治/政策类时政还需巩固' },
+        '文化': { module: '文化常识专项', desc: '文化类时政需加强' },
+        '综合': { module: '全真模考+错题回顾', desc: '综合类时政掌握不足' }
+      };
+
+      let fenbiHtml;
+      const allGood = Object.values(catStats).every(s => s.correct / s.total >= 0.8);
+
+      if (allGood) {
+        fenbiHtml = `<div class="fenbi-card">
+          <div class="fenbi-title">📱 全对也要保持手感，上粉笔App进阶练习</div>
+          <div class="fenbi-desc">本次正确率 ${rate}%，掌握扎实！时政考点更新快，建议用粉笔App<strong>模考大赛</strong>持续保持手感，搭配<strong>时政速记</strong>和<strong>冲刺预测</strong>巩固高频考点，备考不掉队。</div>
+          <div class="fenbi-modules">
+            <span class="fenbi-module">模考大赛</span>
+            <span class="fenbi-module">时政速记</span>
+            <span class="fenbi-module">冲刺预测</span>
+          </div>
+          <div class="fenbi-qr">
+            <img src="https://fb.fbstatic.cn/api/ape-images/1a00ee7f9776fc7.png" alt="粉笔App下载二维码">
+            <div class="qr-label">扫码下载 <strong>粉笔App</strong></div>
+          </div>
+        </div>`;
+      } else if (rate < 60) {
+        fenbiHtml = `<div class="fenbi-card">
+          <div class="fenbi-title">📱 继续提升，上粉笔App练习</div>
+          <div class="fenbi-desc">本次正确率 ${rate}%，偏低。建议先做一套<strong>全真模考</strong>摸底，再针对薄弱项刷专项题库。粉笔App支持错题回顾、考点精讲、模考大赛。</div>
+          <div class="fenbi-modules">
+            <span class="fenbi-module">全真模考</span>
+            <span class="fenbi-module">错题回顾</span>
+            <span class="fenbi-module">考点精讲</span>
+          </div>
+          <div class="fenbi-qr">
+            <img src="https://fb.fbstatic.cn/api/ape-images/1a00ee7f9776fc7.png" alt="粉笔App下载二维码">
+            <div class="qr-label">扫码下载 <strong>粉笔App</strong></div>
+          </div>
+        </div>`;
+      } else {
+        const weakCats = Object.entries(catStats)
+          .filter(([cat, s]) => s.correct / s.total < 0.8)
+          .sort((a, b) => a[1].correct / a[1].total - b[1].correct / b[1].total);
+
+        const modules = weakCats.map(([cat]) => {
+          const m = fenbiMap[cat] || { module: '时政专区+常识专项', desc: cat + '类时政需加强' };
+          return `<span class="fenbi-module">${escapeHtml(m.module)}</span>`;
+        }).join('');
+
+        const weakDesc = weakCats.map(([cat, s]) => {
+          const m = fenbiMap[cat] || { desc: cat + '类时政需加强' };
+          return `${escapeHtml(m.desc)}（正确率 ${Math.round(s.correct / s.total * 100)}%）`;
+        }).join('；');
+
+        fenbiHtml = `<div class="fenbi-card">
+          <div class="fenbi-title">📱 针对薄弱项，上粉笔App专项练习</div>
+          <div class="fenbi-desc">${escapeHtml(weakDesc)}。粉笔App有对应的专项题库，支持按考点刷题、错题回顾、模考大赛，帮你精准补短板。</div>
+          <div class="fenbi-modules">${modules}</div>
+          <div class="fenbi-qr">
+            <img src="https://fb.fbstatic.cn/api/ape-images/1a00ee7f9776fc7.png" alt="粉笔App下载二维码">
+            <div class="qr-label">扫码下载 <strong>粉笔App</strong></div>
+          </div>
+        </div>`;
+      }
+
+      app.innerHTML = `
+        <div class="report-header">
+          <div class="label">本次成绩</div>
+          <div class="score">${correct} / ${total}</div>
+          <div class="rate">正确率 ${rate}%</div>
+        </div>
+
+        <div class="report-section">
+          <h3>📊 各类别正确率</h3>
+          ${barRows}
+        </div>
+
+        ${weakAreas ? `<div class="report-section"><h3>⚠️ 薄弱领域</h3>${weakAreas}</div>` : ''}
+
+        <div class="report-section">
+          <h3>📝 逐题回顾</h3>
+          ${reviewItems}
+        </div>
+
+        <div class="report-section">
+          <h3>📚 知识点清单</h3>
+          <ol class="memo-list">${memoItems}</ol>
+        </div>
+
+        ${fenbiHtml}
+      `;
+
+      app.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    render();
+  </script>
+</div>
+
+</body>
+</html>
+```
+
+---
+
+## 关键设计说明
+
+### 整体结构
+
+- **一个 HTML 文件，两个区域**：上半部分是热点详情卡片（可展开/收起 + 分类筛选），下半部分是答题 + 做题报告
+- **分隔线**：两个区域之间有 `section-divider` 分隔，标注"✏️ 时政热点练习"
+- **各自独立的容器**：卡片区用 `.container`，答题区也用 `.container`，`#quiz-app` 只包含答题内容（不影响上方卡片）
+
+### 热点卡片区
+
+- **卡片展开/收起**：点击"展开详情"按钮，JS `toggleCard()` 切换 `.expanded` class，展开显示详细解读 + 来源链接
+- **分类筛选**：顶部标签栏，JS `filterCards()` 按 `data-cat` 属性筛选卡片显示/隐藏
+- **配色策略**：每类左边竖条用对应色（经济橙/政策蓝/科技紫/外交青/法律红/民生绿/文化橙）
+- **CSS 摘要截断**：收起时 `-webkit-line-clamp: 2` 截断为 2 行，展开时设为 `unset`
+
+### 答题区
+
+- **数据注入方式**：`<script type="application/json" id="qdata">` 节点 + `JSON.parse` 读取（不用 JS 数组字面量，避免中文引号破坏脚本导致空白页）
+- **点选即反馈**：用户点选项 → 所有选项 `.disabled`（禁用再次点击） → 正确项 `.correct`（绿框） → 用户选错项 `.wrong`（红框） → 反馈区显示 ✅/❌ + 正确答案 + 解析 + 速记
+- **自动出报告**：最后一题答完后 `setTimeout 1.2s` 自动调 `renderResult()`，不显示"查看报告"按钮，用户零额外操作
+- **针对性粉笔推送**（JS 自动计算，全对也推）：
+  - 全部类别 ≥80%（全对）→ 推"模考大赛 + 时政速记 + 冲刺预测"，文案强调"保持手感、巩固高频考点"
+  - 整体正确率 <60% → 推"全真模考 + 错题回顾"
+  - 单类 <80% → 按映射表推对应专项题库（经济→经济常识 / 法律→法条速记 / 科技→科技成就 / 外交→外交动态 / 民生→民生政策 / 政策→时政专区 / 文化→文化常识 / 综合→全真模考）
+- **粉笔推送区**：文案 + 功能模块标签 + 底部固定二维码图片（130×130）+ 小字标注「扫码下载 粉笔App」，不使用按钮、不跳转外链
+- 二维码图片 URL（固定，不动态生成）：`https://fb.fbstatic.cn/api/ape-images/1a00ee7f9776fc7.png`
+
+### 复用方式
+
+1. AI 用 Write 工具将完整代码写入 `outputs/时政热点_YYYYMMDD.html`
+2. 在 `<div id="card-list">` 区域填入实际热点卡片（每条一个 `<div class="card">` 块）
+3. 在 `<script type="application/json" id="qdata">` 节点内填入合法 JSON 题目数组（默认 3 道）
+4. 其余 CSS/JS/HTML 结构一字不动
+5. 用 `present_files` 呈现

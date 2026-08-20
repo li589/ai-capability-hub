@@ -1,0 +1,12 @@
+{
+  "slug": "patseek-patent-search",
+  "name": "patseek-专利检索和技术情报",
+  "version": "1.8.1",
+  "installedAt": 1787228848462,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/511833/8783176d703b489ba9bfd40c509f424d.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/511833/8783176d703b489ba9bfd40c509f424d.png"
+}

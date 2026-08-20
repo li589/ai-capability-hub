@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:industry-panorama-research",
+  "registry": "trae-remote-official",
+  "plugin_name": "industry-panorama-research",
+  "version": "0.1.1",
+  "marketplace_plugin_id": "cedc9905-f229-415e-9d0e-13e29c6d9c94",
+  "remote_installed_plugin_id": "ZA3YBV76FDN4ES",
+  "checksum": "4af0790f0722a24079794ffad1f8c35a4ff5ade9e548a067188808511a3140c5",
+  "file_size": 426765,
+  "installed_at": 1787227204280
+}

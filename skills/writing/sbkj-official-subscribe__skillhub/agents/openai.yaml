@@ -1,0 +1,4 @@
+interface:
+  display_name: "招投标搜索与标讯订阅"
+  short_description: "按业务条件搜索招投标信息，形成去重、分级、追踪和持续订阅清单"
+  default_prompt: "使用 $baobiao-search-subscribe-bids 搜索并整理我关注的招投标信息。"

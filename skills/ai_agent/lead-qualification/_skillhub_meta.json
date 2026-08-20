@@ -1,0 +1,11 @@
+{
+  "name": "线索筛选分级",
+  "installedAt": 1787228534753,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088537775190261760",
+  "description_zh": "基于lead字段完整度、来源、创建时间和followUpRecord时效进行规则分级。适用于用户要求线索筛选分级、生成相关结果或检查执行边界时。",
+  "description_en": "Lead Qualification workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_2a684a5a-dee.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_2a684a5a-dee.png"
+}

@@ -1,0 +1,100 @@
+{
+    "schemaVersion":  "long_manuscript.file_hash_manifest.v2",
+    "packageName":  "long-manuscript-expert",
+    "packageVersion":  "26.7.22",
+    "rootDirectory":  "long-manuscript-expert",
+    "hashAlgorithm":  "SHA-256",
+    "pathEncoding":  "UTF-8 POSIX relative path",
+    "zipEntryTimestamp":  "1980-01-01T00:00:00Z",
+    "generationPolicy":  "ordinal_paths_utf8_lf_content_only_no_wall_clock_input",
+    "sourceProvenance":  {
+                             "mode":  "audited_source_reconstruction",
+                             "sourceRevisionClaimed":  false,
+                             "frozenBaselineTreeSha256":  "94c81a7e6a56acfa04745a39150e4fe976736b893ca19585d4fb0c84601704cd",
+                             "dispositionLedgerSha256":  "90ff5e7b7263d6b4ce7c8b20ac162fe21e66e585988dc057bae34b48fb589afa"
+                         },
+    "coverage":  {
+                     "totalPackageFiles":  16,
+                     "hashedFileCount":  15,
+                     "selfEntry":  "FILE-MANIFEST.sha256.json",
+                     "selfEntryExcludedForSelfReference":  true,
+                     "unlistedPayloadFiles":  0
+                 },
+    "files":  [
+                  {
+                      "path":  ".codebuddy-plugin/plugin.json",
+                      "bytes":  3268,
+                      "sha256":  "93eb2e97333117317b12f1ca85ae107382e09739e1d667cb6886078786cd05c2"
+                  },
+                  {
+                      "path":  "LICENSE",
+                      "bytes":  1081,
+                      "sha256":  "cebc764d66b57eb4bd545462eb389cf22498f1a2a90909c364087a6dcef017bb"
+                  },
+                  {
+                      "path":  "PRIVACY.md",
+                      "bytes":  2283,
+                      "sha256":  "72c4299d690a5748b25ff2bf59abd101ce5c89cba0cf25e55ce0278d3f70918b"
+                  },
+                  {
+                      "path":  "README.md",
+                      "bytes":  4042,
+                      "sha256":  "edf3ac0ab1050da0d0b998614317e9e493d9296aea1065655a90c477f9c872a3"
+                  },
+                  {
+                      "path":  "RIGHTS-NOTICE.md",
+                      "bytes":  2788,
+                      "sha256":  "8e4d4f3e08d3a3cc55fb807bca3cf35c60545d48db3a8d627a0470650e23411b"
+                  },
+                  {
+                      "path":  "SECURITY.md",
+                      "bytes":  2325,
+                      "sha256":  "0a57e3d75dd5d01c67cd8f63cee70e8ab844500967537a55d146e21c1781ff6b"
+                  },
+                  {
+                      "path":  "TERMS.md",
+                      "bytes":  1970,
+                      "sha256":  "c197ebabb6787048c3cc750cc92f30c38041458f98816e06d2a97715236c9812"
+                  },
+                  {
+                      "path":  "agents/long-manuscript-expert.md",
+                      "bytes":  10788,
+                      "sha256":  "23083a8604fef066b2a9099bbc30875de9c53610f60894ec9e6acc4b19650f77"
+                  },
+                  {
+                      "path":  "avatars/expert-v2.jpg",
+                      "bytes":  74880,
+                      "sha256":  "9bd60660e65e961829362c0a7636794a3c183844134977dad7057c82331dde24"
+                  },
+                  {
+                      "path":  "skills/long-manuscript-core/SKILL.md",
+                      "bytes":  5147,
+                      "sha256":  "21eb940913fcf51beba34cf3035d378b40d317053c822c6fa31d95ef38b1fe53"
+                  },
+                  {
+                      "path":  "skills/long-manuscript-core/references/bounded-revision.md",
+                      "bytes":  3188,
+                      "sha256":  "f8f8c666e7bc69672ceaa1816977aa83e255832b5aa7e0729f4d52b365b4f2cc"
+                  },
+                  {
+                      "path":  "skills/long-manuscript-core/references/first-value-and-continuation.md",
+                      "bytes":  2600,
+                      "sha256":  "e616747755759a273116ad2d3f9d4d9c45bde729f77b8325c59494c55350c564"
+                  },
+                  {
+                      "path":  "skills/long-manuscript-core/references/quality-and-delivery.md",
+                      "bytes":  2448,
+                      "sha256":  "f7ba51d3f4bd4b23d43e5a2c68d6028f3b444bc730fd065497abe0f34d407dbe"
+                  },
+                  {
+                      "path":  "skills/long-manuscript-core/references/safety-and-evidence.md",
+                      "bytes":  3273,
+                      "sha256":  "6909bf7170fae9444d1fd068844e3a76ce428af1c7a8eb863d51ccd86cc24fe1"
+                  },
+                  {
+                      "path":  "skills/long-manuscript-core/references/scene-routing.md",
+                      "bytes":  2711,
+                      "sha256":  "f7052a96275addb89ce45dbab506f55747a8401522adc9b72d462a6e7a2cf12e"
+                  }
+              ]
+}

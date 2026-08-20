@@ -1,0 +1,17 @@
+{
+  "owner": "minenclown",
+  "slug": "knowledge-base-framework",
+  "displayName": "kb-framework",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1776274393898,
+    "commit": "https://github.com/openclaw/skills/commit/1f5856dc7bec65cfc289332513e12d2158938b03"
+  },
+  "history": [
+    {
+      "version": "1.0.4",
+      "publishedAt": 1776129656320,
+      "commit": "https://github.com/openclaw/skills/commit/a4c5a05b4f03b6e93f8e7c38a83a10050686e31b"
+    }
+  ]
+}

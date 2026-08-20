@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:gitee",
+  "registry": "trae-remote-official",
+  "plugin_name": "gitee",
+  "version": "0.0.3",
+  "marketplace_plugin_id": "0f8003a1-ebe2-40d9-a618-2bcbe5414db2",
+  "remote_installed_plugin_id": "Z-C8W82L7E84W1",
+  "checksum": "bd12d44d16338f0ec2464dee24dc7b1aa52e01e1b734894024b8ce8cf963446a",
+  "file_size": 7255,
+  "installed_at": 1787227200494
+}

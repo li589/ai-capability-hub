@@ -1,0 +1,21 @@
+{
+  "name": "鹅厂辟谣助手",
+  "installedAt": 1785865035875,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2059943549850853376",
+  "examples_zh": [
+    "小P，腾讯应急钱包是真的吗？",
+    "帮我核查一下网传腾讯投资某公司的消息是否属实",
+    "微信要收费这个说法是真的吗？"
+  ],
+  "examples_en": [
+    "Xiao P, is the Tencent emergency wallet message real?",
+    "Help me verify whether the rumor about Tencent investing in this company is true.",
+    "Is the claim that WeChat will start charging users true?"
+  ],
+  "description_zh": "面向腾讯相关传闻的辟谣辅助 Skill，结合内部参考与实时联网核查，给出结论、事实依据和防诈提醒，并生成可分享卡片。",
+  "description_en": "A Tencent rumor-refuting assistant that checks Tencent-related claims with references and web verification, then produces a clear verdict, evidence, safety tips, and a share card.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059943549850853376/6ea2c39f620dd52a.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2059943549850853376/6ea2c39f620dd52a.png"
+}

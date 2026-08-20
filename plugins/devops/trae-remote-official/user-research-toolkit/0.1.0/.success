@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:user-research-toolkit",
+  "registry": "trae-remote-official",
+  "plugin_name": "user-research-toolkit",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "ca9c5e2d-9627-476e-a6f8-eacd85ee11c8",
+  "remote_installed_plugin_id": "R0R5W1T6ZM1A6D",
+  "checksum": "0467689c9a41ed83af791b2f78eed9ce34d91c9624e0a4c8101b7d1065b241c8",
+  "file_size": 10582,
+  "installed_at": 1787227201385
+}

@@ -1,0 +1,11 @@
+{
+  "name": "微博账号作品回采",
+  "installedAt": 1787228299644,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087427875248930816",
+  "description_zh": "输入微博用户主页链接查询用户最新博文，支持分页浏览",
+  "description_en": "Query a user's latest posts by Weibo profile link with pagination support",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_6ee9d66a-e92.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_6ee9d66a-e92.svg"
+}

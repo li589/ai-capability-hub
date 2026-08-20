@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:industry-researcher",
+  "registry": "trae-remote-official",
+  "plugin_name": "industry-researcher",
+  "version": "0.1.6",
+  "marketplace_plugin_id": "d9597732-e5da-4536-88e7-b826784b3800",
+  "remote_installed_plugin_id": "3C-JOEZBPBW70L",
+  "checksum": "cd88274d2d6718d44ab50c85a3f154ffb9eda48b1ae6db590c98dbf0d716fb31",
+  "file_size": 2025379,
+  "installed_at": 1787227203177
+}

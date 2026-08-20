@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Mono Audit report direction preview</title>
+  <desc id="desc">A black, white, and gray procurement report using a strict grid and line-weight semantics.</desc>
+  <defs>
+    <pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <line x1="0" y1="0" x2="0" y2="12" stroke="#111111" stroke-width="3"/>
+    </pattern>
+  </defs>
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <g stroke="#111111" stroke-opacity=".16" stroke-width="1">
+    <path d="M64 0V1000M432 0V1000M800 0V1000M1168 0V1000M1536 0V1000"/>
+  </g>
+  <rect x="64" y="38" width="1472" height="8" fill="#111111"/>
+  <g font-family="PingFang SC,Noto Sans CJK SC,Arial,sans-serif" fill="#111111">
+    <text x="64" y="94" font-size="17" font-weight="700" letter-spacing="3">REFERENCE 08 / MONO GRID</text>
+    <text x="64" y="178" font-size="64" font-weight="600">供应商授标审查</text>
+    <text x="1168" y="92" font-size="18" font-weight="700">PROCUREMENT / 08</text>
+    <text x="1168" y="132" font-size="18">AS OF 2026-07-29</text>
+  </g>
+  <rect x="64" y="226" width="1472" height="2" fill="#111111"/>
+  <g transform="translate(64 282)" font-family="PingFang SC,Noto Sans CJK SC,Arial,sans-serif">
+    <text x="0" y="22" font-size="15" font-weight="700" fill="#111111" opacity=".64" letter-spacing="2">DECISION POSTURE</text>
+    <text x="0" y="88" font-size="44" font-weight="600" fill="#111111">条件批准 / CONDITIONAL</text>
+    <text x="0" y="134" font-size="21" fill="#111111" opacity=".64">不借助彩色状态；通过字重、边框、填充纹理和标签表达证据等级。</text>
+    <rect x="1104" y="0" width="368" height="154" fill="#111111"/>
+    <text x="1138" y="50" font-size="14" font-weight="700" fill="#FFFFFF" letter-spacing="2">EXPOSURE</text>
+    <text x="1138" y="116" font-size="44" font-weight="600" fill="#FFFFFF">¥ 2.4M</text>
+  </g>
+  <g transform="translate(64 506)" font-family="PingFang SC,Noto Sans CJK SC,Arial,sans-serif">
+    <rect width="1472" height="58" fill="#111111"/>
+    <g fill="#FFFFFF" font-size="15" font-weight="700">
+      <text x="22" y="37">OPTION</text><text x="390" y="37">COST</text><text x="690" y="37">QUALITY</text><text x="990" y="37">CAPACITY</text><text x="1272" y="37">GATE</text>
+    </g>
+    <g fill="#111111" font-size="20">
+      <text x="22" y="112" font-weight="600">A / 推荐</text><text x="390" y="112">100</text><text x="690" y="112">96</text><text x="990" y="112">88</text><text x="1272" y="112">PASS</text>
+      <text x="22" y="180" font-weight="600">B / 备选</text><text x="390" y="180">108</text><text x="690" y="180">92</text><text x="990" y="180">97</text><text x="1272" y="180">COND.</text>
+      <text x="22" y="248" font-weight="600">BASELINE</text><text x="390" y="248">116</text><text x="690" y="248">89</text><text x="990" y="248">76</text><text x="1272" y="248">PASS</text>
+    </g>
+    <path d="M0 132H1472M0 200H1472M0 268H1472" stroke="#111111" stroke-opacity=".32" stroke-width="2"/>
+    <rect x="0" y="70" width="16" height="52" fill="url(#hatch)"/>
+  </g>
+  <g transform="translate(64 846)" font-family="PingFang SC,Noto Sans CJK SC,Arial,sans-serif">
+    <rect width="1472" height="4" fill="#111111"/>
+    <text x="0" y="54" font-size="15" font-weight="700" fill="#111111" opacity=".64" letter-spacing="2">EXECUTION GATE</text>
+    <text x="0" y="104" font-size="27" font-weight="600" fill="#111111">完成峰值产能验证并签署质量协议后，释放首批 30% 份额。</text>
+  </g>
+</svg>

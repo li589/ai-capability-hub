@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "selection": "inherit-uniform-random-style",
+  "pool_size": 6,
+  "router": "scripts/select_visual_style.py",
+  "runtime_boundary": {
+    "radar_owns": [
+      "companion identity",
+      "composition skeleton",
+      "focal slot",
+      "support slot",
+      "geometry personality",
+      "runtime token value mapping"
+    ],
+    "dynamic_ui_owns": [
+      "scene routing",
+      "ready material selection",
+      "widget code",
+      "token names and mechanics",
+      "host theme adaptation",
+      "fallback behavior",
+      "interaction binding"
+    ],
+    "never": [
+      "copy guide SVG into widget output",
+      "add a page or app shell",
+      "replace a ready material with guide geometry",
+      "introduce local token aliases",
+      "route a style from report text, evidence type, brand, or preference",
+      "use colored edge strips or accent borders"
+    ]
+  },
+  "companions": [
+    {
+      "style_id": "verdict-sheet",
+      "id": "verdict-gate",
+      "asset": "assets/radar-visual-kit/dynamic-ui-companions/verdict-gate.svg",
+      "composition": "wide focal field with a compact right verdict gate and one bottom trigger line",
+      "geometry": "editorial, low-radius, broad horizontal measure, hard alignment",
+      "focal_slot": "left 72 percent",
+      "support_slot": "right gate plus one bottom line",
+      "interaction": "inspect the focal mark; lock one exact value or trigger",
+      "ink_family": "green-black",
+      "token_map": {
+        "light": {"brand": "#B8D900", "chart_series_1": "#91AD00", "optional_accent": null},
+        "dark": {"brand": "#DFFF3F", "chart_series_1": "#C8EA24", "optional_accent": null}
+      }
+    },
+    {
+      "style_id": "evidence-object",
+      "id": "evidence-lens",
+      "asset": "assets/radar-visual-kit/dynamic-ui-companions/evidence-lens.svg",
+      "composition": "one large evidence object with three numbered annotation anchors and one compact inspection rail",
+      "geometry": "product-like, rounded object, asymmetric annotation orbit",
+      "focal_slot": "center-right object",
+      "support_slot": "left inspection rail",
+      "interaction": "select one annotation; synchronize the active evidence detail",
+      "ink_family": "warm-black",
+      "token_map": {
+        "light": {"brand": "#6658D8", "chart_series_1": "#5043BC", "optional_accent": "#F05434"},
+        "dark": {"brand": "#9187F2", "chart_series_1": "#B0A8FF", "optional_accent": "#FF7658"}
+      }
+    },
+    {
+      "style_id": "swiss-trace",
+      "id": "trace-index",
+      "asset": "assets/radar-visual-kit/dynamic-ui-companions/trace-index.svg",
+      "composition": "strict coordinate field with one uninterrupted trace, direct labels, and a narrow source index",
+      "geometry": "square, zero-radius, modular grid, generous gutters",
+      "focal_slot": "full-width trace field",
+      "support_slot": "bottom index row",
+      "interaction": "inspect a trace point; synchronize its direct label and index row",
+      "ink_family": "cool-black",
+      "token_map": {
+        "light": {"brand": "#2357FF", "chart_series_1": "#1746E8", "optional_accent": null},
+        "dark": {"brand": "#6E8CFF", "chart_series_1": "#89A0FF", "optional_accent": null}
+      }
+    },
+    {
+      "style_id": "decision-mosaic",
+      "id": "decision-prism",
+      "asset": "assets/radar-visual-kit/dynamic-ui-companions/decision-prism.svg",
+      "composition": "one dominant decision plane with one bifurcated evidence rail and a single selection axis",
+      "geometry": "rounded product geometry, asymmetric 2-to-1 partition, tight internal rhythm",
+      "focal_slot": "large left decision zone",
+      "support_slot": "one right evidence rail with two stacked cells",
+      "interaction": "select one option or signal; update every zone from the same state key",
+      "ink_family": "warm-black",
+      "token_map": {
+        "light": {"brand": "#EF4B2F", "chart_series_1": "#D53A23", "optional_accent": "#6658D8"},
+        "dark": {"brand": "#FF7359", "chart_series_1": "#FF8A73", "optional_accent": "#9A90F4"}
+      }
+    },
+    {
+      "style_id": "signal-stage",
+      "id": "signal-theatre",
+      "asset": "assets/radar-visual-kit/dynamic-ui-companions/signal-theatre.svg",
+      "composition": "one luminous focal plot on a quiet field with a narrow three-cue decision rail",
+      "geometry": "cinematic, medium-radius stage, strong center-to-rail contrast",
+      "focal_slot": "left stage",
+      "support_slot": "right cue rail",
+      "interaction": "inspect one plot mark; mirror its act, validate, or watch cue",
+      "ink_family": "neutral-black",
+      "token_map": {
+        "light": {"brand": "#3157E6", "chart_series_1": "#2447C8", "optional_accent": "#A6C900"},
+        "dark": {"brand": "#6D88FF", "chart_series_1": "#88A0FF", "optional_accent": "#DFFF3F"}
+      }
+    },
+    {
+      "style_id": "alert-cut",
+      "id": "response-cut",
+      "asset": "assets/radar-visual-kit/dynamic-ui-companions/response-cut.svg",
+      "composition": "one diagonal response-window measure followed by one exact evidence line",
+      "geometry": "editorial, zero-radius, diagonal cut, compressed vertical rhythm",
+      "focal_slot": "upper response measure",
+      "support_slot": "lower exact-value line",
+      "interaction": "inspect the response window; reveal one uncertainty or source detail",
+      "ink_family": "red-black",
+      "token_map": {
+        "light": {"brand": "#D93C20", "chart_series_1": "#B92E18", "optional_accent": null},
+        "dark": {"brand": "#FF684C", "chart_series_1": "#FF836B", "optional_accent": null}
+      }
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "connectors": {
+    "neo-crm": {
+      "type": "remote_mcp",
+      "mcp_server": "neo-crm",
+      "auth_policy": "ON_INVOKE"
+    }
+  }
+}

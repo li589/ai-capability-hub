@@ -1,0 +1,20 @@
+{
+  "name": "Web Scraper",
+  "installedAt": 1785784720442,
+  "source": "marketplace",
+  "version": "0.1.1",
+  "skillId": "skill_2053083117870850048",
+  "examples_zh": [
+    "为这个招聘网站生成抓取管道：先 HTTP 获取，再解析 HTML；如果字段缺失就切到 Playwright 渲染，并抽取职位、地点和薪资。",
+    "抓取一批新闻详情页，使用样板内容清洗去掉推荐栏和广告区，再用 LLM 提取公司名、人物和发布时间。",
+    "根据目标电商页面结构生成 Python 抓取脚本和 YAML 配置，按从轻到重的级联策略提取商品名、价格和评分。"
+  ],
+  "examples_en": [
+    "Build a scraping pipeline for this jobs site: try HTTP fetch and HTML parsing first, then fall back to Playwright rendering to extract role, location, and salary.",
+    "Scrape a batch of news detail pages, remove boilerplate such as recommendation and ad blocks, then use LLM extraction for companies, people, and publish dates.",
+    "Generate a Python scraper and YAML config for the target ecommerce page, using cascade fallback to extract product name, price, and rating."
+  ],
+  "description_zh": "多策略五阶段网页抓取管道（HTTP/解析/渲染/清洗/LLM提取）",
+  "description_en": "Multi-strategy 5-stage web scraping pipeline with cascade fallback",
+  "iconSource": "letter:auto"
+}

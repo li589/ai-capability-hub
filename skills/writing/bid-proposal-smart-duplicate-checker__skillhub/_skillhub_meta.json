@@ -1,0 +1,12 @@
+{
+  "slug": "bid-proposal-smart-duplicate-checker",
+  "name": "标书智能查重专家",
+  "version": "1.0.1",
+  "installedAt": 1787229130180,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png"
+}

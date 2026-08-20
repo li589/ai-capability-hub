@@ -1,0 +1,19 @@
+type: social_media
+
+overrides:
+  social_media_poster:
+    prompt_append: >
+      ADDITIONAL FOR SOCIAL MEDIA:
+      - THE SQUINT TEST: Squint your eyes until the image blurs. Can you still tell
+        what color it is and what the main shape is? If yes, it works for social.
+      - Design for a THUMB, not a monitor. The viewer is scrolling at speed on a
+        4-inch phone screen. You have 0.3 seconds to earn their pause.
+      - TEXT: Maximum 2 text elements visible. One big, one small. That's it.
+        Everything else is noise that weakens the big text.
+      - BACKGROUND SIMPLICITY: A single solid color, a simple 2-color gradient,
+        or a heavily blurred photograph. Never a complex scene — the text IS the content.
+      - COLOR STRATEGY: Use the most saturated version of your colors. Social feeds
+        are crowded — a muted poster disappears between competitors' bright ones.
+        The poster should look almost uncomfortably vivid in isolation.
+      - SAFE ZONE: Platforms crop edges unpredictably. Keep ALL important content
+        in the center 70% of the canvas. Nothing critical in the outer 15% ring.

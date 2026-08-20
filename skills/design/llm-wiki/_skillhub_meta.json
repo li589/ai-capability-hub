@@ -1,0 +1,20 @@
+{
+  "name": "Karpathy LLM Wiki",
+  "installedAt": 1785864588122,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082332061896704",
+  "examples_zh": [
+    "帮我搭建一个个人知识库，我想把读过的论文都整理进去",
+    "我有一堆调研文档，帮我建一个 Wiki 把要点都整合起来",
+    "对我的知识库做一次健康检查，看看有没有矛盾或过时的内容"
+  ],
+  "examples_en": [
+    "Set up a personal wiki for my research — I want to organize all papers I've read",
+    "I have a bunch of research docs, build a wiki that synthesizes the key points",
+    "Run a health check on my wiki — find contradictions and stale content"
+  ],
+  "description_zh": "用 LLM 增量构建和维护个人知识库 Wiki",
+  "description_en": "Build a persistent personal wiki with LLM-maintained knowledge",
+  "iconSource": "letter:auto"
+}

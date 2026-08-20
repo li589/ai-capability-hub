@@ -1,0 +1,21 @@
+{
+  "name": "邮件管理",
+  "installedAt": 1787227677151,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2053081884429156352",
+  "examples_zh": [
+    "发一封邮件到企业邮箱",
+    "查看163邮箱的未读邮件",
+    "把这封邮件转发给同事"
+  ],
+  "examples_en": [
+    "Send an email to a work address",
+    "Check unread emails in my inbox",
+    "Forward this email to a colleague"
+  ],
+  "description_zh": "邮件管理与自动化，支持多邮件服务商收发搜索",
+  "description_en": "Email management and automation across multiple providers",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/email-skill.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/email-skill.svg"
+}

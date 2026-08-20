@@ -1,0 +1,11 @@
+{
+  "owner": "qinjobs",
+  "slug": "hrclaw-jd-scorecard",
+  "displayName": "HRClaw JD & Resume Scorecard",
+  "latest": {
+    "version": "0.1.2",
+    "publishedAt": 1774858339030,
+    "commit": "https://github.com/openclaw/skills/commit/e54b7e22d991046d6f399f35cbc21dd4e23011c4"
+  },
+  "history": []
+}

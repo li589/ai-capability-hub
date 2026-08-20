@@ -1,0 +1,15 @@
+{
+  "name": "deploy_to_remote",
+  "description": "This tool allows user to deploy a complete project to a remote service.\nPlease strictly use one of the enumerated values defined in the schema for the deployment target.\nIf none of the enumerated options meet the requirement, reject the user request and terminate the process.\n",
+  "arguments": {
+    "properties": {
+      "deploy_target": {
+        "description": "The target service to deploy.",
+        "enum": [
+          "vercel"
+        ]
+      }
+    },
+    "type": "object"
+  }
+}

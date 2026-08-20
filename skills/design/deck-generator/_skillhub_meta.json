@@ -1,0 +1,10 @@
+{
+  "name": "Deck Generator",
+  "installedAt": 1785784796351,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2053082023531843584",
+  "description_zh": "AI 驱动的演示文稿生成，统一视觉风格的幻灯片",
+  "description_en": "AI-powered slide deck generation with consistent visual styling.",
+  "iconSource": "letter:auto"
+}

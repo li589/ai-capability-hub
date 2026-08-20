@@ -1,0 +1,13 @@
+# dataSupplement 数据层运行依赖
+# 安装: python3 -m venv .venv && .venv/bin/pip install -r requirements.txt
+# 或由 scripts/run_data_supplement.sh 首次运行时自动安装
+
+mootdx>=0.11
+akshare>=1.18
+pandas>=2.0
+numpy>=2.0
+lxml>=5.0
+beautifulsoup4>=4.12
+httpx>=0.25
+curl_cffi>=0.12
+openpyxl>=3.1

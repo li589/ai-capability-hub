@@ -1,0 +1,83 @@
+{
+  "evals": [
+    {
+      "id": "eval-01-api-design",
+      "prompt": "Design a REST API for a multi-tenant SaaS billing system. It needs to support: creating customers, managing subscription plans, processing invoices, and handling payment webhooks from Stripe. Use Node.js with NestJS and PostgreSQL. Include the database schema, API endpoints, and at least one complete controller+service+repository implementation.",
+      "expectations": [
+        "Produces OpenAPI-style endpoint definitions with proper HTTP verbs and status codes",
+        "Database schema uses proper normalization with foreign keys and indexes",
+        "Multi-tenancy is handled (tenant isolation via column or schema)",
+        "Includes Mermaid ER diagram for the schema",
+        "Webhook endpoint handles Stripe signature verification",
+        "Includes idempotency handling for payment processing",
+        "Error handling uses custom exception classes, not raw HTTP exceptions",
+        "Code uses TypeScript strict mode patterns (no `any` types)"
+      ],
+      "files": []
+    },
+    {
+      "id": "eval-02-code-review",
+      "prompt": "Review this Python FastAPI code and provide feedback:\n\n```python\nfrom fastapi import FastAPI, HTTPException\nimport sqlite3\n\napp = FastAPI()\ndb = sqlite3.connect('app.db')\n\n@app.get('/users/{user_id}')\ndef get_user(user_id):\n    cursor = db.execute(f'SELECT * FROM users WHERE id = {user_id}')\n    user = cursor.fetchone()\n    if not user:\n        raise HTTPException(status_code=404)\n    return {'user': user}\n\n@app.post('/users')\ndef create_user(name, email, password):\n    db.execute(f\"INSERT INTO users (name, email, password) VALUES ('{name}', '{email}', '{password}')\")\n    db.commit()\n    return {'status': 'ok'}\n\n@app.get('/users')\ndef list_users(limit=1000):\n    cursor = db.execute(f'SELECT * FROM users LIMIT {limit}')\n    return {'users': cursor.fetchall()}\n```",
+      "expectations": [
+        "Identifies SQL injection vulnerability as CRITICAL in all three endpoints",
+        "Identifies plaintext password storage as CRITICAL",
+        "Identifies shared global database connection as a problem",
+        "Uses severity tags (CRITICAL/SUGGESTION/NIT or equivalent)",
+        "Provides concrete fixed code examples",
+        "Notes missing input validation (Pydantic models)",
+        "Notes missing type hints on function parameters",
+        "Mentions the unbounded default limit of 1000 as a concern",
+        "Suggests using an async database driver"
+      ],
+      "files": []
+    },
+    {
+      "id": "eval-03-architecture",
+      "prompt": "We're building a real-time collaborative document editor (like Google Docs). Expected scale: 100K concurrent users, documents up to 50 pages. We need to handle real-time cursor positions, text operations with conflict resolution, document versioning, and offline support. Our team is 6 backend engineers. What architecture would you recommend? We're open to any tech stack.",
+      "expectations": [
+        "Recommends CRDT or OT for conflict resolution with trade-off explanation",
+        "Includes at least one Mermaid architecture diagram",
+        "Addresses WebSocket/real-time communication strategy",
+        "Discusses data storage strategy (operational transforms, snapshots, etc.)",
+        "Mentions horizontal scaling concerns for WebSocket connections",
+        "Addresses offline support / sync strategy",
+        "Considers the team size (6 engineers) in complexity recommendations",
+        "Produces an ADR or structured decision document",
+        "Mentions specific technologies with justification"
+      ],
+      "files": []
+    },
+    {
+      "id": "eval-04-database-optimization",
+      "prompt": "Our PostgreSQL database is struggling. The `orders` table has 50M rows and this query takes 12 seconds:\n\n```sql\nSELECT o.id, o.status, o.total, u.email, u.name,\n       COUNT(oi.id) as item_count\nFROM orders o\nJOIN users u ON u.id = o.user_id\nJOIN order_items oi ON oi.order_id = o.id\nWHERE o.created_at > NOW() - INTERVAL '30 days'\n  AND o.status IN ('pending', 'processing')\nGROUP BY o.id, o.status, o.total, u.email, u.name\nORDER BY o.created_at DESC\nLIMIT 50;\n```\n\nCurrent indexes: only primary keys. Help us fix this.",
+      "expectations": [
+        "Recommends a composite index on (created_at, status) or (status, created_at)",
+        "Recommends an index on order_items.order_id",
+        "Explains EXPLAIN ANALYZE and how to read query plans",
+        "Considers partial indexes for the status filter",
+        "Discusses index column ordering rationale",
+        "Mentions potential for table partitioning on created_at given 50M rows",
+        "Provides the actual CREATE INDEX statements",
+        "Warns about index maintenance overhead on write-heavy tables"
+      ],
+      "files": []
+    },
+    {
+      "id": "eval-05-go-microservice",
+      "prompt": "Build a Go microservice for a URL shortener. Requirements: shorten URLs, redirect shortened URLs, track click analytics (country, referrer, device), rate limit per API key. Must handle 10K requests/second. Include the full implementation with database schema, migrations, and tests.",
+      "expectations": [
+        "Uses idiomatic Go project structure (cmd/, internal/)",
+        "Handles errors properly (no ignored errors)",
+        "Uses context.Context for cancellation/timeouts",
+        "Implements rate limiting (token bucket, sliding window, or similar)",
+        "Database schema includes analytics table with appropriate indexes",
+        "Uses connection pooling",
+        "Includes table-driven tests",
+        "Addresses the 10K rps requirement (caching strategy, connection pools)",
+        "Migration files include both UP and DOWN",
+        "Short URL generation handles collisions"
+      ],
+      "files": []
+    }
+  ]
+}

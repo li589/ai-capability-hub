@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:omnichannel-commerce-assistant",
+  "registry": "trae-remote-official",
+  "plugin_name": "omnichannel-commerce-assistant",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "066e21d8-2a72-4980-923e-281dbe22dc1d",
+  "remote_installed_plugin_id": "UJ1KGSH9W.2_OM",
+  "checksum": "73b1cd7fe0a9b910ceeb514cd05ea7d180b02e5c24776520420ef56645c56bd9",
+  "file_size": 71277,
+  "installed_at": 1787227202917
+}

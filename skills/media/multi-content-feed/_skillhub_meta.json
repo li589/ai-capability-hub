@@ -1,0 +1,11 @@
+{
+  "name": "全网内容出海信息源",
+  "installedAt": 1787228367110,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2085661570079768576",
+  "description_zh": "全平台内容出海爆款追踪工具，每日扫描Top50作品，智能聚类题材方向后生成HTML日报",
+  "description_en": "Track trending cross-border content across platforms with daily top 50 analysis and topic clustering",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_8cd09460-c86.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_8cd09460-c86.svg"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "股票基础信息",
+  "installedAt": 1787227695035,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2083074048291053568",
+  "description_zh": "本Skill基于广发证券权威数据接口构建，查询股票基础信息，包含公司全称、板块、上市日期、主营业务、所属行业。",
+  "description_en": "GF Securities stock basic information query tool, providing company full name, board, listing date, main business, and industry classification.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_3c5e34bc-9fe.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_3c5e34bc-9fe.png"
+}

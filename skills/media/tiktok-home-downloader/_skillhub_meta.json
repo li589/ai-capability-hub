@@ -1,0 +1,11 @@
+{
+  "name": "TikTok 主页视频批量提取",
+  "installedAt": 1787228328889,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087462016708960256",
+  "description_zh": "输入TikTok主页链接自动拉取全部作品，解析无水印下载链接并批量下载",
+  "description_en": "Batch-extract all videos from a TikTok profile with watermark-free links.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_4c955966-25b.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_4c955966-25b.svg"
+}

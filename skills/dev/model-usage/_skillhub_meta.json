@@ -1,0 +1,20 @@
+{
+  "name": "模型用量统计",
+  "installedAt": 1787228384669,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082590929702912",
+  "examples_zh": [
+    "帮我看看我今天各模型的用量和费用",
+    "统计一下最近 Claude 的花费",
+    "我用了哪些模型，各自花了多少钱"
+  ],
+  "examples_en": [
+    "Show me today's model usage and cost breakdown",
+    "How much have I spent on Claude recently?",
+    "Give me a summary of which models I've used and what they cost"
+  ],
+  "description_zh": "通过 CodexBar CLI 统计各模型使用量和费用，支持当前模型或全量明细（仅 macOS）",
+  "description_en": "Summarize per-model AI usage and cost from CodexBar CLI, macOS only",
+  "iconSource": "letter:auto"
+}

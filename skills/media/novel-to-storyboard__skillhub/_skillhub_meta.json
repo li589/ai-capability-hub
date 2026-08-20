@@ -1,0 +1,12 @@
+{
+  "slug": "novel-to-storyboard",
+  "name": "剧本转分镜SKill",
+  "version": "1.0.0",
+  "installedAt": 1787228867544,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a00e31c7-8d6a-4e65-84fc-16a177f95674.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a00e31c7-8d6a-4e65-84fc-16a177f95674.png"
+}

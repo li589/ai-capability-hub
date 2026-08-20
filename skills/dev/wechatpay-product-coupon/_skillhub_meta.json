@@ -1,0 +1,21 @@
+{
+  "name": "微信支付商品券",
+  "installedAt": 1787228691597,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2053083481347330048",
+  "examples_zh": [
+    "我要接入商品券，要创建拿铁8折券",
+    "有商品券创券示例代码吗？",
+    "接口报错了，帮我看下这个报错原因是什么"
+  ],
+  "examples_en": [
+    "I want to integrate product coupons and create a 20% off latte coupon.",
+    "Do you have sample code for creating a product coupon?",
+    "I got an API error. Help me figure out what went wrong."
+  ],
+  "description_zh": "微信支付商品券接入助手（选型、代码示例、排障）",
+  "description_en": "WeChat Pay product coupon integration: type matching, code samples & troubleshooting",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wechatpay-product-coupon.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wechatpay-product-coupon.png"
+}

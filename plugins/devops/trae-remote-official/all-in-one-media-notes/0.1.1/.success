@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:all-in-one-media-notes",
+  "registry": "trae-remote-official",
+  "plugin_name": "all-in-one-media-notes",
+  "version": "0.1.1",
+  "marketplace_plugin_id": "e32f905d-550c-46e3-98a2-afda40e8c528",
+  "remote_installed_plugin_id": "0O9LPZFOSWDF1A",
+  "checksum": "97e889d997499fb95eff06ccf815053d5f14403e7c307de522e056210bc04ac3",
+  "file_size": 14827,
+  "installed_at": 1787227202867
+}

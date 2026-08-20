@@ -1,0 +1,20 @@
+{
+  "name": "notion中文",
+  "installedAt": 1787227606229,
+  "source": "marketplace",
+  "version": "1.0.12",
+  "skillId": "skill_2052764011421208576",
+  "examples_zh": [
+    "把这份项目周会纪要整理成 Notion 页面，按行动项、负责人和截止日期分区",
+    "在 Notion 中为产品需求建立一个看板，包含待评审、开发中、测试中和已发布四列",
+    "将这批竞品调研结论整理成 Notion 数据库条目，并添加标签、优先级和链接字段"
+  ],
+  "examples_en": [
+    "Turn these project meeting notes into a Notion page with sections for action items, owners, and due dates",
+    "Create a Notion product requirements board with columns for review, in development, testing, and released",
+    "Organize these competitor research findings into Notion database entries with tags, priority, and source links"
+  ],
+  "description_zh": "notion中文描述",
+  "description_en": "notion english description",
+  "iconSource": "letter:auto"
+}

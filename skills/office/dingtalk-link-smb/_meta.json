@@ -1,0 +1,11 @@
+{
+  "owner": "chao980",
+  "slug": "dingtalk-link-smb",
+  "displayName": "dingtalk-link",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774419419951,
+    "commit": "https://github.com/openclaw/skills/commit/c41b47d3c662da336fb295c3da39eec2eda74b15"
+  },
+  "history": []
+}

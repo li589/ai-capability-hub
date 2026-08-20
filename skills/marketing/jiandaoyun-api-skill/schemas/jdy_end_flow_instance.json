@@ -1,0 +1,26 @@
+{
+  "client_only_params": [],
+  "description": "终止一个流程实例",
+  "display_name": "终止流程实例",
+  "domain": "流程",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/workflow/instance/close",
+  "method": "POST",
+  "name": "jdy_end_flow_instance",
+  "params": {
+    "instance_id": {
+      "description": "流程实例ID，即数据的_id（必填）",
+      "type": "string"
+    },
+    "username": {
+      "default": "",
+      "description": "操作人username（可选）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "instance_id"
+  ],
+  "risk": "destructive",
+  "source": "简道云工具包.zip"
+}

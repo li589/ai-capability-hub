@@ -1,0 +1,20 @@
+{
+  "name": "US Stock Analysis",
+  "installedAt": 1787227724979,
+  "source": "marketplace",
+  "version": "0.1.1",
+  "skillId": "skill_2053083075603988480",
+  "examples_zh": [
+    "分析AAPL的财务指标、业务质量和估值水平，并生成一份美股投资报告",
+    "对比TSLA和NVDA的基本面、技术面支撑压力位和估值风险",
+    "给我一份MSFT的技术形态分析，包含趋势指标、关键价位和风险提示"
+  ],
+  "examples_en": [
+    "Analyze AAPL's financial metrics, business quality, and valuation, then generate a US stock investment report",
+    "Compare TSLA and NVDA across fundamentals, technical support/resistance, and valuation risks",
+    "Create a technical analysis for MSFT with trend indicators, key price levels, and risk notes"
+  ],
+  "description_zh": "美股综合分析（基本面、技术面、估值、对比报告）",
+  "description_en": "US stock analysis: fundamentals, technicals, valuation & comparison reports",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="512"
+     height="512"
+     viewBox="0 0 512 512"
+     role="img"
+     aria-labelledby="title desc">
+  <title id="title">MediaKit icon</title>
+  <desc id="desc">Three overlapping blue gradient circles surrounding a white play symbol.</desc>
+
+  <defs>
+    <linearGradient id="topGradient" x1="132" y1="70" x2="292" y2="286"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#72D6F2"/>
+      <stop offset="0.55" stop-color="#489BF4"/>
+      <stop offset="1" stop-color="#2367F5"/>
+    </linearGradient>
+
+    <linearGradient id="leftGradient" x1="132" y1="178" x2="276" y2="406"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1429EE"/>
+      <stop offset="0.52" stop-color="#5962F3"/>
+      <stop offset="1" stop-color="#AAB1F7"/>
+    </linearGradient>
+
+    <linearGradient id="rightGradient" x1="264" y1="116" x2="358" y2="360"
+                    gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#BCEAF8"/>
+      <stop offset="0.48" stop-color="#68C8EB"/>
+      <stop offset="1" stop-color="#08A9E6"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="512" height="512" fill="#FFFFFF"/>
+
+  <circle cx="205" cy="181" r="131" fill="url(#topGradient)"/>
+  <circle cx="196" cy="294" r="131" fill="url(#leftGradient)"/>
+  <circle cx="307" cy="233" r="131" fill="url(#rightGradient)"/>
+
+  <path fill="#FAFFFF"
+        d="M184 174.6
+           C184 159.8 200.1 150.6 212.9 158.2
+           L318.2 220.6
+           C330.9 228.1 330.9 246.5 318.2 254
+           L212.9 316.4
+           C200.1 324 184 314.8 184 300
+           Z"/>
+</svg>

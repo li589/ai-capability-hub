@@ -1,0 +1,11 @@
+{
+  "owner": "yang222265",
+  "slug": "lawyer-assistant",
+  "displayName": "Lawyer Assistant",
+  "latest": {
+    "version": "3.0.0",
+    "publishedAt": 1774105922624,
+    "commit": "https://github.com/openclaw/skills/commit/ae3efe5001d2532d03ce00868ab7eaa921b7d996"
+  },
+  "history": []
+}

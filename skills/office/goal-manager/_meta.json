@@ -1,0 +1,11 @@
+{
+  "owner": "cp3d1455926-svg",
+  "slug": "goal-manager",
+  "displayName": "Goal Manager - 目标管理",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774862772415,
+    "commit": "https://github.com/openclaw/skills/commit/dac5d2d6d4a709295f919eb317faca497388ddb2"
+  },
+  "history": []
+}

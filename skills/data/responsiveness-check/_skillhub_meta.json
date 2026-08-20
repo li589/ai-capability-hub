@@ -1,0 +1,20 @@
+{
+  "name": "Responsiveness Check",
+  "installedAt": 1787228396089,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2057443638355750912",
+  "examples_zh": [
+    "帮我检查这个网站在手机和平板上的响应式效果",
+    "扫一下这个页面在哪些宽度会布局错乱",
+    "测试这个官网从 320 到 1920 像素的断点表现"
+  ],
+  "examples_en": [
+    "Check whether this site works well on mobile and tablet widths",
+    "Find the viewport widths where this page layout breaks",
+    "Test this website across common responsive breakpoints"
+  ],
+  "description_zh": "多视口响应式检查，定位页面布局断点问题",
+  "description_en": "Check responsive layouts across viewports and identify breakpoint issues",
+  "iconSource": "letter:auto"
+}

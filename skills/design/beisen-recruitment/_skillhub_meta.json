@@ -1,0 +1,11 @@
+{
+  "name": "北森招聘主流程",
+  "installedAt": 1787227694523,
+  "source": "marketplace",
+  "version": "2.2.2",
+  "skillId": "skill_2087494083900678144",
+  "description_zh": "北森招聘主流程管理工具。覆盖职位搜索与详情、AI 推荐人才、候选人申请列表与详情、人才库推荐候选人搜索，以及异步任务管理与轮询。一站式管理职位与候选人。",
+  "description_en": "Main-process recruitment management for Beisen. Covers job search & details, AI-recommended candidates, candidate application lists & details, talent pool candidate search, and async task management & polling. One-stop management of jobs and candidates.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_61cbb4c6-dad.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_61cbb4c6-dad.png"
+}

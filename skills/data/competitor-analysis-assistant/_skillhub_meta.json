@@ -1,0 +1,10 @@
+{
+  "name": "鼎华eMES 售前助手-竞品分析助手",
+  "installedAt": 1787227549273,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089991576400732160",
+  "description_zh": "针对中小制造企业 MES 产品的单公司/单产品竞品分析：结合产品功能记录与竞品资料，产出基础信息/功能对比/价格/公司背景/用户评价/应对策略的结构化分析，查不到的信息明确标注。",
+  "description_en": "Single-competitor analysis for MES products: combines product feature records with competitor materials to produce structured analysis (basics, feature comparison, pricing, company, reviews, strategy). No data fabrication.",
+  "iconSource": "letter:auto"
+}

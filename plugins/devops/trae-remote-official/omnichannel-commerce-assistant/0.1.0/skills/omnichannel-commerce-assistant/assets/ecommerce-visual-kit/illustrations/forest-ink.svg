@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Forest ink atmospheric field</title>
+  <desc id="desc">Deep moss, mineral blue, and ink shapes form a restrained organic backdrop.</desc>
+  <defs>
+    <filter id="blur"><feGaussianBlur stdDeviation="54"/></filter>
+    <radialGradient id="moss"><stop stop-color="#78906F" stop-opacity=".72"/><stop offset="1" stop-color="#263126" stop-opacity="0"/></radialGradient>
+    <radialGradient id="blue"><stop stop-color="#536D78" stop-opacity=".68"/><stop offset="1" stop-color="#17212A" stop-opacity="0"/></radialGradient>
+    <radialGradient id="umber"><stop stop-color="#746345" stop-opacity=".55"/><stop offset="1" stop-color="#241E14" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="720" fill="#0C1110"/>
+  <g filter="url(#blur)">
+    <ellipse cx="184" cy="132" rx="280" ry="205" fill="url(#moss)"/>
+    <ellipse cx="900" cy="180" rx="360" ry="240" fill="url(#blue)"/>
+    <ellipse cx="520" cy="516" rx="390" ry="230" fill="url(#umber)"/>
+    <ellipse cx="1110" cy="650" rx="300" ry="210" fill="url(#moss)"/>
+  </g>
+  <path d="M0 590C240 490 358 710 612 590s358-28 588-144v274H0z" fill="#050807" opacity=".62"/>
+  <g fill="#F4F0E8" opacity=".38">
+    <circle cx="90" cy="72" r="2"/><circle cx="1040" cy="78" r="2"/><circle cx="1094" cy="620" r="2"/>
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-深度研究",
+  "installedAt": 1787227761086,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2086631083469619200",
+  "description_zh": "万得 Alice 深度研究 CLI：对任意主题进行结构化、多阶段深度研究，先澄清问题、界定研究范围与维度并确认研究计划，再调度多个并行子代理调研，最终汇总生成全面、详细的专业研究报告。",
+  "description_en": "Conducts structured, multi-stage deep research on any topic by clarifying the question, scoping the research dimensions, generating a confirmed research plan, dispatching parallel subagents for investigation, and producing a comprehensive final report. Use when the user asks for deep research, in-depth analysis, thorough investigation, comprehensive study, or any research task that requires broad coverage and detailed findings.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_17c3c7ac-d9a.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_17c3c7ac-d9a.jpg"
+}

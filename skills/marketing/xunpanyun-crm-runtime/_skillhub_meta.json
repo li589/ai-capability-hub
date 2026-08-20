@@ -1,0 +1,11 @@
+{
+  "name": "询盘云API授权与连接",
+  "installedAt": 1787227582390,
+  "source": "marketplace",
+  "version": "1.3.0",
+  "skillId": "skill_2088952528950788096",
+  "description_zh": "自动恢复询盘云CRM运行依赖并引导安全授权，为所有询盘云专家和Skill提供统一CRM接口。适用于Runtime缺失、首次授权、凭证校验、字段发现、实时查询或受控写入。",
+  "description_en": "Install and authorize the shared Xunpanyun CRM runtime, then provide a secure CLI for WorkBuddy experts and skills. Use when live LeadsCloud access is requested, the runtime dependency is missing, authorization is required, or a task needs field discovery, queries, or controlled writes.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_5e5ea0aa-84c.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_5e5ea0aa-84c.png"
+}

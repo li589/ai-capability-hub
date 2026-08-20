@@ -1,0 +1,19 @@
+<svg width="128" height="128" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <rect width="128" height="128" rx="28" fill="#4F46E5"/>
+  <rect x="28" y="32" width="72" height="64" rx="6" fill="white"/>
+  <line x1="28" y1="48" x2="100" y2="48" stroke="#4F46E5" stroke-width="3"/>
+  <line x1="52" y1="32" x2="52" y2="96" stroke="#C7D2FE" stroke-width="2"/>
+  <line x1="76" y1="32" x2="76" y2="96" stroke="#C7D2FE" stroke-width="2"/>
+  <rect x="34" y="56" width="12" height="4" rx="2" fill="#A5B4FC"/>
+  <rect x="58" y="56" width="12" height="4" rx="2" fill="#A5B4FC"/>
+  <rect x="82" y="56" width="12" height="4" rx="2" fill="#A5B4FC"/>
+  <rect x="34" y="68" width="12" height="4" rx="2" fill="#A5B4FC"/>
+  <rect x="58" y="68" width="12" height="4" rx="2" fill="#10B981"/>
+  <rect x="82" y="68" width="12" height="4" rx="2" fill="#A5B4FC"/>
+  <rect x="34" y="80" width="12" height="4" rx="2" fill="#A5B4FC"/>
+  <rect x="58" y="80" width="12" height="4" rx="2" fill="#A5B4FC"/>
+  <rect x="82" y="80" width="12" height="4" rx="2" fill="#10B981"/>
+  <circle cx="34" cy="40" r="3" fill="#4F46E5"/>
+  <circle cx="58" cy="40" r="3" fill="#4F46E5"/>
+  <circle cx="82" cy="40" r="3" fill="#4F46E5"/>
+</svg>

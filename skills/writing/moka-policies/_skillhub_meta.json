@@ -1,0 +1,11 @@
+{
+  "name": "Moka 政策制度",
+  "installedAt": 1787228598839,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088130332134424576",
+  "description_zh": "面向两类用户的企业制度能力。全体员工：按关键词搜索政策制度文档库（员工手册、规章制度、办事指南等），读取文档正文全文与附件，严格基于原文回答制度咨询。制度管理员（人事）：查某份制度文档的历史推送记录——推送时间、操作人、推送状态与已读/未读人数。当用户问「年假要提前多久申请」「报销制度怎么规定的」（员工），或「这份制度以前推送过几次」「上次推送还有多少人未读」（管理员）时使用。",
+  "description_en": "Company policy capabilities for two audiences. All employees: search the policy document library (employee handbook, rules, how-to guides) by keyword, read a document's full text and attachments, and answer policy questions strictly from the original text. Policy administrators (HR): check a document's delivery history — push time, operator, status, and read/unread counts. Use for questions like \"how far in advance must annual leave be requested\" (employee) or \"how many times has this policy been pushed and who hasn't read it\" (admin).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_d37b2909-542.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_d37b2909-542.png"
+}

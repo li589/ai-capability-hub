@@ -1,0 +1,12 @@
+{
+  "slug": "sbkj-official-portrait",
+  "name": "企业画像与上下游关系分析【世舶科技】",
+  "version": "1.0.2",
+  "installedAt": 1787228760976,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e089b3bb-5a99-41bc-8881-40980028b748.png"
+}

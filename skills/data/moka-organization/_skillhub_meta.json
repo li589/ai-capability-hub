@@ -1,0 +1,11 @@
+{
+  "name": "Moka 组织",
+  "installedAt": 1787228629922,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088129195441164288",
+  "description_zh": "面向人事与组织管理角色的组织数据查询。使用当前平台提供的 Moka 连接器查询部门、职位、职务、职级、成本中心、项目组等组织主数据（消歧、清单、详情、局部树、变更记录），以及编制记录与详情、汇报关系列表与关系图、组织架构调整方案（含架构预览）。当用户问「查找某个部门」「某成本中心的下级」「当前编制情况」「某人的汇报关系」「调整方案里的员工」等问题时使用。",
+  "description_en": "Organization data queries for HR and org-management roles. Uses the Moka Connector available on the current platform to query organization master data (departments, positions, duties, duty levels, cost centers, project groups — disambiguation, lists, details, partial trees, change records) and management info including headcount records, reporting relations with local graphs, and organization adjustment schemes with structure previews. Use it for questions like finding a department, browsing an org subtree, checking current headcount, viewing someone's reporting line, or inspecting an adjustment scheme.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_ad7fb73d-9bc.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_ad7fb73d-9bc.png"
+}

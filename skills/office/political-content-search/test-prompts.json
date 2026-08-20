@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "prompt": "检索塞尔维亚",
+    "expected": "调用 political_search.py 脚本，传入关键词'塞尔维亚'，返回格式化的时政检索结果，包含formattedContent内容，URL转换为Markdown链接格式"
+  },
+  {
+    "id": 2,
+    "prompt": "帮我查一下三中全会相关的政策文件",
+    "expected": "调用 political_search.py 脚本，传入关键词'三中全会'，返回格式化的时政检索结果，优先展示formattedContent字段，保持原始Markdown格式，URL转换为可点击链接"
+  },
+  {
+    "id": 3,
+    "prompt": "搜索最近的时政新闻",
+    "prompt_description": "关键词模糊且宽泛，测试skill是否能正确处理并返回结果",
+    "expected": "调用 political_search.py 脚本，传入关键词'时政新闻'，返回格式化的时政检索结果，即使关键词宽泛也能正常检索并展示"
+  }
+]

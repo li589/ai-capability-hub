@@ -1,0 +1,10 @@
+{
+  "slug": "open-redirect-sh-cz1gr9",
+  "name": "开放重定向",
+  "version": "1.0.0",
+  "installedAt": 1787229022301,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

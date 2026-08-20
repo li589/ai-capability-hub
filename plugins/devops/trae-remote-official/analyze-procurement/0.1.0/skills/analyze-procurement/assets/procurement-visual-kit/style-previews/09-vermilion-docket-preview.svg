@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Signal Docket report direction preview</title>
+  <desc id="desc">A formal white approval docket with vermilion decision marks, ochre thresholds, strict rules, and a gate-led reading order.</desc>
+  <rect width="1600" height="1000" fill="#FFFFFF"/>
+  <g font-family="Arial, sans-serif" fill="#201918">
+    <text x="64" y="72" font-size="18" font-weight="700" letter-spacing="3" fill="#A23A2B">REFERENCE 09 / VERMILION DOCKET</text>
+    <text x="64" y="170" font-size="68" font-weight="600">供应商授标审议</text>
+    <text x="64" y="220" font-size="22" fill="#201918" opacity=".64">结论先行 · 强制门槛与加权偏好分离</text>
+  </g>
+  <g transform="translate(64 292)" font-family="Arial, sans-serif">
+    <rect width="650" height="218" fill="#A23A2B"/>
+    <text x="34" y="48" font-size="15" font-weight="700" letter-spacing="2" fill="#FFFFFF" opacity=".82">APPROVAL POSTURE</text>
+    <text x="34" y="112" font-size="44" font-weight="600" fill="#FFFFFF">90 天条件试点</text>
+    <text x="34" y="158" font-size="18" fill="#FFFFFF" opacity=".82">质量闸门通过后扩大份额</text>
+    <text x="34" y="192" font-size="15" fill="#FFFFFF" opacity=".82">Fallback · 保留现供应商 40%</text>
+    <rect x="686" width="850" height="218" fill="#201918" opacity=".035"/>
+    <text x="720" y="48" font-size="15" font-weight="700" fill="#201918" opacity=".64" letter-spacing="2">DECISIVE EVIDENCE</text>
+    <text x="720" y="100" font-size="30" font-weight="600" fill="#201918">成本优势 8.7%</text>
+    <text x="720" y="144" font-size="20" fill="#201918">但批次一致性证据不足</text>
+    <text x="720" y="184" font-size="16" fill="#201918" opacity=".64">决策反转变量：首三批不良率</text>
+  </g>
+  <g transform="translate(64 574)" font-family="Arial, sans-serif">
+    <text x="0" y="0" font-size="16" font-weight="700" fill="#201918" opacity=".64" letter-spacing="2">KNOCKOUT GATES</text>
+    <line x1="0" y1="34" x2="1472" y2="34" stroke="#201918" stroke-opacity=".16" stroke-width="2"/>
+    <g transform="translate(0 72)">
+      <text x="0" y="28" font-size="20" font-weight="700" fill="#201918">01 · 规格一致性</text>
+      <text x="760" y="28" font-size="18" fill="#A23A2B">待验证</text>
+      <text x="1120" y="28" font-size="16" fill="#201918" opacity=".64">Owner · SQE</text>
+      <line x1="0" y1="60" x2="1472" y2="60" stroke="#201918" stroke-opacity=".16"/>
+    </g>
+    <g transform="translate(0 154)">
+      <text x="0" y="28" font-size="20" font-weight="700" fill="#201918">02 · 交付容量</text>
+      <text x="760" y="28" font-size="18" fill="#201918">通过</text>
+      <text x="1120" y="28" font-size="16" fill="#201918" opacity=".64">OBS · 2026-07</text>
+      <line x1="0" y1="60" x2="1472" y2="60" stroke="#201918" stroke-opacity=".16"/>
+    </g>
+    <g transform="translate(0 236)">
+      <text x="0" y="28" font-size="20" font-weight="700" fill="#201918">03 · 合规文件</text>
+      <text x="760" y="28" font-size="18" fill="#D39B36">有条件</text>
+      <text x="1120" y="28" font-size="16" fill="#201918" opacity=".64">截止 · T+10</text>
+      <line x1="0" y1="60" x2="1472" y2="60" stroke="#201918" stroke-opacity=".16"/>
+    </g>
+  </g>
+</svg>

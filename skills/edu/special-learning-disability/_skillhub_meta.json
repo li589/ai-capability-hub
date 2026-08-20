@@ -1,0 +1,11 @@
+{
+  "name": "特殊学生支持 · 学习障碍学生",
+  "installedAt": 1787227530472,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084941533696114688",
+  "description_zh": "为教师生成针对学习障碍学生（学科性持续落后）的多维支持方案：课堂支持 + 作业调整 + 家校沟通 + IEP 个别化辅导计划；严守不诊断、不暴露隐私的红线。触发关键词：学习障碍、学科持续落后、学习困难、智力正常但学不会、特殊需要学生支持、个别化辅导计划、IEP。",
+  "description_en": "Generates multi-dimensional support plans for teachers targeting students with learning disabilities (subject-specific persistent lag): classroom support + homework adjustments + home-school communication + IEP individualized support plan; strictly upholds red lines of not diagnosing and not disclosing privacy. Trigger keywords: learning disability, subject-specific persistent lag, learning difficulty, normal intelligence but can't learn, special-needs student support, individualized education plan, IEP.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_4d0e0cd8-6aa.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_4d0e0cd8-6aa.png"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "反商业贿赂合规制度设计",
+  "installedAt": 1787227693503,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084457749442121728",
+  "description_zh": "生成反商业贿赂合规制度文件（多文件DOCX+XLSX）。触发：反贿赂合规制度搭建/反腐败合规手册编制/ISO 37001制度建立。不触发：第三方尽调单案/东道国法规汇编/贸易合规风险初评——调用对应专项技能。",
+  "description_en": "Generate anti-commercial bribery compliance document packages (multi-file DOCX + XLSX).\nTrigger Conditions: Establishment of anti-bribery compliance systems, formulation of anti-corruption compliance manuals, development of ISO 37001 management systems.\nNon-trigger Scenarios: Single-case third-party due diligence, host country regulation compilation, preliminary trade compliance risk assessment — invoke corresponding specialized skills.",
+  "iconSource": "letter:auto"
+}

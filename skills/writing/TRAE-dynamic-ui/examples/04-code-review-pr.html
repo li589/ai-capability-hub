@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PR Review — Add Connection Pooling</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #9ca3af;
+  --color-border-tertiary: #e5e7eb;
+  --color-border-secondary: #d1d5db;
+  --color-border-primary: #9ca3af;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --color-sky-1: #f0f9ff; --color-sky-2: #e0f2fe; --color-sky-3: #bae6fd;
+  --color-sky-5: #38bdf8; --color-sky-6: #0ea5e9; --color-sky-7: #0284c7;
+  --color-sky-8: #0369a1; --color-sky-9: #075985;
+  --color-indigo-1: #eef2ff; --color-indigo-5: #818cf8; --color-indigo-6: #6366f1;
+  --color-indigo-7: #4f46e5; --color-indigo-8: #4338ca;
+  --color-mint-1: #ecfdf5; --color-mint-2: #d1fae5; --color-mint-3: #a7f3d0;
+  --color-mint-5: #34d399; --color-mint-6: #10b981; --color-mint-7: #059669;
+  --color-mint-8: #047857; --color-mint-9: #065f46;
+  --color-coral-1: #fff5f5; --color-coral-2: #fee2e2; --color-coral-3: #fecaca;
+  --color-coral-4: #fca5a5; --color-coral-5: #f87171; --color-coral-6: #ef4444;
+  --color-coral-7: #dc2626; --color-coral-8: #b91c1c; --color-coral-9: #991b1b;
+  --color-amber-1: #fffbeb; --color-amber-2: #fef3c7; --color-amber-3: #fde68a;
+  --color-amber-5: #fbbf24; --color-amber-6: #f59e0b; --color-amber-7: #d97706;
+  --color-amber-8: #b45309; --color-amber-9: #92400e;
+  --color-violet-1: #f5f3ff; --color-violet-5: #a78bfa; --color-violet-7: #7c3aed;
+  --color-slate-1: #f8fafc; --color-slate-2: #f1f5f9; --color-slate-3: #e2e8f0;
+  --color-slate-4: #cbd5e1; --color-slate-5: #94a3b8; --color-slate-6: #64748b;
+  --color-slate-7: #475569; --color-slate-8: #334155; --color-slate-9: #1e293b;
+  --color-slate-10: #0f172a;
+  --color-teal-1: #f0fdfa; --color-teal-5: #14b8a6; --color-teal-7: #0f766e;
+  --color-teal-8: #115e59;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 260px;
+  background: var(--color-background-primary);
+  border-right: 1px solid var(--color-border-tertiary);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.sidebar-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--color-border-tertiary);
+}
+.sidebar-header .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--color-indigo-7);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.sidebar-header h2 { font-size: 15px; font-weight: 700; }
+.sidebar-header .pr-meta {
+  font-size: 12px; color: var(--color-text-secondary); margin-top: 4px;
+}
+.pr-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 10px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  background: var(--color-indigo-1);
+  color: var(--color-indigo-8);
+}
+.stats-row {
+  display: flex; gap: 12px; margin-top: 10px;
+}
+.stat {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+}
+.stat.add { color: var(--color-mint-7); }
+.stat.del { color: var(--color-coral-7); }
+.stat.files { color: var(--color-text-secondary); }
+
+.file-list { padding: 12px 0; overflow-y: auto; flex: 1; }
+.file-item {
+  padding: 8px 20px;
+  font-size: 13px;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-text-secondary);
+  transition: background 0.15s;
+  text-decoration: none;
+}
+.file-item:hover { background: var(--color-background-secondary); }
+.file-item.active { background: var(--color-indigo-1); color: var(--color-indigo-8); font-weight: 600; }
+.risk-dot {
+  width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0;
+}
+.risk-dot.high { background: var(--color-coral-5); }
+.risk-dot.med { background: var(--color-amber-5); }
+.risk-dot.low { background: var(--color-mint-5); }
+.risk-dot.info { background: var(--color-sky-5); }
+.file-changes {
+  margin-left: auto;
+  font-size: 10px;
+  color: var(--color-text-tertiary);
+}
+
+/* Main panel */
+.main {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 32px;
+}
+
+.file-section { margin-bottom: 32px; }
+.file-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border-tertiary);
+}
+.file-header h3 {
+  font-size: 14px;
+  font-family: var(--font-mono);
+  font-weight: 600;
+}
+.file-header .fh-badge {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+.fh-modified { background: var(--color-amber-2); color: var(--color-amber-8); }
+.fh-new { background: var(--color-mint-2); color: var(--color-mint-8); }
+
+/* Diff */
+.diff-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  table-layout: fixed;
+}
+.diff-table td { padding: 1px 12px; vertical-align: top; white-space: pre; }
+.diff-table .ln {
+  width: 44px;
+  text-align: right;
+  color: var(--color-text-tertiary);
+  user-select: none;
+  padding-right: 8px;
+  border-right: 1px solid var(--color-border-tertiary);
+  font-size: 11px;
+}
+.diff-table .code { width: auto; overflow-x: auto; }
+.line-add { background: var(--color-mint-1); }
+.line-add .ln { background: var(--color-mint-2); color: var(--color-mint-8); }
+.line-del { background: var(--color-coral-1); }
+.line-del .ln { background: var(--color-coral-2); color: var(--color-coral-8); }
+.line-ctx { background: var(--color-background-primary); }
+.line-hunk {
+  background: var(--color-sky-1);
+  color: var(--color-sky-8);
+  font-weight: 600;
+}
+.line-hunk td { padding: 4px 12px; }
+
+/* Annotations */
+.annotation {
+  margin: 0;
+  border: 1px solid var(--color-border-tertiary);
+  border-top: none;
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+}
+.annotation-bar {
+  width: 3px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+.annotation-bar.blocking { background: var(--color-coral-5); }
+.annotation-bar.nit { background: var(--color-amber-5); }
+.annotation-bar.praise { background: var(--color-mint-5); }
+.annotation-body { flex: 1; }
+.annotation-head { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
+.severity-pill {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+}
+.severity-blocking { background: var(--color-coral-2); color: var(--color-coral-8); }
+.severity-nit { background: var(--color-amber-2); color: var(--color-amber-8); }
+.severity-praise { background: var(--color-mint-2); color: var(--color-mint-8); }
+.annotation-author {
+  font-size: 12px; font-weight: 600; color: var(--color-text-primary);
+}
+.annotation-body p {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+.annotation-body code {
+  background: var(--color-background-secondary);
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-family: var(--font-mono);
+}
+.kw { color: var(--color-sky-7); }
+.fn { color: var(--color-amber-7); }
+.st { color: var(--color-mint-7); }
+.cm { color: var(--color-slate-5); }
+.num { color: var(--color-coral-6); }
+.typ { color: var(--color-violet-7); }
+
+/* Summary */
+.summary-card {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: 20px;
+  border-left: 4px solid var(--color-indigo-5);
+  margin-bottom: 24px;
+}
+.summary-card .eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--color-indigo-7);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.summary-card h2 { font-size: 17px; font-weight: 700; margin-bottom: 6px; }
+.summary-card p { font-size: 13px; color: var(--color-text-secondary); }
+.verdict-row {
+  display: flex; gap: 12px; margin-top: 14px;
+}
+.verdict-chip {
+  padding: 6px 14px;
+  border-radius: var(--border-radius-md);
+  font-size: 12px;
+  font-weight: 600;
+  display: flex; align-items: center; gap: 6px;
+}
+.verdict-blocking {
+  background: var(--color-coral-1);
+  border: 1px solid var(--color-coral-3);
+  color: var(--color-coral-8);
+}
+.verdict-nit {
+  background: var(--color-amber-1);
+  border: 1px solid var(--color-amber-3);
+  color: var(--color-amber-8);
+}
+.verdict-praise {
+  background: var(--color-mint-1);
+  border: 1px solid var(--color-mint-3);
+  color: var(--color-mint-8);
+}
+.verdict-num { font-family: var(--font-mono); font-size: 14px; }
+</style>
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="eyebrow">Code Review</div>
+    <h2>Add connection pooling to DB client</h2>
+    <div class="pr-meta">
+      <span class="pr-badge">PR #1847</span> · <span style="color:var(--color-text-tertiary)">feat/db-pooling</span>
+    </div>
+    <div class="stats-row">
+      <span class="stat add">+187</span>
+      <span class="stat del">−42</span>
+      <span class="stat files">4 files</span>
+    </div>
+  </div>
+  <div class="file-list">
+    <a class="file-item active" href="#file-pool" onclick="navigate(event, 'file-pool')">
+      <span class="risk-dot high"></span>
+      db/pool.go
+      <span class="file-changes">+98 −0</span>
+    </a>
+    <a class="file-item" href="#file-client" onclick="navigate(event, 'file-client')">
+      <span class="risk-dot high"></span>
+      db/client.go
+      <span class="file-changes">+34 −28</span>
+    </a>
+    <a class="file-item" href="#file-config" onclick="navigate(event, 'file-config')">
+      <span class="risk-dot med"></span>
+      config/database.go
+      <span class="file-changes">+41 −14</span>
+    </a>
+    <a class="file-item" href="#file-test" onclick="navigate(event, 'file-test')">
+      <span class="risk-dot info"></span>
+      db/pool_test.go
+      <span class="file-changes">+14 −0</span>
+    </a>
+  </div>
+</div>
+
+<!-- Main -->
+<div class="main">
+  <!-- Summary -->
+  <div class="summary-card">
+    <div class="eyebrow">Review Summary</div>
+    <h2>Request Changes</h2>
+    <p>Connection pooling implementation is solid overall. Two blocking issues around connection leak on context cancellation and missing health check interval validation. Several nits on naming conventions.</p>
+    <div class="verdict-row">
+      <div class="verdict-chip verdict-blocking"><span class="verdict-num">2</span> Blocking</div>
+      <div class="verdict-chip verdict-nit"><span class="verdict-num">3</span> Nits</div>
+      <div class="verdict-chip verdict-praise"><span class="verdict-num">1</span> Praise</div>
+    </div>
+  </div>
+
+  <!-- File 1: pool.go -->
+  <div class="file-section" id="file-pool">
+    <div class="file-header">
+      <h3>db/pool.go</h3>
+      <span class="fh-badge fh-new">NEW</span>
+    </div>
+    <table class="diff-table">
+      <tr class="line-hunk"><td colspan="3">@@ +1,38 @@ New file</td></tr>
+      <tr class="line-add"><td class="ln">1</td><td class="ln">1</td><td class="code"><span class="kw">package</span> db</td></tr>
+      <tr class="line-add"><td class="ln">2</td><td class="ln">2</td><td class="code"></td></tr>
+      <tr class="line-add"><td class="ln">3</td><td class="ln">3</td><td class="code"><span class="kw">import</span> (</td></tr>
+      <tr class="line-add"><td class="ln">4</td><td class="ln">4</td><td class="code">    <span class="st">"context"</span></td></tr>
+      <tr class="line-add"><td class="ln">5</td><td class="ln">5</td><td class="code">    <span class="st">"sync"</span></td></tr>
+      <tr class="line-add"><td class="ln">6</td><td class="ln">6</td><td class="code">    <span class="st">"time"</span></td></tr>
+      <tr class="line-add"><td class="ln">7</td><td class="ln">7</td><td class="code">)</td></tr>
+      <tr class="line-add"><td class="ln">8</td><td class="ln">8</td><td class="code"></td></tr>
+      <tr class="line-add"><td class="ln">9</td><td class="ln">9</td><td class="code"><span class="kw">type</span> <span class="typ">Pool</span> <span class="kw">struct</span> {</td></tr>
+      <tr class="line-add"><td class="ln">10</td><td class="ln">10</td><td class="code">    mu          sync.Mutex</td></tr>
+      <tr class="line-add"><td class="ln">11</td><td class="ln">11</td><td class="code">    conns       <span class="kw">chan</span> *<span class="typ">Conn</span></td></tr>
+      <tr class="line-add"><td class="ln">12</td><td class="ln">12</td><td class="code">    maxSize     <span class="kw">int</span></td></tr>
+      <tr class="line-add"><td class="ln">13</td><td class="ln">13</td><td class="code">    maxLifetime time.Duration</td></tr>
+      <tr class="line-add"><td class="ln">14</td><td class="ln">14</td><td class="code">    factory     <span class="kw">func</span>() (*<span class="typ">Conn</span>, <span class="kw">error</span>)</td></tr>
+      <tr class="line-add"><td class="ln">15</td><td class="ln">15</td><td class="code">}</td></tr>
+      <tr class="line-add"><td class="ln">16</td><td class="ln">16</td><td class="code"></td></tr>
+      <tr class="line-add"><td class="ln">17</td><td class="ln">17</td><td class="code"><span class="kw">func</span> (p *<span class="typ">Pool</span>) <span class="fn">Acquire</span>(ctx context.Context) (*<span class="typ">Conn</span>, <span class="kw">error</span>) {</td></tr>
+      <tr class="line-add"><td class="ln">18</td><td class="ln">18</td><td class="code">    <span class="kw">select</span> {</td></tr>
+      <tr class="line-add"><td class="ln">19</td><td class="ln">19</td><td class="code">    <span class="kw">case</span> conn := &lt;-p.conns:</td></tr>
+      <tr class="line-add"><td class="ln">20</td><td class="ln">20</td><td class="code">        <span class="kw">if</span> conn.<span class="fn">IsExpired</span>(p.maxLifetime) {</td></tr>
+      <tr class="line-add"><td class="ln">21</td><td class="ln">21</td><td class="code">            conn.<span class="fn">Close</span>()</td></tr>
+      <tr class="line-add"><td class="ln">22</td><td class="ln">22</td><td class="code">            <span class="kw">return</span> p.factory()</td></tr>
+      <tr class="line-add"><td class="ln">23</td><td class="ln">23</td><td class="code">        }</td></tr>
+      <tr class="line-add"><td class="ln">24</td><td class="ln">24</td><td class="code">        <span class="kw">return</span> conn, <span class="kw">nil</span></td></tr>
+      <tr class="line-add"><td class="ln">25</td><td class="ln">25</td><td class="code">    <span class="kw">case</span> &lt;-ctx.<span class="fn">Done</span>():</td></tr>
+      <tr class="line-add"><td class="ln">26</td><td class="ln">26</td><td class="code">        <span class="kw">return</span> <span class="kw">nil</span>, ctx.<span class="fn">Err</span>()</td></tr>
+      <tr class="line-add"><td class="ln">27</td><td class="ln">27</td><td class="code">    }</td></tr>
+      <tr class="line-add"><td class="ln">28</td><td class="ln">28</td><td class="code">}</td></tr>
+    </table>
+
+    <!-- Blocking annotation on line 22 -->
+    <div class="annotation">
+      <div class="annotation-bar blocking"></div>
+      <div class="annotation-body">
+        <div class="annotation-head">
+          <span class="severity-pill severity-blocking">Blocking</span>
+          <span class="annotation-author">@alice-reviewer</span>
+          <span style="font-size:11px;color:var(--color-text-tertiary)">on line 22</span>
+        </div>
+        <p><strong>Connection leak on context cancellation.</strong> If <code>ctx</code> is cancelled between <code>factory()</code> returning and the caller using the conn, the new connection is never returned to the pool. Wrap in a <code>defer</code> that checks <code>ctx.Err()</code> and calls <code>Release()</code>.</p>
+      </div>
+    </div>
+
+    <!-- Nit annotation on line 12 -->
+    <div class="annotation" style="margin-top: 8px;">
+      <div class="annotation-bar nit"></div>
+      <div class="annotation-body">
+        <div class="annotation-head">
+          <span class="severity-pill severity-nit">Nit</span>
+          <span class="annotation-author">@bob-reviewer</span>
+          <span style="font-size:11px;color:var(--color-text-tertiary)">on line 12</span>
+        </div>
+        <p>Consider renaming <code>maxSize</code> → <code>capacity</code> to align with the <code>db.Config</code> field name. Reduces cognitive load when cross-referencing config.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- File 2: client.go -->
+  <div class="file-section" id="file-client">
+    <div class="file-header">
+      <h3>db/client.go</h3>
+      <span class="fh-badge fh-modified">MODIFIED</span>
+    </div>
+    <table class="diff-table">
+      <tr class="line-hunk"><td colspan="3">@@ -15,12 +15,18 @@ func NewClient(cfg Config) (*Client, error)</td></tr>
+      <tr class="line-ctx"><td class="ln">15</td><td class="ln">15</td><td class="code"><span class="kw">func</span> <span class="fn">NewClient</span>(cfg <span class="typ">Config</span>) (*<span class="typ">Client</span>, <span class="kw">error</span>) {</td></tr>
+      <tr class="line-del"><td class="ln">16</td><td class="ln"></td><td class="code">    conn, err := <span class="fn">dial</span>(cfg.DSN)</td></tr>
+      <tr class="line-del"><td class="ln">17</td><td class="ln"></td><td class="code">    <span class="kw">if</span> err != <span class="kw">nil</span> {</td></tr>
+      <tr class="line-del"><td class="ln">18</td><td class="ln"></td><td class="code">        <span class="kw">return</span> <span class="kw">nil</span>, err</td></tr>
+      <tr class="line-del"><td class="ln">19</td><td class="ln"></td><td class="code">    }</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">16</td><td class="code">    pool, err := <span class="fn">NewPool</span>(<span class="typ">PoolConfig</span>{</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">17</td><td class="code">        MaxSize:     cfg.Pool.Capacity,</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">18</td><td class="code">        MaxLifetime: cfg.Pool.MaxLifetime,</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">19</td><td class="code">        HealthCheck: cfg.Pool.HealthInterval,</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">20</td><td class="code">        Factory:     <span class="kw">func</span>() (*<span class="typ">Conn</span>, <span class="kw">error</span>) { <span class="kw">return</span> <span class="fn">dial</span>(cfg.DSN) },</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">21</td><td class="code">    })</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">22</td><td class="code">    <span class="kw">if</span> err != <span class="kw">nil</span> {</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">23</td><td class="code">        <span class="kw">return</span> <span class="kw">nil</span>, fmt.<span class="fn">Errorf</span>(<span class="st">"init pool: %w"</span>, err)</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">24</td><td class="code">    }</td></tr>
+      <tr class="line-ctx"><td class="ln">20</td><td class="ln">25</td><td class="code">    <span class="kw">return</span> &amp;<span class="typ">Client</span>{</td></tr>
+      <tr class="line-del"><td class="ln">21</td><td class="ln"></td><td class="code">        conn: conn,</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">26</td><td class="code">        pool: pool,</td></tr>
+      <tr class="line-ctx"><td class="ln">22</td><td class="ln">27</td><td class="code">    }, <span class="kw">nil</span></td></tr>
+      <tr class="line-ctx"><td class="ln">23</td><td class="ln">28</td><td class="code">}</td></tr>
+    </table>
+
+    <!-- Praise annotation -->
+    <div class="annotation">
+      <div class="annotation-bar praise"></div>
+      <div class="annotation-body">
+        <div class="annotation-head">
+          <span class="severity-pill severity-praise">Praise</span>
+          <span class="annotation-author">@alice-reviewer</span>
+        </div>
+        <p>Clean migration from single-conn to pool — love that the factory closure captures <code>cfg.DSN</code> immutably. Nice backward-compatible change. 👏</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- File 3: config -->
+  <div class="file-section" id="file-config">
+    <div class="file-header">
+      <h3>config/database.go</h3>
+      <span class="fh-badge fh-modified">MODIFIED</span>
+    </div>
+    <table class="diff-table">
+      <tr class="line-hunk"><td colspan="3">@@ -8,6 +8,14 @@ type DatabaseConfig struct</td></tr>
+      <tr class="line-ctx"><td class="ln">8</td><td class="ln">8</td><td class="code"><span class="kw">type</span> <span class="typ">DatabaseConfig</span> <span class="kw">struct</span> {</td></tr>
+      <tr class="line-ctx"><td class="ln">9</td><td class="ln">9</td><td class="code">    DSN     <span class="kw">string</span>        <span class="st">`yaml:"dsn"`</span></td></tr>
+      <tr class="line-ctx"><td class="ln">10</td><td class="ln">10</td><td class="code">    Timeout time.Duration <span class="st">`yaml:"timeout"`</span></td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">11</td><td class="code">    Pool    <span class="typ">PoolConfig</span>    <span class="st">`yaml:"pool"`</span></td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">12</td><td class="code">}</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">13</td><td class="code"></td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">14</td><td class="code"><span class="kw">type</span> <span class="typ">PoolConfig</span> <span class="kw">struct</span> {</td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">15</td><td class="code">    Capacity       <span class="kw">int</span>           <span class="st">`yaml:"capacity"`</span></td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">16</td><td class="code">    MaxLifetime    time.Duration <span class="st">`yaml:"max_lifetime"`</span></td></tr>
+      <tr class="line-add"><td class="ln"></td><td class="ln">17</td><td class="code">    HealthInterval time.Duration <span class="st">`yaml:"health_interval"`</span></td></tr>
+      <tr class="line-ctx"><td class="ln">11</td><td class="ln">18</td><td class="code">}</td></tr>
+    </table>
+
+    <!-- Blocking on health interval -->
+    <div class="annotation">
+      <div class="annotation-bar blocking"></div>
+      <div class="annotation-body">
+        <div class="annotation-head">
+          <span class="severity-pill severity-blocking">Blocking</span>
+          <span class="annotation-author">@alice-reviewer</span>
+          <span style="font-size:11px;color:var(--color-text-tertiary)">on line 17</span>
+        </div>
+        <p><strong>Missing validation.</strong> <code>HealthInterval</code> of <code>0</code> will spin a tight loop in the health-check goroutine, pegging a CPU core. Add a minimum bound (e.g. <code>5s</code>) in <code>Validate()</code>, or default to <code>30s</code> when zero.</p>
+      </div>
+    </div>
+
+    <!-- Nit -->
+    <div class="annotation" style="margin-top: 8px;">
+      <div class="annotation-bar nit"></div>
+      <div class="annotation-body">
+        <div class="annotation-head">
+          <span class="severity-pill severity-nit">Nit</span>
+          <span class="annotation-author">@bob-reviewer</span>
+          <span style="font-size:11px;color:var(--color-text-tertiary)">on line 15</span>
+        </div>
+        <p>Prefer <code>uint16</code> for <code>Capacity</code> — a pool of &gt;65K connections would never be intentional and this catches negative-value misconfigs at the type level.</p>
+      </div>
+    </div>
+
+    <!-- Nit -->
+    <div class="annotation" style="margin-top: 8px;">
+      <div class="annotation-bar nit"></div>
+      <div class="annotation-body">
+        <div class="annotation-head">
+          <span class="severity-pill severity-nit">Nit</span>
+          <span class="annotation-author">@alice-reviewer</span>
+          <span style="font-size:11px;color:var(--color-text-tertiary)">on line 14</span>
+        </div>
+        <p>The struct doc-comment is missing. Add a <code>// PoolConfig configures the database connection pool.</code> line for <code>go doc</code> compatibility.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- File 4: test -->
+  <div class="file-section" id="file-test">
+    <div class="file-header">
+      <h3>db/pool_test.go</h3>
+      <span class="fh-badge fh-new">NEW</span>
+    </div>
+    <table class="diff-table">
+      <tr class="line-hunk"><td colspan="3">@@ +1,14 @@ New file</td></tr>
+      <tr class="line-add"><td class="ln">1</td><td class="ln">1</td><td class="code"><span class="kw">package</span> db_test</td></tr>
+      <tr class="line-add"><td class="ln">2</td><td class="ln">2</td><td class="code"></td></tr>
+      <tr class="line-add"><td class="ln">3</td><td class="ln">3</td><td class="code"><span class="kw">func</span> <span class="fn">TestPool_Acquire_ReturnsConn</span>(t *testing.T) {</td></tr>
+      <tr class="line-add"><td class="ln">4</td><td class="ln">4</td><td class="code">    pool := <span class="fn">newTestPool</span>(t, <span class="num">5</span>)</td></tr>
+      <tr class="line-add"><td class="ln">5</td><td class="ln">5</td><td class="code">    conn, err := pool.<span class="fn">Acquire</span>(context.<span class="fn">Background</span>())</td></tr>
+      <tr class="line-add"><td class="ln">6</td><td class="ln">6</td><td class="code">    require.<span class="fn">NoError</span>(t, err)</td></tr>
+      <tr class="line-add"><td class="ln">7</td><td class="ln">7</td><td class="code">    require.<span class="fn">NotNil</span>(t, conn)</td></tr>
+      <tr class="line-add"><td class="ln">8</td><td class="ln">8</td><td class="code">    pool.<span class="fn">Release</span>(conn)</td></tr>
+      <tr class="line-add"><td class="ln">9</td><td class="ln">9</td><td class="code">}</td></tr>
+      <tr class="line-add"><td class="ln">10</td><td class="ln">10</td><td class="code"></td></tr>
+      <tr class="line-add"><td class="ln">11</td><td class="ln">11</td><td class="code"><span class="kw">func</span> <span class="fn">TestPool_Acquire_ContextCancel</span>(t *testing.T) {</td></tr>
+      <tr class="line-add"><td class="ln">12</td><td class="ln">12</td><td class="code">    pool := <span class="fn">newTestPool</span>(t, <span class="num">0</span>) <span class="cm">// empty pool</span></td></tr>
+      <tr class="line-add"><td class="ln">13</td><td class="ln">13</td><td class="code">    ctx, cancel := context.<span class="fn">WithCancel</span>(context.<span class="fn">Background</span>())</td></tr>
+      <tr class="line-add"><td class="ln">14</td><td class="ln">14</td><td class="code">    cancel()</td></tr>
+      <tr class="line-add"><td class="ln">15</td><td class="ln">15</td><td class="code">    _, err := pool.<span class="fn">Acquire</span>(ctx)</td></tr>
+      <tr class="line-add"><td class="ln">16</td><td class="ln">16</td><td class="code">    require.<span class="fn">ErrorIs</span>(t, err, context.<span class="typ">Canceled</span>)</td></tr>
+      <tr class="line-add"><td class="ln">17</td><td class="ln">17</td><td class="code">}</td></tr>
+    </table>
+  </div>
+
+</div>
+
+<script>
+function navigate(e, id) {
+  e.preventDefault();
+  document.querySelectorAll('.file-item').forEach(el => el.classList.remove('active'));
+  e.currentTarget.classList.add('active');
+  document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+</script>
+
+</body>
+</html>

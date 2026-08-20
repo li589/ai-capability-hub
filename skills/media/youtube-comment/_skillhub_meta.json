@@ -1,0 +1,11 @@
+{
+  "name": "YouTube视频评论分析",
+  "installedAt": 1787228317540,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087462934458892288",
+  "description_zh": "输入YouTube视频链接获取评论数据，支持翻页续查与四维情感分析",
+  "description_en": "Fetch YouTube video comments with paging and four-dimension sentiment.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_29f801fd-d7a.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_29f801fd-d7a.svg"
+}

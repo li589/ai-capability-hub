@@ -1,0 +1,11 @@
+{
+  "owner": "agents365-ai",
+  "slug": "thesis-reviewer",
+  "displayName": "Thesis Reviewer",
+  "latest": {
+    "version": "3.0.0",
+    "publishedAt": 1776040348041,
+    "commit": "https://github.com/openclaw/skills/commit/554c525aa1e6d39320459fbfdf05eac647aa3b93"
+  },
+  "history": []
+}

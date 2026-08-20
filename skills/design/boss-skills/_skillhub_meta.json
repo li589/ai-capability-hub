@@ -1,0 +1,20 @@
+{
+  "name": "老板.skill",
+  "installedAt": 1787228476776,
+  "source": "marketplace",
+  "version": "1.1.1",
+  "skillId": "skill_2053081397931835392",
+  "examples_zh": [
+    "帮我蒸馏一下我老板",
+    "用马斯克的风格生成一个老板 skill",
+    "模拟老板的决策逻辑"
+  ],
+  "examples_en": [
+    "Create a boss skill from my manager",
+    "Generate an Elon Musk style boss",
+    "Simulate my boss decision patterns"
+  ],
+  "description_zh": "蒸馏老板或生成企业家原型 Skill，模拟管理风格与决策模式。交互时需确认复杂需求、不擅删需求、纠正后回述。",
+  "description_en": "Distill bosses or generate entrepreneur archetype Skills for management simulation. Rules: confirm requirements, acknowledge corrections.",
+  "iconSource": "letter:auto"
+}

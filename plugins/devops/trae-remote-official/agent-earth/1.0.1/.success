@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:agent-earth",
+  "registry": "trae-remote-official",
+  "plugin_name": "agent-earth",
+  "version": "1.0.1",
+  "marketplace_plugin_id": "a0b23bd1-f8a2-443d-ad8f-927c13f69f7c",
+  "remote_installed_plugin_id": "HEDZX_7TT98KA9",
+  "checksum": "2281f15072a9cd9822bd25eae459e3ae39502c0fe1bc15cde29b6b51ee9f17bc",
+  "file_size": 101256,
+  "installed_at": 1787227202427
+}

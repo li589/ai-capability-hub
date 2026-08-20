@@ -1,0 +1,27 @@
+{
+  "owner": "luckystarry",
+  "slug": "tc-chengxin",
+  "displayName": "Tongcheng Chengxin Travel Search",
+  "latest": {
+    "version": "0.6.0",
+    "publishedAt": 1776429348777,
+    "commit": "https://github.com/openclaw/skills/commit/113fb6416a4772dc17918510b3e239e31b6e194f"
+  },
+  "history": [
+    {
+      "version": "0.5.0",
+      "publishedAt": 1775918585543,
+      "commit": "https://github.com/openclaw/skills/commit/49767b32069bf5558effdc6f55e06df211b49d77"
+    },
+    {
+      "version": "0.2.0",
+      "publishedAt": 1775208559477,
+      "commit": "https://github.com/openclaw/skills/commit/9ab5d2b9a32121983b952c159037871c084cb9c7"
+    },
+    {
+      "version": "0.1.0",
+      "publishedAt": 1774796049666,
+      "commit": "https://github.com/openclaw/skills/commit/024dceb233501d37f212923b4abd53487b7ca0e7"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "黑湖智造-新品投产专家",
+  "installedAt": 1787228589740,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087459155411443712",
+  "description_zh": "新品投产专家是黑湖科技自研的制造业AI技能，面向产品、工艺、计划、生产管理及现场服务人员，旨在将用户已确认的新品生产定义通过黑湖智造CLI逐步推进到工单下发与待执行生产任务。当用户提出投产新品、建立工艺路线和BOM、创建并下发工单、确认生产任务生成等需求时即可触发。该技能首先通过查询命令验证单位、成品、投入物料等主数据，随后依次导入并确认工序、工作中心和工艺路线，再导入启用BOM并回查结构正确性，最后创建工单并在用户确认后下发，生成对应生产任务。所有写入操作包括物料、工序、工作中心、工艺路线、BOM和工单的导入都必须先执行dry-run预览，经用户明确确认后才能以confirm参数正式执行。工单下发仅推进计划状态并生成生产任务，不代表现场已完成领料、投料、报工或完工。查询结果以中文呈现，附带实际CLI命令、返回记录数及可核验证据。该技能严格遵循安全边界，不在对话中收集或展示企业凭证，未获取实物执行证据时不声称生产已经开始或完成，若用户仅需查询或维护单个物料、BOM、工艺路线或工单，则会自动转交至对应单对象专家处理。",
+  "description_en": "The New Product Launch Expert is an AI skill developed in-house by Black Lake Technology, designed for product, process, planning, and production management personnel as well as on-site service providers. It transforms confirmed new product production definitions into Black Lake Smart Manufacturing CLI operations, advancing them through work order issuance to executable production tasks. The skill is triggered when users request to launch a new product, create process routes, BOMs, and production work orders, or issue confirmed work orders and verify generated tasks. Its workflow begins by validating master data such as units, finished goods, and input materials through query commands, then preparing production definitions including processes, work centers, and process routes. After importing and enabling the BOM with verified structure and status, it creates a work order with the confirmed finished product, BOM version, planned quantity, and schedule. All write operations including ma",
+  "iconSource": "letter:auto"
+}

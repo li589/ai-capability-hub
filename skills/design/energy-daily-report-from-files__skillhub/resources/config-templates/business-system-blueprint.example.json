@@ -1,0 +1,986 @@
+{
+  "schema_version": "1.1",
+  "project_id": "energy-daily-demo",
+  "system_name": "企业能源日报管理系统",
+  "scenario": [
+    "energy_daily",
+    "meter_reading",
+    "energy_target",
+    "energy_anomaly"
+  ],
+  "locale": "zh-CN",
+  "timezone": "Asia/Shanghai",
+  "calculation_version": "1.7.0",
+  "confirmation_status": "confirmed",
+  "personal_info": {
+    "enabled": true,
+    "data_classification": true,
+    "id_card_masking": true,
+    "phone_masking": true,
+    "bank_card_masking": true,
+    "export_requires_permission": true,
+    "retention_review_required": true
+  },
+  "tax_config": {
+    "enabled": false,
+    "currency": "CNY",
+    "rate_source": "pending_user_confirmation",
+    "rounding": "ROUND_HALF_UP",
+    "automatic_filing": false,
+    "automatic_payment": false
+  },
+  "fiscal_config": {
+    "period_type": "calendar",
+    "year_start_month": 1,
+    "business_month_start_day": 1,
+    "closing_workflow": true,
+    "holiday_calendar_status": "not_configured"
+  },
+  "organization": {
+    "scope_key": "energy_demo",
+    "display_name": "示例企业",
+    "levels": [
+      {
+        "key": "company",
+        "display_name": "公司"
+      },
+      {
+        "key": "factory",
+        "display_name": "工厂"
+      },
+      {
+        "key": "workshop",
+        "display_name": "车间"
+      }
+    ]
+  },
+  "entities": [
+    {
+      "key": "energy_daily_report",
+      "display_name": "能源日报",
+      "business_key": [
+        "report_date",
+        "factory_key",
+        "workshop_key",
+        "shift_key",
+        "energy_type",
+        "meter_key"
+      ],
+      "organization_field": "factory_key",
+      "fields": [
+        {
+          "key": "report_date",
+          "display_name": "报表日期",
+          "type": "date",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "factory_key",
+          "display_name": "工厂",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "workshop_key",
+          "display_name": "车间",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "shift_key",
+          "display_name": "班次",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "energy_type",
+          "display_name": "能源类型",
+          "type": "enum",
+          "required": true,
+          "source_confidence": "confirmed",
+          "enum": [
+            "electricity",
+            "water",
+            "natural_gas",
+            "steam",
+            "compressed_air",
+            "other"
+          ]
+        },
+        {
+          "key": "meter_key",
+          "display_name": "表计",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "opening_reading",
+          "display_name": "期初读数",
+          "type": "decimal",
+          "required": true,
+          "source_confidence": "confirmed",
+          "unit": "计量单位"
+        },
+        {
+          "key": "closing_reading",
+          "display_name": "期末读数",
+          "type": "decimal",
+          "required": true,
+          "source_confidence": "confirmed",
+          "unit": "计量单位"
+        },
+        {
+          "key": "multiplier",
+          "display_name": "倍率",
+          "type": "decimal",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "consumption",
+          "display_name": "消耗量",
+          "type": "decimal",
+          "required": true,
+          "source_confidence": "derived",
+          "unit": "计量单位"
+        },
+        {
+          "key": "output_qty",
+          "display_name": "产量",
+          "type": "decimal",
+          "required": false,
+          "source_confidence": "confirmed",
+          "unit": "产量单位"
+        },
+        {
+          "key": "unit_consumption",
+          "display_name": "单耗",
+          "type": "decimal",
+          "required": false,
+          "source_confidence": "derived"
+        },
+        {
+          "key": "target_unit_consumption",
+          "display_name": "目标单耗",
+          "type": "decimal",
+          "required": false,
+          "source_confidence": "candidate"
+        },
+        {
+          "key": "unit_price",
+          "display_name": "单价",
+          "type": "decimal",
+          "required": false,
+          "source_confidence": "confirmed",
+          "unit": "元/计量单位"
+        },
+        {
+          "key": "cost",
+          "display_name": "能源成本",
+          "type": "decimal",
+          "required": false,
+          "source_confidence": "derived",
+          "unit": "元"
+        },
+        {
+          "key": "owner",
+          "display_name": "填报人",
+          "type": "string",
+          "required": false,
+          "source_confidence": "candidate",
+          "sensitive": true
+        },
+        {
+          "key": "status",
+          "display_name": "状态",
+          "type": "enum",
+          "required": true,
+          "source_confidence": "derived",
+          "enum": [
+            "draft",
+            "submitted",
+            "approved",
+            "returned"
+          ]
+        },
+        {
+          "key": "remark",
+          "display_name": "备注",
+          "type": "text",
+          "required": false,
+          "source_confidence": "candidate"
+        },
+        {
+          "key": "version",
+          "display_name": "数据版本",
+          "type": "integer",
+          "required": true,
+          "source_confidence": "derived"
+        }
+      ]
+    },
+    {
+      "key": "energy_meter",
+      "display_name": "能源表计",
+      "business_key": [
+        "meter_key"
+      ],
+      "organization_field": "factory_key",
+      "fields": [
+        {
+          "key": "meter_key",
+          "display_name": "表计编码",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "meter_name",
+          "display_name": "表计名称",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "factory_key",
+          "display_name": "工厂",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "workshop_key",
+          "display_name": "车间",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "energy_type",
+          "display_name": "能源类型",
+          "type": "enum",
+          "required": true,
+          "source_confidence": "confirmed",
+          "enum": [
+            "electricity",
+            "water",
+            "natural_gas",
+            "steam",
+            "compressed_air",
+            "other"
+          ]
+        },
+        {
+          "key": "unit",
+          "display_name": "计量单位",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "multiplier",
+          "display_name": "默认倍率",
+          "type": "decimal",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "active",
+          "display_name": "是否启用",
+          "type": "boolean",
+          "required": true,
+          "source_confidence": "derived"
+        },
+        {
+          "key": "version",
+          "display_name": "数据版本",
+          "type": "integer",
+          "required": true,
+          "source_confidence": "derived"
+        }
+      ]
+    },
+    {
+      "key": "energy_target",
+      "display_name": "能源目标",
+      "business_key": [
+        "period",
+        "factory_key",
+        "workshop_key",
+        "energy_type"
+      ],
+      "organization_field": "factory_key",
+      "fields": [
+        {
+          "key": "period",
+          "display_name": "目标期间",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "factory_key",
+          "display_name": "工厂",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "workshop_key",
+          "display_name": "车间",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "energy_type",
+          "display_name": "能源类型",
+          "type": "enum",
+          "required": true,
+          "source_confidence": "confirmed",
+          "enum": [
+            "electricity",
+            "water",
+            "natural_gas",
+            "steam",
+            "compressed_air",
+            "other"
+          ]
+        },
+        {
+          "key": "target_consumption",
+          "display_name": "目标消耗量",
+          "type": "decimal",
+          "required": false,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "target_unit_consumption",
+          "display_name": "目标单耗",
+          "type": "decimal",
+          "required": false,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "target_cost",
+          "display_name": "目标成本",
+          "type": "decimal",
+          "required": false,
+          "source_confidence": "confirmed",
+          "unit": "元"
+        },
+        {
+          "key": "status",
+          "display_name": "状态",
+          "type": "enum",
+          "required": true,
+          "source_confidence": "derived",
+          "enum": [
+            "draft",
+            "active",
+            "closed"
+          ]
+        },
+        {
+          "key": "version",
+          "display_name": "数据版本",
+          "type": "integer",
+          "required": true,
+          "source_confidence": "derived"
+        }
+      ]
+    },
+    {
+      "key": "energy_anomaly",
+      "display_name": "能耗异常",
+      "business_key": [
+        "anomaly_no"
+      ],
+      "organization_field": "factory_key",
+      "fields": [
+        {
+          "key": "anomaly_no",
+          "display_name": "异常编号",
+          "type": "string",
+          "required": true,
+          "source_confidence": "derived"
+        },
+        {
+          "key": "report_date",
+          "display_name": "发生日期",
+          "type": "date",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "factory_key",
+          "display_name": "工厂",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "workshop_key",
+          "display_name": "车间",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "energy_type",
+          "display_name": "能源类型",
+          "type": "enum",
+          "required": true,
+          "source_confidence": "confirmed",
+          "enum": [
+            "electricity",
+            "water",
+            "natural_gas",
+            "steam",
+            "compressed_air",
+            "other"
+          ]
+        },
+        {
+          "key": "metric_name",
+          "display_name": "异常指标",
+          "type": "string",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "actual_value",
+          "display_name": "实际值",
+          "type": "decimal",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "threshold_value",
+          "display_name": "阈值",
+          "type": "decimal",
+          "required": true,
+          "source_confidence": "confirmed"
+        },
+        {
+          "key": "owner",
+          "display_name": "责任人",
+          "type": "string",
+          "required": false,
+          "source_confidence": "candidate",
+          "sensitive": true
+        },
+        {
+          "key": "cause",
+          "display_name": "原因分析",
+          "type": "text",
+          "required": false,
+          "source_confidence": "candidate"
+        },
+        {
+          "key": "action",
+          "display_name": "整改措施",
+          "type": "text",
+          "required": false,
+          "source_confidence": "candidate"
+        },
+        {
+          "key": "status",
+          "display_name": "状态",
+          "type": "enum",
+          "required": true,
+          "source_confidence": "derived",
+          "enum": [
+            "open",
+            "assigned",
+            "in_progress",
+            "verified",
+            "closed"
+          ]
+        },
+        {
+          "key": "version",
+          "display_name": "数据版本",
+          "type": "integer",
+          "required": true,
+          "source_confidence": "derived"
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "key": "home_dashboard",
+      "display_name": "能源管理驾驶舱",
+      "type": "dashboard"
+    },
+    {
+      "key": "energy_daily_reports",
+      "display_name": "能源日报",
+      "type": "list",
+      "entity": "energy_daily_report",
+      "form": "energy_daily_report_form"
+    },
+    {
+      "key": "energy_meters",
+      "display_name": "能源表计",
+      "type": "list",
+      "entity": "energy_meter",
+      "form": "energy_meter_form"
+    },
+    {
+      "key": "energy_targets",
+      "display_name": "能源目标",
+      "type": "list",
+      "entity": "energy_target",
+      "form": "energy_target_form"
+    },
+    {
+      "key": "energy_anomalies",
+      "display_name": "能耗异常",
+      "type": "list",
+      "entity": "energy_anomaly",
+      "form": "energy_anomaly_form"
+    }
+  ],
+  "forms": [
+    {
+      "key": "energy_daily_report_form",
+      "entity": "energy_daily_report",
+      "fields": [
+        "report_date",
+        "factory_key",
+        "workshop_key",
+        "shift_key",
+        "energy_type",
+        "meter_key",
+        "opening_reading",
+        "closing_reading",
+        "multiplier",
+        "output_qty",
+        "target_unit_consumption",
+        "unit_price",
+        "remark"
+      ]
+    },
+    {
+      "key": "energy_meter_form",
+      "entity": "energy_meter",
+      "fields": [
+        "meter_key",
+        "meter_name",
+        "factory_key",
+        "workshop_key",
+        "energy_type",
+        "unit",
+        "multiplier",
+        "active"
+      ]
+    },
+    {
+      "key": "energy_target_form",
+      "entity": "energy_target",
+      "fields": [
+        "period",
+        "factory_key",
+        "workshop_key",
+        "energy_type",
+        "target_consumption",
+        "target_unit_consumption",
+        "target_cost"
+      ]
+    },
+    {
+      "key": "energy_anomaly_form",
+      "entity": "energy_anomaly",
+      "fields": [
+        "report_date",
+        "factory_key",
+        "workshop_key",
+        "energy_type",
+        "metric_name",
+        "actual_value",
+        "threshold_value",
+        "owner",
+        "cause",
+        "action"
+      ]
+    }
+  ],
+  "queries": [
+    {
+      "key": "daily_by_period",
+      "entity": "energy_daily_report",
+      "filters": [
+        "report_date",
+        "factory_key",
+        "workshop_key",
+        "energy_type",
+        "status"
+      ]
+    },
+    {
+      "key": "active_meters",
+      "entity": "energy_meter",
+      "filters": [
+        "factory_key",
+        "workshop_key",
+        "energy_type",
+        "active"
+      ]
+    },
+    {
+      "key": "open_anomalies",
+      "entity": "energy_anomaly",
+      "filters": [
+        "report_date",
+        "factory_key",
+        "energy_type",
+        "status"
+      ]
+    }
+  ],
+  "dashboards": [
+    {
+      "key": "energy_management_dashboard",
+      "metrics": [
+        "total_energy_consumption",
+        "unit_energy_consumption",
+        "energy_cost",
+        "open_anomaly_count"
+      ],
+      "refresh_mode": "on_request"
+    }
+  ],
+  "roles": [
+    {
+      "key": "administrator",
+      "display_name": "系统管理员",
+      "data_scope": "all"
+    },
+    {
+      "key": "energy_manager",
+      "display_name": "能源主管",
+      "data_scope": "company"
+    },
+    {
+      "key": "factory_operator",
+      "display_name": "工厂填报员",
+      "data_scope": "factory"
+    },
+    {
+      "key": "viewer",
+      "display_name": "只读用户",
+      "data_scope": "assigned"
+    }
+  ],
+  "permissions": [
+    {
+      "key": "energy_daily_read",
+      "entity": "energy_daily_report",
+      "actions": [
+        "read",
+        "export"
+      ]
+    },
+    {
+      "key": "energy_daily_write",
+      "entity": "energy_daily_report",
+      "actions": [
+        "create",
+        "update",
+        "submit"
+      ]
+    },
+    {
+      "key": "energy_daily_approve",
+      "entity": "energy_daily_report",
+      "actions": [
+        "read",
+        "approve",
+        "reject",
+        "transition"
+      ]
+    },
+    {
+      "key": "energy_meter_manage",
+      "entity": "energy_meter",
+      "actions": [
+        "read",
+        "create",
+        "update"
+      ]
+    },
+    {
+      "key": "energy_target_manage",
+      "entity": "energy_target",
+      "actions": [
+        "read",
+        "create",
+        "update"
+      ]
+    },
+    {
+      "key": "energy_anomaly_manage",
+      "entity": "energy_anomaly",
+      "actions": [
+        "read",
+        "create",
+        "update",
+        "transition"
+      ]
+    }
+  ],
+  "role_permissions": {
+    "administrator": [
+      "*"
+    ],
+    "energy_manager": [
+      "energy_daily_read",
+      "energy_daily_write",
+      "energy_daily_approve",
+      "energy_meter_manage",
+      "energy_target_manage",
+      "energy_anomaly_manage"
+    ],
+    "factory_operator": [
+      "energy_daily_read",
+      "energy_daily_write",
+      "energy_anomaly_manage"
+    ],
+    "viewer": [
+      "energy_daily_read"
+    ]
+  },
+  "workflows": [
+    {
+      "key": "energy_daily_approval",
+      "entity": "energy_daily_report",
+      "state_field": "status",
+      "states": [
+        "draft",
+        "submitted",
+        "approved",
+        "returned"
+      ],
+      "transitions": [
+        {
+          "key": "submit",
+          "from": "draft",
+          "to": "submitted",
+          "permission": "energy_daily_write"
+        },
+        {
+          "key": "approve",
+          "from": "submitted",
+          "to": "approved",
+          "permission": "energy_daily_approve",
+          "requires_comment": true
+        },
+        {
+          "key": "return",
+          "from": "submitted",
+          "to": "returned",
+          "permission": "energy_daily_approve",
+          "requires_comment": true
+        },
+        {
+          "key": "resubmit",
+          "from": "returned",
+          "to": "submitted",
+          "permission": "energy_daily_write"
+        }
+      ],
+      "approval_steps": [
+        {
+          "order": 1,
+          "role": "energy_manager",
+          "display_name": "能源主管审批"
+        }
+      ]
+    },
+    {
+      "key": "energy_anomaly_close",
+      "entity": "energy_anomaly",
+      "state_field": "status",
+      "states": [
+        "open",
+        "assigned",
+        "in_progress",
+        "verified",
+        "closed"
+      ],
+      "transitions": [
+        {
+          "key": "assign",
+          "from": "open",
+          "to": "assigned",
+          "permission": "energy_anomaly_manage"
+        },
+        {
+          "key": "start",
+          "from": "assigned",
+          "to": "in_progress",
+          "permission": "energy_anomaly_manage"
+        },
+        {
+          "key": "verify",
+          "from": "in_progress",
+          "to": "verified",
+          "permission": "energy_anomaly_manage",
+          "requires_comment": true
+        },
+        {
+          "key": "close",
+          "from": "verified",
+          "to": "closed",
+          "permission": "energy_anomaly_manage",
+          "requires_comment": true
+        }
+      ]
+    }
+  ],
+  "metrics": [
+    {
+      "key": "total_energy_consumption",
+      "display_name": "能源总消耗",
+      "entity": "energy_daily_report",
+      "formula": "sum(consumption)",
+      "unit": "按能源类型展示",
+      "version": "1.7.0"
+    },
+    {
+      "key": "unit_energy_consumption",
+      "display_name": "综合单耗",
+      "entity": "energy_daily_report",
+      "formula": "sum(consumption) / sum(output_qty)",
+      "unit": "按能源类型/产量单位",
+      "zero_denominator": "show_dash",
+      "version": "1.7.0"
+    },
+    {
+      "key": "energy_cost",
+      "display_name": "能源成本",
+      "entity": "energy_daily_report",
+      "formula": "sum(cost)",
+      "unit": "元",
+      "version": "1.7.0"
+    },
+    {
+      "key": "open_anomaly_count",
+      "display_name": "未关闭能耗异常",
+      "entity": "energy_anomaly",
+      "formula": "count(status in ['open','assigned','in_progress','verified'])",
+      "unit": "项",
+      "version": "1.7.0"
+    }
+  ],
+  "imports": [
+    {
+      "key": "energy_daily_excel",
+      "entity": "energy_daily_report",
+      "formats": [
+        "xlsx",
+        "xlsm",
+        "csv",
+        "tsv"
+      ],
+      "business_key": [
+        "report_date",
+        "factory_key",
+        "workshop_key",
+        "shift_key",
+        "energy_type",
+        "meter_key"
+      ],
+      "mapping_status": "confirmed",
+      "idempotency": "file_sha256_and_business_key"
+    },
+    {
+      "key": "energy_meter_excel",
+      "entity": "energy_meter",
+      "formats": [
+        "xlsx",
+        "xlsm",
+        "csv",
+        "tsv"
+      ],
+      "business_key": [
+        "meter_key"
+      ],
+      "mapping_status": "confirmed",
+      "idempotency": "file_sha256_and_business_key"
+    },
+    {
+      "key": "energy_target_excel",
+      "entity": "energy_target",
+      "formats": [
+        "xlsx",
+        "xlsm",
+        "csv",
+        "tsv"
+      ],
+      "business_key": [
+        "period",
+        "factory_key",
+        "workshop_key",
+        "energy_type"
+      ],
+      "mapping_status": "confirmed",
+      "idempotency": "file_sha256_and_business_key"
+    }
+  ],
+  "exports": [
+    {
+      "key": "energy_daily_xlsx",
+      "entity": "energy_daily_report",
+      "format": "xlsx",
+      "include_source_trace": true
+    },
+    {
+      "key": "energy_anomaly_xlsx",
+      "entity": "energy_anomaly",
+      "format": "xlsx",
+      "include_source_trace": true
+    },
+    {
+      "key": "energy_target_csv",
+      "entity": "energy_target",
+      "format": "csv",
+      "include_source_trace": true
+    }
+  ],
+  "audit": {
+    "enabled": true,
+    "log_login": true,
+    "log_export": true,
+    "log_before_after": true,
+    "immutable_application_log": true
+  },
+  "data_retention": {
+    "business_records_days": 2555,
+    "audit_log_days": 2555,
+    "backup_policy": "daily_and_before_migration",
+    "deletion_requires_approval": true
+  },
+  "integrations": {
+    "enabled": false,
+    "endpoints": [],
+    "not_configured_policy": "show_not_configured",
+    "real_time_claims_allowed": false
+  },
+  "ui": {
+    "responsive": true,
+    "default_theme": "light",
+    "language": "zh-CN",
+    "accessibility": {
+      "keyboard_navigation": true,
+      "not_color_only": true
+    }
+  }
+}

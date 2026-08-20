@@ -1,0 +1,11 @@
+{
+  "name": "报价方案生成",
+  "installedAt": 1787228573872,
+  "source": "marketplace",
+  "version": "1.3.0",
+  "skillId": "skill_2088538341387223040",
+  "description_zh": "将已确认的价格、币种、MOQ、交期、付款和贸易条件组装为报价邮件和方案对比。适用于用户要求报价方案生成、生成相关结果或检查执行边界时。",
+  "description_en": "Quotation Proposal Drafting workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_9d3fe9ff-830.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_9d3fe9ff-830.png"
+}

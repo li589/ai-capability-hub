@@ -1,0 +1,11 @@
+{
+  "owner": "socneo",
+  "slug": "smart-poller",
+  "displayName": "Smart Poller",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773721967115,
+    "commit": "https://github.com/openclaw/skills/commit/127dd0789ef00cb6dc3cc0fbffcd4c2e3975fcc7"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-按主题选股",
+  "installedAt": 1787228652526,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085541204263723008",
+  "description_zh": "万得 Alice 按主题选股 CLI：系统拆解主题投资逻辑、验证数据兑现、筛选核心受益标的，输出受益标的表、估值对比、交易建议与风险证伪点。",
+  "description_en": "Wind Alice Thematic Stock Screening CLI - systematically deconstructs market narratives, validates logic maturity with key data, identifies genuine beneficiaries, and delivers valuation context with historical PE percentile and actionable trading perspective for sector investing and concept stock filtering.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_eb096e0d-58f.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_eb096e0d-58f.jpg"
+}

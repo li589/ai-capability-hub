@@ -1,0 +1,11 @@
+{
+  "owner": "elony-7",
+  "slug": "speedtest-net",
+  "displayName": "Speedtest.net",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1774793857226,
+    "commit": "https://github.com/openclaw/skills/commit/ff12c7ddbdcee477f44fbbabf171d2ac5aa2b0f1"
+  },
+  "history": []
+}

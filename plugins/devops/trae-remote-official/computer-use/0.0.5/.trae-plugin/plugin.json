@@ -1,0 +1,36 @@
+{
+  "name": "computer-use",
+  "version": "0.0.5",
+  "description": "让 TraeWork 直接操作电脑，替你完成跨应用任务。",
+  "author": {
+    "name": "TraeWork"
+  },
+  "keywords": [
+    "computer-use",
+    "trae-computer-use",
+    "traework-computer-use",
+    "cu",
+    "cua"
+  ],
+  "interface": {
+    "displayName": "电脑控制",
+    "shortDescription": "让 TraeWork 直接操作电脑，替你完成跨应用任务。",
+    "longDescription": "Let TraeWork operate your computer directly to complete cross-app tasks for you. Use for tasks that require reading or operating app UI by clicking, typing, scrolling, dragging, pressing keys, or setting values.",
+    "developerName": "TraeWork",
+    "category": "Productivity"
+  },
+  "i18n": {
+    "display_name": {
+      "en": "Computer Use",
+      "zh-cn": "电脑控制",
+      "ja": "コンピュータ操作"
+    },
+    "description": {
+      "en": "Let TraeWork operate your computer directly to complete cross-app tasks for you.",
+      "zh-cn": "让 TraeWork 直接操作电脑，替你完成跨应用任务。",
+      "ja": "TraeWork がコンピュータを直接操作し、アプリをまたいだタスクを代行します。"
+    }
+  },
+  "logo": "./assets/icon-logo.svg",
+  "composerIcon": "./assets/icon-logo.svg"
+}

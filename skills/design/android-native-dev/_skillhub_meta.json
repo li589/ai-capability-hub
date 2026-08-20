@@ -1,0 +1,21 @@
+{
+  "name": "Android 原生开发",
+  "installedAt": 1785864412777,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081331777183744",
+  "examples_zh": [
+    "帮我用 Kotlin 实现一个列表页",
+    "用 Jetpack Compose 写一个卡片组件",
+    "检查我的 Android 代码是否符合 Material Design 3"
+  ],
+  "examples_en": [
+    "Implement a list screen in Kotlin",
+    "Create a card component with Jetpack Compose",
+    "Review my Android code for Material Design 3 compliance"
+  ],
+  "description_zh": "Android 原生应用开发指南",
+  "description_en": "Android native application development and UI design guide. Covers Material Desi...",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/android-native-dev.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/android-native-dev.svg"
+}

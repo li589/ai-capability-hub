@@ -1,0 +1,11 @@
+{
+  "owner": "hustjim2026",
+  "slug": "stock-ocr",
+  "displayName": "看盘之眼",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774848194874,
+    "commit": "https://github.com/openclaw/skills/commit/606e7694dd3aaa9719157f2445d93b0cd9c4af46"
+  },
+  "history": []
+}

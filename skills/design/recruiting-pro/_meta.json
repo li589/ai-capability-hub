@@ -1,0 +1,11 @@
+{
+  "owner": "agistack",
+  "slug": "recruiting-pro",
+  "displayName": "Recruiting",
+  "latest": {
+    "version": "2.1.0",
+    "publishedAt": 1773063617527,
+    "commit": "https://github.com/openclaw/skills/commit/6be790fc74760215a7ba18f2ce7f90f880256d2d"
+  },
+  "history": []
+}

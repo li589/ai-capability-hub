@@ -1,0 +1,10 @@
+{
+  "name": "sales-pipeline",
+  "installedAt": 1787228473563,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053083178211954688",
+  "description_zh": "销售管道自动化，匿名访客转化、沉睡交易激活与 ICP 学习",
+  "description_en": "Sales pipeline automation: anonymous visitor routing, deal resurrection, ICP learning",
+  "iconSource": "letter:auto"
+}

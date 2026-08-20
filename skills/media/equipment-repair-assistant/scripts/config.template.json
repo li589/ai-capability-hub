@@ -1,0 +1,59 @@
+{
+  "server": {
+    "host": "",
+    "port": 20201
+  },
+  "database": {
+    "host": "",
+    "port": 3306,
+    "dbname": "emes_dev",
+    "user": "",
+    "password": ""
+  },
+  "apis": {
+    "eqStatusList": "/open-api/bp/AIgetEqStatusList",
+    "collData": "/open-api/bp/AIGetCollData",
+    "eqOee": "/open-api/bp/AIGetOee",
+    "eqError": "/open-api/bp/AIEqError",
+    "eqMainList": "/open-api/bp/AIgetEqMainList",
+    "sendEqMainRecord": "/open-api/bp/sendEqMainRecord"
+  },
+  "auth": {
+    "enabled": true,
+    "mode": "account",
+    "account": {
+      "login_endpoint": "/account/v1/login",
+      "user_name": "",
+      "password": "",
+      "language": "zh_CN",
+      "platform": "PC"
+    },
+    "sso": {
+      "code_endpoint": "/sso/v1/code",
+      "token_endpoint": "/sso/v1/token",
+      "user_no": "",
+      "app_id": "",
+      "app_secret": "",
+      "language": "zh_CN",
+      "env_type": "sMES",
+      "mode": "Url",
+      "appNo": "",
+      "platform": "PC"
+    },
+    "token_field": "result.token.accessToken",
+    "token_header": "Authorization",
+    "token_prefix": "Bearer "
+  },
+  "mainOperate": {
+    "start": 1,
+    "end": 2
+  },
+  "maintenanceStatus": {
+    "0": "计划中",
+    "1": "保养中",
+    "2": "保养完成",
+    "3": "待维修",
+    "4": "维修完成",
+    "5": "维修中"
+  }
+}

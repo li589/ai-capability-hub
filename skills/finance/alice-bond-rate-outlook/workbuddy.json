@@ -1,0 +1,6 @@
+{
+  "display_name": "债券利率走势研判",
+  "display_name_en": "Bond Rate Outlook",
+  "description_zh": "万得 Alice 债券利率走势研判 CLI：支持交易/策略/配置多视角切换，覆盖五大维度系统化研判，输出含利率走势判断、量化评分、交易配置建议的结构化报告。",
+  "description_en": "Wind Alice Bond Rate Outlook CLI — systematic bond market interest rate trend analysis framework, supporting adaptive switching across trading (1-2 weeks), strategy (1-6 months), and allocation (6 months-2 years) perspectives, covering macro fundamentals, liquidity, supply-demand, yield curve structure, and technical sentiment, integrating quantitative scoring and stress testing."
+}

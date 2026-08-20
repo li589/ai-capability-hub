@@ -1,0 +1,6 @@
+{
+  "name": "@trae-plugins/lark",
+  "version": "1.0.4",
+  "private": true,
+  "description": "Lark/Feishu plugin for TRAE"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "Twitter分析",
+  "installedAt": 1787228363820,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083202046337024",
+  "examples_zh": [
+    "分析这个Twitter账号的内容风格",
+    "提取这个推文串的核心观点",
+    "研究某个话题在Twitter上的讨论热度"
+  ],
+  "examples_en": [
+    "Analyze the content style of this Twitter account",
+    "Extract key insights from this tweet thread",
+    "Research how hot a topic is on Twitter"
+  ],
+  "description_zh": "Twitter 研究与内容情报分析",
+  "description_en": "Twitter research & content intelligence",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "browser_select_option",
+  "description": "Select an option in a dropdown. Matching priority: exact value match, then exact label match, then partial label match. The snapshot now shows available options for select elements.\n",
+  "arguments": {
+    "properties": {
+      "element": {
+        "description": "Human-readable element description used to obtain permission to interact with the element",
+        "type": "string"
+      },
+      "ref": {
+        "description": "Exact target element reference from the page snapshot",
+        "type": "string"
+      },
+      "values": {
+        "description": "Array of values to select. Matches against option value first, then label text, then partial label. Use exact values from the snapshot options list when available.",
+        "items": {
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "element",
+      "ref",
+      "values"
+    ],
+    "type": "object"
+  }
+}

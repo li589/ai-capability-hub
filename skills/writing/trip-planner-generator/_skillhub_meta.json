@@ -1,0 +1,11 @@
+{
+  "name": "旅行行程规划",
+  "installedAt": 1787228418093,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2060644207347486720",
+  "description_zh": "通过交互式问答帮你生成结构化的旅行行程：逐日安排、住宿与交通、预算明细、行前清单和注意事项，一次产出可直接参考的 Markdown 行程文档。适合国内短途与亲子出行的对话式规划。",
+  "description_en": "Generate a structured travel itinerary through interactive Q&A — day-by-day plans, lodging and transport, budget breakdown, packing list and travel tips, all in a ready-to-use Markdown document.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060644207347486720/5e600a09b80a8d72.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2060644207347486720/5e600a09b80a8d72.svg"
+}

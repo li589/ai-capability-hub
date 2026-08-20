@@ -1,0 +1,292 @@
+{
+  "errcode": 200,
+  "total": 5,
+  "columns": [
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "dataType",
+      "sortable": true,
+      "title": "数据类型: weeklyData: 周数据; monthlyData: 月数据"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "offerId",
+      "sortable": true,
+      "title": "商品id"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "asin",
+      "sortable": true,
+      "title": "商品编号"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "shopId",
+      "sortable": true,
+      "title": "店铺id"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "imageUrl",
+      "sortable": true,
+      "title": "图片地址"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "availableDate",
+      "sortable": true,
+      "title": "商品上架时间，格式为 yyyy-MM-dd HH:mm:ss"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "quantityPrices",
+      "sortable": true,
+      "title": "价格区间"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "title",
+      "sortable": true,
+      "title": "商品标题"
+    },
+    {
+      "filterable": true,
+      "cellType": "number",
+      "field": "price",
+      "sortable": true,
+      "title": "批发价"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "deliveryTime",
+      "sortable": true,
+      "title": "发货时间"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "company",
+      "sortable": true,
+      "title": "店铺名称"
+    },
+    {
+      "filterable": true,
+      "cellType": "number",
+      "field": "salesQuantity",
+      "sortable": true,
+      "title": "销售件数（按统计周期返回对应的值）"
+    },
+    {
+      "filterable": true,
+      "cellType": "number",
+      "field": "salesOrderCount",
+      "sortable": true,
+      "title": "销售笔数（按统计周期返回对应的值）"
+    },
+    {
+      "filterable": true,
+      "cellType": "number",
+      "field": "estimatedSalesAmount",
+      "sortable": true,
+      "title": "预估销售额（按统计周期返回对应的值）"
+    },
+    {
+      "filterable": true,
+      "cellType": "number",
+      "field": "consignPrice",
+      "sortable": true,
+      "title": "代发价"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "unit",
+      "sortable": true,
+      "title": "单位"
+    },
+    {
+      "filterable": true,
+      "cellType": "number",
+      "field": "quantityBegin",
+      "sortable": true,
+      "title": "起批量"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "levelName",
+      "sortable": true,
+      "title": "类目层级名称"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "shopUrl",
+      "sortable": true,
+      "title": "店铺链接地址"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "asinUrl",
+      "sortable": true,
+      "title": "商品链接地址"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "sourceType",
+      "sortable": true,
+      "title": "1688"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "currency",
+      "sortable": true,
+      "title": "币种"
+    },
+    {
+      "filterable": true,
+      "cellType": "text",
+      "field": "sourceTool",
+      "sortable": true,
+      "title": "来源工具"
+    }
+  ],
+  "costToken": 12000,
+  "errmsg": "ok",
+  "type": "productWorkbenches",
+  "products": [
+    {
+      "salesOrderCount": 3,
+      "deliveryTime": "48",
+      "quantityBegin": 1,
+      "availableDate": "2026-05-25 11:15:00",
+      "levelName": "运动户外>瑜伽用品>瑜伽垫",
+      "title": "加厚15mm防滑女加宽90cm健身减震隔音防滑舞蹈垫tpe瑜伽垫大尺寸",
+      "shopUrl": "https://shop617oo1657k627.1688.com",
+      "asinUrl": "https://detail.1688.com/offer/1054265073269.html",
+      "estimatedSalesAmount": 68033,
+      "consignPrice": 33.6,
+      "unit": "块",
+      "sourceTool": "店雷达-1688选品库",
+      "sourceType": "1688",
+      "price": 33.6,
+      "salesQuantity": 680003,
+      "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01SfgO7M1OajATOYTUR_!!2218224101722-0-cib.jpg",
+      "offerId": "1054265073269",
+      "asin": "1054265073269",
+      "company": "深圳市前引科技有限公司",
+      "currency": "¥",
+      "shopId": "b2b-22182241017222f667",
+      "quantityPrices": "[]"
+    },
+    {
+      "salesOrderCount": 124,
+      "deliveryTime": "48",
+      "quantityBegin": 10,
+      "availableDate": "2013-08-03 09:59:00",
+      "levelName": "纺织、皮革>纺织辅料>魔术贴",
+      "title": "反扣尼龙魔术贴绑带电压航模电池固定带瑜伽垫收纳带货物固定粘扣",
+      "shopUrl": "https://shop1364356062361.1688.com",
+      "asinUrl": "https://detail.1688.com/offer/1281341098.html",
+      "estimatedSalesAmount": 118367,
+      "consignPrice": 0.28,
+      "unit": "条",
+      "sourceTool": "店雷达-1688选品库",
+      "sourceType": "1688",
+      "price": 0.28,
+      "salesQuantity": 422742,
+      "imageUrl": "https://cbu01.alicdn.com/img/ibank/1428033111_1730561573.jpg",
+      "offerId": "1281341098",
+      "asin": "1281341098",
+      "company": "深圳市新源扣纺织品有限公司",
+      "currency": "¥",
+      "shopId": "b2b-1640731213",
+      "quantityPrices": "[]"
+    },
+    {
+      "salesOrderCount": 75,
+      "deliveryTime": "72",
+      "quantityBegin": 100,
+      "availableDate": "2025-02-18 15:00:00",
+      "levelName": "内衣>胸垫、胸贴、肩带、吊袜带>胸垫、插片",
+      "title": "厂家直销运动内衣八孔透气胸垫聚拢超薄文胸家居服瑜伽服海绵胸垫",
+      "shopUrl": "https://winport.m.1688.com/page/index.html?newRender=true&memberId=b2b-2216503798117bed51&upstreamSource=pcShare",
+      "asinUrl": "https://detail.1688.com/offer/889753909399.html",
+      "estimatedSalesAmount": 86640,
+      "consignPrice": 0.6,
+      "unit": "件",
+      "sourceTool": "店雷达-1688选品库",
+      "sourceType": "1688",
+      "price": 0.6,
+      "salesQuantity": 144400,
+      "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01vroDe729pdtsyMYyG_!!2216503798117-0-cib.jpg",
+      "offerId": "889753909399",
+      "asin": "889753909399",
+      "company": "汕头市潮南区峡山佳锐服装辅料店（个体工商户）",
+      "currency": "¥",
+      "shopId": "b2b-2216503798117bed51",
+      "quantityPrices": "[]"
+    },
+    {
+      "salesOrderCount": 2,
+      "deliveryTime": "48",
+      "quantityBegin": 300,
+      "availableDate": "2020-09-06 15:44:00",
+      "levelName": "纺织、皮革>化纤面料>涤纶面料",
+      "title": "现货210d牛津布防滑布PVC点塑布宠物窝底布车载瑜伽垫面料家纺",
+      "shopUrl": "https://shop1493225900518.1688.com",
+      "asinUrl": "https://detail.1688.com/offer/626801254857.html",
+      "estimatedSalesAmount": 212034,
+      "consignPrice": 3.0,
+      "unit": "米",
+      "sourceTool": "店雷达-1688选品库",
+      "sourceType": "1688",
+      "price": 3.0,
+      "salesQuantity": 70678,
+      "imageUrl": "https://cbu01.alicdn.com/imgextra/i3/O1CN01bO60LM1FpXQuvDoJi_!!4611686018427380248-0-cbu_common_content.jpg",
+      "offerId": "626801254857",
+      "asin": "626801254857",
+      "company": "义乌市策隆纺织有限公司",
+      "currency": "¥",
+      "shopId": "b2b-325130166768bc3",
+      "quantityPrices": "[]"
+    },
+    {
+      "salesOrderCount": 2,
+      "deliveryTime": "",
+      "quantityBegin": 1000,
+      "availableDate": "2023-02-27 11:25:00",
+      "levelName": "内衣>胸垫、胸贴、肩带、吊袜带>胸垫、插片",
+      "title": "煜源聚拢显大防外扩加厚三角按摩海绵胸垫内衣泳衣瑜伽服胸垫插片",
+      "shopUrl": "https://ywqrfl.1688.com",
+      "asinUrl": "https://detail.1688.com/offer/704974842978.html",
+      "estimatedSalesAmount": 143682,
+      "consignPrice": 2.7,
+      "unit": "对",
+      "sourceTool": "店雷达-1688选品库",
+      "sourceType": "1688",
+      "price": 2.5,
+      "salesQuantity": 57473,
+      "imageUrl": "https://cbu01.alicdn.com/img/ibank/O1CN01aSxY9G2GR5lM2RBlV_!!2211587549011-0-cib.jpg",
+      "offerId": "704974842978",
+      "asin": "704974842978",
+      "company": "义乌市清瑞服装辅料有限公司",
+      "currency": "¥",
+      "shopId": "b2b-221158754901189ace",
+      "quantityPrices": "[{\"quantity\":\"1000~4999\",\"value\":\"2.70\"},{\"quantity\":\"5000~9999\",\"value\":\"2.60\"},{\"quantity\":\"≥10000\",\"value\":\"2.50\"}]"
+    }
+  ]
+}

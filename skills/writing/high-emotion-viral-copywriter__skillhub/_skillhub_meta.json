@@ -1,0 +1,11 @@
+{
+  "slug": "high-emotion-viral-copywriter",
+  "name": "高情绪文案改写器",
+  "version": "1.0.0",
+  "installedAt": 1787228945328,
+  "source": "skillhub",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  }
+}

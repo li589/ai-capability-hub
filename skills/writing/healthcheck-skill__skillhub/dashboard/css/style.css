@@ -1,0 +1,398 @@
+:root {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei UI', 'Microsoft YaHei UI', sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+}
+
+:root {
+    margin: 0;
+    padding: 0;
+    background: #f0f2f5;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Microsoft YaHei UI', 'Microsoft YaHei UI', sans-serif;
+    background: #0f0f2f5;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    background: #f0f2f5;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.1);
+    overflow-x: hidden;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 20px;
+    background: #1a365d;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.version {
+    padding: 0.3rem 0.5rem;
+    background: rgba(255,255,255,0.2);
+    border-radius: 4px;
+}
+
+/* Dashboard Sections */
+.dashboard {
+    background: white;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 32px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+
+.dashboard-section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 20px;
+}
+
+/* Score Card */
+.score-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+
+.score-card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.1);
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.score-value {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.score-label {
+    font-size: 1rem;
+    color: #666;
+}
+
+.score-status {
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+/* Monitoring Grid */
+.monitoring-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px);
+    margin-bottom: 32px;
+}
+
+.monitor-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.08);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.monitor-card:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.label {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.value {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.value.high {
+    color: #EF4444;
+}
+
+.value.warning {
+    color: #F59E0B4;
+}
+
+.value.critical {
+    color: #DC2626;
+}
+
+/* CVE Grid */
+.cve-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.cve-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.08);
+    padding: 20px;
+    text-align: center;
+}
+
+.cve-card .label {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.cve-card .value {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.cve-total {
+    background: #FFF8DC;
+    border: 3px solid #F8F8DC;
+    color: #1F2937;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.cve-vulnerable {
+    background: #FEF8F8;
+    border: 3px solid #F8F8DC;
+    color: #A52A2A;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+.cve-patched {
+    background: #E6F4D0;
+    border: 3px solid #E6F4D0;
+    color: #1F8A21;
+    padding: 16px;
+    border-radius: 6px;
+}
+
+/* Trend Chart */
+.chart-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.08);
+    padding: 24px;
+}
+
+#trend-chart {
+    width: 100%;
+    height: 300px;
+}
+
+/* Timeline */
+.timeline-container {
+    max-height: 500px;
+    overflow-y: auto;
+    border-right: 2px solid #e0e0e0;
+    padding-right: 20px;
+}
+
+.timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    position: relative;
+}
+
+.timeline-item {
+    position: relative;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    border-left: 4px solid currentColor;
+    padding-left: 20px;
+    background: white;
+    transition: transform 0.3s, transform-origin;
+}
+
+.timeline-item::before {
+    position: absolute;
+    left: -20px;
+    top: 20px;
+    width: 4px;
+    height: 100%;
+    background: currentColor;
+    border-radius: 2px;
+}
+
+.timeline-item.success {
+    currentColor: #4CAF50;
+}
+
+.timeline-item.warning {
+    currentColor: #F0A202;
+}
+
+.timeline-item.critical {
+    currentColor: #DC2626;
+}
+
+.timeline-item.info {
+    currentColor: #999;
+}
+
+.time {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.content {
+    margin-left: 28px;
+}
+
+.severity {
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.severity.Critical {
+    background: #FEF8F8;
+    color: #A52A2A;
+}
+
+.severity.High {
+    background: #FEF8F8;
+    color: #F59E0B4;
+}
+
+.severity.Warning {
+    background: #F0F2F2;
+    color: #D97700;
+    font-size: 0.8rem;
+}
+
+.severity.Info {
+    background: #F9F8D8;
+    color: #E67E30;
+}
+
+/* System Info Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+table th,
+table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+table td {
+    background: #f9f9fa;
+}
+
+tr:hover {
+    background: #f0f2f2;
+}
+
+/* Action Buttons */
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 32px;
+    padding: 0 20px;
+    border-top: 2px solid #e0e0e0;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.2s;
+    color: white;
+}
+
+.btn:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,0.15);
+}
+
+.btn-primary {
+    background: #4CAF50;
+    font-weight: 600;
+}
+
+.btn-success {
+    background: #10B981;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #48a383;
+}
+
+.btn-success:hover {
+    background: #48a383;
+}

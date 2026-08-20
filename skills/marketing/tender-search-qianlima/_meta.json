@@ -1,0 +1,17 @@
+{
+  "owner": "liu-jiapeng",
+  "slug": "tender-search-qianlima",
+  "displayName": "招中标信息大数据查询及分析-千里马",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1775878438918,
+    "commit": "https://github.com/openclaw/skills/commit/6062a850ed9746291a225ede9165af3ee8ee0d32"
+  },
+  "history": [
+    {
+      "version": "1.0.1",
+      "publishedAt": 1775562140138,
+      "commit": "https://github.com/openclaw/skills/commit/be87f4a922f96fd333721c04d31d18f1dc3f5990"
+    }
+  ]
+}

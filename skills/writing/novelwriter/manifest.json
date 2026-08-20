@@ -1,0 +1,15 @@
+{
+  "schema": 1,
+  "type": "skill",
+  "name": "novelwriter",
+  "displayName": "novelwriter",
+  "version": "1.2.0",
+  "author": "NZSZ",
+  "authorId": "u-a553402ca21449db9813",
+  "description": "会自动成长的AI去痕小说创作技能，集成 humanizer-zh 自动去除 AI 痕迹。提供从创意生成、世界观构建、角色设计、大纲创作到章节写作的全流程能力，支持多风格（辰东、三九音域等）文风模拟。",
+  "tags": [],
+  "category": "",
+  "installedFrom": "openclawmp",
+  "registryId": "s-d0261e35a2a2bc0e",
+  "hasPackage": true
+}

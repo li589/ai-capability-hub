@@ -1,0 +1,6 @@
+interface:
+  display_name: "股票短线气象员"
+  short_description: "告别凭感觉判断股票，用量化证据观察全市场强弱与资金方向。"
+  icon_small: "./assets/xianglong-logo.png"
+  icon_large: "./assets/xianglong-logo.png"
+  default_prompt: "使用 $stock-short-term-weatherman 扫描今天的 A 股市场，观察哪里更强、资金往哪里集中、哪些强势正在失温。"

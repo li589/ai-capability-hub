@@ -1,0 +1,20 @@
+{
+  "name": "Landing Page Generator",
+  "installedAt": 1787228356026,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2057443340060700672",
+  "examples_zh": [
+    "帮我为这个产品生成一个可以直接上线的营销落地页",
+    "做一个带定价、FAQ 和行动按钮的单页官网",
+    "根据这个创业想法生成一个响应式 landing page"
+  ],
+  "examples_en": [
+    "Generate a deployable marketing landing page for this product",
+    "Create a one-page website with pricing, FAQ, and call-to-action sections",
+    "Turn this startup idea into a responsive landing page"
+  ],
+  "description_zh": "生成可直接部署的单页营销落地页",
+  "description_en": "Generate deployable single-file marketing landing pages",
+  "iconSource": "letter:auto"
+}

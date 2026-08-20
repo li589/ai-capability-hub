@@ -1,0 +1,11 @@
+{
+  "name": "公众号热门文章查询",
+  "installedAt": 1785864596144,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2082742631154683904",
+  "description_zh": "按关键词搜索公众号爆款文章，支持三维评分排序、时间范围筛选和定时订阅推送。",
+  "description_en": "Search WeChat viral articles by keyword. Features three-dimensional scoring, time range filtering, and scheduled subscription push.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_d9a35137-6df.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_d9a35137-6df.svg"
+}

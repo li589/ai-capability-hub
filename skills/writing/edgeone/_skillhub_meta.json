@@ -1,0 +1,21 @@
+{
+  "name": "EdgeOne HTML Deploy",
+  "installedAt": 1787227725571,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2054901302965608448",
+  "examples_zh": [
+    "把这个 HTML 页面发布成一个公网链接",
+    "我生成了一个单页报告，帮我部署到网页上",
+    "把 index.html 发到 EdgeOne Pages 并返回链接"
+  ],
+  "examples_en": [
+    "Publish this HTML page as a public URL",
+    "Deploy my generated single-page report to the web",
+    "Upload index.html to EdgeOne Pages and give me the link"
+  ],
+  "description_zh": "将 HTML 内容一键发布到 EdgeOne Pages 公网链接",
+  "description_en": "Deploy HTML content to EdgeOne Pages and return a public URL",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_267fa04e-0e5.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_267fa04e-0e5.svg"
+}

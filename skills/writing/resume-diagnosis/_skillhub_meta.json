@@ -1,0 +1,10 @@
+{
+  "name": "简历诊断",
+  "installedAt": 1787227601708,
+  "source": "marketplace",
+  "version": "2.0.0",
+  "skillId": "skill_2089529938557247488",
+  "description_zh": "简历诊断、优化与评审。当用户要求「帮我诊断简历」「简历有问题吗」「优化一下我的简历」「看看简历哪里要改」「简历打分」「简历诊断」「resume review」「简历整体优化」，或上传简历（PDF/DOCX）请求反馈时触发。本 skill 1:1 复刻 goffer 后端诊断流水线——3 类诊断（NO_DATA / NO_FILL / DESCRIPTION_SUGGEST）+ 6 维评分（简历完整度 / 经历描述 / 学习能力 / 专业能力 / 创新领导力 / 职场能力），源自 PersonalResumeScoreComputeFacadeImpl#computeScore，报告输出对齐 PersonalResumeScoreFacadeImpl#queryScoreDetail。",
+  "description_en": "Use this skill whenever a user asks for comprehensive diagnosis / optimization / review of a resume (简历). Triggers when user says \"帮我诊断简历\", \"简历有问题吗\", \"优化一下我的简历\", \"看看简历哪里要改\", \"简历打分\", \"简历诊断\", \"resume review\", \"简历整体优化\", or uploads a resume (PDF/DOCX) and asks for feedback. It 1:1 replicates the goffer backend diagnosis pipeline — 3-category diagnosis (NO_DATA / NO_FILL / DESCRIPTION_SUGGEST) + 6-dimension scoring (简历完整度 / 经历描述 / 学习能力 / 专业能力 / 创新领导力 / 职场能力) from com.gaodun.goffer.web.personalresume.facade.impl.PersonalResumeScoreComputeFacadeImpl#computeScore, and the report output from PersonalResumeScoreFacadeImpl#queryScoreDetail.",
+  "iconSource": "letter:auto"
+}

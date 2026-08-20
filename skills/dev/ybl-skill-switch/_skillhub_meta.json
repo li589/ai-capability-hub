@@ -1,0 +1,21 @@
+{
+  "name": "技能开关",
+  "installedAt": 1787227611309,
+  "source": "marketplace",
+  "version": "1.4.2",
+  "skillId": "skill_2081662527630589952",
+  "examples_zh": [
+    "查看启用的深度研究类 skill",
+    "启用 github 相关的 skill",
+    "禁用全部深度研究类的 skill"
+  ],
+  "examples_en": [
+    "List enabled deep-research skills",
+    "Enable all github-related skills",
+    "Disable all deep-research skills"
+  ],
+  "description_zh": "管理已安装 Skill 的启用与禁用——一句话批量操作，不用记名称，不用翻列表。支持按编号选择、按类别筛选、全部批量操作，每次执行前有确认闸门防止误操作。",
+  "description_en": "Enable or disable installed Skills in one sentence. Batch operations by number, category filter, or all at once, with a confirmation gate before every change to prevent mistakes.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2081662527630589952/4c4167a8f5b878af.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2081662527630589952/4c4167a8f5b878af.png"
+}

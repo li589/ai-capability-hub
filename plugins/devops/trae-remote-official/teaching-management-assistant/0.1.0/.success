@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:teaching-management-assistant",
+  "registry": "trae-remote-official",
+  "plugin_name": "teaching-management-assistant",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "6d2de3fc-425c-48dd-a0a4-5e816d20358a",
+  "remote_installed_plugin_id": "Y08U91F7DT8_1V",
+  "checksum": "b946fa60bf87ad3907c031e8d38cd113a2aa08de051550b67b8b1061d4ce3aad",
+  "file_size": 395280,
+  "installed_at": 1787227203966
+}

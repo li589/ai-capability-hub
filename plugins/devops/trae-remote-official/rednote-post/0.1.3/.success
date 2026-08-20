@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:rednote-post",
+  "registry": "trae-remote-official",
+  "plugin_name": "rednote-post",
+  "version": "0.1.3",
+  "marketplace_plugin_id": "17b52b4a-a4b4-4617-900c-c7efaac61d0b",
+  "remote_installed_plugin_id": "Q2.P4KSY3_B3TN",
+  "checksum": "cc7bac8277ffd657f931794f9edee319208d7682e8816306f4533642846b7afb",
+  "file_size": 62285,
+  "installed_at": 1787227201863
+}

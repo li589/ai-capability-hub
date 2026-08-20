@@ -1,0 +1,20 @@
+{
+  "name": "轻量PDF编辑器",
+  "installedAt": 1785784745515,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082432767135744",
+  "examples_zh": [
+    "把PDF第3页的标题改为新标题",
+    "从PDF中提取第5到10页的内容",
+    "合并两个PDF文件"
+  ],
+  "examples_en": [
+    "Change the title on page 3 of this PDF",
+    "Extract pages 5 to 10 from the PDF",
+    "Merge two PDF files into one"
+  ],
+  "description_zh": "用自然语言编辑 PDF 文件",
+  "description_en": "Edit PDFs with natural language",
+  "iconSource": "letter:auto"
+}

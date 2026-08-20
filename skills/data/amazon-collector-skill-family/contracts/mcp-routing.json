@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "server": "bazhuayu",
+  "transport": "streamable-http",
+  "endpoint": "https://mcp.bazhuayu.com",
+  "authentication": {"mode": "api-key", "secure_configuration_only": true, "header": "x-api-key"},
+  "required_tools": ["search_templates", "execute_task", "get_task_status", "start_or_stop_task", "export_data"],
+  "templates": {
+    "list": {"id": 3387, "scope": "all-sites"},
+    "details": {"id": 3386, "scope": "all-sites"},
+    "reviews_general": {"id": 3388, "scope": "non-US-and-non-JP"},
+    "reviews_us": {"id": 3389, "scope": "US"},
+    "reviews_jp": {"id": 3339, "scope": "JP"}
+  },
+  "poll_seconds": {"minimum": 10, "maximum": 30},
+  "export_page_size": 100,
+  "execution_packing": {
+    "mode": "single-template-task-per-stage",
+    "asin_submission": "full-normalized-array",
+    "on_template_rejecting_batch_input": "fail-stage-no-split"
+  },
+  "step_length": {
+    "value": 1000,
+    "apply_when_current_schema_exposes_step_field": true
+  },
+  "review_date_policy": {
+    "scope": "all-supported-sites",
+    "request_field": "review_start_date",
+    "format": "yyyy-mm-dd",
+    "default": "request_date_minus_one_calendar_year",
+    "leap_day_fallback": "february-28",
+    "template_field_resolution": "refresh-inputSchema-and-use-current-date-field",
+    "missing_template_date_field": "fail-stage"
+  },
+  "review_limit_policy": {
+    "default_per_asin": 100,
+    "us_jp_when_customer_limit_is_absent": {
+      "max_runtime_minutes": 30,
+      "clock_start": "execute_task_response",
+      "action": "stop",
+      "export_truncate_per_asin": 100
+    },
+    "customer_limit": {
+      "export_truncate_per_asin": "requested_limit"
+    }
+  }
+}

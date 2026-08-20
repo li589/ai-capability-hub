@@ -1,0 +1,11 @@
+{
+  "name": "公众号标题生成与评分",
+  "installedAt": 1785864598191,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2082739422464524288",
+  "description_zh": "公众号爆款标题生成与评分工具，基于真实热门数据生成标题并进行多维度打分。",
+  "description_en": "WeChat viral title generator and scorer based on real trending article data, with multi-dimensional scoring.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_d62a826a-65b.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_d62a826a-65b.svg"
+}

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feature Flag Config Editor</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #9ca3af;
+  --color-border-tertiary: #e5e7eb;
+  --color-border-secondary: #d1d5db;
+  --color-border-primary: #374151;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --color-indigo-1: #eef2ff;
+  --color-indigo-2: #e0e7ff;
+  --color-indigo-3: #c7d2fe;
+  --color-indigo-5: #6366f1;
+  --color-indigo-6: #4f46e5;
+  --color-indigo-7: #4338ca;
+  --color-amber-1: #fffbeb;
+  --color-amber-2: #fef3c7;
+  --color-amber-3: #fde68a;
+  --color-amber-5: #f59e0b;
+  --color-amber-6: #d97706;
+  --color-amber-8: #92400e;
+  --color-mint-1: #ecfdf5;
+  --color-mint-3: #6ee7b7;
+  --color-mint-5: #10b981;
+  --color-mint-6: #059669;
+  --color-coral-1: #fff1f2;
+  --color-coral-3: #fda4af;
+  --color-coral-5: #f43f5e;
+  --color-slate-2: #e2e8f0;
+  --color-slate-3: #cbd5e1;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-sans); background: var(--color-background-tertiary); padding: 24px; color: var(--color-text-primary); }
+
+.panel {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border-tertiary);
+  background: var(--color-indigo-1);
+}
+
+.header h1 { font-size: 18px; font-weight: 700; color: var(--color-indigo-7); }
+
+.badge {
+  background: var(--color-indigo-5);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-family: var(--font-mono);
+}
+
+.actions { padding: 12px 24px; display: flex; gap: 10px; justify-content: flex-end; border-bottom: 1px solid var(--color-border-tertiary); }
+
+.btn {
+  padding: 8px 16px;
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border-secondary);
+  background: var(--color-background-primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.15s;
+}
+.btn:hover { border-color: var(--color-indigo-5); color: var(--color-indigo-6); }
+.btn-primary { background: var(--color-indigo-5); color: #fff; border-color: var(--color-indigo-5); }
+.btn-primary:hover { background: var(--color-indigo-6); }
+
+.groups { padding: 16px 24px 24px; }
+
+.group { margin-bottom: 16px; }
+
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-secondary);
+  user-select: none;
+}
+.group-header:hover { background: var(--color-indigo-1); }
+
+.eyebrow {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-indigo-6);
+  font-weight: 700;
+}
+
+.chevron { transition: transform 0.2s; font-size: 12px; color: var(--color-text-tertiary); }
+.chevron.open { transform: rotate(90deg); }
+
+.group-body { padding: 8px 0 0 0; }
+.group-body.collapsed { display: none; }
+
+.flag-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 14px 16px;
+  margin: 6px 0;
+  border-left: 3px solid var(--color-indigo-3);
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-primary);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s;
+}
+.flag-card:hover { border-left-color: var(--color-indigo-5); }
+.flag-card.warning { border-left-color: var(--color-amber-5); background: var(--color-amber-1); }
+
+.toggle { position: relative; width: 40px; height: 22px; flex-shrink: 0; margin-top: 2px; }
+.toggle input { opacity: 0; width: 0; height: 0; }
+.toggle .slider {
+  position: absolute; inset: 0; background: var(--color-slate-3); border-radius: 11px; cursor: pointer; transition: 0.2s;
+}
+.toggle .slider::before {
+  content: ''; position: absolute; width: 16px; height: 16px; left: 3px; top: 3px;
+  background: #fff; border-radius: 50%; transition: 0.2s;
+}
+.toggle input:checked + .slider { background: var(--color-mint-5); }
+.toggle input:checked + .slider::before { transform: translateX(18px); }
+
+.flag-info { flex: 1; min-width: 0; }
+.flag-name { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+.flag-desc { font-size: 12px; color: var(--color-text-secondary); margin-bottom: 6px; }
+
+.rollout { display: flex; align-items: center; gap: 8px; }
+.rollout input[type=range] { flex: 1; accent-color: var(--color-indigo-5); height: 4px; }
+.rollout-val { font-size: 11px; font-family: var(--font-mono); color: var(--color-indigo-6); font-weight: 600; min-width: 32px; }
+
+.warning-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 11px; font-family: var(--font-mono); color: var(--color-amber-8);
+  background: var(--color-amber-2); padding: 2px 8px; border-radius: 4px; margin-top: 4px;
+}
+
+.diff-output {
+  display: none;
+  margin: 16px 24px 24px;
+  padding: 14px;
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  white-space: pre-wrap;
+  border: 1px solid var(--color-border-tertiary);
+  color: var(--color-text-primary);
+}
+</style>
+</head>
+<body>
+<div class="panel">
+  <div class="header">
+    <h1>⚑ Feature Flags</h1>
+    <span class="badge" id="changeCount">0 changes</span>
+  </div>
+  <div class="actions">
+    <button class="btn" onclick="resetAll()">Reset</button>
+    <button class="btn btn-primary" onclick="copyDiff()">Copy Diff</button>
+  </div>
+  <div class="groups" id="flagGroups"></div>
+  <pre class="diff-output" id="diffOutput"></pre>
+</div>
+
+<script>
+const FLAGS = [
+  { group: 'Onboarding', flags: [
+    { key: 'onboarding_wizard_v2', name: 'Onboarding Wizard V2', desc: 'New multi-step wizard flow for first-time users', enabled: true, rollout: 100 },
+    { key: 'onboarding_video_tips', name: 'Video Tips', desc: 'Show contextual video tooltips during onboarding', enabled: false, rollout: 30, depends: 'onboarding_wizard_v2' },
+  ]},
+  { group: 'Sync', flags: [
+    { key: 'realtime_sync', name: 'Realtime Sync', desc: 'Enable WebSocket-based realtime document sync', enabled: true, rollout: 80 },
+    { key: 'conflict_resolution_ui', name: 'Conflict Resolution UI', desc: 'Visual merge conflict resolver for sync conflicts', enabled: false, rollout: 50, depends: 'realtime_sync' },
+  ]},
+  { group: 'Billing', flags: [
+    { key: 'usage_based_billing', name: 'Usage-Based Billing', desc: 'Switch from seat-based to consumption billing model', enabled: false, rollout: 10 },
+    { key: 'invoice_pdf_export', name: 'Invoice PDF Export', desc: 'Allow customers to export invoices as branded PDFs', enabled: true, rollout: 100 },
+  ]},
+  { group: 'Internal', flags: [
+    { key: 'debug_panel', name: 'Debug Panel', desc: 'Show debug overlay with request timings and state', enabled: true, rollout: 100 },
+    { key: 'canary_deploy', name: 'Canary Deploy Gate', desc: 'Route canary traffic to experimental backend instances', enabled: false, rollout: 5 },
+  ]},
+];
+
+let original = {};
+let current = {};
+
+function init() {
+  FLAGS.forEach(g => g.flags.forEach(f => { original[f.key] = { enabled: f.enabled, rollout: f.rollout }; current[f.key] = { enabled: f.enabled, rollout: f.rollout }; }));
+  render();
+}
+
+function render() {
+  const container = document.getElementById('flagGroups');
+  container.innerHTML = FLAGS.map(g => `
+    <div class="group">
+      <div class="group-header" onclick="toggleGroup(this)">
+        <span class="chevron open">▶</span>
+        <span class="eyebrow">${g.group}</span>
+      </div>
+      <div class="group-body">
+        ${g.flags.map(f => renderFlag(f)).join('')}
+      </div>
+    </div>
+  `).join('');
+  updateChangeCount();
+}
+
+function renderFlag(f) {
+  const depOff = f.depends && !current[f.depends]?.enabled;
+  return `
+    <div class="flag-card ${depOff ? 'warning' : ''}">
+      <label class="toggle">
+        <input type="checkbox" ${current[f.key].enabled ? 'checked' : ''} onchange="toggleFlag('${f.key}', this.checked)">
+        <span class="slider"></span>
+      </label>
+      <div class="flag-info">
+        <div class="flag-name">${f.name}</div>
+        <div class="flag-desc">${f.desc}</div>
+        ${f.rollout !== undefined ? `<div class="rollout"><input type="range" min="0" max="100" value="${current[f.key].rollout}" oninput="setRollout('${f.key}', this.value, this)"><span class="rollout-val">${current[f.key].rollout}%</span></div>` : ''}
+        ${depOff ? `<span class="warning-badge">⚠ Requires "${f.depends}" enabled</span>` : ''}
+      </div>
+    </div>`;
+}
+
+function toggleFlag(key, val) { current[key].enabled = val; render(); }
+function setRollout(key, val, el) { current[key].rollout = parseInt(val); el.nextElementSibling.textContent = val + '%'; updateChangeCount(); }
+
+function toggleGroup(el) {
+  el.querySelector('.chevron').classList.toggle('open');
+  el.nextElementSibling.classList.toggle('collapsed');
+}
+
+function updateChangeCount() {
+  let count = 0;
+  Object.keys(current).forEach(k => { if (current[k].enabled !== original[k].enabled || current[k].rollout !== original[k].rollout) count++; });
+  document.getElementById('changeCount').textContent = count + ' change' + (count !== 1 ? 's' : '');
+}
+
+function copyDiff() {
+  const diff = {};
+  Object.keys(current).forEach(k => {
+    if (current[k].enabled !== original[k].enabled || current[k].rollout !== original[k].rollout) diff[k] = current[k];
+  });
+  const output = JSON.stringify(diff, null, 2);
+  const el = document.getElementById('diffOutput');
+  el.textContent = output || '// No changes';
+  el.style.display = 'block';
+  navigator.clipboard?.writeText(output);
+}
+
+function resetAll() {
+  Object.keys(original).forEach(k => { current[k] = { ...original[k] }; });
+  document.getElementById('diffOutput').style.display = 'none';
+  render();
+}
+
+init();
+</script>
+</body>
+</html>

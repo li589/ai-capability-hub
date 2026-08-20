@@ -1,0 +1,11 @@
+{
+  "owner": "kukuxnd",
+  "slug": "peace-workflow",
+  "displayName": "Peace Workflow",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774028182273,
+    "commit": "https://github.com/openclaw/skills/commit/82fd26e55e7d87067611354f543ba9fe92bfc6da"
+  },
+  "history": []
+}

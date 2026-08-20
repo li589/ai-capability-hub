@@ -1,0 +1,11 @@
+{
+  "skill_name": "qimo-conversation-insights",
+  "upload_type": "new",
+  "internal_skill": true,
+  "source_metadata_waived": true,
+  "source_type": "internal",
+  "data_channel": "internal",
+  "source": "partner_offline",
+  "waiver_reason": "合作方线下提供的 Skill 包，无 clawhub/skillhub/git 公开来源；经用户确认按内部 Skill 豁免外部来源元数据。",
+  "waived_by": "user_confirmed"
+}

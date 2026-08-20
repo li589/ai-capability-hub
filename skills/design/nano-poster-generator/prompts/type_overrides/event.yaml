@@ -1,0 +1,18 @@
+type: event
+
+overrides:
+  event_poster:
+    prompt_append: >
+      ADDITIONAL FOR EVENT POSTERS:
+      - Date and venue must be immediately visible — they are the most time-sensitive
+        elements. Use high contrast and deliberate placement (not tucked in a corner).
+      - The poster should radiate the EVENT'S SPECIFIC ENERGY:
+        * Music/concert: warm stage lighting, a sense of bass you can almost feel,
+          the anticipation of a crowd about to hear the first note.
+        * Conference/business: structured authority, the gravity of important ideas,
+          the promise of valuable connections.
+        * Festival/outdoor: open sky, expansive space, the freedom of being outside.
+        * Gallery/exhibition: quiet sophistication, the hush of an opening night.
+      - Musical motifs (instruments, sound waves, rhythm patterns) for music events.
+      - Time-sensitive information (date, time, location) should be grouped as a
+        single visual block — don't scatter them across the poster.

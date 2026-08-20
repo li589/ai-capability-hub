@@ -1,0 +1,20 @@
+{
+  "name": "CalDAV 日历",
+  "installedAt": 1787228705053,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2053081803570212864",
+  "examples_zh": [
+    "同步一下我的 iCloud 日历",
+    "查看我这周的日程安排",
+    "在我的 Google 日历里新建一个明天下午的会议"
+  ],
+  "examples_en": [
+    "Sync my iCloud calendar",
+    "What's on my schedule this week?",
+    "Add a meeting tomorrow afternoon to my Google Calendar"
+  ],
+  "description_zh": "同步和查询 CalDAV 日历（iCloud、Google、Fastmail、Nextcloud 等），仅支持 Linux",
+  "description_en": "Sync and query CalDAV calendars (iCloud, Google, Fastmail, Nextcloud) with vdirsyncer + khal, Linux only",
+  "iconSource": "letter:auto"
+}

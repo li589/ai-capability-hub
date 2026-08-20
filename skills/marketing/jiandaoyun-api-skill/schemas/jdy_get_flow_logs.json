@@ -1,0 +1,38 @@
+{
+  "client_only_params": [],
+  "description": "查询流程实例的审批日志",
+  "display_name": "查询流程日志",
+  "domain": "流程",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/workflow/instance/logs",
+  "method": "POST",
+  "name": "jdy_get_flow_logs",
+  "params": {
+    "instance_id": {
+      "description": "流程实例ID（即数据的data_id）",
+      "type": "string"
+    },
+    "limit": {
+      "default": 100,
+      "description": "每页条数，最大100，默认100",
+      "type": "integer"
+    },
+    "skip": {
+      "default": 0,
+      "description": "跳过的条数（分页用），默认0",
+      "type": "integer"
+    },
+    "types": {
+      "default": [
+        "comment"
+      ],
+      "description": "返回的日志类型，目前仅支持[\"comment\"]（审批意见）",
+      "type": "array"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "instance_id"
+  ],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

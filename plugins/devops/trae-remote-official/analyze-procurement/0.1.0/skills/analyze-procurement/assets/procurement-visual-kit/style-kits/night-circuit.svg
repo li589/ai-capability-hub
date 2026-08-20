@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Night Circuit support kit</title>
+  <desc id="desc">Original dark-stage emerald markers, circuit pattern, cyan focus field, and yellow reversal chart marks.</desc>
+  <defs>
+    <pattern id="route-pattern" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M2 12h8l4-7h8" fill="none" stroke="#09D47E" stroke-opacity=".28" stroke-width="2"/>
+      <circle cx="22" cy="5" r="2" fill="#20C7E8" opacity=".55"/>
+    </pattern>
+    <g id="route-marker"><circle cx="9" cy="9" r="9" fill="#09D47E"/><path d="M5 9h8M9 5v8" stroke="#111315" stroke-width="2"/></g>
+    <g id="route-chart-mark"><path d="M0 28L14 18 28 22 44 4" fill="none" stroke="#20C7E8" stroke-width="4"/><circle cx="44" cy="4" r="5" fill="#F2E923"/></g>
+  </defs>
+  <rect width="320" height="180" fill="#111315"/>
+  <rect x="16" y="16" width="132" height="72" rx="10" fill="url(#route-pattern)" stroke="#3A3D40"/>
+  <rect id="route-focus-field" x="164" y="16" width="140" height="72" rx="10" fill="#09D47E"/>
+  <path d="M180 36h90M180 52h64M180 68h104" stroke="#111315" stroke-width="5"/>
+  <g transform="translate(16 120)"><use href="#route-marker"/></g>
+  <g transform="translate(244 118)"><use href="#route-chart-mark"/></g>
+</svg>

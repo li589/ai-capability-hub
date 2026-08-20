@@ -1,0 +1,12 @@
+{
+  "slug": "sbkj-official-ai",
+  "name": "AI招投标智能搜索【世舶科技】",
+  "version": "1.0.1",
+  "installedAt": 1787228773259,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/64ea6fd6-ebe7-418c-af4f-2cafff71f2ec.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/64ea6fd6-ebe7-418c-af4f-2cafff71f2ec.png"
+}

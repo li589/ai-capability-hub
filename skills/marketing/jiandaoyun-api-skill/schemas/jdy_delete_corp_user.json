@@ -1,0 +1,21 @@
+{
+  "client_only_params": [],
+  "description": "从企业通讯录中删除指定成员",
+  "display_name": "删除成员",
+  "domain": "通讯录",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/corp/user/delete",
+  "method": "POST",
+  "name": "jdy_delete_corp_user",
+  "params": {
+    "username": {
+      "description": "要删除的成员编号",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "username"
+  ],
+  "risk": "destructive",
+  "source": "简道云工具包.zip"
+}

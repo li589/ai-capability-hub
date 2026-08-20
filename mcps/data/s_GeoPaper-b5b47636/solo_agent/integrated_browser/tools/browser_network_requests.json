@@ -1,0 +1,14 @@
+{
+  "name": "browser_network_requests",
+  "description": "Returns all network requests since loading the page\n",
+  "arguments": {
+    "properties": {
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

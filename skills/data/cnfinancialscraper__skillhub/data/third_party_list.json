@@ -1,0 +1,185 @@
+{
+  "type": "third_party",
+  "type_name": "第三方销售机构",
+  "count": 35,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-05-23",
+  "_note": "URL已移除，仅保留机构名称和代码供数据匹配使用",
+  "institutions": [
+    {
+      "name": "天天基金",
+      "code": "TTF",
+      "type": "第三方销售"
+    },
+    {
+      "name": "蚂蚁基金",
+      "code": "MYF",
+      "type": "第三方销售"
+    },
+    {
+      "name": "腾安基金",
+      "code": "TA",
+      "type": "第三方销售"
+    },
+    {
+      "name": "雪球基金",
+      "code": "XQ",
+      "type": "第三方销售"
+    },
+    {
+      "name": "且慢",
+      "code": "QM",
+      "type": "第三方销售"
+    },
+    {
+      "name": "理财通",
+      "code": "LC",
+      "type": "第三方销售"
+    },
+    {
+      "name": "京东金融",
+      "code": "JD",
+      "type": "第三方销售"
+    },
+    {
+      "name": "百度金融",
+      "code": "BD",
+      "type": "第三方销售"
+    },
+    {
+      "name": "360你财富",
+      "code": "360",
+      "type": "第三方销售"
+    },
+    {
+      "name": "挖财基金",
+      "code": "WC",
+      "type": "第三方销售"
+    },
+    {
+      "name": "同花顺",
+      "code": "THS",
+      "type": "第三方销售"
+    },
+    {
+      "name": "东方财富",
+      "code": "EM",
+      "type": "第三方销售"
+    },
+    {
+      "name": "蛋卷基金",
+      "code": "DJ",
+      "type": "第三方销售"
+    },
+    {
+      "name": "基金超市",
+      "code": "JJCS",
+      "type": "第三方销售"
+    },
+    {
+      "name": "好买基金",
+      "code": "HM",
+      "type": "第三方销售"
+    },
+    {
+      "name": "私募排排网",
+      "code": "PP",
+      "type": "第三方销售"
+    },
+    {
+      "name": "钱大柱",
+      "code": "QDZ",
+      "type": "第三方销售"
+    },
+    {
+      "name": "理财魔方",
+      "code": "LCMF",
+      "type": "第三方销售"
+    },
+    {
+      "name": "微微财富",
+      "code": "WW",
+      "type": "第三方销售"
+    },
+    {
+      "name": "金斧子",
+      "code": "JFZ",
+      "type": "第三方销售"
+    },
+    {
+      "name": "鼎盛财富",
+      "code": "DS",
+      "type": "第三方销售"
+    },
+    {
+      "name": "大唐财富",
+      "code": "DT",
+      "type": "第三方销售"
+    },
+    {
+      "name": "钜派投资",
+      "code": "JP",
+      "type": "第三方销售"
+    },
+    {
+      "name": "诺亚财富",
+      "code": "NOAH",
+      "type": "第三方销售"
+    },
+    {
+      "name": "宜信财富",
+      "code": "YX",
+      "type": "第三方销售"
+    },
+    {
+      "name": "恒天财富",
+      "code": "HT",
+      "type": "第三方销售"
+    },
+    {
+      "name": "新湖财富",
+      "code": "XH",
+      "type": "第三方销售"
+    },
+    {
+      "name": "海银财富",
+      "code": "HY",
+      "type": "第三方销售"
+    },
+    {
+      "name": "格上财富",
+      "code": "GS",
+      "type": "第三方销售"
+    },
+    {
+      "name": "私募工厂",
+      "code": "SMGC",
+      "type": "第三方销售"
+    },
+    {
+      "name": "朝阳永续",
+      "code": "ZJ",
+      "type": "第三方销售"
+    },
+    {
+      "name": "价值立方",
+      "code": "JZLF",
+      "type": "第三方销售"
+    },
+    {
+      "name": "财经",
+      "code": "CJ",
+      "type": "第三方销售"
+    },
+    {
+      "name": "财富趋势",
+      "code": "CFQS",
+      "type": "第三方销售"
+    },
+    {
+      "name": "同花顺金融",
+      "code": "THSJR",
+      "type": "第三方销售"
+    }
+  ]
+}

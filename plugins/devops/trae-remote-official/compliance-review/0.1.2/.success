@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:compliance-review",
+  "registry": "trae-remote-official",
+  "plugin_name": "compliance-review",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "6fc62685-87cb-449d-a642-e5888aed32bc",
+  "remote_installed_plugin_id": "98T-PGT5BZREPT",
+  "checksum": "b5b40c58e00d1cacd3e7d09ea96e6a540d45d0ee5cb62cc3b097087c86caf5f8",
+  "file_size": 34821,
+  "installed_at": 1787227205047
+}

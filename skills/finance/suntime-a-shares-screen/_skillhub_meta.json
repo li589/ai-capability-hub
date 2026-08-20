@@ -1,0 +1,10 @@
+{
+  "name": "朝阳永续-AI-A股多维筛选",
+  "installedAt": 1787227649091,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2082416496763854848",
+  "description_zh": "朝阳永续A股自然语言多维筛选技能，覆盖基本面、财务、估值、行情、资金、公告事件、主题概念和专业标签，支持多条件及历史结果追加筛选。",
+  "description_en": "Suntime A-Share Screener supports natural-language stock screening across fundamentals, financial metrics, earnings forecasts, valuation, market data, capital flows, announcements, corporate actions, themes, and professional labels. Use it for multi-condition A-share searches, follow-up filtering, and screening based on previous results.",
+  "iconSource": "letter:auto"
+}

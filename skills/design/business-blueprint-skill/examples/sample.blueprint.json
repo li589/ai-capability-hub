@@ -1,0 +1,54 @@
+{
+  "version": "1.0",
+  "meta": {
+    "title": "Retail Membership Blueprint",
+    "industry": "retail",
+    "revisionId": "rev-example",
+    "parentRevisionId": null,
+    "lastModifiedAt": "2026-04-12T00:00:00Z",
+    "lastModifiedBy": "ai"
+  },
+  "context": {
+    "goals": ["提升会员运营效率"],
+    "scope": [],
+    "assumptions": [],
+    "constraints": [],
+    "sourceRefs": [],
+    "clarifyRequests": [],
+    "clarifications": []
+  },
+  "library": {
+    "capabilities": [
+      {
+        "id": "cap-membership",
+        "name": "会员运营",
+        "level": 1,
+        "description": "管理会员生命周期。",
+        "ownerActorIds": ["actor-store-guide"],
+        "supportingSystemIds": ["sys-crm"]
+      }
+    ],
+    "actors": [
+      {
+        "id": "actor-store-guide",
+        "name": "门店导购"
+      }
+    ],
+    "flowSteps": [],
+    "systems": [
+      {
+        "id": "sys-crm",
+        "name": "CRM",
+        "category": "business-app",
+        "capabilityIds": ["cap-membership"]
+      }
+    ]
+  },
+  "relations": [],
+  "views": [],
+  "editor": {
+    "fieldLocks": {},
+    "theme": "enterprise-default"
+  },
+  "artifacts": {}
+}

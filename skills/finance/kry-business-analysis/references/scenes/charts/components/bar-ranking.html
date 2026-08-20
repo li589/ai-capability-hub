@@ -1,0 +1,40 @@
+<!-- 组件: 柱状排行图（横向） -->
+<!-- 用法: 复制到 container 内，替换 chartId、categories、values -->
+<!-- 数据契约: report-data.json 的 components.<组件> = { categories: [名称...], values: [数值...] }
+     ⚠ categories 与 values 是两个平行数组，不是对象数组！
+     ✅ yAxis.data 直接填 categories，series.data 直接填 values
+     ❌ 禁止自造 helper 猜结构，如 data.values.map(v => v.name)（values 是数值数组，无 .name/.value → 全 null 白屏） -->
+<div class="section">
+  <div class="section-title"><!-- TITLE: 如 "🏪 门店营业额排行" --></div>
+  <div class="section-sub"><!-- SUB: 如 "按营业额降序 Top10" --></div>
+  <div id="<!-- CHART_ID: 唯一ID如 chart-ranking -->" class="chart-box"></div>
+</div>
+<script>
+(function(){
+  var chart = echarts.init(document.getElementById('/* CHART_ID */'));
+  chart.setOption({
+    tooltip: { trigger: 'axis', axisPointer: { type: 'shadow' } },
+    grid: { top: 30, right: 30, bottom: 20, left: 120, containLabel: true },
+    xAxis: { type: 'value' },
+    yAxis: {
+      type: 'category',
+      data: [/* DATA: 类目数组，如 ['店A','店B','店C'] */],
+      inverse: true,
+      axisLabel: { fontSize: 12 }
+    },
+    series: [{
+      type: 'bar',
+      data: [/* DATA: 数值数组，如 [15000, 12000, 9000] */],
+      barWidth: 20,
+      itemStyle: {
+        borderRadius: [0, 4, 4, 0],
+        color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
+          { offset: 0, color: '#6366f1' },
+          { offset: 1, color: '#ec4899' }
+        ])
+      },
+      label: { show: true, position: 'right', formatter: '{c}/* UNIT: 如 元 */' }
+    }]
+  });
+})();
+</script>

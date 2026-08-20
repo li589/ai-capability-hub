@@ -1,0 +1,11 @@
+{
+  "owner": "chenyd002025",
+  "slug": "jvs-enterprise-wechat",
+  "displayName": "企业微信 AI Bot 对接",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1773566235033,
+    "commit": "https://github.com/openclaw/skills/commit/c6948f9580afe1a135414a160f50992e9202d641"
+  },
+  "history": []
+}

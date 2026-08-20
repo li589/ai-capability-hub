@@ -1,0 +1,64 @@
+{
+  "name": "browser_click",
+  "description": "Perform click on a web page. Supports single/double click, different mouse buttons, modifier keys, position offsets, and hold duration.\n",
+  "arguments": {
+    "properties": {
+      "button": {
+        "description": "Mouse button to click. Defaults to \"left\".",
+        "enum": [
+          "left",
+          "right",
+          "middle"
+        ],
+        "type": "string"
+      },
+      "doubleClick": {
+        "description": "Whether to perform a double click instead of a single click",
+        "type": "boolean"
+      },
+      "element": {
+        "description": "Human-readable element description used to obtain permission to interact with the element",
+        "type": "string"
+      },
+      "holdDurationMs": {
+        "description": "Duration to hold the mouse button down before releasing, in milliseconds. Useful for long-press interactions. Defaults to 0 (immediate release).",
+        "type": "number"
+      },
+      "modifiers": {
+        "description": "Modifier keys to hold during click. \"ControlOrMeta\" uses Ctrl on Windows/Linux and Cmd on Mac.",
+        "items": {
+          "enum": [
+            "Control",
+            "Shift",
+            "Alt",
+            "Meta",
+            "ControlOrMeta"
+          ],
+          "type": "string"
+        },
+        "type": "array"
+      },
+      "offsetX": {
+        "description": "Horizontal offset from element's left edge in pixels. If omitted, clicks at horizontal center.",
+        "type": "number"
+      },
+      "offsetY": {
+        "description": "Vertical offset from element's top edge in pixels. If omitted, clicks at vertical center.",
+        "type": "number"
+      },
+      "ref": {
+        "description": "Exact target element reference from the page snapshot",
+        "type": "string"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [
+      "element",
+      "ref"
+    ],
+    "type": "object"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "zsxq": {
+      "type": "sse",
+      "url": "https://mcp.zsxq.com/topic/mcp?api_key=${connector.zsxq.ACCESS_TOKEN}"
+    }
+  }
+}

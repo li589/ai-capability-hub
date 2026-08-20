@@ -1,0 +1,30 @@
+{
+  "files": {
+    "__init__.py": "7b76931a58e154d49874b37c3d8b5b850cd05453fd2957f5dbc8398090f97e1c",
+    "builder.py": "0912cab554e558d968ffe7b0a1c2a31441aa987a8523593bd03a360e989d137f",
+    "config.py": "19c70472c9a53df2b7bb15ac43815f641e6b4060c095dc6482cf6a7fd5e36ab1",
+    "dashboard_assets.py": "36133e6bf1b000a884f343aae0305e6f63f97bb9d86520c7068c3f3b0ef21d2c",
+    "doctor.py": "e572e63d3caa8e33e33a138bf4baca5a0e9e55429069b4d1892c75a9b0d2ab2c",
+    "index.py": "4197b3f7d67f494c77a2fa75b8e98b7d8ad7faab8bf9c23c5965e710de41794c",
+    "lifecycle.py": "d63852a3e70b6dd7cc65d6bd3004bd56c1ffa0e3bee8af71d6cae973d4ab06ce",
+    "lite_cli.py": "a3c805c2619be40eb946a3fca1805a16e68ac1e75c115bdade19e5e0f2b28cfb",
+    "manifest.py": "74b3e9a7060872088291ceb464d4bd1d85ac1c67ab47ccec4cf462e5e5dade5d",
+    "markdown.py": "c0608cd20a586af4c2f5ab4c0951cc65c61e2dca1ace669aa22476d7c1808570",
+    "orchestrator.py": "617d18a6e24f6b190dd587eef203ed8966ebd4fcad88c93f99cd941a575697fc",
+    "pipeline.py": "e998ddf4c440c7cb5e91cbe1ea94eaee1236f6341ccf1b1bf323d4366604d6c2",
+    "renderer.py": "1ac7d358c00b6ff11207b7469c3356f13df74f5b6edcfe1316e1424e31a1e7c9",
+    "result.py": "e62c2ec54ce98740ccb2ec08828bf344580405bf4646678799f813ee8a651633",
+    "scanner.py": "83192f3c7b79982a629fd717e6749a9bef0958af0b4a90c2724b97b4e63463bd",
+    "server.py": "3a693828e7e2f108b80d8e7c2c153df82f8934ecba299ab73eab5289020f9a71",
+    "skillpay_cli.py": "d2be816546c5034da546c5e5747a17d8f84d01cebf35795ce3dcd4489c8dae63",
+    "skillpay_client.py": "bf93ed14d157d37d91dba01c9ed686ff66d1f9cd1e390fab9d6cbf1b93bf006c",
+    "skillpay_manifest.py": "0950511c3f0c632759888616ff090ca5897eb19446fa07d81e35137644ecbe3d",
+    "updater.py": "3253e5ec9e145b5633f12aee6b60d16b83a3dae42f1ae0443c58645233bd880e",
+    "validator.py": "ebacc0fc84361849b7769a00a60ac9cf62497bae7209168ceb76903f501a7eca"
+  },
+  "package_version": "1.0.2",
+  "runtime_version": "1.0.1",
+  "schema_version": 1,
+  "source": "core/workbench",
+  "variant": "skillpay-pro-client"
+}

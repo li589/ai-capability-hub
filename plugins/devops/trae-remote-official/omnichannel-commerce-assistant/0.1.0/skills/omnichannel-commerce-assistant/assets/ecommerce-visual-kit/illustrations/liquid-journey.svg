@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Floating evidence journey</title>
+  <desc id="desc">Five translucent commerce evidence cards follow a curved decision path.</desc>
+  <defs>
+    <linearGradient id="field" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset=".52" stop-color="#F3F0FF"/>
+      <stop offset="1" stop-color="#E9F5FF"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" x2="1">
+      <stop stop-color="#7255E9"/>
+      <stop offset="1" stop-color="#3428C8"/>
+    </linearGradient>
+    <linearGradient id="glassFill" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity=".88"/>
+      <stop offset=".56" stop-color="#FFFFFF" stop-opacity=".62"/>
+      <stop offset="1" stop-color="#EDEAFF" stop-opacity=".48"/>
+    </linearGradient>
+    <linearGradient id="glassEdge" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#FFFFFF" stop-opacity=".98"/>
+      <stop offset=".42" stop-color="#DAD7ED" stop-opacity=".78"/>
+      <stop offset="1" stop-color="#AAA4D0" stop-opacity=".52"/>
+    </linearGradient>
+    <filter id="glass" x="-40%" y="-40%" width="180%" height="200%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#4038A8" flood-opacity=".16"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="720" rx="64" fill="url(#field)"/>
+  <ellipse cx="628" cy="366" rx="488" ry="260" fill="#8778EF" opacity=".06"/>
+  <path d="M92 456C284 200 585 196 1114 414" fill="none" stroke="url(#path)" stroke-width="8" stroke-linecap="round"/>
+  <g fill="none" stroke="#7255E9" stroke-width="2.5" filter="url(#glass)">
+    <g transform="translate(160 298) rotate(-9 78 78)">
+      <rect width="156" height="156" rx="28" fill="url(#glassFill)" stroke="url(#glassEdge)" stroke-width="2"/>
+      <path d="M22 20h68" stroke="#FFFFFF" stroke-width="4" opacity=".82" stroke-linecap="round"/>
+      <path d="M40 112 72 72l22 24 20-16 18 32z"/>
+      <circle cx="116" cy="42" r="10" fill="#AFA3F5" stroke="none"/>
+    </g>
+    <g transform="translate(360 184) rotate(-5 78 78)">
+      <rect width="156" height="156" rx="28" fill="url(#glassFill)" stroke="url(#glassEdge)" stroke-width="2"/>
+      <path d="M22 20h68" stroke="#FFFFFF" stroke-width="4" opacity=".82" stroke-linecap="round"/>
+      <path d="M78 36v56m0 22v2M46 124h64"/>
+      <circle cx="78" cy="92" r="31"/>
+    </g>
+    <g transform="translate(570 154)">
+      <rect width="156" height="156" rx="28" fill="url(#glassFill)" stroke="url(#glassEdge)" stroke-width="2"/>
+      <path d="M22 20h68" stroke="#FFFFFF" stroke-width="4" opacity=".82" stroke-linecap="round"/>
+      <path d="M42 112V82m30 30V62m30 50V42m-68 30 35-20 31 8 22-26"/>
+    </g>
+    <g transform="translate(784 200) rotate(6 78 78)">
+      <rect width="156" height="156" rx="28" fill="url(#glassFill)" stroke="url(#glassEdge)" stroke-width="2"/>
+      <path d="M22 20h68" stroke="#FFFFFF" stroke-width="4" opacity=".82" stroke-linecap="round"/>
+      <path d="M42 56h72l-18 18 18 18H42l18-18zM78 92v34"/>
+    </g>
+    <g transform="translate(984 308) rotate(10 78 78)">
+      <rect width="156" height="156" rx="28" fill="url(#glassFill)" stroke="url(#glassEdge)" stroke-width="2"/>
+      <path d="M22 20h68" stroke="#FFFFFF" stroke-width="4" opacity=".82" stroke-linecap="round"/>
+      <path d="m48 104 24-44 44-18-18 44-44 24zM72 60l26 26M52 112l-8 18 18-8"/>
+      <circle cx="84" cy="76" r="7"/>
+    </g>
+  </g>
+  <g fill="#7255E9" opacity=".22">
+    <circle cx="154" cy="134" r="5"/><circle cx="182" cy="134" r="5"/><circle cx="210" cy="134" r="5"/>
+    <circle cx="154" cy="162" r="5"/><circle cx="182" cy="162" r="5"/><circle cx="210" cy="162" r="5"/>
+    <circle cx="914" cy="574" r="5"/><circle cx="942" cy="574" r="5"/><circle cx="970" cy="574" r="5"/>
+    <circle cx="914" cy="602" r="5"/><circle cx="942" cy="602" r="5"/><circle cx="970" cy="602" r="5"/>
+  </g>
+</svg>

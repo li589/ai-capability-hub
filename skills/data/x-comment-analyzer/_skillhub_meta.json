@@ -1,0 +1,11 @@
+{
+  "name": "X作品评论分析",
+  "installedAt": 1787228339593,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087461915230248960",
+  "description_zh": "输入推文链接或ID获取一级评论，支持游标翻页与四维情感分析",
+  "description_en": "Fetch X (Twitter) post comments with four-dimension sentiment analysis.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_621f4b59-cc1.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_621f4b59-cc1.svg"
+}

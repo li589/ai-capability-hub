@@ -1,0 +1,11 @@
+{
+  "name": "家长会发言稿 · 班主任版",
+  "installedAt": 1787227525551,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2084940946476777472",
+  "description_zh": "为教师生成班主任家长会发言稿（含开场、班/学情通报、家庭教育建议、Q&A 预案、PPT 大纲），按时长换算字数预算，遵守不公布排名、不点名批评等纪律红线。触发关键词：家长会发言稿、家长会讲话、班主任家长会、家长会演讲。",
+  "description_en": "Generates a homeroom-teacher parent-meeting speech (including opening, class/learning-status report, family-education advice, Q&A preparation, and PPT outline), budgeting word count by duration, and respecting red lines such as not disclosing rankings or naming individual students for criticism. Trigger keywords: parent meeting speech, parent meeting talk, homeroom parent meeting, parent meeting presentation.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_4a2bf6ba-eaa.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/24db4fbc-a6ce-494f-853c-ce08993c3d2f/avatar/skill/au_4a2bf6ba-eaa.png"
+}

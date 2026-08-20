@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="t d">
+  <title id="t">Decision Mosaic layout guide</title>
+  <desc id="d">One dominant thesis module with unequal supporting decision modules.</desc>
+  <rect width="1280" height="720" fill="#ffffff"/>
+  <g fill="#161514"><rect x="56" y="48" width="180" height="12"/><rect x="56" y="94" width="700" height="58"/></g>
+  <rect x="56" y="206" width="740" height="402" rx="14" fill="#ef4b2f"/>
+  <g fill="#161514"><rect x="90" y="244" width="420" height="28"/><rect x="90" y="302" width="640" height="190" rx="4"/><rect x="90" y="532" width="350" height="14"/></g>
+  <rect x="824" y="206" width="400" height="178" rx="14" fill="#6658d8"/>
+  <rect x="824" y="410" width="252" height="198" rx="14" fill="#dfff3f"/>
+  <rect x="1102" y="410" width="122" height="198" rx="14" fill="#161514"/>
+  <g fill="#161514"><rect x="56" y="650" width="1168" height="2"/><rect x="56" y="674" width="520" height="10"/></g>
+</svg>

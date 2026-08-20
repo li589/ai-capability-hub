@@ -1,0 +1,21 @@
+{
+  "name": "iMessage",
+  "installedAt": 1787228708560,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082359936249856",
+  "examples_zh": [
+    "发一条iMessage给妈妈说我到家了",
+    "查看和某个联系人的iMessage记录",
+    "搜索聊天记录里关于会议的消息"
+  ],
+  "examples_en": [
+    "Send an iMessage to mom saying I'm home",
+    "View iMessage history with a contact",
+    "Search chat history for meeting mentions"
+  ],
+  "description_zh": "iMessage/短信收发与历史查看",
+  "description_en": "Send and browse iMessage/SMS history",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/imsg.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/imsg.png"
+}

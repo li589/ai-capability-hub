@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:fazhi-law",
+  "registry": "trae-remote-official",
+  "plugin_name": "fazhi-law",
+  "version": "1.0.3",
+  "marketplace_plugin_id": "7d12ed53-6e26-4363-b95b-0deb3d4eee40",
+  "remote_installed_plugin_id": "WC4IIGD0451R3X",
+  "checksum": "6b14a2d4728636cfe96ed3c83654a960c2c59aafcb5086a3160dc5159ae320af",
+  "file_size": 1626895,
+  "installed_at": 1787227204420
+}

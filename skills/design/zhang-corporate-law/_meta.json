@@ -1,0 +1,22 @@
+{
+  "owner": "sealawyer2026",
+  "slug": "zhang-corporate-law",
+  "displayName": "九章-公司法专家",
+  "latest": {
+    "version": "1.5.0",
+    "publishedAt": 1775098640438,
+    "commit": "https://github.com/openclaw/skills/commit/05e462c984a54c2ce22fe0f955547433d9afd6c6"
+  },
+  "history": [
+    {
+      "version": "1.2.0",
+      "publishedAt": 1774397948181,
+      "commit": "https://github.com/openclaw/skills/commit/679c518833e53cc52b7c16a66d055630550dbfd7"
+    },
+    {
+      "version": "1.0.1",
+      "publishedAt": 1773937796311,
+      "commit": "https://github.com/openclaw/skills/commit/7af6949a6df3ea4093bc1a13a9b916e86ea818af"
+    }
+  ]
+}

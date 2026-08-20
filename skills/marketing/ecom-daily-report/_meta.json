@@ -1,0 +1,17 @@
+{
+  "owner": "madagen365-beep",
+  "slug": "ecom-daily-report",
+  "displayName": "直播电商日报",
+  "latest": {
+    "version": "1.2.2",
+    "publishedAt": 1775265680126,
+    "commit": "https://github.com/openclaw/skills/commit/7e244adb2e64a47a2479d4d014e4c461b87ff99f"
+  },
+  "history": [
+    {
+      "version": "1.2.1",
+      "publishedAt": 1774846785948,
+      "commit": "https://github.com/openclaw/skills/commit/788c9b665475e73cb6616236a5e24884412cc4ed"
+    }
+  ]
+}

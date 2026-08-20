@@ -1,0 +1,10 @@
+{
+  "name": "鼎华eMES 智能交付助手-excel导入",
+  "installedAt": 1787227786361,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089996797085970432",
+  "description_zh": "把客户 Excel 数据导入 eMES 系统（OPENAPI 数据维护接口）：配置地址→解析 Excel→用户确认→导入→生成报告。支持基础资料、点检方案、检验方案等导入。",
+  "description_en": "Import customer Excel data into eMES via OPENAPI: configure endpoint, parse Excel, confirm, import, and generate a report. Supports master data, check plans, inspection plans.",
+  "iconSource": "letter:auto"
+}

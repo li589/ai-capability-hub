@@ -1,0 +1,12 @@
+{
+  "slug": "ecom-ai-operation-toolkit",
+  "name": "电商 AI 全能运营工具箱・选品・标题・Listing・评论・爆款挖掘",
+  "version": "1.0.0",
+  "installedAt": 1787228867068,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7f79eb60-b8d8-4d8e-9b79-6ace0de1ff17.png"
+}

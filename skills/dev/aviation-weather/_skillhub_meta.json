@@ -1,0 +1,20 @@
+{
+  "name": "aviation-weather",
+  "installedAt": 1787228458582,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081372770205696",
+  "examples_zh": [
+    "查询KJFK和KLAX的METAR/TAF，整理一份飞行前天气简报",
+    "获取KSFO附近的PIREP，并说明是否有低云、结冰或颠簸报告",
+    "根据KSEA最新TAF，概括未来6小时起降天气风险和备降关注点"
+  ],
+  "examples_en": [
+    "Fetch the METAR and TAF for KJFK and KLAX and summarize a preflight weather briefing",
+    "Retrieve PIREPs near KSFO and note any reports of low ceilings, icing, or turbulence",
+    "Use the latest KSEA TAF to summarize takeoff/landing weather risks and alternate-planning concerns for the next 6 hours"
+  ],
+  "description_zh": "获取 METAR/TAF 航空气象数据，飞行前天气简报，无需 API Key",
+  "description_en": "Fetch METAR, TAF and PIREP aviation weather from aviationweather.gov, no API key needed",
+  "iconSource": "letter:auto"
+}

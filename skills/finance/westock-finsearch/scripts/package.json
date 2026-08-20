@@ -1,0 +1,12 @@
+{
+  "name": "westock-finsearch",
+  "version": "1.0.0",
+  "description": "金融资讯搜索 CLI，提供关键词搜索和文档 ID 查询",
+  "type": "module",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "bin": {
+    "westock-finsearch": "./scripts/index.js"
+  }
+}

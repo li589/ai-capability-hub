@@ -1,0 +1,11 @@
+{
+  "name": "腾讯云可观测平台 API",
+  "installedAt": 1787228681344,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2064633493780365312",
+  "description_zh": "一个面向 AI Agent 的腾讯云可观测平台 API 调用 Skill，让 AI 能够理解用户的自然语言意图，自动定位到正确的 TCOP 子产品模块，用自然语言驱动腾讯云可观测平台的全部 API 能力，无需翻文档、无需手拼参数。",
+  "description_en": "An AI Agent-oriented Tencent Cloud Observability Platform (TCOP) API Skill that enables AI to understand natural language intent, automatically locate the correct TCOP sub-product module, and drive all TCOP API capabilities via natural language — no doc digging, no manual parameter assembly.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2064633493780365312/d6844b566d89b43d.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2064633493780365312/d6844b566d89b43d.png"
+}

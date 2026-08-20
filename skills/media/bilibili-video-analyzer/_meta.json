@@ -1,0 +1,11 @@
+{
+  "owner": "railgun9983",
+  "slug": "bilibili-video-analyzer",
+  "displayName": "bilibili-video-analyzer",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772531945015,
+    "commit": "https://github.com/openclaw/skills/commit/0ca5d3906a87725703c33df7502f6125e7972544"
+  },
+  "history": []
+}

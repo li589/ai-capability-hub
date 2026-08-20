@@ -1,0 +1,6 @@
+{
+  "display_name": "Image Well",
+  "display_name_en": "Image Well",
+  "description_zh": "并行搜索 12 个图片源（Openverse、Pexels、Unsplash 等），支持许可证过滤、预设场景、缓存结果与批量下载。4 个来源零 API Key 即可使用。",
+  "description_en": "Search and download images from 12 APIs in parallel (Openverse, Pexels, Pixabay, Met Museum, NASA, Rijksmuseum, Wikimedia Commons, Unsplash, Smithsonian, Europeana, Iconify, Pollinations AI). Supports license filtering, presets, cached results, and bulk download with metadata sidecars."
+}

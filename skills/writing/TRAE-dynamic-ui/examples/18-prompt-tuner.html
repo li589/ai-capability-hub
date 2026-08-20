@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prompt Template Tuner</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #6b7280;
+  --color-text-tertiary: #9ca3af;
+  --color-border-tertiary: #e5e7eb;
+  --color-border-secondary: #d1d5db;
+  --color-border-primary: #374151;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Fira Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+  --color-sky-1: #f0f9ff;
+  --color-sky-2: #e0f2fe;
+  --color-sky-3: #bae6fd;
+  --color-sky-4: #7dd3fc;
+  --color-sky-5: #0ea5e9;
+  --color-sky-6: #0284c7;
+  --color-sky-7: #0369a1;
+  --color-sky-8: #075985;
+  --color-violet-1: #f5f3ff;
+  --color-violet-2: #ede9fe;
+  --color-violet-3: #ddd6fe;
+  --color-violet-5: #8b5cf6;
+  --color-violet-6: #7c3aed;
+  --color-slate-2: #e2e8f0;
+  --color-slate-3: #cbd5e1;
+  --color-mint-5: #10b981;
+  --color-coral-5: #f43f5e;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font-sans); background: var(--color-background-tertiary); padding: 24px; color: var(--color-text-primary); }
+
+.panel {
+  max-width: 960px;
+  margin: 0 auto;
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--color-border-tertiary);
+  background: var(--color-sky-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header h1 { font-size: 18px; font-weight: 700; color: var(--color-sky-8); }
+.header-actions { display: flex; gap: 8px; }
+
+.btn {
+  padding: 8px 14px; border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-border-secondary); background: var(--color-background-primary);
+  font-size: 12px; font-weight: 600; cursor: pointer; font-family: var(--font-sans); transition: all 0.15s;
+}
+.btn:hover { border-color: var(--color-sky-5); color: var(--color-sky-6); }
+.btn-primary { background: var(--color-sky-5); color: #fff; border-color: var(--color-sky-5); }
+.btn-primary:hover { background: var(--color-sky-6); }
+
+.content { display: grid; grid-template-columns: 1fr 1fr; min-height: 420px; }
+
+.editor-pane { padding: 20px; border-right: 1px solid var(--color-border-tertiary); display: flex; flex-direction: column; }
+.preview-pane { padding: 20px; background: var(--color-background-secondary); display: flex; flex-direction: column; }
+
+.eyebrow {
+  font-size: 11px; font-family: var(--font-mono); text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--color-sky-6); font-weight: 700; margin-bottom: 10px;
+}
+
+.editor-textarea {
+  flex: 1; width: 100%; resize: none; border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md); padding: 14px; font-family: var(--font-mono);
+  font-size: 13px; line-height: 1.7; color: var(--color-text-primary);
+  background: var(--color-background-primary); outline: none; transition: border-color 0.2s;
+}
+.editor-textarea:focus { border-color: var(--color-sky-5); }
+
+.stats {
+  display: flex; gap: 16px; margin-top: 10px; font-size: 11px;
+  font-family: var(--font-mono); color: var(--color-text-tertiary);
+}
+.stats span { background: var(--color-background-secondary); padding: 3px 8px; border-radius: 4px; }
+
+.slots { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; }
+.slot-pill {
+  padding: 4px 10px; border-radius: 12px; font-size: 11px; font-family: var(--font-mono);
+  background: var(--color-sky-2); color: var(--color-sky-7); cursor: pointer;
+  border: 1px solid var(--color-sky-3); transition: all 0.15s; font-weight: 600;
+}
+.slot-pill:hover { background: var(--color-sky-3); }
+
+.preview-cards { flex: 1; display: flex; flex-direction: column; gap: 12px; overflow-y: auto; }
+
+.preview-card {
+  border-left: 3px solid var(--color-violet-5);
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-primary);
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+}
+.preview-card-header {
+  font-size: 11px; font-family: var(--font-mono); text-transform: uppercase;
+  color: var(--color-violet-6); font-weight: 700; margin-bottom: 8px; letter-spacing: 0.05em;
+}
+.preview-card-body {
+  font-size: 13px; line-height: 1.6; color: var(--color-text-primary); white-space: pre-wrap;
+}
+.highlight {
+  background: var(--color-sky-2); color: var(--color-sky-7);
+  padding: 1px 4px; border-radius: 3px; font-weight: 600;
+}
+</style>
+</head>
+<body>
+<div class="panel">
+  <div class="header">
+    <h1>✎ Prompt Tuner</h1>
+    <div class="header-actions">
+      <button class="btn" onclick="resetPrompt()">Reset</button>
+      <button class="btn btn-primary" onclick="copyPrompt()">Copy Prompt</button>
+    </div>
+  </div>
+  <div class="content">
+    <div class="editor-pane">
+      <div class="eyebrow">Template Editor</div>
+      <textarea class="editor-textarea" id="promptEditor" oninput="updatePreviews()"></textarea>
+      <div class="stats">
+        <span id="charCount">0 chars</span>
+        <span id="tokenCount">~0 tokens</span>
+      </div>
+      <div class="eyebrow" style="margin-top:14px">Available Slots</div>
+      <div class="slots" id="slotPills"></div>
+    </div>
+    <div class="preview-pane">
+      <div class="eyebrow">Live Preview</div>
+      <div class="preview-cards" id="previewCards"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+const DEFAULT_TEMPLATE = `You are a helpful customer support agent for {{company_name}}.
+
+The customer's name is {{customer_name}} and their issue is: {{issue_summary}}.
+
+Draft a professional, empathetic reply that:
+1. Acknowledges their frustration
+2. Provides a clear resolution path
+3. Offers a {{compensation_type}} if appropriate
+
+Keep the tone warm but concise. Sign off as {{agent_name}}.`;
+
+const SLOTS = ['company_name', 'customer_name', 'issue_summary', 'compensation_type', 'agent_name'];
+
+const SAMPLES = [
+  { label: 'Sample A — Billing Dispute', values: { company_name: 'CloudSync Pro', customer_name: 'Sarah M.', issue_summary: 'was charged twice for the annual plan renewal', compensation_type: '15% discount on next renewal', agent_name: 'Alex from Support' }},
+  { label: 'Sample B — Feature Request', values: { company_name: 'DevToolkit', customer_name: 'James K.', issue_summary: 'needs dark mode for the dashboard but it is not available yet', compensation_type: 'early access invite', agent_name: 'Mia from Product' }},
+  { label: 'Sample C — Downtime Report', values: { company_name: 'StatusPage.io', customer_name: 'Chen Wei', issue_summary: 'experienced 4 hours of API downtime impacting their production services', compensation_type: 'service credit', agent_name: 'Jordan from Engineering' }},
+];
+
+function init() {
+  document.getElementById('promptEditor').value = DEFAULT_TEMPLATE;
+  renderSlots();
+  updatePreviews();
+}
+
+function renderSlots() {
+  document.getElementById('slotPills').innerHTML = SLOTS.map(s =>
+    `<span class="slot-pill" onclick="insertSlot('${s}')">{{${s}}}</span>`
+  ).join('');
+}
+
+function insertSlot(name) {
+  const ta = document.getElementById('promptEditor');
+  const start = ta.selectionStart;
+  const text = ta.value;
+  const insert = `{{${name}}}`;
+  ta.value = text.slice(0, start) + insert + text.slice(ta.selectionEnd);
+  ta.selectionStart = ta.selectionEnd = start + insert.length;
+  ta.focus();
+  updatePreviews();
+}
+
+function updatePreviews() {
+  const template = document.getElementById('promptEditor').value;
+  const chars = template.length;
+  document.getElementById('charCount').textContent = chars + ' chars';
+  document.getElementById('tokenCount').textContent = '~' + Math.ceil(chars / 4) + ' tokens';
+
+  document.getElementById('previewCards').innerHTML = SAMPLES.map(s => {
+    let filled = template;
+    Object.entries(s.values).forEach(([k, v]) => {
+      filled = filled.replace(new RegExp(`\\{\\{${k}\\}\\}`, 'g'), `<span class="highlight">${v}</span>`);
+    });
+    // Highlight remaining unfilled slots
+    filled = filled.replace(/\{\{(\w+)\}\}/g, '<span class="highlight">⟨$1⟩</span>');
+    return `<div class="preview-card"><div class="preview-card-header">${s.label}</div><div class="preview-card-body">${filled}</div></div>`;
+  }).join('');
+}
+
+function copyPrompt() {
+  navigator.clipboard?.writeText(document.getElementById('promptEditor').value);
+}
+
+function resetPrompt() {
+  document.getElementById('promptEditor').value = DEFAULT_TEMPLATE;
+  updatePreviews();
+}
+
+init();
+</script>
+</body>
+</html>

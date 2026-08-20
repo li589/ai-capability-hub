@@ -1,0 +1,59 @@
+{
+  "version": "1.0",
+  "meta": {},
+  "context": {
+    "goals": [],
+    "scope": [],
+    "assumptions": [],
+    "constraints": [],
+    "sourceRefs": [],
+    "clarifyRequests": [],
+    "clarifications": []
+  },
+  "library": {
+    "capabilities": [
+      {
+        "id": "cap-production-plan",
+        "name": "生产计划管理",
+        "level": 1,
+        "description": "管理生产排程、产能规划和生产调度。",
+        "ownerActorIds": [],
+        "supportingSystemIds": []
+      },
+      {
+        "id": "cap-quality-control",
+        "name": "质量管理",
+        "level": 1,
+        "description": "管理来料检验、过程检验和成品检验。",
+        "ownerActorIds": [],
+        "supportingSystemIds": []
+      },
+      {
+        "id": "cap-warehouse",
+        "name": "仓储管理",
+        "level": 1,
+        "description": "管理入库、出库、库存和库位。",
+        "ownerActorIds": [],
+        "supportingSystemIds": []
+      },
+      {
+        "id": "cap-supply-chain",
+        "name": "供应链协同",
+        "level": 1,
+        "description": "管理供应商协同、采购计划和物流。",
+        "ownerActorIds": [],
+        "supportingSystemIds": []
+      }
+    ],
+    "actors": [],
+    "flowSteps": [],
+    "systems": []
+  },
+  "relations": [],
+  "views": [],
+  "editor": {
+    "fieldLocks": {},
+    "theme": "enterprise-default"
+  },
+  "artifacts": {}
+}

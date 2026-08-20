@@ -1,0 +1,20 @@
+{
+  "name": "富途行情与交易",
+  "installedAt": 1787227567849,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082278735675392",
+  "examples_zh": [
+    "查询 00700.HK 腾讯控股最近 30 根日 K 线，并返回开盘价、收盘价、最高价和成交量。",
+    "用富途模拟盘为 AAPL 下一个 100 股限价买入单，价格设为 185 美元，并返回订单号。",
+    "查看我的富途账户当前持仓、可用资金和今天未成交订单列表。"
+  ],
+  "examples_en": [
+    "Retrieve the latest 30 daily K-line records for 00700.HK Tencent, including open, close, high, and volume.",
+    "Place a paper-trading limit buy order for 100 shares of AAPL at 185 USD through Futu and return the order ID.",
+    "Show my Futu account's current positions, available cash, and today's unfilled orders."
+  ],
+  "description_zh": "富途行情查询与模拟/实盘交易（港股、美股、A股）",
+  "description_en": "Futu OpenAPI quote and trading for HK/US/A-shares (paper & live)",
+  "iconSource": "letter:auto"
+}

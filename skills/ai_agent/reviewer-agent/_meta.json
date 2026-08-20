@@ -1,0 +1,11 @@
+{
+  "owner": "nic-yuan",
+  "slug": "reviewer-agent",
+  "displayName": "Reviewer Agent",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775569031685,
+    "commit": "https://github.com/openclaw/skills/commit/ca341bbee5a9d2c7c9aab9cd21fe5d11dd32bf3e"
+  },
+  "history": []
+}

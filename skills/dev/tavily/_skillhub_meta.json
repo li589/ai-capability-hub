@@ -1,0 +1,20 @@
+{
+  "name": "Tavily AI Search",
+  "installedAt": 1785784693728,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082852155592704",
+  "examples_zh": [
+    "用 Tavily 搜索 2026 年 AI 代码助手的最新产品动态，并按来源列出摘要。",
+    "只在官方文档和 GitHub 域名内搜索 LangChain structured output 的当前用法。",
+    "对\"开源向量数据库性能对比\"做深度研究，返回关键结论和原始链接。"
+  ],
+  "examples_en": [
+    "Use Tavily to research the latest 2026 AI coding assistant product updates and summarize them by source.",
+    "Search only official documentation and GitHub domains for the current LangChain structured output usage.",
+    "Run deep research on open-source vector database performance comparisons and return key findings with source links."
+  ],
+  "description_zh": "AI优化的网络搜索引擎，支持智能摘要、领域过滤和深度研究",
+  "description_en": "AI-optimized web search with answer summaries, domain filtering & deep research",
+  "iconSource": "letter:auto"
+}

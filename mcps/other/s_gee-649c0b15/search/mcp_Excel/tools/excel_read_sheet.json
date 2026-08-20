@@ -1,0 +1,33 @@
+{
+  "name": "excel_read_sheet",
+  "description": "Read values from Excel sheet with pagination.",
+  "arguments": {
+    "type": "object",
+    "properties": {
+      "fileAbsolutePath": {
+        "description": "Absolute path to the Excel file",
+        "type": "string"
+      },
+      "range": {
+        "description": "Range of cells to read in the Excel sheet (e.g., \"A1:C10\"). [default: first paging range]",
+        "type": "string"
+      },
+      "sheetName": {
+        "description": "Sheet name in the Excel file",
+        "type": "string"
+      },
+      "showFormula": {
+        "description": "Show formula instead of value",
+        "type": "boolean"
+      },
+      "showStyle": {
+        "description": "Show style information for cells",
+        "type": "boolean"
+      }
+    },
+    "required": [
+      "fileAbsolutePath",
+      "sheetName"
+    ]
+  }
+}

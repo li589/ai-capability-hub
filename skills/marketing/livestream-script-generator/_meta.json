@@ -1,0 +1,11 @@
+{
+  "owner": "275254cl-hash",
+  "slug": "livestream-script-generator",
+  "displayName": "Livestream Script Generator",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774406719780,
+    "commit": "https://github.com/openclaw/skills/commit/8c99ceb1530c689979773e573192fd9077de60d1"
+  },
+  "history": []
+}

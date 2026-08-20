@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-上市公司调研问题清单",
+  "installedAt": 1787227749322,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085541009010663424",
+  "description_zh": "万得 Alice 上市公司调研问题清单 CLI：一键生成买方视角结构化调研问题清单，含看多/看空逻辑摘要、3-5 个深度议题及管理层调研问题，支持 A 股、港股及海外上市公司。",
+  "description_en": "Wind Alice Stock DD List CLI - generate a buy-side due diligence question list for any listed company in one step. Retrieves financial data, broker research, industry news, and consensus estimates to produce a structured investment memo with bull/bear thesis, 3–5 deep-dive topics, and pointed questions for management meetings. Works for A-shares, Hong Kong, and international listings.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_ab97f8d2-a09.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_ab97f8d2-a09.jpg"
+}

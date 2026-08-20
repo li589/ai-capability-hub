@@ -1,0 +1,28 @@
+# Requirements for local-screenshot-qa skill (Qwen3-VL-4B-Instruct INT4, OpenVINO VLM).
+#
+# This pin set mirrors the environment validated on an Intel AIPC (Panther Lake-H,
+# Arc B390 iGPU) -- it is the `pip freeze` of the working skill venv, where the
+# skill answers screenshot questions end-to-end via optimum-intel's OpenVINO VLM
+# class loading the Qwen3-VL-4B INT4 IR.
+#
+# IMPORTANT: this skill runs in its OWN venv (info.json venv_name=local-screenshot-qa),
+# so its pins intentionally differ from the asr/tts skills. The Qwen3-VL load path
+# on optimum-intel requires numpy>=2 and transformers 5.x -- do NOT "align" these
+# down to the numpy<2 / transformers<4.58 used elsewhere; that breaks the load.
+#
+# optimum-intel and optimum-onnx are NOT listed below: they ship as wheels under
+# wheels/ and are installed separately by scripts\install-env.ps1 (Step 4), because
+# their wheel metadata carries Git-URL requirements that `pip install -r` cannot
+# resolve. Same pattern as requirements-t2i-tts.txt. The wheels provide the exact
+# optimum-intel build (1.27.0.dev0+2f62e5a) that has Qwen3-VL support.
+openvino==2026.2.0
+numpy==2.4.6
+transformers==5.10.1
+optimum==2.1.0
+nncf==3.2.0
+accelerate==1.13.0
+torch==2.8.0
+torchvision==0.23.0
+modelscope==1.37.1
+pillow==12.2.0
+psutil==7.2.2

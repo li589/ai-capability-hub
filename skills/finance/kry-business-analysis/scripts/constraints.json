@@ -1,0 +1,279 @@
+{
+  "_comment": "API约束注册表 - 声明各接口的硬性限制，fetch.mjs据此自动拆分/分批/翻页",
+  "globalDefense": {
+    "maxPages": 80,
+    "maxTotalTasks": 200,
+    "timeout": 200,
+    "_comment": "全局默认防护：未配defense的接口使用此值。maxPages=单次翻页上限，maxTotalTasks=date-split×shop-batch组合任务上限，timeout=整体执行超时秒数。实际最大记录数=maxPages×maxPageSize"
+  },
+  "apis": {
+    "/open/standard/report/orderItem/itemType/list": {
+      "maxPageSize": 100,
+      "maxDateRangeDays": 1,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-values",
+      "defense": {
+        "maxPages": 15,
+        "maxTotalTasks": 60,
+        "_maxRecords": "15×100=1500条"
+      },
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": 1,
+          "pageSize": 100
+        },
+        "countLatitude": {
+          "countCollectType": 0,
+          "countType": 2
+        },
+        "orderSourceCondition": {
+          "operationFlag": 0
+        },
+        "orderTypeCondition": {
+          "operationFlag": 0
+        },
+        "goodsTempFlag": 0
+      },
+      "note": "分类营收统计，pageSize硬上限100，dateRange仅支持1天，shopIds空数组=前1000店"
+    },
+    "/open/standard/report/measure/dish/gross/profit": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": 1,
+      "maxShopIds": null,
+      "paramsNesting": "necessaryFilter",
+      "mergeStrategy": "concat-array",
+      "defense": {
+        "maxPages": 20,
+        "maxTotalTasks": 60,
+        "_maxRecords": "20×1000=20000条"
+      },
+      "note": "菜品毛利统计，dateRange仅支持1天，dateRange和shopIds嵌套在necessaryFilter内"
+    },
+    "/open/standard/report/dinner/numberAnalysis": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": 2,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-array",
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNo": 1,
+          "pageSize": 1000
+        }
+      },
+      "note": "就餐人数分析，dateRange最大2天"
+    },
+    "/open/standard/report/combo/sale/statistics": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": 1,
+      "maxShopIds": 50,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-array",
+      "defense": {
+        "maxPages": 10,
+        "maxTotalTasks": 150,
+        "_maxRecords": "10×1000=10000条"
+      },
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": 1,
+          "pageSize": 1000
+        },
+        "countLatitude": {
+          "countCollectType": 0,
+          "countType": 1
+        },
+        "sellLatitude": {
+          "sellCollectType": false,
+          "countType": "SINGLE_PACKAGE"
+        }
+      },
+      "note": "套餐销售统计，限50门店/1天，shopIds空数组=前1000店但单次限50"
+    },
+    "/open/standard/report/business/income/v3/list": {
+      "maxPageSize": 1000,
+      "pageSizeOverrides": {
+        "field": "orgStatisticsType",
+        "rules": {
+          "BY_SHOP": 500
+        }
+      },
+      "maxDateRangeDays": null,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-array",
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": 1,
+          "pageSize": 1000
+        },
+        "couponStatisticalType": "BY_NAME",
+        "storeStatisticalType": "SEPARATE",
+        "periodType": "BY_TOTAL"
+      },
+      "note": "店内营收统计，pageSize上限1000，无日期和门店限制；BY_SHOP维度门店行数据量大，pageSize降级至500防止服务端异常（见pageSizeOverrides）"
+    },
+    "/open/standard/report/business/income/constitute/v3/list": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": null,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-array",
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": 1,
+          "pageSize": 1000
+        },
+        "couponStatisticalType": "BY_NAME",
+        "storeStatisticalType": "SEPARATE",
+        "periodType": "BY_TOTAL"
+      },
+      "note": "收入构成统计"
+    },
+    "/open/standard/report/business/income/promo/v3/list": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": null,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-array",
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": 1,
+          "pageSize": 1000
+        },
+        "couponStatisticalType": "BY_NAME",
+        "storeStatisticalType": "SEPARATE",
+        "periodType": "BY_TOTAL"
+      },
+      "note": "优惠构成统计"
+    },
+    "/open/standard/report/paid/income/v6/list": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": null,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-array",
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": 1,
+          "pageSize": 1000
+        },
+        "tabType": "TOTAL_INCOME",
+        "periodType": "BY_TOTAL",
+        "statisticsByBusi": false,
+        "statisticsByOrderType": false,
+        "couponStatisticalType": "BY_NAME",
+        "storeStatisticalType": "SEPARATE"
+      },
+      "note": "收款统计"
+    },
+    "/open/standard/report/orderItem/list": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": null,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-values",
+      "defense": {
+        "maxPages": 80,
+        "_maxRecords": "80×1000=80000条"
+      },
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": 1,
+          "pageSize": 1000
+        },
+        "countLatitude": {
+          "countCollectType": 0,
+          "countType": 1
+        },
+        "sellLatitude": {
+          "sellCollectType": false,
+          "countType": "SINGLE_PACKAGE"
+        },
+        "orderSourceCondition": {
+          "operationFlag": 0
+        },
+        "orderTypeCondition": {
+          "operationFlag": 0
+        },
+        "goodsTempFlag": 0
+      },
+      "note": "菜品销售统计，无日期拆分纯翻页，大品牌数据量极大，shopIds空数组=前1000店"
+    },
+    "/open/standard/report/takeout/reconciliation/query": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": null,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "pageBeanType": "string",
+      "mergeStrategy": "concat-array",
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": "1",
+          "pageSize": "1000"
+        }
+      },
+      "note": "外卖对账，pageBean字段为字符串类型"
+    },
+    "/open/standard/report/groupCoupon/reconciliation": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": null,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-array",
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": 1,
+          "pageSize": 1000
+        }
+      },
+      "note": "团购对账"
+    },
+    "/open/standard/report/booking/shopRanking": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": null,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "mergeStrategy": "concat-array",
+      "defaultParams": {
+        "shopIds": [],
+        "pageBean": {
+          "pageNum": 1,
+          "pageSize": 1000
+        }
+      },
+      "note": "预订门店排行"
+    },
+    "/open/standard/order/queryList": {
+      "maxPageSize": 1000,
+      "maxDateRangeDays": 31,
+      "maxShopIds": null,
+      "paramsNesting": null,
+      "pageBeanType": "string",
+      "dateFieldMode": "flat",
+      "mergeStrategy": "concat-array",
+      "defense": {
+        "maxPages": 50,
+        "_maxRecords": "50×1000=50000条"
+      },
+      "defaultParams": {
+        "pageBean": {
+          "pageNum": "1",
+          "pageSize": "1000"
+        }
+      },
+      "note": "订单列表查询，门店授权，日期为平铺startDate/endDate，超过31天自动date-split拆分（接口硬上限31天/次），pageBean分页pageNum/pageSize为String类型，单店授权不涉shopIds分批"
+    }
+  }
+}

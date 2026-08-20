@@ -1,0 +1,11 @@
+{
+  "name": "商机阶段更新",
+  "installedAt": 1787228622925,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088538186250649600",
+  "description_zh": "核对opportunity当前阶段、目标阶段、salesStageStatus、关键事项和关联记录，确认后通过正式阶段接口执行并同步回查。适用于用户要求商机阶段更新、生成相关结果或检查执行边界时。",
+  "description_en": "Opportunity Stage Update workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_2145f6fd-4da.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_2145f6fd-4da.png"
+}

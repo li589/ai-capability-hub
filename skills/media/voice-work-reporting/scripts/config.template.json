@@ -1,0 +1,39 @@
+{
+  "server": {
+    "host": "",
+    "port": 20201
+  },
+  "apis": {
+    "queryMoList": "/open-api/bp/AIGetMoList",
+    "startProduction": "/open-api/bp/AI_start_processing",
+    "endProduction": "/open-api/bp/AI_end_processing",
+    "queryReasonList": "/open-api/bp/AIGetCollData"
+  },
+  "auth": {
+    "enabled": true,
+    "mode": "account",
+    "account": {
+      "login_endpoint": "/account/v1/login",
+      "user_name": "",
+      "password": "",
+      "language": "zh_CN",
+      "platform": "PC"
+    },
+    "sso": {
+      "code_endpoint": "/sso/v1/code",
+      "token_endpoint": "/sso/v1/token",
+      "user_no": "",
+      "app_id": "",
+      "app_secret": "",
+      "language": "zh_CN",
+      "env_type": "sMES",
+      "mode": "Url",
+      "appNo": "",
+      "platform": "PC"
+    },
+    "token_field": "result.token.accessToken",
+    "token_header": "Authorization",
+    "token_prefix": "Bearer "
+  },
+  "operatorCode": ""
+}

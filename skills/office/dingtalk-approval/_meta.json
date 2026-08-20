@@ -1,0 +1,17 @@
+{
+  "owner": "whauff",
+  "slug": "dingtalk-approval",
+  "displayName": "钉钉 OA 审批工具",
+  "latest": {
+    "version": "2.3.2",
+    "publishedAt": 1773334512793,
+    "commit": "https://github.com/openclaw/skills/commit/4c9949a3cd31a23316df85d88e192cbc9a551082"
+  },
+  "history": [
+    {
+      "version": "1.1.0",
+      "publishedAt": 1773063046109,
+      "commit": "https://github.com/openclaw/skills/commit/63854f8bc07c018d6727fb906b6777dc8ed9817f"
+    }
+  ]
+}

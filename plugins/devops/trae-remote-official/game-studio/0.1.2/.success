@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:game-studio",
+  "registry": "trae-remote-official",
+  "plugin_name": "game-studio",
+  "version": "0.1.2",
+  "marketplace_plugin_id": "5338bb53-5e5e-43f7-8083-61936d9d0da9",
+  "remote_installed_plugin_id": "O9SFNL59CX.I1U",
+  "checksum": "330b70efaf73967ea929c9d2649502029fe9bf8cb383162dd58267619b88623f",
+  "file_size": 58477,
+  "installed_at": 1787227200890
+}

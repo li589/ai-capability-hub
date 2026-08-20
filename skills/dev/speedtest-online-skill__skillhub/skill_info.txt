@@ -1,0 +1,11 @@
+skill_name: 测网速
+skill_id: speedtest
+version: 1.0.0
+author: Skillhub User
+description: 支持下载、上传、延迟测试，显示IP与运营商，生成文本图表，支持多测速节点
+category: 网络工具
+icon: network
+entry: speedtest_skill.py
+main_func: skillhub_main
+support_platform: all
+require_deps: none

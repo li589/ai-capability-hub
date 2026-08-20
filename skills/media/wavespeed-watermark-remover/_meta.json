@@ -1,0 +1,11 @@
+{
+  "owner": "chengzeyi",
+  "slug": "wavespeed-watermark-remover",
+  "displayName": "WaveSpeedAI Watermark Remover",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772434148630,
+    "commit": "https://github.com/openclaw/skills/commit/6d972d810f05cf8f375d7c4c68386249f96755fc"
+  },
+  "history": []
+}

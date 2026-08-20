@@ -1,0 +1,10 @@
+{
+  "name": "托管任务管理",
+  "installedAt": 1787227791556,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087079278379360256",
+  "description_zh": "查询已有托管任务及其状态，并支持关闭或取消库存预警、待发货提醒、内容托管和批量下架等任务。",
+  "description_en": "View existing managed tasks and their status, then close or cancel inventory alerts, shipping reminders, content automation, and bulk unlisting tasks.",
+  "iconSource": "letter:auto"
+}

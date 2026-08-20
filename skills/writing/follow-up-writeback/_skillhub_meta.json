@@ -1,0 +1,11 @@
+{
+  "name": "跟进记录写回",
+  "installedAt": 1787228540687,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088537334767685632",
+  "description_zh": "通过objFieldData新增或更新followUpRecord，强制核对跟进对象ID、对象数据ID、发生时间和内容，确认后写入并同步回查。适用于用户要求跟进记录写回、生成相关结果或检查执行边界时。",
+  "description_en": "Follow-up Record Writeback workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_5001a717-2b8.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_5001a717-2b8.png"
+}

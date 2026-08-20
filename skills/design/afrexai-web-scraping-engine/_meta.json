@@ -1,0 +1,11 @@
+{
+  "owner": "1kalin",
+  "slug": "afrexai-web-scraping-engine",
+  "displayName": "Web Scraping & Data Extraction Engine",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1771759763570,
+    "commit": "https://github.com/openclaw/skills/commit/662ec4d3540c67073e6a609fc322e9f11b1d65f3"
+  },
+  "history": []
+}

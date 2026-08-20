@@ -1,0 +1,3 @@
+display_name: 腾讯云知（乐享）
+short_description: 处理乐享/云知知识库的搜索、读取、创建、编辑和上传，自动区分 v1 API 与 v2 MCP。
+default_prompt: 帮我处理这个乐享/云知知识库请求。请先判断链接是 v1 docs 还是 v2 pages/spaces，再执行搜索、读取、写入或上传操作。

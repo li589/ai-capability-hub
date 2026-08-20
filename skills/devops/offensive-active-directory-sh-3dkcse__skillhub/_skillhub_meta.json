@@ -1,0 +1,10 @@
+{
+  "slug": "offensive-active-directory-sh-3dkcse",
+  "name": "攻击性Active Directory",
+  "version": "1.0.0",
+  "installedAt": 1787229005289,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

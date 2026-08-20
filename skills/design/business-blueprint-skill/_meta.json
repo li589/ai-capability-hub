@@ -1,0 +1,11 @@
+{
+  "owner": "kaisersong",
+  "slug": "business-blueprint-skill",
+  "displayName": "Business Blueprint Skill",
+  "latest": {
+    "version": "0.5.0",
+    "publishedAt": 1776182421833,
+    "commit": "https://github.com/openclaw/skills/commit/919490694d892a3aeb0f3af5617e795a569f2ed1"
+  },
+  "history": []
+}

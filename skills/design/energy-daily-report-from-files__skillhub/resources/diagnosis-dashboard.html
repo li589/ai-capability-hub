@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>能源管理系统 - 自诊断仪表盘</title>
+<style>
+:root {
+  --bg: #f8f9fa;
+  --card-bg: #fff;
+  --text: #333;
+  --green: #28a745;
+  --red: #dc3545;
+  --yellow: #ffc107;
+  --blue: #007bff;
+  --border: #dee2e6;
+  --shadow: 0 2px 8px rgba(0,0,0,.08);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; padding: 20px; }
+h1 { font-size: 1.6em; margin-bottom: 4px; }
+h2 { font-size: 1.2em; color: #666; font-weight: normal; margin-bottom: 24px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; max-width: 1200px; }
+.card { background: var(--card-bg); border-radius: 10px; padding: 20px; box-shadow: var(--shadow); }
+.card h3 { font-size: 1em; margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+.status { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: .85em; font-weight: bold; }
+.status-pass { background: #d4edda; color: #155724; }
+.status-fail { background: #f8d7da; color: #721c24; }
+.status-warn { background: #fff3cd; color: #856404; }
+.stat-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.stat-row:last-child { border-bottom: none; }
+.stat-label { color: #888; }
+.stat-val { font-weight: bold; }
+.chart-bar { height: 28px; background: var(--blue); border-radius: 4px; margin: 4px 0; transition: width .5s; display: flex; align-items: center; padding-left: 8px; color: #fff; font-size: .8em; }
+.chart-good { background: var(--green); }
+.chart-warn { background: var(--yellow); color: #333; }
+.chart-bad { background: var(--red); }
+.score { font-size: 3em; font-weight: bold; }
+.score-green { color: var(--green); }
+.score-yellow { color: var(--yellow); }
+.footer { margin-top: 24px; font-size: .85em; color: #999; text-align: center; }
+</style>
+</head>
+<body>
+<h1>能源管理系统 · 自诊断仪表盘</h1>
+<h2>一键检查您的系统健康状态</h2>
+
+<div class="grid">
+  <div class="card">
+    <h3>总体评分</h3>
+    <div class="score score-green" id="totalScore">--</div>
+    <p id="scoreHint" style="color:#888;">请运行 python scripts/quick_check.py .</p>
+  </div>
+  <div class="card">
+    <h3>Python 环境</h3>
+    <div class="stat-row"><span class="stat-label">Python 版本</span><span class="stat-val" id="pythonVer">--</span></div>
+    <div class="stat-row"><span class="stat-label">操作系统</span><span class="stat-val" id="osInfo">--</span></div>
+    <div class="stat-row"><span class="stat-label">虚拟环境</span><span class="stat-val" id="venvInfo">--</span></div>
+  </div>
+  <div class="card">
+    <h3>文件完整性</h3>
+    <div id="fileChecks"></div>
+  </div>
+  <div class="card">
+    <h3>数据库状态</h3>
+    <div id="dbChecks"></div>
+  </div>
+  <div class="card">
+    <h3>业务蓝图</h3>
+    <div id="blueprintChecks"></div>
+  </div>
+  <div class="card">
+    <h3>依赖状态</h3>
+    <div id="depChecks"></div>
+  </div>
+  <div class="card" style="grid-column: span 2;">
+    <h3>各模块评分</h3>
+    <div id="moduleBars"></div>
+  </div>
+  <div class="card">
+    <h3>国内部署准备度</h3>
+    <div id="domesticChecks"></div>
+  </div>
+  <div class="card">
+    <h3>独立程序状态</h3>
+    <div id="standaloneChecks"></div>
+  </div>
+</div>
+<div class="footer">
+  数据来源：scripts/quick_check.py · 不包含任何伪造指标 · 仅呈现可验证的系统状态
+</div>
+<script>
+// 从 quick_check.py 的 JSON 输出加载数据
+// 实际使用时替换为真实诊断数据
+function loadDiagnosis() {
+  document.getElementById('totalScore').textContent = '即将';
+  document.getElementById('scoreHint').textContent = '运行 python scripts/quick_check.py . --json';
+}
+loadDiagnosis();
+</script>
+</body>
+</html>

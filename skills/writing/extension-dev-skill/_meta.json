@@ -1,0 +1,11 @@
+{
+  "owner": "jasonyang170",
+  "slug": "extension-dev-skill",
+  "displayName": "Jlceda Plugin Builder",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1774260472097,
+    "commit": "https://github.com/openclaw/skills/commit/4e728ad8180cc3cf09deab22683d7c16117db4cd"
+  },
+  "history": []
+}

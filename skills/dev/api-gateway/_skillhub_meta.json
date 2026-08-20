@@ -1,0 +1,20 @@
+{
+  "name": "API Gateway",
+  "installedAt": 1787228683609,
+  "source": "marketplace",
+  "version": "1.0.120",
+  "skillId": "skill_2053081339211579392",
+  "examples_zh": [
+    "帮我在 Notion 里创建一个新页面",
+    "把这份数据同步到 Google Sheets",
+    "在 GitHub 上帮我创建一个 issue"
+  ],
+  "examples_en": [
+    "Create a new page in my Notion workspace",
+    "Sync this data to my Google Sheets",
+    "Create a GitHub issue for this bug"
+  ],
+  "description_zh": "连接 100+ API 服务（Google、Microsoft、GitHub 等），通过 OAuth 管理授权",
+  "description_en": "Connect to 100+ APIs (Google, Microsoft, GitHub, etc.) with managed OAuth",
+  "iconSource": "letter:auto"
+}

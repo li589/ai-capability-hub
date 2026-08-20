@@ -1,0 +1,21 @@
+{
+  "name": "BrowserSkill",
+  "installedAt": 1787227505513,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2089620392925700096",
+  "examples_zh": [
+    "帮去京东搜一下『机械键盘』，把前 10 个商品的名称和价格整理成表格。",
+    " 打开这个问卷链接帮填一下我的基本信息，然后全选『满意』并提交。",
+    "去我邮箱里找最近一封 HR 发来的邮件，把附件 PDF 下载下来，提取要点发给我。"
+  ],
+  "examples_en": [
+    " Search for 'mechanical keyboard' on Amazon, grab the top 10 results with names and prices, and put them in a table.",
+    "Open this survey link, fill in my basic info, select 'Satisfied' for everything, and submit.",
+    "Go to my inbox, find the latest email from HR, download the attached PDF, and give me the key points."
+  ],
+  "description_zh": "BrowserSkill 是腾讯开源的一个智能浏览器自动化工具，让 WorkBuddy 能够像人一样操作网页——自动填表、点击、翻页、截图，完成任何需要浏览器的复杂任务。",
+  "description_en": "BrowserSkill is an open-source intelligent browser automation tool by Tencent that empowers WorkBuddy to interact with web pages like a human — auto-filling forms, clicking, scrolling, taking screenshots, and handling any complex browser-based task.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/29dcbb98-4213-4c26-a677-108dc47f7f86/avatar/skill/au_97af5aaa-62c.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/29dcbb98-4213-4c26-a677-108dc47f7f86/avatar/skill/au_97af5aaa-62c.png"
+}

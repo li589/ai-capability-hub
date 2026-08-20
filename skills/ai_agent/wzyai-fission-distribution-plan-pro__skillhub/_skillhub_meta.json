@@ -1,0 +1,13 @@
+{
+  "slug": "wzyai-fission-distribution-plan-pro",
+  "name": "裂变式分销方案设计（Pro版）",
+  "version": "1.0.1",
+  "installedAt": 1787228922970,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/2d8152d9-7618-454e-9d87-2487f1b4457f.png",
+  "labels": {
+    "pricing_type": "paid",
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/2d8152d9-7618-454e-9d87-2487f1b4457f.png"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "emersonbraun",
+  "slug": "eb-brainstorm",
+  "displayName": "Brainstorm",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775516796606,
+    "commit": "https://github.com/openclaw/skills/commit/fcc640b1f3c1f7cd20965e7cd5c508961d32ee24"
+  },
+  "history": []
+}

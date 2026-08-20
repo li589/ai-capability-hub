@@ -1,0 +1,134 @@
+{
+  "schema_version": "2.7",
+  "system": {
+    "name": "待识别",
+    "business_domains": [],
+    "deployment_mode": "local_or_lan",
+    "interface_mode": "web",
+    "target_os": [
+      "Windows 10",
+      "Windows 11"
+    ],
+    "locale": "zh-CN",
+    "timezone": "Asia/Shanghai",
+    "network_mode": "offline_core",
+    "generator_baseline": "universal-local-app"
+  },
+  "evidence_priority": [
+    "current_user_prompt",
+    "formal_rules_and_templates",
+    "verified_attachment_structure",
+    "skill_profiles"
+  ],
+  "source_files": [],
+  "business_objects": [],
+  "field_mappings": [],
+  "calculation_rules": [],
+  "roles": [],
+  "permissions": [],
+  "workflows": [],
+  "reports": [],
+  "import_rules": {
+    "preview_required": true,
+    "idempotency_keys": [],
+    "transaction_mode": "all_or_nothing",
+    "row_level_validation_report": true,
+    "invalid_row_policy": "block_commit"
+  },
+  "security": {
+    "rbac": true,
+    "audit_log": true,
+    "csrf": true,
+    "no_cdn": true,
+    "external_network_default": "deny"
+  },
+  "backup_and_restore": {
+    "backup_before_migration": true,
+    "restore_requires_integrity_check": true,
+    "restore_requires_service_stopped": true,
+    "rollback_copy_before_restore": true
+  },
+  "exe_build": {
+    "source_required": true,
+    "binary_required": false,
+    "runtime_verification_required_for_verified_claim": true
+  },
+  "acceptance_criteria": [],
+  "assumptions": [],
+  "conflicts": [],
+  "open_questions": [],
+  "dynamic_schema": {
+    "snapshot_per_record": false,
+    "legacy_field_mappings": [],
+    "preserve_unknown_legacy_keys": true
+  },
+  "workflow_engine": {
+    "mode": "none_or_dynamic",
+    "reviewer_distinctness_rules": [],
+    "field_level_permissions": []
+  },
+  "lifecycle": {
+    "project_scoped_stop": true,
+    "shutdown_token": true,
+    "stopping_state": true,
+    "port_reuse_wait": true
+  },
+  "recognition": {
+    "recommended_profile": null,
+    "confidence_score": null,
+    "evidence_report": "BUSINESS_RECOGNITION_REPORT.md"
+  },
+  "input_completeness": {
+    "grade": null,
+    "report": "INPUT_COMPLETENESS_REPORT.md",
+    "unconfirmed_critical_rules": []
+  },
+  "value_measurement": {
+    "report": "VALUE_REPORT.md",
+    "before_minutes": null,
+    "after_minutes": null,
+    "sample_count": null,
+    "verified_metrics_only": true
+  },
+  "portable_full": {
+    "enabled": false,
+    "layout_standard": "v1.5.11-class",
+    "runtime_strategy": "self_bootstrap_venv",
+    "package_runtime_dirs": false,
+    "windows_client": true,
+    "macos_client": false,
+    "lan_helpers": true,
+    "root_one_click_wrappers": true,
+    "version_archive": true,
+    "reference_materials_area": true,
+    "electronic_templates_area": true,
+    "copy_source_materials": false,
+    "no_python_claim_requires_verified_binary_or_portable_runtime": true,
+    "offline_install_claim_requires_local_dependencies": true
+  },
+  "relationships": [],
+  "business_model": {
+    "report": "BUSINESS_MODEL_REPORT.md",
+    "model_file": "business-model.json",
+    "structured_objects": 0,
+    "fields": 0,
+    "calculation_rules": 0,
+    "auto_executable_rules": 0,
+    "candidate_relationships": 0,
+    "model_confidence_score": null
+  },
+  "generation": {
+    "mode": "evidence_driven_dynamic",
+    "auto_generate_crud": true,
+    "auto_generate_search": true,
+    "auto_generate_import_export": true,
+    "auto_generate_rbac": true,
+    "auto_generate_audit": true,
+    "auto_execute_safe_formulas_only": true,
+    "candidate_unique_keys_require_confirmation": true,
+    "auto_generate_typed_forms": true,
+    "strict_type_validation": true,
+    "relationship_inference": "label_plus_value_overlap_v2",
+    "additive_schema_upgrade_supported": true
+  }
+}

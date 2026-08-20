@@ -1,0 +1,11 @@
+{
+  "owner": "grancy-zgs",
+  "slug": "software-copyright-doc-generator",
+  "displayName": "software-copyright",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775552889663,
+    "commit": "https://github.com/openclaw/skills/commit/53c543fcc26d8f28d0fad0761ddb660dab64fb4b"
+  },
+  "history": []
+}

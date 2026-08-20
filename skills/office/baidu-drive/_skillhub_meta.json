@@ -1,0 +1,21 @@
+{
+  "name": "百度网盘",
+  "installedAt": 1787227727581,
+  "source": "marketplace",
+  "version": "1.4.3",
+  "skillId": "skill_2053081382993469440",
+  "examples_zh": [
+    "帮我把这个文件上传到百度网盘",
+    "列一下我网盘里的文件",
+    "从百度网盘下载这个文件到本地"
+  ],
+  "examples_en": [
+    "Upload this file to my Baidu Drive",
+    "List files in my Baidu Netdisk",
+    "Download this file from Baidu Drive"
+  ],
+  "description_zh": "百度网盘文件管理，支持上传、下载、转存、分享、搜索等操作",
+  "description_en": "Manage Baidu Drive files: upload, download, transfer, share, search, and more",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/baidu-drive.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/baidu-drive.png"
+}

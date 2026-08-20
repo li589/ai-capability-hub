@@ -1,0 +1,10 @@
+{
+  "name": "职业性格测评",
+  "installedAt": 1787228313281,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2089643348855885824",
+  "description_zh": "结合MBTI等性格测评方法，分析用户的性格倾向、沟通方式、行为偏好与工作环境倾向。",
+  "description_en": "Use when users mention MBTI, career personality, personality tests, or personality traits to analyze tendencies and workplace behaviors.",
+  "iconSource": "letter:auto"
+}

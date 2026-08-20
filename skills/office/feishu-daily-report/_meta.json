@@ -1,0 +1,11 @@
+{
+  "owner": "freedompixels",
+  "slug": "feishu-daily-report",
+  "displayName": "飞书日报周报自动生成",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1776144738249,
+    "commit": "https://github.com/openclaw/skills/commit/b718e1bc059eefdcd9e8d0b7608ed5ff65b96451"
+  },
+  "history": []
+}

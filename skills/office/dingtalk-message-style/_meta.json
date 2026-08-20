@@ -1,0 +1,17 @@
+{
+  "owner": "zironglv",
+  "slug": "dingtalk-message-style",
+  "displayName": "钉钉消息样式",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1773887228509,
+    "commit": "https://github.com/openclaw/skills/commit/6676e45eaedd00fdc2b0159074921e1720a79cde"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773821934806,
+      "commit": "https://github.com/openclaw/skills/commit/bfe3eb44d9de5ea03204087c99d7544b5f8c0071"
+    }
+  ]
+}

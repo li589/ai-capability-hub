@@ -1,0 +1,11 @@
+{
+  "owner": "openlang-cn",
+  "slug": "gis",
+  "displayName": "Gis",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773393551304,
+    "commit": "https://github.com/openclaw/skills/commit/f699ddb0756f2f800ce14ff1433ade130aaf95af"
+  },
+  "history": []
+}

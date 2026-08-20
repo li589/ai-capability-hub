@@ -1,0 +1,11 @@
+{
+  "owner": "wus6008",
+  "slug": "finance-report-assistant",
+  "displayName": "Finance Report Assistant",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773563561715,
+    "commit": "https://github.com/openclaw/skills/commit/2bdb8fde4bf6f8ca2c934227d5745b5e5a16495e"
+  },
+  "history": []
+}

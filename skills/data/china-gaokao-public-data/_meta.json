@@ -1,0 +1,11 @@
+{
+  "owner": "tobewin",
+  "slug": "china-gaokao-public-data",
+  "displayName": "China Gaokao Public Data",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774018140824,
+    "commit": "https://github.com/openclaw/skills/commit/4899aab640265469cde850fa1568138013ac2f4c"
+  },
+  "history": []
+}

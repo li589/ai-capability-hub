@@ -1,0 +1,213 @@
+{
+ "_meta": {
+  "version": "7.0.0",
+  "updated_at": "2026-08-15",
+  "description": "全网舆情爬虫目标库 — 覆盖基金公司、上市公司、证券公司、银行、保险、信托、私募、外资机构等",
+  "categories_count": 11,
+  "auto_extend_from_registry": true
+ },
+ "fund_company": {
+  "label": "基金管理公司",
+  "count": 167,
+  "source_registry": "data/fund_company_list.json",
+  "default_keywords": [
+   "基金管理",
+   "净值",
+   "分红",
+   "募集",
+   "基金经理",
+   "ETF"
+  ],
+  "watch_keywords": [
+   "违规",
+   "处罚",
+   "清盘",
+   "延期",
+   "业绩下滑",
+   "巨额赎回"
+  ]
+ },
+ "listed_company": {
+  "label": "上市公司",
+  "count": 5000,
+  "source_registry": "data/stock_lists.csv",
+  "default_keywords": [
+   "年报",
+   "业绩",
+   "公告",
+   "增持",
+   "回购",
+   "并购",
+   "重组",
+   "中标",
+   "中标合同"
+  ],
+  "watch_keywords": [
+   "停牌",
+   "退市",
+   "处罚",
+   "诉讼",
+   "问询函",
+   "调查",
+   "ST",
+   "*ST",
+   "债务",
+   "违约",
+   "亏损"
+  ],
+  "stock_name_match": true,
+  "stock_code_match": true
+ },
+ "securities": {
+  "label": "证券公司",
+  "count": 132,
+  "source_registry": "data/securities_list.json",
+  "default_keywords": [
+   "券商研报",
+   "投行",
+   "并购重组",
+   "承销保荐",
+   "经纪业务"
+  ],
+  "watch_keywords": [
+   "处罚",
+   "立案",
+   "诉讼",
+   "处罚决定",
+   "暂停业务",
+   "评级下调"
+  ]
+ },
+ "commercial_bank": {
+  "label": "商业银行",
+  "count": 156,
+  "source_registry": "data/state_owned_bank_list.json + city_commercial_bank_list.json + joint_stock_bank_list.json",
+  "default_keywords": [
+   "存款利率",
+   "贷款",
+   "理财",
+   "普惠金融",
+   "数字化转型"
+  ],
+  "watch_keywords": [
+   "不良贷款",
+   "罚款",
+   "反洗钱",
+   "内控问题",
+   "挤兑",
+   "谣言"
+  ]
+ },
+ "insurance": {
+  "label": "保险公司",
+  "count": 181,
+  "source_registry": "data/insurance_list.json",
+  "default_keywords": [
+   "保费",
+   "理赔",
+   "新产品",
+   "投资型保险"
+  ],
+  "watch_keywords": [
+   "处罚",
+   "投诉",
+   "理赔纠纷",
+   "拒赔",
+   "销售误导"
+  ]
+ },
+ "trust_company": {
+  "label": "信托公司",
+  "count": 66,
+  "source_registry": "data/trust_company_list.json",
+  "default_keywords": [
+   "信托产品",
+   "信托规模",
+   "信托收益"
+  ],
+  "watch_keywords": [
+   "延期兑付",
+   "爆雷",
+   "风险项目",
+   "违规"
+  ]
+ },
+ "private_fund": {
+  "label": "私募基金管理公司",
+  "count": 64,
+  "source_registry": "data/private_fund_list.json",
+  "default_keywords": [
+   "策略",
+   "收益",
+   "净值"
+  ],
+  "watch_keywords": [
+   "清盘",
+   "爆雷",
+   "跑路",
+   "失联"
+  ]
+ },
+ "foreign_institution": {
+  "label": "外资金融机构",
+  "count": 60,
+  "source_registry": "data/foreign_institution_list.json + data/overseas_institutions.json",
+  "default_keywords": [
+   "QFII",
+   "外资",
+   "在华业务"
+  ],
+  "watch_keywords": [
+   "撤资",
+   "合规",
+   "调查"
+  ]
+ },
+ "futures": {
+  "label": "期货公司",
+  "count": 181,
+  "source_registry": "data/futures_list.json",
+  "default_keywords": [
+   "期货",
+   "风险管理子公司",
+   "场外衍生品"
+  ],
+  "watch_keywords": [
+   "穿仓",
+   "强平",
+   "处罚",
+   "违规"
+  ]
+ },
+ "wealth_management": {
+  "label": "银行理财子公司",
+  "count": 45,
+  "source_registry": "data/wealth_management_list.json",
+  "default_keywords": [
+   "理财产品",
+   "净值化",
+   "固收+"
+  ],
+  "watch_keywords": [
+   "破净",
+   "净值大幅回撤",
+   "投诉"
+  ]
+ },
+ "leasing_consumer_finance": {
+  "label": "金融租赁/消费金融/汽车金融",
+  "count": 94,
+  "source_registry": "data/financial_lease_list.json + data/consumer_finance_list.json + data/auto_finance_list.json",
+  "default_keywords": [
+   "租赁",
+   "消费金融",
+   "汽车贷款"
+  ],
+  "watch_keywords": [
+   "投诉",
+   "高利贷",
+   "暴力催收",
+   "违规"
+  ]
+ }
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "jfranklee",
+  "slug": "skillforge-meta",
+  "displayName": "SkillForge — Self-Evolving AI Skills",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774599807083,
+    "commit": "https://github.com/openclaw/skills/commit/45b59fa9292a0418e5ea12df10256b38eb6e9251"
+  },
+  "history": []
+}

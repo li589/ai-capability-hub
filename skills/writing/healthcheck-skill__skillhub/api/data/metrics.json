@@ -1,0 +1,11 @@
+{
+  "cpu_percent": 25.6,
+  "memory_percent": 67.3,
+  "io_wait_percent": 12.8,
+  "network_in_kbps": 1542.3,
+  "network_out_kbps": 847.8,
+  "connection_count": 34,
+  "ssh_fail_rate_percent": 0.8,
+  "load_1min": 3.5,
+  "load_5min": 2.8
+}

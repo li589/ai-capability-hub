@@ -1,0 +1,11 @@
+{
+  "owner": "shishugen",
+  "slug": "liblibai",
+  "displayName": "LiblibAI",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773371493791,
+    "commit": "https://github.com/openclaw/skills/commit/a878e62d3e8d6ad77d5703ba748b6553e3b6b73f"
+  },
+  "history": []
+}

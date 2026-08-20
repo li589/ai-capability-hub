@@ -1,0 +1,11 @@
+{
+  "owner": "mts-blake-lucas",
+  "slug": "outlook-365",
+  "displayName": "Outlook for Work/School 365",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772738483545,
+    "commit": "https://github.com/openclaw/skills/commit/e9291a16f174b02380d4546bbae91b1120cbf515"
+  },
+  "history": []
+}

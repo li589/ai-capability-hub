@@ -1,0 +1,11 @@
+{
+  "name": "Deepseek 联网搜索",
+  "installedAt": 1787227557535,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084461218683834368",
+  "description_zh": "一键调用 Deepseek AI 联网搜索，快速获取实时信息与结构化结果",
+  "description_en": "AI-powered web search via Deepseek for real-time information retrieval",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_077811a4-b53.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_077811a4-b53.svg"
+}

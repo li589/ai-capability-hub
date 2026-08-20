@@ -1,0 +1,46 @@
+{
+  "type": "manual_token",
+  "auth_policy": "ON_INVOKE",
+  "interface": {
+    "title": "快查企业数据 MCP 配置",
+    "description": "请输入从快查数据平台获取的 API Key。凭证仅保存在您的本机，由客户端在连接快查 MCP 时注入请求头；云端不存储、不接收该凭证。",
+    "fields": [
+      {
+        "key": "ACCESS_TOKEN",
+        "label": "快查 API Key",
+        "type": "password",
+        "required": true,
+        "placeholder": "请粘贴从快查数据平台获取的 API Key",
+        "docUrl": "https://open.kuaicha365.com/mcp/",
+        "docLabel": "获取快查 API Key"
+      }
+    ]
+  },
+  "i18n": {
+    "title": {
+      "en": "Kuaicha Enterprise Data MCP Configuration",
+      "zh-cn": "快查企业数据 MCP 配置",
+      "ja": "快查企業データ MCP 設定"
+    },
+    "description": {
+      "en": "Enter the API Key obtained from the Kuaicha data platform. The credential is stored only on your device and injected into the request header when the client connects to the Kuaicha MCP; the cloud does not store or receive it.",
+      "zh-cn": "请输入从快查数据平台获取的 API Key。凭证仅保存在您的本机，由客户端在连接快查 MCP 时注入请求头；云端不存储、不接收该凭证。",
+      "ja": "快查データプラットフォームから取得した API キーを入力してください。資格情報はお使いの端末にのみ保存され、クライアントが快查 MCP に接続する際にリクエストヘッダーへ注入されます。クラウドには保存・送信されません。"
+    },
+    "fields.ACCESS_TOKEN.label": {
+      "en": "Kuaicha API Key",
+      "zh-cn": "快查 API Key",
+      "ja": "快查 API キー"
+    },
+    "fields.ACCESS_TOKEN.placeholder": {
+      "en": "Paste the API Key obtained from the Kuaicha data platform",
+      "zh-cn": "请粘贴从快查数据平台获取的 API Key",
+      "ja": "快查データプラットフォームから取得した API キーを貼り付けてください"
+    },
+    "fields.ACCESS_TOKEN.docLabel": {
+      "en": "Get a Kuaicha API Key",
+      "zh-cn": "获取快查 API Key",
+      "ja": "快查 API キーの取得"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@echo off
+cd /d "%~dp0"
+rem Only stop this project instance via its runtime PID/state and shutdown token; never taskkill python.exe globally.
+python stop_server.py
+pause

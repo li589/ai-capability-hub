@@ -1,0 +1,11 @@
+{
+  "name": "销售漏斗分析",
+  "installedAt": 1787228571926,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088538353993449472",
+  "description_zh": "汇总lead、customer、opportunity和order，按负责人、国家、产品、来源或时间形成数量漏斗。适用于用户要求销售漏斗分析、生成相关结果或检查执行边界时。",
+  "description_en": "Sales Funnel Analysis workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_971a179e-b0b.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_971a179e-b0b.png"
+}

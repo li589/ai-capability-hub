@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:brooks-lint",
+  "registry": "trae-remote-official",
+  "plugin_name": "brooks-lint",
+  "version": "1.3.0",
+  "marketplace_plugin_id": "7dcde2e2-c507-4284-8773-85659accae96",
+  "remote_installed_plugin_id": "7BEIY8C3N1.F_5",
+  "checksum": "a73d3f410a0f7f132251c98a1c645af65653517da7a1ef1367a4be4087a18199",
+  "file_size": 76707,
+  "installed_at": 1787227203372
+}

@@ -1,0 +1,87 @@
+{
+  "skill_name": "skill-vetter-pro",
+  "skill_path": "/home/strong/.openclaw/workspace/skills/skill-vetter-pro",
+  "overall_hash": "5355426800d64bd71cc0232dd61ebd62974166f18c5f1bbc39e87520a8c92ffd",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "a7ba9c29c6fa3e11f07d1b6b94fad28a8e88baf85c822e50866ed701da000287",
+      "size": 1103,
+      "mtime": 1779338656.6737807
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "58a7304dd7b6666d4bf9d2462e4a6f2af06f33f9d78b7aa8008b886563bdf00d",
+      "size": 7958,
+      "mtime": 1779338633.3116996
+    },
+    {
+      "path": "_meta.json",
+      "sha256": "f8c8b3068041b821e7e9586e5fe0aa1440fd694b28421f0ba3d850f8f95d593d",
+      "size": 305,
+      "mtime": 1779338649.2005954
+    },
+    {
+      "path": "records/vetting-log.md",
+      "sha256": "cdd73da139c2913db172858a41f6c925e5740d23bc56d29255e89f48b677bf79",
+      "size": 793,
+      "mtime": 1779338645.061928
+    },
+    {
+      "path": "scripts/dependency_cve_checker.py",
+      "sha256": "3d6f6060ebf07923222c229ebd539c40e752a3c68258fea6b99beee5fb3827bc",
+      "size": 13162,
+      "mtime": 1779338640.3005548
+    },
+    {
+      "path": "scripts/scanner_self_test.py",
+      "sha256": "04e3eb699f6ebda9225aeffad93ae61281ec1f44261a2b1d82fe39733b5ea016",
+      "size": 15356,
+      "mtime": 1779338640.3017793
+    },
+    {
+      "path": "scripts/skill_behavior_monitor.py",
+      "sha256": "05a6a904d4cad5e854147d52cb2b8484774dc6c8389a3461c0758c4a29731a52",
+      "size": 18991,
+      "mtime": 1779338640.302547
+    },
+    {
+      "path": "scripts/skill_checker.py",
+      "sha256": "7ce795a169100bc4eb2fb6d92c071de8b440b6bc6f7ab79c46a9114c4bae80c4",
+      "size": 5113,
+      "mtime": 1779338640.3039324
+    },
+    {
+      "path": "scripts/skill_integrity_checker.py",
+      "sha256": "b66b6dae71905f63a958180f7a153e1d7c6fc7904ace114e062e8524704c04c0",
+      "size": 8791,
+      "mtime": 1779338640.2985468
+    },
+    {
+      "path": "scripts/skill_vet.py",
+      "sha256": "34c3afd022863e488fb1ef74a546a69259cac485071955c788303bf15e4a4d71",
+      "size": 25122,
+      "mtime": 1779338640.2973337
+    },
+    {
+      "path": "policy/default-policy.md",
+      "sha256": "15b55d50e4352def10353b98944dc0b707ec811be23e069588ee5452d0fbe29a",
+      "size": 2223,
+      "mtime": 1779338645.0632432
+    },
+    {
+      "path": "references/checklist.md",
+      "sha256": "a555593d1c41b62cafe48c618afabc7b22ae27014b90fe3c2bb0591def3b6b1d",
+      "size": 3766,
+      "mtime": 1779338645.0594456
+    },
+    {
+      "path": "references/vetting_report_template.md",
+      "sha256": "436e25e519dcb27f94f3fcdb37db6553d7bc37c72dacf034517b3b0e55dc2dfb",
+      "size": 2572,
+      "mtime": 1779338645.0606558
+    }
+  ],
+  "file_count": 13,
+  "timestamp": "2026-05-21T12:44:53.030434"
+}

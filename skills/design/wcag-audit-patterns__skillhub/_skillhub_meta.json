@@ -1,0 +1,10 @@
+{
+  "slug": "wcag-audit-patterns",
+  "name": "wcag-audit-patterns",
+  "version": "1.0.0",
+  "installedAt": 1787228998455,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

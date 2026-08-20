@@ -1,0 +1,11 @@
+{
+  "owner": "nox-admin",
+  "slug": "nox-grill-me",
+  "displayName": "Grill Me",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774011116694,
+    "commit": "https://github.com/openclaw/skills/commit/ea94109e75770644a90bbd8249518b0f3f4eba5b"
+  },
+  "history": []
+}

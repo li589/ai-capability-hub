@@ -1,0 +1,2 @@
+Skill: beisen-data-query
+Release Time: 2026-08-17 11:31:55 +0800

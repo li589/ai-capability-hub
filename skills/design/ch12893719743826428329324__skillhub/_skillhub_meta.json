@@ -1,0 +1,12 @@
+{
+  "slug": "ch12893719743826428329324",
+  "name": "调用中转API生图（GPT-image2与Nano-Banana）",
+  "version": "4.0.0",
+  "installedAt": 1787228813013,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/f7fabcfa-0496-4dc7-9258-df9b7c751850.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/f7fabcfa-0496-4dc7-9258-df9b7c751850.png"
+}

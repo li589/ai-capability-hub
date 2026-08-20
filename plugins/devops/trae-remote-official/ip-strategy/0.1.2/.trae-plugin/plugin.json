@@ -1,0 +1,37 @@
+{
+  "name": "ip-strategy",
+  "version": "0.1.2",
+  "description": "知识产权策略与文书撰写助手，覆盖著作权、专利、商标、商业秘密与域名争议",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "ip-strategy",
+    "internal",
+    "skills",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "知识产权",
+    "shortDescription": "知识产权策略与文书撰写助手，覆盖著作权、专利、商标、商业秘密与域名争议",
+    "longDescription": "知识产权策略与文书撰写助手，覆盖著作权、专利、商标、商业秘密与域名争议",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use ip-strategy to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

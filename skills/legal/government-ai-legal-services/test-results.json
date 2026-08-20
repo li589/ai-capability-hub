@@ -1,0 +1,581 @@
+{
+  "packageInfo": {
+    "name": "政府AI法律服务技能包",
+    "version": "1.0.0",
+    "description": "为AI政府法律服务全球标准v1.1提供完整的AI服务支持",
+    "standard": "AI政府法律服务全球标准 v1.1",
+    "skills": [
+      "policyInterpreter"
+    ],
+    "developer": "阿拉丁",
+    "guidance": "张海洋"
+  },
+  "summary": "关于推进乡村振兴的政策\n为全面推进乡村振兴，促进农业农村现代化，现制定如下政策：\n\n一、政策目标\n目标：到2026年底，实现乡村振兴全覆盖，提升农民收入20%。\n目的：让农民过上更加美好的生活。\n旨在：建设美丽乡村，实现农业农村现代化。\n\n二、主要措施\n措施一：加强基础设施建设\n措施二：发展特色产业\n措施三：培育新型农业经营主体\n措施四：推进乡村治理现代化\n\n三、保障措施\n保障：设立乡村振兴专项资金\n支持：提供政策优惠和税收减免\n扶持：加强人才培养和技术服务\n补贴：对重点项目给予财政补贴\n奖励：对先进地区和个人给予表彰奖励\n\n四、责任主体\n由农业农村部负责，各级人民政府组织实施，乡镇人民政府落实具体措施。",
+  "impact": {
+    "economic": {
+      "level": "重大影响",
+      "score": 7,
+      "description": "政策将对经济发展产生重大影响"
+    },
+    "social": {
+      "level": "轻微影响",
+      "score": 0,
+      "description": "政策对社会民生影响较小"
+    },
+    "legal": {
+      "level": "轻微影响",
+      "score": 0,
+      "description": "政策法律影响较小"
+    },
+    "environmental": {
+      "level": "轻微影响",
+      "score": 0,
+      "description": "政策对环境影响较小"
+    },
+    "overall": {
+      "score": 1.75,
+      "level": "轻微影响"
+    }
+  },
+  "guidance": {
+    "steps": [
+      "政策宣传解读",
+      "制定实施方案",
+      "组织实施",
+      "监督检查",
+      "总结评估"
+    ],
+    "timeline": "2-4个月",
+    "requirements": [
+      "符合法律法规",
+      "保障实施条件",
+      "明确责任分工"
+    ],
+    "resources": [
+      "政策文件",
+      "实施方案",
+      "培训材料",
+      "监督机制"
+    ],
+    "risks": [
+      {
+        "type": "政策理解偏差风险",
+        "description": "基层对政策理解可能存在偏差",
+        "mitigation": "加强政策解读培训"
+      },
+      {
+        "type": "资源不足风险",
+        "description": "基层资源可能不足",
+        "mitigation": "争取上级支持"
+      },
+      {
+        "type": "执行不力风险",
+        "description": "政策执行可能不到位",
+        "mitigation": "建立监督机制"
+      }
+    ],
+    "monitoring": [
+      {
+        "type": "进度监控",
+        "description": "定期检查实施进度",
+        "frequency": "每月"
+      },
+      {
+        "type": "效果评估",
+        "description": "评估政策实施效果",
+        "frequency": "每季度"
+      },
+      {
+        "type": "问题反馈",
+        "description": "收集实施过程中的问题",
+        "frequency": "随时"
+      },
+      {
+        "type": "总结改进",
+        "description": "总结经验，改进措施",
+        "frequency": "每年"
+      }
+    ]
+  },
+  "applicability": {
+    "applicable": true,
+    "reasons": [],
+    "conditions": []
+  },
+  "compliance": {
+    "compliant": true,
+    "issues": [],
+    "warnings": []
+  },
+  "analysis": {
+    "policy": {
+      "name": "关于推进乡村振兴的政策",
+      "issuingAuthority": "国务院",
+      "publishDate": "2026-03-28",
+      "effectiveDate": "2026-04-01",
+      "expiryDate": null,
+      "content": "关于推进乡村振兴的政策\n为全面推进乡村振兴，促进农业农村现代化，现制定如下政策：\n\n一、政策目标\n目标：到2026年底，实现乡村振兴全覆盖，提升农民收入20%。\n目的：让农民过上更加美好的生活。\n旨在：建设美丽乡村，实现农业农村现代化。\n\n二、主要措施\n措施一：加强基础设施建设\n措施二：发展特色产业\n措施三：培育新型农业经营主体\n措施四：推进乡村治理现代化\n\n三、保障措施\n保障：设立乡村振兴专项资金\n支持：提供政策优惠和税收减免\n扶持：加强人才培养和技术服务\n补贴：对重点项目给予财政补贴\n奖励：对先进地区和个人给予表彰奖励\n\n四、责任主体\n由农业农村部负责，各级人民政府组织实施，乡镇人民政府落实具体措施。"
+    },
+    "keyPoints": [
+      {
+        "type": "goals",
+        "title": "政策目标",
+        "points": [
+          "到2026年底，实现乡村振兴全覆盖，提升农民收入20%",
+          "建设美丽乡村，实现农业农村现代化",
+          "让农民过上更加美好的生活"
+        ]
+      },
+      {
+        "type": "guarantees",
+        "title": "保障措施",
+        "points": [
+          "设立乡村振兴专项资金",
+          "提供政策优惠和税收减免",
+          "加强人才培养和技术服务",
+          "对重点项目给予财政补贴",
+          "对先进地区和个人给予表彰奖励"
+        ]
+      },
+      {
+        "type": "responsibilities",
+        "title": "责任主体",
+        "points": [
+          "农业农村部",
+          "二、主要措施\n措施一：加强基础设施建设\n措施二：发展特色产业\n措施三：培育新型农业经营主体\n措施四：推进乡村治理现代化\n\n三、保障措施\n保障：设立乡村振兴专项资金\n支持：提供政策优惠和税收减免\n扶持：加强人才培养和技术服务\n补贴：对重点项目给予财政补贴\n奖励：对先进地区和个人给予表彰奖励\n\n四、责任主体\n由农业农村部负责，各级人民政府"
+        ]
+      }
+    ],
+    "summary": "关于推进乡村振兴的政策\n为全面推进乡村振兴，促进农业农村现代化，现制定如下政策：\n\n一、政策目标\n目标：到2026年底，实现乡村振兴全覆盖，提升农民收入20%。\n目的：让农民过上更加美好的生活。\n旨在：建设美丽乡村，实现农业农村现代化。\n\n二、主要措施\n措施一：加强基础设施建设\n措施二：发展特色产业\n措施三：培育新型农业经营主体\n措施四：推进乡村治理现代化\n\n三、保障措施\n保障：设立乡村振兴专项资金\n支持：提供政策优惠和税收减免\n扶持：加强人才培养和技术服务\n补贴：对重点项目给予财政补贴\n奖励：对先进地区和个人给予表彰奖励\n\n四、责任主体\n由农业农村部负责，各级人民政府组织实施，乡镇人民政府落实具体措施。",
+    "scope": [
+      "未明确"
+    ],
+    "validity": {
+      "effectiveDate": "2026-04-01",
+      "expiryDate": "长期有效",
+      "status": "尚未生效",
+      "daysValid": null
+    },
+    "authority": {
+      "authority": "国务院",
+      "level": "国家级"
+    },
+    "relatedLaws": [],
+    "relatedPolicies": [
+      {
+        "title": "关于关于推进乡村振兴的政策的通知",
+        "authority": "同级部门",
+        "date": "近期"
+      },
+      {
+        "title": "为全面推进乡村振兴实施办法",
+        "authority": "上级部门",
+        "date": "近期"
+      }
+    ],
+    "interpretation": {},
+    "impact": {
+      "economic": {
+        "level": "重大影响",
+        "score": 7,
+        "description": "政策将对经济发展产生重大影响"
+      },
+      "social": {
+        "level": "轻微影响",
+        "score": 0,
+        "description": "政策对社会民生影响较小"
+      },
+      "legal": {
+        "level": "轻微影响",
+        "score": 0,
+        "description": "政策法律影响较小"
+      },
+      "environmental": {
+        "level": "轻微影响",
+        "score": 0,
+        "description": "政策对环境影响较小"
+      },
+      "overall": {
+        "score": 1.75,
+        "level": "轻微影响"
+      }
+    },
+    "guidance": {
+      "steps": [
+        "政策宣传解读",
+        "制定实施方案",
+        "组织实施",
+        "监督检查",
+        "总结评估"
+      ],
+      "timeline": "2-4个月",
+      "requirements": [
+        "符合法律法规",
+        "保障实施条件",
+        "明确责任分工"
+      ],
+      "resources": [
+        "政策文件",
+        "实施方案",
+        "培训材料",
+        "监督机制"
+      ],
+      "risks": [
+        {
+          "type": "政策理解偏差风险",
+          "description": "基层对政策理解可能存在偏差",
+          "mitigation": "加强政策解读培训"
+        },
+        {
+          "type": "资源不足风险",
+          "description": "基层资源可能不足",
+          "mitigation": "争取上级支持"
+        },
+        {
+          "type": "执行不力风险",
+          "description": "政策执行可能不到位",
+          "mitigation": "建立监督机制"
+        }
+      ],
+      "monitoring": [
+        {
+          "type": "进度监控",
+          "description": "定期检查实施进度",
+          "frequency": "每月"
+        },
+        {
+          "type": "效果评估",
+          "description": "评估政策实施效果",
+          "frequency": "每季度"
+        },
+        {
+          "type": "问题反馈",
+          "description": "收集实施过程中的问题",
+          "frequency": "随时"
+        },
+        {
+          "type": "总结改进",
+          "description": "总结经验，改进措施",
+          "frequency": "每年"
+        }
+      ]
+    },
+    "applicability": {
+      "applicable": true,
+      "reasons": [],
+      "conditions": []
+    },
+    "compliance": {
+      "compliant": true,
+      "issues": [],
+      "warnings": []
+    }
+  },
+  "batchResults": [
+    {
+      "policy": "政策1：关于推进乡村振兴的政策",
+      "analysis": {
+        "policy": {
+          "name": "政策1：关于推进乡村振兴的政策",
+          "issuingAuthority": "国务院",
+          "publishDate": "2026-03-28",
+          "effectiveDate": "2026-04-01",
+          "expiryDate": null,
+          "content": "关于推进乡村振兴的政策\n为全面推进乡村振兴，促进农业农村现代化，现制定如下政策：\n\n一、政策目标\n目标：到2026年底，实现乡村振兴全覆盖，提升农民收入20%。\n目的：让农民过上更加美好的生活。\n旨在：建设美丽乡村，实现农业农村现代化。\n\n二、主要措施\n措施一：加强基础设施建设\n措施二：发展特色产业\n措施三：培育新型农业经营主体\n措施四：推进乡村治理现代化\n\n三、保障措施\n保障：设立乡村振兴专项资金\n支持：提供政策优惠和税收减免\n扶持：加强人才培养和技术服务\n补贴：对重点项目给予财政补贴\n奖励：对先进地区和个人给予表彰奖励\n\n四、责任主体\n由农业农村部负责，各级人民政府组织实施，乡镇人民政府落实具体措施。"
+        },
+        "keyPoints": [
+          {
+            "type": "goals",
+            "title": "政策目标",
+            "points": [
+              "到2026年底，实现乡村振兴全覆盖，提升农民收入20%",
+              "建设美丽乡村，实现农业农村现代化",
+              "让农民过上更加美好的生活"
+            ]
+          },
+          {
+            "type": "guarantees",
+            "title": "保障措施",
+            "points": [
+              "设立乡村振兴专项资金",
+              "提供政策优惠和税收减免",
+              "加强人才培养和技术服务",
+              "对重点项目给予财政补贴",
+              "对先进地区和个人给予表彰奖励"
+            ]
+          },
+          {
+            "type": "responsibilities",
+            "title": "责任主体",
+            "points": [
+              "农业农村部",
+              "二、主要措施\n措施一：加强基础设施建设\n措施二：发展特色产业\n措施三：培育新型农业经营主体\n措施四：推进乡村治理现代化\n\n三、保障措施\n保障：设立乡村振兴专项资金\n支持：提供政策优惠和税收减免\n扶持：加强人才培养和技术服务\n补贴：对重点项目给予财政补贴\n奖励：对先进地区和个人给予表彰奖励\n\n四、责任主体\n由农业农村部负责，各级人民政府"
+            ]
+          }
+        ],
+        "summary": "关于推进乡村振兴的政策\n为全面推进乡村振兴，促进农业农村现代化，现制定如下政策：\n\n一、政策目标\n目标：到2026年底，实现乡村振兴全覆盖，提升农民收入20%。\n目的：让农民过上更加美好的生活。\n旨在：建设美丽乡村，实现农业农村现代化。\n\n二、主要措施\n措施一：加强基础设施建设\n措施二：发展特色产业\n措施三：培育新型农业经营主体\n措施四：推进乡村治理现代化\n\n三、保障措施\n保障：设立乡村振兴专项资金\n支持：提供政策优惠和税收减免\n扶持：加强人才培养和技术服务\n补贴：对重点项目给予财政补贴\n奖励：对先进地区和个人给予表彰奖励\n\n四、责任主体\n由农业农村部负责，各级人民政府组织实施，乡镇人民政府落实具体措施。",
+        "scope": [
+          "未明确"
+        ],
+        "validity": {
+          "effectiveDate": "2026-04-01",
+          "expiryDate": "长期有效",
+          "status": "尚未生效",
+          "daysValid": null
+        },
+        "authority": {
+          "authority": "国务院",
+          "level": "国家级"
+        },
+        "relatedLaws": [],
+        "relatedPolicies": [
+          {
+            "title": "关于关于推进乡村振兴的政策的通知",
+            "authority": "同级部门",
+            "date": "近期"
+          },
+          {
+            "title": "为全面推进乡村振兴实施办法",
+            "authority": "上级部门",
+            "date": "近期"
+          }
+        ],
+        "interpretation": {},
+        "impact": {
+          "economic": {
+            "level": "重大影响",
+            "score": 7,
+            "description": "政策将对经济发展产生重大影响"
+          },
+          "social": {
+            "level": "轻微影响",
+            "score": 0,
+            "description": "政策对社会民生影响较小"
+          },
+          "legal": {
+            "level": "轻微影响",
+            "score": 0,
+            "description": "政策法律影响较小"
+          },
+          "environmental": {
+            "level": "轻微影响",
+            "score": 0,
+            "description": "政策对环境影响较小"
+          },
+          "overall": {
+            "score": 1.75,
+            "level": "轻微影响"
+          }
+        },
+        "guidance": {
+          "steps": [
+            "政策宣传解读",
+            "制定实施方案",
+            "组织实施",
+            "监督检查",
+            "总结评估"
+          ],
+          "timeline": "6-12个月",
+          "requirements": [
+            "符合法律法规",
+            "保障实施条件",
+            "明确责任分工"
+          ],
+          "resources": [
+            "政策文件",
+            "实施方案",
+            "培训材料",
+            "监督机制"
+          ],
+          "risks": [
+            {
+              "type": "政策理解偏差风险",
+              "description": "基层对政策理解可能存在偏差",
+              "mitigation": "加强政策解读培训"
+            },
+            {
+              "type": "资源不足风险",
+              "description": "基层资源可能不足",
+              "mitigation": "争取上级支持"
+            },
+            {
+              "type": "执行不力风险",
+              "description": "政策执行可能不到位",
+              "mitigation": "建立监督机制"
+            }
+          ],
+          "monitoring": [
+            {
+              "type": "进度监控",
+              "description": "定期检查实施进度",
+              "frequency": "每月"
+            },
+            {
+              "type": "效果评估",
+              "description": "评估政策实施效果",
+              "frequency": "每季度"
+            },
+            {
+              "type": "问题反馈",
+              "description": "收集实施过程中的问题",
+              "frequency": "随时"
+            },
+            {
+              "type": "总结改进",
+              "description": "总结经验，改进措施",
+              "frequency": "每年"
+            }
+          ]
+        },
+        "applicability": {
+          "applicable": true,
+          "reasons": [],
+          "conditions": []
+        },
+        "compliance": {
+          "compliant": true,
+          "issues": [],
+          "warnings": []
+        }
+      }
+    },
+    {
+      "policy": "政策2：关于加强环境保护的政策",
+      "analysis": {
+        "policy": {
+          "name": "政策2：关于加强环境保护的政策",
+          "issuingAuthority": "环境保护部",
+          "publishDate": "2026-03-28",
+          "effectiveDate": "2026-04-01",
+          "expiryDate": "2027-03-31",
+          "content": "为加强环境保护，促进绿色发展，现制定如下政策..."
+        },
+        "keyPoints": [],
+        "summary": "",
+        "scope": [
+          "未明确"
+        ],
+        "validity": {
+          "effectiveDate": "2026-04-01",
+          "expiryDate": "2027-03-31",
+          "status": "尚未生效",
+          "daysValid": 364
+        },
+        "authority": {
+          "authority": "环境保护部",
+          "level": "未知"
+        },
+        "relatedLaws": [],
+        "relatedPolicies": [
+          {
+            "title": "关于为加强环境保护的通知",
+            "authority": "同级部门",
+            "date": "近期"
+          },
+          {
+            "title": "促进绿色发展实施办法",
+            "authority": "上级部门",
+            "date": "近期"
+          }
+        ],
+        "interpretation": {},
+        "impact": {
+          "economic": {
+            "level": "轻微影响",
+            "score": 0,
+            "description": "政策对经济发展影响较小"
+          },
+          "social": {
+            "level": "轻微影响",
+            "score": 0,
+            "description": "政策对社会民生影响较小"
+          },
+          "legal": {
+            "level": "轻微影响",
+            "score": 0,
+            "description": "政策法律影响较小"
+          },
+          "environmental": {
+            "level": "轻微影响",
+            "score": 2,
+            "description": "政策对环境影响较小"
+          },
+          "overall": {
+            "score": 0.5,
+            "level": "轻微影响"
+          }
+        },
+        "guidance": {
+          "steps": [
+            "政策宣传解读",
+            "制定实施方案",
+            "组织实施",
+            "监督检查",
+            "总结评估"
+          ],
+          "timeline": "6-12个月",
+          "requirements": [
+            "符合法律法规",
+            "保障实施条件",
+            "明确责任分工"
+          ],
+          "resources": [
+            "政策文件",
+            "实施方案",
+            "培训材料",
+            "监督机制"
+          ],
+          "risks": [
+            {
+              "type": "政策理解偏差风险",
+              "description": "基层对政策理解可能存在偏差",
+              "mitigation": "加强政策解读培训"
+            },
+            {
+              "type": "资源不足风险",
+              "description": "基层资源可能不足",
+              "mitigation": "争取上级支持"
+            },
+            {
+              "type": "执行不力风险",
+              "description": "政策执行可能不到位",
+              "mitigation": "建立监督机制"
+            }
+          ],
+          "monitoring": [
+            {
+              "type": "进度监控",
+              "description": "定期检查实施进度",
+              "frequency": "每月"
+            },
+            {
+              "type": "效果评估",
+              "description": "评估政策实施效果",
+              "frequency": "每季度"
+            },
+            {
+              "type": "问题反馈",
+              "description": "收集实施过程中的问题",
+              "frequency": "随时"
+            },
+            {
+              "type": "总结改进",
+              "description": "总结经验，改进措施",
+              "frequency": "每年"
+            }
+          ]
+        },
+        "applicability": {
+          "applicable": true,
+          "reasons": [],
+          "conditions": []
+        },
+        "compliance": {
+          "compliant": true,
+          "issues": [],
+          "warnings": []
+        }
+      }
+    }
+  ]
+}

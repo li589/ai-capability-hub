@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>主题色测试报告</title>
+  <style>
+    :root {
+      --ink: #252525;
+      --muted: #666;
+      --paper: #fff;
+      --bg: #eeeeee;
+      --accent: #17227d;
+      --accent-2: #4267a5;
+      --accent-3: #8b5e34;
+      --table-head: var(--accent);
+      --rule: #b7bce8;
+      --line: #d8d8d8;
+      --soft: #f5f5f7;
+      --callout-bg: #f6f7fc;
+      --chart-1: #17227d;
+      --chart-2: #4f78b6;
+      --chart-3: #7a9cc6;
+      --chart-4: #9b6b43;
+      --chart-5: #6f7d3c;
+      --chart-6: #7b6f8f;
+      --blue: var(--accent);
+      --page-w: 210mm;
+      --page-h: 297mm;
+      --page-pad-top: 23mm;
+      --page-pad-x: 24mm;
+      --page-pad-bottom: 20mm;
+    }
+
+    body[data-theme="life-science"] {
+      --accent: #0072b2;
+      --accent-2: #009e73;
+      --accent-3: #e69f00;
+      --table-head: #00669f;
+      --rule: #b7d7d0;
+      --soft: #f3f8f6;
+      --callout-bg: #f1f8f5;
+      --chart-1: #0072b2;
+      --chart-2: #009e73;
+      --chart-3: #e69f00;
+      --chart-4: #cc79a7;
+      --chart-5: #56b4e9;
+      --chart-6: #d55e00;
+    }
+
+    body[data-theme="earth-science"] {
+      --accent: #244f5f;
+      --accent-2: #4f7f6f;
+      --accent-3: #b48a2c;
+      --table-head: #244f5f;
+      --rule: #b8c9c7;
+      --soft: #f3f6f2;
+      --callout-bg: #f2f6f4;
+      --chart-1: #244f5f;
+      --chart-2: #4f7f6f;
+      --chart-3: #8aa07a;
+      --chart-4: #c2a35a;
+      --chart-5: #7c6b5a;
+      --chart-6: #5f6f8f;
+    }
+
+    body[data-theme="clinical"] {
+      --accent: #245a7a;
+      --accent-2: #4f7f9f;
+      --accent-3: #b04a4a;
+      --table-head: #245a7a;
+      --rule: #b7cad5;
+      --soft: #f3f7f9;
+      --callout-bg: #f2f7fa;
+      --chart-1: #245a7a;
+      --chart-2: #6f9fbd;
+      --chart-3: #94b8c9;
+      --chart-4: #b04a4a;
+      --chart-5: #d28b7c;
+      --chart-6: #7c6f9f;
+    }
+
+    body[data-theme="social-policy"] {
+      --accent: #2f4b7c;
+      --accent-2: #4b7a9f;
+      --accent-3: #a64b4b;
+      --table-head: #2f4b7c;
+      --rule: #bac7d8;
+      --soft: #f5f7fa;
+      --callout-bg: #f4f7fb;
+      --chart-1: #2f4b7c;
+      --chart-2: #6c8fb3;
+      --chart-3: #b7c7d8;
+      --chart-4: #c9b16d;
+      --chart-5: #a64b4b;
+      --chart-6: #7f6a93;
+    }
+
+    body[data-theme="engineering"] {
+      --accent: #264653;
+      --accent-2: #2a9d8f;
+      --accent-3: #e9c46a;
+      --table-head: #264653;
+      --rule: #b8c9c8;
+      --soft: #f3f7f7;
+      --callout-bg: #f2f8f7;
+      --chart-1: #264653;
+      --chart-2: #2a9d8f;
+      --chart-3: #3a86a8;
+      --chart-4: #83b97f;
+      --chart-5: #e9c46a;
+      --chart-6: #b56576;
+    }
+
+    body[data-theme="humanities"] {
+      --accent: #4a2f35;
+      --accent-2: #7a5c4f;
+      --accent-3: #9a5b45;
+      --table-head: #4a2f35;
+      --rule: #d0c0b7;
+      --soft: #f8f6f4;
+      --callout-bg: #f8f5f2;
+      --chart-1: #4a2f35;
+      --chart-2: #7a5c4f;
+      --chart-3: #9a5b45;
+      --chart-4: #5f6f52;
+      --chart-5: #6d7188;
+      --chart-6: #b08a5a;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Noto Serif SC", "Source Han Serif SC", "Songti SC", "SimSun", Georgia, serif;
+      font-size: 10.5pt;
+      line-height: 1.72;
+    }
+    body { padding: 14px 0 18px; overflow-x: hidden; }
+    #source {
+      position: fixed;
+      left: -99999px;
+      top: 0;
+      width: calc(var(--page-w) - var(--page-pad-x) * 2);
+      visibility: hidden;
+      pointer-events: none;
+    }
+    #pages { counter-reset: source-item; }
+    .page-frame { width: var(--page-w); height: var(--page-h); margin: 0 auto 14px; }
+    .page {
+      width: var(--page-w);
+      height: var(--page-h);
+      margin: 0;
+      padding: var(--page-pad-top) var(--page-pad-x) var(--page-pad-bottom);
+      background: var(--paper);
+      border: 1px solid #dedede;
+      box-shadow: 0 1px 1px rgba(0,0,0,.05), 0 10px 34px rgba(0,0,0,.14);
+      position: relative;
+      overflow: hidden;
+      transform: scale(var(--page-scale, 1));
+      transform-origin: top left;
+    }
+    .page-content { height: 100%; overflow: hidden; }
+    .folio {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 9mm;
+      color: #888;
+      font-size: 9pt;
+      text-align: center;
+    }
+    h1, h2, h3 {
+      color: var(--blue);
+      line-height: 1.28;
+      margin: 0;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+    h1 { font-size: 21pt; padding-left: 12pt; border-left: 4px solid var(--blue); margin-bottom: 7mm; }
+    h2 { font-size: 16pt; padding-bottom: 4pt; border-bottom: 1px solid var(--rule); margin: 9mm 0 6mm; }
+    h3 { font-size: 12.5pt; margin: 7mm 0 3mm; }
+    .page-content > .flow-block:first-child h2,
+    .page-content > .flow-block:first-child h3 { margin-top: 0; }
+    p { margin: 0 0 4.5mm; text-align: justify; text-justify: inter-ideograph; }
+    ul, ol { margin: 2mm 0 5mm 0; padding-left: 16pt; }
+    li { margin: 0 0 2.5mm; }
+    table { width: 100%; border-collapse: collapse; margin: 4mm 0 5mm; font-size: 9.3pt; line-height: 1.55; }
+    th { background: var(--table-head); color: #fff; text-align: left; font-weight: 700; padding: 3.1mm 2.6mm; }
+    td { padding: 2.8mm 2.6mm; vertical-align: top; border-bottom: 1px solid #e7e7e7; }
+    tbody tr:nth-child(even) td { background: var(--soft); }
+    tbody tr:last-child td { border-bottom: 1.4px solid #303030; }
+    .title-rule { border: 0; border-top: 1px solid var(--line); margin: 0 0 8mm; }
+    .subtitle { color: var(--blue); font-size: 18pt; font-weight: 700; line-height: 1.35; border-bottom: 1px solid var(--rule); padding-bottom: 5pt; margin: 0 0 4mm; }
+    .meta { font-size: 10pt; color: #444; margin-bottom: 12mm; }
+    .lead { font-size: 11.2pt; line-height: 1.78; }
+    .callout { border-left: 3px solid var(--blue); background: var(--callout-bg); padding: 4mm 5mm; margin: 5mm 0; }
+    .caption { color: var(--muted); font-size: 8.8pt; margin-top: -2mm; margin-bottom: 5mm; }
+    .small { font-size: 9.2pt; color: var(--muted); }
+    .source-item { counter-increment: source-item; color: #444; font-size: 8.8pt; line-height: 1.55; margin: 0 0 4mm; padding-left: 16pt; position: relative; }
+    .source-item::before { content: counter(source-item) "."; position: absolute; left: 0; top: 0; }
+    a { color: var(--blue); text-decoration: none; }
+
+    @page { size: A4; margin: 0; }
+    @media print {
+      html, body { width: var(--page-w); padding: 0; background: white; }
+      .page-frame { width: auto !important; height: auto !important; margin: 0 !important; }
+      .page { border: 0; box-shadow: none; transform: none !important; break-after: page; page-break-after: always; }
+      .page-frame:last-child .page { break-after: auto; page-break-after: auto; }
+    }
+  </style>
+</head>
+<body data-theme="life-science">
+  <main id="source" aria-hidden="true">
+    <section class="flow-block">
+      <h1>主题色测试报告</h1>
+      <hr class="title-rule">
+      <div class="subtitle">life-science palette smoke test</div>
+      <p class="meta"><strong>报告日期：</strong>2026-06-26　|　<strong>用途：</strong>验证主题变量与分页</p>
+    </section>
+
+    <section class="flow-block">
+      <p class="lead">这是一段用于验证模板主题色和分页逻辑的正文。</p>
+    </section>
+
+    <section class="flow-block">
+      <h2>测试小节</h2>
+      <p>如果页面生成、页码出现、没有溢出，说明模板主题切换没有破坏原有分页框架。</p>
+    </section>
+  </main>
+
+  <div id="pages" aria-label="分页报告"></div>
+
+  <script>
+    (() => {
+      const BASE_WIDTH = 794;
+      const BASE_HEIGHT = 1123;
+      const SIDE_GAP = 28;
+      const PAGE_GAP = 14;
+      const source = document.getElementById("source");
+      const pages = document.getElementById("pages");
+
+      function createPage() {
+        const frame = document.createElement("div");
+        frame.className = "page-frame";
+        const page = document.createElement("article");
+        page.className = "page";
+        const content = document.createElement("div");
+        content.className = "page-content";
+        const folio = document.createElement("div");
+        folio.className = "folio";
+        page.append(content, folio);
+        frame.appendChild(page);
+        pages.appendChild(frame);
+        return { content, folio };
+      }
+
+      function overflows(content) {
+        return content.scrollHeight > content.clientHeight + 1;
+      }
+
+      function paginate() {
+        pages.innerHTML = "";
+        let current = createPage();
+        const blocks = Array.from(source.querySelectorAll(".flow-block"));
+        blocks.forEach((block) => {
+          const clone = block.cloneNode(true);
+          current.content.appendChild(clone);
+          if (overflows(current.content) && current.content.children.length > 1) {
+            current.content.removeChild(clone);
+            current = createPage();
+            current.content.appendChild(clone);
+          }
+        });
+        Array.from(pages.querySelectorAll(".folio")).forEach((folio, index) => {
+          folio.textContent = String(index + 1);
+        });
+      }
+
+      function fitPages() {
+        const scale = Math.min(1, Math.max(0.48, (window.innerWidth - SIDE_GAP) / BASE_WIDTH));
+        document.documentElement.style.setProperty("--page-scale", scale.toFixed(4));
+        document.querySelectorAll(".page-frame").forEach((frame) => {
+          frame.style.width = `${BASE_WIDTH * scale}px`;
+          frame.style.height = `${BASE_HEIGHT * scale}px`;
+          frame.style.marginBottom = `${PAGE_GAP}px`;
+        });
+      }
+
+      paginate();
+      fitPages();
+      window.addEventListener("resize", fitPages);
+      window.addEventListener("beforeprint", () => {
+        document.documentElement.style.setProperty("--page-scale", "1");
+        document.querySelectorAll(".page-frame").forEach((frame) => {
+          frame.style.width = "";
+          frame.style.height = "";
+          frame.style.marginBottom = "";
+        });
+      });
+      window.addEventListener("afterprint", fitPages);
+    })();
+  </script>
+</body>
+</html>

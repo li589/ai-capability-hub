@@ -1,0 +1,20 @@
+{
+  "name": "蜜度时政内容检索",
+  "installedAt": 1787227763362,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2074471698440368128",
+  "examples_zh": [
+    "帮我搜一下「三中全会」相关内容",
+    "检索最新关于乡村振兴的政策文件",
+    "查一下近期关于人工智能的官方报道"
+  ],
+  "examples_en": [
+    "Search for content related to the Third Plenary Session",
+    "Find latest policy documents on rural revitalization",
+    "Look up recent official reports on AI"
+  ],
+  "description_zh": "检索时政内容、政策文件、会议信息，覆盖地方政府官网、官方媒体、学习强国等权威信源，按类目分类展示。",
+  "description_en": "Search political content, policy documents, and meeting info across authoritative government and media sources.",
+  "iconSource": "letter:auto"
+}

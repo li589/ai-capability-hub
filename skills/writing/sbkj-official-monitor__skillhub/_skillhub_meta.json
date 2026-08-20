@@ -1,0 +1,12 @@
+{
+  "slug": "sbkj-official-monitor",
+  "name": "竞争对手监测与重点企业预警【世舶科技】",
+  "version": "1.0.1",
+  "installedAt": 1787228757840,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/62f73a9b-1aca-4f8e-921d-6102e258c768.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/62f73a9b-1aca-4f8e-921d-6102e258c768.png"
+}

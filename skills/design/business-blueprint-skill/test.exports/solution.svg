@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300" font-family="system-ui, -apple-system, sans-serif">
+<defs><marker id="arrow-solid" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 10 4, 0 8" fill="#0B6E6E"/></marker><marker id="arrow-dashed" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto" markerUnits="userSpaceOnUse"><polygon points="0 0, 10 4, 0 8" fill="#94A3B8"/></marker></defs>
+<rect width="500" height="300" fill="#F8FAFC"/>
+<g class="title-block"><rect x="40" y="10" width="500" height="52" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1"/><text x="56" y="34" font-size="16" fill="#0F172A" font-family="system-ui, -apple-system, sans-serif" font-weight="700">Generated Blueprint</text><text x="56" y="52" font-size="11" fill="#64748B" font-family="'JetBrains Mono', 'SF Mono', monospace">Industry: common</text></g>
+<g class="legend" transform="translate(50, 110)">
+<rect x="0" y="0" width="130" height="174" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1" opacity="0.95"/>
+<text x="12" y="20" font-size="10" fill="#64748B" font-family="system-ui, -apple-system, sans-serif" font-weight="600" letter-spacing="0.3">LEGEND</text>
+<rect x="12" y="38" width="18" height="14" rx="4" fill="#EFF6FF" stroke="#3B82F6" stroke-width="1"/><text x="38" y="49" font-size="9.5" fill="#64748B" font-family="system-ui, -apple-system, sans-serif">System</text>
+<rect x="12" y="60" width="18" height="14" rx="8" fill="#E8F5F5" stroke="#0B6E6E" stroke-width="1"/><text x="38" y="71" font-size="9.5" fill="#64748B" font-family="system-ui, -apple-system, sans-serif">Capability</text>
+<rect x="12" y="82" width="18" height="14" rx="6" fill="#FEFCE8" stroke="#CA8A04" stroke-width="1"/><text x="38" y="93" font-size="9.5" fill="#64748B" font-family="system-ui, -apple-system, sans-serif">Flow Step</text>
+<rect x="12" y="104" width="18" height="14" rx="22" fill="#FFF7ED" stroke="#F97316" stroke-width="1"/><text x="38" y="115" font-size="9.5" fill="#64748B" font-family="system-ui, -apple-system, sans-serif">Actor</text>
+<line x1="12" y1="130" x2="30" y2="130" stroke="#0B6E6E" stroke-width="1.5" marker-end="url(#arrow-solid)"/><text x="38" y="134" font-size="9.5" fill="#64748B" font-family="system-ui, -apple-system, sans-serif">supports</text>
+<line x1="12" y1="152" x2="30" y2="152" stroke="#94A3B8" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow-dashed)"/><text x="38" y="156" font-size="9.5" fill="#64748B" font-family="system-ui, -apple-system, sans-serif">flow-to</text>
+</g>
+</svg>

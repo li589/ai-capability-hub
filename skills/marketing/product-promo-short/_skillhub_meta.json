@@ -1,0 +1,11 @@
+{
+  "name": "Flova 商品宣传短片",
+  "installedAt": 1787228302078,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2089553133084540928",
+  "description_zh": "商品图片、卖点、受众、品牌与评审节点，在关键阶段等待用户确认。",
+  "description_en": "Use the matching live Flova Skill to plan, review, and deliver this video workflow.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/4f3019d4-c642-437f-ab0b-ea884d0e1f25/avatar/skill/au_52c3943e-ce2.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/4f3019d4-c642-437f-ab0b-ea884d0e1f25/avatar/skill/au_52c3943e-ce2.png"
+}

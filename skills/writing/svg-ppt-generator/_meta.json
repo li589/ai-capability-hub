@@ -1,0 +1,11 @@
+{
+  "owner": "ddpie",
+  "slug": "svg-ppt-generator",
+  "displayName": "SVG PPT Generator",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774777372095,
+    "commit": "https://github.com/openclaw/skills/commit/3f28280c09eaad5e9a1b5cd97157e6e9a3b347a6"
+  },
+  "history": []
+}

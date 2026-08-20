@@ -1,0 +1,77 @@
+examples:
+  - id: product-intro
+    title:
+      zh: 产品介绍演示文稿
+      en: Product Introduction Presentation
+    description:
+      zh: 制作 QoderWork 风格的产品介绍 PPT
+      en: Create QoderWork-style product introduction presentation
+    prompt:
+      zh: |-
+        我要制作一份产品介绍演示文稿，请用 QoderWork 风格帮我生成。
+
+        产品主题：AI 编程助手
+        核心内容：
+        - 产品定位与价值主张
+        - 核心功能模块介绍
+        - 技术架构与优势
+        - 适用场景与案例
+        - 定价与获取方式
+
+        受众：潜在客户、投资人
+        页数：15-20 页
+
+        请生成可编辑的 .pptx 文件。
+      en: |-
+        I want to create a product introduction presentation. Please generate it in QoderWork style.
+
+        Product topic: AI Coding Assistant
+        Core content:
+        - Product positioning and value proposition
+        - Core feature modules introduction
+        - Technical architecture and advantages
+        - Use cases and scenarios
+        - Pricing and access
+
+        Audience: Potential customers, investors
+        Pages: 15-20
+
+        Please generate an editable .pptx file.
+  - id: technical-doc
+    title:
+      zh: 技术方案汇报
+      en: Technical Solution Report
+    description:
+      zh: 制作技术方案汇报的 QoderWork 风格 PPT
+      en: Create QoderWork-style technical solution presentation
+    prompt:
+      zh: |-
+        我要制作一份技术方案汇报演示文稿，请用 QoderWork 风格生成。
+
+        主题：微服务架构演进方案
+        内容要点：
+        - 现状分析与痛点
+        - 目标架构设计
+        - 分阶段实施路线图
+        - 技术选型说明
+        - 风险与应对策略
+
+        受众：技术团队 + 管理层
+        页数：12-18 页
+
+        请帮我生成可编辑的 .pptx 文件。
+      en: |-
+        I want to create a technical solution presentation. Please generate it in QoderWork style.
+
+        Topic: Microservices Architecture Evolution Plan
+        Key points:
+        - Current state analysis and pain points
+        - Target architecture design
+        - Phased implementation roadmap
+        - Technology selection explanation
+        - Risks and mitigation strategies
+
+        Audience: Technical team + management
+        Pages: 12-18
+
+        Please generate an editable .pptx file.

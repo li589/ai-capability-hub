@@ -1,0 +1,86 @@
+<!doctype html>
+<!--
+  HyperFrames 合成模板 · Path B（免费端到端）可直接使用的样本
+  ---------------------------------------------------------------
+  用法（装好依赖后）:
+    1) 改下面的 <div class="clip"> 内容为你的脚本分镜
+    2) 每个分镜一个 .clip，用 data-start / data-duration 控制时序(秒)
+       - data-start:    该分镜从第几秒开始（通常 = 前面所有分镜时长累加）
+       - data-duration: 该分镜持续秒数（建议 = 该段配音时长，留 0.3~0.5s 余量）
+       - data-track-index: 轨道层，默认 1
+    3) 改 #root 的 data-duration 为"所有分镜时长之和"（决定总时长）
+    4) 改 <meta viewport> 与 #root 的 data-width/height 控制分辨率
+       （抖音竖屏 1080x1920；横屏 1920x1080）
+    5) 渲染:  npx hyperframes render -c templates/hyperframes_path_b/index.html -o out.mp4
+    校验:     npx hyperframes lint templates/hyperframes_path_b
+
+  动画: 用 GSAP，在底部 <script> 里给每个分镜加 tl.from(...)。
+  真实字段说明见 https://hyperframes.heygen.com
+-->
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      /* 中文系统字体: 用 src: local() 声明, 渲染器即可识别(无需字体文件) */
+      @font-face { font-family: "PingFang SC"; src: local("PingFang SC"); }
+      @font-face { font-family: "Microsoft YaHei"; src: local("Microsoft YaHei"); }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        margin: 0; width: 1080px; height: 1920px; overflow: hidden;
+        background: radial-gradient(circle at 30% 20%, #1b2a4a 0%, #0b1020 60%, #05070f 100%);
+      }
+      body { font-family: "PingFang SC", "Microsoft YaHei", "Inter", sans-serif; color: #f5f7ff; }
+      #root { width: 1080px; height: 1920px; position: relative; }
+      .clip {
+        position: absolute; inset: 0;
+        display: flex; flex-direction: column; justify-content: center;
+        padding: 120px 90px; gap: 48px;
+      }
+      .kicker {
+        font-size: 40px; letter-spacing: 6px; color: #6ea8ff; font-weight: 700;
+        text-transform: uppercase;
+      }
+      h1 { font-size: 96px; line-height: 1.18; font-weight: 800; }
+      p  { font-size: 52px; line-height: 1.5; color: #c7d2e8; }
+      .accent { color: #ffd166; }
+    </style>
+  </head>
+  <body>
+    <!-- 总合成: data-width/height 控制画布, data-duration 控制总时长(=各分镜之和) -->
+    <div id="root"
+         data-composition-id="main"
+         data-start="0"
+         data-duration="12"
+         data-width="1080"
+         data-height="1920">
+
+      <!-- 分镜 1 -->
+      <div id="scene-1" class="clip"
+           data-start="0" data-duration="6" data-track-index="1">
+        <div class="kicker">Path B · 免费直出</div>
+        <h1>不想花一分钱<br>也能出抖音视频</h1>
+        <p>采集 → 脚本 → <span class="accent">edge-tts 配音</span> → HyperFrames 渲染 → MP4</p>
+      </div>
+
+      <!-- 分镜 2 -->
+      <div id="scene-2" class="clip"
+           data-start="6" data-duration="6" data-track-index="1">
+        <div class="kicker">全程零云费</div>
+        <h1>装好依赖<br>就能一条龙跑通</h1>
+        <p>配音用微软免费接口，画面用开源 <span class="accent">HyperFrames</span>，本地全搞定。</p>
+      </div>
+
+    </div>
+
+    <script>
+      window.__timelines = window.__timelines || {};
+      const tl = gsap.timeline({ paused: true });
+      // 每个分镜一个入场动画，第二个参数 = 该分镜的 data-start（与上面保持一致）
+      tl.from("#scene-1", { opacity: 0, y: 80, duration: 0.6 }, 0);
+      tl.from("#scene-2", { opacity: 0, y: 80, duration: 0.6 }, 6);
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

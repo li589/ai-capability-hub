@@ -1,0 +1,10 @@
+{
+  "name": "energy-daily-report-from-files",
+  "display_name": "能源日报本地系统生成器",
+  "version": "1.7.0",
+  "schema_version": "1.0",
+  "release_channel": "stable",
+  "minimum_python": "3.10",
+  "default_locale": "zh-CN",
+  "default_timezone": "Asia/Shanghai"
+}

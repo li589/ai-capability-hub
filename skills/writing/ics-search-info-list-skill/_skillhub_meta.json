@@ -1,0 +1,11 @@
+{
+  "name": "兴业证券智达平台智能搜索 (XYZDSKILLS)",
+  "installedAt": 1787228665567,
+  "source": "marketplace",
+  "version": "1.1.0",
+  "skillId": "skill_2089242678323511296",
+  "description_zh": "快速查询兴业证券智达平台股票、研报、活动、合集、研究院、项目、公告、文章、资讯等概要信息。",
+  "description_en": "Quickly query summary information on stocks, research reports, events, collections, research institutes, projects, announcements, articles, and news from the Xingye Securities Zhida Platform.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/99a20eef-d080-4f5d-80b3-2c2bdc8d1164/avatar/skill/au_d7581cbc-123.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/99a20eef-d080-4f5d-80b3-2c2bdc8d1164/avatar/skill/au_d7581cbc-123.jpg"
+}

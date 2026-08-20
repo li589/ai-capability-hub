@@ -1,0 +1,11 @@
+{
+  "name": "消息关联CRM",
+  "installedAt": 1787228536564,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088539052760326144",
+  "description_zh": "把已保存的WhatsApp消息与lead/customer/contact候选记录匹配，并生成建档、字段更新或followUpRecord预览。适用于用户要求消息关联CRM、生成相关结果或检查执行边界时。",
+  "description_en": "WhatsApp CRM Matching workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_3e1875cd-ef3.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_3e1875cd-ef3.png"
+}

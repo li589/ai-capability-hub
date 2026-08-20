@@ -1,0 +1,21 @@
+{
+  "name": "Shopify Admin API",
+  "installedAt": 1785864412086,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2054901302975987712",
+  "examples_zh": [
+    "查询过去 7 天未履约的 Shopify 订单，按国家、支付状态和物流风险分组",
+    "把这批夏季 T 恤 SKU 的库存统一增加 50 件，并检查对应变体是否已上架",
+    "导出复购 2 次以上且最近 30 天未下单的客户列表，用于邮件召回活动"
+  ],
+  "examples_en": [
+    "List Shopify orders from the last 7 days that are still unfulfilled, grouped by country, payment status, and shipping risk",
+    "Increase inventory by 50 units for this batch of summer T-shirt SKUs and verify the related variants are published",
+    "Export customers with more than two purchases who have not ordered in the last 30 days for an email win-back campaign"
+  ],
+  "description_zh": "Shopify Admin REST API 完整封装：订单、商品、库存、客户全管理",
+  "description_en": "Shopify Admin REST API for orders, products, inventory & customer management",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_1826f56d-484.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_1826f56d-484.svg"
+}

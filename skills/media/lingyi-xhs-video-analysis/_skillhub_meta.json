@@ -1,0 +1,10 @@
+{
+  "name": "小红书爆款短视频拆解",
+  "installedAt": 1787227687811,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2088598550681198592",
+  "description_zh": "【零一数科·出品】小红书爆款短视频拆解（付费版）。输入一条小红书视频笔记链接（或本地视频文件），异步拆解爆款结构并输出 Markdown 拆解报告。拆小红书爆款、小红书视频拆解、小红书爆款拆解、短视频拆解、拆解小红书爆款。需要 python3 和技能目录下 config.json 中的 LY_API_KEY。",
+  "description_en": "[Lingyi Tech] Xiaohongshu Viral Video Teardown. Submit a Xiaohongshu (RED) video note by share-link or local file; the backend tears down the viral structure asynchronously and returns a Markdown report. Triggers: 小红书视频拆解, 小红书爆款拆解, 短视频拆解. Requires python3 and LY_API_KEY in skill config.json.",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "cyber-threat-intel-daily",
+  "name": "网络安全威胁情报日报",
+  "version": "1.0.0",
+  "installedAt": 1787229039967,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png"
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "harrylabsj",
+  "slug": "tianmao",
+  "displayName": "Tianmao",
+  "latest": {
+    "version": "1.2.3",
+    "publishedAt": 1774951254908,
+    "commit": "https://github.com/openclaw/skills/commit/2d3a577f43e40875e2c2124690cd1dbd11b1f566"
+  },
+  "history": [
+    {
+      "version": "1.2.1",
+      "publishedAt": 1773579784225,
+      "commit": "https://github.com/openclaw/skills/commit/1b1baf4a960d3d7c1c022de4fe8d6f8438e904f2"
+    }
+  ]
+}

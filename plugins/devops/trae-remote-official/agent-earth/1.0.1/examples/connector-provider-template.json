@@ -1,0 +1,46 @@
+{
+  "type": "manual_token",
+  "auth_policy": "ON_INVOKE",
+  "interface": {
+    "title": "Connect AgentEarth",
+    "description": "Enter an AgentEarth API Key to enable AgentEarth tools in TRAE.",
+    "fields": [
+      {
+        "key": "ACCESS_TOKEN",
+        "label": "AgentEarth API Key",
+        "type": "password",
+        "required": true,
+        "placeholder": "Paste your AgentEarth API Key",
+        "docUrl": "https://agentearth.ai/r/tYTTNgDm",
+        "docLabel": "Get an AgentEarth API Key"
+      }
+    ]
+  },
+  "i18n": {
+    "title": {
+      "en": "Connect AgentEarth",
+      "zh-cn": "连接 AgentEarth",
+      "ja": "AgentEarth に接続"
+    },
+    "description": {
+      "en": "Enter an AgentEarth API Key to enable AgentEarth tools in TRAE.",
+      "zh-cn": "填写 AgentEarth API Key，以便在 TRAE 中使用 AgentEarth 工具。",
+      "ja": "AgentEarth API Key を入力して、TRAE で AgentEarth ツールを有効にします。"
+    },
+    "fields.ACCESS_TOKEN.label": {
+      "en": "AgentEarth API Key",
+      "zh-cn": "AgentEarth API Key",
+      "ja": "AgentEarth API Key"
+    },
+    "fields.ACCESS_TOKEN.placeholder": {
+      "en": "Paste your AgentEarth API Key",
+      "zh-cn": "粘贴你的 AgentEarth API Key",
+      "ja": "AgentEarth API Key を貼り付けてください"
+    },
+    "fields.ACCESS_TOKEN.docLabel": {
+      "en": "Get an AgentEarth API Key",
+      "zh-cn": "获取 AgentEarth API Key",
+      "ja": "AgentEarth API Key を取得"
+    }
+  }
+}

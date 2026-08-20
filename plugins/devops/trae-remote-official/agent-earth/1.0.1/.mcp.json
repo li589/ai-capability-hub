@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "agentearth": {
+      "type": "http",
+      "url": "https://agentearth.ai/mcp-server/",
+      "headers": {
+        "X-Api-Key": "${connector.agentearth.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

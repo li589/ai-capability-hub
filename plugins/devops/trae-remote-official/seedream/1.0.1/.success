@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:seedream",
+  "registry": "trae-remote-official",
+  "plugin_name": "seedream",
+  "version": "1.0.1",
+  "marketplace_plugin_id": "42ef9a5d-9586-4445-93e8-37155ac24caa",
+  "remote_installed_plugin_id": "builtin:trae-remote-official:seedream",
+  "checksum": "28b43e3166eb1e3ea236ce5b8766b1d6bb28dec6508401858702c44442a9d01a",
+  "file_size": 962,
+  "installed_at": 1787227200380
+}

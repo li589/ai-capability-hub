@@ -1,0 +1,38 @@
+{
+  "client_only_params": [],
+  "description": "获取企业在指定日期的成员维度资源用量统计（支持分页和筛选）",
+  "display_name": "获取成员资源用量统计",
+  "domain": "用量与审计",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/corp_usage/member_metrics",
+  "method": "POST",
+  "name": "jdy_get_member_usage_metrics",
+  "params": {
+    "date": {
+      "description": "统计日期，格式 yyyy-MM-dd。不传则查询前一天（T-1）的数据。不能晚于 T-1，最多支持查询最近 180 天。",
+      "required": false,
+      "type": "string"
+    },
+    "limit": {
+      "description": "分页大小，默认 20，最大 100。",
+      "required": false,
+      "type": "integer"
+    },
+    "member_ids": {
+      "description": "成员 ID 列表，最多 10 个。不传或空数组表示分页查询全部成员。",
+      "items": {
+        "type": "string"
+      },
+      "required": false,
+      "type": "array"
+    },
+    "skip": {
+      "description": "分页偏移量，默认 0。",
+      "required": false,
+      "type": "integer"
+    }
+  },
+  "path_params": [],
+  "required_params": [],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

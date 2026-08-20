@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prototype — Task Completion Animation</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #555770;
+  --color-text-tertiary: #8b8da3;
+  --color-border-tertiary: #e2e4e9;
+  --color-border-secondary: #c8ccd4;
+  --color-border-primary: #9ca0ab;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.12);
+  --color-mint-1: #e6faf5; --color-mint-2: #b8f0e0; --color-mint-3: #80e4c8;
+  --color-mint-4: #45d4ac; --color-mint-5: #1abc90; --color-mint-6: #0fa07a;
+  --color-mint-7: #078363; --color-mint-8: #03664d; --color-mint-9: #014a37;
+  --color-mint-10: #002e22;
+  --color-sky-1: #e8f4fd; --color-sky-2: #c5e4f9; --color-sky-3: #93ccf3;
+  --color-sky-4: #5db0eb; --color-sky-5: #2e96e0; --color-sky-6: #1a7cc7;
+  --color-sky-7: #1564a3;
+  --color-indigo-1: #edf0ff; --color-indigo-2: #d4daff; --color-indigo-5: #5e6ff7;
+  --color-indigo-6: #4555e0; --color-indigo-7: #3544b8;
+  --color-violet-1: #f3edff; --color-violet-2: #e0d2ff; --color-violet-5: #875af7;
+  --color-violet-6: #6e3fe0; --color-violet-7: #5630b8;
+  --color-slate-1: #f4f5f7; --color-slate-2: #e8eaee; --color-slate-3: #d4d7de;
+  --color-slate-4: #b8bcc6; --color-slate-5: #9ca0ab; --color-slate-6: #7f8391;
+  --color-slate-7: #636776; --color-slate-8: #494d5a;
+  --color-coral-5: #f0614e;
+  --color-amber-1: #fff7e6; --color-amber-4: #ffc440; --color-amber-5: #f0a800;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  padding: 32px;
+}
+
+.container { max-width: 780px; margin: 0 auto; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+h1 { font-size: 24px; font-weight: 700; margin-bottom: 6px; }
+.subtitle { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 28px; }
+
+/* Demo area */
+.demo-card {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--color-border-tertiary);
+  box-shadow: var(--shadow-md);
+  padding: 32px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.demo-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--color-background-secondary);
+  border-radius: var(--border-radius-lg);
+  cursor: pointer;
+  user-select: none;
+  transition: background .15s;
+  justify-content: flex-start;
+  max-width: 420px;
+  margin: 0 auto;
+}
+.demo-row:hover { background: var(--color-mint-1); }
+
+.circle-wrap {
+  width: 36px; height: 36px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.circle-bg {
+  fill: none;
+  stroke: var(--color-border-tertiary);
+  stroke-width: 3;
+}
+.circle-fill {
+  fill: none;
+  stroke: var(--color-mint-5);
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-dasharray: 94.25;
+  stroke-dashoffset: 94.25;
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+.check-path {
+  fill: none;
+  stroke: var(--color-mint-5);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 20;
+  stroke-dashoffset: 20;
+}
+
+.task-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  position: relative;
+}
+.task-text .strike {
+  position: absolute;
+  left: 0; top: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--color-mint-6);
+  border-radius: 1px;
+}
+
+.demo-hint {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  margin-top: 14px;
+}
+
+/* Controls */
+.controls {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--color-border-tertiary);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.controls .eyebrow { color: var(--color-violet-6); }
+
+.control-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 12px;
+}
+
+.control-item label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--color-text-secondary);
+}
+
+.control-item input[type="range"] {
+  width: 100%;
+  accent-color: var(--color-violet-5);
+}
+
+.control-item .value {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--color-violet-6);
+  margin-top: 4px;
+}
+
+.control-item select {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border-secondary);
+  border-radius: var(--border-radius-md);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+}
+
+/* Timeline */
+.timeline-card {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--color-border-tertiary);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.timeline-card .eyebrow { color: var(--color-sky-6); }
+
+.timeline-bar {
+  display: flex;
+  height: 36px;
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  margin-top: 12px;
+  border: 1px solid var(--color-border-tertiary);
+}
+.timeline-phase {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: var(--font-mono);
+  color: white;
+  position: relative;
+}
+.timeline-phase .pct {
+  font-size: 9px;
+  opacity: .8;
+  margin-left: 4px;
+}
+
+.timeline-labels {
+  display: flex;
+  margin-top: 8px;
+}
+.timeline-labels span {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  text-align: center;
+}
+
+/* Copy button */
+.copy-area {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-xl);
+  border: 1px solid var(--color-border-tertiary);
+  box-shadow: var(--shadow-sm);
+  padding: 24px;
+}
+.copy-area .eyebrow { color: var(--color-indigo-6); }
+
+.code-block {
+  background: var(--color-slate-8);
+  color: #e2e8f0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 16px;
+  border-radius: var(--border-radius-md);
+  overflow-x: auto;
+  white-space: pre;
+  line-height: 1.7;
+  margin: 12px 0;
+}
+
+.copy-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: var(--border-radius-md);
+  background: var(--color-indigo-5);
+  color: white;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .15s;
+}
+.copy-btn:hover { background: var(--color-indigo-6); }
+.copy-btn.copied { background: var(--color-mint-5); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="eyebrow" style="color:var(--color-mint-6)">Micro-interaction Prototype</div>
+  <h1>Task Completion Animation</h1>
+  <p class="subtitle">Click the task row to play the animation. Click again to reset. Tune timing below.</p>
+
+  <!-- Demo -->
+  <div class="demo-card">
+    <div class="eyebrow" style="color:var(--color-text-tertiary)">Interactive Demo</div>
+    <div class="demo-row" id="demoRow" onclick="toggleAnimation()">
+      <div class="circle-wrap">
+        <svg viewBox="0 0 36 36">
+          <circle class="circle-bg" cx="18" cy="18" r="15"/>
+          <circle class="circle-fill" id="circleFill" cx="18" cy="18" r="15"/>
+          <path class="check-path" id="checkPath" d="M11 18 L16 23 L25 13"/>
+        </svg>
+      </div>
+      <span class="task-text" id="taskText">
+        Refactor authentication module
+        <span class="strike" id="strikeEl"></span>
+      </span>
+    </div>
+    <div class="demo-hint">Click to play · Click again to reset</div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="eyebrow">Tuning Controls</div>
+    <div class="control-grid">
+      <div class="control-item">
+        <label>Total Duration</label>
+        <input type="range" id="durSlider" min="200" max="2000" value="800" oninput="updateControls()">
+        <div class="value" id="durValue">800ms</div>
+      </div>
+      <div class="control-item">
+        <label>Easing Curve</label>
+        <select id="easingSelect" onchange="updateControls()">
+          <option value="ease">ease</option>
+          <option value="ease-in-out" selected>ease-in-out</option>
+          <option value="ease-out">ease-out</option>
+          <option value="cubic-bezier(0.34, 1.56, 0.64, 1)">spring (overshoot)</option>
+          <option value="cubic-bezier(0.22, 0.61, 0.36, 1)">decelerate</option>
+          <option value="linear">linear</option>
+        </select>
+      </div>
+      <div class="control-item">
+        <label>Circle Fill %</label>
+        <input type="range" id="fillPct" min="30" max="60" value="45" oninput="updateControls()">
+        <div class="value" id="fillValue">45%</div>
+      </div>
+      <div class="control-item">
+        <label>Check Draw %</label>
+        <input type="range" id="checkPct" min="15" max="40" value="25" oninput="updateControls()">
+        <div class="value" id="checkValue">25%</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Timeline -->
+  <div class="timeline-card">
+    <div class="eyebrow">Keyframe Timeline</div>
+    <div class="timeline-bar" id="timelineBar">
+      <div class="timeline-phase" id="phase1" style="flex:45;background:var(--color-mint-5)">circle<span class="pct">45%</span></div>
+      <div class="timeline-phase" id="phase2" style="flex:25;background:var(--color-violet-5)">check<span class="pct">25%</span></div>
+      <div class="timeline-phase" id="phase3" style="flex:30;background:var(--color-sky-5)">strike<span class="pct">30%</span></div>
+    </div>
+    <div class="timeline-labels" id="timelineLabels">
+      <span style="flex:45">0 → 360ms</span>
+      <span style="flex:25">360 → 560ms</span>
+      <span style="flex:30">560 → 800ms</span>
+    </div>
+  </div>
+
+  <!-- Copy CSS -->
+  <div class="copy-area">
+    <div class="eyebrow">Generated CSS</div>
+    <div class="code-block" id="codeBlock">@keyframes circle-fill {
+  from { stroke-dashoffset: 94.25; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes check-draw {
+  from { stroke-dashoffset: 20; }
+  to   { stroke-dashoffset: 0; }
+}
+
+@keyframes strike-through {
+  from { width: 0; }
+  to   { width: 100%; }
+}
+
+.circle  { animation: circle-fill 360ms ease-in-out; }
+.check   { animation: check-draw 200ms ease-in-out 360ms; }
+.strike  { animation: strike-through 240ms ease-in-out 560ms; }</div>
+    <button class="copy-btn" id="copyBtn" onclick="copyCSS()">📋 Copy CSS</button>
+  </div>
+</div>
+
+<script>
+let isPlaying = false;
+let animId = null;
+
+function getParams() {
+  const dur = +document.getElementById('durSlider').value;
+  const easing = document.getElementById('easingSelect').value;
+  const fillPct = +document.getElementById('fillPct').value;
+  const checkPct = +document.getElementById('checkPct').value;
+  const strikePct = 100 - fillPct - checkPct;
+  return { dur, easing, fillPct, checkPct, strikePct };
+}
+
+function updateControls() {
+  const p = getParams();
+  document.getElementById('durValue').textContent = p.dur + 'ms';
+  document.getElementById('fillValue').textContent = p.fillPct + '%';
+  document.getElementById('checkValue').textContent = p.checkPct + '%';
+
+  // Update timeline
+  const fillMs = Math.round(p.dur * p.fillPct / 100);
+  const checkMs = Math.round(p.dur * p.checkPct / 100);
+  const strikeMs = p.dur - fillMs - checkMs;
+
+  document.getElementById('phase1').style.flex = p.fillPct;
+  document.getElementById('phase1').innerHTML = 'circle<span class="pct">' + p.fillPct + '%</span>';
+  document.getElementById('phase2').style.flex = p.checkPct;
+  document.getElementById('phase2').innerHTML = 'check<span class="pct">' + p.checkPct + '%</span>';
+  document.getElementById('phase3').style.flex = p.strikePct;
+  document.getElementById('phase3').innerHTML = 'strike<span class="pct">' + p.strikePct + '%</span>';
+
+  const labels = document.getElementById('timelineLabels');
+  labels.innerHTML =
+    '<span style="flex:' + p.fillPct + '">0 → ' + fillMs + 'ms</span>' +
+    '<span style="flex:' + p.checkPct + '">' + fillMs + ' → ' + (fillMs + checkMs) + 'ms</span>' +
+    '<span style="flex:' + p.strikePct + '">' + (fillMs + checkMs) + ' → ' + p.dur + 'ms</span>';
+
+  // Update code block
+  document.getElementById('codeBlock').textContent =
+    '@keyframes circle-fill {\n  from { stroke-dashoffset: 94.25; }\n  to   { stroke-dashoffset: 0; }\n}\n\n' +
+    '@keyframes check-draw {\n  from { stroke-dashoffset: 20; }\n  to   { stroke-dashoffset: 0; }\n}\n\n' +
+    '@keyframes strike-through {\n  from { width: 0; }\n  to   { width: 100%; }\n}\n\n' +
+    '.circle  { animation: circle-fill ' + fillMs + 'ms ' + p.easing + '; }\n' +
+    '.check   { animation: check-draw ' + checkMs + 'ms ' + p.easing + ' ' + fillMs + 'ms; }\n' +
+    '.strike  { animation: strike-through ' + strikeMs + 'ms ' + p.easing + ' ' + (fillMs + checkMs) + 'ms; }';
+}
+
+function toggleAnimation() {
+  if (isPlaying) {
+    resetAnimation();
+    return;
+  }
+  isPlaying = true;
+  const p = getParams();
+  const fillMs = Math.round(p.dur * p.fillPct / 100);
+  const checkMs = Math.round(p.dur * p.checkPct / 100);
+  const strikeMs = p.dur - fillMs - checkMs;
+
+  const circle = document.getElementById('circleFill');
+  const check = document.getElementById('checkPath');
+  const strike = document.getElementById('strikeEl');
+  const text = document.getElementById('taskText');
+
+  // Phase 1: circle fill
+  circle.style.transition = 'stroke-dashoffset ' + fillMs + 'ms ' + p.easing;
+  circle.style.strokeDashoffset = '0';
+
+  // Phase 2: check draw
+  setTimeout(function() {
+    check.style.transition = 'stroke-dashoffset ' + checkMs + 'ms ' + p.easing;
+    check.style.strokeDashoffset = '0';
+  }, fillMs);
+
+  // Phase 3: strikethrough
+  setTimeout(function() {
+    strike.style.transition = 'width ' + strikeMs + 'ms ' + p.easing;
+    strike.style.width = '100%';
+    text.style.color = 'var(--color-text-tertiary)';
+  }, fillMs + checkMs);
+}
+
+function resetAnimation() {
+  isPlaying = false;
+  const circle = document.getElementById('circleFill');
+  const check = document.getElementById('checkPath');
+  const strike = document.getElementById('strikeEl');
+  const text = document.getElementById('taskText');
+
+  circle.style.transition = 'none';
+  circle.style.strokeDashoffset = '94.25';
+  check.style.transition = 'none';
+  check.style.strokeDashoffset = '20';
+  strike.style.transition = 'none';
+  strike.style.width = '0';
+  text.style.color = 'var(--color-text-primary)';
+}
+
+function copyCSS() {
+  const code = document.getElementById('codeBlock').textContent;
+  navigator.clipboard.writeText(code).then(function() {
+    const btn = document.getElementById('copyBtn');
+    btn.textContent = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(function() {
+      btn.textContent = '📋 Copy CSS';
+      btn.classList.remove('copied');
+    }, 2000);
+  });
+}
+
+updateControls();
+</script>
+</body>
+</html>

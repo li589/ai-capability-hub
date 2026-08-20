@@ -1,0 +1,20 @@
+{
+  "name": "反蒸馏",
+  "installedAt": 1787228678255,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053081330835554304",
+  "examples_zh": [
+    "帮我反蒸馏这份 skill 文件",
+    "清洗一下我被迫写的技术文档",
+    "脱敏处理我的工作经验 skill"
+  ],
+  "examples_en": [
+    "Anti-distill this skill file",
+    "Clean my forced knowledge document",
+    "Sanitize my work experience skill"
+  ],
+  "description_zh": "反蒸馏防御：清洗 Skill 文件，看起来完整但核心知识已脱敏",
+  "description_en": "Anti-distillation: sanitize Skill files while preserving appearance",
+  "iconSource": "letter:auto"
+}

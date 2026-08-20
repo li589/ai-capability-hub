@@ -1,0 +1,27 @@
+{
+  "author": "Github",
+  "author_icon": "https://static.marvis.qq.com/wupload/skill-author-icons/1778639349473_GitHub.png",
+  "description": "|",
+  "detail_describe": "对着麦克风说话, 网页实时显示语音识别与译文\n中英文双向实时翻译 (同声传译)\n本地iGPU运行 Hunyuan-1.8B 翻译 + 流式语音识别\n译文自动合成语音可在网页播放\n全程离线, 零云端成本",
+  "display_description": "本地AI实时语音翻译/同声传译, 边说边译 (仅限英特尔AIPC平台)",
+  "display_name": "本地实时语音翻译",
+  "download_count": 0,
+  "download_url": "",
+  "icon": "",
+  "id": 0,
+  "is_downloaded": false,
+  "name": "local-realtime-translator",
+  "scope": [
+    "main"
+  ],
+  "type": "英特尔用户专区",
+  "use_cases": [
+    "打开实时翻译",
+    "启动同声传译",
+    "开启麦克风实时翻译功能",
+    "打开实时语音翻译, 我要边说中文边看英文翻译",
+    "启动同声传译, 把我说的英文实时翻译成中文",
+    "开启麦克风实时翻译并在网页上显示字幕"
+  ],
+  "version": "1.0.0"
+}

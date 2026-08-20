@@ -1,0 +1,20 @@
+{
+  "name": "章节正文生成器",
+  "installedAt": 1785864592757,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2053082474668232704",
+  "examples_zh": [
+    "根据第12章大纲、冷峻悬疑 Voice Profile 和林岚的角色卡，生成约3500字章节正文",
+    "把这段学院试炼章节大纲扩写成正文，保持轻松吐槽文风并突出配角沈越的口头禅",
+    "用 characters/hero.yml 和 style.yml 里的设定，写一章主角首次觉醒能力的战斗场景"
+  ],
+  "examples_en": [
+    "Generate a 3,500-word chapter from the Chapter 12 outline using a cold suspense voice profile and Lin Lan's character card",
+    "Expand this academy trial outline into chapter prose with a light sarcastic voice and Shen Yue's recurring catchphrase",
+    "Use characters/hero.yml and style.yml to write a battle chapter where the protagonist awakens their ability for the first time"
+  ],
+  "description_zh": "根据大纲和角色档案生成章节正文，支持风格控制和温度调节",
+  "description_en": "Generate novel chapters from outlines with voice profiles & character cards",
+  "iconSource": "letter:auto"
+}

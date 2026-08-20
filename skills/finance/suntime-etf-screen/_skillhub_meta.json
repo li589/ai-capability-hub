@@ -1,0 +1,10 @@
+{
+  "name": "朝阳永续-AI-ETF智能筛选",
+  "installedAt": 1787227678999,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2082416725365878784",
+  "description_zh": "朝阳永续全市场ETF自然语言筛选与同类优选技能，覆盖持仓、指数、行业主题、规模流动性、资金流向、收益风险、估值分位和风格因子。",
+  "description_en": "Suntime ETF Screener provides natural-language screening and peer selection across more than 1,500 ETFs, covering holdings, tracked indexes, industries and themes, scale and liquidity, fund flows, returns and risk, valuation percentiles, style factors, sector allocation, and geographic exposure. Use it to find ETFs, compare products tracking the same index, or refine previous screening results.",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "科技专利写作"
+  short_description: "科技专利写作，面向企业研发团队、高校科研人员、科研院所及专利代理机构，将发明构思转化为专利申请书初稿。支持技术方案梳理、权利要求与说明书撰写、附图说明、LaTeX公式生成，并交付Markdown和Word文档"
+  default_prompt: "使用 $zcst-pay-create-patent 根据我的技术方案生成专利文档。"

@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:tt-ads",
+  "registry": "trae-remote-official",
+  "plugin_name": "tt-ads",
+  "version": "0.0.1",
+  "marketplace_plugin_id": "e04043af-6088-4776-be13-0392adb566d5",
+  "remote_installed_plugin_id": "EX2PN7GTW.L.16",
+  "checksum": "2b7fd0283d22b8571e45700feef0866e3a6f9ba20ace79a36164bc5a0e14bba2",
+  "file_size": 3563,
+  "installed_at": 1787227201142
+}

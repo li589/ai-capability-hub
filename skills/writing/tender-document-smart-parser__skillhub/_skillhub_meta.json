@@ -1,0 +1,12 @@
+{
+  "slug": "tender-document-smart-parser",
+  "name": "招标文件智能解析器",
+  "version": "1.0.1",
+  "installedAt": 1787228768910,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/10f9d8ff-5e7f-434f-9992-5e71e1d4e990.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/10f9d8ff-5e7f-434f-9992-5e71e1d4e990.png"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "北森企业知识库",
+  "installedAt": 1787228561703,
+  "source": "marketplace",
+  "version": "1.0.10",
+  "skillId": "skill_2087176010539188224",
+  "description_zh": "搜索北森企业知识库中的制度、政策和流程文档。支持按关键词、分类和时间范围检索，快速定位公司规章制度和操作手册。员工与管理层均可使用。",
+  "description_en": "Search the Beisen enterprise knowledge base for policies, procedures, and operational documents. Search by keyword, category, and date range to quickly locate company regulations and handbooks. Available to all employees and managers.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_ea689961-ad7.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f757fa63-ae0f-4d38-9d0a-799632b7f7f8/avatar/skill/au_ea689961-ad7.png"
+}

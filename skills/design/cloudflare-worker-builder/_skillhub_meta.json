@@ -1,0 +1,21 @@
+{
+  "name": "Cloudflare Worker Builder",
+  "installedAt": 1787228397264,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2057443892848996352",
+  "examples_zh": [
+    "帮我创建一个带 API 路由和静态页面的 Cloudflare Worker 应用",
+    "给这个 Worker 项目加上 D1 数据库和 R2 文件存储",
+    "排查这个 Cloudflare Worker 的部署和路由问题"
+  ],
+  "examples_en": [
+    "Create a Cloudflare Worker app with API routes and static assets",
+    "Add D1 database and R2 file storage to this Worker project",
+    "Troubleshoot deployment and routing issues in this Cloudflare Worker app"
+  ],
+  "description_zh": "脚手架并部署 Cloudflare Worker 全栈应用",
+  "description_en": "Scaffold and deploy Cloudflare Worker apps with Hono, Vite and assets",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2057443892848996352/34bde5e28551dc22.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2057443892848996352/34bde5e28551dc22.svg"
+}

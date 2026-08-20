@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg-blue-equipment-repair-assistant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#5DA3E8"/>
+      <stop offset="100%" stop-color="#165296"/>
+    </linearGradient>
+    <linearGradient id="bg-orange-equipment-repair-assistant" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5A93C"/>
+      <stop offset="100%" stop-color="#DD7B2C"/>
+    </linearGradient>
+    <clipPath id="clip-equipment-repair-assistant">
+      <rect width="64" height="64" rx="14"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#clip-equipment-repair-assistant)">
+    <rect width="64" height="44" fill="url(#bg-blue-equipment-repair-assistant)"/>
+    <rect y="44" width="64" height="20" fill="url(#bg-orange-equipment-repair-assistant)"/>
+    <g fill="#FFFFFF" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+
+<circle cx="24" cy="20" r="9" fill="none" stroke="#FFFFFF" stroke-width="3"/>
+<path d="M30 26 L42 38" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+<path d="M37 33 L43 39" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round"/>
+<circle cx="45" cy="41" r="2.5" fill="#FFFFFF"/>
+
+    </g>
+    <text x="32" y="58" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">eMES</text>
+  </g>
+</svg>

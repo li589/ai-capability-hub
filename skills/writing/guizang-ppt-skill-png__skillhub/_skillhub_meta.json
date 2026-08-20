@@ -1,0 +1,10 @@
+{
+  "slug": "guizang-ppt-skill-png",
+  "name": "归藏PPT制作技能",
+  "version": "1.0.0",
+  "installedAt": 1787228874971,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

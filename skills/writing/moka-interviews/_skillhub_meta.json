@@ -1,0 +1,11 @@
+{
+  "name": "Moka 面试",
+  "installedAt": 1787228561028,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2088129940380954624",
+  "description_zh": "面向面试官与招聘负责人的面试查询。查与我相关的面试安排（我要参加的、我安排的）、某位候选人的全部面试记录与面试官评价、某一场面试的纪要与转写原文；看招聘团队的面试安排总览（按今天/明天及以后/昨天及以前分组）；查企业的面试配置（分几轮、每轮评价表考察什么）。当用户问「我今天有没有面试」「这个候选人面到第几轮了、评价怎么样」「那场面试聊了什么」「今天公司有哪些面试」「二面要考察什么」时使用。",
+  "description_en": "Interview lookup for interviewers and recruiting owners. Checks the interviews related to me (ones I attend or arrange), a candidate's full interview records with interviewer evaluations, and the meeting summary and transcript of a specific interview; shows the recruiting team's interview overview grouped by today / tomorrow-and-later / yesterday-and-earlier; and reads the company's interview setup (rounds and feedback templates). Use it for questions like \"do I have interviews today\", \"which round is this candidate at and how were the evaluations\", \"what was discussed in that interview\", \"what interviews does the company have today\", or \"what should round two assess\".",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_d59d7023-e6a.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9c40ee35-ca52-4acb-899e-9dff1c5d178f/avatar/skill/au_d59d7023-e6a.png"
+}

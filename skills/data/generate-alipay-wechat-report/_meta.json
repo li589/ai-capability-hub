@@ -1,0 +1,11 @@
+{
+  "owner": "yeyitech",
+  "slug": "generate-alipay-wechat-report",
+  "displayName": "Generate Alipay WeChat Report",
+  "latest": {
+    "version": "0.1.1",
+    "publishedAt": 1772964831875,
+    "commit": "https://github.com/openclaw/skills/commit/a48ec83cb16025cdc4aeb3a57f304409bb9563f5"
+  },
+  "history": []
+}

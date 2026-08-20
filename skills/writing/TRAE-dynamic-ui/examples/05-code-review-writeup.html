@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PR Writeup — Refactor Event Emitter</title>
+<style>
+:root {
+  --color-background-primary: #ffffff;
+  --color-background-secondary: #f8f9fa;
+  --color-background-tertiary: #f1f3f5;
+  --color-text-primary: #1a1a2e;
+  --color-text-secondary: #555770;
+  --color-text-tertiary: #8b8da3;
+  --color-border-tertiary: #e2e4e9;
+  --color-border-secondary: #c8ccd4;
+  --color-border-primary: #9ca0ab;
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: Georgia, 'Times New Roman', serif;
+  --font-mono: 'SF Mono', 'Fira Code', 'Cascadia Code', monospace;
+  --border-radius-md: 8px;
+  --border-radius-lg: 10px;
+  --border-radius-xl: 12px;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 12px rgba(0,0,0,.08);
+  --shadow-lg: 0 8px 24px rgba(0,0,0,.12);
+  --color-sky-1: #e8f4fd; --color-sky-2: #c5e4f9; --color-sky-3: #93ccf3;
+  --color-sky-4: #5db0eb; --color-sky-5: #2e96e0; --color-sky-6: #1a7cc7;
+  --color-sky-7: #1564a3; --color-sky-8: #104d7e; --color-sky-9: #0b3659;
+  --color-sky-10: #061f34;
+  --color-indigo-1: #edf0ff; --color-indigo-2: #d4daff; --color-indigo-3: #b0bbff;
+  --color-indigo-4: #8594ff; --color-indigo-5: #5e6ff7; --color-indigo-6: #4555e0;
+  --color-indigo-7: #3544b8; --color-indigo-8: #283490; --color-indigo-9: #1c2568;
+  --color-indigo-10: #101540;
+  --color-coral-1: #fff0ed; --color-coral-2: #ffd9d2; --color-coral-3: #ffb4a8;
+  --color-coral-4: #ff8a78; --color-coral-5: #f0614e; --color-coral-6: #d44637;
+  --color-coral-7: #af3427; --color-coral-8: #8a2519; --color-coral-9: #65180e;
+  --color-coral-10: #400d06;
+  --color-amber-1: #fff7e6; --color-amber-2: #ffecbf; --color-amber-3: #ffd980;
+  --color-amber-4: #ffc440; --color-amber-5: #f0a800; --color-amber-6: #d49200;
+  --color-amber-7: #a87300; --color-amber-8: #7d5500; --color-amber-9: #523800;
+  --color-amber-10: #271b00;
+  --color-mint-1: #e6faf5; --color-mint-2: #b8f0e0; --color-mint-3: #80e4c8;
+  --color-mint-4: #45d4ac; --color-mint-5: #1abc90; --color-mint-6: #0fa07a;
+  --color-mint-7: #078363; --color-mint-8: #03664d; --color-mint-9: #014a37;
+  --color-mint-10: #002e22;
+  --color-violet-1: #f3edff; --color-violet-2: #e0d2ff; --color-violet-3: #c5adff;
+  --color-violet-4: #a682ff; --color-violet-5: #875af7; --color-violet-6: #6e3fe0;
+  --color-violet-7: #5630b8; --color-violet-8: #402390; --color-violet-9: #2c1768;
+  --color-violet-10: #190d40;
+  --color-slate-1: #f4f5f7; --color-slate-2: #e8eaee; --color-slate-3: #d4d7de;
+  --color-slate-4: #b8bcc6; --color-slate-5: #9ca0ab; --color-slate-6: #7f8391;
+  --color-slate-7: #636776; --color-slate-8: #494d5a; --color-slate-9: #31343f;
+  --color-slate-10: #1a1c24;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-background-tertiary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  padding: 32px;
+}
+
+.container { max-width: 860px; margin: 0 auto; }
+
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: var(--color-sky-6);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--color-text-primary);
+}
+
+.pr-meta {
+  font-size: 13px;
+  color: var(--color-text-tertiary);
+  margin-bottom: 24px;
+}
+.pr-meta span { margin-right: 16px; }
+.pr-meta .branch {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--color-indigo-1);
+  color: var(--color-indigo-7);
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+/* TL;DR Box */
+.tldr {
+  background: var(--color-sky-1);
+  border-left: 4px solid var(--color-sky-5);
+  border-radius: var(--border-radius-md);
+  padding: 20px 24px;
+  margin-bottom: 28px;
+  box-shadow: var(--shadow-sm);
+}
+.tldr .eyebrow { color: var(--color-sky-7); }
+.tldr p {
+  font-size: 15px;
+  color: var(--color-sky-9);
+  line-height: 1.7;
+}
+
+/* Section cards */
+.section {
+  background: var(--color-background-primary);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border-tertiary);
+}
+
+.section h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.section p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 12px;
+}
+
+/* Before / After comparison */
+.comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.compare-card {
+  border-radius: var(--border-radius-md);
+  padding: 16px 20px;
+  border: 1px solid var(--color-border-tertiary);
+}
+.compare-card.before {
+  border-top: 3px solid var(--color-coral-5);
+  background: var(--color-coral-1);
+}
+.compare-card.after {
+  border-top: 3px solid var(--color-mint-5);
+  background: var(--color-mint-1);
+}
+.compare-card .eyebrow { margin-bottom: 10px; }
+.compare-card.before .eyebrow { color: var(--color-coral-7); }
+.compare-card.after .eyebrow { color: var(--color-mint-7); }
+
+.compare-card code {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--color-background-primary);
+  padding: 12px;
+  border-radius: 6px;
+  white-space: pre;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  overflow-x: auto;
+}
+
+/* File walkthrough */
+.file-item {
+  border: 1px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  margin-bottom: 10px;
+  overflow: hidden;
+  transition: box-shadow .15s;
+}
+.file-item:hover { box-shadow: var(--shadow-sm); }
+
+.file-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  cursor: pointer;
+  background: var(--color-background-secondary);
+  user-select: none;
+  gap: 10px;
+}
+.file-header:hover { background: var(--color-indigo-1); }
+
+.file-icon {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.file-icon.modified { background: var(--color-amber-5); }
+.file-icon.added { background: var(--color-mint-5); }
+.file-icon.deleted { background: var(--color-coral-5); }
+
+.file-name {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  flex: 1;
+}
+
+.file-stats {
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+.file-stats .add { color: var(--color-mint-6); }
+.file-stats .del { color: var(--color-coral-6); }
+
+.file-chevron {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  transition: transform .2s;
+}
+.file-item.open .file-chevron { transform: rotate(90deg); }
+
+.file-body {
+  display: none;
+  padding: 16px 20px;
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+  border-top: 1px solid var(--color-border-tertiary);
+}
+.file-item.open .file-body { display: block; }
+
+/* Focus review list */
+.focus-list { list-style: none; counter-reset: focus; }
+.focus-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border-tertiary);
+}
+.focus-list li:last-child { border-bottom: none; }
+
+.focus-badge {
+  counter-increment: focus;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700;
+  flex-shrink: 0;
+  color: white;
+}
+.focus-badge::before { content: counter(focus); }
+.focus-badge.p1 { background: var(--color-coral-5); }
+.focus-badge.p2 { background: var(--color-amber-5); color: var(--color-amber-10); }
+.focus-badge.p3 { background: var(--color-sky-5); }
+.focus-badge.p4 { background: var(--color-slate-4); }
+
+.focus-text strong { display: block; font-size: 14px; margin-bottom: 2px; }
+.focus-text span { font-size: 13px; color: var(--color-text-tertiary); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="eyebrow">Pull Request #1247</div>
+  <h1>Refactor event emitter to support typed payloads</h1>
+  <div class="pr-meta">
+    <span>by <strong>sarah.chen</strong></span>
+    <span>14 files changed</span>
+    <span class="branch">feat/typed-events</span> → <span class="branch">main</span>
+  </div>
+
+  <!-- TL;DR -->
+  <div class="tldr">
+    <div class="eyebrow">TL;DR</div>
+    <p>Replace the old <code>EventEmitter</code> (untyped <code>any</code> payloads) with a generic <code>TypedEmitter&lt;TEventMap&gt;</code>. Every emit and listener now enforces the correct payload shape at compile-time. Existing runtime behavior is <strong>unchanged</strong> — this is purely a type-safety lift, plus minor refactor to split the monolithic file into focused modules.</p>
+  </div>
+
+  <!-- Motivation -->
+  <div class="section">
+    <div class="eyebrow">Motivation</div>
+    <h2>Why this change?</h2>
+    <p>Our current event system passes <code>any</code> for all payloads. In the last sprint alone, three bugs traced back to mismatched event payloads — a renamed field here, a missing property there. Each took 30+ minutes to reproduce because errors surfaced at runtime deep in listener chains.</p>
+    <p>By introducing a typed event map, TypeScript catches these issues at compile-time. IDE autocomplete also works now, showing exactly which events are available and what each payload looks like.</p>
+  </div>
+
+  <!-- Before / After -->
+  <div class="section">
+    <div class="eyebrow">Behavior Change</div>
+    <h2>Before → After</h2>
+    <div class="comparison">
+      <div class="compare-card before">
+        <div class="eyebrow">Before</div>
+        <code>emitter.on('user:login', (data: any) => {
+  // no type checking — hope for the best
+  console.log(data.userName);  // typo!
+  // should be data.username
+});</code>
+      </div>
+      <div class="compare-card after">
+        <div class="eyebrow">After</div>
+        <code>emitter.on('user:login', (data) => {
+  // data is UserLoginPayload
+  console.log(data.username);  // ✓
+  console.log(data.userName);
+  //              ^^^^^^^^ TS error
+});</code>
+      </div>
+    </div>
+  </div>
+
+  <!-- File walkthrough -->
+  <div class="section">
+    <div class="eyebrow">File Walkthrough</div>
+    <h2>Changes file-by-file</h2>
+    <p style="margin-bottom:16px">Click any file to expand the rationale.</p>
+
+    <div class="file-item">
+      <div class="file-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="file-icon modified"></span>
+        <span class="file-name">src/core/emitter.ts</span>
+        <span class="file-stats"><span class="add">+87</span> <span class="del">−142</span></span>
+        <span class="file-chevron">▸</span>
+      </div>
+      <div class="file-body">Core rewrite: the old <code>EventEmitter</code> class is replaced by <code>TypedEmitter&lt;T extends EventMap&gt;</code>. The public API stays the same (<code>.on</code>, <code>.off</code>, <code>.emit</code>, <code>.once</code>) but every method is now generic-constrained. The internal listener store switches from <code>Map&lt;string, Set&lt;Function&gt;&gt;</code> to a <code>Map</code> keyed by <code>keyof T</code>.</div>
+    </div>
+
+    <div class="file-item">
+      <div class="file-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="file-icon added"></span>
+        <span class="file-name">src/core/event-map.ts</span>
+        <span class="file-stats"><span class="add">+45</span></span>
+        <span class="file-chevron">▸</span>
+      </div>
+      <div class="file-body">New file defining the <code>AppEventMap</code> interface — the single source of truth for all event names and their payloads. Each entry maps an event string literal to its payload type. This makes it trivial to add new events: just add one line here.</div>
+    </div>
+
+    <div class="file-item">
+      <div class="file-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="file-icon modified"></span>
+        <span class="file-name">src/auth/session-manager.ts</span>
+        <span class="file-stats"><span class="add">+12</span> <span class="del">−8</span></span>
+        <span class="file-chevron">▸</span>
+      </div>
+      <div class="file-body">Updated all <code>.emit()</code> and <code>.on()</code> calls to use the typed emitter. No logic change — just aligning with the new generic signatures. The session payload types were already close to correct; only the <code>refreshToken</code> field was renamed to <code>refresh_token</code> for API consistency.</div>
+    </div>
+
+    <div class="file-item">
+      <div class="file-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="file-icon modified"></span>
+        <span class="file-name">src/plugins/analytics.ts</span>
+        <span class="file-stats"><span class="add">+6</span> <span class="del">−4</span></span>
+        <span class="file-chevron">▸</span>
+      </div>
+      <div class="file-body">Listener callbacks now receive typed payloads. Removed two <code>as any</code> casts that were papering over the old untyped interface. The analytics mapping table stays identical.</div>
+    </div>
+
+    <div class="file-item">
+      <div class="file-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="file-icon modified"></span>
+        <span class="file-name">src/plugins/telemetry.ts</span>
+        <span class="file-stats"><span class="add">+9</span> <span class="del">−11</span></span>
+        <span class="file-chevron">▸</span>
+      </div>
+      <div class="file-body">Same treatment as analytics — typed listeners, removed casts. Additionally cleaned up an unused <code>import type</code> that the linter was flagging.</div>
+    </div>
+
+    <div class="file-item">
+      <div class="file-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="file-icon deleted"></span>
+        <span class="file-name">src/core/__tests__/emitter.legacy.test.ts</span>
+        <span class="file-stats"><span class="del">−230</span></span>
+        <span class="file-chevron">▸</span>
+      </div>
+      <div class="file-body">Removed the legacy test file. All its scenarios are ported to <code>emitter.test.ts</code> with typed assertions. The old file tested untyped behavior that no longer applies.</div>
+    </div>
+
+    <div class="file-item">
+      <div class="file-header" onclick="this.parentElement.classList.toggle('open')">
+        <span class="file-icon added"></span>
+        <span class="file-name">src/core/__tests__/emitter.test.ts</span>
+        <span class="file-stats"><span class="add">+185</span></span>
+        <span class="file-chevron">▸</span>
+      </div>
+      <div class="file-body">New comprehensive test suite. Covers: basic emit/listen, once semantics, off unsubscribe, wildcard events, error payload propagation, and compile-time type assertion tests (using <code>// @ts-expect-error</code> annotations).</div>
+    </div>
+  </div>
+
+  <!-- Focus review -->
+  <div class="section">
+    <div class="eyebrow">Review Guide</div>
+    <h2>Focus your review</h2>
+    <ul class="focus-list">
+      <li>
+        <div class="focus-badge p1"></div>
+        <div class="focus-text">
+          <strong>emitter.ts — generic constraint design</strong>
+          <span>Is the <code>TypedEmitter&lt;T extends EventMap&gt;</code> constraint flexible enough? Particularly the <code>emit()</code> overloads for events with optional payloads.</span>
+        </div>
+      </li>
+      <li>
+        <div class="focus-badge p2"></div>
+        <div class="focus-text">
+          <strong>event-map.ts — payload shape decisions</strong>
+          <span>Some payloads are thin wrappers (<code>{ id: string }</code>). Should we future-proof with richer types, or keep them minimal and extend later?</span>
+        </div>
+      </li>
+      <li>
+        <div class="focus-badge p3"></div>
+        <div class="focus-text">
+          <strong>session-manager.ts — field rename</strong>
+          <span>The <code>refreshToken → refresh_token</code> rename aligns with the API but is technically a breaking change for any consumer reading this off the event payload.</span>
+        </div>
+      </li>
+      <li>
+        <div class="focus-badge p4"></div>
+        <div class="focus-text">
+          <strong>Test coverage</strong>
+          <span>Skim the new tests for gaps. Particularly interested in edge cases around <code>.once()</code> + <code>.off()</code> race conditions.</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

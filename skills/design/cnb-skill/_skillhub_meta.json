@@ -1,0 +1,21 @@
+{
+  "name": "cnb.cool",
+  "installedAt": 1787227633432,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081551970693120",
+  "examples_zh": [
+    "列出我仓库里所有未关闭的Issue",
+    "从功能分支创建一个新的PR",
+    "查看最新流水线的运行状态"
+  ],
+  "examples_en": [
+    "List all open issues in my repository",
+    "Create a pull request from my feature branch",
+    "Check the latest pipeline run status"
+  ],
+  "description_zh": "CNB 平台全功能操作（仓库、Issue、PR、流水线、制品库）",
+  "description_en": "CNB platform operations (repos, issues, PRs, pipelines, artifacts)",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/cnb-skill.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/cnb-skill.svg"
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "sealawyer2026",
+  "slug": "zhang-ai-law",
+  "displayName": "九章-AI法律专家",
+  "latest": {
+    "version": "1.5.0",
+    "publishedAt": 1775094981628,
+    "commit": "https://github.com/openclaw/skills/commit/6793c951aa8f5bbc8ab2a4344d8b9d4954c6327b"
+  },
+  "history": [
+    {
+      "version": "1.2.0",
+      "publishedAt": 1774397944297,
+      "commit": "https://github.com/openclaw/skills/commit/56d7a1ccc23d7db3dc9712992123961df95c0ea3"
+    }
+  ]
+}

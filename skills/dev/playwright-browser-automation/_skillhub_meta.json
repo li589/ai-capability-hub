@@ -1,0 +1,20 @@
+{
+  "name": "Playwright Browser Automation",
+  "installedAt": 1785784633619,
+  "source": "marketplace",
+  "version": "2.0.0",
+  "skillId": "skill_2053082580726448128",
+  "examples_zh": [
+    "用 Playwright 打开 http://localhost:3000/signup，填写注册表单，断言欢迎消息出现并保存截图。",
+    "访问三条产品详情页 URL，直接调用 Playwright API 抽取库存状态、价格和主图链接。",
+    "把我们的帮助中心首页导出为 PDF，并录制一次搜索问题到打开答案的浏览器视频。"
+  ],
+  "examples_en": [
+    "Use Playwright to open http://localhost:3000/signup, fill the registration form, assert the welcome message, and save a screenshot.",
+    "Visit three product detail page URLs and call Playwright APIs directly to extract stock status, price, and hero image links.",
+    "Export our help center homepage as a PDF and record a browser video from searching a question to opening the answer."
+  ],
+  "description_zh": "直接调用 Playwright API 实现浏览器自动化（无需 MCP）",
+  "description_en": "Direct Playwright API browser automation: navigate, interact, screenshot, PDF",
+  "iconSource": "letter:auto"
+}

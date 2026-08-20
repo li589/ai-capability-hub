@@ -1,0 +1,11 @@
+{
+  "name": "出海匠 TikTok 电商助手",
+  "installedAt": 1787227555762,
+  "source": "marketplace",
+  "version": "1.0.3",
+  "skillId": "skill_2084548382057746432",
+  "description_zh": "面向跨境电商从业人员的电商与内容运营 Skill。配合出海匠 MCP 连接器，可查询商品、达人、视频、店铺、广告、直播及 Amazon 数据，完成选品、竞品拆解、达人筛选和利润测算；还可生成商品图、带货视频与脚本，操作 AI 画布和视频剪辑，并管理社媒发布、评论、私信及店铺。使用前需按当前客户端支持的认证方式配置出海匠连接器；WorkBuddy 官方连接器使用 OAuth。",
+  "description_en": "An e-commerce and content operations skill for cross-border e-commerce professionals. Used with the Chuhaijiang MCP Connector, it can query data on products, creators, videos, shops, ads, livestreams, and Amazon to support product selection, competitor analysis, creator screening, and profit modeling. It can also generate product images, shoppable videos, and scripts; operate AI Canvas and video editing workflows; and manage social publishing, comments, direct messages, and shops. Before use, configure the connector with an authentication method supported by the current client; the official WorkBuddy connector uses OAuth.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/0d34d8c8-60a2-4726-8ae8-a2be24860395/avatar/skill/au_cc666864-d79.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/0d34d8c8-60a2-4726-8ae8-a2be24860395/avatar/skill/au_cc666864-d79.png"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "万得AI-期货研报观点",
+  "installedAt": 1787227676063,
+  "source": "marketplace",
+  "version": "1.0.5",
+  "skillId": "skill_2085539675223830528",
+  "description_zh": "万得 Alice 期货研报观点 CLI：聚合国内商品期货机构研报多空观点，计算 Wind 情绪评分，输出含观点分布、研报摘要与情绪走势的结构化报告。",
+  "description_en": "Wind Alice Futures Research Opinion CLI - aggregates research opinions on domestic commodity futures across major futures institutions, summarizes bullish, bearish, and neutral views by contract or commodity, and extracts the key investment logic behind each report. Enter a futures product and date to get a research-opinion report, institutional view distribution, Wind sentiment score, report summaries, and trend charts.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_4493f5b5-70f.jpg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/006cbda9-1c70-497a-bfb9-199b79c7a24c/avatar/skill/au_4493f5b5-70f.jpg"
+}

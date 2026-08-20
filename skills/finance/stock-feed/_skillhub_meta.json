@@ -1,0 +1,11 @@
+{
+  "name": "A股每日新闻",
+  "installedAt": 1787227634534,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087461432895770624",
+  "description_zh": "从小红书、抖音、公众号三平台聚合A股短讯，内置17个核心关键词一次性查询",
+  "description_en": "Daily A-share news aggregated from Xiaohongshu, Douyin and WeChat.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_660e660f-e74.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_660e660f-e74.svg"
+}

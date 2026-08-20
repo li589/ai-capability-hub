@@ -1,0 +1,13 @@
+{
+  "name": "commercial-jingle-maker",
+  "version": "1.3.2",
+  "skillSlug": "commercial-jingle-maker",
+  "displayName": "广告歌生成AI",
+  "marketplaceTitle": "广告歌生成AI",
+  "marketplaceOnly": true,
+  "releaseEnvironment": "production",
+  "baseUrl": "https://music.68zysm.cn/api/v3",
+  "webBaseUrl": "https://lexuan.club",
+  "node": ">=18",
+  "builtAt": "2026-06-11T04:50:29.640Z"
+}

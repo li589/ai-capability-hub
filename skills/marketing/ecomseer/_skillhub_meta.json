@@ -1,0 +1,21 @@
+{
+  "name": "EcomSeer TikTok 电商数据",
+  "installedAt": 1785864388922,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2054902477337174016",
+  "examples_zh": [
+    "分析 TikTok Shop 美国市场最近 7 天的美妆爆品，列出销量、价格带和增长趋势",
+    "帮我查一个 TikTok 达人的带货表现，包括热卖商品、视频转化和适合合作的品类",
+    "搜索东南亚市场宠物用品店铺和广告素材，找出适合跨境卖家的选品机会"
+  ],
+  "examples_en": [
+    "Analyze beauty bestsellers on TikTok Shop US over the past 7 days, including sales, price bands, and growth trends",
+    "Review a TikTok influencer's commerce performance, including top products, video conversion, and suitable collaboration categories",
+    "Search Southeast Asian pet-supply shops and ad creatives to identify product opportunities for cross-border sellers"
+  ],
+  "description_zh": "TikTok Shop 电商数据：商品/爆品/达人/店铺/广告全链路分析",
+  "description_en": "TikTok Shop e-commerce intelligence: products, trends, influencers, shops, ads",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_7b89e90f-e02.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/45edac6b-2078-4678-89f3-6f9800cf5e5f/avatar/skill/au_7b89e90f-e02.png"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "long1973m",
+  "slug": "price-comparison-analyzer",
+  "displayName": "商品比价技能",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773128296131,
+    "commit": "https://github.com/openclaw/skills/commit/c5e62a68612710949e41e4512f9ee8939423703c"
+  },
+  "history": []
+}

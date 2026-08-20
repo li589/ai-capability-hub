@@ -1,0 +1,12 @@
+{
+  "slug": "contextweave-interactive-architecture",
+  "name": "架构图一键生成",
+  "version": "1.2.4",
+  "installedAt": 1787227470370,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/427739/7ae782c64d90426a9ebf08526d2dbbae.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/427739/7ae782c64d90426a9ebf08526d2dbbae.png"
+}

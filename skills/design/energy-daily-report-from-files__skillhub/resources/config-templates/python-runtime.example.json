@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.1",
+  "minimum_python": "3.10",
+  "mode": "verify-only",
+  "windows": {
+    "installer_file": "python-REPLACE_VERSION-amd64.exe",
+    "sha256": "REPLACE_WITH_64_HEX_FROM_OFFICIAL_RELEASE",
+    "publisher": "Python Software Foundation",
+    "source_host": "www.python.org",
+    "manual_install_only": true
+  },
+  "macos": {
+    "installer_file": "python-REPLACE_VERSION-macos11.pkg",
+    "sha256": "REPLACE_WITH_64_HEX_FROM_OFFICIAL_RELEASE",
+    "publisher": "Python Software Foundation",
+    "source_host": "www.python.org",
+    "manual_install_only": true
+  },
+  "policy": {
+    "installer_must_be_preprovided": true,
+    "allow_network_download": false,
+    "allow_process_launch": false,
+    "allow_admin_install": false,
+    "require_sha256": true,
+    "require_signature": true
+  }
+}

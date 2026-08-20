@@ -1,0 +1,10 @@
+{
+  "triggers": [
+    "\\bremember\\b",
+    "\\bdecision\\b",
+    "\\bdecided\\b",
+    "\\bfrom now on\\b",
+    "\\balways\\b",
+    "\\bpriority\\b"
+  ]
+}

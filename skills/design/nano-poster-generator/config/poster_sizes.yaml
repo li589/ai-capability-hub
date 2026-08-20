@@ -1,0 +1,172 @@
+# Poster output size definitions
+# Organized by category: print, social, general
+
+sizes:
+  # Print sizes (300 DPI equivalent)
+  a4_portrait:
+    name: "A4 Portrait"
+    width: 2480
+    height: 3508
+    aspect_ratio: "1:1.414"
+    category: print
+
+  a4_landscape:
+    name: "A4 Landscape"
+    width: 3508
+    height: 2480
+    aspect_ratio: "1.414:1"
+    category: print
+
+  a3_portrait:
+    name: "A3 Portrait"
+    width: 3508
+    height: 4961
+    aspect_ratio: "1:1.414"
+    category: print
+
+  a3_landscape:
+    name: "A3 Landscape"
+    width: 4961
+    height: 3508
+    aspect_ratio: "1.414:1"
+    category: print
+
+  movie_poster:
+    name: "Movie Poster (27x40 in)"
+    width: 2700
+    height: 4000
+    aspect_ratio: "2:3"
+    category: print
+
+  # Social media sizes
+  instagram_square:
+    name: "Instagram Square"
+    width: 1080
+    height: 1080
+    aspect_ratio: "1:1"
+    category: social
+
+  instagram_story:
+    name: "Instagram Story / Reels"
+    width: 1080
+    height: 1920
+    aspect_ratio: "9:16"
+    category: social
+
+  instagram_portrait:
+    name: "Instagram Portrait Post"
+    width: 1080
+    height: 1350
+    aspect_ratio: "4:5"
+    category: social
+
+  facebook_post:
+    name: "Facebook Post"
+    width: 1200
+    height: 630
+    aspect_ratio: "1.91:1"
+    category: social
+
+  twitter_post:
+    name: "Twitter/X Post"
+    width: 1600
+    height: 900
+    aspect_ratio: "16:9"
+    category: social
+
+  xiaohongshu:
+    name: "小红书"
+    width: 1080
+    height: 1440
+    aspect_ratio: "3:4"
+    category: social
+
+  linkedin_post:
+    name: "LinkedIn Post"
+    width: 1200
+    height: 627
+    aspect_ratio: "1.91:1"
+    category: social
+
+  linkedin_portrait:
+    name: "LinkedIn Portrait"
+    width: 1200
+    height: 1500
+    aspect_ratio: "4:5"
+    category: social
+
+  pinterest:
+    name: "Pinterest Pin"
+    width: 1000
+    height: 1500
+    aspect_ratio: "2:3"
+    category: social
+
+  youtube_thumbnail:
+    name: "YouTube Thumbnail"
+    width: 1280
+    height: 720
+    aspect_ratio: "16:9"
+    category: social
+
+  tiktok:
+    name: "TikTok Cover"
+    width: 1080
+    height: 1920
+    aspect_ratio: "9:16"
+    category: social
+
+  wechat_moments:
+    name: "微信朋友圈"
+    width: 1080
+    height: 1080
+    aspect_ratio: "1:1"
+    category: social
+
+  # General purpose
+  widescreen:
+    name: "Widescreen (16:9)"
+    width: 1920
+    height: 1080
+    aspect_ratio: "16:9"
+    category: general
+
+  square:
+    name: "Square"
+    width: 2000
+    height: 2000
+    aspect_ratio: "1:1"
+    category: general
+
+  portrait_2x3:
+    name: "Portrait (2:3)"
+    width: 2000
+    height: 3000
+    aspect_ratio: "2:3"
+    category: general
+
+  portrait_3x4:
+    name: "Portrait (3:4)"
+    width: 2000
+    height: 2667
+    aspect_ratio: "3:4"
+    category: general
+
+default: portrait_2x3
+
+# Output format settings per category
+format_settings:
+  print:
+    format: PNG
+    color_mode: RGB
+    embed_icc: true
+  social:
+    format: JPEG
+    color_mode: RGB
+    jpeg_quality: 92
+    max_file_size_mb: 5
+    embed_icc: false
+  general:
+    format: PNG
+    color_mode: RGB
+    embed_icc: true

@@ -1,0 +1,20 @@
+{
+  "name": "Smooth Browser",
+  "installedAt": 1785784667577,
+  "source": "marketplace",
+  "version": "0.1.0",
+  "skillId": "skill_2053082732028436480",
+  "examples_zh": [
+    "让 Smooth.sh 云端 AI 浏览器登录我的测试账户，按自然语言完成资料页更新，并保留持久 profile 供下次复用。",
+    "用 Smooth Browser 打开供应商门户，搜索指定订单号，提取订单状态、物流号和最近更新时间。",
+    "通过自然语言指令让云端浏览器填写一个多页调研表单，在提交前暂停并展示最终确认页。"
+  ],
+  "examples_en": [
+    "Have the Smooth.sh cloud AI browser log into my test account, update the profile page through natural-language instructions, and keep the persistent profile for reuse.",
+    "Use Smooth Browser to open the vendor portal, search for the specified order number, and extract status, tracking number, and last update time.",
+    "Instruct the cloud browser in natural language to fill a multi-page survey form, then pause on the final confirmation page before submission."
+  ],
+  "description_zh": "Smooth.sh 云端 AI 浏览器代理，自然语言驱动网页操作",
+  "description_en": "Smooth.sh cloud AI browser agent with natural language web automation",
+  "iconSource": "letter:auto"
+}

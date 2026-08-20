@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:producthunt",
+  "registry": "trae-remote-official",
+  "plugin_name": "producthunt",
+  "version": "1.0.1",
+  "marketplace_plugin_id": "febd6c95-d5cc-422b-b2f9-88fe4cb33e90",
+  "remote_installed_plugin_id": "CJ51F23EY57H22",
+  "checksum": "ecb194ee0e8804005d5f395c302644e27de5f4cc9738d023127556ed332a8321",
+  "file_size": 9945,
+  "installed_at": 1787227201721
+}

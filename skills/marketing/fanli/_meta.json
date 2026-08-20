@@ -1,0 +1,27 @@
+{
+  "owner": "fangshan101-coder",
+  "slug": "fanli",
+  "displayName": "Fanli",
+  "latest": {
+    "version": "4.2.2",
+    "publishedAt": 1776253407453,
+    "commit": "https://github.com/openclaw/skills/commit/5de9d0357e0621b6b6b1dfb85d051913b92de734"
+  },
+  "history": [
+    {
+      "version": "4.2.0",
+      "publishedAt": 1775641152875,
+      "commit": "https://github.com/openclaw/skills/commit/d9b0a5fcd01cd8953b7bac34e470793ace9cd778"
+    },
+    {
+      "version": "4.1.0",
+      "publishedAt": 1775206294409,
+      "commit": "https://github.com/openclaw/skills/commit/4d1977e8036acb070e3d686ac847b0b882c39ef9"
+    },
+    {
+      "version": "0.1.0",
+      "publishedAt": 1774575836053,
+      "commit": "https://github.com/openclaw/skills/commit/a87f6bc4f7fb96c1220ae2d1186676ac438f9abe"
+    }
+  ]
+}

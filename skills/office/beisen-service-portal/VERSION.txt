@@ -1,0 +1,2 @@
+Skill: beisen-service-portal
+Release Time: 2026-08-14 20:33:30 +0800

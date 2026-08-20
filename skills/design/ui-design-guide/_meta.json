@@ -1,0 +1,17 @@
+{
+  "owner": "binggg",
+  "slug": "ui-design-guide",
+  "displayName": "Ui Design Guide",
+  "latest": {
+    "version": "1.5.0",
+    "publishedAt": 1776227217131,
+    "commit": "https://github.com/openclaw/skills/commit/27ce180ee9ece53ca638636fd44669f07f72ef15"
+  },
+  "history": [
+    {
+      "version": "1.4.0",
+      "publishedAt": 1776076205707,
+      "commit": "https://github.com/openclaw/skills/commit/0c2d63cbbd813feac08149e2965d19d79620809a"
+    }
+  ]
+}

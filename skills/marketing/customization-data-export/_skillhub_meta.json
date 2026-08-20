@@ -1,0 +1,11 @@
+{
+  "name": "小鹅通数据分析",
+  "installedAt": 1787228376174,
+  "source": "marketplace",
+  "version": "0.1.1",
+  "skillId": "skill_2088929326051889152",
+  "description_zh": "一键整理小鹅通平台课程、直播、用户、学习等经营数据，并生成分析结果。帮助商家快速了解业务表现，辅助运营决策。",
+  "description_en": "Organizes business data across xiaoe courses, live streams, users, and learning activities with one click and generates analysis results, helping merchants quickly understand business performance and make better operational decisions.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/70f8ec50-1fce-4990-8b38-75c3506712b8/avatar/skill/au_77e27955-563.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/70f8ec50-1fce-4990-8b38-75c3506712b8/avatar/skill/au_77e27955-563.png"
+}

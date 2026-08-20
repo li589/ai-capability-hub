@@ -1,0 +1,10 @@
+{
+  "name": "蜜度公文写作",
+  "installedAt": 1787227642754,
+  "source": "marketplace",
+  "version": "1.2.0",
+  "skillId": "skill_2074470519980630016",
+  "description_zh": "多轮对话式公文写作助手，支持简报、报告、邮件、总结等多种文体，可基于上下文持续修改内容。",
+  "description_en": "Multi-turn conversational assistant for official document writing: briefs, reports, emails, summaries, with context-aware refinement.",
+  "iconSource": "letter:auto"
+}

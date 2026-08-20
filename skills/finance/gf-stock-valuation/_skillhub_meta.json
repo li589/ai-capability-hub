@@ -1,0 +1,11 @@
+{
+  "name": "财务对比",
+  "installedAt": 1787227689585,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2083073712969031680",
+  "description_zh": "基于广发证券接口，查询多只股票市值、PE、PB、行业均值与估值百分位，用于个股估值横向财务对比。",
+  "description_en": "GF Securities financial comparison tool, querying market cap, PE, PB, industry averages, and valuation percentiles for multi-stock horizontal financial comparison.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_c7dd2ea3-21f.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/1d7a738a-b9b2-479e-ab7f-515c16ff422f/avatar/skill/au_c7dd2ea3-21f.png"
+}

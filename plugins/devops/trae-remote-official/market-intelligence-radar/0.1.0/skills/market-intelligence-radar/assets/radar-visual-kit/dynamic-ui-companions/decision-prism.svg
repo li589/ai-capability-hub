@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+  <title id="t">Decision Prism Dynamic UI companion guide</title>
+  <desc id="d">Asymmetric decision plane with one dominant zone and two synchronized evidence zones.</desc>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <g fill="#161514"><rect x="40" y="32" width="186" height="12"/><rect x="40" y="58" width="116" height="6"/></g>
+  <rect x="40" y="92" width="416" height="222" rx="16" fill="#f2f1ef"/>
+  <g fill="#161514"><rect x="64" y="116" width="152" height="10"/><rect x="64" y="142" width="328" height="2"/></g>
+  <g fill="#ef4b2f"><rect x="64" y="178" width="244" height="24" rx="12"/><rect x="64" y="216" width="312" height="24" rx="12"/><rect x="64" y="254" width="184" height="24" rx="12"/></g>
+  <rect x="476" y="92" width="204" height="104" rx="16" fill="#f2f1ef"/>
+  <rect x="476" y="210" width="204" height="104" rx="16" fill="#f2f1ef"/>
+  <g fill="#161514"><rect x="498" y="114" width="100" height="9"/><rect x="498" y="232" width="122" height="9"/></g>
+  <g fill="#6658d8"><circle cx="510" cy="160" r="13"/><circle cx="548" cy="160" r="13"/><circle cx="586" cy="160" r="13"/></g>
+  <path d="M500 282L536 262L572 276L610 246L654 258" fill="none" stroke="#ef4b2f" stroke-width="6" stroke-linecap="round"/>
+  <rect x="40" y="338" width="640" height="2" fill="#161514"/>
+</svg>

@@ -1,0 +1,10 @@
+{
+  "name": "finance-ops",
+  "installedAt": 1785864405437,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053082181142450176",
+  "description_zh": "AI CFO 助手，财务简报、成本分析与场景建模",
+  "description_en": "AI CFO assistant for financial briefings, cost analysis, and scenario modeling",
+  "iconSource": "letter:auto"
+}

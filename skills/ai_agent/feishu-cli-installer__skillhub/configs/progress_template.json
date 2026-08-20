@@ -1,0 +1,16 @@
+{
+  "step": 0,
+  "completed": [],
+  "failed": null,
+  "app_id": null,
+  "app_secret": null,
+  "install_time": null,
+  "environment": {
+    "node_version": null,
+    "npm_version": null,
+    "package_manager": "npm",
+    "os": null,
+    "arch": null
+  },
+  "errors": []
+}

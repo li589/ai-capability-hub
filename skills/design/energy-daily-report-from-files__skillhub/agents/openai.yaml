@@ -1,0 +1,6 @@
+interface:
+  display_name: "能源日报本地系统生成器"
+  short_description: "从能源资料或旧系统生成/修改完整局域网ZIP，也支持只分析和评审原型"
+  default_prompt: "使用 $energy-daily-report-from-files。若我上传了真实能源业务文件并要求系统，请生成完整可本地部署的中文 Web 局域网系统并直接交付单根目录 ZIP，保留整个系统 Python 源码、templates/static、数据库与业务计算、Excel 导入导出、成对一键启动/停止、备份恢复和 Windows EXE 构建源码；先只读校验内置完整局域网基线和用户输入，真实业务值以我的文件为准，参考基线只用于代码架构。若我上传的是旧系统 ZIP，优先做增量修改并保留仍有效能力；若我明确只分析，则不要生成系统；若暂时没有真实文件但要原型，所有未确认内容标记 demo/待确认且不得冒充真实生产数据。EXE、接口和真机运行状态只按真实证据描述。"
+policy:
+  allow_implicit_invocation: true

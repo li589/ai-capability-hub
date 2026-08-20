@@ -1,0 +1,11 @@
+{
+  "owner": "mguozhen",
+  "slug": "amazon-ppc-analyzer",
+  "displayName": "Amazon Ppc Analyzer",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1773988921373,
+    "commit": "https://github.com/openclaw/skills/commit/de564da1eec2ad2bdcf66f5a68f7a52024795281"
+  },
+  "history": []
+}

@@ -1,0 +1,10 @@
+{
+  "name": "银行战略与治理分析器",
+  "installedAt": 1787227608635,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084643743016112128",
+  "description_zh": "以\"财务数据+管理层行为+组织演进\"三位一体视角，对基准银行 vs 对标银行的战略定力、决策质量与治理韧性进行穿透式分析，输出领导更替下的战略延续性评估、关键节点反事实推演与治理韧性评分，回答\"在不确定环境中，如何实现一张蓝图绘到底\"。用户需指定基准银行和对标银行，如\"以A银行为基准、对比B/C/D/E银行生成战略与治理穿透分析报告\"。",
+  "description_en": "Using a \"financial data + management behavior + organizational evolution\" trinity perspective, conduct a penetrating analysis of the benchmark bank vs. peer banks across strategic resolve, decision quality, and governance resilience. Deliver an assessment of strategic continuity across leadership transitions, counterfactual reasoning at key inflection points, and a governance-resilience score—answering the question: \"In an uncertain environment, how do you see a single blueprint through to the end?\" Users must specify a benchmark bank and the comparison banks, e.g., \"Using Bank A as the benchmark, compare Banks B/C/D/E to generate a strategy-and-governance penetration analysis report.\"",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "replication-agent",
+  "name": "复刻 Agent",
+  "version": "1.0.0",
+  "installedAt": 1787229027258,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/596662/6801bbd32799495da9d25dfe8a75b1ae.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/596662/6801bbd32799495da9d25dfe8a75b1ae.png"
+}

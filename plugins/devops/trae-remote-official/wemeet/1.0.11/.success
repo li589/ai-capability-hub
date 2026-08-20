@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:wemeet",
+  "registry": "trae-remote-official",
+  "plugin_name": "wemeet",
+  "version": "1.0.11",
+  "marketplace_plugin_id": "a1d23ae5-8f3b-401c-8eb9-7cfcef071b14",
+  "remote_installed_plugin_id": "_QUVPG0YQKCEW1",
+  "checksum": "3b1f48fd70ab8c8c967efc9d2435e75cd55d78b9d0fb00ac142afbfd74e6e809",
+  "file_size": 112367,
+  "installed_at": 1787227202113
+}

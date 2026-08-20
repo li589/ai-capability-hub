@@ -1,0 +1,12 @@
+{
+  "slug": "tencentcloud-aigc-recog-image",
+  "name": "TencentCloud Image AIGC Detection",
+  "version": "1.0.8",
+  "installedAt": 1787228982241,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a4e49550-e527-4406-b761-c4f2e607b757.png"
+}

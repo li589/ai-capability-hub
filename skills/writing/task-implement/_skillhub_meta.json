@@ -1,0 +1,20 @@
+{
+  "name": "任务执行",
+  "installedAt": 1785784799170,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053082987900493824",
+  "examples_zh": [
+    "按 .task 目录下的对齐文档把这个任务跑完",
+    "我先去开会，你把这个任务执行完再叫我",
+    "开始执行 0506_user-center"
+  ],
+  "examples_en": [
+    "Execute the task using the alignment docs in .task/",
+    "I'm stepping away — run this task to completion and verify",
+    "Start /task-implement 0506_user-center"
+  ],
+  "description_zh": "作为用户代理自主执行任务并独立验收交付",
+  "description_en": "Run a task autonomously as the user's proxy with independent verification",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "tyc-mcp": {
+      "url": "https://mcp.tianyancha.com/v1",
+      "headers": {
+        "Authorization": "Bearer ${connector.tianyancha.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

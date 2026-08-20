@@ -1,0 +1,11 @@
+{
+  "owner": "noah-1106",
+  "slug": "weibo-trending",
+  "displayName": "微博热搜采集 | Weibo Hot Search",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773612684073,
+    "commit": "https://github.com/openclaw/skills/commit/c60de5b977a7d08e4d3cbf27badccae7cb28476e"
+  },
+  "history": []
+}

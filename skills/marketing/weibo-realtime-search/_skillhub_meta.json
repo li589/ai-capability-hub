@@ -1,0 +1,11 @@
+{
+  "name": "微博作品搜索",
+  "installedAt": 1787227734353,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087427899426947072",
+  "description_zh": "按关键词搜索微博博文，支持排序方式和认证类型筛选",
+  "description_en": "Search Weibo posts by keyword with sorting options and verification type filter",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_06c086c0-7d6.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_06c086c0-7d6.svg"
+}

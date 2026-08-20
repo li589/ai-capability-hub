@@ -1,0 +1,50 @@
+{
+  "name": "wemeet",
+  "version": "1.0.11",
+  "description": "腾讯会议 MCP 插件，通过 API 连接腾讯会议服务。",
+  "i18n": {
+    "display_name": {
+      "en": "Tencent Meeting",
+      "zh-cn": "腾讯会议",
+      "ja": "テンセント会議"
+    },
+    "description": {
+      "en": "Connect to Tencent Meeting via MCP API.",
+      "zh-cn": "通过 MCP API 连接腾讯会议服务。",
+      "ja": "MCP APIを介してテンセント会議に接続します。"
+    }
+  },
+  "author": {
+    "name": "Tencent Meeting Connector"
+  },
+  "homepage": "",
+  "license": "Proprietary",
+  "keywords": [
+    "meeting",
+    "wemeet",
+    "tencent"
+  ],
+  "interface": {
+    "displayName": "腾讯会议",
+    "shortDescription": "腾讯会议 MCP 集成",
+    "longDescription": "通过 MCP API 连接腾讯会议，支持会议管理、日程安排等操作。",
+    "developerName": "Tencent Meeting Connector",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "",
+    "defaultPrompt": [
+      "创建会议",
+      "查看会议列表",
+      "查询会议详情"
+    ],
+    "brandColor": "#07C160",
+    "logo": "./assets/app-icon.png",
+    "composerIcon": "./assets/app-icon.png",
+    "screenshots": []
+  },
+  "connector": "./connector.json"
+}

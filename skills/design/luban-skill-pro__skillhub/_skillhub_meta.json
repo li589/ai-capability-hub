@@ -1,0 +1,12 @@
+{
+  "slug": "luban-skill-pro",
+  "name": "鲁班.skill",
+  "version": "1.0.6",
+  "installedAt": 1787227476913,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/9bcddb03-161b-42cd-bf2e-cf0159d85bd7.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/9bcddb03-161b-42cd-bf2e-cf0159d85bd7.png"
+}

@@ -1,0 +1,21 @@
+{
+  "name": "微信小程序开发框架",
+  "installedAt": 1785864406818,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083649073352704",
+  "examples_zh": [
+    "查看微信小程序的API文档",
+    "用云开发创建一个数据库",
+    "实现微信小程序的用户登录"
+  ],
+  "examples_en": [
+    "View WeChat Mini Program API documentation",
+    "Create a database with WeChat cloud development",
+    "Implement user login for WeChat Mini Program"
+  ],
+  "description_zh": "微信小程序开发框架（模板、组件、API、云开发）",
+  "description_en": "WeChat Mini Program framework (templates, components, APIs, cloud)",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wechat-miniprogram.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/wechat-miniprogram.svg"
+}

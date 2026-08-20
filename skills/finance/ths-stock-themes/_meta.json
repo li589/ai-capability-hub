@@ -1,0 +1,17 @@
+{
+  "owner": "shinelp100",
+  "slug": "ths-stock-themes",
+  "displayName": "Ths Stock Themes",
+  "latest": {
+    "version": "2.0.0",
+    "publishedAt": 1774147279218,
+    "commit": "https://github.com/openclaw/skills/commit/02c29cd2b4712ecc29d4f25bed41e6818b83d0b0"
+  },
+  "history": [
+    {
+      "version": "1.0.1",
+      "publishedAt": 1774146452208,
+      "commit": "https://github.com/openclaw/skills/commit/1dd6a9b16c9a7fce9ed48bb6a5cf81026edc430c"
+    }
+  ]
+}

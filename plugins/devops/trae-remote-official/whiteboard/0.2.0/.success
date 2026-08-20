@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:whiteboard",
+  "registry": "trae-remote-official",
+  "plugin_name": "whiteboard",
+  "version": "0.2.0",
+  "marketplace_plugin_id": "03c20665-e4bc-4ff1-ad79-017eb52acbaa",
+  "remote_installed_plugin_id": "Z3OFE_0_3EEH96",
+  "checksum": "f2be16f8bcfb1aa0feb92d1dbed06feb78bfd2935cbe3b0a513d21c406f5a172",
+  "file_size": 1377707,
+  "installed_at": 1787227204326
+}

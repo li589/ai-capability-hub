@@ -1,0 +1,17 @@
+{
+  "owner": "luhuiwang",
+  "slug": "ms-ai",
+  "displayName": "Ms Ai",
+  "latest": {
+    "version": "1.2.1",
+    "publishedAt": 1774927561112,
+    "commit": "https://github.com/openclaw/skills/commit/77fb2cf34044d1d7062daf747015c86039810413"
+  },
+  "history": [
+    {
+      "version": "1.2.0",
+      "publishedAt": 1774502610985,
+      "commit": "https://github.com/openclaw/skills/commit/c411ee100f6b65ac1826f78e1fc8712c75e0cd6f"
+    }
+  ]
+}

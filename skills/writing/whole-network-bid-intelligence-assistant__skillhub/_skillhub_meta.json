@@ -1,0 +1,12 @@
+{
+  "slug": "whole-network-bid-intelligence-assistant",
+  "name": "全网招中标智能分析助手",
+  "version": "1.0.1",
+  "installedAt": 1787228772458,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png"
+}

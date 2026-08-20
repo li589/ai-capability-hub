@@ -1,0 +1,21 @@
+{
+  "name": "jiaozhen-factcheck",
+  "installedAt": 1787228365687,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2053082189451366400",
+  "examples_zh": [
+    "柿子和螃蟹不能一起吃，是真的吗？",
+    "较真一下：自热米饭里的是塑料假大米？",
+    "隔夜茶能不能喝？"
+  ],
+  "examples_en": [
+    "Is it true that persimmons and crabs cannot be eaten together?",
+    "Fact check: Is the rice in self-heating meals made of plastic?",
+    "Can you drink overnight tea?"
+  ],
+  "description_zh": "事实查证与谣言识别，判断信息真伪与可靠性",
+  "description_en": "Fact-checking tool for verifying claims and identifying rumors",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/jiaozhen-factcheck.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/jiaozhen-factcheck.svg"
+}

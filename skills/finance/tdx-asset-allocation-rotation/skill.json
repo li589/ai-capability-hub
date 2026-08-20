@@ -1,0 +1,27 @@
+{
+  "name": "tdx-asset-allocation-rotation",
+  "display_name": "配置轮动",
+  "version": "1.1.0",
+  "description": "资产配置轮动智策师：基于宏观周期、估值水位、资金流向与行业景气四象限，输出大类资产（股票/债券/商品/现金）轮动建议与再平衡方案。",
+  "category": "资产配置",
+  "skillType": "HYBRID",
+  "author": "通达信 AI 能力运营中心",
+  "triggers": [
+    "示例",
+    "----------",
+    "------",
+    "资产配置 / 再平衡",
+    "行业轮动 / 风格",
+    "宏观映射到配置",
+    "板块性价比",
+    "tdx-asset-allocation-rotation"
+  ],
+  "useCases": [
+    "面向资产配置场景，提供专业分析与结构化输出",
+    "支持自然语言触发，输出可直接用于投资决策参考"
+  ],
+  "dependencies": [
+    "通达信 MCP"
+  ],
+  "lastUpdated": "2026-07-17"
+}

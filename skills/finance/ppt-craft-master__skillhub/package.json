@@ -1,0 +1,13 @@
+{
+  "name": "ppt-craft-master-v2",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Production-grade PowerPoint generation and QA skill",
+  "dependencies": {
+    "pptxgenjs": "^3.12.0",
+    "jszip": "^3.10.1"
+  },
+  "scripts": {
+    "qa": "node scripts/check-overflow.js"
+  }
+}

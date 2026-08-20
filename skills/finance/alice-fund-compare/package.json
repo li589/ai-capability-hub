@@ -1,0 +1,19 @@
+{
+  "name": "alice-fund-compare",
+  "version": "1.0.5",
+  "description": "CLI: 调用万得 Alice Agent「基金对比分析」技能（A2A SSE），对多只基金生成全方位对比分析报告",
+  "type": "module",
+  "private": true,
+  "files": [
+    "SKILL.md",
+    "AGENT.md",
+    "package.json",
+    "_meta.json",
+    "scripts/"
+  ],
+  "scripts": {},
+  "bin": {
+    "alice-fund-compare": "./scripts/cli.mjs",
+    "afcmp": "./scripts/cli.mjs"
+  }
+}

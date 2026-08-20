@@ -1,0 +1,48 @@
+# security-patterns.yaml - sample L1 custom regex/substring rules.
+#
+# Usage: copy this file without the .example suffix to either location below.
+# The rules take effect without reinstalling the plugin:
+#   cp security-patterns.yaml.example <git-root>/.codesec/security-patterns.yaml
+#
+# Locations. Both levels are loaded and merged:
+#   Project-level  <git-root>/.codesec/security-patterns.yaml   Higher priority; commit it for team sharing.
+#   User-level     ~/.qodersec/security-patterns.yaml            Personal global rules for all repositories.
+# If the same ruleName exists at both levels, the project-level rule overrides the user-level rule.
+# Other rules are combined and matched in the same pipeline as the built-in rules.
+#
+# Controlled by review.post_tool_use_file.patterns in config.yaml:
+#   patterns.enabled=false        Disable the whole layer: built-in and custom rules.
+#   patterns.custom.enabled=false Disable only these custom rules. Built-in rules still run and this file is not read.
+#
+# Guardrails: after merge and deduplication, at most 50 rules are kept; each reminder is capped at 1KB;
+# regex is capped at 1000 characters. Regexes with catastrophic backtracking risk, such as nested
+# quantifiers (a+)+ / (.*)+ or overlapping alternation (a|a)+, are rejected. Rules with compile
+# errors or no content matcher are dropped and logged without affecting the remaining rules.
+#
+# Top-level value is an array of rules. Fields:
+#   ruleName      Required unique identifier used for cross-level deduplication/override.
+#   substrings    Optional string array. Any substring match triggers the rule. This is fastest.
+#   regex         Optional RE2 syntax, implemented by Go regexp with linear-time guarantees.
+#   path_glob     Optional single glob. Supports * within one path segment and ** across directories.
+#   paths         Optional repository-relative path prefix allowlist. Any prefix match allows the rule.
+#   exclude_paths Optional path prefix denylist. Any match skips the rule.
+#   severity      Optional HIGH|MEDIUM|LOW. Defaults to MEDIUM.
+#   reminder      Required message shown when the rule matches.
+
+- ruleName: no-hardcoded-prod-key
+  substrings: ["ACME_PROD_KEY"]
+  severity: HIGH
+  reminder: "Do not hardcode production API keys. Use a vault or environment variable injection."
+
+- ruleName: no-raw-fstring-sql
+  regex: "cursor\\.execute\\(f[\"']"
+  paths: ["src/"]
+  exclude_paths: ["src/tests/", "scripts/"]
+  severity: HIGH
+  reminder: "Use parameterized queries. Do not concatenate SQL with f-strings."
+
+- ruleName: no-eval-in-handlers
+  substrings: ["eval("]
+  path_glob: "src/handlers/**/*.py"
+  severity: MEDIUM
+  reminder: "Do not use eval() in handlers. Use ast.literal_eval() or JSON parsing instead."

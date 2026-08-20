@@ -1,0 +1,12 @@
+{
+  "slug": "office-automation-pro",
+  "name": "办公自动化Pro",
+  "version": "1.0.0",
+  "installedAt": 1787228745987,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/2d8152d9-7618-454e-9d87-2487f1b4457f.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/2d8152d9-7618-454e-9d87-2487f1b4457f.png"
+}

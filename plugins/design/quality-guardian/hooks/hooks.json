@@ -1,0 +1,26 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|SearchReplace",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node hooks/check-ui-anti-patterns.js"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node hooks/post-task-reminder.js"
+          }
+        ]
+      }
+    ]
+  }
+}

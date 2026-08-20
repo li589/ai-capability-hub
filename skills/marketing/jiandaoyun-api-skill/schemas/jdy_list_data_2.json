@@ -1,0 +1,53 @@
+{
+  "client_only_params": [
+    "max_records"
+  ],
+  "description": "查询简道云表单数据，带 filter 参数校验（防止 like 等不兼容操作符导致的错误数据陷阱）。",
+  "display_name": "查询表单数据（带 filter 校验版）",
+  "domain": "数据",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/app/entry/data/list",
+  "method": "POST",
+  "name": "jdy_list_data_2",
+  "params": {
+    "app_id": {
+      "description": "应用ID",
+      "type": "string"
+    },
+    "data_id": {
+      "default": "",
+      "description": "分页游标：上次查询最后一条记录的_id，首次查询留空。自动分页模式下无需传此参数。",
+      "type": "string"
+    },
+    "entry_id": {
+      "description": "表单ID",
+      "type": "string"
+    },
+    "fields": {
+      "default": [],
+      "description": "需要返回的字段名列表，不传则返回全部字段。建议只传需要的字段以提升速度。",
+      "type": "array"
+    },
+    "filter": {
+      "default": {},
+      "description": "筛选器，格式：{\"rel\":\"and\",\"cond\":[{\"field\":\"字段名\",\"type\":\"字段类型\",\"method\":\"eq\",\"value\":[\"值\"]}]}。本工具会先校验 method 是否适配 type，不合规直接报错不透传。",
+      "type": "object"
+    },
+    "limit": {
+      "default": 10,
+      "description": "查询条数 1-100，默认10。设为100且不传data_id时触发自动全量分页模式，一次性返回所有数据。",
+      "type": "integer"
+    },
+    "max_records": {
+      "default": 0,
+      "description": "自动分页模式下最多拉取的记录总数，0表示不限制（全量）。大表建议设置上限避免超时。",
+      "type": "integer"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "app_id",
+    "entry_id"
+  ],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

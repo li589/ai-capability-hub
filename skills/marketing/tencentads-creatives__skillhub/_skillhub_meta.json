@@ -1,0 +1,12 @@
+{
+  "slug": "tencentads-creatives",
+  "name": "腾讯营销投放-创意管理",
+  "version": "0.5.8",
+  "installedAt": 1787228879232,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/10f9d8ff-5e7f-434f-9992-5e71e1d4e990.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/10f9d8ff-5e7f-434f-9992-5e71e1d4e990.png"
+}

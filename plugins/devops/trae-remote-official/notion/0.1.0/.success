@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:notion",
+  "registry": "trae-remote-official",
+  "plugin_name": "notion",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "4d45c338-ca6f-4c6f-a0f6-dd3d3451dca2",
+  "remote_installed_plugin_id": "AQQ.VG3ZCX1J9L",
+  "checksum": "b3249866fd175c0783e4f5d142bb7eed8a50feaaebcb3a47640bf474e74d23a0",
+  "file_size": 242984,
+  "installed_at": 1787227203229
+}

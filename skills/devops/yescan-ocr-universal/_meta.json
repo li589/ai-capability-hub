@@ -1,0 +1,11 @@
+{
+  "owner": "mozhihuidage",
+  "slug": "yescan-ocr-universal",
+  "displayName": "yescan-ocr-universal",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1773836306123,
+    "commit": "https://github.com/openclaw/skills/commit/aab933dee572409ccf8d70ded54f60fbdbeea5c1"
+  },
+  "history": []
+}

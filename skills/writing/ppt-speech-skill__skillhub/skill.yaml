@@ -1,0 +1,46 @@
+id: ppt_speech_generator
+name: PPT一键生成演讲稿
+version: 1.1.0
+description: 上传PPT自动生成整套逐页演讲稿，适用于汇报、路演、培训
+
+author: your_name
+icon: icon.png
+
+# 对外暴露的参数（用户在界面填写）
+inputs:
+  - name: file
+    type: file
+    label: 上传PPT文件
+    required: true
+
+  - name: audience
+    type: string
+    label: 听众类型
+    default: 客户
+
+  - name: style
+    type: string
+    label: 演讲风格
+    default: 销售型
+
+  - name: total_duration
+    type: string
+    label: 总时长
+    default: 10分钟
+
+# 输出
+outputs:
+  - name: result
+    label: 演讲稿
+
+# 绑定工作流
+workflow: workflow.yaml
+
+# 可选：分类（方便市场展示）
+categories:
+  - productivity
+  - ai-writing
+
+# 可选：定价标签（如果你做市场）
+pricing:
+  type: freemium

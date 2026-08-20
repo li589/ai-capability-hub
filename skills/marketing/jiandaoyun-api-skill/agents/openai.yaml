@@ -1,0 +1,4 @@
+interface:
+  display_name: "简道云 API 工具包"
+  short_description: "通过本地 API Key 安全使用简道云 39 项接口能力"
+  default_prompt: "Use $jiandaoyun-api-skill to inspect or safely operate my authorized Jiandaoyun resources."

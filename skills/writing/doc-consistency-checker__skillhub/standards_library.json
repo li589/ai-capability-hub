@@ -1,0 +1,1389 @@
+{
+  "standards": {
+    "GB/T50123-2019": {
+      "name": "土工试验方法标准",
+      "status": "现行有效",
+      "latest": "GB/T 50123-2019",
+      "replaced_by": null,
+      "superseded": [
+        "GB/T 50123-2007"
+      ],
+      "category": "国标",
+      "domain": "工程勘察/试验",
+      "remark": "住房城乡建设部2019年第131号公告"
+    },
+    "GB50487-2008(2022年版)": {
+      "name": "水利水电工程地质勘察规范",
+      "status": "现行有效",
+      "latest": "GB 50487-2008(2022年版)",
+      "replaced_by": null,
+      "superseded": [
+        "GB 50487-2008"
+      ],
+      "category": "国标(全文强制)",
+      "domain": "工程勘察",
+      "remark": "2022年局部修订版，2023年5月1日实施"
+    },
+    "GB50487-2008": {
+      "name": "水利水电工程地质勘察规范",
+      "status": "已修订",
+      "latest": "GB 50487-2008(2022年版)",
+      "replaced_by": "GB 50487-2008(2022年版)",
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "工程勘察",
+      "remark": "已被2022年版替代"
+    },
+    "GB50201-2014": {
+      "name": "防洪标准",
+      "status": "现行有效",
+      "latest": "GB 50201-2014",
+      "replaced_by": null,
+      "superseded": [
+        "GB 50201-94"
+      ],
+      "category": "国标(全文强制)",
+      "domain": "工程设计",
+      "remark": "全文强制标准"
+    },
+    "GB50288-2018": {
+      "name": "灌溉排水工程设计标准",
+      "status": "现行有效",
+      "latest": "GB 50288-2018",
+      "replaced_by": null,
+      "superseded": [
+        "GB 50288-99"
+      ],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/灌排",
+      "remark": "全文强制标准"
+    },
+    "GB50265-2022": {
+      "name": "泵站设计标准",
+      "status": "现行有效",
+      "latest": "GB 50265-2022",
+      "replaced_by": null,
+      "superseded": [
+        "GB 50265-2010"
+      ],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/泵站",
+      "remark": "全文强制标准"
+    },
+    "GB50433-2018": {
+      "name": "建设项目水土保持技术标准",
+      "status": "现行有效",
+      "latest": "GB 50433-2018",
+      "replaced_by": null,
+      "superseded": [
+        "GB 50433-2007"
+      ],
+      "category": "国标(全文强制)",
+      "domain": "水土保持",
+      "remark": "全文强制标准"
+    },
+    "GB51247-2018": {
+      "name": "水利水电工程抗震设计标准",
+      "status": "现行有效",
+      "latest": "GB 51247-2018",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/抗震",
+      "remark": "全文强制标准"
+    },
+    "GB51018-2014": {
+      "name": "水工建筑物抗冰冻设计规范",
+      "status": "现行有效",
+      "latest": "GB 51018-2014",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/抗冻",
+      "remark": "全文强制标准"
+    },
+    "GB50071-2014": {
+      "name": "小型水力发电站设计规范",
+      "status": "现行有效",
+      "latest": "GB 50071-2014",
+      "replaced_by": null,
+      "superseded": [
+        "GB 50071-2002"
+      ],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/水电",
+      "remark": "全文强制标准"
+    },
+    "GB50286-2013": {
+      "name": "堤防工程设计规范",
+      "status": "现行有效",
+      "latest": "GB 50286-2013",
+      "replaced_by": null,
+      "superseded": [
+        "GB 50286-98"
+      ],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/堤防",
+      "remark": "全文强制标准"
+    },
+    "GB50199-2013": {
+      "name": "水利水电工程结构可靠性设计统一标准",
+      "status": "现行有效",
+      "latest": "GB 50199-2013",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/结构",
+      "remark": "全文强制标准"
+    },
+    "GB50707-2011": {
+      "name": "河道治理设计规范",
+      "status": "现行有效",
+      "latest": "GB 50707-2011",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/河道",
+      "remark": "全文强制标准"
+    },
+    "GB50706-2011": {
+      "name": "水利水电工程劳动安全与工业卫生设计规范",
+      "status": "现行有效",
+      "latest": "GB 50706-2011",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/安全",
+      "remark": "全文强制标准"
+    },
+    "GB50773-2012": {
+      "name": "大型灌区设计规范",
+      "status": "现行有效",
+      "latest": "GB 50773-2012",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/灌区",
+      "remark": "全文强制标准"
+    },
+    "GB50987-2014": {
+      "name": "水利工程设计防火规范",
+      "status": "现行有效",
+      "latest": "GB 50987-2014",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/防火",
+      "remark": "全文强制标准"
+    },
+    "GB50501-2007": {
+      "name": "水利工程工程量清单计价规范",
+      "status": "现行有效",
+      "latest": "GB 50501-2007",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "造价/计价",
+      "remark": "全文强制标准"
+    },
+    "GB51177-2016": {
+      "name": "升船机设计规范",
+      "status": "现行有效",
+      "latest": "GB 51177-2016",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标(全文强制)",
+      "domain": "工程设计/升船机",
+      "remark": "全文强制标准"
+    },
+    "GB/T50625-2023": {
+      "name": "机井工程技术标准",
+      "status": "现行有效",
+      "latest": "GB/T 50625-2023",
+      "replaced_by": null,
+      "superseded": [
+        "GB/T 50625-2010"
+      ],
+      "category": "国标",
+      "domain": "农村水利",
+      "remark": "推荐性国标"
+    },
+    "GB/T50700-2022": {
+      "name": "小型水电站技术改造标准",
+      "status": "现行有效",
+      "latest": "GB/T 50700-2022",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标",
+      "domain": "小水电",
+      "remark": "2022年发布"
+    },
+    "GB/T50027-2024": {
+      "name": "供水水文地质勘察标准",
+      "status": "现行有效",
+      "latest": "GB/T 50027-2024",
+      "replaced_by": null,
+      "superseded": [
+        "GB 50027-2001"
+      ],
+      "category": "国标",
+      "domain": "工程勘察/水文地质",
+      "remark": "2024年8月发布"
+    },
+    "GB/T50600-2020": {
+      "name": "渠道防渗工程技术规范",
+      "status": "现行有效",
+      "latest": "GB/T 50600-2020",
+      "replaced_by": null,
+      "superseded": [
+        "GB/T 50600-2011"
+      ],
+      "category": "国标",
+      "domain": "农村水利/节水灌溉",
+      "remark": "推荐性国标"
+    },
+    "SL252-2017": {
+      "name": "水利水电工程等级划分及洪水标准",
+      "status": "现行有效",
+      "latest": "SL 252-2017",
+      "replaced_by": null,
+      "superseded": [
+        "SL 252-2000"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/基础",
+      "remark": "含强制条文，水利规划基础标准"
+    },
+    "SL274-2020": {
+      "name": "碾压式土石坝设计规范",
+      "status": "现行有效",
+      "latest": "SL 274-2020",
+      "replaced_by": null,
+      "superseded": [
+        "SL 274-2001"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/坝工",
+      "remark": "含强制条文"
+    },
+    "SL191-2008": {
+      "name": "水工混凝土结构设计规范",
+      "status": "已废止",
+      "latest": "SL/T 191-2025《水工混凝土结构设计规范》",
+      "replaced_by": "SL/T 191-2025",
+      "superseded": [
+        "SL/T 191-96"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/混凝土",
+      "remark": "含强制条文"
+    },
+    "SL279-2016": {
+      "name": "水工隧洞设计规范",
+      "status": "现行有效",
+      "latest": "SL 279-2016",
+      "replaced_by": null,
+      "superseded": [
+        "SL 279-2002"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/隧洞",
+      "remark": "含强制条文"
+    },
+    "SL319-2018": {
+      "name": "混凝土重力坝设计规范",
+      "status": "现行有效",
+      "latest": "SL 319-2018",
+      "replaced_by": null,
+      "superseded": [
+        "SL 319-2005"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/坝工",
+      "remark": "含强制条文"
+    },
+    "SL282-2018": {
+      "name": "堆石坝设计规范",
+      "status": "现行有效",
+      "latest": "SL 282-2018",
+      "replaced_by": null,
+      "superseded": [
+        "SL 282-2003"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/坝工",
+      "remark": "含强制条文"
+    },
+    "SL265-2016": {
+      "name": "水闸设计规范",
+      "status": "现行有效",
+      "latest": "SL 265-2016",
+      "replaced_by": null,
+      "superseded": [
+        "SL 265-2001"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/水闸",
+      "remark": "含强制条文"
+    },
+    "SL253-2018": {
+      "name": "泄水建筑物设计规范",
+      "status": "现行有效",
+      "latest": "SL 253-2018",
+      "replaced_by": null,
+      "superseded": [
+        "SL 253-2000"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/泄水",
+      "remark": "含强制条文"
+    },
+    "SL314-2018": {
+      "name": "碾压混凝土坝设计规范",
+      "status": "现行有效",
+      "latest": "SL 314-2018",
+      "replaced_by": null,
+      "superseded": [
+        "SL 314-2004"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/坝工",
+      "remark": "含强制条文"
+    },
+    "SL74-2019": {
+      "name": "水利水电工程钢闸门设计规范",
+      "status": "现行有效",
+      "latest": "SL 74-2019",
+      "replaced_by": null,
+      "superseded": [
+        "SL 74-2013"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/闸门",
+      "remark": "含强制条文"
+    },
+    "SL41-2018": {
+      "name": "水利水电工程水文计算规范",
+      "status": "现行有效",
+      "latest": "SL 41-2018",
+      "replaced_by": null,
+      "superseded": [
+        "SL 44-2006"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/水文",
+      "remark": "含强制条文"
+    },
+    "SL266-2014": {
+      "name": "水电站厂房设计规范",
+      "status": "现行有效",
+      "latest": "SL 266-2014",
+      "replaced_by": null,
+      "superseded": [
+        "SL 266-2001"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/厂房",
+      "remark": "含强制条文"
+    },
+    "SL285-2020": {
+      "name": "水利水电工程灌溉排水设计规范",
+      "status": "现行有效",
+      "latest": "SL 285-2020",
+      "replaced_by": null,
+      "superseded": [
+        "SL 285-2003"
+      ],
+      "category": "水利行业标准",
+      "domain": "工程设计/灌排",
+      "remark": "含强制条文"
+    },
+    "SL/T246-2019": {
+      "name": "灌溉与排水工程技术管理规程",
+      "status": "现行有效",
+      "latest": "SL/T 246-2019",
+      "replaced_by": null,
+      "superseded": [
+        "SL/T 246-2006"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "农村水利/灌排",
+      "remark": "2019年发布"
+    },
+    "SL/T839-2025": {
+      "name": "全断面岩石掘进机法水工隧洞工程技术规范",
+      "status": "现行有效",
+      "latest": "SL/T 839-2025",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "工程施工/隧洞",
+      "remark": "2025年6月14日实施"
+    },
+    "SL/T838-2025": {
+      "name": "地下水库工程设计导则",
+      "status": "现行有效",
+      "latest": "SL/T 838-2025",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "工程设计/地下水库",
+      "remark": "2025年6月14日实施"
+    },
+    "SL/T223-2025": {
+      "name": "水利水电建设工程验收规程",
+      "status": "现行有效",
+      "latest": "SL/T 223-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 223-2008"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "工程验收",
+      "remark": "2025年6月14日实施"
+    },
+    "SL/T277-2024": {
+      "name": "水土保持监测技术规范",
+      "status": "现行有效",
+      "latest": "SL/T 277-2024",
+      "replaced_by": null,
+      "superseded": [
+        "SL 277-2002",
+        "SL 342-2006",
+        "SL 452-2009",
+        "SL 592-2012"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "水土保持",
+      "remark": "整合修订4项标准，2025年1月22日实施"
+    },
+    "SL/T290-2024": {
+      "name": "水利水电工程建设征地移民安置规划设计规范",
+      "status": "现行有效",
+      "latest": "SL/T 290-2024",
+      "replaced_by": null,
+      "superseded": [
+        "SL 290-2009"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "移民安置",
+      "remark": "2024年发布"
+    },
+    "SL/T430-2024": {
+      "name": "调水工程设计导则",
+      "status": "现行有效",
+      "latest": "SL/T 430-2024",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "工程设计/调水",
+      "remark": "2024年发布"
+    },
+    "SL/T523-2024": {
+      "name": "水土保持监理规范",
+      "status": "现行有效",
+      "latest": "SL/T 523-2024",
+      "replaced_by": null,
+      "superseded": [
+        "SL 523-2011"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "水土保持",
+      "remark": "2024年4月30日实施"
+    },
+    "SL/T752-2024": {
+      "name": "绿色小水电评价规程",
+      "status": "现行有效",
+      "latest": "SL/T 752-2024",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "小水电",
+      "remark": "2024年8月6日实施"
+    },
+    "SL/T618-2021": {
+      "name": "水利水电工程可行性研究报告编制规程",
+      "status": "现行有效",
+      "latest": "SL/T 618-2021",
+      "replaced_by": null,
+      "superseded": [
+        "SL 618-2013"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "规划/可研",
+      "remark": "水利规划报告必备标准"
+    },
+    "SL/T619-2021": {
+      "name": "水利水电工程初步设计报告编制规程",
+      "status": "现行有效",
+      "latest": "SL/T 619-2021",
+      "replaced_by": null,
+      "superseded": [
+        "SL 619-2013"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "规划/初设",
+      "remark": "初步设计报告必备标准"
+    },
+    "SL/T617-2021": {
+      "name": "水利水电工程项目建议书编制规程",
+      "status": "现行有效",
+      "latest": "SL/T 617-2021",
+      "replaced_by": null,
+      "superseded": [
+        "SL 617-2013"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "规划/项目建议书",
+      "remark": "项目建议书必备标准"
+    },
+    "SL/T712-2021": {
+      "name": "河湖生态环境需水计算规范",
+      "status": "现行有效",
+      "latest": "SL/T 712-2021",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "水资源/生态",
+      "remark": "2021年发布"
+    },
+    "SL/T808-2021": {
+      "name": "河道管理范围内建设项目防洪评价报告编制导则",
+      "status": "已修订",
+      "latest": "SL/T 808-2021",
+      "replaced_by": "SL/T 808-2025",
+      "superseded": [
+        "SL/Z 808-2012"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "防洪评价",
+      "remark": "SL/Z改为SL/T"
+    },
+    "SL/T819-2023": {
+      "name": "水库生态流量泄放规程",
+      "status": "现行有效",
+      "latest": "SL/T 819-2023",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "生态流量",
+      "remark": "2023年发布"
+    },
+    "SL/T820-2023": {
+      "name": "水利水电工程生态流量计算与泄放设计规范",
+      "status": "现行有效",
+      "latest": "SL/T 820-2023",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "生态流量",
+      "remark": "2023年发布"
+    },
+    "SL/T824-2024": {
+      "name": "水利工程建设项目文件收集与归档规范",
+      "status": "现行有效",
+      "latest": "SL/T 824-2024",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "工程管理",
+      "remark": "2024年8月6日实施"
+    },
+    "SL/T335-2024": {
+      "name": "水土保持规划编制规范",
+      "status": "现行有效",
+      "latest": "SL/T 335-2024",
+      "replaced_by": null,
+      "superseded": [
+        "SL 335-2014"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "水土保持",
+      "remark": "2024年发布"
+    },
+    "SL/T551-2024": {
+      "name": "土石坝安全监测技术规范",
+      "status": "现行有效",
+      "latest": "SL/T 551-2024",
+      "replaced_by": null,
+      "superseded": [
+        "SL 551-2014"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "安全监测",
+      "remark": "2024年发布",
+      "note": "2024-10-22发布，2025-01-22实施；替代SL 551-2012"
+    },
+    "SL/T313-2021": {
+      "name": "水利水电工程施工地质规程",
+      "status": "现行有效",
+      "latest": "SL/T 313-2021",
+      "replaced_by": null,
+      "superseded": [
+        "SL 313-2004"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "工程勘察/施工地质",
+      "remark": "2021年发布"
+    },
+    "SL/T804-2020": {
+      "name": "农田灌溉水质检测与其他技术规范",
+      "status": "现行有效",
+      "latest": "SL/T 804-2020",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "农村水利/灌溉水质",
+      "remark": "2020年发布"
+    },
+    "SL/T825-2024": {
+      "name": "小型农村供水工程规范化提升技术规程",
+      "status": "现行有效",
+      "latest": "SL/T 825-2024",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "农村供水",
+      "remark": "2024年发布"
+    },
+    "SL/T828-2024": {
+      "name": "小型水库监测技术规范",
+      "status": "现行有效",
+      "latest": "SL/T 828-2024",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "水库监测",
+      "remark": "2024年发布"
+    },
+    "SL/T834-2024": {
+      "name": "水利建设项目节水评价编制规程",
+      "status": "现行有效",
+      "latest": "SL/T 834-2024",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业推荐标准",
+      "domain": "节水评价",
+      "remark": "2024年发布"
+    },
+    "SL/T1-2024": {
+      "name": "水利技术标准编写规程",
+      "status": "现行有效",
+      "latest": "SL/T 1-2024",
+      "replaced_by": null,
+      "superseded": [
+        "SL 1-2014"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "标准编写",
+      "remark": "2024年8月24日实施"
+    },
+    "SL/T4-2013": {
+      "name": "农田排水工程技术规范",
+      "status": "已废止",
+      "latest": "SL/T 4-2020《农田排水工程技术规范》",
+      "replaced_by": "SL/T 4-2020",
+      "superseded": [
+        "SL/T 4-1999"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "农田水利/排水",
+      "remark": "已被 SL/T 4-2020 替代（来源：全国标准信息公共服务平台）"
+    },
+    "SL/T4-2020": {
+      "name": "农田排水工程技术规范",
+      "status": "现行有效",
+      "latest": "SL/T 4-2020",
+      "replaced_by": null,
+      "superseded": [
+        "SL 4-2013",
+        "SL/T 4-1999"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "农田水利/排水",
+      "remark": "2020年6月30日发布，替代 SL 4-2013"
+    },
+    "GB/T50363-2018": {
+      "name": "节水灌溉工程技术标准",
+      "status": "现行有效",
+      "latest": "GB/T 50363-2018",
+      "replaced_by": null,
+      "superseded": [
+        "GB/T 50363-2006"
+      ],
+      "category": "国标",
+      "domain": "节水灌溉",
+      "remark": "住房城乡建设部2018年第138号公告"
+    },
+    "GB/T30600-2022": {
+      "name": "高标准农田建设 通则",
+      "status": "现行有效",
+      "latest": "GB/T 30600-2022",
+      "replaced_by": null,
+      "superseded": [
+        "GB/T 30600-2014"
+      ],
+      "category": "国标",
+      "domain": "高标准农田建设",
+      "remark": "国家市场监督管理总局2022年第3号公告，2022-10-01实施"
+    },
+    "GB/T50596-2010": {
+      "name": "雨水集蓄利用工程技术规范",
+      "status": "现行有效",
+      "latest": "GB/T 50596-2010",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标",
+      "domain": "雨水集蓄利用",
+      "remark": "住房城乡建设部2010年第591号公告，2011-02-01实施"
+    },
+    "SL/T191-2025": {
+      "name": "水工混凝土结构设计规范",
+      "status": "现行有效",
+      "latest": "SL/T 191-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 191-2008",
+        "DL/T 5057-2009"
+      ],
+      "category": "水利行业推荐标准",
+      "domain": "水工结构设计",
+      "remark": "2025年发布，适用于水利水电工程混凝土结构设计"
+    },
+    "GB/T20203-2017": {
+      "name": "管道输水灌溉工程技术规范",
+      "status": "现行有效",
+      "latest": "GB/T 20203-2017",
+      "replaced_by": null,
+      "superseded": [
+        "GB/T 20203-2006"
+      ],
+      "category": "国标",
+      "domain": "灌溉管道工程",
+      "remark": "替代GB/T 20203-2006"
+    },
+    "GB/T21010-2017": {
+      "name": "土地利用现状分类",
+      "status": "现行有效",
+      "latest": "GB/T 21010-2017",
+      "replaced_by": null,
+      "superseded": [
+        "GB/T 21010-2007"
+      ],
+      "category": "国标",
+      "domain": "土地调查",
+      "remark": "替代GB/T 21010-2007"
+    },
+    "GB/T45107-2024": {
+      "name": "表土剥离及其再利用技术要求",
+      "status": "现行有效",
+      "latest": "GB/T 45107-2024",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标",
+      "domain": "水土保持",
+      "remark": "2024-12-31发布"
+    },
+    "GB/T50145-2007": {
+      "name": "土的工程分类标准",
+      "status": "现行有效",
+      "latest": "GB/T 50145-2007",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标",
+      "domain": "工程勘察",
+      "remark": "现行标准"
+    },
+    "GB/T50433-2018": {
+      "name": "生产建设项目水土保持技术标准",
+      "status": "现行有效",
+      "latest": "GB/T 50433-2018",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标",
+      "domain": "水土保持",
+      "remark": "2018年发布"
+    },
+    "GB/T50434-2018": {
+      "name": "生产建设项目水土流失防治标准",
+      "status": "现行有效",
+      "latest": "GB/T 50434-2018",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标",
+      "domain": "水土保持",
+      "remark": "2018年发布"
+    },
+    "GB/T50509-2009": {
+      "name": "灌区规划规范",
+      "status": "已修订",
+      "latest": "内容并入GB 50288-2018",
+      "replaced_by": "GB 50288-2018",
+      "superseded": [],
+      "category": "国标",
+      "domain": "灌区规划",
+      "remark": "修订时合并入GB 50288-2018（来源：全国标准信息公共服务平台）"
+    },
+    "GB/T50662-2011": {
+      "name": "水工建筑物抗冰冻设计标准",
+      "status": "现行有效",
+      "latest": "GB/T 50662-2011（2024年版）",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标",
+      "domain": "水工结构设计",
+      "remark": "现行标准",
+      "note": "住建部938号公告局部修订2024年版，2025-02-01实施；名称由\"规范\"改为\"标准\""
+    },
+    "GB/T51240-2018": {
+      "name": "生产建设项目水土保持监测与评价标准",
+      "status": "现行有效",
+      "latest": "GB/T 51240-2018",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标",
+      "domain": "水土保持监测",
+      "remark": "2018年发布"
+    },
+    "GB12523-2011": {
+      "name": "建筑施工场界环境噪声排放标准",
+      "status": "现行有效",
+      "latest": "GB 12523-2011",
+      "replaced_by": null,
+      "superseded": [
+        "GB 12523-1990"
+      ],
+      "category": "国标",
+      "domain": "环境保护",
+      "remark": "替代GB 12523-1990"
+    },
+    "GB18306-2015": {
+      "name": "中国地震动参数区划图",
+      "status": "现行有效",
+      "latest": "GB 18306-2015(2026年第1号修改单)",
+      "replaced_by": null,
+      "superseded": [
+        "GB 18306-2001"
+      ],
+      "category": "国标",
+      "domain": "地震设防",
+      "remark": "2026-02-27发布第1号修改单"
+    },
+    "GB50013-2006": {
+      "name": "室外给水设计规范",
+      "status": "已废止",
+      "latest": "GB 50013-2018",
+      "replaced_by": "GB 50013-2018",
+      "superseded": [],
+      "category": "国标",
+      "domain": "给水设计",
+      "remark": "已被GB 50013-2018替代（来源：住建部）"
+    },
+    "GB50332-2002": {
+      "name": "给水排水工程管道结构设计规范",
+      "status": "现行有效",
+      "latest": "GB 50332-2002",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "国标",
+      "domain": "管道结构设计",
+      "remark": "现行标准"
+    },
+    "GB/T50363-2006": {
+      "name": "节水灌溉工程技术规范",
+      "status": "已废止",
+      "latest": "GB/T 50363-2018《节水灌溉工程技术标准》",
+      "replaced_by": "GB/T 50363-2018",
+      "superseded": [],
+      "category": "国标",
+      "domain": "节水灌溉",
+      "remark": "已被GB/T 50363-2018替代（来源：住建部2018年第138号公告）"
+    },
+    "GB50288-99": {
+      "name": "灌溉与排水工程设计规范",
+      "status": "已废止",
+      "latest": "GB 50288-2018《灌溉排水工程设计标准》",
+      "replaced_by": "GB 50288-2018",
+      "superseded": [],
+      "category": "国标",
+      "domain": "灌溉排水工程设计",
+      "remark": "已被GB 50288-2018替代（来源：全国标准信息公共服务平台）；同时合并GB/T 50509-2009"
+    },
+    "SL/T631.1-2025": {
+      "name": "水利水电工程单元工程施工质量验收标准 第1部分：土石方工程",
+      "status": "现行有效",
+      "latest": "SL/T 631.1-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 631-2012"
+      ],
+      "category": "水利行业标准"
+    },
+    "SL/T631.2-2025": {
+      "name": "水利水电工程单元工程施工质量验收标准 第2部分：混凝土工程",
+      "status": "现行有效",
+      "latest": "SL/T 631.2-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 631-2012"
+      ],
+      "category": "水利行业标准"
+    },
+    "SL/T631.3-2025": {
+      "name": "水利水电工程单元工程施工质量验收标准 第3部分：地基处理与基础工程",
+      "status": "现行有效",
+      "latest": "SL/T 631.3-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 631-2012"
+      ],
+      "category": "水利行业标准"
+    },
+    "SL/T631.4-2025": {
+      "name": "水利水电工程单元工程施工质量验收标准 第4部分：堤防与河道整治工程",
+      "status": "现行有效",
+      "latest": "SL/T 631.4-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 631-2012"
+      ],
+      "category": "水利行业标准"
+    },
+    "SL/T631.5-2025": {
+      "name": "水利水电工程单元工程施工质量验收标准 第5部分：水工金属结构安装工程",
+      "status": "现行有效",
+      "latest": "SL/T 631.5-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 631-2012"
+      ],
+      "category": "水利行业标准",
+      "note": "2026-02-05实施"
+    },
+    "SL/T631.6-2025": {
+      "name": "水利水电工程单元工程施工质量验收标准 第6部分：疏浚与吹填工程",
+      "status": "现行有效",
+      "latest": "SL/T 631.6-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 631-2012"
+      ],
+      "category": "水利行业标准",
+      "note": "2026-02-05实施"
+    },
+    "SL/T631.7-2025": {
+      "name": "水利水电工程单元工程施工质量验收标准 第7部分：电气装置安装工程",
+      "status": "现行有效",
+      "latest": "SL/T 631.7-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 631-2012"
+      ],
+      "category": "水利行业标准",
+      "note": "2026-02-05实施"
+    },
+    "SL/T808-2025": {
+      "name": "洪水影响评价技术导则",
+      "status": "现行有效",
+      "latest": "SL/T 808-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL/T 808-2021"
+      ],
+      "category": "水利行业标准",
+      "note": "2025-06-14实施"
+    },
+    "SL/T219-2026": {
+      "name": "水质水生态监测规范",
+      "status": "现行有效",
+      "latest": "SL/T 219-2026",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业标准",
+      "note": "水利部2026年第6/7号公告"
+    },
+    "SL/T545-2026": {
+      "name": "水利水电工程铸铁闸门技术规范",
+      "status": "现行有效",
+      "latest": "SL/T 545-2026",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业标准",
+      "note": "水利部2026年第6/7号公告"
+    },
+    "SL/T553-2026": {
+      "name": "全油压控制水轮机调压阀技术规范",
+      "status": "现行有效",
+      "latest": "SL/T 553-2026",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业标准",
+      "note": "水利部2026年第6/7号公告"
+    },
+    "SL/T872-2026": {
+      "name": "水土保持碳汇评估与核算技术规范",
+      "status": "现行有效",
+      "latest": "SL/T 872-2026",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业标准",
+      "note": "水利部2026年第6/7号公告"
+    },
+    "SL/T877-2026": {
+      "name": "水库大坝除险加固设计导则",
+      "status": "现行有效",
+      "latest": "SL/T 877-2026",
+      "replaced_by": null,
+      "superseded": [],
+      "category": "水利行业标准",
+      "note": "水利部2026年第6/7号公告"
+    },
+    "SL/T386-2025": {
+      "name": "水利水电工程边坡与挡土墙设计规范",
+      "status": "现行有效",
+      "latest": "SL/T 386-2025",
+      "replaced_by": null,
+      "superseded": [
+        "SL 386-2007",
+        "SL 379-2007"
+      ],
+      "note": "水利部2025年第28号公告；2026-02-05实施；替代SL 386-2007和SL 379-2007",
+      "category": "水利行业标准"
+    },
+    "SL386-2007": {
+      "name": "水利水电工程边坡设计规范",
+      "status": "已废止",
+      "latest": "SL 386-2007",
+      "replaced_by": "SL/T 386-2025",
+      "superseded": [],
+      "category": "水利行业标准"
+    },
+    "SL379-2007": {
+      "name": "水工挡土墙设计规范",
+      "status": "已废止",
+      "latest": "SL/T 386-2025《水利水电工程边坡与挡土墙设计规范》",
+      "replaced_by": "SL/T 386-2025",
+      "superseded": [],
+      "category": "水利行业标准"
+    },
+    "SL55-2005": {
+      "code": "SL55-2005",
+      "name": "中小型水利水电工程地质勘察规范",
+      "status": "已废止",
+      "note": "被SL/T 282-2018等替代",
+      "category": "地质勘察",
+      "latest": "SL/T 282-2018《水利水电工程地质勘察规范》"
+    },
+    "SL44-2006": {
+      "code": "SL44-2006",
+      "name": "水利水电工程设计洪水计算规范",
+      "status": "已废止",
+      "note": "被SL 44-2019替代",
+      "category": "设计洪水",
+      "latest": "SL 44-2019《水利水电工程设计洪水计算规范》"
+    },
+    "SL482-2011": {
+      "code": "SL482-2011",
+      "name": "灌溉与排水渠系建筑物设计规范",
+      "status": "已废止",
+      "note": "被SL 482-2024替代",
+      "category": "渠系建筑物",
+      "latest": "SL 482-2024《灌溉与排水渠系建筑物设计规范》"
+    },
+    "SL744-2016": {
+      "code": "SL744-2016",
+      "name": "水工建筑物荷载设计规范",
+      "status": "已废止",
+      "note": "被SL 744-2024替代",
+      "category": "荷载设计",
+      "latest": "SL 744-2024《水工建筑物荷载设计规范》"
+    },
+    "SL189-2013": {
+      "code": "SL189-2013",
+      "name": "小型水利水电工程碾压式土石坝设计规范",
+      "status": "已废止",
+      "note": "被SL 274-2020等替代",
+      "category": "土石坝设计",
+      "latest": "SL 274-2020《碾压式土石坝设计规范》"
+    },
+    "SL210-2015": {
+      "code": "SL210-2015",
+      "name": "土石坝浇筑式沥青混凝土防渗墙施工规范",
+      "status": "现行有效",
+      "note": "2025-10-09确认现行有效",
+      "category": "施工规范",
+      "latest": "SL 210-2015《土石坝浇筑式沥青混凝土防渗墙施工规范》"
+    },
+    "SL106-2017": {
+      "code": "SL106-2017",
+      "name": "农田灌溉水质标准",
+      "status": "已废止",
+      "note": "被GB 5084-2021替代（农业农村部）",
+      "category": "灌溉水质",
+      "latest": "GB 5084-2021《农田灌溉水质标准》"
+    },
+    "SL551-2012": {
+      "code": "SL551-2012",
+      "name": "土石坝安全监测技术规范",
+      "status": "已废止",
+      "note": "被SL/T 551-2024替代",
+      "category": "安全监测",
+      "latest": "SL/T 551-2024《土石坝安全监测技术规范》"
+    },
+    "SL303-2017": {
+      "code": "SL303-2017",
+      "name": "水利水电工程施工组织设计规范",
+      "status": "已废止",
+      "note": "被SL/T 303-2017修订版替代",
+      "category": "施工组织",
+      "latest": "SL/T 303-2017《水利水电工程施工组织设计规范》"
+    },
+    "SL667-2014": {
+      "code": "SL667-2014",
+      "name": "灌溉排水泵站施工质量验收规范",
+      "status": "现行有效",
+      "note": "2025-10-09确认现行有效",
+      "category": "泵站施工",
+      "latest": "SL 667-2014《灌溉排水泵站施工质量验收规范》"
+    },
+    "SL654-2014": {
+      "code": "SL654-2014",
+      "name": "水利水电工程合理使用年限及耐久性设计规范",
+      "status": "已废止",
+      "note": "被SL 654-2024替代",
+      "category": "设计年限",
+      "latest": "SL 654-2024《水利水电工程合理使用年限及耐久性设计规范》"
+    },
+    "SL677-2014": {
+      "code": "SL677-2014",
+      "name": "水工混凝土施工规范",
+      "status": "已废止",
+      "note": "被SL 677-2024替代",
+      "category": "混凝土施工",
+      "latest": "SL 677-2024《水工混凝土施工规范》"
+    },
+    "SL/T440-2024": {
+      "code": "SL/T 440-2024",
+      "name": "农村移民安置规划设计规范",
+      "status": "现行有效",
+      "note": "2026-01-21确认现行，2024-12-13发布",
+      "category": "移民安置",
+      "latest": "SL/T 440-2024《农村移民安置规划设计规范》"
+    },
+    "SL492-2025": {
+      "code": "SL492-2025",
+      "name": "水利水电工程环境保护设计规范",
+      "status": "现行有效",
+      "note": "2026-01-21确认现行，2025-08-19发布",
+      "category": "环境保护",
+      "latest": "SL 492-2025《水利水电工程环境保护设计规范》"
+    },
+    "SL260-2025": {
+      "code": "SL260-2025",
+      "name": "堤防工程施工规范",
+      "status": "现行有效",
+      "note": "2026-01-21确认现行，2025-06-25发布",
+      "category": "堤防施工",
+      "latest": "SL/T 260-2025《堤防工程施工规范》"
+    },
+    "SL264-2001": {
+      "code": "SL 264-2001",
+      "name": "水利水电工程岩石试验规程",
+      "status": "已废止",
+      "note": "被DL/T 5368-2007等替代",
+      "category": "岩石试验",
+      "latest": "DL/T 5368-2007《水电水利工程岩石试验规程》"
+    },
+    "SL582-2012": {
+      "code": "SL 582-2012",
+      "name": "水库工程管理设计规范",
+      "status": "已废止",
+      "note": "被SL/T 582-2024替代",
+      "category": "工程管理",
+      "latest": "SL/T 582-2024《水库工程管理设计规范》"
+    },
+    "SL214-2015": {
+      "code": "SL214-2015",
+      "name": "水闸安全评价导则",
+      "status": "现行有效",
+      "note": "现行有效，2015-04-21实施",
+      "category": "水闸安全",
+      "latest": "SL214-2015《水闸安全评价导则》"
+    },
+    "SL247-2012": {
+      "code": "SL247-2012",
+      "name": "水文资料整编规范",
+      "status": "已废止",
+      "note": "被SL/T 247-2020替代",
+      "category": "水文资料",
+      "latest": "SL/T 247-2020《水文资料整编规范》"
+    },
+    "SL601-2013": {
+      "code": "SL601-2013",
+      "name": "混凝土坝安全监测技术规范",
+      "status": "现行有效",
+      "note": "现行有效，2013-06-15实施",
+      "category": "大坝监测",
+      "latest": "SL601-2013《混凝土坝安全监测技术规范》"
+    },
+    "SL640-2013": {
+      "code": "SL640-2013",
+      "name": "输变电项目水土保持技术规范",
+      "status": "现行有效",
+      "note": "现行有效，2014-03-11实施（非农用机井）",
+      "category": "水土保持",
+      "latest": "SL640-2013《输变电项目水土保持技术规范》"
+    },
+    "SL636-2012": {
+      "code": "SL636-2012",
+      "name": "水利水电工程单元工程施工质量验收评定标准——水轮发电机组安装工程",
+      "status": "现行有效",
+      "note": "现行有效，2012-12-19实施",
+      "category": "质量验收",
+      "latest": "SL636-2012《水利水电工程单元工程施工质量验收评定标准——水轮发电机组安装工程》"
+    },
+    "SL702-2015": {
+      "code": "SL702-2015",
+      "name": "预应力钢筒混凝土管道技术规范",
+      "status": "现行有效",
+      "note": "现行有效，2015-05-09实施",
+      "category": "管道工程",
+      "latest": "SL702-2015《预应力钢筒混凝土管道技术规范》"
+    },
+    "SL731-2015": {
+      "code": "SL731-2015",
+      "name": "水利固定资产分类与代码",
+      "status": "现行有效",
+      "note": "现行有效，2016-02-23实施",
+      "category": "固定资产",
+      "latest": "SL731-2015《水利固定资产分类与代码》"
+    },
+    "SL/Z582-2012": {
+      "code": "SL/Z582-2012",
+      "name": "水库调度运用风险管理规范",
+      "status": "已废止",
+      "note": "813清单未收录，可能已废止",
+      "category": "水库调度",
+      "latest": "请以水利部最新公告为准"
+    },
+    "GB/T13663.2-2018": {
+      "name": "给水用聚乙烯（PE）管道系统 第2部分：管材",
+      "status": "现行有效",
+      "category": "GB",
+      "替代": "GB/T13663-2000部分"
+    },
+    "GB50434-2018": {
+      "name": "生产建设项目水土流失防治标准",
+      "status": "现行有效",
+      "category": "GB",
+      "替代": "GB50434-2008"
+    },
+    "GB5084-2021": {
+      "name": "农田灌溉水质标准",
+      "status": "现行有效",
+      "category": "GB",
+      "替代": "GB5084-2005等"
+    },
+    "GB5749-2022": {
+      "name": "生活饮用水卫生标准",
+      "status": "现行有效",
+      "category": "GB",
+      "替代": "GB5749-2006"
+    },
+    "GB50013-2018": {
+      "name": "室外给水设计标准",
+      "status": "现行有效",
+      "category": "GB",
+      "替代": "GB50013-2006"
+    },
+    "HJ2.2-2018": {
+      "name": "环境影响评价技术导则 大气环境",
+      "status": "现行有效",
+      "category": "HJ",
+      "替代": "HJ2.2-2008"
+    },
+    "HJ2.3-2018": {
+      "name": "环境影响评价技术导则 地表水环境",
+      "status": "现行有效",
+      "category": "HJ",
+      "替代": "HJ/T2.3-93"
+    },
+    "HJ2.4-2021": {
+      "name": "环境影响评价技术导则 声环境",
+      "status": "现行有效",
+      "category": "HJ",
+      "替代": "HJ2.4-2008"
+    },
+    "HJ19-2022": {
+      "name": "环境影响评价技术导则 生态影响",
+      "status": "现行有效",
+      "category": "HJ",
+      "替代": "HJ/T19-1997"
+    },
+    "HJ/T88-2003": {
+      "name": "环境影响评价技术导则 水利水电工程",
+      "status": "现行有效",
+      "category": "HJ"
+    },
+    "SL/T260-2025": {
+      "name": "堤防工程施工规范",
+      "status": "现行有效",
+      "category": "SL/T",
+      "替代": "SL260-2014"
+    },
+    "SL/T442-2024": {
+      "name": "水利水电工程建设征地移民实物调查规范",
+      "status": "现行有效",
+      "category": "SL/T",
+      "替代": "SL442-2009"
+    },
+    "SL72-2013": {
+      "name": "水利建设项目经济评价规范",
+      "status": "现行有效",
+      "category": "SL",
+      "替代": "SL72-94"
+    },
+    "SL73.3-2013": {
+      "name": "水利水电工程制图标准 勘测图",
+      "status": "现行有效",
+      "category": "SL",
+      "替代": "SL73.3-95"
+    },
+    "SL203-97": {
+      "name": "水工建筑物抗震设计规范",
+      "status": "现行有效",
+      "category": "SL"
+    },
+    "SL207-1998": {
+      "name": "节水灌溉技术规范",
+      "status": "现行有效",
+      "category": "SL"
+    },
+    "SL166-2010": {
+      "name": "水利水电工程坑探规程",
+      "status": "已废止",
+      "category": "SL",
+      "替代": "SL/T291.3-2025"
+    },
+    "SL/T251-2015": {
+      "name": "水利水电工程天然建筑材料勘察规程",
+      "status": "现行有效",
+      "category": "SL/T",
+      "替代": "SL 251-2000"
+    },
+    "SL303-2014": {
+      "name": "水利水电工程施工组织设计规范",
+      "status": "已废止",
+      "category": "SL",
+      "替代": "SL 303-2017"
+    }
+  },
+  "last_updated": "2026-04-09",
+  "_meta": {
+    "version": "2025-07",
+    "last_updated": "2026-04-09",
+    "source": "水利部、全国标准信息公共服务平台",
+    "total_count": 114,
+    "note": "收录水利规划设计报告中最常见标准。完整库(800+)访问: http://gjkj.mwr.gov.cn/jsjd1/bzcx/ 。建议每季度更新一次。；v2.4.4补充6条：SL/T 4-2013废止追踪、SL/T 4-2020现行、GB/T 50363-2018、GB/T 30600-2022、GB/T 50596-2010、SL/T 191-2025；v2.4.5新增喜德县项目实测：+14条标准（含GB/T50363-2006废止追踪、GB50288-99废止追踪、GB50013-2006废止追踪等）"
+  }
+}

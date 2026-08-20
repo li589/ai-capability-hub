@@ -1,0 +1,11 @@
+{
+  "owner": "tobewin",
+  "slug": "china-social-policy-public-data",
+  "displayName": "China Social Policy Public Data",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774018585137,
+    "commit": "https://github.com/openclaw/skills/commit/7319e320a01371079afc84c97a380d1d7081e86d"
+  },
+  "history": []
+}

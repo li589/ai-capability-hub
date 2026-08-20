@@ -1,0 +1,12 @@
+{
+  "slug": "lingyi-wx-account-decomposer-paid",
+  "name": "视频号账号诊断与拆解（付费版）【零一数科·出品】",
+  "version": "0.1.0",
+  "installedAt": 1787228800685,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/7422abc7-fa86-4505-a723-0575c56e7a2d.png"
+}

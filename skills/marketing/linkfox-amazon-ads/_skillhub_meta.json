@@ -1,0 +1,11 @@
+{
+  "name": "Linkfox 亚马逊广告",
+  "installedAt": 1787227608409,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2077704507467079680",
+  "description_zh": "亚马逊广告全链路工具集，含 3 项子能力：①广告授权与令牌管理（linkfox-amazon-ads-auth）：OAuth 授权、一次绑定同账号所有站点 profile、令牌读写刷新；②广告管理（linkfox-amazon-ads-manager）：SP/SB/SD 查询与创建修改写操作，含活动/广告组/关键词/定向/创意/预算规则；③广告报告（linkfox-amazon-ads-report）：SP/SB/SD 全量报告一站式获取（自动创建下载解压）。manager/report 依赖 auth。需广告授权、查询/修改/调价或拉取报告时触发。",
+  "description_en": "One-stop Amazon Ads AI toolkit integrating 3 sub-capabilities across the full authorization → management → reporting chain: ① Ads authorization & token management (linkfox-amazon-ads-auth) — LWA OAuth authorization, single authorization binding all marketplace profiles under one account, authorized-account/profile queries, accessToken read & refresh; ② Ads management (linkfox-amazon-ads-manager) — list queries and create/update operations across the SP/SB/SD product lines, covering campaigns/ad groups/keywords/negative keywords/product ads/targeting/creatives/budget rules, including bid adjustment, budget modification and status changes; ③ Ads reports (linkfox-amazon-ads-report) — end-to-end fetch of all SP/SB/SD report types (create → poll → download → extract → structured return). Both manager and report depend on auth. Triggered when the user needs Amazon Ads authorization, querying/creating/modifying ads, adjusting bids, or pulling ad reports.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077704507467079680/be14a6f84fe1b2bd.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2077704507467079680/be14a6f84fe1b2bd.png"
+}

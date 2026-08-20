@@ -1,0 +1,11 @@
+{
+  "name": "B站关键词搜作品",
+  "installedAt": 1787227720572,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087460019378634752",
+  "description_zh": "关键词实时搜索B站最新视频，支持按排序方式和发布时间筛选，返回新鲜数据",
+  "description_en": "Real-time search of the latest Bilibili videos by keyword with filters.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_5dced0c0-68e.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_5dced0c0-68e.svg"
+}

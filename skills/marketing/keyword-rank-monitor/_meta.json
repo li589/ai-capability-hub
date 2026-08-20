@@ -1,0 +1,11 @@
+{
+  "owner": "275254cl-hash",
+  "slug": "keyword-rank-monitor",
+  "displayName": "Keyword Rank Monitor",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774402939436,
+    "commit": "https://github.com/openclaw/skills/commit/490ae1c771fd0d305def66bcbdf15c4b8615ed16"
+  },
+  "history": []
+}

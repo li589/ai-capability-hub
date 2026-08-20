@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "amazon-collector/run-state/1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "run_id", "workflow", "status", "request", "api_key_configured", "stages", "tasks", "coverage", "outputs", "warnings", "errors", "created_at", "updated_at"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "run_id": {"type": "string", "minLength": 1},
+    "workflow": {"enum": ["keyword", "list", "details", "reviews"]},
+    "status": {"enum": ["PRECHECK", "LIST_RUNNING", "LIST_EXPORTED", "DETAILS_RUNNING", "DETAILS_EXPORTED", "REVIEWS_RUNNING", "REVIEWS_EXPORTED", "CSV_READY", "COMPLETE", "PARTIAL", "FAILED"]},
+    "request": {"type": "object"},
+    "api_key_configured": {"const": true},
+    "stages": {"type": "object"},
+    "tasks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["stage", "template_id", "template_name", "task_id", "lot_no", "status", "exported_rows"],
+        "properties": {
+          "stage": {"enum": ["list", "details", "reviews"]},
+          "asin": {"type": "string"},
+          "template_id": {"enum": [3386, 3387, 3388, 3389, 3339]},
+          "template_name": {"type": "string", "minLength": 1},
+          "task_id": {"type": "string", "minLength": 1},
+          "lot_no": {"type": "string", "minLength": 1},
+          "status": {"type": "string", "minLength": 1},
+          "exported_rows": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "coverage": {"type": "object"},
+    "execution_packing": {
+      "type": "object",
+      "properties": {
+        "mode": {"const": "single-template-task-per-stage"},
+        "step_length": {"const": 1000}
+      }
+    },
+    "review_date_policy": {
+      "type": "object",
+      "properties": {
+        "start_date": {"type": "string", "format": "date", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$"},
+        "source": {"enum": ["customer", "default_request_date_minus_one_calendar_year"]}
+      }
+    },
+    "review_runtime_policy": {
+      "type": "object",
+      "properties": {
+        "limit_source": {"enum": ["customer", "default"]},
+        "max_runtime_minutes": {"enum": [30]},
+        "clock_started_at": {"type": "string"},
+        "deadline_at": {"type": "string"},
+        "stop_reason": {"enum": ["us_jp_default_limit_max_runtime"]}
+      }
+    },
+    "outputs": {"type": "object", "additionalProperties": {"type": "string"}},
+    "warnings": {"type": "array", "items": {"type": "string"}},
+    "errors": {"type": "array", "items": {"type": "string"}},
+    "created_at": {"type": "string"},
+    "updated_at": {"type": "string"}
+  }
+}

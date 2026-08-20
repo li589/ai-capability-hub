@@ -1,0 +1,11 @@
+{
+  "owner": "rf-ai-wh",
+  "slug": "product-price-tracker",
+  "displayName": "Product Price Tracker",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774500597780,
+    "commit": "https://github.com/openclaw/skills/commit/519177a5cc2e6d956a852c60f132bae47eb7fbdf"
+  },
+  "history": []
+}

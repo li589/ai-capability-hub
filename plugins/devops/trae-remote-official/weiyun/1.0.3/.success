@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:weiyun",
+  "registry": "trae-remote-official",
+  "plugin_name": "weiyun",
+  "version": "1.0.3",
+  "marketplace_plugin_id": "7377d640-93d5-4813-8f45-9192d410470f",
+  "remote_installed_plugin_id": "AU40ZL_8Q22519",
+  "checksum": "c82d5f22cfd970ddb5f391f5922a83415ba2079dbc3cea86eb70a92acc5c96a4",
+  "file_size": 4157,
+  "installed_at": 1787227205351
+}

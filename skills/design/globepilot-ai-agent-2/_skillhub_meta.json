@@ -1,0 +1,20 @@
+{
+  "name": "globepilot-ai-agent-2",
+  "installedAt": 1787228419484,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053082038455431168",
+  "examples_zh": [
+    "我持中国护照下个月去土耳其旅游，需要什么签证材料和入境注意事项？",
+    "把 50000 日元换算成人民币和美元，并给我东京旅行的支付建议。",
+    "帮我查巴黎戴高乐机场今天的运行状态，并推荐本周末当地活动和文化礼仪。"
+  ],
+  "examples_en": [
+    "I hold a US passport and plan to visit Vietnam next month; what visa rules and entry tips apply?",
+    "Convert 50,000 JPY to USD and EUR, then give practical payment tips for a Tokyo trip.",
+    "Check today's status at Paris Charles de Gaulle Airport and suggest weekend events plus cultural etiquette."
+  ],
+  "description_zh": "出境游全能助手：签证查询、货币换算、机场状态、当地活动、文化贴士，无需 API Key",
+  "description_en": "AI travel assistant for visa info, currency conversion, airport status and cultural tips",
+  "iconSource": "letter:auto"
+}

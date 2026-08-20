@@ -1,0 +1,11 @@
+{
+  "owner": "nishibushiyaozhuangguai",
+  "slug": "patent-expression-engine",
+  "displayName": "通用专利表达生成助手",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1774597791314,
+    "commit": "https://github.com/openclaw/skills/commit/a5290312e4c5630cddd7044fe05d811352352ac3"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "mozisword",
+  "slug": "zotero-myscholar",
+  "displayName": "zotero-myscholar",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773103263325,
+    "commit": "https://github.com/openclaw/skills/commit/cd4794c48054c68e361da868cffa652ceff1f16c"
+  },
+  "history": []
+}

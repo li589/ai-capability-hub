@@ -1,0 +1,11 @@
+{
+  "name": "YouTube视频下载",
+  "installedAt": 1785864615259,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084103658194636800",
+  "description_zh": "粘贴 YouTube 视频链接，一键解析返回无水印下载链接，支持多种清晰度",
+  "description_en": "Paste a YouTube video link to get watermark-free download URLs in multiple qualities.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_6c60df47-b4e.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_6c60df47-b4e.svg"
+}

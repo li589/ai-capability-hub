@@ -1,0 +1,10 @@
+# v2.1.0 Web 仪表盘依赖（v2.0.0 不实施）
+
+# 后端：FastAPI
+fastapi>=0.104.0
+uvicorn>=0.24.0
+python-multipart>=0.0.6
+websockets>=12.0
+
+# 前端：Vue3 + ECharts（npm 安装，不在此文件）
+# cd web/frontend && npm install

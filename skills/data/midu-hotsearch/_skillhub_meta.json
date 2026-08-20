@@ -1,0 +1,20 @@
+{
+  "name": "蜜度热搜榜",
+  "installedAt": 1785865014080,
+  "source": "marketplace",
+  "version": "2.0.0",
+  "skillId": "skill_2074471866204139520",
+  "examples_zh": [
+    "查一下今天「人工智能」在所有平台的热搜情况",
+    "查微博和抖音在3月1号到3月7号「路面坍塌」的热搜",
+    "查今天小红书的热搜榜"
+  ],
+  "examples_en": [
+    "Check today's hot search for 'AI' across all platforms",
+    "Query Weibo and Douyin hot search for a topic in a date range",
+    "Get today's Xiaohongshu hot search"
+  ],
+  "description_zh": "30+ 主流平台热搜数据查询，支持关键词、时间范围、榜单类型筛选，覆盖微博、抖音、百度、知乎、今日头条等。",
+  "description_en": "Hot search data across 30+ platforms including Weibo, Douyin, Baidu, Zhihu, Toutiao, with flexible filtering.",
+  "iconSource": "letter:auto"
+}

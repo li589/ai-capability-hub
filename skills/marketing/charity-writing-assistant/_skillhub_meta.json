@@ -1,0 +1,21 @@
+{
+  "name": "公益文书助手",
+  "installedAt": 1787228574275,
+  "source": "marketplace",
+  "version": "6.7.0",
+  "skillId": "skill_2053081451248676864",
+  "examples_zh": [
+    "我们机构想在腾讯公益上线一个乡村儿童阅读项目，帮我写一份项目申请书。",
+    "帮我写一份结项报告，项目是去年在支付宝公益上线的\"困境老人陪伴计划\"，已经执行完毕了。",
+    "我有一堆之前写的项目材料（Word 和 PDF），想按照字节跳动公益的规范重新整理归档。"
+  ],
+  "examples_en": [
+    "Our organization wants to launch a rural children's reading project on Tencent Charity — help me draft a project proposal.",
+    "Help me write a final report for our \"Elderly Companionship Program\" that was listed on Alipay Charity last year and has been completed.",
+    "I have a bunch of existing project documents (Word & PDF) that I'd like to reorganize and archive according to ByteDance Charity's standards."
+  ],
+  "description_zh": "面向公益从业者的一站式文书工作台。分步引导采集项目信息，自动适配各平台规范，生成可直接提交的专业文书；也可将已有材料一键标准化归档。覆盖腾讯公益、字节跳动公益、支付宝公益、微博微公益、京东公益、美团公益等平台。",
+  "description_en": "All-in-one document workbench for nonprofit practitioners. Guides you step-by-step through project information collection, automatically adapts to each platform's requirements, and produces submission-ready documents. Also standardizes and archives existing materials in one click. Covers China's major public fundraising platforms plus vertical crowdfunding and foundation/hub platforms.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/charity-writing-assistant.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/charity-writing-assistant.svg"
+}

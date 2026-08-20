@@ -1,0 +1,17 @@
+{
+  "owner": "jachian-lee",
+  "slug": "feishu-doc-reviewer",
+  "displayName": "feishu-doc-reviewer",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1773572981242,
+    "commit": "https://github.com/openclaw/skills/commit/55d4635ee6feb2762fc38f0f56d85b75f89b69f9"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773570129526,
+      "commit": "https://github.com/openclaw/skills/commit/4117f167081c030a973e2881b62555cfbafde215"
+    }
+  ]
+}

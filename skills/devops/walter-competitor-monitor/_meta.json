@@ -1,0 +1,11 @@
+{
+  "owner": "beyondbright",
+  "slug": "walter-competitor-monitor",
+  "displayName": "Competitor Monitor",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1776069689516,
+    "commit": "https://github.com/openclaw/skills/commit/faa3cdb05583253eb1d82ad35c1b5ae578c5f295"
+  },
+  "history": []
+}

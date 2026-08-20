@@ -1,0 +1,11 @@
+{
+  "owner": "biociao",
+  "slug": "biociao-literature-daily-report",
+  "displayName": "Literature Daily Report",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1774924523906,
+    "commit": "https://github.com/openclaw/skills/commit/c70f6fda6d9ab0ea0aef72d7b62d1c67728d2785"
+  },
+  "history": []
+}

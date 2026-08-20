@@ -1,0 +1,22 @@
+{
+  "name": "bocha-search",
+  "displayName": "博查搜索",
+  "displayNameEn": "Bocha Search",
+  "version": "1.0.1",
+  "description": "博查是一个给AI用的中文搜索引擎，让你的AI应用从近百亿网页和生态内容源中获取高质量的世界知识，涵盖天气、新闻、百科、医疗、火车票、图片等多种领域。",
+  "descriptionEn": "Bocha is a Chinese search engine for AI, you can get enhanced search details from billions of web documents, including weather, news, wikis, healthcare, train tickets, images, and more.",
+  "author": {
+    "name": "bocha"
+  },
+  "license": "MIT",
+  "logo": "./icon.svg",
+  "keywords": [
+    "bocha",
+    "ai-search",
+    "web-search",
+    "mcp"
+  ],
+  "connector": "./connector.json",
+  "skills": "./skills/",
+  "mcp": "./.mcp.json"
+}

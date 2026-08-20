@@ -1,0 +1,9 @@
+{
+  "name": "get_system_info",
+  "description": "獲取系統環境資訊\n\nReturns:\n    str: JSON 格式的系統資訊",
+  "arguments": {
+    "type": "object",
+    "properties": {},
+    "additionalProperties": false
+  }
+}

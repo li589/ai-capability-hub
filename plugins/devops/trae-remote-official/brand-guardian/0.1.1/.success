@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:brand-guardian",
+  "registry": "trae-remote-official",
+  "plugin_name": "brand-guardian",
+  "version": "0.1.1",
+  "marketplace_plugin_id": "b3ddaab7-b2d8-4ea1-bd27-6ff479a8b57c",
+  "remote_installed_plugin_id": "ADY1GJ7_8KU0LY",
+  "checksum": "7fedf979325b58ba95bf82714494f47718d8ecc0fe5a685acf13a3f78b0dc23c",
+  "file_size": 30572,
+  "installed_at": 1787227201624
+}

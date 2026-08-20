@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:dingtalk",
+  "registry": "trae-remote-official",
+  "plugin_name": "dingtalk",
+  "version": "0.0.4",
+  "marketplace_plugin_id": "3c321e86-42d9-4305-8113-d80d75e22d92",
+  "remote_installed_plugin_id": "A5NURNCLC02S_H",
+  "checksum": "cc31f57d54e1eb480cb1b1c1a38fd200f80ee6fc1916a43bf74f26a4a6ea4db6",
+  "file_size": 572826,
+  "installed_at": 1787227202218
+}

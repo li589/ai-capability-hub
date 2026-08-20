@@ -1,0 +1,11 @@
+{
+  "owner": "profitpioneer",
+  "slug": "requirements-spec",
+  "displayName": "Assists in writing high-quality requirements documents using an 8-dimension framework",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775883963463,
+    "commit": "https://github.com/openclaw/skills/commit/9f60802808f8cade74bdc6e3c70891766eb6de7f"
+  },
+  "history": []
+}

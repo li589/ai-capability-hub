@@ -1,0 +1,59 @@
+{
+  "type": "再保险公司",
+  "type_name": "再保险公司",
+  "count": 10,
+  "data_source": "公开信息/行业公开资料",
+  "update_time": "2026-06-26",
+  "institutions": [
+    {
+      "name": "中国再保险集团",
+      "code": "CRL",
+      "type": "再保险公司"
+    },
+    {
+      "name": "中国人寿再保险",
+      "code": "CLRL",
+      "type": "再保险公司"
+    },
+    {
+      "name": "中国财产再保险",
+      "code": "CPRL",
+      "type": "再保险公司"
+    },
+    {
+      "name": "太平再保险",
+      "code": "TPRL",
+      "type": "再保险公司"
+    },
+    {
+      "name": "前海再保险",
+      "code": "QHRL",
+      "type": "再保险公司"
+    },
+    {
+      "name": "通用再保险",
+      "code": "GRRL",
+      "type": "再保险公司"
+    },
+    {
+      "name": "汉诺威再保险",
+      "code": "HNRL",
+      "type": "再保险公司"
+    },
+    {
+      "name": "瑞士再保险",
+      "code": "RSRL",
+      "type": "再保险公司"
+    },
+    {
+      "name": "慕尼黑再保险",
+      "code": "MRRL",
+      "type": "再保险公司"
+    },
+    {
+      "name": "法国再保险",
+      "code": "FRRL",
+      "type": "再保险公司"
+    }
+  ]
+}

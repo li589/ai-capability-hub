@@ -1,0 +1,12 @@
+{
+  "slug": "wechat-mp-suite",
+  "name": "微信公众号终极工作台（全流程一站式）",
+  "version": "1.0.2",
+  "installedAt": 1787228795421,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/60484da4-21ca-4044-b2ff-2b3a1ddcd63f.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/60484da4-21ca-4044-b2ff-2b3a1ddcd63f.png"
+}

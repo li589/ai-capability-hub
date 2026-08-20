@@ -1,0 +1,12 @@
+{
+  "slug": "image-text-desensitization",
+  "name": "基于深度学习图片与文字本地脱敏工具",
+  "version": "1.0.0",
+  "installedAt": 1787228992392,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/e9a58ede-ead5-43fd-9523-d1ba7f1b78cd.png"
+}

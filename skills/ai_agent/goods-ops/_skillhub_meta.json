@@ -1,0 +1,10 @@
+{
+  "name": "商品运营",
+  "installedAt": 1787228470693,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087079138104320000",
+  "description_zh": "查询和筛选商品、查看详情、排序及类目分组；支持将创建商品、调价、改库存和上下架等操作委派处理。",
+  "description_en": "Search, filter, inspect, sort, and group products; delegate product creation, pricing, inventory, and listing-status operations when needed.",
+  "iconSource": "letter:auto"
+}

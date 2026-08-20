@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:strategic-growth-compass",
+  "registry": "trae-remote-official",
+  "plugin_name": "strategic-growth-compass",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "9960031e-203c-4253-aa4e-c7dd2e8e6cc5",
+  "remote_installed_plugin_id": "J3MX5KF180CR-F",
+  "checksum": "29c69348a3f2aa68eb581ea08e430544f9e9ea06e838ed35692876fcd9bd9cc9",
+  "file_size": 48148,
+  "installed_at": 1787227202539
+}

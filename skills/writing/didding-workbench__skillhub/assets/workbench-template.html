@@ -1,0 +1,2871 @@
+﻿<!DOCTYPE html>
+<!--
+  投标辅助工作台 - 通用模板
+  
+  使用方式：
+  1. 搜索 "/* === 项目数据 === */" 标记，找到所有需要填充的JS常量
+  2. 替换以下常量为实际项目数据（保留变量名和数据结构不变）：
+     - PROJECT: 项目基本信息
+     - EVAL_SCORES: 评标评分项
+     - STRATEGIES: 评分策略建议
+     - TECH_REQS: 技术要求
+     - HARDWARE_REQS: 硬件要求
+     - BIZ_REQS: 商务要求
+     - DARK_MARK_RULES: 暗标格式规范
+     - RISKS: 风险清单
+     - QUALIFICATIONS: 资质准备清单
+     - PERSONNEL: 人员配置
+     - SOP_PHASES: 投标SOP阶段
+  3. 修改 title 标签中的项目名称
+  4. 保存文件，通过HTTP服务器打开
+  
+  交互功能：
+  - 左侧导航切换10个页面
+  - 所有复选框/下拉/状态自动存localStorage
+  - SOP页面：阶段折叠、到期提醒、保存（含时间戳文件名）
+  - 评标分析：可交互环状图 + 策略展开
+  - 深浅主题切换
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta viewport="width=device-width, initial-scale=1.0">
+<title>投标辅助工作台 - [项目名称]</title>
+<style>
+:root {
+  --accent: #2563eb;
+  --accent-light: #3b82f6;
+  --accent-dark: #1d4ed8;
+  --accent-bg: #eff6ff;
+  --bg: #f0f2f5;
+  --bg-card: #ffffff;
+  --bg-sidebar: #0f172a;
+  --bg-sidebar-hover: #1e293b;
+  --bg-sidebar-active: rgba(37,99,235,0.25);
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --text-muted: #94a3b8;
+  --text-sidebar: #cbd5e1;
+  --text-sidebar-active: #ffffff;
+  --border: #e2e8f0;
+  --border-light: #f1f5f9;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+  --shadow: 0 1px 3px rgba(0,0,0,0.1), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+  --radius: 8px;
+  --radius-sm: 4px;
+  --radius-lg: 12px;
+  --sidebar-width: 240px;
+  --header-height: 0px;
+  --success: #10b981;
+  --success-bg: #ecfdf5;
+  --warning: #f59e0b;
+  --warning-bg: #fffbeb;
+  --danger: #ef4444;
+  --danger-bg: #fef2f2;
+  --info: #3b82f6;
+  --info-bg: #eff6ff;
+  --purple: #8b5cf6;
+  --purple-bg: #f5f3ff;
+  --orange: #f97316;
+  --orange-bg: #fff7ed;
+  --cyan: #06b6d4;
+  --cyan-bg: #ecfeff;
+  --transition: all 0.2s ease;
+}
+
+[data-theme="dark"] {
+  --bg: #0f172a;
+  --bg-card: #1e293b;
+  --bg-sidebar: #020617;
+  --bg-sidebar-hover: #0f172a;
+  --bg-sidebar-active: rgba(37,99,235,0.35);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-sidebar: #94a3b8;
+  --text-sidebar-active: #ffffff;
+  --border: #334155;
+  --border-light: #1e293b;
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.2);
+  --shadow: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.3);
+  --accent-bg: rgba(37,99,235,0.15);
+  --success-bg: rgba(16,185,129,0.1);
+  --warning-bg: rgba(245,158,11,0.1);
+  --danger-bg: rgba(239,68,68,0.1);
+  --info-bg: rgba(59,130,246,0.1);
+  --purple-bg: rgba(139,92,246,0.1);
+  --orange-bg: rgba(249,115,22,0.1);
+  --cyan-bg: rgba(6,182,212,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { font-size: 14px; scroll-behavior: smooth; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+  background: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: var(--transition);
+  overflow-x: hidden;
+}
+
+#app { display: flex; min-height: 100vh; }
+
+/* ========== SIDEBAR ========== */
+#sidebar {
+  position: fixed;
+  left: 0; top: 0; bottom: 0;
+  width: var(--sidebar-width);
+  background: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.sidebar-header {
+  padding: 20px 16px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+
+.sidebar-title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.sidebar-subtitle {
+  color: var(--text-sidebar);
+  font-size: 11px;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#nav-menu {
+  list-style: none;
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+}
+
+#nav-menu::-webkit-scrollbar { width: 4px; }
+#nav-menu::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.15); border-radius: 2px; }
+
+#nav-menu li {
+  display: flex;
+  align-items: center;
+  padding: 10px 16px;
+  margin: 2px 8px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  color: var(--text-sidebar);
+  transition: var(--transition);
+  white-space: nowrap;
+  user-select: none;
+}
+
+#nav-menu li:hover {
+  background: var(--bg-sidebar-hover);
+  color: #fff;
+}
+
+#nav-menu li.active {
+  background: var(--bg-sidebar-active);
+  color: var(--text-sidebar-active);
+}
+
+.nav-icon { font-size: 18px; margin-right: 10px; flex-shrink: 0; width: 24px; text-align: center; }
+.nav-text { font-size: 13px; font-weight: 500; }
+
+.sidebar-footer {
+  padding: 12px 16px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  flex-shrink: 0;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  background: var(--bg-sidebar-hover);
+  color: var(--text-sidebar);
+  cursor: pointer;
+  font-size: 12px;
+  transition: var(--transition);
+}
+
+.theme-toggle:hover { background: var(--bg-sidebar-active); color: #fff; }
+
+.sidebar-version {
+  color: var(--text-muted);
+  font-size: 11px;
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* ========== MAIN CONTENT ========== */
+#content {
+  margin-left: var(--sidebar-width);
+  flex: 1;
+  padding: 24px 28px;
+  min-height: 100vh;
+  max-width: calc(100vw - var(--sidebar-width));
+}
+
+.page-header {
+  margin-bottom: 24px;
+}
+
+.page-header h1 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.page-header .page-desc {
+  color: var(--text-secondary);
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+/* ========== CARDS ========== */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.card:hover { box-shadow: var(--shadow-md); }
+
+.card-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.card-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.card-body { padding: 20px; }
+
+.card-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  background: var(--border-light);
+}
+
+/* ========== STAT CARDS ========== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); }
+
+.stat-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.stat-icon.blue { background: var(--info-bg); }
+.stat-icon.green { background: var(--success-bg); }
+.stat-icon.orange { background: var(--orange-bg); }
+.stat-icon.red { background: var(--danger-bg); }
+.stat-icon.purple { background: var(--purple-bg); }
+.stat-icon.cyan { background: var(--cyan-bg); }
+.stat-icon.yellow { background: var(--warning-bg); }
+
+.stat-content { flex: 1; min-width: 0; }
+
+.stat-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.stat-value.accent { color: var(--accent); }
+
+.stat-card .border-left {
+  border-left: 4px solid var(--accent);
+}
+
+.stat-card.border-blue { border-left: 4px solid var(--info); }
+.stat-card.border-green { border-left: 4px solid var(--success); }
+.stat-card.border-orange { border-left: 4px solid var(--warning); }
+.stat-card.border-red { border-left: 4px solid var(--danger); }
+.stat-card.border-purple { border-left: 4px solid var(--purple); }
+
+/* ========== TABLES ========== */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.table-wrapper::-webkit-scrollbar { height: 6px; }
+.table-wrapper::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+thead { position: sticky; top: 0; z-index: 10; }
+
+thead th {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #fff;
+  padding: 10px 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  border: none;
+}
+
+tbody td {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  vertical-align: top;
+}
+
+tbody tr { transition: var(--transition); }
+
+tbody tr:nth-child(even) { background: var(--border-light); }
+tbody tr:hover { background: var(--accent-bg); }
+
+.table-striped tbody tr:nth-child(even) { background: var(--border-light); }
+
+.table-compact td, .table-compact th { padding: 8px 12px; }
+
+.table-clickable tbody tr { cursor: pointer; }
+
+td.col-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+
+th.col-score, th.col-level, th.col-status { text-align: center; }
+td.col-score, td.col-level, td.col-status { text-align: center; }
+
+td .text-ellipsis {
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ========== STATUS TAGS ========== */
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.tag-pending { background: #f1f5f9; color: #64748b; border: 1px solid #e2e8f0; }
+.tag-progress { background: var(--info-bg); color: var(--accent); border: 1px solid rgba(37,99,235,0.2); }
+.tag-done { background: var(--success-bg); color: var(--success); border: 1px solid rgba(16,185,129,0.2); }
+.tag-cancel { background: var(--danger-bg); color: var(--danger); border: 1px solid rgba(239,68,68,0.2); }
+.tag-warning { background: var(--warning-bg); color: var(--warning); border: 1px solid rgba(245,158,11,0.2); }
+.tag-info { background: var(--info-bg); color: var(--info); border: 1px solid rgba(59,130,246,0.2); }
+.tag-purple { background: var(--purple-bg); color: var(--purple); border: 1px solid rgba(139,92,246,0.2); }
+
+[data-theme="dark"] .tag-pending { background: rgba(100,116,139,0.15); color: #94a3b8; border-color: rgba(100,116,139,0.3); }
+
+/* ========== PRIORITY TAGS ========== */
+.priority-high { color: var(--danger); font-weight: 600; }
+.priority-mid { color: var(--warning); font-weight: 600; }
+.priority-low { color: var(--success); font-weight: 600; }
+
+.priority-dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.priority-dot.high { background: var(--danger); }
+.priority-dot.mid { background: var(--warning); }
+.priority-dot.low { background: var(--success); }
+
+/* ========== BADGE ========== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 6px;
+  border-radius: 99px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.badge-accent { background: var(--accent); color: #fff; }
+.badge-success { background: var(--success); color: #fff; }
+.badge-warning { background: var(--warning); color: #fff; }
+.badge-danger { background: var(--danger); color: #fff; }
+.badge-muted { background: var(--text-muted); color: #fff; }
+
+/* ========== BUTTONS ========== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.btn-primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+
+.btn-success { background: var(--success); color: #fff; border-color: var(--success); }
+.btn-success:hover { background: #059669; }
+
+.btn-danger { background: var(--danger); color: #fff; border-color: var(--danger); }
+.btn-danger:hover { background: #dc2626; }
+
+.btn-outline {
+  background: transparent;
+  color: var(--text-primary);
+  border-color: var(--border);
+}
+.btn-outline:hover { background: var(--accent-bg); border-color: var(--accent); color: var(--accent); }
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: none;
+  padding: 6px 10px;
+}
+.btn-ghost:hover { background: var(--accent-bg); color: var(--accent); }
+
+.btn-sm { padding: 4px 10px; font-size: 12px; }
+.btn-lg { padding: 10px 24px; font-size: 15px; }
+
+.btn-group { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* ========== FORM CONTROLS ========== */
+.form-group { margin-bottom: 16px; }
+
+.form-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 13px;
+  color: var(--text-primary);
+  background: var(--bg-card);
+  transition: var(--transition);
+  outline: none;
+  font-family: inherit;
+}
+
+.form-control:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(37,99,235,0.15); }
+.form-control::placeholder { color: var(--text-muted); }
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364748b' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  padding-right: 30px;
+  cursor: pointer;
+}
+
+textarea.form-control { resize: vertical; min-height: 80px; }
+
+.form-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.form-check input[type="checkbox"] {
+  width: 16px; height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.form-row .form-group { flex: 1; min-width: 200px; }
+
+/* ========== SEARCH ========== */
+.search-box {
+  position: relative;
+  max-width: 360px;
+}
+
+.search-box input {
+  padding-left: 36px;
+}
+
+.search-box .search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+/* ========== FILTER BAR ========== */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.filter-btn {
+  padding: 5px 14px;
+  border-radius: 99px;
+  font-size: 12px;
+  font-weight: 500;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.filter-btn:hover { border-color: var(--accent); color: var(--accent); }
+.filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.filter-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  padding: 0 5px;
+  border-radius: 99px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.filter-btn.active .filter-count { background: rgba(255,255,255,0.3); color: #fff; }
+.filter-btn:not(.active) .filter-count { background: var(--border-light); color: var(--text-muted); }
+
+/* ========== PAGINATION ========== */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px 0;
+}
+
+.page-btn {
+  min-width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: var(--transition);
+  padding: 0 8px;
+}
+
+.page-btn:hover:not(:disabled) { border-color: var(--accent); color: var(--accent); }
+.page-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.page-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.page-info {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin: 0 12px;
+}
+
+/* ========== MODAL ========== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  backdrop-filter: blur(4px);
+}
+
+.modal-overlay.show { opacity: 1; visibility: visible; }
+
+.modal {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 90%;
+  max-width: 640px;
+  max-height: 85vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.95) translateY(10px);
+  transition: transform 0.2s ease;
+}
+
+.modal-overlay.show .modal { transform: scale(1) translateY(0); }
+
+.modal-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h3 { font-size: 16px; font-weight: 600; }
+
+.modal-close {
+  width: 30px; height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius);
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 18px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.modal-close:hover { background: var(--danger-bg); color: var(--danger); }
+
+.modal-body { padding: 20px; overflow-y: auto; flex: 1; }
+
+.modal-footer {
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* ========== TABS ========== */
+.tabs { margin-bottom: 20px; }
+
+.tab-nav {
+  display: flex;
+  border-bottom: 2px solid var(--border);
+  gap: 0;
+  overflow-x: auto;
+}
+
+.tab-nav::-webkit-scrollbar { height: 0; }
+
+.tab-btn {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: var(--transition);
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+}
+
+.tab-btn:hover { color: var(--accent); }
+
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+  font-weight: 600;
+}
+
+.tab-content { display: none; padding-top: 16px; }
+.tab-content.active { display: block; }
+
+/* ========== TIMELINE ========== */
+.timeline { position: relative; padding-left: 28px; }
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 10px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 20px;
+  padding-left: 20px;
+}
+
+.timeline-item:last-child { padding-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--bg-card);
+  box-shadow: 0 0 0 2px var(--accent);
+}
+
+.timeline-dot.done { background: var(--success); box-shadow: 0 0 0 2px var(--success); }
+.timeline-dot.pending { background: var(--text-muted); box-shadow: 0 0 0 2px var(--text-muted); }
+
+.timeline-title { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.timeline-meta { font-size: 12px; color: var(--text-secondary); margin-bottom: 4px; }
+.timeline-desc { font-size: 13px; color: var(--text-secondary); }
+
+/* ========== PROGRESS BAR ========== */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  transition: width 0.4s ease;
+}
+
+.progress-fill.green { background: linear-gradient(90deg, #059669, var(--success)); }
+.progress-fill.orange { background: linear-gradient(90deg, #d97706, var(--warning)); }
+.progress-fill.red { background: linear-gradient(90deg, #dc2626, var(--danger)); }
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+/* ========== ACCORDION ========== */
+.accordion { border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+
+.accordion-item { border-bottom: 1px solid var(--border); }
+.accordion-item:last-child { border-bottom: none; }
+
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  cursor: pointer;
+  background: var(--bg-card);
+  transition: var(--transition);
+  user-select: none;
+}
+
+.accordion-header:hover { background: var(--accent-bg); }
+
+.accordion-header .accordion-title { font-size: 13px; font-weight: 600; }
+
+.accordion-arrow {
+  transition: transform 0.2s ease;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.accordion-item.open .accordion-arrow { transform: rotate(180deg); }
+
+.accordion-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.accordion-item.open .accordion-body { max-height: 2000px; }
+
+.accordion-content { padding: 12px 16px; font-size: 13px; color: var(--text-secondary); }
+
+/* ========== TOOLTIP ========== */
+.tooltip-wrap { position: relative; display: inline-flex; }
+
+.tooltip-text {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #1e293b;
+  color: #fff;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: var(--radius);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+  z-index: 3000;
+  pointer-events: none;
+}
+
+.tooltip-text::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #1e293b;
+}
+
+.tooltip-wrap:hover .tooltip-text { opacity: 1; visibility: visible; }
+
+/* ========== INFO GRID ========== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  align-items: baseline;
+  padding: 8px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.info-label {
+  font-size: 12px;
+  color: var(--text-secondary);
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+.info-value {
+  font-size: 13px;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+/* ========== ALERT ========== */
+.alert {
+  padding: 12px 16px;
+  border-radius: var(--radius);
+  font-size: 13px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.alert-danger { background: var(--danger-bg); color: var(--danger); border: 1px solid rgba(239,68,68,0.2); }
+.alert-warning { background: var(--warning-bg); color: #92400e; border: 1px solid rgba(245,158,11,0.2); }
+.alert-info { background: var(--info-bg); color: var(--accent); border: 1px solid rgba(37,99,235,0.2); }
+.alert-success { background: var(--success-bg); color: #065f46; border: 1px solid rgba(16,185,129,0.2); }
+
+[data-theme="dark"] .alert-warning { color: var(--warning); }
+[data-theme="dark"] .alert-success { color: var(--success); }
+
+.alert-icon { font-size: 16px; flex-shrink: 0; margin-top: 1px; }
+.alert-content { flex: 1; }
+.alert-title { font-weight: 600; margin-bottom: 2px; }
+
+/* ========== CHECKLIST ========== */
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.checklist-item:last-child { border-bottom: none; }
+
+.checklist-item input[type="checkbox"] {
+  width: 18px; height: 18px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.checklist-item .check-label { flex: 1; font-size: 13px; }
+.checklist-item.checked .check-label { text-decoration: line-through; color: var(--text-muted); }
+
+/* ========== PHASE CARDS (SOP) ========== */
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.phase-header.phase-1 { background: var(--info-bg); color: var(--info); border-left: 4px solid var(--info); }
+.phase-header.phase-2 { background: var(--success-bg); color: var(--success); border-left: 4px solid var(--success); }
+.phase-header.phase-3 { background: var(--purple-bg); color: var(--purple); border-left: 4px solid var(--purple); }
+.phase-header.phase-4 { background: var(--orange-bg); color: var(--orange); border-left: 4px solid var(--orange); }
+.phase-header.phase-5 { background: var(--danger-bg); color: var(--danger); border-left: 4px solid var(--danger); }
+
+.phase-badge {
+  margin-left: auto;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 99px;
+  font-weight: 600;
+}
+
+/* ========== SCORE BAR ========== */
+.score-bar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.score-bar-fill {
+  flex: 1;
+  height: 10px;
+  background: var(--border);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.score-bar-value {
+  min-width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ========== STRATEGY CARD ========== */
+.strategy-card {
+  background: var(--purple-bg);
+  border: 1px solid rgba(139,92,246,0.2);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-top: 16px;
+}
+
+.strategy-card h4 {
+  color: var(--purple);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.strategy-card ul {
+  padding-left: 18px;
+  font-size: 13px;
+  color: var(--text-primary);
+}
+
+.strategy-card li { margin-bottom: 4px; }
+
+/* ========== EMPTY STATE ========== */
+.empty-state {
+  text-align: center;
+  padding: 48px 20px;
+  color: var(--text-muted);
+}
+
+.empty-state .empty-icon { font-size: 48px; margin-bottom: 12px; }
+.empty-state .empty-text { font-size: 14px; }
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 1024px) {
+  #sidebar { width: 60px; }
+  .sidebar-title, .sidebar-subtitle, .nav-text, .sidebar-version, .theme-toggle span:not(:first-child) { display: none; }
+  .sidebar-header { padding: 16px 12px; }
+  .sidebar-title::first-letter { font-size: 16px; }
+  #nav-menu li { justify-content: center; padding: 10px; margin: 2px 6px; }
+  .nav-icon { margin-right: 0; font-size: 20px; }
+  .theme-toggle { justify-content: center; padding: 8px; }
+  #content { margin-left: 60px; padding: 16px; }
+}
+
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .info-grid { grid-template-columns: 1fr; }
+  .form-row { flex-direction: column; }
+  .filter-bar { flex-direction: column; align-items: stretch; }
+  .modal { width: 95%; max-height: 90vh; }
+}
+
+@media (max-width: 480px) {
+  .stats-grid { grid-template-columns: 1fr; }
+  #content { padding: 12px; }
+}
+
+/* ========== PRINT ========== */
+@media print {
+  #sidebar { display: none !important; }
+  #content { margin-left: 0 !important; padding: 0 !important; max-width: 100% !important; }
+  .btn, .filter-bar, .search-box, .pagination, .modal-overlay, .theme-toggle { display: none !important; }
+  .card { box-shadow: none !important; border: 1px solid #ccc !important; break-inside: avoid; }
+  .stat-card { box-shadow: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+}
+
+/* ========== UTILITIES ========== */
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.gap-8 { gap: 8px; }
+.gap-12 { gap: 12px; }
+.gap-16 { gap: 16px; }
+.gap-24 { gap: 24px; }
+.gap-4 { gap: 4px; }
+.flex-1 { flex: 1; }
+.flex-wrap { flex-wrap: wrap; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-sm { font-size: 12px; }
+.text-xs { font-size: 11px; }
+.text-lg { font-size: 16px; }
+.text-xl { font-size: 20px; }
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.text-muted { color: var(--text-secondary); }
+.text-accent { color: var(--accent); }
+.text-danger { color: var(--danger); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-purple { color: var(--purple); }
+.mt-8 { margin-top: 8px; }
+.mt-12 { margin-top: 12px; }
+.mt-16 { margin-top: 16px; }
+.mt-24 { margin-top: 24px; }
+.mb-8 { margin-bottom: 8px; }
+.mb-12 { margin-bottom: 12px; }
+.mb-16 { margin-bottom: 16px; }
+.mb-24 { margin-bottom: 24px; }
+.p-16 { padding: 16px; }
+.p-20 { padding: 20px; }
+.w-full { width: 100%; }
+.truncate { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.rounded { border-radius: var(--radius); }
+.hidden { display: none !important; }
+.cursor-pointer { cursor: pointer; }
+.select-none { user-select: none; }
+.overflow-auto { overflow: auto; }
+.break-all { word-break: break-all; }
+.whitespace-pre-wrap { white-space: pre-wrap; }
+
+/* risk card */
+.risk-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-bottom: 12px;
+  transition: var(--transition);
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.risk-card:hover { box-shadow: var(--shadow-md); }
+
+.risk-card.level-high { border-left: 4px solid var(--danger); }
+.risk-card.level-mid { border-left: 4px solid var(--warning); }
+.risk-card.level-low { border-left: 4px solid var(--success); }
+
+.risk-type { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.risk-desc { font-size: 13px; font-weight: 500; margin: 4px 0; }
+.risk-suggestion { font-size: 12px; color: var(--text-secondary); }
+
+/* sop task row */
+.sop-task {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  background: var(--bg-card);
+  transition: var(--transition);
+}
+
+.sop-task:hover { box-shadow: var(--shadow); }
+.sop-task.completed { opacity: 0.7; background: var(--success-bg); }
+
+.sop-task-id {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent-bg);
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.sop-task.completed .sop-task-id { background: var(--success-bg); color: var(--success); }
+
+.sop-task-info { flex: 1; min-width: 0; }
+.sop-task-name { font-size: 13px; font-weight: 600; }
+.sop-task-detail { font-size: 12px; color: var(--text-secondary); margin-top: 2px; }
+
+.sop-task-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* dark mark rule */
+.dark-rule-item {
+  padding: 12px 16px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  background: var(--bg-card);
+  transition: var(--transition);
+}
+
+.dark-rule-item:hover { box-shadow: var(--shadow); }
+
+.dark-rule-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.dark-rule-item .rule-name { font-size: 13px; font-weight: 600; }
+.dark-rule-item .rule-text { font-size: 13px; color: var(--text-primary); }
+.dark-rule-item .rule-consequence { font-size: 12px; color: var(--danger); margin-top: 4px; }
+
+/* personnel card */
+.personnel-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-bottom: 16px;
+  background: var(--bg-card);
+  transition: var(--transition);
+}
+
+.personnel-card:hover { box-shadow: var(--shadow-md); }
+
+.personnel-role {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.personnel-score {
+  padding: 4px 14px;
+  border-radius: 99px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.personnel-certs { font-size: 13px; color: var(--text-secondary); margin-bottom: 6px; }
+.personnel-tips { font-size: 12px; color: var(--text-muted); font-style: italic; }
+
+/* page section title */
+.section-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent);
+  display: inline-block;
+}
+
+/* grid layout helpers */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+@media (max-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .grid-4, .grid-3, .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* scrollable card body */
+.scrollable { max-height: 500px; overflow-y: auto; }
+.scrollable::-webkit-scrollbar { width: 6px; }
+.scrollable::-webkit-scrollbar-thumb { background: var(--text-muted); border-radius: 3px; }
+
+/* toast notification */
+.toast-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.toast {
+  padding: 12px 20px;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: slideIn 0.3s ease;
+  max-width: 360px;
+}
+
+.toast-success { border-left: 4px solid var(--success); }
+.toast-danger { border-left: 4px solid var(--danger); }
+.toast-warning { border-left: 4px solid var(--warning); }
+.toast-info { border-left: 4px solid var(--info); }
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+</style>
+</head>
+<body>
+<div id="app">
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <div class="sidebar-title">投标辅助工作台</div>
+      <div class="sidebar-subtitle">大模型智能融合平台建设项目</div>
+    </div>
+    <ul id="nav-menu">
+      <li data-page="overview" class="active">
+        <span class="nav-icon">📊</span>
+        <span class="nav-text">项目概览</span>
+      </li>
+      <li data-page="sop">
+        <span class="nav-icon">📌</span>
+        <span class="nav-text">投标SOP</span>
+      </li>
+      <li data-page="eval">
+        <span class="nav-icon">🏆</span>
+        <span class="nav-text">评标分析</span>
+      </li>
+      <li data-page="tech">
+        <span class="nav-icon">⚙️</span>
+        <span class="nav-text">技术要求</span>
+      </li>
+      <li data-page="biz">
+        <span class="nav-icon">📋</span>
+        <span class="nav-text">商务要求</span>
+      </li>
+      <li data-page="dark">
+        <span class="nav-icon">⚠️</span>
+        <span class="nav-text">暗标规范</span>
+      </li>
+      <li data-page="risk">
+        <span class="nav-icon">🛡️</span>
+        <span class="nav-text">风险分析</span>
+      </li>
+      <li data-page="qual">
+        <span class="nav-icon">📁</span>
+        <span class="nav-text">资质准备</span>
+      </li>
+      <li data-page="personnel">
+        <span class="nav-icon">👥</span>
+        <span class="nav-text">人员配置</span>
+      </li>
+      <li data-page="price">
+        <span class="nav-icon">💰</span>
+        <span class="nav-text">商务报价</span>
+      </li>
+    </ul>
+    <div class="sidebar-footer">
+      <div class="theme-toggle" onclick="toggleTheme()">
+        <span id="theme-icon">🌙</span>
+      </div>
+      <div class="sidebar-version">v1.0</div>
+    </div>
+  </nav>
+  <main id="content">
+    <!-- Dynamic rendering -->
+  </main>
+</div>
+<div class="modal-overlay" id="modal-overlay" onclick="closeModalOutside(event)">
+  <div class="modal" id="modal-box">
+    <div class="modal-header">
+      <h3 id="modal-title"></h3>
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+    </div>
+    <div class="modal-body" id="modal-body"></div>
+    <div class="modal-footer" id="modal-footer"></div>
+  </div>
+</div>
+<div class="toast-container" id="toast-container"></div>
+
+<script>
+// ========== THEME ==========
+function toggleTheme() {
+  const html = document.documentElement;
+  const current = html.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  html.setAttribute('data-theme', next);
+  localStorage.setItem('bid-theme', next);
+  document.getElementById('theme-icon').textContent = next === 'dark' ? '☀️' : '🌙';
+}
+
+(function() {
+  const saved = localStorage.getItem('bid-theme');
+  if (saved) {
+    document.documentElement.setAttribute('data-theme', saved);
+    document.getElementById('theme-icon').textContent = saved === 'dark' ? '☀️' : '🌙';
+  }
+})();
+
+// ========== TOAST ==========
+function showToast(msg, type) {
+  type = type || 'info';
+  var container = document.getElementById('toast-container');
+  var icons = { success: '✅', danger: '❌', warning: '⚠️', info: 'ℹ️' };
+  var toast = document.createElement('div');
+  toast.className = 'toast toast-' + type;
+  toast.innerHTML = '<span>' + (icons[type] || '') + '</span><span>' + msg + '</span>';
+  container.appendChild(toast);
+  setTimeout(function() { toast.remove(); }, 3000);
+}
+
+// ========== PROJECT DATA ==========
+const PROJECT = {
+  name: "大模型智能融合平台建设项目",
+  bidNo: "HBGH-2025-036",
+  purchaser: "正定县数字经济发展有限公司",
+  agent: "河北国华招标代理有限公司",
+  budget: "365.88万元",
+  softwareLimit: "184.93万元",
+  hardwareLimit: "180.95万元",
+  deadline: "2025-07-16 13:30",
+  validity: "90日历天",
+  delivery: "合同签订后60日历日",
+  quality: "合格",
+  warranty: "三年",
+  evalMethod: "综合评估法",
+  jointBid: "不接受",
+  subcontract: "严禁分包",
+  deposit: "承诺书形式（失信补缴7.5万元）",
+  platform: "招标通电子招投标交易平台",
+  location: "中国(河北)自由贸易试验区正定片区正定高新技术产业开发区北区"
+};
+
+// ========== EVAL SCORES ==========
+const EVAL_SCORES = [
+  { category: "商务部分(明标)", item: "拟服务本项目人员情况", score: 9, detail: "项目负责人同时具有高级项目管理师及PMP、CISP证书得4分；任意两个2分。高级工程师每名1分(最高2分)。系统分析师/架构师/测试工程师各1分(最多3分)", target: "7-9", strategy: "冲刺满分。三证齐全+专项人员分布" },
+  { category: "商务部分(明标)", item: "投标货物技术性能指标响应程度", score: 10, detail: "全部满足9.1-10分；基本满足7.6-9.0分；不完全满足6.1-7.5分", target: "9-10", strategy: "100%响应，附逐条对照表" },
+  { category: "商务部分(明标)", item: "平台成熟度", score: 6, detail: "大模型网信办备案截图3分；RAG技术国内权威机构测试认证3分", target: "6", strategy: "备案截图+RAG认证缺一不可" },
+  { category: "项目实施方案(暗标)", item: "技术服务方案", score: 15, detail: "全面合理13.6-15分；较合理11.26-13.5分；一般9.1-11.25分", target: "13.6-15", strategy: "暗标第一大项，四层架构方案20-30页" },
+  { category: "项目实施方案(暗标)", item: "运维服务", score: 10, detail: "体系完善9.1-10分；较好7.6-9.0分；一般6.1-7.5分", target: "9-10", strategy: "人员优于要求，7x24响应" },
+  { category: "项目实施方案(暗标)", item: "供货方案", score: 10, detail: "合理可行9.1-10分；较合理7.6-9.0分；有遗漏6.1-7.5分", target: "9-10", strategy: "含甘特图，硬件先到位2-3天" },
+  { category: "项目实施方案(暗标)", item: "供货能力及保障措施", score: 10, detail: "合理可行9.1-10分；较合理7.6-9.0分；有遗漏6.1-7.5分", target: "9-10", strategy: "供应链优势+备选方案" },
+  { category: "项目实施方案(暗标)", item: "培训计划及内容", score: 10, detail: "合理完善9.1-10分；较合理7.6-9.0分；有缺陷6.1-7.5分", target: "9-10", strategy: "8维度全覆盖+针对性强" },
+  { category: "项目实施方案(暗标)", item: "售后服务方案", score: 10, detail: "方案完善9.1-10分；较好7.6-9.0分；一般6.1-7.5分", target: "9-10", strategy: "7x24+2h响应+三年质保" },
+  { category: "投标报价", item: "价格分", score: 10, detail: "等于评标基准价得10分；每高出1%扣0.3分；每低于1%扣0.2分", target: "8-10", strategy: "限价85%-93%区间" }
+];
+
+// ========== CAT KEYS & SCORES（从 EVAL_SCORES 动态计算） ==========
+var CAT_KEYS = [];
+var CAT_SCORES = {};
+EVAL_SCORES.forEach(function(e) {
+  if (CAT_KEYS.indexOf(e.category) === -1) CAT_KEYS.push(e.category);
+  if (!CAT_SCORES[e.category]) CAT_SCORES[e.category] = 0;
+  CAT_SCORES[e.category] += e.score;
+});
+
+// ========== STRATEGIES ==========
+const STRATEGIES = [
+  {
+    item: "拟服务本项目人员情况",
+    tips: [
+      "项目负责人必须三证齐全（高级项目管理师+PMP+CISP），否则最高只得2分，差距巨大",
+      "高级工程师至少安排2名，证书需在有效期内，确保拿到2分",
+      "系统分析师、架构师、测试工程师需分配给不同人员，一人多项证书不重复计分",
+      "人员简历中需突出AI/大模型/知识管理相关项目经验，增强说服力",
+      "附所有证书扫描件，确保证书名称与招标文件要求完全一致"
+    ]
+  },
+  {
+    item: "投标货物技术性能指标响应程度",
+    tips: [
+      "逐条对照技术参数表，确保每一条都标注'满足'，不得有任何'偏离'",
+      "对参数表中的每一条功能点，在技术方案中体现对应实现方案",
+      "附产品功能截图、测试报告等佐证材料，提升可信度",
+      "注意'应'和'宜'的区别，'应'为强制要求必须满足，'宜'为建议项",
+      "技术偏离表中统一填写'无偏离'，避免因表述不当被扣分"
+    ]
+  },
+  {
+    item: "平台成熟度",
+    tips: [
+      "立即准备大模型网信办备案官网截图，需清晰显示备案编号和公示内容",
+      "联系RAG技术认证机构，确认能否在截标前取得测试认证证书",
+      "如已有认证，检查证书是否在有效期内，签发单位是否为'国内权威机构'",
+      "备案截图和认证证书需放在明标商务部分对应位置，不可遗漏",
+      "准备备案信息说明材料，解释大模型名称、版本、备案日期等关键信息"
+    ]
+  },
+  {
+    item: "技术服务方案",
+    tips: [
+      "这是暗标中分值最高的一项（15分），务必投入最大精力编写",
+      "采用四层架构：SaaS应用层→MaaS模型层→PaaS平台层→IaaS基础设施层",
+      "方案篇幅控制在20-30页，内容需全面覆盖知识管理、大模型管理、算力服务等模块",
+      "严格遵循暗标格式规范：宋体四号、黑色、左对齐、30磅行距、禁止目录",
+      "重点描述平台的技术架构、功能实现方案、数据安全方案和系统对接方案",
+      "突出技术先进性：大模型RAG增强、多模态知识检索、智能问答等核心能力"
+    ]
+  },
+  {
+    item: "运维服务",
+    tips: [
+      "建立分级运维体系：L1一线值班→L2技术支持→L3专家介入",
+      "明确7×24小时服务承诺，故障响应时间≤2小时，到场时间≤4小时",
+      "提供详细的运维组织架构、岗位职责和值班排班表",
+      "包含监控告警方案：系统监控、性能监控、安全监控、日志审计",
+      "制定应急预案和灾备方案，定期演练计划",
+      "突出运维人员配置优于招标要求的亮点"
+    ]
+  },
+  {
+    item: "供货方案",
+    tips: [
+      "提供详细的项目实施甘特图，明确各阶段时间节点和交付物",
+      "硬件采购优先确保先到位（2-3天内），为软件安装调试预留充足时间",
+      "明确软件安装部署流程：环境搭建→系统安装→功能测试→联调→验收",
+      "供货计划需考虑硬件物流时间（含可能的备选方案）",
+      "标注关键里程碑节点和验收检查点，让评审专家清晰了解项目进度"
+    ]
+  },
+  {
+    item: "供货能力及保障措施",
+    tips: [
+      "展示公司供应链优势：与主要硬件厂商的战略合作关系",
+      "提供备选供应商方案，避免单一来源风险",
+      "说明硬件库存和备货能力，证明能够按时交付",
+      "列出供货保障措施：专人跟踪、定期汇报、风险预警机制",
+      "附相关供货业绩证明，增强说服力"
+    ]
+  },
+  {
+    item: "培训计划及内容",
+    tips: [
+      "从8个维度设计培训内容：系统操作、管理维护、知识库构建、大模型使用、安全规范、故障处理、数据备份、系统升级",
+      "明确培训对象分类：管理员培训、业务人员培训、技术人员培训",
+      "提供培训时间安排表、师资介绍、培训方式（理论+实操+考核）",
+      "培训地点建议在用户现场，便于实操演练",
+      "附培训课件大纲和考核评估标准"
+    ]
+  },
+  {
+    item: "售后服务方案",
+    tips: [
+      "承诺三年质保期（软件+硬件），质保期内免费维修维护",
+      "明确服务响应标准：7×24小时热线、2小时内响应、24小时内解决",
+      "提供远程支持和现场支持两种服务模式",
+      "列出常见问题FAQ和故障处理手册",
+      "定期回访和满意度调查机制",
+      "质保期后提供优惠续保方案"
+    ]
+  },
+  {
+    item: "价格分",
+    tips: [
+      "总价控制在限价的85%-93%区间（约311-340万元），避免低价废标",
+      "软件报价控制在184.93万的85%-93%（约157-172万元）",
+      "硬件报价控制在180.95万的85%-93%（约154-168万元）",
+      "低于评标基准价1%仅扣0.2分，但过低可能被质疑低价投标",
+      "报价明细需合理，每项单价有据可依，避免明显不合理低价",
+      "注意评标基准价计算方式，可能取所有有效投标的算术平均值"
+    ]
+  }
+];
+
+// ========== TECH REQUIREMENTS ==========
+const TECH_REQS = [
+  { module: "知识管理引擎", item: "文档存储、解析及下载", detail: "支持pdf/doc/docx/ppt/pptx/txt格式", importance: "核心" },
+  { module: "知识管理引擎", item: "图片存储、解析及下载", detail: "支持png/jpg/jpeg，支持文档中图片、图表、表格解析", importance: "核心" },
+  { module: "知识管理引擎", item: "视频/音频存储解析", detail: "视频支持mp4/m4v/mov/mkv/webm；音频支持mp3/wav/m4a/aac/flac/ogg", importance: "一般" },
+  { module: "知识管理引擎", item: "文档解析", detail: "支持版面分析、文档切片", importance: "核心" },
+  { module: "知识管理引擎", item: "知识切片管理", detail: "支持语义切片及自定义切片", importance: "核心" },
+  { module: "知识管理引擎", item: "QA问答对抽取", detail: "从文档中挖掘FAQ信息并存储", importance: "核心" },
+  { module: "知识管理引擎", item: "知识库检索策略", detail: "混合查询/关键词查询/语义查询三种方式", importance: "核心" },
+  { module: "知识管理引擎", item: "多模态检索", detail: "文搜图片/音频/视频，支持语义搜索", importance: "核心" },
+  { module: "知识管理引擎", item: "文档检索", detail: "多格式跨知识库检索，含分片检索", importance: "核心" },
+  { module: "知识管理引擎", item: "搜索优化", detail: "基于大模型查询重写/扩写", importance: "核心" },
+  { module: "知识管理引擎", item: "多轮问答+文档问答", detail: "大模型改写与追问，基于文档内容回答", importance: "核心" },
+  { module: "知识管理引擎", item: "图表问答+多媒体问答", detail: "解析表格/图片并针对内容问答", importance: "核心" },
+  { module: "知识管理引擎", item: "大模型对话", detail: "支持与DeepSeek等大模型对话，显示思考过程", importance: "核心" },
+  { module: "知识管理引擎", item: "知识发布/重置/审核", detail: "知识发布管理、误操作重置、审核流程配置", importance: "一般" },
+  { module: "知识管理引擎", item: "OpenApi接口", detail: "大模型API+知识库API+多模态搜索API", importance: "核心" },
+  { module: "大模型管理引擎", item: "模型管理(内置/导入/导出/新增)", detail: "内置多样化模型库，支持分类模型导入导出和新增", importance: "核心" },
+  { module: "系统管理模块", item: "员工/团队/组织架构/角色", detail: "员工增删改、团队创建、部门管理、角色权限", importance: "一般" },
+  { module: "场景应用模块", item: "12345热线智能化", detail: "智能填单、知识随行、数据智能分析", importance: "核心" },
+  { module: "算力服务平台(IaaS)", item: "整体架构+超融合", detail: "芯片兼容intel/海光/鲲鹏/飞腾，KVM+Openstack", importance: "核心" },
+  { module: "算力服务平台(IaaS)", item: "弹性云主机+存储+镜像", detail: "热迁移、故障自动迁移、云硬盘最大64T", importance: "核心" },
+  { module: "算力服务平台(IaaS)", item: "云网络+SD-WAN+云管", detail: "VPC/弹性IP/NAT/负载均衡/多云纳管", importance: "核心" },
+  { module: "算力服务平台(IaaS)", item: "运维监控", detail: "告警管理、监控大屏、统计分析、日志管理", importance: "一般" }
+];
+
+// ========== HARDWARE REQUIREMENTS ==========
+const HARDWARE_REQS = [
+  { name: "通用计算服务器", qty: "3台", params: "国产化CPU不少于2颗(单颗≥32cores/2.6GHz)，512G内存(16*32GB)，系统盘2*960GB SSD，缓存盘2*1.92TB SSD，数据盘2*16TB HDD+2*7.68TB NVMe，RAID卡，双口GE+双口10GE网卡，双电源" },
+  { name: "万兆交换机", qty: "2台", params: "48个10G/25G(SFP28)端口，8个40/100G(QSFP28)端口，含48块10GE光模块和6块40GE光模块" },
+  { name: "千兆交换机", qty: "1台", params: "48个SFP接口，4个1G/10G SFP+光口，含48块SFP光模块和4块10GE光模块" },
+  { name: "智算服务器", qty: "1台", params: "国产化CPU不少于4颗(单颗≥48核@2.6GHz)，国产化GPU不少于8块(单块≥64G显存)，24*64GB内存，4*200GE光口+2*双口25GbE+1*双口GE网卡" },
+  { name: "42U定制机柜", qty: "1台", params: "可放置3台1U+12台2U，机柜环境检测+云主机资源监控，2个PDU" }
+];
+
+// ========== BUSINESS REQUIREMENTS ==========
+const BIZ_REQS = [
+  { name: "交付周期", value: "合同签订后60日历日内完成项目交付" },
+  { name: "验收标准", value: "合格，符合国家现行行业标准" },
+  { name: "质保期", value: "三年（软件+硬件）" },
+  { name: "付款方式", value: "以实际签订合同为准" },
+  { name: "培训要求", value: "暗标中须包含培训计划（目的/时间/地点/人数/次数/课程/方式/师资/周期），占暗标总分65分10分" },
+  { name: "售后服务", value: "暗标中须包含售后服务方案，占暗标总分65分10分" },
+  { name: "投标保证金", value: "以承诺书形式替代，失信需在7个工作日内补缴7.5万元" },
+  { name: "履约保证金", value: "不要求" },
+  { name: "代理服务费", value: "由中标人支付，参考计价格[2002]1980号" },
+  { name: "电子招投标", value: "全流程电子招投标，需河北CA数字证书加密/解密，解密限30分钟" },
+  { name: "分包要求", value: "严禁分包" },
+  { name: "中标后提交", value: "领取中标通知书时向代理机构提交三份纸质投标文件" },
+  { name: "后续拓展", value: "软件应满足数政局、农业农村局、发改局、教育局等多单位使用" },
+  { name: "并发要求", value: "不少于120，后续可按需拓展" },
+  { name: "数据对接", value: "提供12345热线智能化数据对接，含第三方系统对接" },
+  { name: "开源大模型部署", value: "提供开源大模型新增部署和对接服务一次" }
+];
+
+// ========== DARK MARK RULES ==========
+const DARK_MARK_RULES = [
+  { item: "版面大小", rule: "A4纸张", consequence: "否决投标" },
+  { item: "颜色要求", rule: "所有文字、图表均为黑色", consequence: "否决投标" },
+  { item: "字体要求", rule: "标题及正文均采用宋体四号常规字；图表内字体字号不作要求", consequence: "否决投标" },
+  { item: "禁止标记", rule: "不得加粗、加色、倾斜、下划线等任何标记", consequence: "否决投标" },
+  { item: "页边距", rule: "上边距2.5厘米，其余均为2厘米", consequence: "否决投标" },
+  { item: "禁止目录", rule: "不得设置目录", consequence: "否决投标" },
+  { item: "行间距", rule: "固定值30磅", consequence: "否决投标" },
+  { item: "对齐方式", rule: "文字内容统一左对齐（含标题/正文/表格标题）", consequence: "否决投标" },
+  { item: "缩进", rule: "首行缩进2字符", consequence: "否决投标" },
+  { item: "禁止空行", rule: "段落前后不设置空行", consequence: "否决投标" },
+  { item: "禁止页眉页脚页码", rule: "不得设置页眉、页脚和页码", consequence: "否决投标" },
+  { item: "禁止身份信息", rule: "不得出现投标人名称、徽标、人员名称及任何可识别身份的标记", consequence: "否决投标" },
+  { item: "其他", rule: "未做规定的情形不得作为判定无效投标的依据", consequence: "评标委员会不得随意否决" }
+];
+
+// ========== RISKS ==========
+const RISKS = [
+  { type: "废标风险", desc: "投标报价超过最高限价", level: "高", suggestion: "总价≤365.88万，软件≤184.93万，硬件≤180.95万" },
+  { type: "废标风险", desc: "未提供投标保证金承诺书", level: "高", suggestion: "以承诺书形式替代，必须按格式提交" },
+  { type: "废标风险", desc: "暗标格式不合规", level: "高", suggestion: "13条格式红线，违反任一即否决" },
+  { type: "废标风险", desc: "未提供不参与涉黑涉恶承诺书", level: "高", suggestion: "必须提交，否则按无效投标处理" },
+  { type: "废标风险", desc: "投标有效期不足90日历天", level: "高", suggestion: "投标函中明确90日历天有效期" },
+  { type: "废标风险", desc: "实质性要求未响应", level: "高", suggestion: "黑体字内容为实质性要求，不响应即否决" },
+  { type: "废标风险", desc: "电子投标文件加密/解密失败", level: "中", suggestion: "需河北CA数字证书，解密时间限30分钟内" },
+  { type: "评分风险", desc: "项目负责人证书不全", level: "高", suggestion: "需高级项目管理师+PMP+CISP三证齐全才能得满分4分" },
+  { type: "评分风险", desc: "大模型未通过网信办备案", level: "高", suggestion: "需提供网信办官网截图及公示内容，否则丢3分" },
+  { type: "评分风险", desc: "RAG技术无权威认证", level: "高", suggestion: "需国家权威机构出具的测试证书，否则丢3分" },
+  { type: "评分风险", desc: "技术方案深度不足", level: "中", suggestion: "暗标65分占大头，须全部达到第一档" },
+  { type: "合规风险", desc: "不接受联合体投标/严禁分包", level: "中", suggestion: "仅接受独立法人投标，严禁分包" }
+];
+
+// ========== QUALIFICATIONS ==========
+const QUALIFICATIONS = [
+  { name: "营业执照副本", desc: "原件扫描件加盖公章", necessity: "必须" },
+  { name: "基本存款账户信息/开户许可证", desc: "原件扫描件加盖公章", necessity: "必须" },
+  { name: "法定代表人身份证明", desc: "按格式，附身份证扫描件", necessity: "必须" },
+  { name: "授权委托书", desc: "如委托代理人需提供，附双方身份证扫描件", necessity: "视情况" },
+  { name: "投标保证金承诺书", desc: "按格式签署，失信补缴7.5万元", necessity: "必须" },
+  { name: "投标函及投标函附录", desc: "含投标总报价、软件/硬件分项报价", necessity: "必须" },
+  { name: "报价明细表", desc: "软件设计服务+服务器硬件采购分别报价(格式自拟)", necessity: "必须" },
+  { name: "投标人基本情况表", desc: "附营业执照、资质证书扫描件", necessity: "必须" },
+  { name: "拟委任主要人员汇总表", desc: "含项目总负责人及主要人员信息", necessity: "必须" },
+  { name: "主要人员简历表", desc: "附身份证、职称证、注册证书等扫描件", necessity: "必须" },
+  { name: "不参与涉黑涉恶承诺书", desc: "按格式签署，否则无效投标", necessity: "必须" },
+  { name: "项目实施方案(暗标)", desc: "技术/运维/供货/供货保障/培训/售后6项", necessity: "必须" },
+  { name: "项目负责人证书", desc: "高级项目管理师+PMP+CISP(评分所需)", necessity: "建议" },
+  { name: "高级工程师证书", desc: "至少2名(评分所需)", necessity: "建议" },
+  { name: "专项技术人员证书", desc: "系统分析师/架构师/测试工程师(评分所需)", necessity: "建议" },
+  { name: "大模型网信办备案截图", desc: "平台成熟度评分所需(3分)", necessity: "建议" },
+  { name: "RAG技术权威测试证书", desc: "平台成熟度评分所需(3分)", necessity: "建议" }
+];
+
+// ========== PERSONNEL ==========
+const PERSONNEL = [
+  { role: "项目负责人", score: "4分", certs: "同时具有高级项目管理师及PMP、CISP证书。三证齐全得4分，任意两个2分", tips: "核心得分项，优先三证齐全人员" },
+  { role: "高级工程师", score: "2分", certs: "每名1分，最高2分。需具有高级工程师职称", tips: "安排至少2名高工，证书需在有效期内" },
+  { role: "系统分析师", score: "1分", certs: "具有系统分析师证书", tips: "一人多项证书不重复计分" },
+  { role: "系统架构师", score: "1分", certs: "具有系统架构师（或系统架构设计师）证书", tips: "与系统分析师需不同人员" },
+  { role: "软件性能测试工程师", score: "1分", certs: "具有软件性能测试工程师证书", tips: "合计最高3分，选最有价值的组合" }
+];
+
+// ========== SOP PHASES ==========
+const SOP_PHASES = [
+  {
+    name: "投标启动与研读",
+    period: "Day 1-2（07-02 ~ 07-03）",
+    color: "phase-1",
+    tasks: [
+      { id: "1.1", name: "获取并研读招标文件全文", detail: "登录招标通平台下载招标文件全套资料（招标公告、投标人须知、评标办法、合同条款、技术规范、图纸等），通读全文并标注关键信息", responsible: "项目负责人", deadline: "07-02", necessity: "必须", priority: "高" },
+      { id: "1.2", name: "组建投标项目组", detail: "确定项目总负责人，组建商务组（资信文件+报价）和技术组（方案编写），明确各组职责分工和汇报机制", responsible: "项目负责人", deadline: "07-02", necessity: "必须", priority: "高" },
+      { id: "1.3", name: "编制投标日历与倒排计划", detail: "根据开标日期倒排项目进度，编制详细投标日历，标注各阶段节点、责任人和交付物清单，每日更新进度", responsible: "项目负责人", deadline: "07-02", necessity: "必须", priority: "高" },
+      { id: "1.4", name: "梳理评标办法与评分细则", detail: "逐项分析综合评估法的评分标准（商务25分+暗标65分+报价10分=100分），计算各评分项权重，识别得分重点和丢分风险点", responsible: "项目负责人", deadline: "07-02", necessity: "必须", priority: "高" },
+      { id: "1.5", name: "提取技术要求与硬件参数", detail: "从技术规范中提取全部功能要求和非标参数，编制技术响应对照表，标注核心要求和一般要求", responsible: "技术负责人", deadline: "07-03", necessity: "必须", priority: "高" },
+      { id: "1.6", name: "识别废标条款与红线", detail: "逐一标记招标文件中的强制性要求（加粗/黑体字内容），编制废标风险清单，确保每条都有对应保障措施", responsible: "商务负责人", deadline: "07-03", necessity: "必须", priority: "高" },
+      { id: "1.7", name: "分析暗标格式要求", detail: "提取暗标13条格式规范（A4纸、宋体四号、黑色文字、左对齐、30磅行距、无目录页眉页脚等），编制格式自检清单", responsible: "技术负责人", deadline: "07-03", necessity: "必须", priority: "高" },
+      { id: "1.8", name: "召开投标启动会", detail: "组织全体投标组成员开会，通报项目情况、分工安排、时间节点、质量要求和注意事项，确保全员理解任务", responsible: "项目负责人", deadline: "07-03", necessity: "必须", priority: "高" }
+    ]
+  },
+  {
+    name: "商务资信准备",
+    period: "Day 3-7（7-04 ~ 07-08）",
+    color: "phase-2",
+    tasks: [
+      { id: "2.1", name: "收集营业执照及基本账户信息", detail: "准备营业执照副本扫描件（加盖公章）、基本存款账户信息或开户许可证扫描件（加盖公章），确认信息与招标文件要求一致", responsible: "商务组", deadline: "07-04", necessity: "必须", priority: "高" },
+      { id: "2.2", name: "准备法定代表人身份证明", detail: "按招标文件提供的格式填写法定代表人身份证明，附法定代表人身份证正反面扫描件", responsible: "商务组", deadline: "07-04", necessity: "必须", priority: "高" },
+      { id: "2.3", name: "办理授权委托书", detail: "如委托代理人投标，需按格式准备授权委托书，附委托代理人身份证扫描件，确保授权范围和有效期正确", responsible: "商务组", deadline: "07-04", necessity: "视情况", priority: "中" },
+      { id: "2.4", name: "签署投标保证金承诺书", detail: "按招标文件格式签署投标保证金承诺书，注意承诺条款内容不得修改，否则可能被视为无效", responsible: "商务负责人", deadline: "07-04", necessity: "必须", priority: "高" },
+      { id: "2.5", name: "签署不参与涉黑涉恶承诺书", detail: "按招标文件格式签署不参与涉黑涉恶承诺书，此为废标条款，不提交即按无效投标处理", responsible: "商务负责人", deadline: "07-04", necessity: "必须", priority: "高" },
+      { id: "2.6", name: "收集评分证书材料", detail: "收集项目负责人证书（高级项目管理师+PMP+CISP）、高级工程师证书（2名）、系统分析师/架构师/测试工程师证书，附扫描件确保证书有效", responsible: "商务组", deadline: "07-05", necessity: "建议", priority: "高" },
+      { id: "2.7", name: "准备大模型备案截图和RAG认证", detail: "获取大模型网信办备案官网截图（含备案编号和公示内容）及RAG技术国内权威机构测试认证证书，缺一不可", responsible: "技术组", deadline: "07-06", necessity: "建议", priority: "高" },
+      { id: "2.8", name: "编制拟委任主要人员汇总表", detail: "按格式填写项目总负责人及主要人员信息表，含姓名、职务、职称、执业资格、从业年限、相关业绩等", responsible: "商务组", deadline: "07-07", necessity: "必须", priority: "高" },
+      { id: "2.9", name: "编制主要人员简历表", detail: "按格式填写主要人员简历，附身份证、职称证、注册证书等扫描件，突出AI/大模型/知识管理相关经验", responsible: "商务组", deadline: "07-07", necessity: "必须", priority: "高" },
+      { id: "2.10", name: "商务资信文件交叉审核", detail: "对照招标文件要求逐项核查所有商务资信材料，确保无遗漏、无错误、无过期文件，编制审核检查表", responsible: "项目负责人", deadline: "07-08", necessity: "必须", priority: "高" }
+    ]
+  },
+  {
+    name: "技术方案编写",
+    period: "Day 3-10（7-04 ~ 07-11）",
+    color: "phase-3",
+    tasks: [
+      { id: "3.1", name: "编写技术服务方案", detail: "编写暗标第一大项（15分），采用四层架构（SaaS应用层/MaaS模型层/PaaS平台层/IaaS基础设施层），涵盖知识管理引擎、大模型管理引擎、算力服务平台、场景应用等模块的详细技术实现方案，篇幅20-30页", responsible: "技术负责人", deadline: "07-08", necessity: "必须", priority: "高" },
+      { id: "3.2", name: "编写运维服务方案", detail: "编写运维方案（10分），建立L1/L2/L3分级运维体系，明确7x24小时服务承诺、故障响应≤2小时、监控告警方案、应急预案和灾备方案", responsible: "技术负责人", deadline: "07-09", necessity: "必须", priority: "高" },
+      { id: "3.3", name: "编写供货方案", detail: "编写供货方案（10分），提供项目实施甘特图、硬件到货计划（2-3天优先到位）、软件部署流程、关键里程碑和验收检查点", responsible: "技术负责人", deadline: "07-09", necessity: "必须", priority: "高" },
+      { id: "3.4", name: "编写供货能力及保障措施", detail: "编写供货保障（10分），展示供应链优势、备选供应商方案、库存备货能力、专人跟踪和风险预警机制", responsible: "商务组", deadline: "07-09", necessity: "必须", priority: "高" },
+      { id: "3.5", name: "编写培训计划及内容", detail: "编写培训方案（10分），覆盖8个维度（系统操作/管理维护/知识库构建/大模型使用/安全规范/故障处理/数据备份/系统升级），含培训对象分类、时间安排、师资介绍、考核标准", responsible: "技术负责人", deadline: "07-10", necessity: "必须", priority: "高" },
+      { id: "3.6", name: "编写售后服务方案", detail: "编写售后方案（10分），承诺三年质保、7x24热线、2小时响应、24小时解决，含远程+现场双模式、FAQ手册、定期回访机制", responsible: "技术负责人", deadline: "07-10", necessity: "必须", priority: "高" },
+      { id: "3.7", name: "编制技术偏离表", detail: "逐条对照技术参数要求，编制技术偏离表，确保所有功能点标注为'满足'或'正偏离'，不得有任何负偏离", responsible: "技术负责人", deadline: "07-10", necessity: "必须", priority: "高" },
+      { id: "3.8", name: "暗标格式合规检查", detail: "逐一检查暗标13条格式规范：A4纸、宋体四号、黑色文字、左对齐、30磅行距、无目录页眉页脚、无身份信息等，确保100%合规", responsible: "技术负责人", deadline: "07-11", necessity: "必须", priority: "高" },
+      { id: "3.9", name: "技术方案内部评审", detail: "组织技术评审会，邀请非编写人员评审方案完整性、深度和逻辑性，对照评分标准逐项自评打分，确保达到第一档水平", responsible: "项目负责人", deadline: "07-11", necessity: "必须", priority: "高" },
+      { id: "3.10", name: "根据评审意见修改完善", detail: "根据内部评审意见对技术方案进行修改完善，补充不足之处，优化表述和结构，确保方案质量达到最优", responsible: "技术负责人", deadline: "07-11", necessity: "必须", priority: "高" }
+    ]
+  },
+  {
+    name: "商务文件编制与报价",
+    period: "Day 8-12（7-09 ~ 07-13）",
+    color: "phase-4",
+    tasks: [
+      { id: "4.1", name: "编制投标函及投标函附录", detail: "按招标文件格式填写投标函，明确投标总报价（含软件和硬件）、投标有效期（90日历天）、质量标准和交付时间等关键信息", responsible: "商务组", deadline: "07-09", necessity: "必须", priority: "高" },
+      { id: "4.2", name: "编制报价明细表", detail: "分别编制软件设计服务和服务器硬件采购报价明细，单价合理有据，软件≤184.93万、硬件≤180.95万、总价≤365.88万", responsible: "商务负责人", deadline: "07-09", necessity: "必须", priority: "高" },
+      { id: "4.3", name: "编制投标人基本情况表", detail: "按格式填写投标人基本情况表，附营业执照、资质证书等扫描件，确保信息准确完整", responsible: "商务组", deadline: "07-09", necessity: "必须", priority: "高" },
+      { id: "4.4", name: "报价策略分析与最终定价", detail: "分析评标基准价计算方式（可能取有效投标算术平均值），结合限价85%-93%区间确定最终报价，总价控制在311-340万元", responsible: "项目负责人", deadline: "07-10", necessity: "必须", priority: "高" },
+      { id: "4.5", name: "编制商务文件汇总", detail: "将所有商务文件（投标函、报价表、基本情况表、人员汇总表、简历表、承诺书等）按招标文件要求的顺序汇编成册", responsible: "商务组", deadline: "07-11", necessity: "必须", priority: "高" },
+      { id: "4.6", name: "商务文件交叉审核", detail: "对照招标文件逐项核查商务文件，重点检查报价一致性、信息准确性、签章完整性、格式规范性", responsible: "项目负责人", deadline: "07-12", necessity: "必须", priority: "高" },
+      { id: "4.7", name: "暗标与明标文件最终整合", detail: "将暗标实施方案和明标商务文件分别整理，确认两套文件各自独立、互不交叉、暗标无任何身份信息", responsible: "项目负责人", deadline: "07-12", necessity: "必须", priority: "高" },
+      { id: "4.8", name: "全量文件终审会", detail: "组织投标文件终审会，对照废标条款和评分标准逐项终审，确认全部文件无遗漏、无错误、格式合规，签字确认", responsible: "项目负责人", deadline: "07-13", necessity: "必须", priority: "高" }
+    ]
+  },
+  {
+    name: "审核校验与封装上传",
+    period: "Day 13-14（7-14 ~ 07-15）",
+    color: "phase-5",
+    tasks: [
+      { id: "5.1", name: "电子投标文件格式转换", detail: "将Word文档转换为PDF格式（注意保持暗标格式不变），确认PDF文件可正常打开、无乱码、无水印、无修改痕迹", responsible: "商务组", deadline: "07-14", necessity: "必须", priority: "高" },
+      { id: "5.2", name: "CA数字证书加密签名", detail: "使用河北CA数字证书对电子投标文件进行数字签名和加密，确认签名有效、证书在有效期内", responsible: "商务组", deadline: "07-14", necessity: "必须", priority: "高" },
+      { id: "5.3", name: "上传投标文件至招标通平台", detail: "登录招标通电子招投标交易平台，按系统要求上传全部投标文件，确认上传成功、文件完整、未超时", responsible: "商务组", deadline: "07-14", necessity: "必须", priority: "高" },
+      { id: "5.4", name: "上传后完整性校验", detail: "在招标通平台下载已上传文件进行比对校验，确认文件内容与本地文件完全一致、页数正确、无缺失", responsible: "技术负责人", deadline: "07-14", necessity: "必须", priority: "高" },
+      { id: "5.5", name: "准备纸质投标文件", detail: "打印三份完整的纸质投标文件（含暗标+明标），按招标文件要求的顺序装订，加盖公章和骑缝章", responsible: "商务组", deadline: "07-15", necessity: "必须", priority: "高" },
+      { id: "5.6", name: "最终检查清单过检", detail: "使用最终检查清单逐项过检：文件份数、签章位置、页码顺序、暗标格式、报价一致性、截止时间等，全部通过方可封存", responsible: "项目负责人", deadline: "07-15", necessity: "必须", priority: "高" },
+      { id: "5.7", name: "开标日解密准备", detail: "确认CA数字证书和密码可用、电脑和网络环境正常、解密操作人到位，提前30分钟登录招标通平台等待解密", responsible: "商务组", deadline: "07-16", necessity: "必须", priority: "高" },
+      { id: "5.8", name: "开标日在线解密投标文件", detail: "开标时间（07-16 13:30）后在30分钟内完成电子投标文件在线解密，解密失败将导致投标无效", responsible: "商务负责人", deadline: "07-16", necessity: "必须", priority: "高" }
+    ]
+  }
+];
+
+// ========== STATE MANAGEMENT ==========
+var STORAGE_KEY = 'bidding_portal_state';
+var state = {
+  currentPage: 'overview',
+  sopCheckboxes: {},
+  qualCheckboxes: {},
+  riskStatuses: {},
+  darkMarkChecks: {},
+  techResponses: {},
+  notes: {}
+};
+
+var dirtySop = false;
+
+function downloadWithTimestamp() {
+  var html = document.documentElement.outerHTML;
+  var blob = new Blob(['<!DOCTYPE html>\n' + html], {type: 'text/html;charset=utf-8'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  var now = new Date();
+  var ts = now.getFullYear() + String(now.getMonth()+1).padStart(2,'0') + String(now.getDate()).padStart(2,'0')
+    + '_' + String(now.getHours()).padStart(2,'0') + String(now.getMinutes()).padStart(2,'0') + String(now.getSeconds()).padStart(2,'0');
+  a.href = url;
+  a.download = '大模型智能融合平台建设项目_投标辅助工作台_' + ts + '.html';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  dirtySop = false;
+  showToast('已保存为: 大模型智能融合平台建设项目_投标辅助工作台_' + ts + '.html', 'success');
+}
+
+function checkSaveBeforeLeave(callback) {
+  if (!dirtySop) { callback(); return; }
+  if (confirm('SOP页面有未保存的修改，是否保存？\n\n点击"确定"保存文件后继续\n点击"取消"放弃修改继续')) {
+    downloadWithTimestamp();
+  }
+  dirtySop = false;
+  callback();
+}
+
+function loadState() {
+  try {
+    var saved = localStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      var parsed = JSON.parse(saved);
+      if (parsed) {
+        state.sopCheckboxes = parsed.sopCheckboxes || {};
+        state.qualCheckboxes = parsed.qualCheckboxes || {};
+        state.riskStatuses = parsed.riskStatuses || {};
+        state.darkMarkChecks = parsed.darkMarkChecks || {};
+        state.techResponses = parsed.techResponses || {};
+        state.notes = parsed.notes || {};
+        if (parsed.currentPage) state.currentPage = parsed.currentPage;
+      }
+    }
+  } catch(e) {}
+}
+
+function saveState() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+  } catch(e) {}
+}
+
+// ========== HELPERS ==========
+function escHtml(s) {
+  if (!s) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function formatCountdown(deadline) {
+  var target = new Date(deadline).getTime();
+  var now = Date.now();
+  var diff = target - now;
+  if (diff <= 0) return '已截止';
+  var d = Math.floor(diff / 86400000);
+  var h = Math.floor((diff % 86400000) / 3600000);
+  var m = Math.floor((diff % 3600000) / 60000);
+  var s = Math.floor((diff % 60000) / 1000);
+  return d + '天 ' + String(h).padStart(2,'0') + '时 ' + String(m).padStart(2,'0') + '分 ' + String(s).padStart(2,'0') + '秒';
+}
+
+function getSopDone() {
+  var total = 0, done = 0;
+  SOP_PHASES.forEach(function(ph) {
+    ph.tasks.forEach(function(t) { total++; if (state.sopCheckboxes[t.id]) done++; });
+  });
+  return { total: total, done: done, pct: total ? Math.round(done/total*100) : 0 };
+}
+
+function getPhaseProgress(idx) {
+  var ph = SOP_PHASES[idx];
+  if (!ph) return { total: 0, done: 0, pct: 0 };
+  var total = ph.tasks.length, done = 0;
+  ph.tasks.forEach(function(t) { if (state.sopCheckboxes[t.id]) done++; });
+  return { total: total, done: done, pct: total ? Math.round(done/total*100) : 0 };
+}
+
+function getQualStats() {
+  var total = QUALIFICATIONS.length, must = 0, suggest = 0, done = 0;
+  QUALIFICATIONS.forEach(function(q, i) {
+    if (q.necessity === '必须') must++;
+    else suggest++;
+    if (state.qualCheckboxes[i]) done++;
+  });
+  return { total: total, must: must, suggest: suggest, done: done };
+}
+
+function getDarkMarkStats() {
+  var total = DARK_MARK_RULES.length, done = 0;
+  DARK_MARK_RULES.forEach(function(_, i) { if (state.darkMarkChecks[i]) done++; });
+  return { total: total, done: done, pct: total ? Math.round(done/total*100) : 0 };
+}
+
+function getRiskStats() {
+  var high = 0, mid = 0, low = 0;
+  RISKS.forEach(function(r) { if (r.level === '高') high++; else if (r.level === '中') mid++; else low++; });
+  return { high: high, mid: mid, low: low };
+}
+
+function getTechStats() {
+  var total = TECH_REQS.length, core = 0, general = 0;
+  TECH_REQS.forEach(function(r) { if (r.importance === '核心') core++; else general++; });
+  return { total: total, core: core, general: general };
+}
+
+
+// ========== 1. OVERVIEW ==========
+function renderOverview() {
+  var sop = getSopDone();
+  var qm = getQualStats();
+  var dm = getDarkMarkStats();
+  var html = '<div class="page-header"><h1>项目概览</h1><div class="page-desc">大模型智能融合平台建设项目 HBGH-2025-036</div></div>';
+
+  html += '<div class="stats-grid">';
+  html += '<div class="stat-card border-blue"><div class="stat-icon blue">&#128176;</div><div class="stat-content"><div class="stat-label">最高限价</div><div class="stat-value accent">' + escHtml(PROJECT.budget) + '</div></div></div>';
+  html += '<div class="stat-card border-red"><div class="stat-icon red">&#9200;</div><div class="stat-content"><div class="stat-label">投标截止</div><div class="stat-value" id="countdown">' + formatCountdown(PROJECT.deadline) + '</div></div></div>';
+  html += '<div class="stat-card border-green"><div class="stat-icon green">&#128737;</div><div class="stat-content"><div class="stat-label">质保期</div><div class="stat-value">' + escHtml(PROJECT.warranty) + '</div></div></div>';
+  html += '<div class="stat-card border-purple"><div class="stat-icon purple">&#127942;</div><div class="stat-content"><div class="stat-label">评分方法</div><div class="stat-value">' + escHtml(PROJECT.evalMethod) + '</div></div></div>';
+  html += '</div>';
+
+  html += '<div class="card mb-24"><div class="card-header"><h3>项目信息</h3></div><div class="card-body"><div class="info-grid">';
+  var fields = [
+    ['项目名称', PROJECT.name], ['项目编号', PROJECT.bidNo], ['招标人', PROJECT.purchaser],
+    ['招标代理', PROJECT.agent], ['项目地点', PROJECT.location], ['投标平台', PROJECT.platform],
+    ['软件限价', PROJECT.softwareLimit], ['硬件限价', PROJECT.hardwareLimit],
+    ['交付周期', PROJECT.delivery], ['投标有效期', PROJECT.validity], ['质量标准', PROJECT.quality],
+    ['联合体投标', PROJECT.jointBid], ['分包要求', PROJECT.subcontract], ['投标保证金', PROJECT.deposit]
+  ];
+  fields.forEach(function(f) {
+    html += '<div class="info-item"><span class="info-label">' + escHtml(f[0]) + '</span><span class="info-value">' + escHtml(f[1]) + '</span></div>';
+  });
+  html += '</div></div></div>';
+
+  html += '<div class="card mb-24"><div class="card-header"><h3>评分构成</h3></div><div class="card-body"><div class="grid-3">';
+  html += '<div style="text-align:center;padding:20px;background:var(--info-bg);border-radius:var(--radius-lg);border:2px solid var(--info)"><div style="font-size:36px;font-weight:800;color:var(--info)">25<span style="font-size:16px">分</span></div><div style="font-size:13px;color:var(--text-secondary);margin-top:4px">商务部分(明标)</div><div style="font-size:12px;color:var(--text-muted);margin-top:2px">人员+响应+成熟度</div></div>';
+  html += '<div style="text-align:center;padding:20px;background:var(--purple-bg);border-radius:var(--radius-lg);border:2px solid var(--purple)"><div style="font-size:36px;font-weight:800;color:var(--purple)">65<span style="font-size:16px">分</span></div><div style="font-size:13px;color:var(--text-secondary);margin-top:4px">实施方案(暗标)</div><div style="font-size:12px;color:var(--text-muted);margin-top:2px">技术+运维+供货+培训+售后</div></div>';
+  html += '<div style="text-align:center;padding:20px;background:var(--success-bg);border-radius:var(--radius-lg);border:2px solid var(--success)"><div style="font-size:36px;font-weight:800;color:var(--success)">10<span style="font-size:16px">分</span></div><div style="font-size:13px;color:var(--text-secondary);margin-top:4px">投标报价</div><div style="font-size:12px;color:var(--text-muted);margin-top:2px">综合评估法价格分</div></div>';
+  html += '</div></div></div>';
+
+  html += '<div class="card mb-24"><div class="card-header"><h3>投标进度总览</h3></div><div class="card-body">';
+  html += '<div class="progress-label"><span>SOP完成进度</span><span>' + sop.done + '/' + sop.total + ' (' + sop.pct + '%)</span></div>';
+  html += '<div class="progress-bar" style="height:12px;margin-bottom:16px"><div class="progress-fill green" style="width:' + sop.pct + '%"></div></div>';
+  html += '<div class="grid-2" style="gap:12px">';
+  html += '<div class="info-item"><span class="info-label">资质准备</span><span class="info-value">' + qm.done + '/' + qm.total + ' 已完成</span></div>';
+  html += '<div class="info-item"><span class="info-label">暗标规范</span><span class="info-value">' + dm.done + '/' + dm.total + ' 已检查</span></div>';
+  html += '</div></div></div>';
+
+  return html;
+}
+
+// ========== 2. EVAL ==========
+function renderEval() {
+  var catParts = CAT_KEYS.map(function(k) {
+    var short = k.replace('商务部分(明标)', '商务').replace('项目实施方案(暗标)', '暗标').replace('投标报价', '报价');
+    return short + CAT_SCORES[k] + '分';
+  }).join(' + ');
+  var html = '<div class="page-header"><h1>评标分析</h1><div class="page-desc">' + catParts + ' = 100分</div></div>';
+
+  html += '<div class="card mb-24"><div class="card-header"><h3>评分构成</h3></div><div class="card-body">';
+  html += '<div style="display:flex;gap:24px;align-items:stretch;flex-wrap:wrap">';
+
+  // 左侧：可交互环状图（缩小占比）
+  var segments = [
+    { key: '商务部分(明标)', label: '商务(明标)', score: 25, color: '#3b82f6', colorLight: '#93bbfd' },
+    { key: '项目实施方案(暗标)', label: '实施方案(暗标)', score: 65, color: '#8b5cf6', colorLight: '#b69dff' },
+    { key: '投标报价', label: '投标报价', score: 10, color: '#10b981', colorLight: '#6ee7b7' }
+  ];
+  var total = 100;
+  var r = 68, cx = 90, cy = 90, stroke = 20;
+  var circumference = 2 * Math.PI * r;
+  var cumulative = 0;
+
+  html += '<div style="flex:0.7;min-width:200px;display:flex;flex-direction:column;align-items:center;justify-content:center">';
+  html += '<div style="position:relative">';
+  html += '<svg id="eval-donut" width="180" height="180" viewBox="0 0 180 180" style="transform:rotate(-90deg);cursor:pointer">';
+  segments.forEach(function(seg, i) {
+    var pct = seg.score / total;
+    var dashLen = pct * circumference;
+    var gapLen = circumference - dashLen;
+    var offset = -(cumulative * circumference) + (circumference * 0.25);
+    var gap = 3;
+    html += '<circle class="donut-seg" data-seg-idx="'+i+'" cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+seg.color+'" stroke-width="'+stroke+'" stroke-dasharray="'+dashLen.toFixed(2)+' '+gapLen.toFixed(2)+'" stroke-dashoffset="'+offset.toFixed(2)+'" stroke-linecap="butt" style="transition:all 0.3s;filter:drop-shadow(0 1px 2px rgba(0,0,0,0.1))"/>';
+    cumulative += pct;
+  });
+  html += '<circle cx="'+cx+'" cy="'+cy+'" r="'+(r-stroke/2-2)+'" fill="var(--bg-card)"/>';
+  html += '</svg>';
+  // 中心文字（不旋转，覆盖在SVG上）
+  html += '<div id="eval-donut-center" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;pointer-events:none">';
+  html += '<div style="font-size:28px;font-weight:800;color:var(--text-primary)">100</div>';
+  html += '<div style="font-size:11px;color:var(--text-secondary)">总分</div>';
+  html += '</div></div>';
+  // 可点击图例
+  html += '<div style="display:flex;gap:12px;margin-top:10px;flex-wrap:wrap;justify-content:center">';
+  segments.forEach(function(seg, i) {
+    html += '<div class="donut-legend" data-seg-idx="'+i+'" style="display:flex;align-items:center;gap:5px;padding:4px 10px;border-radius:var(--radius);cursor:pointer;transition:all 0.2s;border:2px solid transparent'+(i===1?' background:var(--purple-bg);border-color:var(--purple)':'')+'">';
+    html += '<div style="width:10px;height:10px;border-radius:3px;background:'+seg.color+'"></div>';
+    html += '<span style="font-size:11px;color:var(--text-secondary)">'+seg.label+'</span>';
+    html += '<span style="font-size:12px;font-weight:700;color:var(--text-primary)">'+seg.score+'分</span>';
+    html += '</div>';
+  });
+  html += '</div></div>';
+
+  // 右侧：动态分值构成（默认暗标）
+  var darkItems = EVAL_SCORES.filter(function(e) { return e.category === '项目实施方案(暗标)'; });
+  html += '<div id="eval-breakdown" style="flex:1.3;min-width:300px">';
+  function renderBreakdown(items, catLabel, catScore, color, colorLight) {
+    var h = '<div style="font-size:14px;font-weight:700;color:'+color+';margin-bottom:14px;display:flex;align-items:center;gap:8px">';
+    h += '<span style="width:4px;height:18px;background:'+color+';border-radius:99px;display:inline-block"></span>';
+    h += escHtml(catLabel)+' '+catScore+'分 — 分值构成</div>';
+    items.forEach(function(item, idx) {
+      var pct = Math.round(item.score / catScore * 100);
+      h += '<div style="display:flex;align-items:center;gap:8px;margin-bottom:9px">';
+      h += '<div style="min-width:100px;font-size:12px;color:var(--text-primary);text-align:right;font-weight:500">'+escHtml(item.item)+'</div>';
+      h += '<div style="flex:1;height:26px;background:var(--border-light);border-radius:var(--radius-sm);overflow:hidden">';
+      h += '<div style="height:100%;width:'+pct+'%;background:linear-gradient(90deg,'+color+','+colorLight+');border-radius:var(--radius-sm);display:flex;align-items:center;padding-left:8px;transition:width 0.4s ease">';
+      h += '<span style="font-size:11px;font-weight:700;color:#fff;white-space:nowrap">'+item.score+'分</span>';
+      h += '</div></div>';
+      h += '<span style="min-width:34px;font-size:11px;color:var(--text-muted);font-weight:600">'+pct+'%</span>';
+      h += '</div>';
+    });
+    return h;
+  }
+  var darkKey = CAT_KEYS[1] || '项目实施方案(暗标)';
+  html += renderBreakdown(darkItems, '实施方案(暗标)', CAT_SCORES[darkKey] || 65, '#8b5cf6', '#b69dff');
+  html += '</div>';
+
+  html += '</div></div></div>';
+
+  // 嵌入环状图交互数据（供JS使用）
+  html += '<script>';
+  html += 'var evalSegments = ' + JSON.stringify(segments) + ';';
+  html += 'function evalDonutInit(){';
+  html += '  var segs = document.querySelectorAll(".donut-seg");';
+  html += '  var legends = document.querySelectorAll(".donut-legend");';
+  html += '  function selectSeg(idx){';
+  html += '    segs.forEach(function(s,i){s.style.strokeWidth=i===idx?"26":"18";s.style.opacity=i===idx?"1":"0.45";});';
+  html += '    legends.forEach(function(l,i){if(i===idx){l.style.borderColor=evalSegments[i].color;l.style.background=evalSegments[i].color+"18";}else{l.style.borderColor="transparent";l.style.background="";}});';
+  html += '    var bd=document.getElementById("eval-breakdown");if(!bd)return;';
+  html += '    var seg=evalSegments[idx];';
+  html += '    var items=EVAL_SCORES.filter(function(e){return e.category===seg.key;});';
+  html += '    var h=\'<div style="font-size:14px;font-weight:700;color:\'+seg.color+\';margin-bottom:14px;display:flex;align-items:center;gap:8px"><span style="width:4px;height:18px;background:\'+seg.color+\';border-radius:99px;display:inline-block"></span>\'+seg.label+\' \'+seg.score+\'分 — 分值构成</div>\';';
+  html += '    items.forEach(function(item){var p=Math.round(item.score/seg.score*100);';
+  html += '      h+=\'<div style="display:flex;align-items:center;gap:8px;margin-bottom:9px"><div style="min-width:100px;font-size:12px;color:var(--text-primary);text-align:right;font-weight:500">\'+escHtml(item.item)+\'</div><div style="flex:1;height:26px;background:var(--border-light);border-radius:var(--radius-sm);overflow:hidden"><div style="height:100%;width:\'+p+\'%;background:linear-gradient(90deg,\'+seg.color+\',\'+seg.colorLight+\');border-radius:var(--radius-sm);display:flex;align-items:center;padding-left:8px;transition:width 0.4s ease"><span style="font-size:11px;font-weight:700;color:#fff;white-space:nowrap">\'+item.score+\'分</span></div></div><span style="min-width:34px;font-size:11px;color:var(--text-muted);font-weight:600">\'+p+\'%</span></div>\';';
+  html += '    });';
+  html += '    bd.innerHTML=h;';
+  html += '  }';
+  html += '  segs.forEach(function(s){s.addEventListener("mouseenter",function(){var i=parseInt(this.getAttribute("data-seg-idx"));segs.forEach(function(ss,j){if(j!==i){ss.style.opacity="0.55";}else{ss.style.strokeWidth="26";}});});s.addEventListener("mouseleave",function(){segs.forEach(function(ss){ss.style.strokeWidth="18";ss.style.opacity="1";});});s.addEventListener("click",function(){selectSeg(parseInt(this.getAttribute("data-seg-idx")));});});';
+  html += '  legends.forEach(function(l){l.addEventListener("click",function(){selectSeg(parseInt(this.getAttribute("data-seg-idx")));});});';
+  html += '}';
+  html += 'setTimeout(evalDonutInit,100);';
+  html += '<\/script>';
+
+  html += '<div class="card mb-24"><div class="card-header"><h3>评分策略建议</h3><span class="tag tag-info">共' + STRATEGIES.length + '项</span></div><div class="card-body" style="padding:0">';
+
+  var cats = [];
+  EVAL_SCORES.forEach(function(e) { if (cats.indexOf(e.category) === -1) cats.push(e.category); });
+  cats.forEach(function(cat, ci) {
+    var catScore = 0;
+    EVAL_SCORES.forEach(function(e) { if (e.category === cat) catScore += e.score; });
+    html += '<div style="padding:12px 20px;background:var(--border-light);border-bottom:1px solid var(--border);display:flex;align-items:center;gap:12px"><span style="font-size:14px;font-weight:700;color:var(--text-primary)">' + escHtml(cat) + '</span><span class="badge badge-accent">' + catScore + '分</span></div>';
+    EVAL_SCORES.forEach(function(e, ei) {
+      if (e.category !== cat) return;
+      var stratIdx = STRATEGIES.findIndex(function(s) { return s.item === e.item; });
+      var strat = stratIdx >= 0 ? STRATEGIES[stratIdx] : null;
+      html += '<div class="strategy-card" style="margin:12px 20px;border-radius:var(--radius);cursor:pointer" data-strat-idx="' + ei + '">';
+      html += '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px">';
+      html += '<div><span style="font-weight:600;color:var(--text-primary)">' + escHtml(e.item) + '</span>';
+      if (e.category.indexOf('暗标') >= 0) html += ' <span class="tag tag-purple">暗标</span>';
+      else if (e.category.indexOf('报价') >= 0) html += ' <span class="tag tag-done">报价</span>';
+      else html += ' <span class="tag tag-info">明标</span>';
+      html += '</div>';
+      html += '<span style="font-weight:700;color:var(--accent)">' + e.score + '分</span>';
+      html += '</div>';
+      html += '<div style="font-size:12px;color:var(--text-secondary);margin-bottom:6px">目标：' + escHtml(e.target) + '分 | ' + escHtml(e.detail) + '</div>';
+      if (strat) {
+        html += '<div style="display:flex;align-items:center;gap:4px;color:var(--purple);font-size:12px;cursor:pointer;user-select:none" class="strat-toggle" data-open="0" onclick="toggleStrat(this)"><span id="strat-arrow-' + ei + '">&#9654;</span> 展开策略建议 (' + strat.tips.length + '条)</div>';
+        html += '<div id="strat-tips-' + ei + '" style="display:none;margin-top:8px"><ul style="padding-left:18px;margin:0">';
+        strat.tips.forEach(function(tip) {
+          html += '<li style="margin-bottom:4px;font-size:12px;color:var(--text-primary);line-height:1.6">' + escHtml(tip) + '</li>';
+        });
+        html += '</ul></div>';
+      }
+      html += '</div>';
+    });
+  });
+  html += '</div></div>';
+
+  html += '<div class="card mb-24"><div class="card-header"><h3>得分策略汇总</h3></div><div class="card-body"><div class="table-wrapper"><table>';
+  html += '<thead><tr><th>评分项</th><th style="text-align:center">分值</th><th style="text-align:center">类型</th><th style="text-align:center">目标得分</th><th style="text-align:center">目标得分率</th></tr></thead><tbody>';
+  EVAL_SCORES.forEach(function(e) {
+    var targetRange = e.target.split('-');
+    var targetLow = parseInt(targetRange[0]) || 0;
+    var targetHigh = parseInt(targetRange[1]) || targetLow;
+    var targetMid = Math.round((targetLow + targetHigh) / 2);
+    var rate = Math.round(targetMid / e.score * 100);
+    html += '<tr><td>' + escHtml(e.item) + '</td><td style="text-align:center;font-weight:600">' + e.score + '</td>';
+    html += '<td style="text-align:center"><span class="tag ' + (e.category.indexOf('暗标') >= 0 ? 'tag-purple' : e.category.indexOf('报价') >= 0 ? 'tag-done' : 'tag-info') + '">' + (e.category.indexOf('暗标') >= 0 ? '暗标' : e.category.indexOf('报价') >= 0 ? '报价' : '明标') + '</span></td>';
+    html += '<td style="text-align:center;font-weight:600;color:var(--accent)">' + escHtml(e.target) + '分</td>';
+    html += '<td style="text-align:center"><div style="display:flex;align-items:center;gap:8px;justify-content:center"><div style="width:60px;height:8px;background:var(--border);border-radius:99px;overflow:hidden"><div style="height:100%;width:' + rate + '%;background:' + (rate >= 90 ? 'var(--success)' : rate >= 75 ? 'var(--warning)' : 'var(--danger)') + ';border-radius:99px"></div></div><span style="font-size:12px;font-weight:600;color:' + (rate >= 90 ? 'var(--success)' : rate >= 75 ? 'var(--warning)' : 'var(--danger)') + '">' + rate + '%</span></div></td>';
+    html += '</tr>';
+  });
+  var totalTarget = 0;
+  EVAL_SCORES.forEach(function(e) { var t = e.target.split('-'); totalTarget += Math.round((parseInt(t[0]) + (parseInt(t[1])||parseInt(t[0]))) / 2); });
+  html += '<tr style="background:var(--accent-bg);font-weight:700"><td>合计</td><td style="text-align:center">100</td><td style="text-align:center">-</td><td style="text-align:center;color:var(--accent)">~' + totalTarget + '分</td><td style="text-align:center;color:var(--accent)">' + Math.round(totalTarget) + '%</td></tr>';
+  html += '</tbody></table></div></div></div>';
+
+  return html;
+}
+
+// ========== 3. TECH ==========
+function renderTech() {
+  var stats = getTechStats();
+  var html = '<div class="page-header"><h1>技术要求</h1><div class="page-desc">软件功能要求 ' + stats.total + ' 项（核心' + stats.core + '项 / 一般' + stats.general + '项）</div></div>';
+
+  html += '<div class="stats-grid">';
+  html += '<div class="stat-card border-blue"><div class="stat-icon blue">&#9881;</div><div class="stat-content"><div class="stat-label">全部需求</div><div class="stat-value">' + stats.total + '</div></div></div>';
+  html += '<div class="stat-card border-red"><div class="stat-icon red">&#11088;</div><div class="stat-content"><div class="stat-label">核心需求</div><div class="stat-value" style="color:var(--danger)">' + stats.core + '</div></div></div>';
+  html += '<div class="stat-card border-green"><div class="stat-icon green">&#128221;</div><div class="stat-content"><div class="stat-label">一般需求</div><div class="stat-value" style="color:var(--success)">' + stats.general + '</div></div></div>';
+  html += '</div>';
+
+  html += '<div class="filter-bar">';
+  html += '<button class="filter-btn active" data-tech-filter="all">全部<span class="filter-count">' + stats.total + '</span></button>';
+  html += '<button class="filter-btn" data-tech-filter="核心">核心<span class="filter-count">' + stats.core + '</span></button>';
+  html += '<button class="filter-btn" data-tech-filter="一般">一般<span class="filter-count">' + stats.general + '</span></button>';
+  html += '<div style="flex:1"></div>';
+  html += '<div class="search-box"><span class="search-icon">&#128269;</span><input type="text" class="form-control" id="tech-search" placeholder="搜索功能项或需求详情..." style="padding-left:36px"></div>';
+  html += '</div>';
+
+  html += '<div class="table-wrapper"><table id="tech-table">';
+  html += '<thead><tr><th style="width:30px">#</th><th style="min-width:160px">模块</th><th style="min-width:180px">功能项</th><th style="min-width:250px">需求详情</th><th style="width:80px;text-align:center">重要性</th></tr></thead>';
+  html += '<tbody id="tech-tbody">';
+  TECH_REQS.forEach(function(r, i) {
+    var impClass = r.importance === '核心' ? 'tag-cancel' : 'tag-pending';
+    html += '<tr data-tech-importance="' + r.importance + '" data-tech-idx="' + i + '">';
+    html += '<td>' + (i+1) + '</td>';
+    html += '<td>' + escHtml(r.module) + '</td>';
+    html += '<td style="font-weight:500">' + escHtml(r.item) + '</td>';
+    html += '<td style="font-size:12px;color:var(--text-secondary)">' + escHtml(r.detail) + '</td>';
+    html += '<td style="text-align:center"><span class="tag ' + impClass + '">' + escHtml(r.importance) + '</span></td>';
+    html += '</tr>';
+  });
+  html += '</tbody></table></div>';
+
+  html += '<div style="margin-top:16px;padding:12px 16px;background:var(--info-bg);border-radius:var(--radius);font-size:12px;color:var(--text-secondary)">';
+  html += '&#128736; <strong>硬件要求（5类）：</strong>';
+  HARDWARE_REQS.forEach(function(h) {
+    html += '<div style="margin-top:6px;padding:8px 12px;background:var(--bg-card);border-radius:var(--radius-sm);border:1px solid var(--border)"><strong>' + escHtml(h.name) + '</strong> x' + escHtml(h.qty) + ' — ' + escHtml(h.params) + '</div>';
+  });
+  html += '</div>';
+
+  return html;
+}
+
+// ========== 4. BIZ ==========
+function renderBiz() {
+  var html = '<div class="page-header"><h1>商务要求</h1><div class="page-desc">合同条款与投标要求共' + BIZ_REQS.length + '项</div></div>';
+
+  html += '<div class="grid-2" style="gap:12px">';
+  var highlightNames = ['投标保证金','分包要求','电子招投标','联合体投标'];
+  BIZ_REQS.forEach(function(b) {
+    var isHighlight = highlightNames.some(function(h) { return b.name.indexOf(h) >= 0; });
+    html += '<div class="card" style="' + (isHighlight ? 'border-left:4px solid var(--danger)' : '') + '">';
+    html += '<div class="card-body" style="padding:14px 16px">';
+    html += '<div style="font-size:13px;font-weight:700;margin-bottom:4px;display:flex;align-items:center;gap:6px">';
+    if (isHighlight) html += '<span style="color:var(--danger)">&#9888;</span>';
+    html += escHtml(b.name) + '</div>';
+    html += '<div style="font-size:12px;color:var(--text-secondary)">' + escHtml(b.value) + '</div>';
+    html += '</div></div>';
+  });
+  html += '</div>';
+  return html;
+}
+
+// ========== 5. DARK MARK ==========
+function renderDark() {
+  var stats = getDarkMarkStats();
+  var allDone = stats.done === stats.total;
+
+  var html = '<div class="page-header"><h1>暗标规范</h1><div class="page-desc">格式合规检查清单（违反任一条即否决投标）</div></div>';
+
+  if (allDone) {
+    html += '<div class="alert alert-success" style="margin-bottom:16px"><span class="alert-icon">&#9989;</span><div class="alert-content"><div class="alert-title">合规检查全部通过！</div>已检查' + stats.total + '项，全部合规</div></div>';
+  } else {
+    html += '<div class="alert alert-danger" style="margin-bottom:16px"><span class="alert-icon">&#9888;</span><div class="alert-content"><div class="alert-title">合规检查未完成</div>已检查' + stats.done + '/' + stats.total + '项，请逐条确认</div></div>';
+  }
+
+  html += '<div style="margin-bottom:20px"><div class="progress-label"><span>检查进度</span><span>' + stats.done + '/' + stats.total + '</span></div>';
+  html += '<div class="progress-bar" style="height:10px"><div class="progress-fill ' + (allDone ? 'green' : 'orange') + '" style="width:' + stats.pct + '%"></div></div></div>';
+
+  html += '<div class="card"><div class="card-body" style="padding:0">';
+  DARK_MARK_RULES.forEach(function(r, i) {
+    var checked = state.darkMarkChecks[i] || false;
+    html += '<div class="dark-rule-item" style="' + (checked ? 'opacity:0.7;background:var(--success-bg)' : '') + '">';
+    html += '<div class="dark-rule-header">';
+    html += '<div style="display:flex;align-items:center;gap:10px">';
+    html += '<input type="checkbox" class="dark-check" data-idx="' + i + '"' + (checked ? ' checked' : '') + '>';
+    html += '<span class="rule-name">' + escHtml(r.item) + '</span>';
+    if (checked) html += '<span class="tag tag-done" style="font-size:10px">已检查</span>';
+    html += '</div>';
+    html += '</div>';
+    html += '<div class="rule-text" style="margin-left:26px">' + escHtml(r.rule) + '</div>';
+    html += '<div class="rule-consequence" style="margin-left:26px">&#9888; 违规后果：' + escHtml(r.consequence) + '</div>';
+    html += '</div>';
+  });
+  html += '</div></div>';
+  return html;
+}
+
+// ========== 6. RISK ==========
+function renderRisk() {
+  var stats = getRiskStats();
+
+  var html = '<div class="page-header"><h1>风险分析</h1><div class="page-desc">共识别' + RISKS.length + '项风险</div></div>';
+
+  html += '<div class="stats-grid">';
+  html += '<div class="stat-card border-red"><div class="stat-icon red">&#128308;</div><div class="stat-content"><div class="stat-label">高风险</div><div class="stat-value" style="color:var(--danger)">' + stats.high + '</div></div></div>';
+  html += '<div class="stat-card border-orange"><div class="stat-icon orange">&#128992;</div><div class="stat-content"><div class="stat-label">中风险</div><div class="stat-value" style="color:var(--warning)">' + stats.mid + '</div></div></div>';
+  html += '<div class="stat-card border-green"><div class="stat-icon green">&#128994;</div><div class="stat-content"><div class="stat-label">低风险</div><div class="stat-value" style="color:var(--success)">' + stats.low + '</div></div></div>';
+  html += '</div>';
+
+  html += '<div class="filter-bar">';
+  html += '<button class="filter-btn active" data-risk-filter="all">全部<span class="filter-count">' + RISKS.length + '</span></button>';
+  html += '<button class="filter-btn" data-risk-filter="高">高风险<span class="filter-count">' + stats.high + '</span></button>';
+  html += '<button class="filter-btn" data-risk-filter="中">中风险<span class="filter-count">' + stats.mid + '</span></button>';
+  html += '<button class="filter-btn" data-risk-filter="低">低风险<span class="filter-count">' + stats.low + '</span></button>';
+  html += '</div>';
+
+  html += '<div id="risk-list">';
+  RISKS.forEach(function(r, i) {
+    var levelClass = r.level === '高' ? 'level-high' : r.level === '中' ? 'level-mid' : 'level-low';
+    var status = state.riskStatuses[i] || '待处理';
+    var statusClass = status === '已解决' ? 'tag-done' : status === '处理中' ? 'tag-progress' : 'tag-pending';
+    html += '<div class="risk-card ' + levelClass + '" data-risk-level="' + r.level + '" data-risk-idx="' + i + '">';
+    html += '<div style="flex:1;min-width:0">';
+    html += '<div style="display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap">';
+    html += '<span class="risk-type" style="color:' + (r.level === '高' ? 'var(--danger)' : r.level === '中' ? 'var(--warning)' : 'var(--success)') + '">' + escHtml(r.type) + '</span>';
+    html += '<span class="tag ' + statusClass + ' cursor-pointer risk-status-btn" data-idx="' + i + '">' + escHtml(status) + '</span>';
+    html += '</div>';
+    html += '<div class="risk-desc">' + escHtml(r.desc) + '</div>';
+    html += '<div class="risk-suggestion">&#128161; ' + escHtml(r.suggestion) + '</div>';
+    html += '</div></div>';
+  });
+  html += '</div>';
+  return html;
+}
+
+// ========== 7. QUAL ==========
+function renderQual() {
+  var stats = getQualStats();
+  var allDone = stats.done === stats.total;
+
+  var html = '<div class="page-header"><h1>资质准备</h1><div class="page-desc">投标文件所需材料清单共' + stats.total + '项</div></div>';
+
+  if (allDone) {
+    html += '<div class="alert alert-success" style="margin-bottom:16px"><span class="alert-icon">&#127881;</span><div class="alert-content"><div class="alert-title">所有材料已准备完成！</div>共计' + stats.total + '项材料全部就绪</div></div>';
+  }
+
+  html += '<div class="stats-grid">';
+  html += '<div class="stat-card border-blue"><div class="stat-icon blue">&#128193;</div><div class="stat-content"><div class="stat-label">全部材料</div><div class="stat-value">' + stats.total + '</div></div></div>';
+  html += '<div class="stat-card border-red"><div class="stat-icon red">&#10071;</div><div class="stat-content"><div class="stat-label">必须项</div><div class="stat-value" style="color:var(--danger)">' + stats.must + '</div></div></div>';
+  html += '<div class="stat-card border-green"><div class="stat-icon green">&#128203;</div><div class="stat-content"><div class="stat-label">建议项</div><div class="stat-value" style="color:var(--success)">' + stats.suggest + '</div></div></div>';
+  html += '<div class="stat-card border-purple"><div class="stat-icon purple">&#9989;</div><div class="stat-content"><div class="stat-label">已完成</div><div class="stat-value" style="color:var(--purple)">' + stats.done + '</div></div></div>';
+  html += '</div>';
+
+  html += '<div class="filter-bar">';
+  html += '<button class="filter-btn active" data-qual-filter="all">全部<span class="filter-count">' + stats.total + '</span></button>';
+  html += '<button class="filter-btn" data-qual-filter="必须">必须项<span class="filter-count">' + stats.must + '</span></button>';
+  html += '<button class="filter-btn" data-qual-filter="建议">建议项<span class="filter-count">' + stats.suggest + '</span></button>';
+  html += '<button class="filter-btn" data-qual-filter="未完成">未完成<span class="filter-count">' + (stats.total - stats.done) + '</span></button>';
+  html += '</div>';
+
+  html += '<div class="card"><div class="card-body" style="padding:0"><div class="table-wrapper"><table>';
+  html += '<thead><tr><th style="width:50px;text-align:center">状态</th><th>材料名称</th><th>说明</th><th style="width:80px;text-align:center">必要性</th></tr></thead><tbody id="qual-tbody">';
+  QUALIFICATIONS.forEach(function(q, i) {
+    var checked = state.qualCheckboxes[i] || false;
+    var necClass = q.necessity === '必须' ? 'tag-cancel' : 'tag-warning';
+    html += '<tr data-qual-necessity="' + q.necessity + '" data-qual-done="' + checked + '" style="' + (checked ? 'opacity:0.6' : '') + '">';
+    html += '<td style="text-align:center"><input type="checkbox" class="qual-check" data-idx="' + i + '"' + (checked ? ' checked' : '') + '></td>';
+    html += '<td style="font-weight:500">' + escHtml(q.name) + '</td>';
+    html += '<td style="font-size:12px;color:var(--text-secondary)">' + escHtml(q.desc) + '</td>';
+    html += '<td style="text-align:center"><span class="tag ' + necClass + '">' + escHtml(q.necessity) + '</span></td>';
+    html += '</tr>';
+  });
+  html += '</tbody></table></div></div></div>';
+  return html;
+}
+
+// ========== 8. PERSONNEL ==========
+function renderPersonnel() {
+  var html = '<div class="page-header"><h1>人员配置</h1><div class="page-desc">拟服务本项目人员情况 — 商务评分项，满分9分</div></div>';
+
+  PERSONNEL.forEach(function(p, i) {
+    html += '<div class="personnel-card">';
+    html += '<div class="personnel-role"><span>' + escHtml(p.role) + '</span><span class="personnel-score">' + escHtml(p.score) + '</span></div>';
+    html += '<div class="personnel-certs">&#128220; ' + escHtml(p.certs) + '</div>';
+    html += '<div class="personnel-tips">&#128161; ' + escHtml(p.tips) + '</div>';
+    html += '</div>';
+  });
+
+  html += '<div class="card"><div class="card-body" style="text-align:center;padding:20px">';
+  html += '<div style="font-size:13px;color:var(--text-secondary);margin-bottom:8px">人员配置满分</div>';
+  html += '<div style="font-size:48px;font-weight:800;color:var(--accent)">9<span style="font-size:20px">分</span></div>';
+  html += '<div style="font-size:12px;color:var(--text-muted);margin-top:8px">建议冲刺满分（项目负责人4分 + 高级工程师2分 + 专项人员3分）</div>';
+  html += '</div></div>';
+  return html;
+}
+
+// ========== 9. SOP ==========
+function renderSop() {
+  var sop = getSopDone();
+  // 计算到期提醒
+  var now = new Date();
+  var nowStr = now.getFullYear() + '-' + String(now.getMonth()+1).padStart(2,'0') + '-' + String(now.getDate()).padStart(2,'0');
+  var overdueTasks = [];
+  var upcomingTasks = [];
+  var todayTasks = [];
+  SOP_PHASES.forEach(function(ph) {
+    ph.tasks.forEach(function(t) {
+      var done = state.sopCheckboxes[t.id] || false;
+      if (done) return;
+      var dl = '2025-' + t.deadline.replace(/-/g, '-');
+      var dlDate = new Date(dl);
+      var diffDays = Math.floor((dlDate - now) / 86400000);
+      if (diffDays < 0) {
+        overdueTasks.push({task: t, diffDays: diffDays});
+      } else if (diffDays === 0) {
+        todayTasks.push({task: t, diffDays: diffDays});
+      } else if (diffDays <= 2) {
+        upcomingTasks.push({task: t, diffDays: diffDays});
+      }
+    });
+  });
+
+  var html = '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:24px"><div><h1 style="font-size:22px;font-weight:700;color:var(--text-primary);margin:0">投标SOP</h1><div style="color:var(--text-secondary);font-size:13px;margin-top:4px">全流程' + sop.total + '项工作事项追踪</div></div><button onclick="downloadWithTimestamp()" style="padding:8px 20px;background:var(--accent);color:#fff;border:none;border-radius:var(--radius);cursor:pointer;font-size:13px;font-weight:600;white-space:nowrap">&#128190; 保存</button></div>';
+
+  // 横向流程图 - 关键时间节点（编号+时间信息）
+  var milestones = [
+    { num: '1', date: '07-02', label: '投标启动', sub: '文件获取研读', color: '#3b82f6' },
+    { num: '2', date: '07-06', label: '澄清截止', sub: '如有疑问提出', color: '#f59e0b' },
+    { num: '3', date: '07-11', label: '技术方案截止', sub: '暗标方案定稿', color: '#8b5cf6' },
+    { num: '4', date: '07-13', label: '文件终审', sub: '全量交叉审核', color: '#f97316' },
+    { num: '5', date: '07-15', label: '上传投标文件', sub: 'CA签名加密', color: '#ef4444' },
+    { num: '6', date: '07-16 13:30', label: '开标截止', sub: '在线解密', color: '#dc2626' }
+  ];
+  html += '<div class="card mb-16"><div class="card-body" style="padding:20px 16px;overflow-x:auto">';
+  html += '<div style="display:flex;align-items:flex-start;position:relative;min-width:700px;padding:0 10px">';
+  // 横向连接线（贯穿编号圆圈中心）
+  html += '<div style="position:absolute;top:22px;left:45px;right:45px;height:4px;background:var(--border);border-radius:99px;z-index:0"></div>';
+  milestones.forEach(function(m, mi) {
+    var msDate = new Date('2025-' + m.date.replace(/-/g, '-').replace(/ (\d+:\d+)$/, 'T$1'));
+    var msDiff = Math.floor((msDate - now) / 86400000);
+    var statusHtml = '';
+    if (msDiff < 0) statusHtml = '<div style="font-size:10px;color:#ef4444;font-weight:600;margin-top:2px">已过</div>';
+    else if (msDiff === 0) statusHtml = '<div style="font-size:10px;color:#f59e0b;font-weight:600;margin-top:2px">今天</div>';
+    else if (msDiff <= 3) statusHtml = '<div style="font-size:10px;color:#2563eb;font-weight:600;margin-top:2px">剩'+msDiff+'天</div>';
+
+    html += '<div style="flex:1;display:flex;flex-direction:column;align-items:center;position:relative;z-index:1">';
+    // 编号圆圈
+    html += '<div style="width:44px;height:44px;border-radius:50%;background:' + m.color + ';border:4px solid var(--bg-card);display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px ' + m.color + '40">';
+    html += '<span style="font-size:16px;font-weight:800;color:#fff">' + m.num + '</span>';
+    html += '</div>';
+    // 下方信息
+    html += '<div style="margin-top:10px;text-align:center">';
+    html += '<div style="font-size:14px;font-weight:700;color:' + m.color + '">' + escHtml(m.label) + '</div>';
+    html += '<div style="font-size:12px;color:var(--text-secondary);margin-top:2px">' + escHtml(m.date) + '</div>';
+    html += '<div style="font-size:11px;color:var(--text-muted);margin-top:1px">' + escHtml(m.sub) + '</div>';
+    html += statusHtml;
+    html += '</div></div>';
+  });
+  html += '</div></div></div>';
+
+  // 到期提醒卡片（默认收起）
+  if (overdueTasks.length > 0 || todayTasks.length > 0 || upcomingTasks.length > 0) {
+    var alertCount = overdueTasks.length + todayTasks.length + upcomingTasks.length;
+    html += '<div class="card mb-16" style="border:2px solid var(--danger)">';
+    html += '<div onclick="toggleAlert()" style="display:flex;align-items:center;gap:8px;padding:12px 20px;cursor:pointer;user-select:none">';
+    html += '<span id="alert-arrow" style="font-size:12px;color:var(--danger);transition:transform 0.2s">&#9654;</span>';
+    html += '<span style="font-weight:700;color:var(--danger);font-size:14px">&#9888; 待办提醒（截止 ' + nowStr + '，共 ' + alertCount + ' 项需关注）</span>';
+    html += '</div>';
+    html += '<div id="alert-body" style="display:none;padding:0 20px 16px 20px">';
+    if (overdueTasks.length > 0) {
+      html += '<div style="margin-bottom:12px"><div style="font-weight:700;color:var(--danger);font-size:13px;margin-bottom:8px">&#128308; 已逾期 ' + overdueTasks.length + ' 项（必须立即处理）</div>';
+      overdueTasks.forEach(function(item) {
+        html += '<div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:var(--radius-sm);margin-bottom:4px;border-left:3px solid var(--danger)">';
+        html += '<span style="font-weight:600;color:var(--danger);min-width:40px">' + escHtml(item.task.id) + '</span>';
+        html += '<span style="flex:1;font-size:13px">' + escHtml(item.task.name) + '</span>';
+        html += '<span style="font-size:12px;color:var(--danger);font-weight:600">截止 ' + escHtml(item.task.deadline) + '（逾期' + Math.abs(item.diffDays) + '天）</span>';
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+    if (todayTasks.length > 0) {
+      html += '<div style="margin-bottom:12px"><div style="font-weight:700;color:var(--warning);font-size:13px;margin-bottom:8px">&#128992; 今日到期 ' + todayTasks.length + ' 项</div>';
+      todayTasks.forEach(function(item) {
+        html += '<div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:var(--radius-sm);margin-bottom:4px;border-left:3px solid var(--warning)">';
+        html += '<span style="font-weight:600;color:var(--warning);min-width:40px">' + escHtml(item.task.id) + '</span>';
+        html += '<span style="flex:1;font-size:13px">' + escHtml(item.task.name) + '</span>';
+        html += '<span style="font-size:12px;color:var(--warning);font-weight:600">截止 ' + escHtml(item.task.deadline) + '</span>';
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+    if (upcomingTasks.length > 0) {
+      html += '<div><div style="font-weight:700;color:var(--accent);font-size:13px;margin-bottom:8px">&#128309; 即将到期 ' + upcomingTasks.length + ' 项（2天内）</div>';
+      upcomingTasks.forEach(function(item) {
+        html += '<div style="display:flex;align-items:center;gap:8px;padding:6px 10px;background:#fff;border-radius:var(--radius-sm);margin-bottom:4px;border-left:3px solid var(--accent)">';
+        html += '<span style="font-weight:600;color:var(--accent);min-width:40px">' + escHtml(item.task.id) + '</span>';
+        html += '<span style="flex:1;font-size:13px">' + escHtml(item.task.name) + '</span>';
+        html += '<span style="font-size:12px;color:var(--accent);font-weight:600">截止 ' + escHtml(item.task.deadline) + '（剩' + item.diffDays + '天）</span>';
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+    html += '</div></div>';
+  }
+
+  html += '<div class="card mb-16"><div class="card-body" style="padding:16px 20px">';
+  html += '<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:10px">';
+  html += '<span style="font-weight:600">整体进度</span><span style="font-weight:700;color:var(--accent)">' + sop.done + '/' + sop.total + ' (' + sop.pct + '%)</span>';
+  html += '</div>';
+  html += '<div class="progress-bar" style="height:14px;margin-bottom:16px"><div class="progress-fill green" style="width:' + sop.pct + '%"></div></div>';
+  html += '<div style="display:flex;gap:12px;flex-wrap:wrap">';
+  SOP_PHASES.forEach(function(ph, i) {
+    var pp = getPhaseProgress(i);
+    html += '<div style="flex:1;min-width:140px;padding:10px;border-radius:var(--radius);background:var(--border-light);text-align:center">';
+    html += '<div style="font-size:12px;color:var(--text-secondary);margin-bottom:4px">阶段' + (i+1) + '</div>';
+    html += '<div style="font-size:18px;font-weight:700;color:var(--accent)">' + pp.done + '/' + pp.total + '</div>';
+    html += '</div>';
+  });
+  html += '</div></div></div>';
+
+  html += '<div class="filter-bar mb-16">';
+  html += '<button class="filter-btn active" data-sop-filter="all">全部<span class="filter-count">' + sop.total + '</span></button>';
+  html += '<button class="filter-btn" data-sop-filter="必须">仅必须项<span class="filter-count">' + SOP_PHASES.reduce(function(n,p){return n+p.tasks.filter(function(t){return t.necessity==='必须'}).length},0) + '</span></button>';
+  html += '<button class="filter-btn" data-sop-filter="未完成">仅未完成<span class="filter-count">' + (sop.total - sop.done) + '</span></button>';
+  html += '</div>';
+
+  SOP_PHASES.forEach(function(ph, pi) {
+    var pp = getPhaseProgress(pi);
+    html += '<div class="phase-header ' + ph.color + '" style="cursor:pointer;user-select:none" onclick="togglePhase(' + pi + ',this)">';
+    html += '<span id="phase-arrow-' + pi + '">&#9660;</span> <span>阶段' + (pi+1) + '：' + escHtml(ph.name) + '</span>';
+    html += '<span style="font-size:12px;color:var(--text-muted);font-weight:400;margin-left:8px">' + escHtml(ph.period) + '</span>';
+    html += '<span class="phase-badge" style="background:rgba(255,255,255,0.2);color:inherit">' + pp.done + '/' + pp.total + '</span>';
+    html += '</div>';
+    html += '<div id="phase-tasks-' + pi + '">';
+    ph.tasks.forEach(function(t) {
+      var done = state.sopCheckboxes[t.id] || false;
+      var isMust = t.necessity === '必须';
+      var priColor = t.priority === '高' ? 'var(--danger)' : t.priority === '中' ? 'var(--warning)' : 'var(--success)';
+      var dlDate = new Date('2025-' + t.deadline.replace(/-/g, '-'));
+      var diffDays = Math.floor((dlDate - now) / 86400000);
+      var deadlineStyle = '';
+      if (!done) {
+        if (diffDays < 0) deadlineStyle = 'color:var(--danger);font-weight:700;background:var(--danger-bg);padding:2px 8px;border-radius:99px;';
+        else if (diffDays === 0) deadlineStyle = 'color:var(--warning);font-weight:700;background:var(--warning-bg);padding:2px 8px;border-radius:99px;';
+        else if (diffDays <= 2) deadlineStyle = 'color:var(--accent);font-weight:600;background:var(--accent-bg);padding:2px 8px;border-radius:99px;';
+        else deadlineStyle = 'color:var(--text-muted)';
+      } else {
+        deadlineStyle = 'color:var(--success)';
+      }
+      html += '<div class="sop-task' + (done ? ' completed' : '') + '" data-sop-necessity="' + t.necessity + '" data-sop-done="' + done + '" style="' + (t.priority === '高' && !done ? 'border-left:4px solid var(--danger)' : '') + '">';
+      html += '<input type="checkbox" class="sop-check" data-id="' + t.id + '"' + (done ? ' checked' : '') + ' style="width:18px;height:18px;accent-color:var(--accent);cursor:pointer;flex-shrink:0">';
+      html += '<div class="sop-task-id">' + escHtml(t.id) + '</div>';
+      html += '<div class="sop-task-info">';
+      html += '<div class="sop-task-name">' + escHtml(t.name) + '</div>';
+      html += '<div class="sop-task-detail">' + escHtml(t.detail) + '</div>';
+      html += '</div>';
+      html += '<div class="sop-task-meta">';
+      html += '<span class="tag ' + (isMust ? 'tag-cancel' : 'tag-warning') + '">' + escHtml(t.necessity) + '</span>';
+      html += '<span style="font-size:12px;color:' + priColor + ';font-weight:600">' + escHtml(t.priority) + '</span>';
+      html += '<span style="font-size:12px;' + deadlineStyle + '">' + escHtml(t.deadline) + (diffDays < 0 && !done ? ' 逾期' : (diffDays === 0 && !done ? ' 今天' : (diffDays <= 2 && !done && diffDays > 0 ? ' 剩'+diffDays+'天' : ''))) + '</span>';
+      html += '</div>';
+      html += '</div>';
+    });
+    html += '</div>';
+  });
+
+  return html;
+}
+
+// 阶段折叠/展开函数（全局函数，供onclick调用）
+function togglePhase(idx, headerEl) {
+  var tasks = document.getElementById('phase-tasks-' + idx);
+  var arrow = document.getElementById('phase-arrow-' + idx);
+  if (!tasks) return;
+  var isHidden = tasks.style.display === 'none';
+  tasks.style.display = isHidden ? '' : 'none';
+  if (arrow) arrow.innerHTML = isHidden ? '&#9660;' : '&#9654;';
+}
+
+// 待办提醒折叠/展开
+function toggleAlert() {
+  var body = document.getElementById('alert-body');
+  var arrow = document.getElementById('alert-arrow');
+  if (!body) return;
+  var isHidden = body.style.display === 'none';
+  body.style.display = isHidden ? 'block' : 'none';
+  if (arrow) arrow.innerHTML = isHidden ? '&#9660;' : '&#9654;';
+}
+
+// 评标策略展开/折叠函数（全局函数，供onclick调用）
+function toggleStrat(el) {
+  var isOpen = el.getAttribute('data-open') === '1';
+  el.setAttribute('data-open', isOpen ? '0' : '1');
+  var arrow = el.querySelector('span');
+  if (arrow) arrow.innerHTML = isOpen ? '&#9654;' : '&#9660;';
+  el.style.color = isOpen ? 'var(--purple)' : 'var(--accent)';
+  var tips = el.nextElementSibling;
+  if (tips) tips.style.display = isOpen ? 'none' : 'block';
+}
+
+// ========== 10. PRICING ==========
+function renderPrice() {
+  var html = '<div class="page-header"><h1>商务报价策略</h1><div class="page-desc">最高限价：' + PROJECT.budget + '（软件' + PROJECT.softwareLimit + ' + 硬件' + PROJECT.hardwareLimit + '）</div></div>';
+
+  html += '<div class="grid-2" style="gap:16px;margin-bottom:24px">';
+  html += '<div style="padding:20px;border-radius:var(--radius-lg);border:2px solid var(--danger);background:var(--danger-bg)">';
+  html += '<div style="font-size:16px;font-weight:700;color:var(--danger);margin-bottom:8px">&#9888; 核心原则</div>';
+  html += '<div style="font-size:13px;color:var(--text-primary);line-height:1.8"><strong style="color:var(--danger)">总价绝对不能超过最高限价365.88万元，否则直接否决投标。</strong><br>分别控制软件和硬件报价不超过各自限价。</div>';
+  html += '</div>';
+
+  html += '<div style="padding:20px;border-radius:var(--radius-lg);border:2px solid var(--info);background:var(--info-bg)">';
+  html += '<div style="font-size:16px;font-weight:700;color:var(--info);margin-bottom:8px">&#128200; 价格区间建议</div>';
+  html += '<div style="font-size:13px;color:var(--text-primary);line-height:1.8">软件报价：<strong>148-166万元</strong>（限价80%-90%）<br>硬件报价：<strong>163-177万元</strong>（限价90%-98%）<br>总价建议：<strong>311-340万元</strong>（限价85%-93%）</div>';
+  html += '</div>';
+
+  html += '<div style="padding:20px;border-radius:var(--radius-lg);border:2px solid var(--warning);background:var(--warning-bg)">';
+  html += '<div style="font-size:16px;font-weight:700;color:var(--warning);margin-bottom:8px">&#128176; 限价提醒</div>';
+  html += '<div style="font-size:13px;color:var(--text-primary);line-height:1.8">总价限价：<strong>365.88万元</strong><br>软件限价：<strong>184.93万元</strong><br>硬件限价：<strong>180.95万元</strong></div>';
+  html += '</div>';
+
+  html += '<div style="padding:20px;border-radius:var(--radius-lg);border:2px solid var(--orange);background:var(--orange-bg)">';
+  html += '<div style="font-size:16px;font-weight:700;color:var(--orange);margin-bottom:8px">&#128293; 低价风险</div>';
+  html += '<div style="font-size:13px;color:var(--text-primary);line-height:1.8">报价明显低于成本价可能被视为<strong style="color:var(--orange)">恶意低价竞标</strong>。建议报价不低于限价的85%，确保合理性。</div>';
+  html += '</div>';
+  html += '</div>';
+
+  html += '<div class="card mb-24"><div class="card-header"><h3>报价计算器</h3></div><div class="card-body">';
+  html += '<div class="form-row"><div class="form-group"><label class="form-label">软件报价（万元）</label><input type="number" class="form-control" id="calc-software" placeholder="建议148-166" step="0.01"></div>';
+  html += '<div class="form-group"><label class="form-label">硬件报价（万元）</label><input type="number" class="form-control" id="calc-hardware" placeholder="建议163-177" step="0.01"></div>';
+  html += '<div class="form-group" style="display:flex;align-items:flex-end"><button class="btn btn-primary" id="calc-btn">计算</button></div></div>';
+  html += '<div id="calc-result" style="margin-top:16px"></div>';
+  html += '</div></div>';
+
+  html += '<div class="card mb-24"><div class="card-header"><h3>评标基准价模拟器</h3></div><div class="card-body">';
+  html += '<div class="form-group"><label class="form-label">预估有效投标家数</label><input type="number" class="form-control" id="sim-count" placeholder="如：3" min="2" max="10" style="max-width:200px"></div>';
+  html += '<div class="form-group"><label class="form-label">我方报价（万元）</label><input type="number" class="form-control" id="sim-our-price" placeholder="如：330" step="0.01" style="max-width:200px"></div>';
+  html += '<div class="form-group"><label class="form-label">竞争对手报价（万元，逗号分隔）</label><input type="text" class="form-control" id="sim-others" placeholder="如：350,340,360"></div>';
+  html += '<button class="btn btn-primary" id="sim-btn" style="margin-top:8px">模拟计算</button>';
+  html += '<div id="sim-result" style="margin-top:16px"></div>';
+  html += '</div></div>';
+
+  html += '<div class="card mb-24"><div class="card-header"><h3>价格分计算规则</h3></div><div class="card-body">';
+  html += '<div style="font-size:13px;color:var(--text-primary);line-height:2">';
+  html += '<strong>基准价确定：</strong>有效投标的评标基准价（具体计算方式以招标文件为准，通常为有效报价的算术平均值）<br>';
+  html += '<strong>得分计算：</strong><br>';
+  html += '&bull; 投标报价 = 评标基准价 → 得 <strong>10分</strong><br>';
+  html += '&bull; 每高于基准价1% → 扣 <strong style="color:var(--danger)">0.3分</strong><br>';
+  html += '&bull; 每低于基准价1% → 扣 <strong style="color:var(--warning)">0.2分</strong><br>';
+  html += '<strong>策略提示：</strong>低于基准价惩罚更轻（0.2 vs 0.3），偏低报价相对更有利。但过低可能被质疑恶意竞标。<br>';
+  html += '<strong>推荐区间：</strong>限价的85%-93%（约311-340万元）</div>';
+  html += '</div></div>';
+
+  return html;
+}
+
+// ========== EVENT BINDING ==========
+function bindEvents(page) {
+  var content = document.getElementById('content');
+
+  // TECH page events
+  if (page === 'tech') {
+    var searchInput = document.getElementById('tech-search');
+    if (searchInput) {
+      searchInput.addEventListener('input', function() {
+        var q = this.value.toLowerCase();
+        var rows = document.querySelectorAll('#tech-tbody tr');
+        rows.forEach(function(row) {
+          var text = row.textContent.toLowerCase();
+          row.style.display = text.indexOf(q) >= 0 ? '' : 'none';
+        });
+      });
+    }
+
+    content.querySelectorAll('.tech-response-select').forEach(function(sel) {
+      sel.addEventListener('change', function() {
+        var idx = this.getAttribute('data-idx');
+        state.techResponses[idx] = this.value;
+        saveState();
+        showToast('响应状态已更新', 'success');
+      });
+    });
+
+    content.querySelectorAll('[data-tech-filter]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        content.querySelectorAll('[data-tech-filter]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-tech-filter');
+        content.querySelectorAll('#tech-tbody tr').forEach(function(row) {
+          var imp = row.getAttribute('data-tech-importance');
+          row.style.display = (filter === 'all' || imp === filter) ? '' : 'none';
+        });
+      });
+    });
+  }
+
+  // DARK MARK events
+  if (page === 'dark') {
+    content.querySelectorAll('.dark-check').forEach(function(cb) {
+      cb.addEventListener('change', function() {
+        var idx = this.getAttribute('data-idx');
+        state.darkMarkChecks[idx] = this.checked;
+        saveState();
+        renderPage('dark');
+      });
+    });
+  }
+
+  // RISK events
+  if (page === 'risk') {
+    content.querySelectorAll('.risk-status-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var idx = this.getAttribute('data-idx');
+        var current = state.riskStatuses[idx] || '待处理';
+        var next = current === '待处理' ? '处理中' : current === '处理中' ? '已解决' : '待处理';
+        state.riskStatuses[idx] = next;
+        saveState();
+        renderPage('risk');
+        showToast('风险状态：' + next, next === '已解决' ? 'success' : 'info');
+      });
+    });
+
+    content.querySelectorAll('[data-risk-filter]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        content.querySelectorAll('[data-risk-filter]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-risk-filter');
+        content.querySelectorAll('.risk-card').forEach(function(card) {
+          var level = card.getAttribute('data-risk-level');
+          card.style.display = (filter === 'all' || level === filter) ? '' : 'none';
+        });
+      });
+    });
+  }
+
+  // QUAL events
+  if (page === 'qual') {
+    content.querySelectorAll('.qual-check').forEach(function(cb) {
+      cb.addEventListener('change', function() {
+        var idx = this.getAttribute('data-idx');
+        state.qualCheckboxes[idx] = this.checked;
+        saveState();
+        renderPage('qual');
+      });
+    });
+
+    content.querySelectorAll('[data-qual-filter]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        content.querySelectorAll('[data-qual-filter]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-qual-filter');
+        content.querySelectorAll('#qual-tbody tr').forEach(function(row) {
+          var nec = row.getAttribute('data-qual-necessity');
+          var done = row.getAttribute('data-qual-done') === 'true';
+          var show = true;
+          if (filter === '必须') show = nec === '必须';
+          else if (filter === '建议') show = nec === '建议';
+          else if (filter === '未完成') show = !done;
+          row.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  }
+
+  // SOP events
+  if (page === 'sop') {
+    content.querySelectorAll('.sop-check').forEach(function(cb) {
+      cb.addEventListener('change', function() {
+        var id = this.getAttribute('data-id');
+        state.sopCheckboxes[id] = this.checked;
+        dirtySop = true;
+        saveState();
+        // 刷新SOP页面以更新进度和到期提醒
+        renderPage('sop');
+      });
+    });
+
+    // 阶段折叠已改用onclick全局函数togglePhase()
+
+    content.querySelectorAll('[data-sop-filter]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        content.querySelectorAll('[data-sop-filter]').forEach(function(b) { b.classList.remove('active'); });
+        this.classList.add('active');
+        var filter = this.getAttribute('data-sop-filter');
+        content.querySelectorAll('.sop-task').forEach(function(task) {
+          var nec = task.getAttribute('data-sop-necessity');
+          var done = task.getAttribute('data-sop-done') === 'true';
+          var show = true;
+          if (filter === '必须') show = nec === '必须';
+          else if (filter === '未完成') show = !done;
+          task.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  }
+
+  // EVAL events - 策略展开已改用onclick全局函数toggleStrat()
+
+  // PRICING events
+  if (page === 'price') {
+    var calcBtn = document.getElementById('calc-btn');
+    if (calcBtn) {
+      calcBtn.addEventListener('click', function() {
+        var sw = parseFloat(document.getElementById('calc-software').value);
+        var hw = parseFloat(document.getElementById('calc-hardware').value);
+        var resultDiv = document.getElementById('calc-result');
+        if (!sw && !hw) { showToast('请输入报价金额', 'warning'); return; }
+        if (isNaN(sw) || isNaN(hw)) { showToast('请输入有效数字', 'warning'); return; }
+        var total = sw + hw;
+        var swLimit = 184.93, hwLimit = 180.95, totalLimit = 365.88;
+        var swOver = sw > swLimit, hwOver = hw > hwLimit, totalOver = total > totalLimit;
+        var swLow = sw < swLimit * 0.85, hwLow = hw < hwLimit * 0.85;
+        var html = '<div style="padding:16px;border-radius:var(--radius);border:1px solid var(--border)">';
+        html += '<div style="font-size:14px;font-weight:700;margin-bottom:12px">计算结果</div>';
+        if (totalOver) {
+          html += '<div class="alert alert-danger" style="margin:0 0 8px">&#10060; 总价 ' + total.toFixed(2) + '万元 <strong>超过限价</strong> ' + totalLimit + '万元，<strong>将被否决投标！</strong></div>';
+        } else if (swOver) {
+          html += '<div class="alert alert-danger" style="margin:0 0 8px">&#10060; 软件报价 ' + sw.toFixed(2) + '万元 <strong>超过限价</strong> ' + swLimit + '万元</div>';
+        } else if (hwOver) {
+          html += '<div class="alert alert-danger" style="margin:0 0 8px">&#10060; 硬件报价 ' + hw.toFixed(2) + '万元 <strong>超过限价</strong> ' + hwLimit + '万元</div>';
+        } else {
+          html += '<div class="alert alert-success" style="margin:0 0 8px">&#9989; 报价未超限价</div>';
+        }
+        html += '<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px">';
+        html += '<div style="text-align:center;padding:10px;background:var(--border-light);border-radius:var(--radius)"><div style="font-size:11px;color:var(--text-secondary)">软件</div><div style="font-size:18px;font-weight:700;color:' + (swOver ? 'var(--danger)' : 'var(--accent)') + '">' + (sw||0).toFixed(2) + '万</div></div>';
+        html += '<div style="text-align:center;padding:10px;background:var(--border-light);border-radius:var(--radius)"><div style="font-size:11px;color:var(--text-secondary)">硬件</div><div style="font-size:18px;font-weight:700;color:' + (hwOver ? 'var(--danger)' : 'var(--accent)') + '">' + (hw||0).toFixed(2) + '万</div></div>';
+        html += '<div style="text-align:center;padding:10px;background:var(--border-light);border-radius:var(--radius)"><div style="font-size:11px;color:var(--text-secondary)">总价</div><div style="font-size:18px;font-weight:700;color:' + (totalOver ? 'var(--danger)' : 'var(--success)') + '">' + total.toFixed(2) + '万</div></div>';
+        html += '</div>';
+        if (totalOver || swOver || hwOver) {
+          html += '<div style="font-size:12px;color:var(--danger);margin-top:8px">&#9888; 请调整报价，不得超过限价！</div>';
+        } else {
+          var pct = Math.round(total / totalLimit * 100);
+          if (pct < 85) html += '<div style="font-size:12px;color:var(--orange);margin-top:8px">&#9888; 报价低于限价85%，可能被视为低价竞标</div>';
+          else html += '<div style="font-size:12px;color:var(--success);margin-top:8px">&#9989; 报价在合理区间（限价' + pct + '%）</div>';
+        }
+        html += '</div>';
+        resultDiv.innerHTML = html;
+      });
+    }
+
+    var simBtn = document.getElementById('sim-btn');
+    if (simBtn) {
+      simBtn.addEventListener('click', function() {
+        var ourPrice = parseFloat(document.getElementById('sim-our-price').value);
+        var othersStr = document.getElementById('sim-others').value;
+        var resultDiv = document.getElementById('sim-result');
+        if (isNaN(ourPrice) || !othersStr.trim()) { showToast('请输入完整数据', 'warning'); return; }
+        var others = othersStr.split(',').map(function(s) { return parseFloat(s.trim()); }).filter(function(v) { return !isNaN(v); });
+        if (others.length === 0) { showToast('请输入至少一个竞争对手报价', 'warning'); return; }
+        var allPrices = [ourPrice].concat(others);
+        var avg = allPrices.reduce(function(a,b){return a+b},0) / allPrices.length;
+        var diff = ourPrice - avg;
+        var diffPct = diff / avg * 100;
+        var score;
+        if (Math.abs(diffPct) < 0.01) { score = 10; }
+        else if (diffPct > 0) { score = Math.max(0, 10 - diffPct * 0.3); }
+        else { score = Math.max(0, 10 + diffPct * 0.2); }
+        score = Math.round(score * 100) / 100;
+
+        var html = '<div style="padding:16px;border-radius:var(--radius);border:1px solid var(--border)">';
+        html += '<div style="font-size:14px;font-weight:700;margin-bottom:12px">模拟结果</div>';
+        html += '<div class="info-grid" style="margin-bottom:12px">';
+        html += '<div class="info-item"><span class="info-label">有效投标数</span><span class="info-value">' + allPrices.length + '家</span></div>';
+        html += '<div class="info-item"><span class="info-label">基准价(均值)</span><span class="info-value">' + avg.toFixed(2) + '万元</span></div>';
+        html += '<div class="info-item"><span class="info-label">我方报价</span><span class="info-value">' + ourPrice.toFixed(2) + '万元</span></div>';
+        html += '<div class="info-item"><span class="info-label">偏差</span><span class="info-value" style="color:' + (diffPct > 0 ? 'var(--danger)' : diffPct < -10 ? 'var(--warning)' : 'var(--success)') + '">' + (diffPct > 0 ? '+' : '') + diffPct.toFixed(2) + '%</span></div>';
+        html += '</div>';
+        html += '<div style="text-align:center;padding:16px;background:' + (score >= 9 ? 'var(--success-bg)' : score >= 7 ? 'var(--warning-bg)' : 'var(--danger-bg)') + ';border-radius:var(--radius)">';
+        html += '<div style="font-size:12px;color:var(--text-secondary);margin-bottom:4px">价格分得分</div>';
+        html += '<div style="font-size:36px;font-weight:800;color:' + (score >= 9 ? 'var(--success)' : score >= 7 ? 'var(--warning)' : 'var(--danger)') + '">' + score + '<span style="font-size:16px">分</span></div>';
+        html += '<div style="font-size:12px;color:var(--text-muted);margin-top:4px">满分10分</div>';
+        html += '</div>';
+        html += '<div style="font-size:11px;color:var(--text-muted);margin-top:8px">* 基准价按有效报价算术平均值模拟，实际以招标文件规则为准</div>';
+        html += '</div>';
+        resultDiv.innerHTML = html;
+      });
+    }
+  }
+}
+
+// ========== INIT ==========
+var currentPage = 'overview';
+loadState();
+if (state.currentPage) currentPage = state.currentPage;
+
+document.getElementById('nav-menu').addEventListener('click', function(e) {
+  var li = e.target.closest('li');
+  if (!li) return;
+  var page = li.getAttribute('data-page');
+  if (page === currentPage) return;
+  
+  function doNavigate() {
+    document.querySelectorAll('#nav-menu li').forEach(function(el) { el.classList.remove('active'); });
+    li.classList.add('active');
+    currentPage = page;
+    state.currentPage = page;
+    saveState();
+    renderPage(page);
+    bindEvents(page);
+  }
+  
+  if (currentPage === 'sop' && dirtySop) {
+    checkSaveBeforeLeave(doNavigate);
+  } else {
+    doNavigate();
+  }
+});
+
+function renderPage(page) {
+  var content = document.getElementById('content');
+  var html = '';
+  switch(page) {
+    case 'overview': html = renderOverview(); break;
+    case 'eval': html = renderEval(); break;
+    case 'tech': html = renderTech(); break;
+    case 'biz': html = renderBiz(); break;
+    case 'dark': html = renderDark(); break;
+    case 'risk': html = renderRisk(); break;
+    case 'qual': html = renderQual(); break;
+    case 'personnel': html = renderPersonnel(); break;
+    case 'sop': html = renderSop(); break;
+    case 'price': html = renderPrice(); break;
+    default: html = '<div class="empty-state"><div class="empty-icon">&#128196;</div><div class="empty-text">页面不存在</div></div>';
+  }
+  content.innerHTML = html;
+  window.scrollTo(0, 0);
+  bindEvents(page);
+}
+
+setInterval(function() {
+  var el = document.getElementById('countdown');
+  if (el) el.textContent = formatCountdown(PROJECT.deadline);
+}, 1000);
+
+renderPage(currentPage);
+</script>
+</body>
+</html>

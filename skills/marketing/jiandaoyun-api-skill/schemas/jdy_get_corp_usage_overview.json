@@ -1,0 +1,20 @@
+{
+  "client_only_params": [],
+  "description": "获取企业在指定日期的平台资源用量概览（企业维度汇总）",
+  "display_name": "获取平台资源用量统计",
+  "domain": "用量与审计",
+  "endpoint": "https://api.jiandaoyun.com/api/v1/corp_usage/overview",
+  "method": "POST",
+  "name": "jdy_get_corp_usage_overview",
+  "params": {
+    "date": {
+      "description": "统计日期，格式 yyyy-MM-dd。不传则查询前一天（T-1）的数据。不能晚于 T-1，最多支持查询最近 180 天。",
+      "required": false,
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [],
+  "risk": "read",
+  "source": "简道云工具包.zip"
+}

@@ -1,0 +1,17 @@
+{
+  "owner": "15910701838",
+  "slug": "axure-prototype-generator",
+  "displayName": "Axure Prototype Generator",
+  "latest": {
+    "version": "1.2.1",
+    "publishedAt": 1774361589821,
+    "commit": "https://github.com/openclaw/skills/commit/c6e71a4d6e130d22e098f00613e72f94054b344d"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1773488179393,
+      "commit": "https://github.com/openclaw/skills/commit/8a532a34cfa8c1adca8219ffbba29d44674ee560"
+    }
+  ]
+}

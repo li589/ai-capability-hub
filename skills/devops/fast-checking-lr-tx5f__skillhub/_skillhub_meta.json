@@ -1,0 +1,10 @@
+{
+  "slug": "fast-checking-lr-tx5f",
+  "name": "Claude红队测试技能",
+  "version": "1.0.0",
+  "installedAt": 1787229008615,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

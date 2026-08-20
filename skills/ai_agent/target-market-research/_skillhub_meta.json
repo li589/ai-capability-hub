@@ -1,0 +1,11 @@
+{
+  "name": "目标市场研究",
+  "installedAt": 1787228582888,
+  "source": "marketplace",
+  "version": "1.3.0",
+  "skillId": "skill_2088538936995168256",
+  "description_zh": "用产品资料、指定公开来源和研究框架输出国家/行业对比、进入难点和验证清单。适用于用户要求目标市场研究、生成相关结果或检查执行边界时。",
+  "description_en": "Target Market Research workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_4813e678-fe2.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_4813e678-fe2.png"
+}

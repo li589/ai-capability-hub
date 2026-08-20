@@ -1,0 +1,11 @@
+{
+  "name": "腾讯自选股·智能选股",
+  "installedAt": 1787227738609,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089687212865208320",
+  "description_zh": "把用自然语言描述的选股逻辑（如\"连续放量上涨的题材股\"\"低估值高股息蓝筹\"）转化为可执行的多指标/多策略扫描条件，在全市场范围内批量筛选，输出符合条件的候选股票池。",
+  "description_en": "Convert stock selection logic described in natural language (such as \"thematic stocks rising on sustained high trading volume\" or \"undervalued, high-dividend blue-chip stocks\") into executable scanning criteria based on multiple indicators or strategies; then, perform a batch screen across the entire market to generate a pool of candidate stocks that meet these criteria.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_5a5391d5-90a.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_5a5391d5-90a.png"
+}

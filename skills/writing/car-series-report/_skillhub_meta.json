@@ -1,0 +1,21 @@
+{
+  "name": "汽车之家车系解读报告",
+  "installedAt": 1787228417409,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2070147102864838656",
+  "examples_zh": [
+    "奥迪A6L怎么样？帮我看看它的口碑和价格",
+    "比亚迪汉dmi现在优惠力度大不大",
+    "大众朗逸车系详解，和竞品比有什么优势"
+  ],
+  "examples_en": [
+    "How is the Audi A6L? Show me its reviews and pricing",
+    "What promotions are available for the BYD Han DM-i?",
+    "Detailed report on Volkswagen Lavida, how does it compare to competitors?"
+  ],
+  "description_zh": "基于汽车之家专业数据，查询指定汽车的完整信息，包括价格、口碑、配置、优惠和竞品对比，生成一目了然的详解报告。",
+  "description_en": "Query detailed car information including pricing, reviews, configurations, dealer promotions and competitor comparisons based on Autohome professional data. Generate comprehensive visual reports with radar charts.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2070147102864838656/9b012848ef693705.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/operation-platform/skill-icons/skill_2070147102864838656/9b012848ef693705.png"
+}

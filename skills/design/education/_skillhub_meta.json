@@ -1,0 +1,20 @@
+{
+  "name": "Education",
+  "installedAt": 1785784774551,
+  "source": "marketplace",
+  "version": "3.4.1",
+  "skillId": "skill_2053082003609702400",
+  "examples_zh": [
+    "为四周备考 AWS SAA 认证制定学习计划，拆分每日主题、练习题数量和复习节点。",
+    "根据这章细胞生物学内容制作 30 张抽认卡，并附上正反面答案和易错点。",
+    "为\"二叉树遍历\"生成 10 道测验题，记录答题结果并安排错题复习日期。"
+  ],
+  "examples_en": [
+    "Create a four-week study plan for the AWS SAA certification with daily topics, practice-question counts, and review checkpoints.",
+    "Make 30 flashcards from this cell biology chapter, including front/back answers and common pitfalls.",
+    "Generate 10 quiz questions on binary tree traversal, track my answers, and schedule review dates for missed questions."
+  ],
+  "description_zh": "学习助手：生成学习计划、测验、抽认卡、复习材料并跟踪进度",
+  "description_en": "Study assistant: generate plans, quizzes, flashcards, review materials and track progress",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "会员-消费行为分析",
+  "installedAt": 1787228470023,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087433769783300096",
+  "description_zh": "分析会员消费、复购、偏好和 RFM 分层表现。",
+  "description_en": "Analyzes member spending, repurchase, preferences, and RFM segments.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/c497fe8d-16cd-4d53-87d2-c0e39793d455/avatar/skill/au_fc9ef9f2-d31.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/c497fe8d-16cd-4d53-87d2-c0e39793d455/avatar/skill/au_fc9ef9f2-d31.png"
+}

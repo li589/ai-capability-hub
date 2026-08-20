@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+  <title id="t">Signal Theatre Dynamic UI companion guide</title>
+  <desc id="d">Luminous focal plot on a dark field with a narrow three-cue rail.</desc>
+  <rect width="720" height="360" fill="#111210"/>
+  <g fill="#f3f2ea"><rect x="40" y="32" width="190" height="12"/><rect x="40" y="58" width="118" height="6"/></g>
+  <rect x="40" y="92" width="480" height="216" rx="13" fill="#f3f2ea"/>
+  <path d="M74 260L154 194L238 222L318 140L402 172L486 116" fill="none" stroke="#3d63ff" stroke-width="9" stroke-linecap="round"/>
+  <g fill="#111210"><circle cx="154" cy="194" r="7"/><circle cx="318" cy="140" r="7"/><circle cx="486" cy="116" r="7"/></g>
+  <g fill="#f3f2ea"><rect x="540" y="92" width="140" height="58" rx="11"/><rect x="540" y="164" width="140" height="58" rx="11"/><rect x="540" y="236" width="140" height="72" rx="11"/></g>
+  <g fill="#111210"><rect x="558" y="112" width="78" height="8"/><rect x="558" y="184" width="96" height="8"/><rect x="558" y="256" width="62" height="8"/></g>
+  <circle cx="660" cy="274" r="9" fill="#dfff3f"/><rect x="40" y="334" width="640" height="2" fill="#f3f2ea"/>
+</svg>

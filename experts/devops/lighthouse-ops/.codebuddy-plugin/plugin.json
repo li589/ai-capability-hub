@@ -1,0 +1,88 @@
+{
+  "name": "lighthouse-ops",
+  "version": "1.0.0",
+  "description": "Tencent Lighthouse Expert: quickly create Lighthouse servers with instance queries, firewall configuration, snapshot backups, monitoring alerts, command execution, and cloud deployment and hosting for applications.",
+  "author": {
+    "name": "腾讯云 Lighthouse 官方",
+    "email": "lightai@tencent.com"
+  },
+  "agents": ["./agents/lighthouse-ops.md"],
+  "skills": [
+    "./skills/instance-management",
+    "./skills/firewall-management",
+    "./skills/snapshot-management",
+    "./skills/monitoring",
+    "./skills/application-deployment",
+    "./skills/remote-command"
+  ],
+  "homepage": "https://lightai.cloud.tencent.com",
+  "license": "MIT",
+  "avatar": "avatars/logo.png",
+  "keywords": [
+    "lighthouse",
+    "tencent-cloud",
+    "server-management",
+    "firewall",
+    "snapshot"
+  ],
+  "expertType": "agent",
+  "agentName": "lighthouse-ops",
+  "displayName": {
+    "en": "Tencent Lighthouse Expert",
+    "zh": "腾讯轻量云专家"
+  },
+  "profession": {
+    "en": "Tencent Lighthouse Expert",
+    "zh": "腾讯轻量云专家"
+  },
+  "displayDescription": {
+    "en": "Tencent Lighthouse Expert: helps you quickly create Lighthouse servers, supporting common cloud resource management features like instance queries, firewall configuration, and snapshot backups, ops actions such as monitoring alerts and command execution, plus cloud deployment and hosting for websites and other applications.",
+    "zh": "腾讯轻量云 Lighthouse 专家：帮你快速创建轻量应用服务器，支持实例查询、防火墙配置、快照备份等云资源常用管理功能，支持监控告警与命令执行等运维操作，并提供网站等各类应用云端部署与托管能力。"
+  },
+  "categoryId": "02-Engineering",
+  "official": true,
+  "officialBadge": {
+    "en": "Tencent Cloud Lighthouse Official",
+    "zh": "腾讯云 Lighthouse 官方"
+  },
+  "authPrompt": {
+    "en": "Authorization required: connect your Tencent Cloud account after summoning",
+    "zh": "召唤后需授权腾讯云账号"
+  },
+  "defaultInitPrompt": {
+    "en": "Quickly query my Lighthouse instances (for first-time use, please click the connector above the chat box to authorize)",
+    "zh": "一键查询我的 Lighthouse 实例（首次使用请先点击对话框上方连接器完成授权）"
+  },
+  "plugin": "lighthouse-ops",
+  "tags": [
+    {
+      "en": "Instance Query",
+      "zh": "实例查询"
+    },
+    {
+      "en": "Firewall Management",
+      "zh": "防火墙管理"
+    },
+    {
+      "en": "Ops Troubleshooting",
+      "zh": "运维排障"
+    }
+  ],
+  "quickPrompts": [
+    {
+      "en": "Quickly query my Lighthouse instances (for first-time use, please click the connector above the chat box to authorize)",
+      "zh": "一键查询我的 Lighthouse 实例（首次使用请先点击对话框上方连接器完成授权）"
+    },
+    {
+      "en": "Show currently open ports of the server",
+      "zh": "查看服务器当前开放的端口"
+    },
+    {
+      "en": "Open HTTPS port (443) for a specified instance",
+      "zh": "为指定实例开放 HTTPS 端口"
+    }
+  ],
+  "dependencies": {
+    "mcpServers": "./.mcp.json"
+  }
+}

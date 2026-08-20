@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+  <title id="t">Evidence Lens Dynamic UI companion guide</title>
+  <desc id="d">Large evidence object, three annotation anchors, and a synchronized inspection rail.</desc>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <g fill="#171412"><rect x="40" y="34" width="176" height="12"/><rect x="40" y="60" width="110" height="6"/></g>
+  <g fill="#f1f0ee"><rect x="40" y="98" width="166" height="52" rx="13"/><rect x="40" y="164" width="166" height="52" rx="13"/><rect x="40" y="230" width="166" height="52" rx="13"/></g>
+  <g fill="#171412"><rect x="58" y="118" width="88" height="8"/><rect x="58" y="184" width="112" height="8"/><rect x="58" y="250" width="74" height="8"/></g>
+  <rect x="240" y="92" width="440" height="210" rx="28" fill="#eeecfb"/>
+  <path d="M300 244C340 130 438 116 526 176C570 206 606 174 648 128" fill="none" stroke="#6658d8" stroke-width="12" stroke-linecap="round"/>
+  <path d="M300 252C368 270 446 254 508 220" fill="none" stroke="#f05434" stroke-width="6" stroke-linecap="round"/>
+  <g fill="#171412"><circle cx="340" cy="174" r="15"/><circle cx="502" cy="168" r="15"/><circle cx="606" cy="152" r="15"/></g>
+  <g fill="#ffffff"><rect x="335" y="168" width="10" height="10" rx="5"/><rect x="497" y="163" width="10" height="10" rx="5"/><rect x="601" y="147" width="10" height="10" rx="5"/></g>
+  <rect x="240" y="326" width="440" height="2" fill="#171412"/><rect x="240" y="338" width="250" height="7" fill="#171412"/>
+</svg>

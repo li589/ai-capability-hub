@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "source_text": "林夏在深夜办公室发现合同被人替换，她决定追查真相并保护团队。",
+  "genre": "都市悬疑",
+  "visual_style": "电影感写实",
+  "target_duration_seconds": 60,
+  "language": "zh-CN",
+  "constraints": {
+    "max_characters": 8,
+    "max_scenes": 8,
+    "max_storyboards": 12
+  }
+}

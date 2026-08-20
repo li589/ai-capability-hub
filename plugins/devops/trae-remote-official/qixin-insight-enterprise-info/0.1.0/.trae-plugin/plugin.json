@@ -1,0 +1,44 @@
+{
+  "name": "qixin-insight-enterprise-info",
+  "version": "0.1.0",
+  "description": "基于启信慧眼企业数据，支持从单一企业核验到批量企业筛选与全景尽调，查询工商、股权、司法经营、舆情及关联关系，识别合作与准入风险，发现潜在商业线索，并生成结构化分析报告。",
+  "i18n": {
+    "display_name": {
+      "en": "qixin-insight-enterprise-info",
+      "zh-cn": "启信慧眼企业信息",
+      "ja": "Qixin Insight 企業情報"
+    },
+    "description": {
+      "en": "Use Qixin Insight enterprise data for company verification, screening, risk review, relationship analysis, due diligence, and structured reporting.",
+      "zh-cn": "基于启信慧眼企业数据，支持从单一企业核验到批量企业筛选与全景尽调，查询工商、股权、司法经营、舆情及关联关系，识别合作与准入风险，发现潜在商业线索，并生成结构化分析报告。",
+      "ja": "Qixin Insight の企業データを活用し、企業確認、スクリーニング、リスク審査、関係分析、デューデリジェンス、構造化レポートの作成を支援します。"
+    }
+  },
+  "author": {
+    "name": "Qixin Insight"
+  },
+  "keywords": [
+    "enterprise-information",
+    "company-search",
+    "due-diligence",
+    "risk-screening",
+    "relationship-analysis",
+    "qixin-insight"
+  ],
+  "interface": {
+    "displayName": "启信慧眼企业信息",
+    "shortDescription": "Company verification, screening, risk review, and due diligence",
+    "longDescription": "Use Qixin Insight enterprise data for company verification, screening, risk review, relationship analysis, due diligence, and structured reporting.",
+    "defaultPrompt": [
+      "Search for a company and summarize its registration and shareholder information.",
+      "Review a company's recent operational updates and risk signals.",
+      "Analyze a company's intellectual property and business profile."
+    ],
+    "brandColor": "#276EF1",
+    "screenshots": [],
+    "logo": "./assets/icon.png",
+    "composerIcon": "./assets/icon.png"
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json"
+}

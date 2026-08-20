@@ -1,0 +1,9 @@
+{
+  "name": "王五",
+  "code": "wang",
+  "focus": "写作质量、结构、图表",
+  "review_style": "清晰、规范、可读性强",
+  "persona_keywords": ["写作清晰度", "结构", "图表"],
+  "priority_questions": ["结构是否流畅", "图表自解释性是否足够", "参考文献格式"],
+  "is_trained": false
+}

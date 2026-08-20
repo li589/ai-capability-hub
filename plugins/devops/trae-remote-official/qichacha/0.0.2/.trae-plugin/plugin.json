@@ -1,0 +1,58 @@
+{
+  "name": "qichacha",
+  "version": "0.0.2",
+  "description": "Five enterprise information query services powered by Qichacha data, covering business registration, equity ownership and ultimate controllers, judicial and enforcement risks, regulatory and tax risks, intellectual property, business activities, executive appointments, personal risks, and historical records. Suitable for company verification, supplier onboarding, KYB, and due diligence.",
+  "i18n": {
+    "display_name": {
+      "en": "Qichacha",
+      "zh-cn": "企查查",
+      "ja": "Qichacha"
+    },
+    "description": {
+      "en": "Five enterprise information query services powered by Qichacha data, covering business registration, equity ownership and ultimate controllers, judicial and enforcement risks, regulatory and tax risks, intellectual property, business activities, executive appointments, personal risks, and historical records. Suitable for company verification, supplier onboarding, KYB, and due diligence.",
+      "zh-cn": "基于企查查数据的 5 大企业信息查询服务，覆盖工商登记、股权与实控人、司法与执行风险、监管与税务风险、知识产权、经营动态，以及董监高任职、个人风险与历史记录，适用于企业核验、供应商准入、KYB 与尽职调查。",
+      "ja": "Qichacha データに基づく 5 つの企業情報照会サービスです。法人登記、株主構成と実質的支配者、司法・強制執行リスク、規制・税務リスク、知的財産、事業動向に加え、役員の在任情報、個人リスク、過去の記録を網羅し、企業確認、サプライヤー審査、KYB、デューデリジェンスに適しています。"
+    }
+  },
+  "author": {
+    "name": "Qichacha Technology Co., Ltd.",
+    "url": "https://www.qcc.com/"
+  },
+  "homepage": "https://agent.qcc.com/",
+  "license": "Proprietary",
+  "keywords": [
+    "qichacha",
+    "qcc",
+    "company-data",
+    "enterprise-data",
+    "due-diligence",
+    "risk",
+    "kyb",
+    "mcp"
+  ],
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "企查查",
+    "shortDescription": "Enterprise intelligence and risk data",
+    "longDescription": "Use official Qichacha MCP services to verify companies, conduct due diligence, screen risks, inspect intellectual property and operations, research regulations and cases, and parse business documents.",
+    "developerName": "Qichacha",
+    "category": "Data & Analytics",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "websiteURL": "https://agent.qcc.com/",
+    "privacyPolicyURL": "https://agent.qcc.com/privacy-policy",
+    "defaultPrompt": [
+      "Verify a company's registration status and key business information.",
+      "Run a risk and due diligence review for a company.",
+      "Research a company's ownership, executives, operations, and intellectual property."
+    ],
+    "brandColor": "#1677FF",
+    "screenshots": [],
+    "logo": "./assets/icon.svg",
+    "composerIcon": "./assets/icon.svg"
+  }
+}

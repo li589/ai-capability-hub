@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" role="img" aria-labelledby="title desc">
+  <title id="title">Product Stage support kit</title>
+  <desc id="desc">Original electric-blue stage markers, dot pattern, focal plane, and direct-label chart marks.</desc>
+  <defs>
+    <pattern id="route-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="3" cy="3" r="1.5" fill="#2B63E8" opacity=".22"/>
+    </pattern>
+    <g id="route-marker"><circle cx="8" cy="8" r="8" fill="#2B63E8"/><circle cx="8" cy="8" r="3" fill="#FFFFFF"/></g>
+    <g id="route-chart-mark"><path d="M0 30L15 18 30 22 46 5" fill="none" stroke="#2B63E8" stroke-width="5"/><circle cx="46" cy="5" r="5" fill="#2B63E8"/></g>
+  </defs>
+  <rect width="320" height="180" fill="#FFFFFF"/>
+  <rect x="16" y="16" width="288" height="72" rx="16" fill="#2B63E8"/>
+  <circle cx="265" cy="52" r="22" fill="url(#route-pattern)" stroke="#FFFFFF" stroke-width="2"/>
+  <rect id="route-focus-field" x="16" y="104" width="154" height="60" rx="14" fill="#162033"/>
+  <g transform="translate(188 126)"><use href="#route-marker"/></g>
+  <g transform="translate(238 124)"><use href="#route-chart-mark"/></g>
+</svg>

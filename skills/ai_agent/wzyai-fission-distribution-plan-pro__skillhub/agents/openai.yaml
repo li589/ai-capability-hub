@@ -1,0 +1,4 @@
+interface:
+  display_name: "裂变式分销方案设计（Pro版）"
+  short_description: "付费生成合规优先的裂变分销方案、财务模型、图表、海报与报告成品"
+  default_prompt: "使用 $wzyai-fission-distribution-plan-pro 检查交付环境，确认业务事实、交付模式和人民币0.99元价格，仅在我明确同意后请求支付，并生成合规优先的裂变式分销方案。"

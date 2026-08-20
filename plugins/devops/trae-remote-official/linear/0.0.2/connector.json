@@ -1,0 +1,9 @@
+{
+  "connectors": {
+    "linear": {
+      "type": "remote_mcp",
+      "mcp_server": "linear",
+      "auth_policy": "ON_INVOKE"
+    }
+  }
+}

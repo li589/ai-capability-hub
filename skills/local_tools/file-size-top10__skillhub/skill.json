@@ -1,0 +1,35 @@
+{
+  "name": "file-size-top10",
+  "version": "1.0.0",
+  "description": "在 Windows 系统中按文件大小找出前 10 大的文件",
+  "author": "Your Name",
+  "tags": ["windows", "file-management", "disk-usage", "system-tool"],
+  "entrypoint": "run.ps1",
+  "arguments": [
+    {
+      "name": "path",
+      "type": "string",
+      "description": "要扫描的目录路径（默认为当前目录）",
+      "required": false,
+      "default": "."
+    },
+    {
+      "name": "depth",
+      "type": "integer",
+      "description": "扫描目录深度（-1 表示无限制）",
+      "required": false,
+      "default": -1
+    },
+    {
+      "name": "unit",
+      "type": "string",
+      "description": "显示单位（auto/MB/GB）",
+      "required": false,
+      "default": "auto"
+    }
+  ],
+  "output": {
+    "format": "table",
+    "fields": ["rank", "size", "size_human", "path", "last_modified"]
+  }
+}

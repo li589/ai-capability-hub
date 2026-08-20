@@ -1,0 +1,29 @@
+{
+  "name": "fazhi-law",
+  "version": "1.0.3",
+  "displayName": "法智法律数据",
+  "displayNameEn": "Fazhi Legal Search",
+  "description": "查询中国法律法规、司法案例、裁判文书及互联网法律实务资讯，支持法条检索、类案检索、深度法律研究、法律文书起草与诉讼可视化。",
+  "descriptionEn": "Search Chinese laws and regulations, judicial cases, judgment documents, and internet legal practice information. Supports legal article search, similar case retrieval, deep legal research, legal document drafting, and litigation visualization.",
+  "author": {
+  "name": "Fazhi"
+  },
+  "keywords": [
+    "法律法规",
+    "法条检索",
+    "司法案例",
+    "裁判文书",
+    "类案检索",
+    "法律研究",
+    "法律文书起草",
+    "文书起草",
+    "民事诉讼",
+    "诉讼可视化",
+    "民法典",
+    "法律实务"
+  ],
+  "logo": "./icon.svg",
+  "skills": "./skills/",
+  "mcp": "./.mcp.json",
+  "connector": "./connector.json"
+}

@@ -1,0 +1,37 @@
+{
+  "name": "compliance-review",
+  "version": "0.1.2",
+  "description": "企业合规审查助手，覆盖数据隐私、广告合规、劳动用工及综合合规评估",
+  "author": {
+    "name": "Trae"
+  },
+  "license": "UNLICENSED",
+  "keywords": [
+    "compliance-review",
+    "internal",
+    "skills",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "interface": {
+    "displayName": "合规审查",
+    "shortDescription": "企业合规审查助手，覆盖数据隐私、广告合规、劳动用工及综合合规评估",
+    "longDescription": "企业合规审查助手，覆盖数据隐私、广告合规、劳动用工及综合合规评估",
+    "developerName": "Trae",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use compliance-review to complete this task."
+    ],
+    "brandColor": "#FFFFFF",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

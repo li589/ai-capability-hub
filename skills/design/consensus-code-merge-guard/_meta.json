@@ -1,0 +1,22 @@
+{
+  "owner": "kaicianflone",
+  "slug": "consensus-code-merge-guard",
+  "displayName": "consensus-code-merge-guard",
+  "latest": {
+    "version": "1.1.15",
+    "publishedAt": 1772480641305,
+    "commit": "https://github.com/openclaw/skills/commit/813d3708a07b0ba511f0ea36d4da291b0b0734af"
+  },
+  "history": [
+    {
+      "version": "1.1.9",
+      "publishedAt": 1772343198543,
+      "commit": "https://github.com/openclaw/skills/commit/11d8106226bec46c3c04afd2b416eb8f9eb324d7"
+    },
+    {
+      "version": "1.1.4",
+      "publishedAt": 1772156352319,
+      "commit": "https://github.com/openclaw/skills/commit/a2937418078f8dcefebd75d57676b2c21d3bbf62"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="ksve-bg" x1="0" y1="0" x2="32" y2="32">
+      <stop offset="0%" stop-color="#FF4906"/>
+      <stop offset="100%" stop-color="#E03A00"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#ksve-bg)"/>
+  <!-- 视频播放三角 -->
+  <path d="M12.5 8.8 L21.8 15 L12.5 21.2 Z" fill="#ffffff"/>
+  <!-- 提取出的文案行 -->
+  <rect x="8" y="23.2" width="16" height="2.4" rx="1.2" fill="#ffffff" opacity="0.92"/>
+  <rect x="8" y="26.8" width="10" height="2.4" rx="1.2" fill="#ffffff" opacity="0.55"/>
+</svg>

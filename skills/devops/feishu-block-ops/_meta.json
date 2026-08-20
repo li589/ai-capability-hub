@@ -1,0 +1,11 @@
+{
+  "owner": "deadblue22",
+  "slug": "feishu-block-ops",
+  "displayName": "Feishu Block Ops",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772605567046,
+    "commit": "https://github.com/openclaw/skills/commit/89eb64977d2bb00bd991726f5be2a9d8bdf44edb"
+  },
+  "history": []
+}

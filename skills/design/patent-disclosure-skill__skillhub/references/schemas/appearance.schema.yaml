@@ -1,0 +1,29 @@
+# AppearanceSchema — 外观设计事实合同
+
+用于外观设计交底与外观专利解读。单一事实源；写读共用。
+
+```yaml
+$schema: appearance.schema
+version: 1
+mode: disclosure  # disclosure | reader
+source_images: []          # 看过的图；交底入文以 figure_plan 为准
+product_name: ""
+overall_shape: ""      # 整体造型一句话
+views:                 # 已见视图
+  - name: 立体图       # 主视/俯视/左视/立体等
+    notes: ""
+    source_image: ""   # 可选；对应材料图路径
+    # 视图间关联优先写在 figure_plan.relates_to（same_state / alternate_view）
+ornament: []           # 图案、线条、纹理
+color: []              # 色彩搭配；不明则 uncertain
+design_points: []      # 欲强调的外观要点
+contrast_to_prior: []  # 与常见外观差异（假设须标）
+uncertain: []
+not_design_signals: [] # 若更像结构功能/方法，列于此
+```
+
+## 必填
+
+- `overall_shape`  
+- `views`（可空数组但须在 `uncertain` 说明缺图）  
+- `uncertain`

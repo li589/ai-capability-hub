@@ -1,0 +1,11 @@
+{
+  "owner": "wangdinglu",
+  "slug": "a-share-real-time-data",
+  "displayName": "A股实时行情数据",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770645859434,
+    "commit": "https://github.com/openclaw/skills/commit/40e3a45c9ddc5d5397224a680aa9f0d76fafc201"
+  },
+  "history": []
+}

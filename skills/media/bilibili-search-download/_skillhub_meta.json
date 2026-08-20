@@ -1,0 +1,11 @@
+{
+  "name": "B站搜索批量下载",
+  "installedAt": 1787228297921,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087460171202990080",
+  "description_zh": "关键词搜索B站全站视频，支持多维度排序，自动批量获取全部高清下载链接",
+  "description_en": "Search Bilibili videos by keyword and batch-retrieve HD download links.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_29c52472-b34.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_29c52472-b34.svg"
+}

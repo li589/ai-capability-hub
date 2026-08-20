@@ -1,0 +1,11 @@
+{
+  "name": "订单与明细查询",
+  "installedAt": 1787228620697,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088538171948097536",
+  "description_zh": "查询order及其orderProduct，按客户、时间、SKU、数量和金额汇总并标注数据范围。适用于用户要求订单与明细查询、生成相关结果或检查执行边界时。",
+  "description_en": "Order and Detail Query workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_eabd7d95-c9f.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_eabd7d95-c9f.png"
+}

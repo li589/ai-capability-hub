@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "wemeet": {
+      "url": "https://mcp.meeting.tencent.com/mcp/wemeet-open/v1",
+      "headers": {
+        "X-Tencent-Meeting-Token": "${connector.wemeet.ACCESS_TOKEN}",
+        "X-Skill-Version": "v1.0.11"
+      }
+    }
+  }
+}

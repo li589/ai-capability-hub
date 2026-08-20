@@ -1,0 +1,21 @@
+{
+  "name": "flights-search",
+  "installedAt": 1787228424562,
+  "source": "marketplace",
+  "version": "1.2.0",
+  "skillId": "skill_2053081985088258048",
+  "examples_zh": [
+    "搜索下周五上海到东京的直飞航班，按价格、起飞时间和预订链接整理。",
+    "帮我找纽约到伦敦的商务舱航班，优先筛选晚间出发和少中转选项。",
+    "比较广州到巴黎未来两周的航班价格，标出最便宜的出发日期和航司。"
+  ],
+  "examples_en": [
+    "Search nonstop flights from Shanghai to Tokyo next Friday and organize them by price, departure time, and booking link.",
+    "Find business-class flights from New York to London, prioritizing evening departures and minimal connections.",
+    "Compare flight prices from Guangzhou to Paris over the next two weeks and identify the cheapest dates and airlines."
+  ],
+  "description_zh": "通过 Google Flights 搜索航班，支持城市名、舱位筛选和预订链接",
+  "description_en": "Search Google Flights for real-time prices, schedules and booking links",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/flights.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/flights.png"
+}

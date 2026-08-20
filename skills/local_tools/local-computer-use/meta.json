@@ -1,0 +1,24 @@
+{
+  "author": "Github",
+  "author_icon": "https://static.marvis.qq.com/wupload/skill-author-icons/1778639349473_GitHub.png",
+  "description": "|",
+  "detail_describe": "查询 CPU 内存硬盘电源等硬件信息\n切换电源模式和省电模式\n开关蓝牙 Wi-Fi 麦克风摄像头等设备\n调节音量亮度分辨率缩放等显示选项\n切换主题深色模式和关闭系统广告通知",
+  "display_description": "帮你使用本地算力操控你的Windows系统(仅限英特尔AIPC平台)",
+  "display_name": "本地计算机使用",
+  "download_count": 28,
+  "download_url": "https://down.marvis.qq.com/wupload2/skill-packages/1779112644451_local-computer-use.zip",
+  "icon": "https://static.marvis.qq.com/wupload/skill-icons/1779112758932_04_local-computer-use.png?imageMogr2/thumbnail/224x/format/webp",
+  "id": 359,
+  "is_downloaded": false,
+  "name": "local-computer-use",
+  "scope": [
+    "main"
+  ],
+  "type": "英特尔用户专区",
+  "use_cases": [
+    "将系统音量调到66%",
+    "关闭所有广告",
+    "设定鼠标光标为最大"
+  ],
+  "version": "1.0.3"
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "patches429",
+  "slug": "giggle-generation-video",
+  "displayName": "Giggle Generation Video",
+  "latest": {
+    "version": "0.0.10",
+    "publishedAt": 1773628642016,
+    "commit": "https://github.com/openclaw/skills/commit/68557425922ea6ba334765d21de474ce894aa670"
+  },
+  "history": []
+}

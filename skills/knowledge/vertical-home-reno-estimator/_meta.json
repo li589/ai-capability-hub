@@ -1,0 +1,11 @@
+{
+  "owner": "nic-yuan",
+  "slug": "vertical-home-reno-estimator",
+  "displayName": "Home Reno Estimator",
+  "latest": {
+    "version": "1.1.0",
+    "publishedAt": 1775571604207,
+    "commit": "https://github.com/openclaw/skills/commit/1efb5928b6e288df869f8925b3149e735d8c14e7"
+  },
+  "history": []
+}

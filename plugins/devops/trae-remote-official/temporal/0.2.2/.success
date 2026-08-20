@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:temporal",
+  "registry": "trae-remote-official",
+  "plugin_name": "temporal",
+  "version": "0.2.2",
+  "marketplace_plugin_id": "fd966ffc-56db-44c5-9a1d-b137b52a18b1",
+  "remote_installed_plugin_id": "YSLVDGSM52HW04",
+  "checksum": "a472a730c5327838ba2d5e2dc8bac848266c37bf10f246018f4563dfe53ff58e",
+  "file_size": 145390,
+  "installed_at": 1787227200993
+}

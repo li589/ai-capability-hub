@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:kuaicha-search",
+  "registry": "trae-remote-official",
+  "plugin_name": "kuaicha-search",
+  "version": "1.0.2",
+  "marketplace_plugin_id": "02b89720-727e-41fb-b265-b2db8ce79b8f",
+  "remote_installed_plugin_id": "9O53IO_YIJANTA",
+  "checksum": "a2238dded347f81c81cb17383717a06d9ba8210c4d98109a0f5fd3f373c86fba",
+  "file_size": 22402,
+  "installed_at": 1787227201577
+}

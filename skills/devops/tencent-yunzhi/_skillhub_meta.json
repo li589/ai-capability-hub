@@ -1,0 +1,21 @@
+{
+  "name": "腾讯云知",
+  "installedAt": 1787228480069,
+  "source": "marketplace",
+  "version": "1.5.0",
+  "skillId": "skill_2053083480194342912",
+  "examples_zh": [
+    "在腾讯云知里搜索\"新人入职流程\"，返回最相关的知识库页面标题、摘要和链接。",
+    "帮我在乐享知识库创建一篇《Q2 项目复盘》文档，并上传本地复盘附件。",
+    "把这个 lexiangla.com 页面里的会议纪要更新为最新版本，然后下载成可分享文件。"
+  ],
+  "examples_en": [
+    "Search Tencent Yunzhi for \"new employee onboarding process\" and return the most relevant knowledge-base page titles, summaries, and links.",
+    "Create a \"Q2 Project Retrospective\" document in the Lexiang knowledge base and upload the local retrospective attachment.",
+    "Update the meeting notes in this lexiangla.com page to the latest version, then download it as a shareable file."
+  ],
+  "description_zh": "腾讯云知（乐享）知识库专用操作 — 仅处理 lexiangla.com 相关请求",
+  "description_en": "Tencent Lexiang knowledge base operations only — strictly scoped to lexiangla.com",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencent-yunzhi.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/tencent-yunzhi.png"
+}

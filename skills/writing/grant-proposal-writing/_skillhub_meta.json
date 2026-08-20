@@ -1,0 +1,11 @@
+{
+  "name": "公益申报写作助手",
+  "installedAt": 1787227564719,
+  "source": "marketplace",
+  "version": "1.0.1",
+  "skillId": "skill_2088454736381997056",
+  "description_zh": "帮公益机构撰写、诊断与优化资助申报材料（项目申请书、立项书、项目建议书、服务方案、Concept Note），通过「资助方档案」适配政府购买服务、公募基金会、企业基金会、社区基金会、企业 CSR、境外资助方的不同要求。当用户提到写项目申请书、立项书、资助申请、申报材料、项目建议书、项目概要、项目背景、公益属性、社会价值、项目目标、OKR、逻辑模型、Logframe、预算编制，或需要诊断已有稿件、按资助方要求查缺补漏时使用。也包括大白话说法：「帮我写个申请材料 / 申请报告」「帮我申请一笔钱 / 一笔资助」「这个项目能不能拿到钱」「帮我改改这份材料」「对方给了个申请指南帮我按它写」。主要用户是公益机构（申请方 / 执行方），也可供资助方做初审与辅导。",
+  "description_en": "Helps charities draft, diagnose, and improve grant proposal materials (project applications, concept notes, service plans) tailored to different funder types — government procurement, public/corporate/community foundations, corporate CSR, and overseas donors. Supports both drafting from scratch and reviewing existing drafts against a funder's requirements.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/b104c3ba-4dc0-4aa0-8f67-d8f253f69ba1/avatar/skill/au_92d8b9bb-01e.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/b104c3ba-4dc0-4aa0-8f67-d8f253f69ba1/avatar/skill/au_92d8b9bb-01e.png"
+}

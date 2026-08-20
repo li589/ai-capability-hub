@@ -1,0 +1,20 @@
+{
+  "name": "蜜度拼音注音",
+  "installedAt": 1787228500456,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2074471133157429248",
+  "examples_zh": [
+    "给这段中文标拼音：春天刚来的时候，城市里的风还有一点凉",
+    "这个「行」字要读 xíng 不要读 háng",
+    "为「银行行长正在行走」标拼音"
+  ],
+  "examples_en": [
+    "Annotate pinyin for a Chinese paragraph",
+    "Disambiguate the polyphone xing in context",
+    "Mark pinyin for a sentence about banking"
+  ],
+  "description_zh": "中文逐字拼音注音，生成 HTML ruby 注音、汉字拼音对照、纯拼音三种形态，正确处理多音字。",
+  "description_en": "Character-by-character pinyin annotation generating HTML ruby, Han-pinyin pairs, and pure pinyin forms with polyphone disambiguation.",
+  "iconSource": "letter:auto"
+}

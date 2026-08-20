@@ -1,0 +1,10 @@
+{
+  "name": "金融营销宣传消保合规审查",
+  "installedAt": 1787227563564,
+  "source": "marketplace",
+  "version": "1.0.6",
+  "skillId": "skill_2082819634105856000",
+  "description_zh": "审查银行/保险/基金营销宣传材料是否违反消保法规，输出可归档的《消保审查意见书》。",
+  "description_en": "Review bank/insurance/fund marketing materials for consumer-protection compliance and produce a structured review report (.docx).",
+  "iconSource": "letter:auto"
+}

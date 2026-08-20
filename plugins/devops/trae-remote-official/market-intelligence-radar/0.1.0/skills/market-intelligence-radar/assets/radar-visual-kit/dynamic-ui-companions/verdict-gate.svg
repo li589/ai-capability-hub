@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-labelledby="t d">
+  <title id="t">Verdict Gate Dynamic UI companion guide</title>
+  <desc id="d">Wide focal measure, compact right verdict gate, and one bottom trigger line.</desc>
+  <rect width="720" height="360" fill="#ffffff"/>
+  <g fill="#111412"><rect x="40" y="34" width="164" height="12"/><rect x="40" y="62" width="92" height="6"/></g>
+  <rect x="40" y="94" width="470" height="188" rx="3" fill="#f0f1eb"/>
+  <path d="M68 236L146 184L226 206L306 142L388 164L480 112" fill="none" stroke="#b8d900" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#111412"><circle cx="146" cy="184" r="7"/><circle cx="306" cy="142" r="7"/><circle cx="480" cy="112" r="7"/></g>
+  <g fill="#f0f1eb"><rect x="530" y="94" width="150" height="52" rx="3"/><rect x="530" y="158" width="150" height="52" rx="3"/><rect x="530" y="222" width="150" height="60" rx="3"/></g>
+  <g fill="#111412"><rect x="548" y="112" width="72" height="8"/><rect x="548" y="176" width="94" height="8"/><rect x="548" y="240" width="108" height="8"/></g>
+  <rect x="40" y="310" width="640" height="2" fill="#111412"/><rect x="40" y="326" width="286" height="8" fill="#111412"/><circle cx="666" cy="330" r="8" fill="#b8d900"/>
+</svg>

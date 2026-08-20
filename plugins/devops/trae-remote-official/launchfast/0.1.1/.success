@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:launchfast",
+  "registry": "trae-remote-official",
+  "plugin_name": "launchfast",
+  "version": "0.1.1",
+  "marketplace_plugin_id": "7ee0f09e-4a40-4e4c-8ac5-789cf7f2a200",
+  "remote_installed_plugin_id": "QAGTD8_75D7177",
+  "checksum": "349ab79e87389f2918c46159e444eee19a3660db6cfac7f6ab605ef862315a97",
+  "file_size": 2056301,
+  "installed_at": 1787227202270
+}

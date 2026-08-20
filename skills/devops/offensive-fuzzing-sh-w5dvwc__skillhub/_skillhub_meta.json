@@ -1,0 +1,10 @@
+{
+  "slug": "offensive-fuzzing-sh-w5dvwc",
+  "name": "攻击性模糊测试",
+  "version": "1.0.0",
+  "installedAt": 1787229023871,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

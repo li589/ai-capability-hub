@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:seedance",
+  "registry": "trae-remote-official",
+  "plugin_name": "seedance",
+  "version": "1.0.1",
+  "marketplace_plugin_id": "62d25e0e-333e-4ddd-887a-3307c010b0f5",
+  "remote_installed_plugin_id": "builtin:trae-remote-official:seedance",
+  "checksum": "de77a6d812d337deb4b60a5925c19cecd051dbeaa64930642b8ac0975341c03d",
+  "file_size": 964,
+  "installed_at": 1787227200437
+}

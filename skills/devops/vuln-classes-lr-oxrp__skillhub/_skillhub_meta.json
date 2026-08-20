@@ -1,0 +1,10 @@
+{
+  "slug": "vuln-classes-lr-oxrp",
+  "name": "漏洞分���",
+  "version": "1.0.0",
+  "installedAt": 1787229017810,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

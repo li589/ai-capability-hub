@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:sorftime",
+  "registry": "trae-remote-official",
+  "plugin_name": "sorftime",
+  "version": "0.1.0",
+  "marketplace_plugin_id": "f6fbf874-ee1d-4cde-a3a5-773126773f34",
+  "remote_installed_plugin_id": "5KYGJF3MNGB6V4",
+  "checksum": "ff641f3e638714b0e4895fdc533f22fbb1211faf1875ae2374a6bc1e1f04d3b7",
+  "file_size": 7185,
+  "installed_at": 1787227200672
+}

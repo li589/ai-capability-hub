@@ -1,0 +1,10 @@
+{
+  "slug": "wps-office-suite",
+  "name": "WPS Office 全家桶",
+  "version": "4.7.0",
+  "installedAt": 1787227468661,
+  "source": "skillhub",
+  "labels": {
+    "requires_api_key": "false"
+  }
+}

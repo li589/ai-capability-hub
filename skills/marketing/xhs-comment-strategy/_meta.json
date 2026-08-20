@@ -1,0 +1,11 @@
+{
+  "owner": "arraylee",
+  "slug": "xhs-comment-strategy",
+  "displayName": "小红书评论策略生成器",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773826271451,
+    "commit": "https://github.com/openclaw/skills/commit/15952a89705a8b5b335c94ffd8a5a1755ba53e7f"
+  },
+  "history": []
+}

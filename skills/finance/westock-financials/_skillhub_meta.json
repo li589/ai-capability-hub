@@ -1,0 +1,11 @@
+{
+  "name": "腾讯自选股·财务分析",
+  "installedAt": 1787228664180,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089685715035369472",
+  "description_zh": "帮你看懂一家公司的财报好不好。它会抓取公司三大报表和历史数据，判断最新业绩是超预期还是不及预期、利润是不是有\"水分\"，并提示财报里值得警惕的风险点。想了解某只股票赚不赚钱、财报靠不靠谱时，直接问它就行。",
+  "description_en": "It helps you make sense of a company's financial reports. It analyzes the company's three main financial statements and historical data to determine whether the latest performance beat or missed expectations, checks for any \"inflated\" figures in the profits, and flags potential risks worth noting. Whenever you want to know if a stock is profitable or if its financial reports are reliable, you can simply ask it.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_225c327e-89b.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/2b84a8b7-c87b-4c50-857a-69dc414135a9/avatar/skill/au_225c327e-89b.png"
+}

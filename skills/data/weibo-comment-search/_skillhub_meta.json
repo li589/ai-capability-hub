@@ -1,0 +1,11 @@
+{
+  "name": "微博评论分析",
+  "installedAt": 1787228374424,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087427581917433856",
+  "description_zh": "通过微博博文链接获取一级评论数据，支持分页浏览和四维情感分析",
+  "description_en": "Retrieve first-level comments by Weibo post link with pagination and sentiment analysis",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_35705370-97e.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_35705370-97e.svg"
+}

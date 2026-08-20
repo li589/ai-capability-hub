@@ -1,0 +1,20 @@
+{
+  "name": "足球贝叶斯分析",
+  "installedAt": 1787227534836,
+  "source": "marketplace",
+  "version": "1.0.2",
+  "skillId": "skill_2053082001865474048",
+  "examples_zh": [
+    "用贝叶斯方法评估曼城 vs 阿森纳的胜平负概率，并说明 xG 对结果的影响。",
+    "结合伤停、近期赛程和战术对位，分析皇马这场比赛的风险等级。",
+    "比较主胜、平局和客胜的赔率隐含概率与模型概率，找出分歧最大的项。"
+  ],
+  "examples_en": [
+    "Use Bayesian analysis to estimate win/draw/loss probabilities for Manchester City vs Arsenal and explain the xG impact.",
+    "Assess Real Madrid's match risk level using injuries, recent fixture congestion, and tactical matchups.",
+    "Compare implied odds probabilities with model probabilities for home win, draw, and away win, highlighting the largest gap."
+  ],
+  "description_zh": "足球竞彩贝叶斯分析：基于公开数据的概率分析（非投注指令），支持多场次分批与断点续写、重复查询重抓对比，处理核心比赛分析及边缘意图边界。",
+  "description_en": "Football Bayesian analysis based on public data (not betting advice), supporting batch processing, duplicate query re-fetching, and edge intent handling.",
+  "iconSource": "letter:auto"
+}

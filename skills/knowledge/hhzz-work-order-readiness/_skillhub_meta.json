@@ -1,0 +1,10 @@
+{
+  "name": "黑湖智造-工单齐套与开工检查专家",
+  "installedAt": 1787228603916,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087459931363926016",
+  "description_zh": "工单齐套与开工检查专家是黑湖科技自研的制造业AI技能，面向计划、仓储、生产管理及现场服务人员，旨在将用户的自然语言问题转换为黑湖智造CLI查询，基于工单用料需求、当前可用库存、占用和在途证据，判断工单是否具备开工条件并给出可开工、存在风险或不可开工的结论。当用户询问某张工单能否开工、是否齐套、缺哪些物料、用料与库存占用情况如何时即可触发。该技能首先通过work-order detail命令查询工单基本信息、产出、用料需求和工序计划，随后对每条投入物料依次查询库存明细、占用汇总与占用关系，以及在途库存和补充单据，结合工单指定的仓库、仓位、批次和质量状态等过滤条件进行综合判断。查询结果以中文呈现，明确列出检查对象、总体结论、逐物料证据及实际调用的CLI命令作为可核验依据。该技能严格遵循只读原则，不执行任何创建、导入、更新、下发或调整的写操作，结论仅为开工建议而非实际领料、投料或开工指令，在途数量和计划入库调拨不计入当前可用量，未查询到占用或在途证据时绝不自行补写事实，也不输出企业凭证或敏感原始响应。若用户追问库存变化原因或占用来源，将自动转交至库存追溯专家处理。",
+  "description_en": "The Work Order Readiness and Start Check Expert is an AI skill developed in-house by Black Lake Technology, designed for planning, warehouse, production management personnel, and on-site service providers. It converts natural language questions into Black Lake Smart Manufacturing CLI queries and evaluates whether a work order is ready for production by analyzing material requirements, current available inventory, occupied stock, and in-transit evidence, delivering a conclusion of ready to start, at risk, or not ready. The skill is triggered when users ask whether a specific work order can start, if materials are complete, which materials are missing, or what the inventory and occupation status looks like. Its workflow begins by querying the work order base information, output, input material requirements, and process plan through work-order detail commands, then sequentially checks inventory details, occupied stock summaries and relations, in-transit inventory, and supplementary docume",
+  "iconSource": "letter:auto"
+}

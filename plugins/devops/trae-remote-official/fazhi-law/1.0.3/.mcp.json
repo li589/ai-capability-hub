@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "fazhi-law": {
+      "type": "http",
+      "url": "https://bizveris.kuaicha365.com/law_agent/mcp?source=trae",
+      "headers": {
+        "open-authorization": "Bearer ${connector.fazhi-law.ACCESS_TOKEN}"
+      }
+    }
+  }
+}

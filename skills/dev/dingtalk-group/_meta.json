@@ -1,0 +1,11 @@
+{
+  "owner": "n-wen",
+  "slug": "dingtalk-group",
+  "displayName": "钉钉群聊管理",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773225379643,
+    "commit": "https://github.com/openclaw/skills/commit/818a75416d6f8eed1ac86e5da401589ba7adabaf"
+  },
+  "history": []
+}

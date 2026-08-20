@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="lens" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C4B5FD"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Rounded background -->
+  <rect x="4" y="4" width="120" height="120" rx="26" fill="url(#bg)"/>
+
+  <!-- Image frame (representing image/content) -->
+  <rect x="18" y="22" width="72" height="60" rx="8" fill="white" opacity="0.95"/>
+  
+  <!-- Mountain/sun scene inside frame -->
+  <circle cx="68" cy="44" r="10" fill="#FCD34D"/>
+  <path d="M18 82 L40 62 L58 76 L78 52 L90 82 Z" fill="#818CF8" opacity="0.7"/>
+  <path d="M18 82 L34 66 L50 78 L66 56 L90 82 Z" fill="#6366F1" opacity="0.5"/>
+
+  <!-- Search/magnifying glass -->
+  <circle cx="82" cy="74" r="18" fill="none" stroke="url(#lens)" stroke-width="4.5"/>
+  <line x1="95" y1="87" x2="108" y2="100" stroke="#DDD6FE" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Small decorative dots (representing multiple sources) -->
+  <circle cx="110" cy="24" r="3.5" fill="#C4B5FD" opacity="0.6"/>
+  <circle cx="116" cy="40" r="2.5" fill="#DDD6FE" opacity="0.5"/>
+  <circle cx="106" cy="52" r="3" fill="#C4B5FD" opacity="0.4"/>
+</svg>

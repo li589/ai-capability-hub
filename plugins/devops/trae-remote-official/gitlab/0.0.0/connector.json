@@ -1,0 +1,9 @@
+{
+  "connectors": {
+    "gitlab": {
+      "type": "remote_mcp",
+      "mcp_server": "gitlab",
+      "auth_policy": "ON_INVOKE"
+    }
+  }
+}

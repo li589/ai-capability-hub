@@ -1,0 +1,21 @@
+{
+  "name": "公益财会助手",
+  "installedAt": 1787228611386,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2053081448538218496",
+  "examples_zh": [
+    "我们刚收到一笔企业捐赠 10 万元，怎么开捐赠票据？有什么注意事项？",
+    "审计下个月就来了，我们是小机构没有专职会计，帮我列一个审计前要准备的材料清单。",
+    "我有一个文件夹全是今年的报销单和发票，帮我分类整理一下。"
+  ],
+  "examples_en": [
+    "We just received a corporate donation of 100,000 RMB — how do we issue a donation receipt? Any key points to watch out for?",
+    "The audit is next month and we're a small org without a dedicated accountant — help me list what we need to prepare.",
+    "I have a folder full of this year's reimbursement forms and invoices — help me sort and organize them."
+  ],
+  "description_zh": "公益票据与财务整理助手。适用于基金会、社会组织、社会服务机构等公益机构的财务和票据管理需求，涵盖捐赠票据开具、日常收支整理、审计准备、费用报销、税前扣除咨询及数据核对等场景。支持 PDF + 图片 OCR 的本地票据批量自动化整理。",
+  "description_en": "Charity finance and receipt management assistant for nonprofits. Covers donation receipt issuance, daily bookkeeping, audit preparation, expense reimbursement, tax-deduction consulting, data reconciliation, and automated local batch processing of PDF/image receipts via OCR.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/charity-finance-assistant.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/skills/icons/charity-finance-assistant.svg"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "wechat-oa",
+  "name": "公众号自动发布-多账号版（微信公众号的草稿箱、素材库的管理，支持微信公众号推送发布、生成封面图、查询草稿箱、删除草稿等，支持本机公网IP，也支持固定公网IP服务器中转）",
+  "version": "3.0.3",
+  "installedAt": 1787228858527,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/427325/2f6314a814d04120824a96131792f2c2.jpg",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/427325/2f6314a814d04120824a96131792f2c2.jpg"
+}

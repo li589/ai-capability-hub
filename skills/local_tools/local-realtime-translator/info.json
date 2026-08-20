@@ -1,0 +1,148 @@
+{
+    "venv_name": "rt-translator",
+    "python_version": "3.11",
+    "mem_need_gb": 10,
+    "server_alive_timeout": -1,
+    "models": [
+        {
+            "model_id": "snake7gun/Hunyuan-1.8B-Instruct-ov-int4",
+            "dir_name": "Hunyuan-1.8B-Instruct-ov-int4",
+            "required_files": [
+                "openvino_model.xml",
+                "openvino_model.bin"
+            ]
+        },
+        {
+            "model_id": "iic/speech_fsmn_vad_zh-cn-16k-common-pytorch",
+            "dir_name": "speech_fsmn_vad_zh-cn-16k-common-pytorch",
+            "required_files": [
+                "model.pt",
+                "config.yaml",
+                "configuration.json",
+                "am.mvn"
+            ]
+        },
+        {
+            "model_id": "iic/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online",
+            "dir_name": "speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-online",
+            "required_files": [
+                "model.pt",
+                "config.yaml",
+                "configuration.json",
+                "am.mvn",
+                "tokens.json"
+            ]
+        },
+        {
+            "model_id": "iic/speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-pytorch",
+            "dir_name": "speech_paraformer-large_asr_nat-zh-cn-16k-common-vocab8404-pytorch",
+            "required_files": [
+                "model.pt",
+                "config.yaml",
+                "configuration.json",
+                "am.mvn",
+                "tokens.json"
+            ]
+        },
+        {
+            "model_id": "iic/punc_ct-transformer_zh-cn-common-vocab272727-pytorch",
+            "dir_name": "punc_ct-transformer_zh-cn-common-vocab272727-pytorch",
+            "required_files": [
+                "model.pt",
+                "config.yaml",
+                "configuration.json",
+                "tokens.json"
+            ]
+        },
+        {
+            "model_id": "Helsinki-NLP/opus-mt-zh-en",
+            "dir_name": "opus-mt-zh-en",
+            "required_files": [
+                "pytorch_model.bin",
+                "config.json",
+                "vocab.json",
+                "source.spm",
+                "target.spm",
+                "tokenizer_config.json"
+            ],
+            "allow_patterns": [
+                "config.json",
+                "generation_config.json",
+                "pytorch_model.bin",
+                "source.spm",
+                "target.spm",
+                "tokenizer_config.json",
+                "vocab.json"
+            ]
+        },
+        {
+            "model_id": "Helsinki-NLP/opus-mt-en-zh",
+            "dir_name": "opus-mt-en-zh",
+            "required_files": [
+                "pytorch_model.bin",
+                "config.json",
+                "vocab.json",
+                "source.spm",
+                "target.spm",
+                "tokenizer_config.json"
+            ],
+            "allow_patterns": [
+                "config.json",
+                "generation_config.json",
+                "pytorch_model.bin",
+                "source.spm",
+                "target.spm",
+                "tokenizer_config.json",
+                "vocab.json"
+            ]
+        },
+        {
+            "model_id": "AI-ModelScope/bert-base-uncased",
+            "dir_name": "bert-base-uncased",
+            "required_files": [
+                "config.json",
+                "pytorch_model.bin",
+                "vocab.txt",
+                "tokenizer_config.json"
+            ],
+            "allow_patterns": [
+                "config.json",
+                "pytorch_model.bin",
+                "tokenizer.json",
+                "tokenizer_config.json",
+                "vocab.txt"
+            ]
+        },
+        {
+            "model_id": "google-bert/bert-base-multilingual-uncased",
+            "dir_name": "bert-base-multilingual-uncased",
+            "required_files": [
+                "config.json",
+                "vocab.txt",
+                "tokenizer_config.json"
+            ],
+            "allow_patterns": [
+                "config.json",
+                "tokenizer.json",
+                "tokenizer_config.json",
+                "vocab.txt"
+            ]
+        },
+        {
+            "model_id": "myshell-ai/MeloTTS-English",
+            "dir_name": "MeloTTS-English",
+            "required_files": [
+                "checkpoint.pth",
+                "config.json"
+            ]
+        },
+        {
+            "model_id": "myshell-ai/MeloTTS-Chinese",
+            "dir_name": "MeloTTS-Chinese",
+            "required_files": [
+                "checkpoint.pth",
+                "config.json"
+            ]
+        }
+    ]
+}

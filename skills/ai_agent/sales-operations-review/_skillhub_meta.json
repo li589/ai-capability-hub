@@ -1,0 +1,11 @@
+{
+  "name": "销售经营复盘",
+  "installedAt": 1787228607544,
+  "source": "marketplace",
+  "version": "1.4.0",
+  "skillId": "skill_2088538509163577344",
+  "description_zh": "汇总开放的线索、客户、商机、跟进、订单及负责人数据，形成数量漏斗和经营复盘。适用于用户要求销售经营复盘、生成相关结果或检查执行边界时。",
+  "description_en": "Sales Operations Review workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_574fbf6f-c77.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_574fbf6f-c77.png"
+}

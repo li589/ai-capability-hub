@@ -1,0 +1,11 @@
+{
+  "owner": "chinadaas-department",
+  "slug": "qibook-company-profile",
+  "displayName": "Qibook Company Profile",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1774849036110,
+    "commit": "https://github.com/openclaw/skills/commit/efb5c752c70039a47acb287716ce362ac48000e2"
+  },
+  "history": []
+}

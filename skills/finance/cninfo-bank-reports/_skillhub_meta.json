@@ -1,0 +1,10 @@
+{
+  "name": "巨潮资讯-上市银行报告",
+  "installedAt": 1787227635128,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084642550505811968",
+  "description_zh": "从巨潮资讯网（cninfo.com.cn）下载上市银行的年度报告、半年度报告和季度报告。默认采用 Team 并行模式，每家银行由一个独立 team member 负责下载，显著提升多银行批量下载速度。触发关键词：下载银行报告、年度报告、半年报、季度报告、一季报、三季报、巨潮资讯、银行年报、定期报告、批量下载。",
+  "description_en": "Download annual reports, semi-annual reports, and quarterly reports of listed banks from the CNINFO website (cninfo.com.cn). By default, it uses Team parallel mode, where each bank is handled by a dedicated team member for downloading, significantly boosting the speed of bulk downloads across multiple banks. Trigger keywords: download bank reports, annual report, semi-annual report, quarterly report, Q1 report, Q3 report, CNINFO, bank annual report, periodic reports, bulk download.",
+  "iconSource": "letter:auto"
+}

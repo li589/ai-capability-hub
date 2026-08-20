@@ -1,0 +1,11 @@
+{
+  "owner": "tangc",
+  "slug": "jimeng-t2i-i2i-image-generator",
+  "displayName": "Jimeng-Image-Generater",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1772591971733,
+    "commit": "https://github.com/openclaw/skills/commit/1c02bba0bea5d49c9af90f6e600b433f3014a524"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "pengyulong",
+  "slug": "invoice-ocr",
+  "displayName": "发票内容识别",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1773384169175,
+    "commit": "https://github.com/openclaw/skills/commit/8cacf5445b18c6f58063ce3dcc3d57d14e871c0a"
+  },
+  "history": []
+}

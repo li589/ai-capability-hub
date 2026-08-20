@@ -1,0 +1,11 @@
+{
+  "owner": "nanophotohq",
+  "slug": "comic-drama-generate",
+  "displayName": "Comic Drama Generate",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1774450722005,
+    "commit": "https://github.com/openclaw/skills/commit/059692871d7c7fb1f8413a24889371e5bbf8d58c"
+  },
+  "history": []
+}

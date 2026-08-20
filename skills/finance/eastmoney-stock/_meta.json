@@ -1,0 +1,11 @@
+{
+  "owner": "dongchun2008",
+  "slug": "eastmoney-stock",
+  "displayName": "Eastmoney Stock",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1772925042828,
+    "commit": "https://github.com/openclaw/skills/commit/f96f3ad890364c1b38fa7e5d459e13e23a00e3e9"
+  },
+  "history": []
+}

@@ -1,0 +1,20 @@
+{
+  "name": "简历助手",
+  "installedAt": 1787228495261,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2057443453823152128",
+  "examples_zh": [
+    "帮我写一份针对腾讯产品经理的简历",
+    "按这个JD帮我改简历",
+    "这份简历帮我润色，去掉AI味"
+  ],
+  "examples_en": [
+    "Write a resume tailored for this product manager position",
+    "Rewrite my resume to match this job description",
+    "Polish my resume and remove AI-sounding phrases"
+  ],
+  "description_zh": "输入经历+目标岗位JD，生成针对性简历或润色改写，三维度防幻觉，支持中英双版和ATS友好PDF",
+  "description_en": "Input your experience + target JD to generate tailored resumes with anti-hallucination, bilingual output & ATS-friendly PDF",
+  "iconSource": "letter:auto"
+}

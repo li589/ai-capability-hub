@@ -1,0 +1,11 @@
+{
+  "owner": "ivangdavila",
+  "slug": "song",
+  "displayName": "Song",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1770983168400,
+    "commit": "https://github.com/openclaw/skills/commit/9dcd7cf0e9505dfd4a744f3d5600ccf5b2689ce8"
+  },
+  "history": []
+}

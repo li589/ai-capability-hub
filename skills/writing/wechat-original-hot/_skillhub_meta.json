@@ -1,0 +1,11 @@
+{
+  "name": "公众号热门原创文章",
+  "installedAt": 1785864567036,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2084103260819578880",
+  "description_zh": "全网持续收录每日公众号原创热门文章，支持全领域获取与每日订阅推送",
+  "description_en": "Daily collection of trending original WeChat official account articles, with subscription push.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_2a31b121-ead.svg",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/9f40ec1e-e8c9-4dca-ace6-b634b3c73991/avatar/skill/au_2a31b121-ead.svg"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "browser_wait_for",
+  "description": "Wait for text to appear or disappear, or wait a specified time. Note: time is in SECONDS, not milliseconds.\n",
+  "arguments": {
+    "properties": {
+      "text": {
+        "description": "Wait for this text to appear on the page.",
+        "type": "string"
+      },
+      "textGone": {
+        "description": "Wait for this text to disappear from the page.",
+        "type": "string"
+      },
+      "time": {
+        "description": "Time to wait in SECONDS (e.g., 2 for 2 seconds, 0.5 for 500ms). Use for fixed delays.",
+        "type": "number"
+      },
+      "timeout": {
+        "description": "Maximum time to wait for text conditions in MILLISECONDS. Defaults to 30000 (30 seconds).",
+        "type": "number"
+      },
+      "viewId": {
+        "description": "Target browser tab ID. If omitted, uses the last interacted tab.",
+        "type": "string"
+      }
+    },
+    "required": [],
+    "type": "object"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "微盟知识问答",
+  "installedAt": 1787228365067,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087080377403244544",
+  "description_zh": "解答微盟公司、产品能力、行业方案及商家后台使用问题，并提供功能设置与常见问题指引。",
+  "description_en": "Answer questions about Weimob, its product capabilities, industry solutions, and merchant console workflows, including setup guidance and troubleshooting.",
+  "iconSource": "letter:auto"
+}

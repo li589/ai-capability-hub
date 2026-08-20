@@ -1,0 +1,11 @@
+{
+  "owner": "chipmunkrpa",
+  "slug": "bank-recon-skill",
+  "displayName": "Bank Recon Skill",
+  "latest": {
+    "version": "1.0.2",
+    "publishedAt": 1774140742249,
+    "commit": "https://github.com/openclaw/skills/commit/cf18490f3d31cf213537b4f2a95a0c63547f896c"
+  },
+  "history": []
+}

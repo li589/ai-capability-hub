@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="bg-ai" x1="0" y1="0" x2="32" y2="32">
+      <stop offset="0%" stop-color="#D97706"/>
+      <stop offset="100%" stop-color="#B45309"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#bg-ai)"/>
+  <circle cx="12" cy="12" r="6" fill="none" stroke="#fff" stroke-width="2"/>
+  <line x1="17" y1="17" x2="23" y2="23" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <rect x="19" y="16" width="2" height="6" fill="#FEF3C7"/>
+  <rect x="22" y="13" width="2" height="9" fill="#FEF3C7"/>
+  <rect x="25" y="19" width="2" height="3" fill="#FEF3C7"/>
+</svg>

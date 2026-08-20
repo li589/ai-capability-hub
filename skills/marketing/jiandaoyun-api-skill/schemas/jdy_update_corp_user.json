@@ -1,0 +1,41 @@
+{
+  "client_only_params": [],
+  "description": "修改企业通讯录中指定成员的信息",
+  "display_name": "修改成员",
+  "domain": "通讯录",
+  "endpoint": "https://api.jiandaoyun.com/api/v5/corp/user/update",
+  "method": "POST",
+  "name": "jdy_update_corp_user",
+  "params": {
+    "departments": {
+      "default": [],
+      "description": "新的部门编号列表",
+      "type": "array"
+    },
+    "email": {
+      "default": "",
+      "description": "新邮箱",
+      "type": "string"
+    },
+    "mobile": {
+      "default": "",
+      "description": "新手机号",
+      "type": "string"
+    },
+    "name": {
+      "default": "",
+      "description": "新昵称",
+      "type": "string"
+    },
+    "username": {
+      "description": "要修改的成员编号（必填）",
+      "type": "string"
+    }
+  },
+  "path_params": [],
+  "required_params": [
+    "username"
+  ],
+  "risk": "write",
+  "source": "简道云工具包.zip"
+}

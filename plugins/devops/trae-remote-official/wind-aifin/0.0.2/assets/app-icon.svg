@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#D4232A"/>
+  <path d="M12 44 L20 24 L28 36 L36 20 L44 32 L52 16" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M44 32 L52 16" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  <polygon points="52,16 52,22 47,18" fill="white"/>
+  <text x="32" y="56" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="9" font-weight="bold" fill="white">Wind</text>
+</svg>

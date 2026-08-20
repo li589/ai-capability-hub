@@ -1,0 +1,55 @@
+{
+  "name": "tencent-survey",
+  "version": "1.0.0",
+  "description": "腾讯问卷（wj.qq.com）MCP集成，支持问卷查询、创建、编辑与回答查看能力。",
+  "i18n": {
+    "display_name": {
+      "en": "Tencent Survey",
+      "zh-cn": "腾讯问卷",
+      "ja": "テンセントアンケート"
+    },
+    "description": {
+      "en": "Tencent Survey (wj.qq.com) MCP integration. Supports survey query, creation, editing and answer viewing.",
+      "zh-cn": "腾讯问卷（wj.qq.com）MCP集成，支持问卷查询、创建、编辑与回答查看能力。",
+      "ja": "テンセントアンケート (wj.qq.com) MCP統合。アンケートの照会、作成、編集、回答確認に対応。"
+    }
+  },
+  "author": {
+    "name": "腾讯问卷",
+    "url": "https://wj.qq.com"
+  },
+  "homepage": "https://wj.qq.com",
+  "license": "Proprietary",
+  "keywords": [
+    "tencent-survey",
+    "survey",
+    "questionnaire",
+    "wj.qq.com",
+    "mcp"
+  ],
+  "interface": {
+    "displayName": "腾讯问卷",
+    "shortDescription": "问卷、调查、表单、投票、考试、测评",
+    "longDescription": "通过腾讯问卷 MCP 接入，提供问卷查询、创建、编辑与回答查看能力。支持场景：调查、考试、测评、投票。",
+    "developerName": "腾讯问卷",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://wj.qq.com",
+    "defaultPrompt": [
+      "帮我创建一个员工满意度调查问卷",
+      "查看问卷的回答数据",
+      "修改问卷的第2题"
+    ],
+    "brandColor": "#12B7F5",
+    "logo": "./assets/app-icon.png",
+    "composerIcon": "./assets/app-icon.png",
+    "screenshots": []
+  },
+  "mcp": ".mcp.json",
+  "connector": "./connector.json",
+  "skills": "./skills/"
+}

@@ -1,0 +1,51 @@
+{
+  "_comment": "V4.14.2 G1.5白名单配置 — 黑白名单统一管理",
+  "version": "1.0.0",
+  "last_updated": "2026-06-03",
+
+  "blacklist": [
+    "正常", "成功", "正确", "能", "能够", "可以",
+    "恢复", "还原", "正常显示", "无异常", "符合预期",
+    "一致", "响应及时", "正确提示", "合理"
+  ],
+
+  "phrase_whitelist": [
+    "正常退出", "正常关闭", "正常模式",
+    "成功回调", "成功状态码", "成功标识", "成功返回",
+    "正确值", "正确格式", "正确路径",
+    "符合预期值"
+  ],
+
+  "pattern_whitelist": [
+    "正常{动作动词}",
+    "成功{技术名词}",
+    "正确{技术名词}"
+  ],
+
+  "action_verbs": ["到期", "关闭", "退出", "完成", "运行", "连接", "启动", "停止"],
+  "tech_nouns": ["回调", "状态码", "标识", "返回码", "路径", "格式"],
+
+  "negation_exempt": {
+    "enabled": true,
+    "prefixes": ["不", "未", "非"],
+    "require_specific_description": true,
+    "exclude_double_negation": true
+  },
+
+  "match_algorithm": "longest_greedy",
+
+  "project_specific": {
+    "_template": {
+      "phrases": [],
+      "patterns": [],
+      "extra_verbs": [],
+      "extra_nouns": []
+    },
+    "金融": {
+      "phrases": ["正常到期", "正常兑付", "正常赎回"],
+      "patterns": ["正常{金融动词}"],
+      "extra_verbs": ["到期", "兑付", "赎回", "清算"],
+      "extra_nouns": []
+    }
+  }
+}

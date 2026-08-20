@@ -1,0 +1,26 @@
+{
+  "_comment": "本文件由 智匠 自动生成。每个用例用于验证 engine.py 的计算逻辑是否正确。",
+  "meta": {
+    "expert_name": "TODO_AI_FILL_EXPERT_NAME",
+    "expert_id": "TODO_AI_FILL_EXPERT_ID",
+    "source": "TODO_AI_FILL_STANDARD_SOURCE",
+    "tolerance_percent": 3.0,
+    "note": "每个用例的 expected 来自规范/教材的标准算例；engine 计算结果与 expected 的差异应 ≤ tolerance_percent"
+  },
+  "cases": [
+    {
+      "id": "case_001",
+      "description": "标准算例 1：TODO_AI_FILL_DESCRIPTION",
+      "mode": "mode_a",
+      "params": {
+        "TODO_PARAM_1": "TODO_VALUE_1",
+        "TODO_PARAM_2": "TODO_VALUE_2"
+      },
+      "expected": {
+        "TODO_RESULT_1": "TODO_EXPECTED_VALUE_1",
+        "TODO_RESULT_2": "TODO_EXPECTED_VALUE_2"
+      },
+      "notes": "TODO_AI_FILL_NOTES"
+    }
+  ]
+}

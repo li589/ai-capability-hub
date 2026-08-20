@@ -1,0 +1,6 @@
+{
+  "display_name": "元宝高考通-一分一段查询",
+  "display_name_en": "Yuanbao Gaokao Score-to-Rank Lookup",
+  "description_zh": "高考一分一段信息检索助手。当用户想根据分数查询全省排名位次、根据位次估算对应分数区间，或获取某省份某年份的一分一段表时使用，支持按地区、年份、选科组合查询并自动适配新老高考政策。",
+  "description_en": "An information retrieval assistant for Gaokao score-to-rank tables. Use it when a user wants to look up a province-wide ranking by score, estimate the score range for a given ranking, or obtain a province's score-segment table for a specific year. Supports queries by region, year and subject choice with automatic adaptation to old and new Gaokao policies."
+}

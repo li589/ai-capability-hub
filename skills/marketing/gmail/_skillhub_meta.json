@@ -1,0 +1,20 @@
+{
+  "name": "Gmail",
+  "installedAt": 1787228703121,
+  "source": "marketplace",
+  "version": "1.0.8",
+  "skillId": "skill_2053082044158386176",
+  "examples_zh": [
+    "查找最近 7 天来自 boss@company.com 且带附件的未读 Gmail 邮件，并列出主题、发件人和收件时间。",
+    "给 customer@example.com 发送一封 Gmail 邮件，主题为\"项目 Alpha 周报\"，正文附上本周进展摘要。",
+    "把包含\"invoice\"关键词的 Gmail 会话统一加上\"财务待处理\"标签，并跳过已归档邮件。"
+  ],
+  "examples_en": [
+    "Find unread Gmail messages from boss@company.com in the last 7 days that include attachments, then list the subject, sender, and received time.",
+    "Send a Gmail email to customer@example.com with the subject \"Project Alpha Weekly Update\" and a short progress summary in the body.",
+    "Add the Gmail label \"Finance Pending\" to threads containing the keyword \"invoice\", excluding archived conversations."
+  ],
+  "description_zh": "通过 Gmail API 收发邮件、管理标签和草稿",
+  "description_en": "Read, send, and manage Gmail emails, threads, labels, and drafts via API",
+  "iconSource": "letter:auto"
+}

@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:tianyancha",
+  "registry": "trae-remote-official",
+  "plugin_name": "tianyancha",
+  "version": "0.1.1",
+  "marketplace_plugin_id": "0217f089-068d-44e7-a9c1-284953a648b1",
+  "remote_installed_plugin_id": "5HS-.M0JCD1UXZ",
+  "checksum": "0f3da19a94c50c3c775248ac5bd73004d24aebc3c03c79884023128679d1e259",
+  "file_size": 4830,
+  "installed_at": 1787227202965
+}

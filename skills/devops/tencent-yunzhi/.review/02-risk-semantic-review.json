@@ -1,0 +1,37 @@
+{
+  "block": "02-semantic-risk-review",
+  "skill_name": "tencent-yunzhi",
+  "version": "1.5.0",
+  "reviewed_at": "2026-06-04T14:52:00+08:00",
+  "verdict": "passed",
+  "findings": [
+    {
+      "action_id": "B22_drainage_review",
+      "flagged_item": "SKILL.md L30: 公众号选题 / 文案创作 / 写作辅助（无乐享上下文） | 退出 Skill",
+      "verdict": "false_positive",
+      "reason": "这是不适用场景排除规则，告诉模型遇到公众号类请求时主动退出，不是引导用户关注公众号"
+    },
+    {
+      "action_id": "B22_drainage_review",
+      "flagged_item": "modules/writer.md L13: 导入公众号文章等外部链接",
+      "verdict": "false_positive",
+      "reason": "功能描述：将公众号文章 URL 导入为乐享文档内容，是功能性操作而非导流"
+    },
+    {
+      "action_id": "B22_drainage_review",
+      "flagged_item": "modules/writer.md L108: 微信公众号导入",
+      "verdict": "false_positive",
+      "reason": "功能章节标题，描述公众号文章导入功能，同上"
+    },
+    {
+      "action_id": "B22_drainage_review",
+      "flagged_item": "scripts/upload-files.py L216: 使用 apply_upload 返回的 upload_url 进行 PUT 请求",
+      "verdict": "false_positive",
+      "reason": "纯技术注释，说明上传流程的 API 调用方式，与导流无关"
+    }
+  ],
+  "security_risk": "none",
+  "commercial_risk": "none",
+  "legal_risk": "none",
+  "summary": "4 项 B22 标记均为 false_positive：2 项为不适用场景排除规则，2 项为公众号文章导入功能描述。无营销导流、无外跳引导、无合规风险。"
+}

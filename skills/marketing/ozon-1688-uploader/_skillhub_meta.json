@@ -1,0 +1,20 @@
+{
+  "name": "1688铺货Ozon",
+  "installedAt": 1787228469064,
+  "source": "marketplace",
+  "version": "1.2.1",
+  "skillId": "skill_2053082550161510400",
+  "examples_zh": [
+    "把这个1688保温杯商品链接整理成可发布到Ozon的俄文标题、类目和商品参数",
+    "为一批1688厨房收纳商品做Ozon类目映射，并标出需要翻译的主图文案",
+    "将这款1688蓝牙耳机转换成Ozon上架资料，包括俄文卖点、属性和图片翻译说明"
+  ],
+  "examples_en": [
+    "Convert this 1688 insulated cup listing into an Ozon-ready Russian title, category, and product attributes",
+    "Map a batch of 1688 kitchen storage products to Ozon categories and flag image text that needs Russian translation",
+    "Prepare an Ozon upload package for this 1688 Bluetooth headset with Russian selling points, attributes, and image-translation notes"
+  ],
+  "description_zh": "将1688商品铺货到Ozon平台，自动类目映射、图片翻译和商品上架",
+  "description_en": "List 1688 products on Ozon with auto category mapping, image translation & upload",
+  "iconSource": "letter:auto"
+}

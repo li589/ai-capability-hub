@@ -1,0 +1,20 @@
+{
+  "name": "自己.skill",
+  "installedAt": 1787228474488,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053083681353162752",
+  "examples_zh": [
+    "帮我把自己蒸馏成 skill",
+    "创建一个我自己的数字分身",
+    "用我的日记和聊天记录做一个自我镜像"
+  ],
+  "examples_en": [
+    "Distill myself into a skill",
+    "Create my digital twin",
+    "Build a self-reflection mirror from my diary"
+  ],
+  "description_zh": "把自己蒸馏成 AI Skill，解构聊天记录与日记生成数字分身",
+  "description_en": "Distill yourself into an AI Skill — digital twin with persona and memory",
+  "iconSource": "letter:auto"
+}

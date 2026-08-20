@@ -1,0 +1,12 @@
+{
+  "slug": "sbkj-ztb",
+  "name": "全国招标中标查询及企业画像【世舶科技API】",
+  "version": "1.0.2",
+  "installedAt": 1787227472851,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png",
+  "labels": {
+    "requires_api_key": "true"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/a78375f1-773e-4817-b4f3-0557b6afd777.png"
+}

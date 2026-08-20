@@ -1,0 +1,11 @@
+{
+  "owner": "cchenwei",
+  "slug": "lark-multi-agent-factory",
+  "displayName": "Lark Multi Agent Factory",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1776101208694,
+    "commit": "https://github.com/openclaw/skills/commit/90f26862f7a96f1f19733cfdf3f65d85f6e33660"
+  },
+  "history": []
+}

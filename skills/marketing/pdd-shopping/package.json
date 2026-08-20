@@ -1,0 +1,25 @@
+{
+  "name": "pdd-shopping",
+  "version": "2.1.0",
+  "description": "拼多多决策 Skill - 帮你判断这单该不该买、要不要拼团、值不值得冒险",
+  "main": "SKILL.md",
+  "keywords": [
+    "pdd",
+    "pinduoduo",
+    "拼多多",
+    "shopping",
+    "group-buy",
+    "coupon",
+    "deal",
+    "refund",
+    "subsidy",
+    "ecommerce",
+    "openclaw-skill"
+  ],
+  "author": "openclaw",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openclaw-community/pdd-shopping.git"
+  }
+}

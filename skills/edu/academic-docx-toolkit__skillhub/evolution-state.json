@@ -1,0 +1,18 @@
+{
+  "_schema": "2.8",
+  "evolution_tier": "E1",
+  "skill_version": "1.0.0",
+  "created": "2026-06-24",
+  "creator": "人类Nan",
+  "learnings": [],
+  "user_preferences": {},
+  "diagnosis": {
+    "last_run": null,
+    "streak": {
+      "pass": 0,
+      "fail": 0
+    }
+  },
+  "distill_policy": "self-only",
+  "version": "2.0.8"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "gov-document-typesetting",
+  "name": "一键排版-政府公文格式",
+  "version": "1.3.0",
+  "installedAt": 1787229118176,
+  "source": "skillhub",
+  "iconSource": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://cloudcache.tencent-cloud.com/qcloud/ui/static/other_external_resource/81015f94-5620-494e-bbd6-ac3268e7ccd3.png"
+}

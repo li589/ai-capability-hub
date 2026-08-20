@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:praxis",
+  "registry": "trae-remote-official",
+  "plugin_name": "praxis",
+  "version": "2.3.2",
+  "marketplace_plugin_id": "373861c8-d0cb-4968-8763-fd58f711daa1",
+  "remote_installed_plugin_id": "MHQL7Z3H5KXTDA",
+  "checksum": "6b28f3b35681e3bdec103233a814dee99f21ca93d6903fa34160afc5388ede95",
+  "file_size": 23910,
+  "installed_at": 1787227203671
+}

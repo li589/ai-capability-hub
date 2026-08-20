@@ -1,0 +1,19 @@
+type: promotional
+
+overrides:
+  promotional_poster:
+    prompt_append: >
+      ADDITIONAL FOR PROMOTIONAL POSTERS:
+      - The product/offer is the HERO — give it the lighting and attention you'd give
+        a lead actor. Studio-quality illumination that makes every surface gleam.
+      - Price, discount, or value proposition must POP — not just be present.
+        Use contrasting background, larger size, or a badge/starburst shape
+        to make it physically impossible to miss.
+      - CTA should feel URGENT but not desperate. The difference:
+        * Urgent (good): Bold accent-colored button, clear action verb ("Shop Now", "Get 50% Off")
+        * Desperate (bad): Multiple exclamation marks, all-caps screaming, too many action items
+      - If there's a limited-time offer, convey scarcity through visual language:
+        a subtle countdown aesthetic, a "limited" badge, or warm/hot colors that
+        feel time-pressured.
+      - The overall mood: aspirational desire. The viewer should imagine themselves
+        AFTER the purchase — happier, more stylish, more capable.

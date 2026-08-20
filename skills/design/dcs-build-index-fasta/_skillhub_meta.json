@@ -1,0 +1,11 @@
+{
+  "name": "参考基因组索引构建",
+  "installedAt": 1787227780652,
+  "source": "marketplace",
+  "version": "2.0.1",
+  "skillId": "skill_2089264102815760384",
+  "description_zh": "DCS Cloud WDL「DCS_Build_Index_FASTA」(v2.0.0) 流程说明与填参指南：由原始 FASTA 构建参考基因组索引、序列字典及已知位点资源库。用户提到 DCS_Build_Index_FASTA、Build Index FASTA、参考基因组索引构建、reference_info.json，或要投递该流程时使用。投递动作仍走独立 skill dcs-cli（详见其 `references/dcs-wdl-manager.md`；命令：dcs workflow check_parameter / run / task_info）。",
+  "description_en": "DCS Cloud WDL \"DCS_Build_Index_FASTA\" (v2.0.0) parameter guide: build reference genome indexes, sequence dictionary, and known-sites resources from a raw FASTA. Use when the user mentions DCS_Build_Index_FASTA, Build Index FASTA, reference genome index construction, reference_info.json, or wants to submit this workflow. Submission still goes through the separate skill dcs-cli (see its `references/dcs-wdl-manager.md`; commands: dcs workflow check_parameter / run / task_info).",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_a4db777a-d9b.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/67fc96e0-7e23-4532-bad6-d397bf569c3a/avatar/skill/au_a4db777a-d9b.png"
+}

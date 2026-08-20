@@ -1,0 +1,12 @@
+{
+  "slug": "tax-policy-knowledge",
+  "name": "Tax Policy Knowledge 财税政策知识库与风险合规助手",
+  "version": "3.16.4",
+  "installedAt": 1787227489455,
+  "source": "skillhub",
+  "iconSource": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/429476/3a7d17fc814542548661d9bb560167f2.jpg",
+  "labels": {
+    "requires_api_key": "false"
+  },
+  "iconDownloadedFrom": "https://skillhub-1388575217.cos.accelerate.myqcloud.com/skill-icons/uploads/429476/3a7d17fc814542548661d9bb560167f2.jpg"
+}

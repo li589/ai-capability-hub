@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:vidseeds",
+  "registry": "trae-remote-official",
+  "plugin_name": "vidseeds",
+  "version": "1.8.1",
+  "marketplace_plugin_id": "063e7b5e-6d48-437d-8aa9-296a21bc3c34",
+  "remote_installed_plugin_id": "LWI1R1RJNIPWH.",
+  "checksum": "57963df6443479f8eb7397b0755473eb1a22455869e4886a63f4f8c86955ed3c",
+  "file_size": 36203,
+  "installed_at": 1787227201240
+}

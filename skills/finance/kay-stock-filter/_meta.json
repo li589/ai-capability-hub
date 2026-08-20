@@ -1,0 +1,11 @@
+{
+  "owner": "shenghoo123-png",
+  "slug": "kay-stock-filter",
+  "displayName": "股票筛选工具",
+  "latest": {
+    "version": "0.1.0",
+    "publishedAt": 1775653590365,
+    "commit": "https://github.com/openclaw/skills/commit/fed8798348bafee9b72b2b3cda990ea169916b7d"
+  },
+  "history": []
+}

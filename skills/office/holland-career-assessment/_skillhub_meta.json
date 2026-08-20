@@ -1,0 +1,10 @@
+{
+  "name": "职业兴趣测评",
+  "installedAt": 1787227710793,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2089338086439067648",
+  "description_zh": "评估现实型、研究型、艺术型、社会型、企业型、常规型六类职业兴趣，并生成兴趣代码与测评解读。",
+  "description_en": "Use when users mention Holland, RIASEC, career interests, or interest types to assess preferences and interpret results.",
+  "iconSource": "letter:auto"
+}

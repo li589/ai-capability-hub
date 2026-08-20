@@ -1,0 +1,39 @@
+# evolution_backlog — 技能进化清单合同
+
+用于模式 C 产出：`outputs/evolution/EVOL-YYYYMMDD-HHMM.md`。  
+以 Markdown 表实现即可；下列为逻辑字段。填写指令见 `prompts/evolution/emit_backlog.md`。
+
+```yaml
+$schema: evolution_backlog
+version: 1
+id: EVOL-YYYYMMDD-HHMM
+generated_at: ""                 # YYYY-MM-DD HH:MM +08:00
+time_window: ""                  # 如 近12个月 / 2025-01-01..2026-08-11
+scope: all                       # tools | subject_matter | procedure | all
+status: draft_pending_confirm    # draft_pending_confirm | partially_applied | applied | shelved
+sources:
+  - id: S1
+    track: 审查工具               # 审查工具 | 申请客体 | 程序通识
+    claim: ""                    # 可核验观点摘要
+    evidence_level: A            # A | B | C
+    published_or_effective: ""   # YYYY-MM-DD 或 未知
+    source_title: ""
+    source_url: "https://"       # 必填绝对 URL
+candidates:
+  - id: E1
+    depends_on: [S1]
+    action: ""
+    touch_files: []
+    risk: ""
+    recommendation: 待定         # 采纳 | 搁置 | 待定（Agent 建议）
+rejects:
+  - id: X1
+    item: ""
+    reason: ""
+```
+
+## 硬性规则
+
+- `sources[].source_url` 必须为可打开的绝对 URL；禁止无 URL 行进入主表。  
+- 仅 `evidence_level` 为 A/B 的源可支撑 `candidates` 中「建议改技能」项。  
+- `status: draft_pending_confirm` 期间禁止改 `prompts/**` / `SKILL.md`（清单落盘除外）。

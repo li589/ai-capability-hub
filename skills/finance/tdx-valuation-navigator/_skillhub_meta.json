@@ -1,0 +1,11 @@
+{
+  "name": "估值透视",
+  "installedAt": 1787228649466,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2085675394516512768",
+  "description_zh": "五步估值导航：先判断公司类型（成长/价值/周期/金融）→ 匹配最优估值方法 → 拆解股价隐含预期 → 历史中枢与行业均值对比 → 识别重估与杀估值的触发因素。回答\"该用什么方法估、现在贵不贵、未来有没有重估空间\"。",
+  "description_en": "A five-step valuation guide — first determine company type (growth / value / cyclical / financial) then match the optimal valuation method, decompose price-implied expectations, compare against historical center and industry average, and identify re-rating and de-rating triggers. Answers three key questions: which valuation method to use, whether the current price is expensive, and whether re-rating upside exists.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/c0c8b4b5-88b6-4952-a193-4c84115f2a91/avatar/skill/au_a1394c64-174.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/c0c8b4b5-88b6-4952-a193-4c84115f2a91/avatar/skill/au_a1394c64-174.png"
+}

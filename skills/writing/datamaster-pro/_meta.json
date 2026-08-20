@@ -1,0 +1,17 @@
+{
+  "owner": "gdp6539",
+  "slug": "datamaster-pro",
+  "displayName": "DataMaster Pro",
+  "latest": {
+    "version": "1.0.1",
+    "publishedAt": 1772598431488,
+    "commit": "https://github.com/openclaw/skills/commit/b569895ccd9ca1e8d4d5ccf8a9bc2de384e1ee83"
+  },
+  "history": [
+    {
+      "version": "1.0.0",
+      "publishedAt": 1772459016448,
+      "commit": "https://github.com/openclaw/skills/commit/ead2a696240d1d2ebba9f4c8184265bc4e94c0ce"
+    }
+  ]
+}

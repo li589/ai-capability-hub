@@ -1,0 +1,11 @@
+{
+  "owner": "harrylabsj",
+  "slug": "llm-wiki-karpathy",
+  "displayName": "LLM Wiki Karpathy",
+  "latest": {
+    "version": "1.2.3",
+    "publishedAt": 1776082496798,
+    "commit": "https://github.com/openclaw/skills/commit/6ebce87b1afd8b7153e4ba5f168c0950ccace2cf"
+  },
+  "history": []
+}

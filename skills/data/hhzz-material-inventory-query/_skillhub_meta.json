@@ -1,0 +1,10 @@
+{
+  "name": "黑湖智造-物料库存查询专家",
+  "installedAt": 1787228579499,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087453841213919232",
+  "description_zh": "物料库存查询专家是黑湖科技自研的制造业AI技能，面向计划、仓储及生产管理人员，将自然语言问题转换为黑湖智造CLI查询，返回物料主数据与当前库存的权威证据。当用户询问物料信息、现有库存、某仓库或某批次的库存情况时即可触发。该技能先通过hhzz-cli material list搜索物料候选，再通过material detail查询编码、名称、单位和状态等主数据，最后通过material-inventory list返回库存数量、仓库、仓位、批次及质量状态等明细，并支持按仓库、仓位、批次等维度过滤。查询结果以中文呈现，明确列出查询条件、返回记录数和实际调用的CLI命令作为可核验证据。该技能严格遵循只读原则，不执行任何写操作，不在对话中收集或展示企业凭证；未查询到库存时仅说明当前条件下无记录，绝不扩大为全局无库存，也不会在未查询占用、在途或工单需求的情况下做出可开工或可齐套等推断。若用户追问库存变化原因，将自动转交至库存追溯专家处理。",
+  "description_en": "The Material Inventory Query Expert is an AI skill developed in-house by Black Lake Technology, designed for planning, warehouse, and production management personnel. It converts natural language questions into Black Lake Smart Manufacturing CLI queries and returns authoritative evidence for material master data and current inventory. The skill is triggered when users ask about material information, existing inventory, or stock levels in specific warehouses or batches. It first searches for material candidates via hhzz-cli material list, then retrieves master data such as code, name, unit, and status through material detail, and finally returns inventory details including quantity, warehouse, location, batch, and quality status through material-inventory list, with filtering by warehouse, location, and batch dimensions supported. Results are presented in Chinese with query conditions, record count, and the actual CLI commands used as verifiable evidence. The skill strictly adheres to a",
+  "iconSource": "letter:auto"
+}

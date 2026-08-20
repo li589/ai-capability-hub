@@ -1,0 +1,11 @@
+{
+  "owner": "qi812560784",
+  "slug": "tc-cheapflights",
+  "displayName": "tc特价机票查询",
+  "latest": {
+    "version": "1.0.3",
+    "publishedAt": 1773301235002,
+    "commit": "https://github.com/openclaw/skills/commit/f88c2aa044e88e694ac0414391d81a7eef50e97f"
+  },
+  "history": []
+}

@@ -1,0 +1,11 @@
+{
+  "owner": "bbd145",
+  "slug": "aws-wechat-article-review",
+  "displayName": "Aws Wechat Article Review",
+  "latest": {
+    "version": "1.0.0",
+    "publishedAt": 1775015104161,
+    "commit": "https://github.com/openclaw/skills/commit/13edfedd0e2bbc8ec79bd05436db27f9a8f2e19e"
+  },
+  "history": []
+}

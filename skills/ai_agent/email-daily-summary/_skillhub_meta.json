@@ -1,0 +1,20 @@
+{
+  "name": "邮件日报摘要",
+  "installedAt": 1787228703618,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2053081877912952832",
+  "examples_zh": [
+    "登录我的 Gmail，生成今天的邮件日报，按待办、会议和 FYI 分类。",
+    "从 Outlook 收件箱里找出过去 24 小时的高优先级邮件，并给出摘要。",
+    "汇总 QQ 邮箱今天来自客户的邮件，列出每封邮件的主题、发件人和跟进事项。"
+  ],
+  "examples_en": [
+    "Log in to my Gmail and generate today's email digest grouped by action items, meetings, and FYI messages.",
+    "Find high-priority emails from the last 24 hours in my Outlook inbox and summarize them.",
+    "Summarize today's customer emails in QQ Mail with subject, sender, and follow-up items for each message."
+  ],
+  "description_zh": "自动登录邮箱生成每日邮件摘要(Gmail/Outlook/QQ邮箱等)",
+  "description_en": "Auto-login email accounts and generate daily email summaries",
+  "iconSource": "letter:auto"
+}

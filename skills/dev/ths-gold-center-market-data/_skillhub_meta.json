@@ -1,0 +1,11 @@
+{
+  "name": "同花顺黄金_关键金价影响因子",
+  "installedAt": 1787227723165,
+  "source": "marketplace",
+  "version": "1.0.0",
+  "skillId": "skill_2087164883012210688",
+  "description_zh": "市场数据查询：主力资金（中国黄金储备、聪明资金：中美黄金ETF申赎、全球官方黄金储备、伦敦金库黄金持有量、CME资产管理机构多空持仓等）、聪明指标（国内外金价价差、金油比、黄金季节性、VIX、金银比、美债10年－2年利差、10年美债实际利率、美联储利率概率等）",
+  "description_en": "You can attach key factors in gold pricing through this skill, including factors of cash flows, economic factors and valuation.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_4b231bd4-aa3.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/5c2646b6-d24b-42e3-ac18-b2fee6046eb1/avatar/skill/au_4b231bd4-aa3.png"
+}

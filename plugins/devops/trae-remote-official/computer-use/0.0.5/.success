@@ -1,0 +1,11 @@
+{
+  "name": "trae-remote-official:computer-use",
+  "registry": "trae-remote-official",
+  "plugin_name": "computer-use",
+  "version": "0.0.5",
+  "marketplace_plugin_id": "ba7138ba-ba41-43df-b71c-aefa5f2cd724",
+  "remote_installed_plugin_id": "A-UNVZY4J3GNS9",
+  "checksum": "f3ccc00ea67358cf11f624540122b3f536bfd123610fdbc5d906be8aebbb39cd",
+  "file_size": 25234,
+  "installed_at": 1787227203718
+}

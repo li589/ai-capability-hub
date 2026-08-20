@@ -1,0 +1,11 @@
+{
+  "name": "异议处理",
+  "installedAt": 1787228377798,
+  "source": "marketplace",
+  "version": "1.3.0",
+  "skillId": "skill_2088538465549377536",
+  "description_zh": "依据企业政策和案例库生成价格、MOQ、交期、付款和认证异议话术。适用于用户要求异议处理、生成相关结果或检查执行边界时。",
+  "description_en": "Sales Objection Handling workflow for foreign-trade teams, with explicit evidence, controlled CRM access, confirmation, and safety boundaries.",
+  "iconSource": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_9f052a75-b82.png",
+  "iconDownloadedFrom": "https://openplatform-cdn.codebuddy.cn/public/f3cfe49b-eaac-422b-b3ec-3ed17746ef9d/avatar/skill/au_9f052a75-b82.png"
+}
