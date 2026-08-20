@@ -152,7 +152,8 @@ body {
 .card-title { font-family: var(--font-display); font-weight: 540; font-size: 1.22rem; letter-spacing: -0.01em; line-height: 1.2; }
 .card-desc { color: var(--ink-soft); font-size: .9rem; line-height: 1.55;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.card-foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: .6rem; padding-top: .4rem; }
+.card-foot { margin-top: auto; display: flex; align-items: center; justify-content: flex-start; gap: .6rem; padding-top: .4rem; }
+.card-foot .go { margin-left: auto; }
 .tag-cat { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .04em; padding: .2rem .55rem; border-radius: 6px;
   color: var(--teal); background: color-mix(in oklch, var(--teal) 12%, transparent); border: 1px solid color-mix(in oklch, var(--teal) 30%, transparent); }
 .go { display: inline-flex; align-items: center; gap: .4rem; color: var(--ink-faint); font-family: var(--font-mono);
@@ -184,6 +185,25 @@ body {
 .method-card h4 { font-family: var(--font-display); font-weight: 540; font-size: 1.18rem; margin-bottom: .5rem; }
 .method-card p { color: var(--ink-soft); font-size: .92rem; }
 .method-card .k { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .7rem; }
+
+/* ---------- Card sub-category + Recommended ---------- */
+.cat-sub { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .04em; color: var(--ink-faint); }
+.rec { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.6rem; border: 1px solid var(--line-2); border-radius: var(--r);
+  background: linear-gradient(135deg, color-mix(in oklch, var(--amber) 14%, var(--glass)), var(--glass)); backdrop-filter: blur(10px);
+  transition: transform .4s, border-color .4s, box-shadow .4s; }
+.rec:hover { transform: translateY(-4px); border-color: transparent; box-shadow: var(--shadow); }
+.rec-ic { flex: none; width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; color: var(--amber);
+  background: color-mix(in oklch, var(--amber) 20%, var(--bg-2)); border: 1px solid var(--line-2); }
+.rec-ic svg { width: 24px; height: 24px; fill: currentColor; }
+.rec-body h3 { font-family: var(--font-display); font-weight: 540; font-size: 1.3rem; letter-spacing: -0.01em; }
+.rec-body p { color: var(--ink-soft); font-size: .92rem; margin-top: .5rem; max-width: 82ch; }
+.rec-links { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1rem; }
+.rec-btn { display: inline-flex; align-items: center; gap: .4rem; font-family: var(--font-mono); font-size: .74rem; letter-spacing: .04em;
+  text-transform: uppercase; text-decoration: none; padding: .55rem 1rem; border-radius: 999px; color: #fff;
+  background: linear-gradient(135deg, var(--violet), var(--teal)); box-shadow: 0 8px 22px color-mix(in oklch, var(--accent) 35%, transparent); transition: transform .3s; }
+.rec-btn:hover { transform: translateY(-2px); }
+.rec-btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line-2); box-shadow: none; }
+.rec-btn.ghost:hover { border-color: var(--accent); color: var(--accent); }
 
 /* ---------- Footer ---------- */
 footer { border-top: 1px solid var(--line); padding: 2.6rem 0 3.4rem; color: var(--ink-faint); margin-top: 2rem; }

@@ -21,6 +21,7 @@
     commands: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l4 4-4 4"/><path d="M13 16h6"/></svg>',
     _default: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>'
   };
+  var CAP_ZH = { skills: "技能", plugins: "插件", connectors: "连接器", experts: "专家", mcps: "MCP", canvas: "画布", design_libraries: "设计库", knowledges: "知识库", commands: "命令" };
   var GO_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
 
   function fmt(n) { return n.toLocaleString("en-US"); }
@@ -80,7 +81,7 @@
       '<h3 class="card-title">' + esc(p.title || p.name) + "</h3>" +
       '<p class="card-desc">' + esc(p.desc) + "</p>" +
       '<div class="card-foot">' +
-        '<span class="tag-cat">' + esc(p.cat) + "</span>" +
+        '<span class="tag-cat">' + esc(CAP_ZH[p.cap] || p.cap) + "</span>" + '<span class="cat-sub">' + esc(p.cat) + "</span>" +
         '<span class="go">在 GitHub 查看 ' + GO_SVG + "</span>" +
       "</div>"
     );
