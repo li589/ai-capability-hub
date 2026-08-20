@@ -152,17 +152,26 @@ body {
 .card-title { font-family: var(--font-display); font-weight: 540; font-size: 1.22rem; letter-spacing: -0.01em; line-height: 1.2; }
 .card-desc { color: var(--ink-soft); font-size: .9rem; line-height: 1.55;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-.card-foot { margin-top: auto; display: flex; align-items: center; justify-content: flex-start; gap: .6rem; padding-top: .4rem; }
-.card-foot .go { margin-left: auto; }
-.tag-cat { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .04em; padding: .2rem .55rem; border-radius: 6px;
+.card-foot { margin-top: auto; display: flex; align-items: center; justify-content: flex-start; gap: .6rem; padding-top: .4rem; flex-wrap: nowrap; }
+.card-foot .go { margin-left: auto; flex: none; }
+.tag-cat { flex: none; white-space: nowrap; font-family: var(--font-mono); font-size: .68rem; letter-spacing: .04em; padding: .2rem .55rem; border-radius: 6px;
   color: var(--teal); background: color-mix(in oklch, var(--teal) 12%, transparent); border: 1px solid color-mix(in oklch, var(--teal) 30%, transparent); }
 .go { display: inline-flex; align-items: center; gap: .4rem; color: var(--ink-faint); font-family: var(--font-mono);
-  font-size: .72rem; letter-spacing: .03em; transition: color .25s, gap .25s; white-space: nowrap; }
+  font-size: .72rem; letter-spacing: .03em; transition: color .25s, gap .25s; white-space: nowrap; flex: none; }
 .card:hover .go { color: var(--accent); gap: .7rem; }
 .go svg { width: 15px; height: 15px; }
 
 .empty { padding: 3rem 1rem; text-align: center; color: var(--ink-faint); font-family: var(--font-mono); font-size: .85rem; }
-.sentinel { height: 1px; }
+
+/* ---------- Pagination ---------- */
+.pager { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: .6rem; margin-top: 2.4rem; }
+.pg, .pg-num { font-family: var(--font-mono); font-size: .8rem; letter-spacing: .03em; padding: .5rem .9rem; border-radius: 10px; cursor: pointer; border: 1px solid var(--line-2); color: var(--ink-soft); background: var(--glass); backdrop-filter: blur(6px); transition: .25s; }
+.pg:hover:not(:disabled), .pg-num:hover { border-color: var(--accent); color: var(--ink); transform: translateY(-1px); }
+.pg:disabled { opacity: .4; cursor: not-allowed; }
+.pg-num.cur { background: linear-gradient(135deg, var(--violet), var(--teal)); color: #fff; border-color: transparent; box-shadow: 0 6px 20px color-mix(in oklch, var(--accent) 35%, transparent); }
+.pg-ell { color: var(--ink-faint); padding: 0 .25rem; }
+.pg-nums { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.pg-info { font-family: var(--font-mono); font-size: .74rem; letter-spacing: .04em; color: var(--ink-faint); }
 
 /* ---------- CTA ---------- */
 .cta { margin-top: 1rem; border-radius: 22px; padding: clamp(2rem, 5vw, 3.4rem); position: relative; overflow: hidden;
@@ -187,7 +196,8 @@ body {
 .method-card .k { font-family: var(--font-mono); font-size: .68rem; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: .7rem; }
 
 /* ---------- Card sub-category + Recommended ---------- */
-.cat-sub { font-family: var(--font-mono); font-size: .66rem; letter-spacing: .04em; color: var(--ink-faint); }
+.cat-sub { flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-family: var(--font-mono); font-size: .66rem; letter-spacing: .04em; color: var(--ink-faint); }
+.rec-list { display: flex; flex-direction: column; gap: 1.2rem; }
 .rec { display: flex; gap: 1.2rem; align-items: flex-start; padding: 1.6rem; border: 1px solid var(--line-2); border-radius: var(--r);
   background: linear-gradient(135deg, color-mix(in oklch, var(--amber) 14%, var(--glass)), var(--glass)); backdrop-filter: blur(10px);
   transition: transform .4s, border-color .4s, box-shadow .4s; }

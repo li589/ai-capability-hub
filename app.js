@@ -1,10 +1,10 @@
-/* AI 能力包 · 检索站 — interactions (v2)
-   Loads skills.json, renders an icon-rich card gallery with search, filter & infinite scroll. */
+/* AI 能力包 · 检索站 — interactions (v2.2)
+   Loads skills.json, renders an icon-rich card gallery with search, filter & pagination. */
 (function () {
   "use strict";
 
-  var BATCH = 48;
-  var state = { data: null, q: "", cap: "all", list: null, rendered: 0 };
+  var PER_PAGE = 48;
+  var state = { data: null, q: "", cap: "all", list: null, page: 1 };
 
   var $ = function (s, r) { return (r || document).querySelector(s); };
   var $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -54,7 +54,7 @@
       b.className = "chip";
       b.setAttribute("aria-pressed", c.cap === "all" ? "true" : "false");
       b.dataset.cap = c.cap;
-      b.innerHTML = c.label + ' <span class="c">' + fmt(c.count) + "</span>";
+      b.innerHTML = (CAP_ZH[c.cap] || c.label) + ' <span class="c">' + fmt(c.count) + "</span>";
       b.addEventListener("click", function () {
         state.cap = c.cap;
         $$(".chip", box).forEach(function (x) { x.setAttribute("aria-pressed", x.dataset.cap === c.cap ? "true" : "false"); });
@@ -87,34 +87,83 @@
     );
   }
 
-  function renderBatch() {
+  function totalPages() {
+    return Math.max(1, Math.ceil((state.list ? state.list.length : 0) / PER_PAGE));
+  }
+
+  function pageList(cur, total) {
+    var out = [], set = {}, i, p, prev = 0;
+    set[1] = true; set[total] = true;
+    for (i = cur - 1; i <= cur + 1; i++) if (i >= 1 && i <= total) set[i] = true;
+    for (p = 1; p <= total; p++) {
+      if (set[p]) {
+        if (prev && p - prev > 1) out.push("…");
+        out.push(p); prev = p;
+      }
+    }
+    return out;
+  }
+
+  function renderPage() {
     var list = state.list; if (!list) return;
     var grid = $(".grid");
-    var end = Math.min(state.rendered + BATCH, list.length);
+    var startI = (state.page - 1) * PER_PAGE;
+    var endI = Math.min(startI + PER_PAGE, list.length);
     var frag = document.createDocumentFragment();
-    for (var i = state.rendered; i < end; i++) {
+    for (var i = startI; i < endI; i++) {
       var p = list[i];
       var a = document.createElement("a");
       a.className = "card";
       a.href = p.url; a.target = "_blank"; a.rel = "noopener";
-      a.style.animationDelay = ((i % BATCH) * 35) + "ms";
+      a.style.animationDelay = ((i - startI) * 35) + "ms";
       a.innerHTML = cardHTML(p);
       frag.appendChild(a);
     }
+    grid.innerHTML = "";
     grid.appendChild(frag);
-    state.rendered = end;
+  }
+
+  function renderPager() {
+    var pager = $(".pager");
+    var total = totalPages();
+    if (!state.list || !state.list.length || total <= 1) { pager.innerHTML = ""; return; }
+    var nums = pageList(state.page, total).map(function (p) {
+      if (p === "…") return '<span class="pg-ell">…</span>';
+      return '<button class="pg-num' + (p === state.page ? " cur" : "") + '" data-pg="' + p + '">' + p + "</button>";
+    }).join("");
+    pager.innerHTML =
+      '<button class="pg" data-pg="prev"' + (state.page <= 1 ? " disabled" : "") + ">‹ 上一页</button>" +
+      '<span class="pg-info">第 ' + state.page + " / " + total + " 页</span>" +
+      '<div class="pg-nums">' + nums + "</div>" +
+      '<button class="pg" data-pg="next"' + (state.page >= total ? " disabled" : "") + ">下一页 ›</button>";
+    $$(".pg-num", pager).forEach(function (b) { b.addEventListener("click", function () { goToPage(+b.dataset.pg); }); });
+    var prev = $(".pg[data-pg=prev]", pager), next = $(".pg[data-pg=next]", pager);
+    if (prev && !prev.disabled) prev.addEventListener("click", function () { goToPage(state.page - 1); });
+    if (next && !next.disabled) next.addEventListener("click", function () { goToPage(state.page + 1); });
+  }
+
+  function goToPage(n) {
+    var total = totalPages();
+    n = Math.min(total, Math.max(1, n | 0));
+    if (n === state.page) return;
+    state.page = n;
+    renderPage();
+    renderPager();
+    var grid = $(".grid");
+    if (grid) grid.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function resetAndRender() {
     state.list = state.data.packages.filter(matches);
-    state.rendered = 0;
-    $(".grid").innerHTML = "";
+    state.page = 1;
     if (!state.list.length) {
       $(".grid").innerHTML = '<div class="empty">未找到匹配的能力包 · no matches</div>';
+      $(".pager").innerHTML = "";
       $(".count-pill").innerHTML = "0 / " + fmt(state.data.totals.packages);
       return;
     }
-    renderBatch();
+    renderPage();
+    renderPager();
     $(".count-pill").innerHTML = "<b>" + fmt(state.list.length) + "</b> / " + fmt(state.data.totals.packages);
   }
 
@@ -125,17 +174,6 @@
       clearTimeout(t);
       t = setTimeout(function () { state.q = inp.value; resetAndRender(); }, 120);
     });
-  }
-
-  function wireInfinite() {
-    var sentinel = $(".sentinel");
-    if (!("IntersectionObserver" in window) || !sentinel) return;
-    var io = new IntersectionObserver(function (es) {
-      es.forEach(function (e) {
-        if (e.isIntersecting && state.list && state.rendered < state.list.length) renderBatch();
-      });
-    }, { rootMargin: "320px" });
-    io.observe(sentinel);
   }
 
   function wireReveal() {
@@ -162,7 +200,6 @@
     wireSearch();
     fillLinks(d);
     resetAndRender();
-    wireInfinite();
     wireReveal();
   }
 
