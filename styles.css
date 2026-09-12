@@ -74,12 +74,26 @@ body {
   background: color-mix(in oklch, var(--bg) 70%, transparent); border-bottom: 1px solid var(--line); }
 .masthead .wrap { display: flex; align-items: center; justify-content: space-between; height: 62px; gap: 1rem; }
 .brand { display: flex; align-items: center; gap: .7rem; text-decoration: none; }
-/* New geometric logo — three dots connected */
-.brand-logo {
-  width: 32px; height: 32px; position: relative; flex: none;
-}
+.brand-logo { width: 30px; height: 30px; position: relative; flex: none; }
 .brand-logo svg { width: 100%; height: 100%; display: block; }
-.brand .mark { font-family: var(--font-display); font-weight: 560; font-size: 1.28rem; letter-spacing: -0.01em; }
+.brand .mark {
+  font-family: var(--font-display);
+  font-weight: 560;
+  font-size: 1.3rem;
+  letter-spacing: -0.005em;
+  /* 品牌渐变替代刺眼的近纯白，与 logo / 顶部横线同色系 */
+  background: linear-gradient(96deg, oklch(0.97 0.015 285), oklch(0.84 0.075 305));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: oklch(0.93 0.012 280);
+}
+.mast-nav { display: flex; align-items: center; gap: .5rem; }
+.nav-link { display: inline-flex; align-items: center; font-family: var(--font-mono); font-size: .74rem;
+  letter-spacing: .05em; text-decoration: none; padding: .5rem .9rem; border-radius: 999px;
+  color: var(--ink-soft); border: 1px solid transparent; transition: .3s; white-space: nowrap; }
+.nav-link:hover, .nav-link[aria-current="page"] { color: var(--ink); border-color: var(--line-2);
+  background: color-mix(in oklch, var(--accent) 14%, transparent); }
 .gh-link { display: inline-flex; align-items: center; gap: .5rem; font-family: var(--font-mono); font-size: .74rem;
   letter-spacing: .06em; text-transform: uppercase; text-decoration: none; padding: .5rem .85rem;
   border: 1px solid var(--line-2); border-radius: 999px; color: var(--ink); transition: .3s; }

@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>什么是 Skill · AI 能力包</title>
+  <meta name="description" content="用三层按需加载的方式，把经验打包成 AI 可复用的能力包：SKILL.md 的结构、渐进式披露原理，以及它和 Prompt、MCP 的区别。" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%237c3aed'/%3E%3Cstop offset='50%25' stop-color='%230d9488'/%3E%3Cstop offset='100%25' stop-color='%23f59e0b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='url(%23g)' stroke-width='2.5'/%3E%3Ccircle cx='10' cy='12' r='3' fill='%237c3aed' opacity='.9'/%3E%3Ccircle cx='22' cy='12' r='3' fill='%230d9488' opacity='.9'/%3E%3Ccircle cx='16' cy='22' r='3' fill='%23f59e0b' opacity='.9'/%3E%3Cline x1='11.5' y1='13.5' x2='14.5' y2='20' stroke='%237c3aed' stroke-width='1.2' opacity='.5'/%3E%3Cline x1='20.5' y1='13.5' x2='17.5' y2='20' stroke='%230d9488' stroke-width='1.2' opacity='.5'/%3E%3Cline x1='13' y1='12' x2='19' y2='12' stroke='%23f59e0b' stroke-width='1.2' opacity='.5'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="skill.css" />
+</head>
+<body>
+
+  <div class="aurora" aria-hidden="true">
+    <span class="b1"></span><span class="b2"></span><span class="b3"></span><span class="b4"></span>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="masthead">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="AI 能力包 首页">
+        <span class="brand-logo" aria-hidden="true"><svg viewBox="0 0 32 32"><defs><linearGradient id="blg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#7c3aed"/><stop offset="50%" stop-color="#0d9488"/><stop offset="100%" stop-color="#f59e0b"/></linearGradient></defs><circle cx="16" cy="16" r="13" fill="none" stroke="url(#blg)" stroke-width="2.2"/><circle cx="10" cy="12" r="2.8" fill="#a78bfa"/><circle cx="22" cy="12" r="2.8" fill="#2dd4bf"/><circle cx="16" cy="22" r="2.8" fill="#fbbf24"/><line x1="11.6" y1="13.4" x2="14.8" y2="19.8" stroke="#a78bfa" stroke-width="1.1" opacity=".55"/><line x1="20.4" y1="13.4" x2="17.2" y2="19.8" stroke="#2dd4bf" stroke-width="1.1" opacity=".55"/><line x1="12.8" y1="12" x2="19.2" y2="12" stroke="#fbbf24" stroke-width="1.1" opacity=".55"/></svg></span>
+        <span class="mark">AI 能力包</span>
+      </a>
+      <nav class="mast-nav">
+        <a class="nav-link" href="skill.html" aria-current="page">什么是 Skill</a>
+        <a class="gh-link" href="https://github.com/li589/ai-capability-hub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.2.8-.5v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5z"/></svg>
+          GitHub
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="wrap">
+        <div class="liner"></div>
+        <h1>什么是 Skill</h1>
+        <p class="lede">
+          一个装着指令、脚本和参考资料的文件夹。AI 遇到相关任务时自己翻出来用，
+          用完放回架上，不占地方。
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div class="analogy">
+          <div class="analogy-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2 2 0 0 1 6 3.5h9l5 5v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2z"/><path d="M14 3.5v5h5"/><path d="M8.5 13h7M8.5 16.5h4.5"/></svg></div>
+          <div>
+            <h2>可以理解为：给新同事写的入职手册</h2>
+            <p>
+              手册开头是目录，告诉你哪份文档管什么事；真要做某项工作时，才翻到对应章节；
+              只有碰到具体细节，才去查最后的附录。Skill 用的是同一套思路，官方叫它
+              <b>渐进式披露</b>（Progressive Disclosure）。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>三层按需加载</h2>
+          <span class="note">progressive disclosure</span>
+        </div>
+
+        <ol class="layers">
+          <li class="layer l1">
+            <div class="layer-bar"><span class="layer-n">01</span><h3>元数据</h3><span class="layer-when">始终加载</span></div>
+            <p>SKILL.md 顶部的 YAML 头：只有 <code>name</code> 和 <code>description</code>。启动时就常驻，让 AI 知道"有这个东西、什么时候该用它"。</p>
+            <span class="layer-cost">约 100 tokens / 个</span>
+          </li>
+          <li class="layer l2">
+            <div class="layer-bar"><span class="layer-n">02</span><h3>核心指令</h3><span class="layer-when">任务相关时才读</span></div>
+            <p>SKILL.md 的正文：工作流程、最佳实践、注意事项。AI 判断这个 Skill 和当前任务对得上，才把它读进上下文。</p>
+            <span class="layer-cost">一般 5k tokens 以内</span>
+          </li>
+          <li class="layer l3">
+            <div class="layer-bar"><span class="layer-n">03</span><h3>脚本与资源</h3><span class="layer-when">需要时再取</span></div>
+            <p>捆绑的 <code>scripts/</code>、<code>references/</code>、<code>assets/</code>。脚本由 AI 直接执行，<b>代码本身不进上下文，只有运行结果回来</b>——所以随附多少资料都不吃上下文。</p>
+            <span class="layer-cost">几乎不计成本</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>一个 Skill 里有什么</h2>
+          <span class="note">anatomy</span>
+        </div>
+        <div class="tree-wrap">
+<pre class="tree"><span class="tc">my-skill/</span>
+├── <span class="tf">SKILL.md</span>       <span class="tk">必需</span>  YAML 头 + 正文指令
+├── <span class="tc">scripts/</span>       <span class="tk">可选</span>  可执行脚本（Python / Bash）
+├── <span class="tc">references/</span>    <span class="tk">可选</span>  按需查阅的文档
+└── <span class="tc">assets/</span>        <span class="tk">可选</span>  模板、字体、图标</pre>
+        </div>
+        <p class="hint">
+          只有 <code>SKILL.md</code> 是必需的。<code>name</code> 限 64 字符、小写字母数字加连字符；
+          <code>description</code> 限 1024 字符，要同时说清"做什么"和"什么时候用"——AI 靠它判断是否触发。
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>和 Prompt、MCP 有什么不一样</h2>
+          <span class="note">comparison</span>
+        </div>
+        <div class="cmp">
+          <div class="cmp-row cmp-head">
+            <span>方式</span><span>解决什么</span><span>生命周期</span>
+          </div>
+          <div class="cmp-row">
+            <span class="cmp-k">Prompt</span>
+            <span>一次对话里的一次性指令</span>
+            <span>用完即弃，下次重说</span>
+          </div>
+          <div class="cmp-row">
+            <span class="cmp-k">Skill</span>
+            <span>一类任务的流程与经验</span>
+            <span>写一次，之后自动复用</span>
+          </div>
+          <div class="cmp-row">
+            <span class="cmp-k">MCP</span>
+            <span>连接外部服务的能力</span>
+            <span>常驻连接，提供工具</span>
+          </div>
+        </div>
+        <p class="hint">
+          官方的比方很贴切：<b>MCP 是厨房</b>（工具、食材、设备），<b>Skill 是菜谱</b>（先做什么后做什么）。
+          一个管"能做什么"，一个管"该怎么做"，两者是配合关系。
+        </p>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>三个特点</h2>
+          <span class="note">traits</span>
+        </div>
+        <div class="traits">
+          <div class="trait">
+            <span class="trait-k">可组合</span>
+            <p>多个 Skill 能同时加载、互相配合，不用假定自己是被单独使用的那个。</p>
+          </div>
+          <div class="trait">
+            <span class="trait-k">可移植</span>
+            <p>同一份文件夹，在 Claude 网页版、Claude Code 和 API 里都能用。2025 年底 Anthropic 已把它作为开放标准发布。</p>
+          </div>
+          <div class="trait">
+            <span class="trait-k">省上下文</span>
+            <p>没被触发的 Skill 只占一个名字和一句话描述，装上几十个也不心疼。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div class="notice">
+          <div class="notice-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M12 9v4.5M12 17h.01"/><path d="M10.3 3.9 2.6 17.2A2 2 0 0 0 4.3 20.2h15.4a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg></div>
+          <div>
+            <h3>装之前先看一眼</h3>
+            <p>Skill 里可能带可执行代码，等于给 AI 开了新的操作权限。只用你信得过的来源；别人的 Skill 用之前翻一遍里面的脚本，留意有没有奇怪的网络请求或文件操作。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>继续读</h2>
+          <span class="note">further reading</span>
+        </div>
+        <div class="reads">
+          <a class="read" href="https://www.runoob.com/vibe-coding/skills-agent.html" target="_blank" rel="noopener">
+            <span class="read-ic" aria-hidden="true">菜</span>
+            <span class="read-body">
+              <strong>菜鸟教程 · Skills 与 Agent</strong>
+              <em>中文入门讲解，适合第一次接触这个概念时通读一遍。</em>
+            </span>
+            <span class="read-go">↗</span>
+          </a>
+          <a class="read" href="https://platform.claude.com/docs/zh-CN/agents-and-tools/agent-skills/overview" target="_blank" rel="noopener">
+            <span class="read-ic" aria-hidden="true">官</span>
+            <span class="read-body">
+              <strong>Anthropic 官方文档 · Agent Skills</strong>
+              <em>三层加载机制、字段规范与编写要求的一手说明。</em>
+            </span>
+            <span class="read-go">↗</span>
+          </a>
+          <a class="read" href="https://www.anthropic.com/engineering/equipping-agents-for-the-real-world-with-agent-skills" target="_blank" rel="noopener">
+            <span class="read-ic" aria-hidden="true">工</span>
+            <span class="read-body">
+              <strong>Anthropic 工程博客</strong>
+              <em>为什么要做成"文件夹"这种形态，以及真实场景下的用法。</em>
+            </span>
+            <span class="read-go">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span class="f-brand">AI 能力包</span>
+      <span class="meta">内容整理自 Anthropic 官方公开文档与工程博客</span>
+      <span style="display:inline-flex;gap:1rem">
+        <a href="index.html">返回检索 →</a>
+        <a href="https://github.com/li589/ai-capability-hub" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var els = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+      if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
+      var io = new IntersectionObserver(function (ents) {
+        ents.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+      }, { threshold: 0.1 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</body>
+</html>
