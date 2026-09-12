@@ -55,8 +55,8 @@
           <div>
             <h2>可以理解为：给新同事写的入职手册</h2>
             <p>
-              手册开头是目录，告诉你哪份文档管什么事；真要做某项工作时，才翻到对应章节；
-              只有碰到具体细节，才去查最后的附录。Skill 用的是同一套思路，官方叫它
+              手册开头是目录，让你知道哪份文档管什么事；真动手做某项工作时才翻到对应章节；
+              只有碰到具体细节才去翻最后的附录。Skill 走的是同一条路子，Anthropic 管它叫
               <b>渐进式披露</b>（Progressive Disclosure）。
             </p>
           </div>
@@ -74,7 +74,7 @@
         <ol class="layers">
           <li class="layer l1">
             <div class="layer-bar"><span class="layer-n">01</span><h3>元数据</h3><span class="layer-when">始终加载</span></div>
-            <p>SKILL.md 顶部的 YAML 头：只有 <code>name</code> 和 <code>description</code>。启动时就常驻，让 AI 知道"有这个东西、什么时候该用它"。</p>
+            <p>SKILL.md 顶部的 YAML 头，只有 <code>name</code> 和 <code>description</code>。启动时就常驻，让 AI 知道有这个东西、什么时候该用它。</p>
             <span class="layer-cost">约 100 tokens / 个</span>
           </li>
           <li class="layer l2">
@@ -84,7 +84,7 @@
           </li>
           <li class="layer l3">
             <div class="layer-bar"><span class="layer-n">03</span><h3>脚本与资源</h3><span class="layer-when">需要时再取</span></div>
-            <p>捆绑的 <code>scripts/</code>、<code>references/</code>、<code>assets/</code>。脚本由 AI 直接执行，<b>代码本身不进上下文，只有运行结果回来</b>——所以随附多少资料都不吃上下文。</p>
+            <p>捆绑的 <code>scripts/</code>、<code>references/</code>、<code>assets/</code>。脚本由 AI 直接执行，<b>代码本身不进上下文，只有运行结果回来</b>。所以随附多少资料都不吃上下文。</p>
             <span class="layer-cost">几乎不计成本</span>
           </li>
         </ol>
@@ -105,8 +105,8 @@
 └── <span class="tc">assets/</span>        <span class="tk">可选</span>  模板、字体、图标</pre>
         </div>
         <p class="hint">
-          只有 <code>SKILL.md</code> 是必需的。<code>name</code> 限 64 字符、小写字母数字加连字符；
-          <code>description</code> 限 1024 字符，要同时说清"做什么"和"什么时候用"——AI 靠它判断是否触发。
+          只有 <code>SKILL.md</code> 是必需的。<code>name</code> 限 64 字符，只能小写字母、数字和连字符；
+          <code>description</code> 限 1024 字符，得同时说清做什么、什么时候用，因为 AI 靠这句话决定要不要触发。
         </p>
       </div>
     </section>
@@ -138,8 +138,8 @@
           </div>
         </div>
         <p class="hint">
-          官方的比方很贴切：<b>MCP 是厨房</b>（工具、食材、设备），<b>Skill 是菜谱</b>（先做什么后做什么）。
-          一个管"能做什么"，一个管"该怎么做"，两者是配合关系。
+          Anthropic 自己打的比方：<b>MCP 是厨房</b>，提供工具、食材和设备；<b>Skill 是菜谱</b>，写清楚先做什么后做什么。
+          前者决定能做什么，后者决定该怎么做。
         </p>
       </div>
     </section>
@@ -190,7 +190,7 @@
             <span class="read-ic" aria-hidden="true">菜</span>
             <span class="read-body">
               <strong>菜鸟教程 · Skills 与 Agent</strong>
-              <em>中文入门讲解，适合第一次接触这个概念时通读一遍。</em>
+              <em>中文入门，第一次接触的话可以先看这篇。</em>
             </span>
             <span class="read-go">↗</span>
           </a>
@@ -198,7 +198,7 @@
             <span class="read-ic" aria-hidden="true">官</span>
             <span class="read-body">
               <strong>Anthropic 官方文档 · Agent Skills</strong>
-              <em>三层加载机制、字段规范与编写要求的一手说明。</em>
+              <em>三层加载机制、字段规范和编写要求，都写在这。</em>
             </span>
             <span class="read-go">↗</span>
           </a>
@@ -206,7 +206,7 @@
             <span class="read-ic" aria-hidden="true">工</span>
             <span class="read-body">
               <strong>Anthropic 工程博客</strong>
-              <em>为什么要做成"文件夹"这种形态，以及真实场景下的用法。</em>
+              <em>为什么非得是文件夹这种形态，以及实际场景里怎么用。</em>
             </span>
             <span class="read-go">↗</span>
           </a>
@@ -219,7 +219,7 @@
   <footer>
     <div class="wrap">
       <span class="f-brand">AI 能力包</span>
-      <span class="meta">内容整理自 Anthropic 官方公开文档与工程博客</span>
+      <span class="meta">内容整理自 Anthropic 官方文档与工程博客</span>
       <span style="display:inline-flex;gap:1rem">
         <a href="index.html">返回检索 →</a>
         <a href="https://github.com/li589/ai-capability-hub" target="_blank" rel="noopener">GitHub 仓库 ↗</a>
@@ -227,14 +227,31 @@
     </div>
   </footer>
 
+  <button class="to-top" id="toTop" type="button" aria-label="回到顶端" title="回到顶端">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
   <script>
     (function () {
       var els = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
-      if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); return; }
-      var io = new IntersectionObserver(function (ents) {
-        ents.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
-      }, { threshold: 0.1 });
-      els.forEach(function (e) { io.observe(e); });
+      if (!("IntersectionObserver" in window)) { els.forEach(function (e) { e.classList.add("in"); }); }
+      else {
+        var io = new IntersectionObserver(function (ents) {
+          ents.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+        }, { threshold: 0.1 });
+        els.forEach(function (e) { io.observe(e); });
+      }
+
+      var toTop = document.getElementById("toTop");
+      if (toTop) {
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var syncTop = function () { toTop.classList.toggle("show", window.scrollY > 600); };
+        window.addEventListener("scroll", syncTop, { passive: true });
+        syncTop();
+        toTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+        });
+      }
     })();
   </script>
 </body>

@@ -169,6 +169,23 @@
     </div>
   </footer>
 
+  <button class="to-top" id="toTop" type="button" aria-label="回到顶端" title="回到顶端">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
   <script src="app.js"></script>
+  <script>
+    (function () {
+      var toTop = document.getElementById("toTop");
+      if (!toTop) return;
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var syncTop = function () { toTop.classList.toggle("show", window.scrollY > 600); };
+      window.addEventListener("scroll", syncTop, { passive: true });
+      syncTop();
+      toTop.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" });
+      });
+    })();
+  </script>
 </body>
 </html>
