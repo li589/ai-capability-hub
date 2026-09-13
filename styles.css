@@ -543,13 +543,32 @@ body {
   padding: .56rem 1rem; border-radius: var(--r); color: oklch(0.17 0.02 255);
   background: linear-gradient(135deg, var(--amber), var(--amber-dp));
   box-shadow: 0 8px 22px -10px oklch(0.795 0.145 78 / 0.75);
-  transition: transform var(--t-mid) var(--ease-out), box-shadow var(--t-mid) var(--ease-out);
+  transition: transform var(--t-mid) var(--ease-out), box-shadow var(--t-mid) var(--ease-out),
+              background var(--t-mid) var(--ease-out), border-color var(--t-mid) var(--ease-out),
+              color var(--t-mid) var(--ease-out);
 }
-.rec-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -12px oklch(0.795 0.145 78 / 0.9); }
+.rec-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px -12px oklch(0.795 0.145 78 / 0.9);
+  background: linear-gradient(135deg, var(--amber-lt), var(--amber));
+}
+.rec-btn:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
+
+/* 次级按钮：与主按钮同色系（琥珀），靠描边和透明度区分层级，
+   而不是跳到冷青——避免同一组按钮出现两种无关色相。 */
 .rec-btn.ghost {
-  background: transparent; color: var(--ink); border: 1px solid var(--line-2); box-shadow: none;
+  background: oklch(0.795 0.145 78 / 0.06);
+  color: var(--amber-lt);
+  border: 1px solid oklch(0.795 0.145 78 / 0.34);
+  box-shadow: none;
 }
-.rec-btn.ghost:hover { border-color: var(--cyan); color: var(--cyan); transform: translateY(-2px); }
+.rec-btn.ghost:hover {
+  border-color: var(--amber);
+  color: var(--amber);
+  background: oklch(0.795 0.145 78 / 0.12);
+  transform: translateY(-2px);
+}
+.rec-btn.ghost:focus-visible { outline: 2px solid var(--cyan); outline-offset: 2px; }
 
 /* ============================================================
    Footer
