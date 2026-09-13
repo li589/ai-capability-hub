@@ -1,0 +1,44 @@
+name: Deploy to GitHub Pages
+
+# 说明：本仓库原先使用 GitHub 的 legacy builder（Pages 设置里的「Deploy from a branch」），
+# 该构建器在 2026-09-13 出现持续故障（构建结果 errored，error.message = "Page build failed."，
+# duration 恒为 0，后续提交长期卡在 building 不结束）。切换为标准 Actions 部署流程，
+# 由 actions/deploy-pages 直接发布仓库根目录的静态文件，绕开故障的 legacy builder。
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 只保留最新一次部署，避免并发排队
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 站点文件位于仓库根目录
+          path: .
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
